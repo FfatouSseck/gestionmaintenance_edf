@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="notifFormGroup">
+    <ion-row style="background-color: #F2F2F2">
+      <h3 style="font-weight: bold;color: #000;font-size: 30px">General information</h3>
+    </ion-row>
+    <mat-form-field class="example-form" color="primary">
+      <input matInput placeholder="Description" maxlength="40" formControlName="description">
+    </mat-form-field>
+    <mat-form-field class="form-85" class="example-form">
+      <mat-select placeholder="Functional location" formControlName="functloc">
+        <mat-option *ngFor="let l of locations" [value]="l.loc">
+          {{l.loc}}-{{l.description}}...
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
+    <ion-button color="light"><ion-icon name="qr-scanner"></ion-icon>QR-CODE</ion-button>
+    <mat-form-field class="example-form">
+      <input matInput placeholder="Equipment" maxlength="40" formControlName="equipment">
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <mat-select placeholder="Effect on production" formControlName="productionEff">
+        <mat-option *ngFor="let pe of productionEffects" [value]="pe.id">
+          {{pe.desc}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <ion-row style="background-color: #F2F2F2">
+        <h3 style="font-weight: bold;color: #000;font-size: 30px">Notification informations</h3>
+    </ion-row>
+    <mat-form-field class="example-form">
+      <mat-select placeholder="Priority" formControlName="priority">
+        <mat-option *ngFor="let p of priorities" [value]="p.id">
+          {{p.id}}-{{p.desc}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj" formControlName="startDate">
+      <ion-icon name="calendar"></ion-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <mat-select placeholder="Damage code" formControlName="damageCode">
+        <mat-option *ngFor="let p of priorities" [value]="p.id">
+          {{p.id}}-{{p.desc}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <mat-select placeholder="Cause" formControlName="cause">
+        <mat-option *ngFor="let p of priorities" [value]="p.id">
+          {{p.id}}-{{p.desc}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <mat-select placeholder="Object part" formControlName="objectPart">
+        <mat-option *ngFor="let p of priorities" [value]="p.id">
+          {{p.id}}-{{p.desc}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
+    </mat-form-field>
+
+  </form>
+</ion-content>

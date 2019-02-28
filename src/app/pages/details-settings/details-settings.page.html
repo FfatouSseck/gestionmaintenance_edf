@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="closeModal()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+        </ion-buttons>
+    <ion-title>Plant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Plant-Short Description</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let plant of plants">
+      <ion-toggle color="primary" [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>{{plant.code}}-{{plant.desc}}
+    </ion-item>
+  </ion-list>
+</ion-content>

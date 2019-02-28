@@ -1,0 +1,7 @@
+{
+  "name": "GestionMaintenanceEDF_V1",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
