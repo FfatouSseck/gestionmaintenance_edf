@@ -17,21 +17,26 @@
     <ion-row style="background-color: #F2F2F2">
       <h3 style="font-weight: bold;color: #000;font-size: 30px">General information</h3>
     </ion-row>
-    <mat-form-field class="example-form" color="primary">
-      <input matInput placeholder="Description" maxlength="40" formControlName="description">
+    <mat-form-field class="example-form" color="secondary">
+      <input disabled matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
     </mat-form-field>
     <mat-form-field class="form-85" class="example-form">
-      <mat-select placeholder="Functional location" formControlName="functloc">
+      <mat-select placeholder="Functional location" formControlName="functloc" required>
         <mat-option *ngFor="let l of locations" [value]="l.loc">
           {{l.loc}}-{{l.description}}...
         </mat-option>
       </mat-select>
     </mat-form-field>
     <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
-    <ion-button color="light"><ion-icon name="qr-scanner"></ion-icon>QR-CODE</ion-button>
+    <ion-button color="light" (click)="scanQRCode()">
+      <ion-icon name="qr-scanner"></ion-icon>QR-CODE
+    </ion-button>
     <mat-form-field class="example-form">
       <input matInput placeholder="Equipment" maxlength="40" formControlName="equipment">
     </mat-form-field>
+    <br />
+    <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator</mat-checkbox>
+    <br />
     <mat-form-field class="example-form">
       <mat-select placeholder="Effect on production" formControlName="productionEff">
         <mat-option *ngFor="let pe of productionEffects" [value]="pe.id">
@@ -40,7 +45,7 @@
       </mat-select>
     </mat-form-field>
     <ion-row style="background-color: #F2F2F2">
-        <h3 style="font-weight: bold;color: #000;font-size: 30px">Notification informations</h3>
+      <h3 style="font-weight: bold;color: #000;font-size: 30px">Notification informations</h3>
     </ion-row>
     <mat-form-field class="example-form">
       <mat-select placeholder="Priority" formControlName="priority">
@@ -50,8 +55,8 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj" formControlName="startDate">
-      <ion-icon name="calendar"></ion-icon>
+      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj" formControlName="startDate" required>
+      <mat-icon matSuffix>calendar_today</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
       <mat-select placeholder="Damage code" formControlName="damageCode">
@@ -80,3 +85,13 @@
 
   </form>
 </ion-content>
+<ion-footer>
+  <ion-toolbar style="--background: #3E4649;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true" size="large" type="reset">Clear</ion-button>
+      <ion-button style="background-color: green;color: white">
+        Save
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

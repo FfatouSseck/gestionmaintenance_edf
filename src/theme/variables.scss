@@ -4,22 +4,35 @@
 
 // define a real custom palette (using http://mcg.mbitson.com)
 $bv-brand: (
-  50: #e0f3fb,
-  100: #b3e2f6,
-  200: #80cef0,
-  300: #4dbae9,
-  400: #26ace5,
-  500: #009de0,
-  600: #0095dc,
-  700: #008bd8,
-  800: #0081d3,
-  900: #006fcb,
-  A100: #f3f9ff,
-  A200: #c0dfff,
-  A400: #8dc5ff,
-  A700: #74b8ff,
+    50 : #e0f3fb,
+    100 : #b3e2f6,
+    200 : #80cef0,
+    300 : #4dbae9,
+    400 : #26ace5,
+    500 : #009de0,
+    600 : #0095dc,
+    700 : #008bd8,
+    800 : #0081d3,
+    900 : #006fcb,
+    A100 : #f3f9ff,
+    A200 : #c0dfff,
+    A400 : #8dc5ff,
+    A700 : #74b8ff,
     contrast: (
-        
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
     )
 );
 
@@ -56,7 +69,7 @@ $bv-orange: (
     )
 );
 
-$my-app-primary: mat-palette($bv-brand);
+$my-app-primary: mat-palette($mat-blue);
 $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn:    mat-palette($mat-deep-orange);
 $my-app-theme:   mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
