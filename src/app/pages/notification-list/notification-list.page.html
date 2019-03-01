@@ -107,7 +107,7 @@
         <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator</mat-checkbox>
         <br />
         <mat-form-field class="example-form">
-          <mat-select placeholder="Effect on production" formControlName="productionEff">
+          <mat-select placeholder="Effect on production" formControlName="productionEff" [(ngModel)]="choosenNotif.productionEff">
             <mat-option *ngFor="let pe of productionEffects" [value]="pe.id">
               {{pe.desc}}
             </mat-option>
@@ -117,8 +117,8 @@
           <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
         </ion-row>
         <mat-form-field class="example-form">
-          <mat-select placeholder="Priority" formControlName="priority">
-            <mat-option *ngFor="let p of priorities" [value]="p.id">
+          <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenNotif.priority">
+            <mat-option *ngFor="let p of priorities" [value]="p.desc">
               {{p.id}}-{{p.desc}}
             </mat-option>
           </mat-select>
@@ -130,21 +130,21 @@
         </mat-form-field>
         <mat-form-field class="example-form">
           <mat-select placeholder="Damage code" formControlName="damageCode">
-            <mat-option *ngFor="let p of priorities" [value]="p.id">
+            <mat-option *ngFor="let p of priorities" [value]="p.desc">
               {{p.id}}-{{p.desc}}
             </mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field class="example-form">
           <mat-select placeholder="Cause" formControlName="cause">
-            <mat-option *ngFor="let p of priorities" [value]="p.id">
+            <mat-option *ngFor="let p of priorities" [value]="p.desc">
               {{p.id}}-{{p.desc}}
             </mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field class="example-form">
           <mat-select placeholder="Object part" formControlName="objectPart">
-            <mat-option *ngFor="let p of priorities" [value]="p.id">
+            <mat-option *ngFor="let p of priorities" [value]="p.desc">
               {{p.id}}-{{p.desc}}
             </mat-option>
           </mat-select>

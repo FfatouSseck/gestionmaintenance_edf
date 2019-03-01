@@ -12,6 +12,7 @@ import { BasePage } from '../base.page';
 })
 export class CreateNotificationPage extends BasePage implements OnInit{
 
+  nbAttachments = 0;
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform,
               public qrScanner: QRScanner, public toastController: ToastController,
@@ -34,6 +35,11 @@ export class CreateNotificationPage extends BasePage implements OnInit{
       longText: [''],
       breakdownIndic: ['']
     });
+  }
+
+  
+  addAttachment(){
+    this.nbAttachments++;
   }
 
 

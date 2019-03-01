@@ -4,9 +4,6 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon name="send"></ion-icon>
-      </ion-button>
     </ion-buttons>
     <ion-title>Notification</ion-title>
   </ion-toolbar>
@@ -15,7 +12,7 @@
 <ion-content padding>
   <form [formGroup]="notifFormGroup">
     <ion-row style="background-color: #F2F2F2">
-      <h3 style="font-weight: bold;color: #000;font-size: 30px">General information</h3>
+      <h3 style="font-weight: bold;color: #000;font-size: 20px">General information</h3>
     </ion-row>
     <mat-form-field class="example-form" color="secondary">
       <input disabled matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
@@ -45,7 +42,7 @@
       </mat-select>
     </mat-form-field>
     <ion-row style="background-color: #F2F2F2">
-      <h3 style="font-weight: bold;color: #000;font-size: 30px">Notification informations</h3>
+      <h3 style="font-weight: bold;color: #000;font-size: 20px">Notification informations</h3>
     </ion-row>
     <mat-form-field class="example-form">
       <mat-select placeholder="Priority" formControlName="priority">
@@ -82,7 +79,22 @@
     <mat-form-field class="example-form">
       <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
     </mat-form-field>
-
+    <br/>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-label>Attachments({{nbAttachments}})</ion-label>
+          </ion-buttons>
+          <ion-buttons slot="end">
+              <ion-button (click)="addAttachment()">
+                  <ion-icon name="camera"></ion-icon>
+                  Take picture
+              </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+    <mat-divider></mat-divider>
+    <ion-icon name="attach" class="disp" style="font-size: 200px"></ion-icon>
+    <h4 style="text-align: center">No attachments</h4>
+    <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
   </form>
 </ion-content>
 <ion-footer>

@@ -17,12 +17,10 @@ export class HomePage {
               public modalController: ModalController,private screenOrientation: ScreenOrientation)
     {
       this.orientation = this.screenOrientation.type;
-      console.log(this.orientation);
         // detect orientation changes
         this.screenOrientation.onChange().subscribe(
           () => {
               this.orientation = this.screenOrientation.type;
-              console.log(this.orientation);
           }
         );
     }

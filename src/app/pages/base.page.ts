@@ -42,11 +42,13 @@ export class BasePage implements OnInit{
 
   initDate(){
     let m = this.today.getMonth() + 1;
+    let d = this.today.getDate();
     let min = this.today.getMinutes();
     let h = this.today.getHours();
     let minutes = "";
     let month = "";
     let hours = "";
+    let day = "";
 
     if (m.toString().length < 2) {
       month = "0" + m;
@@ -60,7 +62,11 @@ export class BasePage implements OnInit{
       hours = "0" + h;
     } else hours = h.toString();
 
-    this.dateauj = this.today.getDate() + "/" + month + "/" + this.today.getFullYear() + " " + hours + ":" + minutes;
+    if(d.toString().length < 2){
+      day = "0"+d;
+    }else day = d.toString();
+
+    this.dateauj = day + "/" + month + "/" + this.today.getFullYear() + " " + hours + ":" + minutes;
 
   }
 
