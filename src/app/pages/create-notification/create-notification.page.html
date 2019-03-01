@@ -92,9 +92,11 @@
           </ion-buttons>
     </ion-toolbar>
     <mat-divider></mat-divider>
-    <ion-icon name="attach" class="disp" style="font-size: 200px"></ion-icon>
-    <h4 style="text-align: center">No attachments</h4>
-    <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
+    <div *ngIf="nbAttachments == 0">
+      <ion-icon name="attach" class="disp" style="font-size: 200px"></ion-icon>
+      <h4 style="text-align: center">No attachments</h4>
+      <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
+  </div>
   </form>
 </ion-content>
 <ion-footer>

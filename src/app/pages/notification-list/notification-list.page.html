@@ -11,6 +11,7 @@
   <ion-split-pane content-id="menu-content">
     <!--  our side menu  -->
     <ion-menu content-id="menu-content">
+      <ion-content scrollEvents="true">
       <ion-list>
         <ion-item detail (click)="presentDetails(notif)" *ngFor="let notif of notifList" [color]="notif.color">
           <ion-label text-wrap>
@@ -27,6 +28,7 @@
           </ion-label>
         </ion-item>
       </ion-list>
+    </ion-content>
     </ion-menu>
 
     <!-- the main content -->
