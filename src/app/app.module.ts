@@ -18,6 +18,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NotificationListPageModule } from './pages/notification-list/notification-list.module';
 
+import { Camera } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/File/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { HttpClientModule } from '@angular/common/http';
+ 
+import { IonicStorageModule } from '@ionic/storage';
+import { NativeStorage } from '@ionic-native/native-storage/ngx'
+
 @NgModule({
   declarations: [AppComponent,NotificationDetailsPage,DetailsSettingsPage],
   entryComponents: [NotificationDetailsPage,NotificationListPage,DetailsSettingsPage],
@@ -31,12 +40,20 @@ import { NotificationListPageModule } from './pages/notification-list/notificati
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    NotificationListPageModule
+    NotificationListPageModule,
+    
+    HttpClientModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Data,
+    Camera,
+    File,
+    WebView,
+    FilePath,
+    NativeStorage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

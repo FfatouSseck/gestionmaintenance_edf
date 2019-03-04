@@ -52,7 +52,8 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj" formControlName="startDate" required>
+      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj" formControlName="startDate"
+        required>
       <mat-icon matSuffix>calendar_today</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
@@ -79,30 +80,49 @@
     <mat-form-field class="example-form">
       <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
     </mat-form-field>
-    <br/>
+    <br />
     <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-label>Attachments({{nbAttachments}})</ion-label>
-          </ion-buttons>
-          <ion-buttons slot="end">
-              <ion-button (click)="addAttachment()">
-                  <ion-icon name="camera"></ion-icon>
-                  Take picture
-              </ion-button>
-          </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-label>Attachments({{nbAttachments}})</ion-label>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="selectImage()">
+          <ion-icon name="camera"></ion-icon>
+          Take picture
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
     <mat-divider></mat-divider>
     <div *ngIf="nbAttachments == 0">
       <ion-icon name="attach" class="disp" style="font-size: 200px"></ion-icon>
       <h4 style="text-align: center">No attachments</h4>
       <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
-  </div>
+    </div>
+    <div *ngIf="nbAttachments > 0">
+        <ion-list>
+            <ion-item *ngFor="let img of images; index as pos" text-wrap>
+              <ion-thumbnail slot="start">
+                <ion-img [src]="img.path"></ion-img>
+              </ion-thumbnail>
+              <ion-label>
+                {{ img.name }}
+              </ion-label>
+              <ion-button slot="end" fill="clear" (click)="startUpload(img)">
+                <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+              </ion-button>
+              <ion-button slot="end" fill="clear" (click)="deleteImage(img, pos)">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-list>
+    </div>
   </form>
 </ion-content>
 <ion-footer>
   <ion-toolbar style="--background: #3E4649;--min-height:50px">
     <ion-buttons slot="end">
-      <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true" size="large" type="reset">Clear</ion-button>
+      <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true"
+        size="large" type="reset">Clear</ion-button>
       <ion-button style="background-color: green;color: white">
         Save
       </ion-button>

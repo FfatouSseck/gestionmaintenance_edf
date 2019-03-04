@@ -40,34 +40,22 @@ export class HomePage {
         text: 'Choose Plant',
         icon: 'send',
         handler: () => {
-          console.log('choose plant clicked');
           this.presentPlantsModal();
         }
-      }, {
+      }, 
+      {
         text: 'User settings',
         icon: 'settings',
         handler: () => {
-          console.log('user settings clicked');
         }
-      },/* {
-        text: 'Play (open modal)',
-        icon: 'arrow-dropright-circle',
-        handler: () => {
-          console.log('Play clicked');
-        }
-      }, {
-        text: 'Favorite',
-        icon: 'heart',
-        handler: () => {
-          console.log('Favorite clicked');
-        }
-      },*/ {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
-        }
+      },
+      {
+      text: 'Cancel',
+      icon: 'close',
+      role: 'cancel',
+      handler: () => {
+        console.log('Cancel clicked');
+      }
       }]
     });
     await actionSheet.present();

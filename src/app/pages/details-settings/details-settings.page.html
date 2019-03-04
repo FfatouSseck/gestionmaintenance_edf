@@ -12,10 +12,20 @@
 
   <ion-list>
     <ion-list-header>
-      <ion-label>Plant-Short Description</ion-label>
+      <ion-label>Choose the plant you want to synchronize</ion-label>
     </ion-list-header>
-    <ion-item *ngFor="let plant of plants">
-      <ion-toggle color="primary" [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>{{plant.code}}-{{plant.desc}}
+    <ion-item *ngFor="let plant of plants;let i=index">
+      <ion-toggle (ionChange)="notify($event,i)" color="primary" [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>{{plant.code}}-{{plant.desc}}
     </ion-item>
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #3E4649;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: #3E4649;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

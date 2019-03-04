@@ -4,7 +4,7 @@
 
     <ion-buttons slot="end">
       <ion-button fill="clear" (click)="presentActionSheet()">
-        <mat-icon style="color: #000"><i class="material-icons" style="font-size: 30px">
+        <mat-icon style="color: grey"><i class="material-icons" style="font-size: 30px">
             person
           </i></mat-icon>
       </ion-button>
@@ -14,11 +14,11 @@
 
 <ion-content padding fullscreen="true">
 
-  <div *ngIf="orientation === 'portrait-primary'; else landscapeContent">
-    <mat-grid-list cols="3" rowHeight="1:1" gutterSize="30px">
+  <div *ngIf="orientation === 'portrait-primary'; else landscapeContent" class="principalContent">
+    <mat-grid-list cols="3" rowHeight="1:1.2" gutterSize="20px">
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff" routerLink="/create-notification">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               add_circle
             </i></mat-icon>
           <h1 style="color:#009DE0">Create Notification</h1>
@@ -26,7 +26,7 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff" routerLink="/notification-list">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               error
             </i></mat-icon>
 
@@ -36,7 +36,7 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               file_copy
             </i></mat-icon>
 
@@ -46,7 +46,7 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               assignment
             </i></mat-icon>
           <h1 style="color:#009DE0">Checklist assignment</h1>
@@ -54,7 +54,7 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               book
             </i></mat-icon>
 
@@ -64,7 +64,7 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               settings
             </i></mat-icon>
 
@@ -74,7 +74,7 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               note
             </i></mat-icon>
           <h1 style="color:#009DE0">Documents</h1>
@@ -84,74 +84,77 @@
   </div>
 
   <ng-template #landscapeContent>
-    <mat-grid-list cols="4" rowHeight="1:1" gutterSize="30px">
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff"  routerLink="/create-notification">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
-              add_circle
-            </i></mat-icon>
-         <br/> <h4 style="color:#009DE0">Create Notification</h4>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/notification-list">
-          <mat-icon style="color: #F1471C;font-size: 30px"><i class="material-icons" style="font-size: 40px">
-              error
-            </i></mat-icon>
-
-          <h4 style="color: grey;font-size: 40px">65</h4>
-          <h4 style="color:#009DE0">Notification List<br /></h4>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
-              file_copy
-            </i></mat-icon>
-            
-            <h4 style="color: grey;font-size: 40px">65</h4>
-          <h4 style="color:#009DE0">Service Order Preparation</h4>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
-              assignment
-            </i></mat-icon>
-          <h4 style="color:#009DE0">Checklist assignment</h4>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
-              book
-            </i></mat-icon>
-            
-            <h4 style="color: grey;font-size: 40px">65</h4>
-          <h4 style="color:#009DE0">Service Order</h4>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C"><i class="material-icons" style="font-size: 40px">
-              settings
-            </i></mat-icon>
-            
-            <h4 style="color: grey;font-size: 40px">65</h4>
-          <h4 style="color:#009DE0">Time & Material Confirmation</h4>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
-          <mat-icon style="color: #F1471C" ><i class="material-icons" style="font-size: 40px">
-              note
-            </i></mat-icon>
-            
-            <h4 style="color: grey;font-size: 40px">65</h4>
-          <h4 style="color:#009DE0">Documents</h4>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <div class="principalContent">
+        <mat-grid-list cols="4" rowHeight="1:1" gutterSize="12px">
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff"  routerLink="/create-notification">
+                <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+                    add_circle
+                  </i></mat-icon>
+               <br/> <h6 style="color:#009DE0">Create Notification</h6>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff" routerLink="/notification-list">
+                <mat-icon style="color: #007CC0;font-size: 30px"><i class="material-icons" style="font-size: 40px">
+                    error
+                  </i></mat-icon>
+      
+                <h4 style="color: grey;font-size: 40px">65</h4>
+                <h6 style="color:#009DE0">Notification List<br /></h6>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff">
+                <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+                    file_copy
+                  </i></mat-icon>
+                  
+                  <h4 style="color: grey;font-size: 40px">65</h4>
+                <h6 style="color:#009DE0">Service Order Preparation</h6>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff">
+                <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+                    assignment
+                  </i></mat-icon>
+                <h6 style="color:#009DE0">Checklist assignment</h6>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff">
+                <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+                    book
+                  </i></mat-icon>
+                  
+                  <h4 style="color: grey;font-size: 40px">65</h4>
+                <h6 style="color:#009DE0">Service Order</h6>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff">
+                <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+                    settings
+                  </i></mat-icon>
+                  
+                  <h4 style="color: grey;font-size: 40px">65</h4>
+                <h6 style="color:#009DE0">Time & Material Confirmation</h6>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card style="background-color: #ffffff">
+                <mat-icon style="color: #007CC0" ><i class="material-icons" style="font-size: 40px">
+                    note
+                  </i></mat-icon>
+                  
+                  <h4 style="color: grey;font-size: 40px">65</h4>
+                <h6 style="color:#009DE0">Documents</h6>
+              </mat-card>
+            </mat-grid-tile>
+          </mat-grid-list>
+    </div>
+    
 
   </ng-template>
 
