@@ -39,9 +39,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   ngOnInit() {
-    this.plt.ready().then(() => {
+    /*this.plt.ready().then(() => {
       this.loadStoredImages();
-    });
+    });*/
 
     this.notifFormGroup = this._formBuilder.group({
       description: ['', Validators.required],

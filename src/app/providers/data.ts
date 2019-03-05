@@ -22,7 +22,7 @@ export class Data {
     filterItems(searchTerm){
 
         return this.plants.filter((plant) => {
-            return plant.desc.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+            return (plant.desc.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || plant.code.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
         });     
 
     }

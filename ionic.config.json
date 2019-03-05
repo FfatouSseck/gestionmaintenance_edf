@@ -3,5 +3,9 @@
   "integrations": {
     "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "proxies":{
+    "path":"/sap/opu/odata/sap",
+    "proxyUrl":"http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap"
+  }
 }
