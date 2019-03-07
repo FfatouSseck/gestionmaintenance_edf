@@ -49,6 +49,10 @@ export class DetailsSettingsPage implements OnInit {
 
 
         if (index >= 0) {
+
+          for(let i=0;i<plts.length;i++){
+            plts[i].state = "unchecked";
+          }
           plts[index].state = 'checked';
           console.log(index)
           this.plants = plts;
@@ -119,7 +123,7 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   choose(plant) {
-
+    this.checkedPlants = [];
     this.checkedPlants.push(plant);
     this.closeModal();
     /*this.storage.set("choosenPlant", plant);

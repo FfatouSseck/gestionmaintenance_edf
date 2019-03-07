@@ -61,6 +61,7 @@ export class NotificationListPage extends BasePage implements OnInit {
       breakdownIndic: ['']
     });
     let available = this.notifService.notifsAvailable();
+    console.log("available",available);
     if (available) {
       this.notifList = this.notifService.filterNotifs(this.searchTerm);
       this.notAvailable = false;
