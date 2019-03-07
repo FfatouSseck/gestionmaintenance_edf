@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { NotificationDetailsPage } from './pages/notification-details/notification-details.page';
 import { NotificationListPage } from './pages/notification-list/notification-list.page';
 import { DetailsSettingsPage } from './pages/details-settings/details-settings.page';
@@ -25,7 +25,9 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 import { HttpClientModule } from '@angular/common/http';
  
 import { IonicStorageModule } from '@ionic/storage';
-import { NativeStorage } from '@ionic-native/native-storage/ngx'
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { AuthGuardService } from './providers/auth-guard.service';
+import { AngularMaterialPageModule } from './pages/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [AppComponent,NotificationDetailsPage,DetailsSettingsPage],
@@ -41,12 +43,17 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx'
     ReactiveFormsModule,
     HttpModule,
     NotificationListPageModule,
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule,
     
     HttpClientModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AngularMaterialPageModule
   ],
   providers: [
     StatusBar,
+    AuthGuardService,
     SplashScreen,
     Data,
     Camera,
@@ -54,7 +61,8 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx'
     WebView,
     FilePath,
     NativeStorage,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+   // { provide: QRScanner, useClass: QRScannerMock }
   ],
   bootstrap: [AppComponent]
 })

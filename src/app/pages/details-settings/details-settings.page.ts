@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, ModalController } from '@ionic/angular';
+import { NavController, ModalController, NavParams } from '@ionic/angular';
 import { Data } from '../../providers/data';
 import { FormControl } from '@angular/forms';
-import {debounceTime} from 'rxjs/internal/operators';
+import { debounceTime } from 'rxjs/internal/operators';
 import { MatSnackBar } from '@angular/material';
 import { Storage } from '@ionic/storage';
+import { PlantsService } from '../../providers/plants.service';
 
 @Component({
   selector: 'app-details-settings',
@@ -17,97 +18,139 @@ export class DetailsSettingsPage implements OnInit {
   searchControl: FormControl;
   plants: any;
   checkedPlants = [];
-  choosenPlant : any;
+  choosenPlant: any;
+  notAvailable = true;
 
-  constructor(public navCtrl: NavController, public dataService: Data,public modalController: ModalController,
-              public snackBar: MatSnackBar,public storage: Storage) {
+  constructor(public navCtrl: NavController, public dataService: Data, public modalController: ModalController,
+    public snackBar: MatSnackBar, public storage: Storage, public navParams: NavParams, public plantService: PlantsService) {
 
     this.searchControl = new FormControl();
-    this.setFilteredItems();
-
-    this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
+    this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
 
       this.setFilteredItems();
 
     });
-    
 
-  }
 
-  ionViewDidLoad() {
   }
 
   setFilteredItems() {
+    this.plants = [];
     this.storage.get("choosenPlant").then(
-      (choosenPlantcode) =>{
-          this.choosenPlant = choosenPlantcode;
-          this.plants = this.dataService.filterItems(this.searchTerm);
-          let plants = this.dataService.filterItems(this.searchTerm);
-          let index = this.getPlantIndexFromCode(this.choosenPlant);
-          plants[index].state="checked";
-          this.plants = plants;
+      (choosenPlantcode) => {
+        this.choosenPlant = choosenPlantcode;
 
-          if(this.checkedPlants.findIndex(x => x.code === this.choosenPlant) < 0){
-            
-            let plant = this.getPlantFromCode(this.choosenPlant);
-            this.checkedPlants.push(plant);
-          }
+        this.plants = this.dataService.filterItems(this.searchTerm);
+        let plts = this.dataService.filterItems(this.searchTerm);
+
+        let index = this.getPlantIndexFromCode(this.choosenPlant);
+        let plant = this.getPlantFromCode(this.choosenPlant);
+        this.checkedPlants.push(plant);
+
+
+        if (index >= 0) {
+          plts[index].state = 'checked';
+          console.log(index)
+          this.plants = plts;
+
+        }
+
+        if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
+          let plant = this.getPlantFromCode(this.choosenPlant);
+          this.checkedPlants.push(plant);
+        }
+
+
       },
-      (err) =>{
-        console.log("error",err);
+      (err) => {
+        console.log("error", err);
       })
-    
+
   }
 
   ngOnInit() {
-  }
-
-  closeModal(){
-    //we gonna check if there are more than one plant choosen  
-    if(this.checkedPlants.length>1) {
-      this.openSnackBar("You have choosen more than one plant");
+    let available = this.dataService.plantsAvailable();
+    if (available) {
+      this.notAvailable = false;
+      this.setFilteredItems();
     }
-    else if(this.checkedPlants.length==0) 
-    {
-      this.openSnackBar("Please select at least one planning plant");
-    }
-    else if(this.checkedPlants.length==1){
-      //we save the item to session storage and close the modal
-      this.storage.remove("choosenPlant").then(
-        ()=>{  
-           this.storage.set("choosenPlant",this.checkedPlants[0].code);
-        },
-        (err)=>{
-            console.log(err);
+    else {
+      this.plantService.getAllPlants().subscribe(
+        (plts) => {
+          let p = plts.d.results;
+          let done = this.dataService.setPlants(p);
+          if (done) {
+            this.notAvailable = false;
+            this.setFilteredItems();
+          }
         }
       )
-      this.modalController.dismiss();
     }
   }
 
-  notify(event,index) {
+  closeModal() {
+    //we gonna check if there are more than one plant choosen  
+    if (this.checkedPlants.length > 1) {
+      this.openSnackBar("You have choosen more than one plant");
+    }
+    else if (this.checkedPlants.length == 0 && this.choosenPlant === "") {
+      this.openSnackBar("Please select at least one planning plant");
+    }
+    else if (this.checkedPlants.length == 1) {
+      //we save the item to session storage and close the modal
+      this.storage.remove("choosenPlant").then(
+        () => {
+          this.storage.set("choosenPlant", this.checkedPlants[0].Plant);
+          this.modalController.dismiss({
+            'result': this.checkedPlants[0].Plant
+          });
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+
+    }
+    else if (this.choosenPlant !== "") {
+      this.modalController.dismiss({
+        'result': this.choosenPlant
+      });
+    }
+  }
+
+  choose(plant) {
+
+    this.checkedPlants.push(plant);
+    this.closeModal();
+    /*this.storage.set("choosenPlant", plant);
+    this.modalController.dismiss({
+      'result': plant
+    });*/
+  }
+
+  notify(event, index) {
     let ind = this.getPlantIndexFromCode(this.choosenPlant);
-    if(index!= ind && event.detail.checked == true){
+    if (index != ind && event.detail.checked == true) {
       //if the item is checked we add it to the choosen ones
       this.checkedPlants.push(this.plants[index]);
-      if(this.checkedPlants.length == 1){
+      if (this.checkedPlants.length == 1) {
         this.closeModal();
       }
     }
-    else if(event.detail.checked == false){
+    else if (event.detail.checked == false) {
       //we remove the item from the array
-      let i = this.getPlantIndexFromCode(this.plants[index].code);//index on global plants array
-      for(let j=0;j<this.checkedPlants.length;j++){
-        if(this.plants[i].code === this.checkedPlants[j].code){
-          this.checkedPlants.splice(j,1);
+      let i = this.getPlantIndexFromCode(this.plants[index].Plant);//index on global plants array
+      for (let j = 0; j < this.checkedPlants.length; j++) {
+        if (this.plants[i].Plant === this.checkedPlants[j].Plant) {
+          this.checkedPlants.splice(j, 1);
           break
         }
-      }  
-      this.plants[index].state="unchecked";
-      if(this.checkedPlants.length == 1){
+      }
+      this.plants[index].state = "unchecked";
+      if (this.checkedPlants.length == 1) {
         this.closeModal();
       }
-      
+
     }
   }
 
@@ -117,19 +160,19 @@ export class DetailsSettingsPage implements OnInit {
     });
   }
 
-  getPlantFromCode(code: string){
+  getPlantFromCode(code: string) {
     let plant: any;
     let index = this.getPlantIndexFromCode(code);
     plant = this.plants[index];
     return plant;
   }
 
-  getPlantIndexFromCode(code: string){
+  getPlantIndexFromCode(code: string) {
     let i = 0;
     let x;
-    for(i=0;i<this.plants.length;i++){
-      if(this.plants[i].code===code){
-        return i; 
+    for (i = 0; i < this.plants.length; i++) {
+      if (this.plants[i].Plant === code) {
+        return i;
       }
     }
   }

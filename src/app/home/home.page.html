@@ -1,7 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <img alt="logo" height="40" src="../../assets/img/logo.png">
-
     <ion-buttons slot="end">
       <ion-button fill="clear" (click)="presentActionSheet()">
         <mat-icon style="color: grey"><i class="material-icons" style="font-size: 30px">
@@ -13,7 +12,6 @@
 </ion-header>
 
 <ion-content padding fullscreen="true">
-
   <div *ngIf="orientation === 'portrait-primary'; else landscapeContent" class="principalContent">
     <mat-grid-list cols="3" rowHeight="1:1.2" gutterSize="20px">
       <mat-grid-tile>
@@ -30,7 +28,7 @@
               error
             </i></mat-icon>
 
-          <h4 style="color: grey;font-size: 40px">65</h4>
+          <h4 style="color: grey;font-size: 40px">{{notifsCount}}</h4>
           <h1 style="color:#009DE0">Notification List<br /></h1>
         </mat-card>
       </mat-grid-tile>

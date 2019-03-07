@@ -1,28 +1,46 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { IPlant } from '../interfaces/plant.interface';
 
 @Injectable()
 export class Data {
 
-    plants: any;
+    plants:IPlant[];
 
     constructor(public http: Http) {
 
-        this.plants = [
-            {code: '2ARA',desc: 'Arnprior A - Gen',state: 'unchecked'},
-            {code: '2ARB',desc: 'Arnprior B - Gen',state: 'unchecked'},
-            {code: '2BCB',desc: 'Bobcat Bluff Wind Project, LLC',state: 'unchecked'},
-            {code: '2CFL',desc: 'Chestnut Flats Lessee, LLC',state: 'unchecked'},
-            {code: '2GRA',desc: 'Granit (ext of St Robert) GEN',state: 'unchecked'},
-            {code: '2HER',desc: 'TX Hereford Wind, LLC',state: 'unchecked'}
-        ]
+        this.plants = [];
 
+    }
+
+    setPlants(plts): boolean{
+        let done = false;
+        for(let i=0;i<plts.length;i++){
+            this.plants.push({
+                Plant: plts[i].Plant,
+                PlantDescr: plts[i].PlantDescr,
+                state: "unchecked"
+            });
+        }
+
+        if(this.plants.length>0) done=true;
+        return done;
+
+    }
+
+    plantsAvailable():boolean{
+        let available = false;
+
+        if(this.plants.length>0){
+            available = true;
+        }
+        return available;
     }
 
     filterItems(searchTerm){
 
         return this.plants.filter((plant) => {
-            return (plant.desc.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || plant.code.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
+            return (plant.PlantDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || plant.Plant.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
         });     
 
     }

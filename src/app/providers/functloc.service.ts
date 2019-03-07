@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError } from 'rxjs';
+//import {of, throwError } from 'rxjs';
+//import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { catchError, tap, map } from 'rxjs/operators';
+//import { catchError, tap, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment.prod';
 
 const httpOptions = {
@@ -14,7 +15,7 @@ export class FunctlocService {
 
   constructor(private http: HttpClient) { }
 
-  private handleError(error: HttpErrorResponse) {
+  /*private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
       console.error('An error occurred:', error.error.message);
@@ -27,14 +28,14 @@ export class FunctlocService {
     }
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
-  }
+  }*/
   
   private extractData(res: Response) {
     let body = res;
     return body || { };
   }
 
-  getFunctLoc(): Observable<any> {
+  /*getFunctLoc(): Observable<any> {
     return this.http.get(`${environment.apiUrl}/functloc/`, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
@@ -69,5 +70,5 @@ export class FunctlocService {
       .pipe(
         catchError(this.handleError)
       );
-  }
+  }*/
 }

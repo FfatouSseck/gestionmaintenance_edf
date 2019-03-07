@@ -23,7 +23,7 @@ export class PlantsService {
   }
 
   getAllPlants() : Observable<any>{
-    return this.http.get('http://saphana3.kalydia.local:8009/sap/opu/odata/sap/ZKAL_FIELD_SERVICES_SRV/PlanGroupSet/',{headers:this.headers,responseType:'json'}).pipe(
+    return this.http.get(`${environment.apiUrl}`+'PlanPlantSet',{headers:this.headers,responseType:'json'}).pipe(
       map(this.extractData)
     );
   }

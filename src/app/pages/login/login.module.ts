@@ -5,14 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DetailsSettingsPage } from './details-settings.page';
+import { LoginPage } from './login.page';
 import { AngularMaterialPageModule } from '../angular-material/angular-material.module';
-import { MatProgressSpinnerModule } from '@angular/material';
 
 const routes: Routes = [
   {
     path: '',
-    component: DetailsSettingsPage
+    component: LoginPage
   }
 ];
 
@@ -22,9 +21,10 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    AngularMaterialPageModule,
-    MatProgressSpinnerModule,
+    AngularMaterialPageModule
   ],
-  declarations: [DetailsSettingsPage]
+  declarations: [
+    LoginPage
+  ]
 })
-export class DetailsSettingsPageModule {}
+export class LoginPageModule {}

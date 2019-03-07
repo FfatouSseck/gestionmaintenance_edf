@@ -1,23 +1,32 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-button (click)="closeModal()"><ion-icon name="arrow-back"></ion-icon></ion-button>
-        </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Plant</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+  <div *ngIf="notAvailable;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>Choose the plant you want to synchronize</ion-label>
-    </ion-list-header>
-    <ion-item *ngFor="let plant of plants;let i=index">
-      <ion-toggle (ionChange)="notify($event,i)" color="primary" [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>{{plant.code}}-{{plant.desc}}
-    </ion-item>
-  </ion-list>
+  <ng-template #contentAvailable>
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Choose the plant you want to synchronize</ion-label>
+      </ion-list-header>
+      <ion-item (click)="choose(plant)" *ngFor="let plant of plants;let i=index">
+        <ion-toggle (ionChange)="notify($event,i)" color="primary" [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>{{plant.Plant}}-{{plant.PlantDescr}}
+      </ion-item>
+    </ion-list>
+  </ng-template>
+
+
 </ion-content>
 
 <ion-footer>

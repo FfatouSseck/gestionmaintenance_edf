@@ -4,6 +4,8 @@ import { Platform, ToastController, AlertController } from '@ionic/angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 
+//import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
+
 @Component({
   selector: 'app-base',
   styleUrls: [],
@@ -34,7 +36,7 @@ export class BasePage implements OnInit{
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform,
               public qrScanner: QRScanner, public toastController: ToastController,
-              public snackBar: MatSnackBar,public alertController: AlertController) {
+              public snackBar: MatSnackBar,public alertController: AlertController/*, public mockScanner: QRScannerMock*/) {
     
     this.initDate();
     if (platform.is("mobile")) this.mobile = true;
@@ -123,6 +125,10 @@ export class BasePage implements OnInit{
       .catch((e: any) => {
         this.presentQRAlert();
       });
+
+      if(!this.mobile){
+        console.log("Sur ordinateur")
+      }
   }
 
   

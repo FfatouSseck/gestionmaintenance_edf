@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
+//import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
 import { finalize } from 'rxjs/operators';
 
@@ -33,9 +34,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
     private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
     private plt: Platform, private loadingController: LoadingController,
-    private ref: ChangeDetectorRef, private filePath: FilePath) {
+    private ref: ChangeDetectorRef, private filePath: FilePath, /*public mockScanner: QRScannerMock*/) {
 
-    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController);
+    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController,/*mockScanner*/);
   }
 
   ngOnInit() {
