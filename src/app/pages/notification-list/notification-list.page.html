@@ -41,7 +41,8 @@
 
       <!-- the main content -->
       <ion-content id="menu-content">
-        <form *ngIf="modif == false">
+        <p *ngIf="choosenNotif.notifNumber == null">Choose one notification to see details</p>
+        <form *ngIf="modif == false && choosenNotif.notifNumber!=null">
           <ion-row style="background-color: #F2F2F2">
             <h4 style="font-weight: bold;color: #000;font-size: 15px">General information</h4>
           </ion-row>
