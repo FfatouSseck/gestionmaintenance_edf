@@ -23,26 +23,27 @@ export class NotificationListPage extends BasePage implements OnInit {
   notifList = []
 
   choosenNotif: Notification={
-        breakdownIndic: undefined,
+        breakdownIndic: null,
         cause: "",
         color: null,
-        damageCode:undefined,
-        description:undefined,
-        equipment:undefined,
-        functloc:undefined,
-        longText:undefined,
-        notifNumber:undefined,
-        objectPart:undefined,
-        priority:undefined,
-        productionEff:undefined,
-        startDate: undefined
+        damageCode:null,
+        description:null,
+        equipment:null,
+        functloc:null,
+        longText:null,
+        notifNumber:null,
+        objectPart:null,
+        priority:null,
+        productionEff:null,
+        startDate: null
   };
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public notifService: NotificationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage) {
 
-    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController/*,mockScanner*/);
+    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController);
+
     //this.notifList[0].color="light";
   }
 
@@ -60,6 +61,10 @@ export class NotificationListPage extends BasePage implements OnInit {
       longText: [''],
       breakdownIndic: ['']
     });
+  }
+
+  ionViewDidEnter(){
+    
     let available = this.notifService.notifsAvailable();
     console.log("available",available);
     if (available) {
@@ -67,29 +72,8 @@ export class NotificationListPage extends BasePage implements OnInit {
       this.notAvailable = false;
     }
     else {
-      this.storage.get("choosenPlant").then(
-        (choosenPlantcode) =>{
-          if (choosenPlantcode != null){
-            this.notifService.getAllNotifs(choosenPlantcode).subscribe(
-              (notifs: any) => {
-                let done = this.notifService.setNotifs(notifs.d.results);
-                if (done) {
-                  this.notifList = this.notifService.filterNotifs(this.searchTerm);
-                  this.choosenNotif = this.notifList[0];
-                  this.notAvailable = false;
-                }
-                else this.noData = true;
-              },
-              (err)=>{
-                console.log(err);
-                this.noData = true;
-              }
-            )
-          }
-          
-        }
-      )
-      
+    
+      this.getNotifs()
     }
   }
 
@@ -107,6 +91,31 @@ export class NotificationListPage extends BasePage implements OnInit {
 
   modifyNotif() {
     this.modif = true;
+  }
+
+  getNotifs(){
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) =>{
+        if (choosenPlantcode != null){
+          this.notifService.getAllNotifs(choosenPlantcode).subscribe(
+            (notifs: any) => {
+              let done = this.notifService.setNotifs(notifs.d.results);
+              if (done) {
+                this.notifList = this.notifService.filterNotifs(this.searchTerm);
+                this.choosenNotif = this.notifList[0];
+                this.notAvailable = false;
+              }
+              else this.noData = true;
+            },
+            (err)=>{
+              console.log(err);
+              this.noData = true;
+            }
+          )
+        }
+        
+      }
+    )
   }
 
 }
