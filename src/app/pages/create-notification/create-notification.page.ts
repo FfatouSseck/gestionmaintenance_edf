@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-//import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
 import { finalize } from 'rxjs/operators';
 

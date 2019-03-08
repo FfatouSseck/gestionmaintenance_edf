@@ -6,6 +6,7 @@ import { debounceTime } from 'rxjs/internal/operators';
 import { MatSnackBar } from '@angular/material';
 import { Storage } from '@ionic/storage';
 import { PlantsService } from '../../providers/plants.service';
+import { IPlant } from '../../interfaces/plant.interface';
 
 @Component({
   selector: 'app-details-settings',
@@ -17,7 +18,7 @@ export class DetailsSettingsPage implements OnInit {
   searchTerm: string = '';
   searchControl: FormControl;
   plants: any;
-  checkedPlants = [];
+  checkedPlants:IPlant[] = [];
   choosenPlant: any;
   notAvailable = true;
 
@@ -38,32 +39,40 @@ export class DetailsSettingsPage implements OnInit {
     this.plants = [];
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
-        this.choosenPlant = choosenPlantcode;
+        console.log(choosenPlantcode);
+        if(choosenPlantcode != null){
+          this.choosenPlant = choosenPlantcode;
 
-        this.plants = this.dataService.filterItems(this.searchTerm);
-        let plts = this.dataService.filterItems(this.searchTerm);
-
-        let index = this.getPlantIndexFromCode(this.choosenPlant);
-        let plant = this.getPlantFromCode(this.choosenPlant);
-        this.checkedPlants.push(plant);
-
-
-        if (index >= 0) {
-
-          for(let i=0;i<plts.length;i++){
-            plts[i].state = "unchecked";
-          }
-          plts[index].state = 'checked';
-          console.log(index)
-          this.plants = plts;
-
-        }
-
-        if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
+          this.plants = this.dataService.filterItems(this.searchTerm);
+          let plts = this.dataService.filterItems(this.searchTerm);
+  
+          let index = this.getPlantIndexFromCode(this.choosenPlant);
           let plant = this.getPlantFromCode(this.choosenPlant);
           this.checkedPlants.push(plant);
+  
+  
+          if (index >= 0) {
+  
+            for (let i = 0; i < plts.length; i++) {
+              plts[i].state = "unchecked";
+            }
+            plts[index].state = 'checked';
+            console.log(index)
+            this.plants = plts;
+  
+          }
+          if (this.checkedPlants.length > 0) {
+            if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
+              let plant = this.getPlantFromCode(this.choosenPlant);
+              this.checkedPlants.push(plant);
+            }
+  
+          }
         }
-
+        else {
+          this.plants = this.dataService.filterItems(this.searchTerm);
+        }
+     
 
       },
       (err) => {

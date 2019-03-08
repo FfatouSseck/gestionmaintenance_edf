@@ -8,6 +8,7 @@ import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { NotificationService } from '../../providers/notification.service';
 import { Storage } from '@ionic/storage';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-notification-list',
@@ -38,11 +39,24 @@ export class NotificationListPage extends BasePage implements OnInit {
         startDate: null
   };
 
+  orientation = "landscape_primary";
+
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public notifService: NotificationService,
-    public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage) {
+    public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
+    private screenOrientation: ScreenOrientation) {
 
     super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController);
+
+    this.orientation = this.screenOrientation.type;
+    console.log(this.orientation);
+        // detect orientation changes
+        this.screenOrientation.onChange().subscribe(
+            () => {
+                this.orientation = this.screenOrientation.type;
+                console.log(this.orientation);
+            }
+        );
 
     //this.notifList[0].color="light";
   }
@@ -69,12 +83,18 @@ export class NotificationListPage extends BasePage implements OnInit {
     console.log("available",available);
     if (available) {
       this.notifList = this.notifService.filterNotifs(this.searchTerm);
+      console.log(this.notifList);
       this.notAvailable = false;
+      this.noData = false;
     }
     else {
     
       this.getNotifs()
     }
+  }
+
+  ionViewDidLeave(){
+    console.log("left");
   }
 
   presentDetails(notif: Notification) {
@@ -83,10 +103,10 @@ export class NotificationListPage extends BasePage implements OnInit {
     let index = this.notifList.indexOf(notif);
 
     for (let i = 0; i < this.notifList.length; i++) {
-      // this.notifList[i].color=null
+       this.notifList[i].color=null
     }
 
-    //this.notifList[index].color = "light";
+    this.notifList[index].color = "light";
   }
 
   modifyNotif() {
@@ -99,13 +119,22 @@ export class NotificationListPage extends BasePage implements OnInit {
         if (choosenPlantcode != null){
           this.notifService.getAllNotifs(choosenPlantcode).subscribe(
             (notifs: any) => {
-              let done = this.notifService.setNotifs(notifs.d.results);
-              if (done) {
-                this.notifList = this.notifService.filterNotifs(this.searchTerm);
-                this.choosenNotif = this.notifList[0];
+              if(notifs.d.results.length>0){
+                let done = this.notifService.setNotifs(notifs.d.results);
+                console.log("done",done);
+                if (done) {
+                  this.notifList = this.notifService.filterNotifs(this.searchTerm);
+                  this.choosenNotif = this.notifList[0];
+                  this.notAvailable = false;
+                  this.noData = false;
+                }
+                else this.noData = true;
+              }
+              
+              else {
+                this.noData = true;
                 this.notAvailable = false;
               }
-              else this.noData = true;
             },
             (err)=>{
               console.log(err);
