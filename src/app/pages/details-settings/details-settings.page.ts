@@ -39,7 +39,6 @@ export class DetailsSettingsPage implements OnInit {
     this.plants = [];
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
-        console.log(choosenPlantcode);
         if(choosenPlantcode != null){
           this.choosenPlant = choosenPlantcode;
 
@@ -47,8 +46,8 @@ export class DetailsSettingsPage implements OnInit {
           let plts = this.dataService.filterItems(this.searchTerm);
   
           let index = this.getPlantIndexFromCode(this.choosenPlant);
-          let plant = this.getPlantFromCode(this.choosenPlant);
-          this.checkedPlants.push(plant);
+          /*let plant = this.getPlantFromCode(this.choosenPlant);
+          this.checkedPlants.push(plant);*/
   
   
           if (index >= 0) {
@@ -57,17 +56,16 @@ export class DetailsSettingsPage implements OnInit {
               plts[i].state = "unchecked";
             }
             plts[index].state = 'checked';
-            console.log(index)
             this.plants = plts;
   
           }
-          if (this.checkedPlants.length > 0) {
+         /* if (this.checkedPlants.length > 0) {
             if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
               let plant = this.getPlantFromCode(this.choosenPlant);
               this.checkedPlants.push(plant);
             }
   
-          }
+          }*/
         }
         else {
           this.plants = this.dataService.filterItems(this.searchTerm);
@@ -82,6 +80,11 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   ngOnInit() {
+    
+  }
+
+  ionViewDidEnter(){
+    this.checkedPlants=[];
     let available = this.dataService.plantsAvailable();
     if (available) {
       this.notAvailable = false;
@@ -135,10 +138,6 @@ export class DetailsSettingsPage implements OnInit {
     this.checkedPlants = [];
     this.checkedPlants.push(plant);
     this.closeModal();
-    /*this.storage.set("choosenPlant", plant);
-    this.modalController.dismiss({
-      'result': plant
-    });*/
   }
 
   notify(event, index) {

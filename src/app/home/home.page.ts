@@ -18,11 +18,12 @@ export class HomePage implements OnInit {
 
 
 
-    orientation = "portrait_primary";
+    orientation = "portrait-primary";
     choosenPlant = "";
     plants = [];
     modal: any;
-    notifsCount = 0;
+    notifsCount = null;
+    dataAvailable = false;
 
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
         public snackBar: MatSnackBar, public modalController: ModalController,
@@ -76,7 +77,6 @@ export class HomePage implements OnInit {
         await this.modal.present();
 
         const { data } = await this.modal.onDidDismiss();
-        console.log("returned data: ", data);
         this.getNotifList(data.result);
     }
 
@@ -115,11 +115,12 @@ export class HomePage implements OnInit {
     }
 
     getNotifList(plant) {
+        this.dataAvailable = false;
         this.notifService.getAllNotifs(plant).subscribe(
             (notifs: any) => {
                 this.notifService.setNotifs(notifs.d.results);
-                console.log(notifs.d.results);
                 this.notifsCount = notifs.d.results.length;
+                this.dataAvailable = true;
             }
         )
     }

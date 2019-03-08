@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatIconModule, MatCardModule, MatGridListModule } from '@angular/material';
-import { NotificationDetailsPage } from './pages/notification-details/notification-details.page';
 import { NotificationListPage } from './pages/notification-list/notification-list.page';
 import { DetailsSettingsPage } from './pages/details-settings/details-settings.page';
 import { Data } from './providers/data';
@@ -30,8 +29,8 @@ import { AuthGuardService } from './providers/auth-guard.service';
 import { AngularMaterialPageModule } from './pages/angular-material/angular-material.module';
 
 @NgModule({
-  declarations: [AppComponent,NotificationDetailsPage,DetailsSettingsPage],
-  entryComponents: [NotificationDetailsPage,NotificationListPage,DetailsSettingsPage],
+  declarations: [AppComponent,DetailsSettingsPage],
+  entryComponents: [NotificationListPage,DetailsSettingsPage],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 

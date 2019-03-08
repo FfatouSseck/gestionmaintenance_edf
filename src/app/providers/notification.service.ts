@@ -15,6 +15,7 @@ export class NotificationService {
   headers = new HttpHeaders();
   notifs:Notification[] = [];
   available = false;
+  currentNotif: any;
 
   constructor(public http: HttpClient) { 
     this.headers.append("Accept","application/json");
@@ -33,10 +34,7 @@ export class NotificationService {
   }
 
   setNotifs(ntfs): boolean{
-    console.log("received notifs",ntfs);
     let done = false;
-
-    console.log("length",ntfs.length);
     
     if(ntfs.length>0){
       for(let i=0;i<ntfs.length;i++){
@@ -73,7 +71,14 @@ export class NotificationService {
     return this.notifs.filter((notif) => {
         return (notif.notifNumber.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || notif.description.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
     });     
+ }
 
-}
+ setCurrentNotif(notif){
+   this.currentNotif = notif;
+ }
+
+ getCurrentNotif(){
+   return this.currentNotif;
+ }
 
 }

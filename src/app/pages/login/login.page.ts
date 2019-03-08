@@ -4,8 +4,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { AuthenticationService } from '../../providers/authentication.service';
 import { PlantsService } from '../../providers/plants.service';
 import { NavController } from '@ionic/angular';
-import { NavigationExtras, Router } from '@angular/router';
-import { NavigationOptions } from '@ionic/angular/dist/providers/nav-controller';
+import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
 import { Data } from '../../providers/data';
 import { NotificationService } from '../../providers/notification.service';
@@ -39,12 +38,10 @@ export class LoginPage implements OnInit {
     })
 
     this.orientation = this.screenOrientation.type;
-    console.log(this.orientation)
     // detect orientation changes
     this.screenOrientation.onChange().subscribe(
       () => {
           this.orientation = this.screenOrientation.type;
-          console.log("changing",this.orientation)
       }
     );
   }

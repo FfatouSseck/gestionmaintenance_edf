@@ -208,7 +208,7 @@
 
 </ion-content>
 <ion-footer *ngIf="modif == false && notAvailable==false">
-  <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf=" orientation === 'landscape-primary'">
+  <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf=" orientation === 'landscape-primary' && noData == false">
     <ion-buttons slot="end">
       <ion-button style="background-color: green;color: white">
         Create Service Order
@@ -225,7 +225,7 @@
   </ion-toolbar>
 </ion-footer>
 <ion-footer *ngIf="modif == true && notAvailable==false">
-  <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf=" orientation === 'landscape-primary'">
+  <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf=" orientation === 'landscape-primary' && noData == false">
     <ion-buttons slot="end">
       <ion-button style="background-color: green;color: white">
         Save
