@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Platform, ToastController, AlertController } from '@ionic/angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
+import { Priority } from '../interfaces/priority.interface';
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -24,12 +25,7 @@ export class BasePage implements OnInit{
     { id: 2, desc: 'Production Breakdown' },
     { id: 3, desc: 'Production Restricted' }
   ]
-  priorities = [
-    { id: 1, desc: 'Very High' },
-    { id: 2, desc: 'High' },
-    { id: 3, desc: 'Medium' },
-    { id: 4, desc: 'Low' }
-  ]
+  priorities:Priority[] = []
   today = new Date();
   dateauj = "";
   mobile = false;

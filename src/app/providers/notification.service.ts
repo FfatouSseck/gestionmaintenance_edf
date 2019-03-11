@@ -28,6 +28,7 @@ export class NotificationService {
   }
 
   getAllNotifs(codePlant){
+    console.log("plant: ",codePlant);
     return this.http.get(`${environment.apiUrl}`+"NotifHeaderSet?$filter=PlanPlant eq '"+codePlant+"'",{headers:this.headers,responseType:'json'}).pipe(
       map(this.extractData)
     );

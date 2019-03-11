@@ -80,11 +80,14 @@ export class NotificationListPage extends BasePage implements OnInit {
     let available = this.notifService.notifsAvailable();
     if (available) {
       this.notifList = this.notifService.filterNotifs(this.searchTerm);
-      this.notAvailable = false;
-      this.noData = false;
+      console.log(this.notifList)
+      if(this.notifList[0].notifNumber != null){
+        this.notAvailable = false;
+        this.noData = false;
+      }
     }
     else {
-      this.getNotifs()
+      this.getNotifs();
     }
   }
 
@@ -104,6 +107,52 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
   }
 
+  formatDate(newD:string){
+
+    let d1 = newD.replace('/Date(','');
+    let startDate = d1.replace(')/','');
+    let newDate = new Date(Number(startDate));
+
+    let m = newDate.getMonth() + 1;
+    let d = newDate.getDate();
+    let month = "";
+    let day = "";
+
+    if (m.toString().length < 2) {
+      month = "0" + m;
+    } else month = m.toString();
+
+    if(d.toString().length < 2){
+      day = "0"+d;
+    }else day = d.toString();
+
+    let datec = day + "/" + month + "/" + newDate.getFullYear();
+    return datec
+
+  }
+
+  getHoursandMinutes(d){
+    let d1 = d.replace('/Date(','');
+    let startDate = d1.replace(')/','');
+    let newDate = new Date(Number(startDate));
+
+    let min = newDate.getMinutes();
+    let h = newDate.getHours();
+    let minutes = "";
+    let hours = "";
+
+    if (min.toString().length < 2) {
+      minutes = "0" + min;
+    } else minutes = min.toString();
+
+    if (h.toString().length < 2) {
+      hours = "0" + h;
+    } else hours = h.toString();
+
+    let dateD = this.formatDate(d) + " " + hours + ":" + minutes;
+    return dateD;
+  }
+
   modifyNotif() {
     this.modif = true;
   }
@@ -119,8 +168,10 @@ export class NotificationListPage extends BasePage implements OnInit {
                 if (done) {
                   this.notifList = this.notifService.filterNotifs(this.searchTerm);
                   this.choosenNotif = this.notifList[0];
-                  this.notAvailable = false;
-                  this.noData = false;
+                  if(this.notifList[0].notifNumber != null){
+                    this.notAvailable = false;
+                    this.noData = false;
+                  }         
                 }
                 else this.noData = true;
               }

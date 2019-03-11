@@ -14,6 +14,7 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 import { finalize } from 'rxjs/operators';
+import { PriorityService } from 'src/app/providers/priority.service';
 
 const STORAGE_KEY = 'my_images';
 
@@ -33,7 +34,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
     private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
     private plt: Platform, private loadingController: LoadingController,
-    private ref: ChangeDetectorRef, private filePath: FilePath, /*public mockScanner: QRScannerMock*/) {
+    private ref: ChangeDetectorRef, private filePath: FilePath,private priorityService: PriorityService) {
 
     super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController,/*mockScanner*/);
   }
@@ -71,6 +72,24 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         console.log("Error", err)
       });
   }
+
+  ionViewDidEnter(){
+    if(this.priorityService.checkAvailability()){
+      this.priorities = this.priorityService.getPriorities();
+    }
+    else{
+      this.priorityService.getAllPriorities().subscribe(
+        (priorities) =>{
+            console.log(priorities.d.results);
+            this.priorityService.setPriorities(priorities.d.results);
+            console.log(this.priorityService.checkAvailability());
+        },
+        (err)=>{
+            console.log(err);
+        }
+      )
+    }
+}
 
   pathForImage(img) {
     if (img === null) {

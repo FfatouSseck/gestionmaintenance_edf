@@ -39,7 +39,7 @@
       <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.priority">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" readonly="true" [value]="choosenNotif.startDate">
+      <input matInput placeholder="Malfunction start date" readonly="true" [value]="initDate(choosenNotif.startDate)">
       <mat-icon matSuffix>calendar_today</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
@@ -105,7 +105,7 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj"
+      <input matInput placeholder="Malfunction start date" maxlength="40" [value]="initDate(choosenNotif.startDate)"
         formControlName="startDate" required>
       <mat-icon matSuffix>calendar_today</mat-icon>
     </mat-form-field>

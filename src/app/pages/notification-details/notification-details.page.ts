@@ -18,7 +18,7 @@ export class NotificationDetailsPage implements OnInit {
 
   ngOnInit() {
     this.choosenNotif =  this.notifService.getCurrentNotif();
-    console.log(this.choosenNotif.startDate);
+    console.log(this.choosenNotif);
 
     this.notifDetailsFormGroup = this._formBuilder.group({
       description: ['', Validators.required],
@@ -42,14 +42,15 @@ export class NotificationDetailsPage implements OnInit {
   }
 
   ionViewDidEnter(){
-    let d1 = this.choosenNotif.startDate.replace('/Date(','');
+    
+  }
+
+  initDate(newD:string){
+
+    let d1 = newD.replace('/Date(','');
     let startDate = d1.replace(')/','');
     let newDate = new Date(Number(startDate));
 
-    this.choosenNotif.startDate =  this.initDate(newDate);
-  }
-
-  initDate(newDate:Date){
     let m = newDate.getMonth() + 1;
     let d = newDate.getDate();
     let min = newDate.getMinutes();

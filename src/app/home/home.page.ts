@@ -7,6 +7,7 @@ import { MatSnackBar } from '@angular/material';
 import { Storage } from '@ionic/storage';
 import { PlantsService } from '../providers/plants.service';
 import { NotificationService } from '../providers/notification.service';
+import { PriorityService } from '../providers/priority.service';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class HomePage implements OnInit {
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
         public snackBar: MatSnackBar, public modalController: ModalController,
         private screenOrientation: ScreenOrientation, private plantService: PlantsService,
-        private notifService: NotificationService) {
+        private notifService: NotificationService,private priorityService: PriorityService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -67,6 +68,17 @@ export class HomePage implements OnInit {
 
     }
 
+    ionViewDidEnter(){
+        this.priorityService.getAllPriorities().subscribe(
+            (priorities) =>{
+                this.priorityService.setPriorities(priorities.d.results);
+            },
+            (err)=>{
+                console.log(err);
+            }
+        )
+    }
+
     //list available plants
     async presentPlantsModal() {
         this.modal = await this.modalController.create({
@@ -95,8 +107,6 @@ export class HomePage implements OnInit {
                 icon: 'send',
                 handler: () => {
                     this.presentPlantsModal();
-
-
                 }
             },
             {
