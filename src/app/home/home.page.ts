@@ -8,6 +8,7 @@ import { Storage } from '@ionic/storage';
 import { PlantsService } from '../providers/plants.service';
 import { NotificationService } from '../providers/notification.service';
 import { PriorityService } from '../providers/priority.service';
+import { EffectService } from '../providers/effect.service';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class HomePage implements OnInit {
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
         public snackBar: MatSnackBar, public modalController: ModalController,
         private screenOrientation: ScreenOrientation, private plantService: PlantsService,
-        private notifService: NotificationService,private priorityService: PriorityService) {
+        private notifService: NotificationService,private priorityService: PriorityService,
+        private effectService: EffectService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -72,6 +74,15 @@ export class HomePage implements OnInit {
         this.priorityService.getAllPriorities().subscribe(
             (priorities) =>{
                 this.priorityService.setPriorities(priorities.d.results);
+            },
+            (err)=>{
+                console.log(err);
+            }
+        )
+
+        this.effectService.getAllEffects().subscribe(
+            (effects) =>{
+                this.effectService.setEffects(effects.d.results);
             },
             (err)=>{
                 console.log(err);

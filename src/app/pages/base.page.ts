@@ -4,6 +4,7 @@ import { Platform, ToastController, AlertController } from '@ionic/angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { Priority } from '../interfaces/priority.interface';
+import { ProductionEffect } from '../interfaces/effect.interface';
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -20,11 +21,7 @@ export class BasePage implements OnInit{
     { loc: 'MTS1', description: 'Mojave Test Facility - Structure DNU' },
     { loc: 'SUN', description: 'Sun Harvest LLC -Structure *DO NOT USE' }
   ];
-  productionEffects = [
-    { id: 1, desc: 'No effect' },
-    { id: 2, desc: 'Production Breakdown' },
-    { id: 3, desc: 'Production Restricted' }
-  ]
+  productionEffects: ProductionEffect[] = [];
   priorities:Priority[] = []
   today = new Date();
   dateauj = "";
