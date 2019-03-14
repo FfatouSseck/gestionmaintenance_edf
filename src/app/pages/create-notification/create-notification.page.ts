@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Platform, ToastController, AlertController } from '@ionic/angular';
+import { Platform, ToastController, AlertController, ModalController } from '@ionic/angular';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { BasePage } from '../base.page';
@@ -15,6 +15,8 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 import { finalize } from 'rxjs/operators';
 import { PriorityService } from 'src/app/providers/priority.service';
+import { FunctlocService } from '../../providers/functloc.service';
+import { Storage } from '@ionic/storage';
 
 const STORAGE_KEY = 'my_images';
 
@@ -27,16 +29,17 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   nbAttachments = 0;
   images = [];
+  choosenFunctLoc = "";
 
-  constructor(public _formBuilder: FormBuilder, public platform: Platform,
-    public qrScanner: QRScanner, public toastController: ToastController,
-    public snackBar: MatSnackBar, public alertController: AlertController,
-    private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
-    private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
-    private plt: Platform, private loadingController: LoadingController,
-    private ref: ChangeDetectorRef, private filePath: FilePath,private priorityService: PriorityService) {
+  constructor(public _formBuilder: FormBuilder, public platform: Platform,public functlocService:FunctlocService,
+              public qrScanner: QRScanner, public toastController: ToastController,public modalController: ModalController,
+              public snackBar: MatSnackBar, public alertController: AlertController,
+              private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
+              private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
+              private plt: Platform, private loadingController: LoadingController,private storage: Storage,
+              private ref: ChangeDetectorRef, private filePath: FilePath,private priorityService: PriorityService) {
 
-    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController,/*mockScanner*/);
+    super(_formBuilder, platform,functlocService, qrScanner, toastController, snackBar, alertController,modalController);
   }
 
   ngOnInit() {
@@ -54,6 +57,10 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       longText: [''],
       breakdownIndic: ['']
     });
+  }
+
+  functLocChanged(evt){
+    console.log("here",evt)
   }
 
   loadStoredImages() {
@@ -89,7 +96,21 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         }
       )
     }
-}
+
+    //we check if there is a choosen plant
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) => {
+          if (choosenPlantcode != null) {
+              console.log(choosenPlantcode)
+              this.getFunctLocsByPlant(choosenPlantcode);
+          }
+          //otherwise we ask the user to choose a plant
+          else this.presentPlantsModal();
+      },
+      (err) => {
+          console.log("error", err);
+      })
+  }
 
   pathForImage(img) {
     if (img === null) {

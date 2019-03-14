@@ -27,9 +27,9 @@ export class HomePage implements OnInit {
     dataAvailable = false;
 
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
-        public snackBar: MatSnackBar, public modalController: ModalController,
-        private screenOrientation: ScreenOrientation, private plantService: PlantsService,
-        private notifService: NotificationService,private priorityService: PriorityService) {
+                public snackBar: MatSnackBar, public modalController: ModalController,
+                private screenOrientation: ScreenOrientation, private plantService: PlantsService,
+                private notifService: NotificationService,private priorityService: PriorityService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -46,6 +46,7 @@ export class HomePage implements OnInit {
             (plants) => {
                 let plts = plants.d.results;
                 this.plants = plts;
+                console.log(plts)
                 //we check if there is a choosen plant
                 this.storage.get("choosenPlant").then(
                     (choosenPlantcode) => {

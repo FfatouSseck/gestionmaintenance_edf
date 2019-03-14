@@ -14,6 +14,7 @@ export class PlantsService {
   constructor(public http: HttpClient) { 
     this.headers.append("Accept","application/json");
     this.headers.append("Content-Type","application/json");
+    this.headers.append("Access-Control-Allow-Origin","http://localhost:8100")
   }
 
   private extractData(res: Response) {
@@ -23,6 +24,12 @@ export class PlantsService {
 
   getAllPlants() : Observable<any>{
     return this.http.get(`${environment.apiUrl}`+'PlanPlantSet',{headers:this.headers,responseType:'json'}).pipe(
+      map(this.extractData)
+    );
+  }
+
+  getVpn(){
+    return this.http.get("https://vpn.edf-re.com/EDF-Connection",{headers:this.headers,responseType:'json'}).pipe(
       map(this.extractData)
     );
   }

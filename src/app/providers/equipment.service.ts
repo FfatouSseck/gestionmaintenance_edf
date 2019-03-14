@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { throwError } from 'rxjs';
+import {of, throwError } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment.prod';
 
 const httpOptions = {
@@ -11,7 +11,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class FunctlocService {
+export class EquipmentService {
 
   constructor(private http: HttpClient) { }
 
@@ -35,37 +35,37 @@ export class FunctlocService {
     return body || { };
   }
 
-  getAllFunctLocByPlant(codePlant): Observable<any> {
-    return this.http.get(`${environment.apiUrl}`+"/FunctLocSet?$filter=PlanPlant eq '"+codePlant+"'", httpOptions).pipe(
+  getAllEquipmentsByFunctLoc(codeFunctLoc): Observable<any> {
+    return this.http.get(`${environment.apiUrl}`+"/EquipmentSet?$filter=FunctLoc eq '"+codeFunctLoc+"'", httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
   
-  getFunctLocById(id: string): Observable<any> {
-    const url = `${environment.apiUrl}/functloc/${id}`;
+  getEquipmentById(id: string): Observable<any> {
+    const url = `${environment.apiUrl}/Equipment/${id}`;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
   
-  postFunctLoc(data): Observable<any> {
-    const url = `${environment.apiUrl}/functloc/`;
+  postEquipment(data): Observable<any> {
+    const url = `${environment.apiUrl}/Equipment/`;
     return this.http.post(url, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
   
-  updateFunctLoc(id: string, data): Observable<any> {
-    const url = `${environment.apiUrl}/functloc/${id}`;
+  updateEquipment(id: string, data): Observable<any> {
+    const url = `${environment.apiUrl}/Equipment/${id}`;
     return this.http.put(url, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
   
-  deleteFunctLoc(id: string): Observable<{}> {
-    const url = `${environment.apiUrl}/functloc/${id}`;
+  deleteEquipment(id: string): Observable<{}> {
+    const url = `${environment.apiUrl}/Equipment/${id}`;
     return this.http.delete(url, httpOptions)
       .pipe(
         catchError(this.handleError)
