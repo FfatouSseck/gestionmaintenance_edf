@@ -107,6 +107,18 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
   }
 
+  updateNotif(notif){
+    console.log(notif);
+    this.notifService.updateNotif(notif.notifNumber,notif).subscribe(
+      (not) =>{
+        console.log("notiiiiiiif",not);
+      },
+      (err) =>{
+        console.log("erreurrrrrrrrrrrrrrrr",err)
+      }
+    )
+  }
+
   formatDate(newD:string){
 
     let d1 = newD.replace('/Date(','');

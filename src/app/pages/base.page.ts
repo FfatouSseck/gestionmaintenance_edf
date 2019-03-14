@@ -4,8 +4,7 @@ import { Platform, ToastController, AlertController, ModalController } from '@io
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { Priority } from '../interfaces/priority.interface';
-import { FunctlocService } from '../providers/functloc.service';
-import { DetailsSettingsPage } from './details-settings/details-settings.page';
+import { ProductionEffect } from '../interfaces/effect.interface';
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -18,11 +17,9 @@ export class BasePage implements OnInit{
   notifFormGroup: FormGroup;
   modal: any;
   locations: any[] = [];
-  productionEffects = [
-    { id: 1, desc: 'No effect' },
-    { id: 2, desc: 'Production Breakdown' },
-    { id: 3, desc: 'Production Restricted' }
-  ]
+  productionEffects = []
+
+  productionEffects: ProductionEffect[] = [];
   priorities:Priority[] = []
   today = new Date();
   dateauj = "";

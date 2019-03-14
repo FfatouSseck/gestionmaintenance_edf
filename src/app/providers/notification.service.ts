@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment.prod';
-import { Observable } from 'rxjs/internal/Observable';
 import { Notification } from '../interfaces/notification.interface';
+import { BaseService } from './base.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class NotificationService {
+export class NotificationService extends BaseService{
 
   headers = new HttpHeaders();
   notifs:Notification[] = [];
@@ -18,20 +18,21 @@ export class NotificationService {
   currentNotif: any;
 
   constructor(public http: HttpClient) { 
+    super(http);
     this.headers.append("Accept","application/json");
     this.headers.append("Content-Type","application/json");
   }
 
-  private extractData(res: Response) {
-    let body = res;
-    return body || { };
+  getAllNotifs(codePlant){
+    return this.getAll("NotifHeaderSet?$filter=PlanPlant eq '"+codePlant+"'");
   }
 
-  getAllNotifs(codePlant){
-    console.log("plant: ",codePlant);
-    return this.http.get(`${environment.apiUrl}`+"NotifHeaderSet?$filter=PlanPlant eq '"+codePlant+"'",{headers:this.headers,responseType:'json'}).pipe(
-      map(this.extractData)
-    );
+  updateNotif(notifNnumber: string,notifUpdated: any){
+    return this.http.put(`${environment.apiUrl}`+"NotifHeaderSet('"+notifNnumber+"')",
+                          notifUpdated,{headers:this.headers})
+                          .pipe(
+                            catchError(this.handleError)
+                          );
   }
 
   setNotifs(ntfs): boolean{

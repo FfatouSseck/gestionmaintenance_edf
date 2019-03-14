@@ -17,6 +17,7 @@ import { finalize } from 'rxjs/operators';
 import { PriorityService } from 'src/app/providers/priority.service';
 import { FunctlocService } from '../../providers/functloc.service';
 import { Storage } from '@ionic/storage';
+import { EffectService } from 'src/app/providers/effect.service';
 
 const STORAGE_KEY = 'my_images';
 
@@ -32,12 +33,12 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   choosenFunctLoc = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform,public functlocService:FunctlocService,
-              public qrScanner: QRScanner, public toastController: ToastController,public modalController: ModalController,
-              public snackBar: MatSnackBar, public alertController: AlertController,
-              private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
-              private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
-              private plt: Platform, private loadingController: LoadingController,private storage: Storage,
-              private ref: ChangeDetectorRef, private filePath: FilePath,private priorityService: PriorityService) {
+    public qrScanner: QRScanner, public toastController: ToastController,
+    public snackBar: MatSnackBar, public alertController: AlertController,
+    private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
+    private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
+    private plt: Platform, private loadingController: LoadingController,private effectService: EffectService,
+    private ref: ChangeDetectorRef, private filePath: FilePath,private priorityService: PriorityService) {
 
     super(_formBuilder, platform,functlocService, qrScanner, toastController, snackBar, alertController,modalController);
   }
@@ -81,6 +82,8 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   ionViewDidEnter(){
+
+    //getting PrioritySet from server
     if(this.priorityService.checkAvailability()){
       this.priorities = this.priorityService.getPriorities();
     }
@@ -90,6 +93,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
             console.log(priorities.d.results);
             this.priorityService.setPriorities(priorities.d.results);
             console.log(this.priorityService.checkAvailability());
+            this.priorities = this.priorityService.getPriorities();
         },
         (err)=>{
             console.log(err);
@@ -97,6 +101,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       )
     }
 
+<<<<<<< HEAD
     //we check if there is a choosen plant
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
@@ -111,6 +116,27 @@ export class CreateNotificationPage extends BasePage implements OnInit {
           console.log("error", err);
       })
   }
+=======
+    //getting EffectSet from server
+    if(this.effectService.checkAvailability()){
+      this.productionEffects = this.effectService.getEffects();
+    }
+    else{
+      this.effectService.getAllEffects().subscribe(
+        (effects) =>{
+            console.log(effects.d.results);
+            this.effectService.setEffects(effects.d.results);
+            console.log(this.effectService.checkAvailability());
+            this.productionEffects = this.effectService.getEffects();
+        },
+        (err)=>{
+            console.log(err);
+        }
+      )
+    }
+
+}
+>>>>>>> 59de8193e85e6b4636780f7fe3852a52ee720649
 
   pathForImage(img) {
     if (img === null) {
