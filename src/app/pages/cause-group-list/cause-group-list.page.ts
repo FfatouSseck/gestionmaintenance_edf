@@ -56,14 +56,14 @@ export class CauseGroupListPage implements OnInit {
     }
   }
 
-  closeModal(cg) {
-    this.modalController.dismiss({
-      'result': cg
-    });
+  closeModal() {
+    this.modalController.dismiss();
   }
 
   choose(cg){
-    this.closeModal(cg);
+    this.modalController.dismiss({
+      'result': cg
+    });
   }
 
 }

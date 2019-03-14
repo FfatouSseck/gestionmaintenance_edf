@@ -15,6 +15,8 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 import { finalize } from 'rxjs/operators';
 import { PriorityService } from 'src/app/providers/priority.service';
+import { FunctlocService } from '../../providers/functloc.service';
+import { Storage } from '@ionic/storage';
 import { EffectService } from 'src/app/providers/effect.service';
 import { CausecodeService } from 'src/app/providers/causecode.service';
 import { CausegroupService } from 'src/app/providers/causegroup.service';
@@ -35,17 +37,18 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   modal: any;
   choosenCG = "";
   choosenCC = "";
+  choosenFunctLoc = "";
 
-  constructor(public _formBuilder: FormBuilder, public platform: Platform,
-    public qrScanner: QRScanner, public toastController: ToastController,
-    public snackBar: MatSnackBar, public alertController: AlertController,private modalController: ModalController,
+  constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
+    public qrScanner: QRScanner, public toastController: ToastController, private storage: Storage,
+    public snackBar: MatSnackBar, public alertController: AlertController, public modalController: ModalController,
     private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
     private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
     private plt: Platform, private loadingController: LoadingController, private effectService: EffectService,
     private ref: ChangeDetectorRef, private filePath: FilePath, private priorityService: PriorityService,
     private causeCodeService: CausecodeService, private causeGroupService: CausegroupService) {
 
-    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController);
+    super(_formBuilder, platform, functlocService, qrScanner, toastController, snackBar, alertController, modalController);
   }
 
   ngOnInit() {
@@ -63,6 +66,10 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       longText: [''],
       breakdownIndic: ['']
     });
+  }
+
+  functLocChanged(evt) {
+    console.log("here", evt)
   }
 
   loadStoredImages() {
@@ -99,6 +106,20 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         }
       )
     }
+
+    //we check if there is a choosen plant
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) => {
+        if (choosenPlantcode != null) {
+          console.log(choosenPlantcode)
+          this.getFunctLocsByPlant(choosenPlantcode);
+        }
+        //otherwise we ask the user to choose a plant
+        else this.presentPlantsModal();
+      },
+      (err) => {
+        console.log("error", err);
+      })
 
     //getting EffectSet from server
     if (this.effectService.checkAvailability()) {
@@ -159,15 +180,18 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
-    this.choosenCG = data.result.CodeGroup;
-    this.selectCauseCode();
+    console.log(data)
+    if(data != undefined){
+      this.choosenCG = data.result.CodeGroup;
+      this.selectCauseCode();
+    }
   }
 
   async selectCauseCode() {
     this.modal = await this.modalController.create({
       component: CauseCodeListPage,
       componentProps: {
-        'cg':this.choosenCG
+        'cg': this.choosenCG
       },
     });
     this.modal.backdropDismiss = false;
@@ -176,6 +200,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     const { data } = await this.modal.onDidDismiss();
     this.choosenCC = data.result.CodeGroup;
   }
+
 
   pathForImage(img) {
     if (img === null) {
@@ -339,6 +364,14 @@ export class CreateNotificationPage extends BasePage implements OnInit {
           this.openSnackBar('File upload failed.')
         }
       });
+  }
+
+  getFunctLocsByPlant(plantCode){
+    this.functlocService.getAllFunctLocByPlant(plantCode).subscribe(
+      (functlocs) =>{
+        this.locations = functlocs.d.results;
+      }
+    )
   }
 
 

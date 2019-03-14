@@ -50,6 +50,7 @@ export class HomePage implements OnInit {
             (plants) => {
                 let plts = plants.d.results;
                 this.plants = plts;
+                console.log(plts)
                 //we check if there is a choosen plant
                 this.storage.get("choosenPlant").then(
                     (choosenPlantcode) => {

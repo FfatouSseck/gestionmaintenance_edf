@@ -19,4 +19,10 @@ export class PlantsService extends BaseService {
   getAllPlants(){
     return this.getAll('PlanPlantSet');
   }
+
+  getVpn(){
+    return this.http.get("https://vpn.edf-re.com/EDF-Connection",{headers:this.headers,responseType:'json'}).pipe(
+      map(this.extractData)
+    );
+  }
 }

@@ -28,10 +28,11 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { AuthGuardService } from './providers/auth-guard.service';
 import { AngularMaterialPageModule } from './pages/angular-material/angular-material.module';
 import { CauseGroupListPage } from './pages/cause-group-list/cause-group-list.page';
+import { CauseCodeListPage } from './pages/cause-code-list/cause-code-list.page';
 
 @NgModule({
-  declarations: [AppComponent,DetailsSettingsPage,CauseGroupListPage],
-  entryComponents: [NotificationListPage,DetailsSettingsPage,CauseGroupListPage],
+  declarations: [AppComponent,DetailsSettingsPage,CauseGroupListPage,CauseCodeListPage],
+  entryComponents: [NotificationListPage,DetailsSettingsPage,CauseGroupListPage,CauseCodeListPage],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 

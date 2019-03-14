@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Platform, ToastController, AlertController } from '@ionic/angular';
+import { Platform, ToastController, AlertController, ModalController } from '@ionic/angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { Priority } from '../interfaces/priority.interface';
 import { ProductionEffect } from '../interfaces/effect.interface';
 import { CauseCode } from '../interfaces/causecode.interface';
 import { CauseGroup } from '../interfaces/causegroup.interface';
+import { FunctlocService } from '../providers/functloc.service';
+import { DetailsSettingsPage } from './details-settings/details-settings.page';
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -17,7 +19,9 @@ import { CauseGroup } from '../interfaces/causegroup.interface';
 export class BasePage implements OnInit{
 
   notifFormGroup: FormGroup;
-  locations: Location[] = [];
+  modal: any;
+  locations: any[] = [];
+
   productionEffects: ProductionEffect[] = [];
   causeCodes: CauseCode[] = [];
   causeGroups: CauseGroup[] = [];
@@ -26,9 +30,9 @@ export class BasePage implements OnInit{
   dateauj = "";
   mobile = false;
 
-  constructor(public _formBuilder: FormBuilder, public platform: Platform,
+  constructor(public _formBuilder: FormBuilder, public platform: Platform,public functlocService:FunctlocService,
               public qrScanner: QRScanner, public toastController: ToastController,
-              public snackBar: MatSnackBar,public alertController: AlertController/*, public mockScanner: QRScannerMock*/) {
+              public snackBar: MatSnackBar,public alertController: AlertController,public modalController: ModalController) {
     
     this.initDate();
     if (platform.is("mobile")) this.mobile = true;
@@ -78,12 +82,39 @@ export class BasePage implements OnInit{
       longText: [''],
       breakdownIndic: ['']
     });
+
   }
 
   openSnackBar(message: string) {
     this.snackBar.open(message, null, {
       duration: 2000,
     });
+  }
+
+   //list available plants
+   async presentPlantsModal() {
+    this.modal = await this.modalController.create({
+        component: DetailsSettingsPage,
+        componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    console.log(data.result);
+}
+
+  getFunctLocsByPlant(plantCode){
+    
+    this.functlocService.getAllFunctLocByPlant(plantCode).subscribe(
+      (locs)=>{
+        this.locations = locs.d.results;
+        console.log(this.locations)
+      },
+      (err) =>{
+        console.log("Erreur",err)
+      }
+    )
   }
 
   scanQRCode() {
