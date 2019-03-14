@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Group</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="notAvailable;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
+
+  <ng-template #contentAvailable>
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Choose the cause group</ion-label>
+      </ion-list-header>
+      <ion-item (click)="choose(cg)" *ngFor="let cg of causeGroups;let i=index">
+        <ion-label>
+          <ion-text>
+            {{cg.CodeGroup}}
+          </ion-text>
+          <p>
+            {{cg.CodeDescr}}
+          </p>
+          <ion-text>
+            {{cg.CatalogProfile}}
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #3E4649;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: #3E4649;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

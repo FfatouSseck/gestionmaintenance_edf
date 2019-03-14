@@ -9,6 +9,8 @@ import { PlantsService } from '../providers/plants.service';
 import { NotificationService } from '../providers/notification.service';
 import { PriorityService } from '../providers/priority.service';
 import { EffectService } from '../providers/effect.service';
+import { CausegroupService } from '../providers/causegroup.service';
+import { CausecodeService } from '../providers/causecode.service';
 
 
 @Component({
@@ -31,7 +33,7 @@ export class HomePage implements OnInit {
         public snackBar: MatSnackBar, public modalController: ModalController,
         private screenOrientation: ScreenOrientation, private plantService: PlantsService,
         private notifService: NotificationService,private priorityService: PriorityService,
-        private effectService: EffectService) {
+        private effectService: EffectService,private causeCodeService: CausecodeService,private causeGroupService: CausegroupService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -71,6 +73,7 @@ export class HomePage implements OnInit {
     }
 
     ionViewDidEnter(){
+        //getting PrioritySet from server
         this.priorityService.getAllPriorities().subscribe(
             (priorities) =>{
                 this.priorityService.setPriorities(priorities.d.results);
@@ -79,10 +82,28 @@ export class HomePage implements OnInit {
                 console.log(err);
             }
         )
-
+        //getting EffectSet from server
         this.effectService.getAllEffects().subscribe(
             (effects) =>{
                 this.effectService.setEffects(effects.d.results);
+            },
+            (err)=>{
+                console.log(err);
+            }
+        )
+        //getting CauseCodeSet from server
+        this.causeCodeService.getAllCauseCodes().subscribe(
+            (causecodes) =>{
+                this.causeCodeService.setCauseCodes(causecodes.d.results);
+            },
+            (err)=>{
+                console.log(err);
+            }
+        )
+        //getting CauseGroupSet from server
+        this.causeGroupService.getAllCauseGroups().subscribe(
+            (causegroups) =>{
+                this.causeGroupService.setCauseGroups(causegroups.d.results);
             },
             (err)=>{
                 console.log(err);

@@ -5,6 +5,8 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { Priority } from '../interfaces/priority.interface';
 import { ProductionEffect } from '../interfaces/effect.interface';
+import { CauseCode } from '../interfaces/causecode.interface';
+import { CauseGroup } from '../interfaces/causegroup.interface';
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -15,13 +17,10 @@ import { ProductionEffect } from '../interfaces/effect.interface';
 export class BasePage implements OnInit{
 
   notifFormGroup: FormGroup;
-  locations: Location[] = [
-    { loc: 'CAT', description: 'Catalina Solar -Structure *DO NOT USE*' },
-    { loc: 'CAT2', description: 'Catalina Solar 2 - Structure - D N U' },
-    { loc: 'MTS1', description: 'Mojave Test Facility - Structure DNU' },
-    { loc: 'SUN', description: 'Sun Harvest LLC -Structure *DO NOT USE' }
-  ];
+  locations: Location[] = [];
   productionEffects: ProductionEffect[] = [];
+  causeCodes: CauseCode[] = [];
+  causeGroups: CauseGroup[] = [];
   priorities:Priority[] = []
   today = new Date();
   dateauj = "";

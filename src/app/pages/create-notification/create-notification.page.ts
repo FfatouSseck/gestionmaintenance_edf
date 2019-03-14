@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Platform, ToastController, AlertController } from '@ionic/angular';
+import { Platform, ToastController, AlertController, ModalController } from '@ionic/angular';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { BasePage } from '../base.page';
@@ -16,6 +16,10 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { finalize } from 'rxjs/operators';
 import { PriorityService } from 'src/app/providers/priority.service';
 import { EffectService } from 'src/app/providers/effect.service';
+import { CausecodeService } from 'src/app/providers/causecode.service';
+import { CausegroupService } from 'src/app/providers/causegroup.service';
+import { CauseGroupListPage } from '../cause-group-list/cause-group-list.page';
+import { CauseCodeListPage } from '../cause-code-list/cause-code-list.page';
 
 const STORAGE_KEY = 'my_images';
 
@@ -28,16 +32,20 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   nbAttachments = 0;
   images = [];
+  modal: any;
+  choosenCG = "";
+  choosenCC = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController,
-    public snackBar: MatSnackBar, public alertController: AlertController,
+    public snackBar: MatSnackBar, public alertController: AlertController,private modalController: ModalController,
     private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
     private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
-    private plt: Platform, private loadingController: LoadingController,private effectService: EffectService,
-    private ref: ChangeDetectorRef, private filePath: FilePath,private priorityService: PriorityService) {
+    private plt: Platform, private loadingController: LoadingController, private effectService: EffectService,
+    private ref: ChangeDetectorRef, private filePath: FilePath, private priorityService: PriorityService,
+    private causeCodeService: CausecodeService, private causeGroupService: CausegroupService) {
 
-    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController,/*mockScanner*/);
+    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController);
   }
 
   ngOnInit() {
@@ -74,45 +82,100 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       });
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
 
     //getting PrioritySet from server
-    if(this.priorityService.checkAvailability()){
+    if (this.priorityService.checkAvailability()) {
       this.priorities = this.priorityService.getPriorities();
     }
-    else{
+    else {
       this.priorityService.getAllPriorities().subscribe(
-        (priorities) =>{
-            console.log(priorities.d.results);
-            this.priorityService.setPriorities(priorities.d.results);
-            console.log(this.priorityService.checkAvailability());
-            this.priorities = this.priorityService.getPriorities();
+        (priorities) => {
+          this.priorityService.setPriorities(priorities.d.results);
+          this.priorities = this.priorityService.getPriorities();
         },
-        (err)=>{
-            console.log(err);
+        (err) => {
+          console.log(err);
         }
       )
     }
 
     //getting EffectSet from server
-    if(this.effectService.checkAvailability()){
+    if (this.effectService.checkAvailability()) {
       this.productionEffects = this.effectService.getEffects();
     }
-    else{
+    else {
       this.effectService.getAllEffects().subscribe(
-        (effects) =>{
-            console.log(effects.d.results);
-            this.effectService.setEffects(effects.d.results);
-            console.log(this.effectService.checkAvailability());
-            this.productionEffects = this.effectService.getEffects();
+        (effects) => {
+          this.effectService.setEffects(effects.d.results);
+          this.productionEffects = this.effectService.getEffects();
         },
-        (err)=>{
-            console.log(err);
+        (err) => {
+          console.log(err);
         }
       )
     }
 
-}
+    //getting CauseCodeSet from server
+    if (this.causeCodeService.checkAvailability()) {
+      this.causeCodes = this.causeCodeService.getAvailableCausecodes();
+    }
+    else {
+      this.causeCodeService.getAllCauseCodes().subscribe(
+        (causecodes) => {
+          this.causeCodeService.setCauseCodes(causecodes.d.results);
+          this.causeCodes = this.causeCodeService.getAvailableCausecodes();
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    }
+
+    //getting CauseGroupSet from server
+    if (this.causeGroupService.checkAvailability()) {
+      this.causeGroups = this.causeGroupService.getAvailableCausegroups();
+    }
+    else {
+      this.causeGroupService.getAllCauseGroups().subscribe(
+        (causegroups) => {
+          this.causeGroupService.setCauseGroups(causegroups.d.results);
+          this.causeGroups = this.causeGroupService.getAvailableCausegroups();
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    }
+
+  }
+
+  async selectCauseGroup() {
+    this.modal = await this.modalController.create({
+      component: CauseGroupListPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    this.choosenCG = data.result.CodeGroup;
+    this.selectCauseCode();
+  }
+
+  async selectCauseCode() {
+    this.modal = await this.modalController.create({
+      component: CauseCodeListPage,
+      componentProps: {
+        'cg':this.choosenCG
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    this.choosenCC = data.result.CodeGroup;
+  }
 
   pathForImage(img) {
     if (img === null) {
@@ -171,9 +234,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
       }
     },
-    (err)=>{
-      this.openSnackBar("Camera not available")
-    });
+      (err) => {
+        this.openSnackBar("Camera not available")
+      });
 
   }
 
