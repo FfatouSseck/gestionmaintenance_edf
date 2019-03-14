@@ -47,7 +47,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
     private screenOrientation: ScreenOrientation,public router: Router) {
 
-    super(_formBuilder, platform, qrScanner, toastController, snackBar, alertController);
+    super(_formBuilder, platform,null, qrScanner, toastController, snackBar, alertController,modalController);
 
     this.orientation = this.screenOrientation.type;
     // detect orientation changes

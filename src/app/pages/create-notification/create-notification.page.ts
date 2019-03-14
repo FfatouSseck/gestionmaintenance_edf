@@ -22,6 +22,8 @@ import { CausecodeService } from 'src/app/providers/causecode.service';
 import { CausegroupService } from 'src/app/providers/causegroup.service';
 import { CauseGroupListPage } from '../cause-group-list/cause-group-list.page';
 import { CauseCodeListPage } from '../cause-code-list/cause-code-list.page';
+import { FunctLocListPage } from '../funct-loc-list/funct-loc-list.page';
+import { EquipmentListPage } from '../equipment-list/equipment-list.page';
 
 const STORAGE_KEY = 'my_images';
 
@@ -37,6 +39,8 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   modal: any;
   choosenCG = "";
   choosenCC = "";
+  choosenFunctLoc = "";
+  choosenPlantcode = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
     public qrScanner: QRScanner, public toastController: ToastController, private storage: Storage,
@@ -111,7 +115,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null) {
-          console.log(choosenPlantcode)
+          this.choosenPlantcode = choosenPlantcode;
           this.getFunctLocsByPlant(choosenPlantcode);
           //getting FunctLocSet from server
           if (this.functLocService.checkAvailability()) {
@@ -169,6 +173,40 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       )
     }
 
+  }
+
+  async selectFunctLoc(){
+ 
+    this.modal = await this.modalController.create({
+      component: FunctLocListPage,
+      componentProps: {
+        'plantCode' : this.choosenPlantcode
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenFunctLoc = data.result.plantCode;
+      this.selectEquipment(this.choosenFunctLoc);
+    }
+  }
+
+  async selectEquipment(choosenFunctLoc){
+    this.modal = await this.modalController.create({
+      component: EquipmentListPage,
+      componentProps: {
+        'functLoc' : choosenFunctLoc
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      //this.choosenFunctLoc = data.result.plantCode;
+    }
   }
 
   async selectCauseGroup() {

@@ -10,6 +10,7 @@ export class FunctlocService extends BaseService {
 
   available = false;
   functLocsList: any[] = [];
+  
   constructor(public http: HttpClient) {
     super(http);
    }
@@ -32,6 +33,13 @@ export class FunctlocService extends BaseService {
 
   getAvailableFunctLocs() {
     return this.functLocsList;
+  }
+
+  filterItems(searchTerm) {
+    return this.functLocsList.filter((fl) => {
+      return (fl.FunctLocId.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || fl.FunctLocDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
+    });
   }
 
 }

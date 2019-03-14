@@ -9,9 +9,11 @@ const routes: Routes = [
   { path: 'notification-list', loadChildren: './pages/notification-list/notification-list.module#NotificationListPageModule',/*canActivate: [ AuthGuardService ]*/ },
   { path: 'notification-details', loadChildren: './pages/notification-details/notification-details.module#NotificationDetailsPageModule',/*canActivate: [ AuthGuardService ]*/ },
   { path: 'details-settings', loadChildren: './pages/details-settings/details-settings.module#DetailsSettingsPageModule',/*canActivate: [ AuthGuardService ]*/ },
-  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },  { path: 'cause-group-list', loadChildren: './pages/cause-group-list/cause-group-list.module#CauseGroupListPageModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'cause-group-list', loadChildren: './pages/cause-group-list/cause-group-list.module#CauseGroupListPageModule' },
   { path: 'cause-code-list', loadChildren: './pages/cause-code-list/cause-code-list.module#CauseCodeListPageModule' },
-  { path: 'base-modal', loadChildren: './pages/base-modal/base-modal.module#BaseModalPageModule' },
+  { path: 'funct-loc-list', loadChildren: './pages/funct-loc-list/funct-loc-list.module#FunctLocListPageModule' },
+  { path: 'equipment-list', loadChildren: './pages/equipment-list/equipment-list.module#EquipmentListPageModule' },
 
  // { path: "*",redirectTo:"/login"}
 

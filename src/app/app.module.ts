@@ -29,10 +29,26 @@ import { AuthGuardService } from './providers/auth-guard.service';
 import { AngularMaterialPageModule } from './pages/angular-material/angular-material.module';
 import { CauseGroupListPage } from './pages/cause-group-list/cause-group-list.page';
 import { CauseCodeListPage } from './pages/cause-code-list/cause-code-list.page';
+import { FunctLocListPage } from './pages/funct-loc-list/funct-loc-list.page';
+import { EquipmentListPage } from './pages/equipment-list/equipment-list.page';
 
 @NgModule({
-  declarations: [AppComponent,DetailsSettingsPage,CauseGroupListPage,CauseCodeListPage],
-  entryComponents: [NotificationListPage,DetailsSettingsPage,CauseGroupListPage,CauseCodeListPage],
+  declarations: [
+    AppComponent,
+    DetailsSettingsPage,
+    CauseGroupListPage,
+    CauseCodeListPage,
+    FunctLocListPage,
+    EquipmentListPage
+  ],
+  entryComponents: [
+    NotificationListPage,
+    DetailsSettingsPage,
+    CauseGroupListPage,
+    CauseCodeListPage,
+    FunctLocListPage,
+    EquipmentListPage
+  ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 

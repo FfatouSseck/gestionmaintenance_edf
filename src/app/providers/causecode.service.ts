@@ -42,6 +42,5 @@ export class CausecodeService extends BaseService {
         || cg.CatalogProfile.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
         || cg.Code.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
     });
-
   }
 }
