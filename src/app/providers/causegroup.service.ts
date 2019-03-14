@@ -35,13 +35,13 @@ export class CausegroupService extends BaseService {
     return this.causegroupsList;
   }
 
-  filterItems(searchTerm){
+  filterItems(searchTerm) {
 
     return this.causegroupsList.filter((cg) => {
-        return (cg.CodeDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 
-                || cg.CodeGroup.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 
-                || cg.CatalogProfile.toLowerCase().indexOf(searchTerm.toLowerCase())  > -1 );
-    });     
+      return (cg.CodeDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || cg.CodeGroup.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || cg.CatalogProfile.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+    });
 
-}
+  }
 }

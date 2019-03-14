@@ -37,7 +37,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   modal: any;
   choosenCG = "";
   choosenCC = "";
-  choosenFunctLoc = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
     public qrScanner: QRScanner, public toastController: ToastController, private storage: Storage,
@@ -46,7 +45,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
     private plt: Platform, private loadingController: LoadingController, private effectService: EffectService,
     private ref: ChangeDetectorRef, private filePath: FilePath, private priorityService: PriorityService,
-    private causeCodeService: CausecodeService, private causeGroupService: CausegroupService) {
+    private causeGroupService: CausegroupService, private functLocService: FunctlocService) {
 
     super(_formBuilder, platform, functlocService, qrScanner, toastController, snackBar, alertController, modalController);
   }
@@ -69,7 +68,8 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   functLocChanged(evt) {
-    console.log("here", evt)
+    let choosenFunctLoc = evt.value;
+    console.log(choosenFunctLoc);
   }
 
   loadStoredImages() {
@@ -113,6 +113,22 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         if (choosenPlantcode != null) {
           console.log(choosenPlantcode)
           this.getFunctLocsByPlant(choosenPlantcode);
+          //getting FunctLocSet from server
+          if (this.functLocService.checkAvailability()) {
+            this.locations = this.functLocService.getAvailableFunctLocs();
+          }
+          else {
+            this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
+              (locations) => {
+                console.log(locations.d.results);
+                this.functLocService.setFunctLocs(locations.d.results);
+                this.locations = this.functLocService.getAvailableFunctLocs();
+              },
+              (err) => {
+                console.log(err);
+              }
+            )
+          }
         }
         //otherwise we ask the user to choose a plant
         else this.presentPlantsModal();
@@ -130,22 +146,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         (effects) => {
           this.effectService.setEffects(effects.d.results);
           this.productionEffects = this.effectService.getEffects();
-        },
-        (err) => {
-          console.log(err);
-        }
-      )
-    }
-
-    //getting CauseCodeSet from server
-    if (this.causeCodeService.checkAvailability()) {
-      this.causeCodes = this.causeCodeService.getAvailableCausecodes();
-    }
-    else {
-      this.causeCodeService.getAllCauseCodes().subscribe(
-        (causecodes) => {
-          this.causeCodeService.setCauseCodes(causecodes.d.results);
-          this.causeCodes = this.causeCodeService.getAvailableCausecodes();
         },
         (err) => {
           console.log(err);
@@ -181,24 +181,26 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
     const { data } = await this.modal.onDidDismiss();
     console.log(data)
-    if(data != undefined){
+    if (data != undefined) {
       this.choosenCG = data.result.CodeGroup;
-      this.selectCauseCode();
+      this.selectCauseCode(this.choosenCG);
     }
   }
 
-  async selectCauseCode() {
+  async selectCauseCode(cg) {
     this.modal = await this.modalController.create({
       component: CauseCodeListPage,
       componentProps: {
-        'cg': this.choosenCG
+        'cg': cg
       },
     });
     this.modal.backdropDismiss = false;
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
-    this.choosenCC = data.result.CodeGroup;
+    if (data != undefined) {
+      this.choosenCC = data.result.CodeDescr+" - "+this.choosenCG;
+    }
   }
 
 
@@ -366,9 +368,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       });
   }
 
-  getFunctLocsByPlant(plantCode){
+  getFunctLocsByPlant(plantCode) {
     this.functlocService.getAllFunctLocByPlant(plantCode).subscribe(
-      (functlocs) =>{
+      (functlocs) => {
         this.locations = functlocs.d.results;
       }
     )

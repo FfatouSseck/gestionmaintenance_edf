@@ -11,6 +11,7 @@ import { PriorityService } from '../providers/priority.service';
 import { EffectService } from '../providers/effect.service';
 import { CausegroupService } from '../providers/causegroup.service';
 import { CausecodeService } from '../providers/causecode.service';
+import { FunctlocService } from '../providers/functloc.service';
 
 
 @Component({
@@ -32,8 +33,9 @@ export class HomePage implements OnInit {
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
         public snackBar: MatSnackBar, public modalController: ModalController,
         private screenOrientation: ScreenOrientation, private plantService: PlantsService,
-        private notifService: NotificationService,private priorityService: PriorityService,
-        private effectService: EffectService,private causeCodeService: CausecodeService,private causeGroupService: CausegroupService) {
+        private notifService: NotificationService, private priorityService: PriorityService,
+        private effectService: EffectService, private causeCodeService: CausecodeService,
+        private causeGroupService: CausegroupService,private functLocService: FunctlocService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -57,6 +59,15 @@ export class HomePage implements OnInit {
                         if (choosenPlantcode != null) {
                             this.choosenPlant = choosenPlantcode;
                             this.getNotifList(this.choosenPlant);
+                            //getting FunctLocSet from server
+                            this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
+                                (functlocs) => {
+                                    this.functLocService.setFunctLocs(functlocs.d.results);
+                                },
+                                (err) => {
+                                    console.log(err);
+                                }
+                            )
                         }
                         //otherwise we ask the user to choose a plant
                         else this.presentPlantsModal();
@@ -73,43 +84,35 @@ export class HomePage implements OnInit {
 
     }
 
-    ionViewDidEnter(){
+    ionViewDidEnter() {
         //getting PrioritySet from server
         this.priorityService.getAllPriorities().subscribe(
-            (priorities) =>{
+            (priorities) => {
                 this.priorityService.setPriorities(priorities.d.results);
             },
-            (err)=>{
+            (err) => {
                 console.log(err);
             }
         )
         //getting EffectSet from server
         this.effectService.getAllEffects().subscribe(
-            (effects) =>{
+            (effects) => {
                 this.effectService.setEffects(effects.d.results);
             },
-            (err)=>{
-                console.log(err);
-            }
-        )
-        //getting CauseCodeSet from server
-        this.causeCodeService.getAllCauseCodes().subscribe(
-            (causecodes) =>{
-                this.causeCodeService.setCauseCodes(causecodes.d.results);
-            },
-            (err)=>{
+            (err) => {
                 console.log(err);
             }
         )
         //getting CauseGroupSet from server
         this.causeGroupService.getAllCauseGroups().subscribe(
-            (causegroups) =>{
+            (causegroups) => {
                 this.causeGroupService.setCauseGroups(causegroups.d.results);
             },
-            (err)=>{
+            (err) => {
                 console.log(err);
             }
         )
+
     }
 
     //list available plants

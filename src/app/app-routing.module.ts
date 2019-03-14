@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'details-settings', loadChildren: './pages/details-settings/details-settings.module#DetailsSettingsPageModule',/*canActivate: [ AuthGuardService ]*/ },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },  { path: 'cause-group-list', loadChildren: './pages/cause-group-list/cause-group-list.module#CauseGroupListPageModule' },
   { path: 'cause-code-list', loadChildren: './pages/cause-code-list/cause-code-list.module#CauseCodeListPageModule' },
+  { path: 'base-modal', loadChildren: './pages/base-modal/base-modal.module#BaseModalPageModule' },
 
  // { path: "*",redirectTo:"/login"}
 

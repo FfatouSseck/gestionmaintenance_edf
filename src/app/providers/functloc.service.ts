@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map } from 'rxjs/operators';
-import { environment } from '../../environments/environment.prod';
+import { HttpClient } from '@angular/common/http';
 import { BaseService } from './base.service';
 
-const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
-};
 @Injectable({
   providedIn: 'root'
 })
 export class FunctlocService extends BaseService {
 
+  available = false;
+  functLocsList: any[] = [];
   constructor(public http: HttpClient) {
     super(http);
    }
@@ -21,35 +18,20 @@ export class FunctlocService extends BaseService {
   getAllFunctLocByPlant(codePlant): Observable<any> {
     return this.getAll("/FunctLocSet?$filter=PlanPlant eq '"+codePlant+"'");
   }
-  
-  getFunctLocById(id: string): Observable<any> {
-    const url = `${environment.apiUrl}/functloc/${id}`;
-    return this.http.get(url, httpOptions).pipe(
-      map(this.extractData),
-      catchError(this.handleError));
+
+  setFunctLocs(FunctLocs) {
+    if (FunctLocs.length > 0) {
+      this.functLocsList = FunctLocs;
+      this.available = true;
+    }
   }
-  
-  postFunctLoc(data): Observable<any> {
-    const url = `${environment.apiUrl}/functloc/`;
-    return this.http.post(url, data, httpOptions)
-      .pipe(
-        catchError(this.handleError)
-      );
+
+  checkAvailability() {
+    return this.available;
   }
-  
-  updateFunctLoc(id: string, data): Observable<any> {
-    const url = `${environment.apiUrl}/functloc/${id}`;
-    return this.http.put(url, data, httpOptions)
-      .pipe(
-        catchError(this.handleError)
-      );
+
+  getAvailableFunctLocs() {
+    return this.functLocsList;
   }
-  
-  deleteFunctLoc(id: string): Observable<{}> {
-    const url = `${environment.apiUrl}/functloc/${id}`;
-    return this.http.delete(url, httpOptions)
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
+
 }

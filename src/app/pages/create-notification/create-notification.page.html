@@ -18,7 +18,7 @@
       <input disabled matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
     </mat-form-field>
     <mat-form-field class="form-85" class="example-form">
-      <mat-select placeholder="Functional location" formControlName="functloc" required [(ngModel)]="choosenFunctLoc" (selectionChange)="functLocChanged($event)">
+      <mat-select placeholder="Functional location" formControlName="functloc" required (selectionChange)="functLocChanged($event)">
         <mat-option *ngFor="let l of locations" [value]="l.FunctLocId">
           {{l.FunctLocId}}-{{l.FunctLocDescr}}...
         </mat-option>

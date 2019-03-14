@@ -15,8 +15,8 @@ export class CausecodeService extends BaseService {
     super(http);
   }
 
-  getAllCauseCodes() {
-    return this.getAll('CauseCodeSet');
+  getAllCauseCodesByGroup(codeGroup) {
+    return this.getAll("/CauseCodeSet?$filter=CodeGroup eq '"+codeGroup+"'");
   }
 
   setCauseCodes(causecodes) {
@@ -32,5 +32,16 @@ export class CausecodeService extends BaseService {
 
   getAvailableCausecodes() {
     return this.causecodesList;
+  }
+
+  filterItems(searchTerm) {
+
+    return this.causecodesList.filter((cg) => {
+      return (cg.CodeDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || cg.CodeGroup.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || cg.CatalogProfile.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || cg.Code.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+    });
+
   }
 }
