@@ -227,7 +227,7 @@
 <ion-footer *ngIf="modif == true && notAvailable==false">
   <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf=" orientation === 'landscape-primary' && noData == false">
     <ion-buttons slot="end">
-      <ion-button style="background-color: green;color: white">
+      <ion-button (click)="updateNotif(choosenNotif)" style="background-color: green;color: white">
         Save
       </ion-button>
       <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
