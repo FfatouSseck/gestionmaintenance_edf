@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatIconModule, MatCardModule, MatGridListModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { NotificationListPage } from './pages/notification-list/notification-list.page';
 import { DetailsSettingsPage } from './pages/details-settings/details-settings.page';
 import { Data } from './providers/data';
@@ -60,7 +60,6 @@ import { EquipmentListPage } from './pages/equipment-list/equipment-list.page';
     ReactiveFormsModule,
     HttpModule,
     NotificationListPageModule,
-    MatIconModule,
     MatCardModule,
     MatGridListModule,
     

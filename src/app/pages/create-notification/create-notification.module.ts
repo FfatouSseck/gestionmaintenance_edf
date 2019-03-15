@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { CreateNotificationPage } from './create-notification.page';
 import { AngularMaterialPageModule } from '../angular-material/angular-material.module';
+import { GeneralModule } from 'src/app/components/general.module';
 
 
 const routes: Routes = [
@@ -22,8 +23,13 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    AngularMaterialPageModule
+    AngularMaterialPageModule,
+    GeneralModule
   ],
-  declarations: [CreateNotificationPage]
+  declarations: [
+    CreateNotificationPage,
+  ],
+  entryComponents: [
+  ]
 })
 export class CreateNotificationPageModule {}

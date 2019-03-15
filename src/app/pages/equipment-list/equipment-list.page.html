@@ -26,11 +26,7 @@
           <ion-label>Choose the Equipment</ion-label>
         </ion-list-header>
         <ion-item (click)="choose(eq)" *ngFor="let eq of equipments">
-          <ion-label>
-            <p>
-              {{eq.EquipmentDescr}}
-            </p>
-          </ion-label>
+              {{eq.EquipmentDescr}}   
         </ion-item>
       </ion-list>
     </div>

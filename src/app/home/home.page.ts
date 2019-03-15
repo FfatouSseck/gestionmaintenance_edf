@@ -35,7 +35,7 @@ export class HomePage implements OnInit {
         private screenOrientation: ScreenOrientation, private plantService: PlantsService,
         private notifService: NotificationService, private priorityService: PriorityService,
         private effectService: EffectService, private causeCodeService: CausecodeService,
-        private causeGroupService: CausegroupService,private functLocService: FunctlocService) {
+        private causeGroupService: CausegroupService, private functLocService: FunctlocService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -52,7 +52,6 @@ export class HomePage implements OnInit {
             (plants) => {
                 let plts = plants.d.results;
                 this.plants = plts;
-                console.log(plts)
                 //we check if there is a choosen plant
                 this.storage.get("choosenPlant").then(
                     (choosenPlantcode) => {
@@ -135,30 +134,10 @@ export class HomePage implements OnInit {
         });
     }
 
-    async presentActionSheet() {//display user settings and plant options
-        const actionSheet = await this.actionSheetController.create({
-            header: 'Options',
-            buttons: [{
-                text: 'Choose Plant',
-                icon: 'send',
-                handler: () => {
-                    this.presentPlantsModal();
-                }
-            },
-            {
-                text: 'User settings',
-                icon: 'settings',
-                handler: () => {
-                }
-            },
-            {
-                text: 'Cancel',
-                icon: 'close',
-                role: 'cancel'
-            }]
-        });
-        await actionSheet.present();
+    onClose(evt: { result: string; }) {
+        this.getNotifList(evt.result);
     }
+
 
     getNotifList(plant) {
         this.dataAvailable = false;
@@ -170,8 +149,4 @@ export class HomePage implements OnInit {
             }
         )
     }
-
-
-
-
 }

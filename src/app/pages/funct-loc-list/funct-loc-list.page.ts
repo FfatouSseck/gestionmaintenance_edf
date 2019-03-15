@@ -16,6 +16,7 @@ export class FunctLocListPage implements OnInit {
   searchControl: FormControl;
   functLocs: any[] = [];
   notAvailable = true;
+  noData = false;
   plantCode = "";
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
@@ -39,17 +40,30 @@ export class FunctLocListPage implements OnInit {
   }
 
   ionViewDidEnter() {
-    //getting CauseGroupSet from server
+    this.noData = false;
+    //getting FunctLocSet from server
     this.functLocs = [];
     this.functLocService.getAllFunctLocByPlant(this.plantCode).subscribe(
       (functLocs) => {
-        console.log(functLocs.d.results);
         this.functLocService.setFunctLocs(functLocs.d.results);
-        this.functLocs = this.functLocService.getAvailableFunctLocs();
-        if (this.functLocs.length == 0) {
-          this.notAvailable = true;
+        if (this.functLocService.checkAvailability()) {
+          this.functLocs = this.functLocService.getAvailableFunctLocs();
+
+          if (this.functLocs.length == 0) {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = false;
+          }
         }
-        else this.notAvailable = false;
+        else {
+          this.notAvailable = false;
+          this.noData = true;
+        }
+
+
       },
       (err) => {
         console.log(err);

@@ -109,8 +109,16 @@ export class DetailsSettingsPage implements OnInit {
     if (this.checkedPlants.length > 1) {
       this.openSnackBar("You have choosen more than one plant");
     }
-    else if (this.checkedPlants.length == 0 || this.choosenPlant === "") {
-      this.openSnackBar("Please select at least one planning plant");
+    else if (this.checkedPlants.length == 0) {
+      if( this.choosenPlant === "")
+        {
+          this.openSnackBar("Please select at least one planning plant");
+        }
+        else{
+          this.modalController.dismiss({
+            'result': this.choosenPlant
+          });
+        }
     }
     else if (this.checkedPlants.length == 1) {
       //we save the item to session storage and close the modal

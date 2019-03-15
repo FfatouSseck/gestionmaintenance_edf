@@ -1,12 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-    </ion-buttons>
-    <ion-title>Notification</ion-title>
-  </ion-toolbar>
+  <app-header pageTitle="Notification" (close)="onClose($event)"></app-header>
 </ion-header>
 
 <ion-content padding>
@@ -28,7 +21,7 @@
       <ion-icon name="qr-scanner"></ion-icon>QR-CODE
     </ion-button>
 
-    <mat-form-field class="example-form" (click)="selectFunctLoc()">
+    <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
         <input matInput placeholder="Equipment" formControlName="equipment" 
                [(ngModel)]="choosenEquipment" required>
         <mat-icon matSuffix style="color: grey">file_copy</mat-icon>

@@ -91,6 +91,11 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
   }
 
+  onClose(evt){
+    this.notAvailable = true;
+    this.getNotifs();
+  }
+
   presentDetails(notif: Notification) {
     this.choosenNotif = notif;
     this.modif = false;

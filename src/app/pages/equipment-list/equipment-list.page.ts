@@ -26,7 +26,6 @@ export class EquipmentListPage implements OnInit {
 
     this.functLoc = "";
     this.functLoc = navParams.get('functLoc');
-    console.log("functloc", this.functLoc)
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
 
@@ -49,7 +48,6 @@ export class EquipmentListPage implements OnInit {
     this.equipments = [];
     this.equipmentService.getAllEquipmentsByFunctLoc(this.functLoc).subscribe(
       (equipments) => {
-        console.log(equipments.d.results);
         this.equipmentService.setEquipments(equipments.d.results);
         if (this.equipmentService.checkAvailability()) {
           this.equipments = this.equipmentService.getAvailableEquipments();

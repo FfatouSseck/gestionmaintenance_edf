@@ -21,8 +21,8 @@ export class FunctlocService extends BaseService {
   }
 
   setFunctLocs(FunctLocs) {
-    if (FunctLocs.length > 0) {
-      this.functLocsList = FunctLocs;
+    this.functLocsList = FunctLocs;
+    if (FunctLocs.length > 0) {   
       this.available = true;
     }
   }

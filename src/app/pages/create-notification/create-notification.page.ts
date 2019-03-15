@@ -72,10 +72,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     });
   }
 
-  functLocChanged(evt) {
-    let choosenFunctLoc = evt.value;
-  }
-
   loadStoredImages() {
     this.nativeStorage.getItem(STORAGE_KEY).then(images => {
       if (images) {
@@ -94,7 +90,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   ionViewDidEnter() {
-
     //getting PrioritySet from server
     if (this.priorityService.checkAvailability()) {
       this.priorities = this.priorityService.getPriorities();
@@ -174,12 +169,18 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   }
 
-  async selectFunctLoc(){
- 
+  onClose(evt: { result: string; }) {
+    this.choosenPlantcode = evt.result;
+    this.choosenFunctLoc = "";
+    this.choosenEquipment = "";
+  }
+
+  async selectFunctLoc() {
+
     this.modal = await this.modalController.create({
       component: FunctLocListPage,
       componentProps: {
-        'plantCode' : this.choosenPlantcode
+        'plantCode': this.choosenPlantcode
       },
     });
     this.modal.backdropDismiss = false;
@@ -191,13 +192,14 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       this.choosenFunctLoc = data.result.FunctLocId;
       this.selectEquipment();
     }
+    else this.choosenFunctLoc = "";
   }
 
-  async selectEquipment(){
+  async selectEquipment() {
     this.modal = await this.modalController.create({
       component: EquipmentListPage,
       componentProps: {
-        'functLoc' : this.choosenFunctLoc
+        'functLoc': this.choosenFunctLoc
       },
     });
     this.modal.backdropDismiss = false;
@@ -237,7 +239,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
     const { data } = await this.modal.onDidDismiss();
     if (data != undefined) {
-      this.choosenCC = data.result.CodeDescr+" - "+this.choosenCG;
+      this.choosenCC = data.result.CodeDescr + " - " + this.choosenCG;
     }
   }
 
