@@ -11,7 +11,8 @@
             <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"  [(ngModel)]="credentials.pwd" formControlName="pwd" required>
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </mat-form-field>
-          <ion-button color="primary" class="example-form" (click)="login()">OK</ion-button>
+          <ion-button color="primary" class="example-form" (click)="login()">OK</ion-button>    
+          <p class="example-form2" style="color: red" *ngIf="formInvalid">Please check the information entered</p>
         </form>
       </mat-card>
   </div>
