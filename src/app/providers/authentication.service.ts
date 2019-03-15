@@ -1,4 +1,4 @@
-import { Platform } from '@ionic/angular';
+import { Platform, AlertController } from '@ionic/angular';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { BehaviorSubject } from 'rxjs';
@@ -15,7 +15,8 @@ export class AuthenticationService{
   authenticationState = new BehaviorSubject(false);
   token: any;
 
-  constructor(private storage: Storage, private plt: Platform, public http: HttpClient) {
+  constructor(private storage: Storage, private plt: Platform, public http: HttpClient,
+              public alertCtrl: AlertController) {
     this.plt.ready().then(() => {
       this.checkToken();
     });
@@ -36,6 +37,7 @@ export class AuthenticationService{
 
     this.makeBasicAuth(login, pwd);
     auth = this.token;
+    console.log("token",auth);
 
     //create header
     var headers = new HttpHeaders();
@@ -56,7 +58,13 @@ export class AuthenticationService{
       (res) =>{
         console.log("iciiiiiiiiii",res);
       },
-      (err) =>{
+      async (err) =>{
+        const alert = await this.alertCtrl.create({
+          header: 'Authentication failed',
+          message: err.message,
+          buttons: ['OK']
+        });
+        await alert.present();
         console.log("Authentication failed: ",err)
       }
     )
