@@ -17,22 +17,25 @@
     <mat-form-field class="example-form" color="secondary">
       <input disabled matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
     </mat-form-field>
-    <mat-form-field class="form-85" class="example-form">
-      <mat-select placeholder="Functional location" formControlName="functloc" required (selectionChange)="functLocChanged($event)">
-        <mat-option *ngFor="let l of locations" [value]="l.FunctLocId">
-          {{l.FunctLocId}}-{{l.FunctLocDescr}}...
-        </mat-option>
-      </mat-select>
+
+    <mat-form-field class="example-form" (click)="selectFunctLoc()">
+      <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
+        required>
+      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
     </mat-form-field>
     <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
     <ion-button color="light" (click)="scanQRCode()">
       <ion-icon name="qr-scanner"></ion-icon>QR-CODE
     </ion-button>
-    <mat-form-field class="example-form">
-      <input matInput placeholder="Equipment" maxlength="40" formControlName="equipment">
-    </mat-form-field>
+
+    <mat-form-field class="example-form" (click)="selectFunctLoc()">
+        <input matInput placeholder="Equipment" formControlName="equipment" 
+               [(ngModel)]="choosenEquipment" required>
+        <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      </mat-form-field>
     <br />
-    <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator</mat-checkbox>
+    <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator
+    </mat-checkbox>
     <br />
     <mat-form-field class="example-form">
       <mat-select placeholder="Effect on production" formControlName="productionEff">
@@ -52,9 +55,9 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj" formControlName="startDate"
-        required>
-      <mat-icon matSuffix>calendar_today</mat-icon>
+      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj"
+        formControlName="startDate" required>
+      <mat-icon matSuffix style="color: grey">calendar_today</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
       <mat-select placeholder="Damage code" formControlName="damageCode">
@@ -64,9 +67,8 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectCauseGroup()">
-      <input matInput placeholder="Cause" formControlName="cause" 
-             [(ngModel)]="choosenCC" required>
-      <mat-icon matSuffix>file_copy</mat-icon>
+      <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
+      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
       <mat-select placeholder="Object part" formControlName="objectPart">
@@ -97,22 +99,22 @@
       <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
     </div>
     <div *ngIf="nbAttachments > 0">
-        <ion-list>
-            <ion-item *ngFor="let img of images; index as pos" text-wrap>
-              <ion-thumbnail slot="start">
-                <ion-img [src]="img.path"></ion-img>
-              </ion-thumbnail>
-              <ion-label>
-                {{ img.name }}
-              </ion-label>
-              <ion-button slot="end" fill="clear" (click)="startUpload(img)">
-                <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
-              </ion-button>
-              <ion-button slot="end" fill="clear" (click)="deleteImage(img, pos)">
-                <ion-icon slot="icon-only" name="trash"></ion-icon>
-              </ion-button>
-            </ion-item>
-          </ion-list>
+      <ion-list>
+        <ion-item *ngFor="let img of images; index as pos" text-wrap>
+          <ion-thumbnail slot="start">
+            <ion-img [src]="img.path"></ion-img>
+          </ion-thumbnail>
+          <ion-label>
+            {{ img.name }}
+          </ion-label>
+          <ion-button slot="end" fill="clear" (click)="startUpload(img)">
+            <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+          </ion-button>
+          <ion-button slot="end" fill="clear" (click)="deleteImage(img, pos)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
     </div>
   </form>
 </ion-content>

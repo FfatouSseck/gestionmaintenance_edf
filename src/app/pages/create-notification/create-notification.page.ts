@@ -41,6 +41,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   choosenCC = "";
   choosenFunctLoc = "";
   choosenPlantcode = "";
+  choosenEquipment = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
     public qrScanner: QRScanner, public toastController: ToastController, private storage: Storage,
@@ -73,7 +74,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   functLocChanged(evt) {
     let choosenFunctLoc = evt.value;
-    console.log(choosenFunctLoc);
   }
 
   loadStoredImages() {
@@ -124,7 +124,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
           else {
             this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
               (locations) => {
-                console.log(locations.d.results);
                 this.functLocService.setFunctLocs(locations.d.results);
                 this.locations = this.functLocService.getAvailableFunctLocs();
               },
@@ -187,17 +186,18 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
+
     if (data != undefined) {
-      this.choosenFunctLoc = data.result.plantCode;
-      this.selectEquipment(this.choosenFunctLoc);
+      this.choosenFunctLoc = data.result.FunctLocId;
+      this.selectEquipment();
     }
   }
 
-  async selectEquipment(choosenFunctLoc){
+  async selectEquipment(){
     this.modal = await this.modalController.create({
       component: EquipmentListPage,
       componentProps: {
-        'functLoc' : choosenFunctLoc
+        'functLoc' : this.choosenFunctLoc
       },
     });
     this.modal.backdropDismiss = false;
@@ -205,8 +205,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
     const { data } = await this.modal.onDidDismiss();
     if (data != undefined) {
-      //this.choosenFunctLoc = data.result.plantCode;
+      this.choosenEquipment = data.result.EquipmentDescr;
     }
+    else this.choosenEquipment = "";
   }
 
   async selectCauseGroup() {
@@ -218,7 +219,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
-    console.log(data)
     if (data != undefined) {
       this.choosenCG = data.result.CodeGroup;
       this.selectCauseCode(this.choosenCG);

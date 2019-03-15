@@ -10,24 +10,30 @@
 </ion-header>
 
 <ion-content padding>
+
   <div *ngIf="notAvailable;else contentAvailable">
     <mat-spinner style="margin: 0 auto"></mat-spinner>
   </div>
 
   <ng-template #contentAvailable>
-    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
-    <ion-list>
-      <ion-list-header>
-        <ion-label>Choose the cause</ion-label>
-      </ion-list-header>
-      <ion-item (click)="choose(cc)" *ngFor="let cc of causeCodes;let i=index">
-        <ion-label>
-          <p>
-            {{cc.CodeDescr}}
-          </p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
+    <div *ngIf="noData">
+      No equipment available for this functionnal location
+    </div>
+    <div *ngIf="!noData">
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Choose the Equipment</ion-label>
+        </ion-list-header>
+        <ion-item (click)="choose(eq)" *ngFor="let eq of equipments">
+          <ion-label>
+            <p>
+              {{eq.EquipmentDescr}}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
   </ng-template>
 </ion-content>
 

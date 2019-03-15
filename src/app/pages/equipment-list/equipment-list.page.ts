@@ -17,13 +17,16 @@ export class EquipmentListPage implements OnInit {
   searchControl: FormControl;
   equipments: any[] = [];
   notAvailable = true;
+  noData = false;
   functLoc = "";
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
     public snackBar: MatSnackBar, public navParams: NavParams,
     public equipmentService: EquipmentService) {
 
+    this.functLoc = "";
     this.functLoc = navParams.get('functLoc');
+    console.log("functloc", this.functLoc)
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
 
@@ -41,17 +44,29 @@ export class EquipmentListPage implements OnInit {
   }
 
   ionViewDidEnter() {
+    this.noData = false;
     //getting CauseGroupSet from server
     this.equipments = [];
     this.equipmentService.getAllEquipmentsByFunctLoc(this.functLoc).subscribe(
       (equipments) => {
         console.log(equipments.d.results);
         this.equipmentService.setEquipments(equipments.d.results);
-        this.equipments = this.equipmentService.getAvailableEquipments();
-        if (this.equipments.length == 0) {
-          this.notAvailable = true;
+        if (this.equipmentService.checkAvailability()) {
+          this.equipments = this.equipmentService.getAvailableEquipments();
+          if (this.equipments.length == 0) {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = false;
+          }
         }
-        else this.notAvailable = false;
+        else {
+          this.notAvailable = false;
+          this.noData = true;
+        }
+
       },
       (err) => {
         console.log(err);

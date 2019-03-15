@@ -22,10 +22,13 @@ export class EquipmentService extends BaseService{
   }
 
   getAllEquipmentsByFunctLoc(codeFunctLoc): Observable<any> {
+    console.log(codeFunctLoc)
     return this.getAll("/EquipmentSet?$filter=FunctLoc eq '"+codeFunctLoc+"'");
   }
 
   setEquipments(equipments) {
+    this.available = false;
+    console.log(equipments);
     if (equipments.length > 0) {
       this.equipmentList = equipments;
       this.available = true;
