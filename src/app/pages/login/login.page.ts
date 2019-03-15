@@ -52,10 +52,7 @@ export class LoginPage implements OnInit {
       this.formInvalid = true;
     }
     else{
-      this.loginservice.login().then(
-        () => {
-            this.router.navigateByUrl("/home");
-      });
+      this.loginservice.login(this.credentials.login,this.credentials.pwd);
     }
   }
 
