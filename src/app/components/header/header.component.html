@@ -1,5 +1,5 @@
 <ion-toolbar>
-  <ion-buttons slot="start">
+  <ion-buttons slot="start" *ngIf="currentUrl !== '/home'">
       <ion-back-button
           [text]=""
           [icon]="home">

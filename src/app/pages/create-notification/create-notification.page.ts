@@ -24,6 +24,8 @@ import { CauseGroupListPage } from '../cause-group-list/cause-group-list.page';
 import { CauseCodeListPage } from '../cause-code-list/cause-code-list.page';
 import { FunctLocListPage } from '../funct-loc-list/funct-loc-list.page';
 import { EquipmentListPage } from '../equipment-list/equipment-list.page';
+import { ObjectPartCodeListPage } from '../object-part-code-list/object-part-code-list.page';
+import { ObjectPartGroupListPage } from '../object-part-group-list/object-part-group-list.page';
 
 const STORAGE_KEY = 'my_images';
 
@@ -42,6 +44,8 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   choosenFunctLoc = "";
   choosenPlantcode = "";
   choosenEquipment = "";
+  choosenObjectPartCode = "";
+  choosenObjectPartGroup = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
     public qrScanner: QRScanner, public toastController: ToastController, private storage: Storage,
@@ -212,6 +216,22 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     else this.choosenEquipment = "";
   }
 
+  async selectObjectPartGroup() {
+    this.modal = await this.modalController.create({
+      component: ObjectPartGroupListPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenObjectPartGroup = data.result.CodeGroup;
+      this.selectObjectPartCode(this.choosenObjectPartGroup);
+    }
+    else this.choosenObjectPartGroup = "";
+  }
+
   async selectCauseGroup() {
     this.modal = await this.modalController.create({
       component: CauseGroupListPage,
@@ -225,6 +245,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       this.choosenCG = data.result.CodeGroup;
       this.selectCauseCode(this.choosenCG);
     }
+    else this.choosenCG = "";
   }
 
   async selectCauseCode(cg) {
@@ -241,6 +262,26 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     if (data != undefined) {
       this.choosenCC = data.result.CodeDescr + " - " + this.choosenCG;
     }
+    else this.choosenCC = "";
+  }
+
+  
+  async selectObjectPartCode(og){
+    this.modal = await this.modalController.create({
+      component: ObjectPartCodeListPage,
+      componentProps: {
+        'og': og
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+
+    if (data != undefined) {
+      this.choosenObjectPartCode = data.result.CodeDescr + " - " + this.choosenObjectPartGroup;
+    }
+    else this.choosenObjectPartCode = "";
   }
 
 

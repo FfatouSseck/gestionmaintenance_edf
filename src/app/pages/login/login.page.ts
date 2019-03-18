@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { AuthenticationService } from '../../providers/authentication.service';
 import { PlantsService } from '../../providers/plants.service';
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
 import { Data } from '../../providers/data';
@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
   constructor(public _formBuilder: FormBuilder,private screenOrientation: ScreenOrientation,
               public loginservice: AuthenticationService,public navCtrl: NavController,
               public plantService: PlantsService,public storage: Storage,public router: Router,
-              public dataService: Data, public notifService: NotificationService) { }
+              public dataService: Data, public notifService: NotificationService,public alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.loginFormGroup = this._formBuilder.group({
@@ -52,7 +52,21 @@ export class LoginPage implements OnInit {
       this.formInvalid = true;
     }
     else{
-      this.loginservice.login(this.credentials.login,this.credentials.pwd);
+      this.loginservice.login(this.credentials.login,this.credentials.pwd).subscribe(
+        (res) =>{
+          console.log("iciiiiiiiiii",res);
+          this.router.navigateByUrl("/home");
+        },
+        async (err) =>{
+          const alert = await this.alertCtrl.create({
+            header: 'Authentication failed',
+            message: err.message,
+            buttons: ['OK']
+          });
+          await alert.present();
+          console.log("Authentication failed: ",err)
+          this.router.navigateByUrl("/home");
+        });
     }
   }
 

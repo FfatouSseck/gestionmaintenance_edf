@@ -31,43 +31,25 @@ export class AuthenticationService{
   }
 
   login(login, pwd) {
-    console.log(login,pwd);
     var login_url = `${environment.apiUrl}`;
-    var auth;
+    var auth: any;
 
     this.makeBasicAuth(login, pwd);
-    auth = this.token;
-    console.log("token",auth);
+    //auth = this.token;
+    auth = btoa(login+":"+pwd);
 
     //create header
     var headers = new HttpHeaders();
-    headers.append("Authorization",auth);
+    headers.append("Authorization",'Basic ' + auth);
     headers.append("Access-Control-Allow-Credentials","true");
-    headers.append("Access-Control-Allow-Method","GET,PUT,POST,DELETE,OPTIONS");
+    headers.append("Access-Control-Allow-Origin","http://localhost:8100");
+    headers.append("Access-Control-Allow-Methods","GET,PUT,POST,DELETE,OPTIONS");
     headers.append("X-Requested-With","XMLHttpRequest");
     headers.append("Content-Type ","application/atom+xml");
     headers.append("DataServiceVersion","2.0");
     headers.append("X-CSRF-Token","Fetch");
 
-    //we connect to the platform using http
-    /*return this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
-      this.authenticationState.next(true);
-    });*/
-
-    this.http.get(login_url,{headers: headers}).subscribe(
-      (res) =>{
-        console.log("iciiiiiiiiii",res);
-      },
-      async (err) =>{
-        const alert = await this.alertCtrl.create({
-          header: 'Authentication failed',
-          message: err.message,
-          buttons: ['OK']
-        });
-        await alert.present();
-        console.log("Authentication failed: ",err)
-      }
-    )
+    return this.http.get(login_url,{headers: headers});
   }
 
   makeBasicAuth(login, pwd) {
@@ -202,5 +184,6 @@ export class AuthenticationService{
   isAuthenticated() {
     return this.authenticationState.value;
   }
+
 
 }

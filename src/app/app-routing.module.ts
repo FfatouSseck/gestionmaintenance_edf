@@ -13,7 +13,9 @@ const routes: Routes = [
   { path: 'cause-group-list', loadChildren: './pages/cause-group-list/cause-group-list.module#CauseGroupListPageModule' },
   { path: 'cause-code-list', loadChildren: './pages/cause-code-list/cause-code-list.module#CauseCodeListPageModule' },
   { path: 'funct-loc-list', loadChildren: './pages/funct-loc-list/funct-loc-list.module#FunctLocListPageModule' },
-  { path: 'equipment-list', loadChildren: './pages/equipment-list/equipment-list.module#EquipmentListPageModule' },
+  { path: 'equipment-list', loadChildren: './pages/equipment-list/equipment-list.module#EquipmentListPageModule' },  { path: 'object-part-group-list', loadChildren: './pages/object-part-group-list/object-part-group-list.module#ObjectPartGroupListPageModule' },
+  { path: 'object-part-code-list', loadChildren: './pages/object-part-code-list/object-part-code-list.module#ObjectPartCodeListPageModule' },
+
 
  // { path: "*",redirectTo:"/login"}
 

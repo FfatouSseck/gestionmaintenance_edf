@@ -31,6 +31,8 @@ import { CauseGroupListPage } from './pages/cause-group-list/cause-group-list.pa
 import { CauseCodeListPage } from './pages/cause-code-list/cause-code-list.page';
 import { FunctLocListPage } from './pages/funct-loc-list/funct-loc-list.page';
 import { EquipmentListPage } from './pages/equipment-list/equipment-list.page';
+import { ObjectPartGroupListPage } from './pages/object-part-group-list/object-part-group-list.page';
+import { ObjectPartCodeListPage } from './pages/object-part-code-list/object-part-code-list.page';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { EquipmentListPage } from './pages/equipment-list/equipment-list.page';
     CauseGroupListPage,
     CauseCodeListPage,
     FunctLocListPage,
-    EquipmentListPage
+    EquipmentListPage,
+    ObjectPartCodeListPage,
+    ObjectPartGroupListPage
   ],
   entryComponents: [
     NotificationListPage,
@@ -47,7 +51,9 @@ import { EquipmentListPage } from './pages/equipment-list/equipment-list.page';
     CauseGroupListPage,
     CauseCodeListPage,
     FunctLocListPage,
-    EquipmentListPage
+    EquipmentListPage,
+    ObjectPartCodeListPage,
+    ObjectPartGroupListPage
   ],
   imports: [
     BrowserModule, 

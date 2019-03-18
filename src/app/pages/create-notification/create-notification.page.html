@@ -63,12 +63,9 @@
       <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
       <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
     </mat-form-field>
-    <mat-form-field class="example-form">
-      <mat-select placeholder="Object part" formControlName="objectPart">
-        <mat-option *ngFor="let p of priorities" [value]="p.id">
-          {{p.id}}-{{p.desc}}
-        </mat-option>
-      </mat-select>
+    <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
+        <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode" required>
+        <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
       <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
