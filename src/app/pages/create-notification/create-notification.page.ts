@@ -18,7 +18,6 @@ import { PriorityService } from 'src/app/providers/priority.service';
 import { FunctlocService } from '../../providers/functloc.service';
 import { Storage } from '@ionic/storage';
 import { EffectService } from 'src/app/providers/effect.service';
-import { CausecodeService } from 'src/app/providers/causecode.service';
 import { CausegroupService } from 'src/app/providers/causegroup.service';
 import { CauseGroupListPage } from '../cause-group-list/cause-group-list.page';
 import { CauseCodeListPage } from '../cause-code-list/cause-code-list.page';
@@ -26,6 +25,8 @@ import { FunctLocListPage } from '../funct-loc-list/funct-loc-list.page';
 import { EquipmentListPage } from '../equipment-list/equipment-list.page';
 import { ObjectPartCodeListPage } from '../object-part-code-list/object-part-code-list.page';
 import { ObjectPartGroupListPage } from '../object-part-group-list/object-part-group-list.page';
+import { DamageGroupPage } from '../damage-group/damage-group.page';
+import { DamageCodePage } from '../damage-code/damage-code.page';
 
 const STORAGE_KEY = 'my_images';
 
@@ -39,8 +40,10 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   nbAttachments = 0;
   images = [];
   modal: any;
-  choosenCG = "";
-  choosenCC = "";
+  choosenDC = ""  //choosen damage code
+  choosenDG = ""  //choosen damage group
+  choosenCG = ""; //choosen cause group
+  choosenCC = ""; //choosen cause code
   choosenFunctLoc = "";
   choosenPlantcode = "";
   choosenEquipment = "";
@@ -216,22 +219,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     else this.choosenEquipment = "";
   }
 
-  async selectObjectPartGroup() {
-    this.modal = await this.modalController.create({
-      component: ObjectPartGroupListPage,
-      componentProps: {},
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      this.choosenObjectPartGroup = data.result.CodeGroup;
-      this.selectObjectPartCode(this.choosenObjectPartGroup);
-    }
-    else this.choosenObjectPartGroup = "";
-  }
-
   async selectCauseGroup() {
     this.modal = await this.modalController.create({
       component: CauseGroupListPage,
@@ -265,6 +252,21 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     else this.choosenCC = "";
   }
 
+  async selectObjectPartGroup() {
+    this.modal = await this.modalController.create({
+      component: ObjectPartGroupListPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenObjectPartGroup = data.result.CodeGroup;
+      this.selectObjectPartCode(this.choosenObjectPartGroup);
+    }
+    else this.choosenObjectPartGroup = "";
+  }
   
   async selectObjectPartCode(og){
     this.modal = await this.modalController.create({
@@ -284,6 +286,40 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     else this.choosenObjectPartCode = "";
   }
 
+  //Damage Codes & Groups
+  async selectDamageGroup() {
+    this.modal = await this.modalController.create({
+      component: DamageGroupPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenDG = data.result.CodeGroup;
+      this.selectDamageCode(this.choosenDG);
+    }
+    else this.choosenDG = "";
+  }
+  
+  async selectDamageCode(dg){
+    this.modal = await this.modalController.create({
+      component: DamageCodePage,
+      componentProps: {
+        'dg': dg
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+
+    if (data != undefined) {
+      this.choosenDC = data.result.CodeDescr + " - " + this.choosenDG;
+    }
+    else this.choosenDC = "";
+  }
 
   pathForImage(img) {
     if (img === null) {

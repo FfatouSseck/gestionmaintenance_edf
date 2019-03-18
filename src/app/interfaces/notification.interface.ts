@@ -1,4 +1,8 @@
-export interface Notification{
+export interface Notification extends NotificationLight{
+    color?:string;
+}
+
+export interface NotificationLight{
     description: string;
     functloc: string;
     equipment?: string;
@@ -10,6 +14,5 @@ export interface Notification{
     objectPart: string;
     longText: string;
     breakdownIndic?: boolean;
-    color?:string;
     notifNumber?: string;
 }

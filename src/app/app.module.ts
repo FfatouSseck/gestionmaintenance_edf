@@ -33,6 +33,8 @@ import { FunctLocListPage } from './pages/funct-loc-list/funct-loc-list.page';
 import { EquipmentListPage } from './pages/equipment-list/equipment-list.page';
 import { ObjectPartGroupListPage } from './pages/object-part-group-list/object-part-group-list.page';
 import { ObjectPartCodeListPage } from './pages/object-part-code-list/object-part-code-list.page';
+import { DamageCodePage } from './pages/damage-code/damage-code.page';
+import { DamageGroupPage } from './pages/damage-group/damage-group.page';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { ObjectPartCodeListPage } from './pages/object-part-code-list/object-par
     FunctLocListPage,
     EquipmentListPage,
     ObjectPartCodeListPage,
-    ObjectPartGroupListPage
+    ObjectPartGroupListPage,
+    DamageCodePage,
+    DamageGroupPage
   ],
   entryComponents: [
     NotificationListPage,
@@ -53,7 +57,9 @@ import { ObjectPartCodeListPage } from './pages/object-part-code-list/object-par
     FunctLocListPage,
     EquipmentListPage,
     ObjectPartCodeListPage,
-    ObjectPartGroupListPage
+    ObjectPartGroupListPage,
+    DamageCodePage,
+    DamageGroupPage
   ],
   imports: [
     BrowserModule, 

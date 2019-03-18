@@ -28,8 +28,10 @@ export class NotificationService extends BaseService{
   }
 
   updateNotif(notifNnumber: string,notifUpdated: any){
+    let hd = this.headers;
+    hd.append('X-CSRF-Token','Fetch');
     return this.http.put(`${environment.apiUrl}`+"NotifHeaderSet('"+notifNnumber+"')",
-                          notifUpdated,{headers:this.headers})
+                          notifUpdated,{headers:hd})
                           .pipe(
                             catchError(this.handleError)
                           );

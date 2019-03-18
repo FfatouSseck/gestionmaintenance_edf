@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ModalController, Platform, ToastController, AlertController } from '@ionic/angular';
-import { Notification } from '../../interfaces/notification.interface';
+import { Notification, NotificationLight } from '../../interfaces/notification.interface';
 import { BasePage } from '../base.page';
 import { FormBuilder, Validators } from '@angular/forms';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
@@ -45,9 +45,9 @@ export class NotificationListPage extends BasePage implements OnInit {
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public notifService: NotificationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
-    private screenOrientation: ScreenOrientation,public router: Router) {
+    private screenOrientation: ScreenOrientation, public router: Router) {
 
-    super(_formBuilder, platform,null, qrScanner, toastController, snackBar, alertController,modalController);
+    super(_formBuilder, platform, null, qrScanner, toastController, snackBar, alertController, modalController);
 
     this.orientation = this.screenOrientation.type;
     // detect orientation changes
@@ -80,8 +80,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     let available = this.notifService.notifsAvailable();
     if (available) {
       this.notifList = this.notifService.filterNotifs(this.searchTerm);
-      console.log(this.notifList)
-      if(this.notifList[0].notifNumber != null){
+      if (this.notifList[0].notifNumber != null) {
         this.notAvailable = false;
         this.noData = false;
       }
@@ -91,12 +90,13 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
   }
 
-  onClose(evt){
+  onClose(evt) {
     this.notAvailable = true;
     this.getNotifs();
   }
 
   presentDetails(notif: Notification) {
+    console.log(notif);
     this.choosenNotif = notif;
     this.modif = false;
     let index = this.notifList.indexOf(notif);
@@ -107,27 +107,41 @@ export class NotificationListPage extends BasePage implements OnInit {
 
     this.notifList[index].color = "light";
     this.notifService.setCurrentNotif(notif);
-    if(this.orientation === 'portrait-primary'){
+    if (this.orientation === 'portrait-primary') {
       this.router.navigateByUrl("/notification-details");
     }
   }
 
-  updateNotif(notif){
+  updateNotif(notif: Notification) {
     console.log(notif);
-    this.notifService.updateNotif(notif.notifNumber,notif).subscribe(
-      (not) =>{
-        console.log("notiiiiiiif",not);
+    let notification: NotificationLight = {
+      description: notif.description,
+      functloc: notif.functloc,
+      equipment: notif.equipment,
+      productionEff: notif.productionEff,
+      priority: notif.priority,
+      startDate: notif.startDate,
+      damageCode: notif.damageCode,
+      cause: notif.cause,
+      objectPart: notif.objectPart,
+      longText: notif.longText,
+      breakdownIndic: notif.breakdownIndic,
+      notifNumber: notif.notifNumber,
+    }
+    this.notifService.updateNotif(notif.notifNumber, notification).subscribe(
+      (not) => {
+        console.log("notiiiiiiif", not);
       },
-      (err) =>{
-        console.log("erreurrrrrrrrrrrrrrrr",err)
+      (err) => {
+        console.log(err)
       }
     )
   }
 
-  formatDate(newD:string){
+  formatDate(newD: string) {
 
-    let d1 = newD.replace('/Date(','');
-    let startDate = d1.replace(')/','');
+    let d1 = newD.replace('/Date(', '');
+    let startDate = d1.replace(')/', '');
     let newDate = new Date(Number(startDate));
 
     let m = newDate.getMonth() + 1;
@@ -139,18 +153,18 @@ export class NotificationListPage extends BasePage implements OnInit {
       month = "0" + m;
     } else month = m.toString();
 
-    if(d.toString().length < 2){
-      day = "0"+d;
-    }else day = d.toString();
+    if (d.toString().length < 2) {
+      day = "0" + d;
+    } else day = d.toString();
 
     let datec = day + "/" + month + "/" + newDate.getFullYear();
     return datec
 
   }
 
-  getHoursandMinutes(d){
-    let d1 = d.replace('/Date(','');
-    let startDate = d1.replace(')/','');
+  getHoursandMinutes(d) {
+    let d1 = d.replace('/Date(', '');
+    let startDate = d1.replace(')/', '');
     let newDate = new Date(Number(startDate));
 
     let min = newDate.getMinutes();
@@ -185,10 +199,10 @@ export class NotificationListPage extends BasePage implements OnInit {
                 if (done) {
                   this.notifList = this.notifService.filterNotifs(this.searchTerm);
                   this.choosenNotif = this.notifList[0];
-                  if(this.notifList[0].notifNumber != null){
+                  if (this.notifList[0].notifNumber != null) {
                     this.notAvailable = false;
                     this.noData = false;
-                  }         
+                  }
                 }
                 else this.noData = true;
               }

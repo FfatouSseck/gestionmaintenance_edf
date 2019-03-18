@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: 'funct-loc-list', loadChildren: './pages/funct-loc-list/funct-loc-list.module#FunctLocListPageModule' },
   { path: 'equipment-list', loadChildren: './pages/equipment-list/equipment-list.module#EquipmentListPageModule' },  { path: 'object-part-group-list', loadChildren: './pages/object-part-group-list/object-part-group-list.module#ObjectPartGroupListPageModule' },
   { path: 'object-part-code-list', loadChildren: './pages/object-part-code-list/object-part-code-list.module#ObjectPartCodeListPageModule' },
+  { path: 'damage-code', loadChildren: './pages/damage-code/damage-code.module#DamageCodePageModule' },
+  { path: 'damage-group', loadChildren: './pages/damage-group/damage-group.module#DamageGroupPageModule' },
 
 
  // { path: "*",redirectTo:"/login"}
