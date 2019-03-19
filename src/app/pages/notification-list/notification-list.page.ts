@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ModalController, Platform, ToastController, AlertController } from '@ionic/angular';
-import { Notification, NotificationLight } from '../../interfaces/notification.interface';
+import { Notification, NotificationLight, NotifHeader } from '../../interfaces/notification.interface';
 import { BasePage } from '../base.page';
 import { FormBuilder, Validators } from '@angular/forms';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
@@ -21,23 +21,15 @@ export class NotificationListPage extends BasePage implements OnInit {
   modif = false;
   notAvailable = true;
   noData = false;
+  floc = "";
+  cause = "";
+  objectPart = "";
 
-  notifList = []
+  notifList: NotifHeader[] = [];
+  firstDisplay = [];
 
-  choosenNotif: Notification = {
-    breakdownIndic: null,
-    cause: "",
-    color: null,
-    damageCode: null,
-    description: null,
-    equipment: null,
-    functloc: null,
-    longText: null,
-    notifNumber: null,
-    objectPart: null,
-    priority: null,
-    productionEff: null,
-    startDate: null
+  choosenNotif: NotifHeader = {
+    NotifNo : null
   };
 
   orientation = "landscape_primary";
@@ -80,9 +72,11 @@ export class NotificationListPage extends BasePage implements OnInit {
     let available = this.notifService.notifsAvailable();
     if (available) {
       this.notifList = this.notifService.filterNotifs(this.searchTerm);
-      if (this.notifList[0].notifNumber != null) {
+      this.firstDisplay = this.notifList.slice(0, 2);
+      if (this.notifList[0].NotifNo != null) {
         this.notAvailable = false;
         this.noData = false;
+       
       }
     }
     else {
@@ -95,7 +89,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.getNotifs();
   }
 
-  presentDetails(notif: Notification) {
+  presentDetails(notif: NotifHeader) {
     console.log(notif);
     this.choosenNotif = notif;
     this.modif = false;
@@ -104,6 +98,10 @@ export class NotificationListPage extends BasePage implements OnInit {
     for (let i = 0; i < this.notifList.length; i++) {
       this.notifList[i].color = null
     }
+
+    this.floc = this.choosenNotif.FunctLoc + " " + this.choosenNotif.FunctLocDescr;
+    this.cause = this.choosenNotif.CauseCode + " " + this.choosenNotif.CauseDescr;
+    this.objectPart = this.choosenNotif.ObjectPartCode + " " +this.choosenNotif.ObjectPartCodeDescr; 
 
     this.notifList[index].color = "light";
     this.notifService.setCurrentNotif(notif);
@@ -188,6 +186,10 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.modif = true;
   }
 
+  arrayOne(n: number): any[] {
+    return Array(n);
+  }
+
   getNotifs() {
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
@@ -195,11 +197,15 @@ export class NotificationListPage extends BasePage implements OnInit {
           this.notifService.getAllNotifs(choosenPlantcode).subscribe(
             (notifs: any) => {
               if (notifs.d.results.length > 0) {
+                console.log(notifs.d.results[0]);
+                this.firstDisplay = notifs.d.results.slice(0, 2);
                 let done = this.notifService.setNotifs(notifs.d.results);
                 if (done) {
                   this.notifList = this.notifService.filterNotifs(this.searchTerm);
+                  console.log(this.notifList)
+                  this.notifList = this.notifList.slice(2, this.notifList.length);
                   this.choosenNotif = this.notifList[0];
-                  if (this.notifList[0].notifNumber != null) {
+                  if (this.notifList[0].NotifNo != null) {
                     this.notAvailable = false;
                     this.noData = false;
                   }

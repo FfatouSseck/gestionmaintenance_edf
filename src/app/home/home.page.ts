@@ -122,7 +122,6 @@ export class HomePage implements OnInit {
                     this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
                         (orders) =>{
                             this.orderService.setOrders(orders.d.results);
-                            console.log(orders.d.results.length);
                             this.ordersCount = orders.d.results.length;
                         }
                     )

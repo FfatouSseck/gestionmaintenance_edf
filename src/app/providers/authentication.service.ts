@@ -37,6 +37,7 @@ export class AuthenticationService{
     this.makeBasicAuth(login, pwd);
     //auth = this.token;
     auth = btoa(login+":"+pwd);
+    this.storage.set("auth_token",auth);
 
     //create header
     var headers = new HttpHeaders();

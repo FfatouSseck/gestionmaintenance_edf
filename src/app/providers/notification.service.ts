@@ -3,8 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment.prod';
-import { Notification } from '../interfaces/notification.interface';
+import { Notification, NotifHeader } from '../interfaces/notification.interface';
 import { BaseService } from './base.service';
+import { Storage } from '@ionic/storage';
 
 
 @Injectable({
@@ -13,11 +14,11 @@ import { BaseService } from './base.service';
 export class NotificationService extends BaseService {
 
   headers = new HttpHeaders();
-  notifs: Notification[] = [];
+  notifs: NotifHeader[] = [];
   available = false;
   currentNotif: any;
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private storage: Storage) {
     super(http);
     this.headers.append("Accept", "application/json");
     this.headers.append("Content-Type", "application/json");
@@ -27,25 +28,39 @@ export class NotificationService extends BaseService {
     return this.getAll("NotifHeaderSet?$filter=PlanPlant eq '" + codePlant + "'");
   }
 
-  getNotifByNumber(notifNo){
-    return this.getAll("NotifHeaderSet('"+notifNo+"')");
+  getNotifByNumber(notifNo) {
+    return this.getAll("NotifHeaderSet('" + notifNo + "')");
   }
 
   updateNotif(notifNnumber: string, notifUpdated: any) {
     let hd = this.headers;
-    hd.append('X-CSRF-Token', 'Fetch');
+    this.storage.get("auth_token").then(
+      (token) => {
+        console.log('Basic ' + token);
+        if (token != null && token != undefined) {
+          console.log('Basic ' + token);
+          hd.append("Authorization", 'Basic ' + token);
+          hd.append('X-CSRF-Token', 'Fetch');
+
+        }
+      }, (err) => {
+        console.log(err);
+      }
+    )
+
     return this.http.put(`${environment.apiUrl}` + "NotifHeaderSet('" + notifNnumber + "')",
       notifUpdated, { headers: hd })
       .pipe(
         catchError(this.handleError)
       );
+
   }
 
   setNotifs(ntfs): boolean {
     let done = false;
 
     if (ntfs.length > 0) {
-      for (let i = 0; i < ntfs.length; i++) {
+      /*for (let i = 0; i < ntfs.length; i++) {
         this.notifs.push({
           breakdownIndic: ntfs[i].Breakdown,
           cause: ntfs[i].CauseCode + " " + ntfs[i].CauseDescr,
@@ -61,7 +76,8 @@ export class NotificationService extends BaseService {
           productionEff: ntfs[i].EffectDescr,
           startDate: ntfs[i].StartDate
         });
-      }
+      }*/
+      this.notifs = ntfs;
 
       done = true;
       this.available = true;
@@ -77,7 +93,8 @@ export class NotificationService extends BaseService {
 
   filterNotifs(searchTerm) {
     return this.notifs.filter((notif) => {
-      return (notif.notifNumber.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || notif.description.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+      return (notif.NotifNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 
+            || notif.ShortText.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
     });
   }
 
