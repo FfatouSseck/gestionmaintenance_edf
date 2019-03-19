@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'notification-details', loadChildren: './pages/notification-details/notification-details.module#NotificationDetailsPageModule',/*canActivate: [ AuthGuardService ]*/ },
   { path: 'details-settings', loadChildren: './pages/details-settings/details-settings.module#DetailsSettingsPageModule',/*canActivate: [ AuthGuardService ]*/ },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'service-order-preparation', loadChildren: './pages/service-order-preparation/service-order-preparation.module#ServiceOrderPreparationPageModule' },
+  { path: 'service-order-preparation', loadChildren: './pages/service-order-preparation/service-order-preparation.module#ServiceOrderPreparationPageModule' },  { path: 'order-details', loadChildren: './pages/order-details/order-details.module#OrderDetailsPageModule' },
+
 
 
  // { path: "*",redirectTo:"/login"}

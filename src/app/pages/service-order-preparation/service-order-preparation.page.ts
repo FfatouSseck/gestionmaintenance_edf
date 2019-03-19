@@ -29,7 +29,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   noData = false;
   loadNotif = true;
 
-  ordersList:Order[] = []
+  ordersList: Order[] = []
 
   choosenOrder: Order = {
     EquipUnderWarranty: null,
@@ -99,18 +99,18 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     productionEff: null,
     startDate: null
   };
-  displayedColumns: string[] = ['Operation','Description','NumberOfCapacities', 
-                                'WorkForecast','ActivityType'];
-  displayedComponentsColumns: string[] = ['Material','MaterialDescr','ItemNo',
-                                          'PlanPlant','StgeLoc','ValType',
-                                          'RequirementQuantity'];
+  displayedColumns: string[] = ['Operation', 'Description', 'NumberOfCapacities',
+    'WorkForecast', 'ActivityType'];
+  displayedComponentsColumns: string[] = ['Material', 'MaterialDescr', 'ItemNo',
+    'PlanPlant', 'StgeLoc', 'ValType',
+    'RequirementQuantity'];
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public orderService: ServiceOrderPreparationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
-    private screenOrientation: ScreenOrientation, public router: Router,public notifService: NotificationService) {
+    private screenOrientation: ScreenOrientation, public router: Router, public notifService: NotificationService) {
 
-    super(_formBuilder,platform,toastController,snackBar,alertController,modalController)
+    super(_formBuilder, platform, toastController, snackBar, alertController, modalController)
 
     this.orientation = this.screenOrientation.type;
     // detect orientation changes
@@ -127,7 +127,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
       description: ['', Validators.required],
       pmActType: ['', Validators.required],
       assignee: [''],
-      functloc: ['',Validators.required],
+      functloc: ['', Validators.required],
       priority: [''],
       equipmentNo: [''],
       status: [''],
@@ -153,13 +153,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
       if (this.ordersList[0].OrderNo != null) {
         this.notAvailable = false;
         this.noData = false;
-        //this.choosenOrder = this.ordersList[0];
-        this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
-        this.orderStatus = this.choosenOrder.StatusShort + " - "+ this.choosenOrder.StatusDescr;
-        this.getOrderNotification(this.choosenOrder.NotifNo);
-        this.getOrderOperations(this.choosenOrder.OrderNo);
-        this.getOrderComponents(this.choosenOrder.OrderNo);
-        if(this.choosenNotif.NotifNo != null){
+        if (this.choosenNotif.NotifNo != null) {
           this.loadNotif = false;
         }
       }
@@ -169,12 +163,12 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     }
   }
 
-  presentDetails(order: Order){
+  presentDetails(order: Order) {
     this.operations = [];
     this.loadNotif = true;
     this.choosenOrder = order;
     this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
-    this.orderStatus = this.choosenOrder.StatusShort + " - "+ this.choosenOrder.StatusDescr;
+    this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
     this.getOrderNotification(this.choosenOrder.NotifNo);
     this.getOrderOperations(this.choosenOrder.OrderNo);
     this.getOrderComponents(this.choosenOrder.OrderNo);
@@ -198,7 +192,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.getOrders();
   }
 
-  getOrders(){
+  getOrders() {
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null) {
@@ -234,28 +228,28 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     )
   }
 
-  getOrderNotification(notifNo){
+  getOrderNotification(notifNo) {
     this.notifService.getNotifByNumber(notifNo).subscribe(
-      (notif) =>{
+      (notif) => {
         this.choosenNotif = notif.d;
-        if(this.choosenNotif.NotifNo != null){
+        if (this.choosenNotif.NotifNo != null) {
           this.loadNotif = false;
         }
       }
     )
   }
 
-  getOrderOperations(orderNo: string){
+  getOrderOperations(orderNo: string) {
     this.orderService.getOrderOperations(orderNo).subscribe(
-      (operations) =>{
+      (operations) => {
         this.operations = operations.d.results;
       }
     )
   }
 
-  getOrderComponents(orderNo: string){
+  getOrderComponents(orderNo: string) {
     this.orderService.getOrderComponents(orderNo).subscribe(
-      (components) =>{
+      (components) => {
         this.components = components.d.results;
       }
     )

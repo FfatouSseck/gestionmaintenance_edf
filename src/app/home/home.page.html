@@ -1,5 +1,5 @@
 <ion-header>
-    <app-header pageTitle="" (close)="onClose($event)"></app-header>
+  <app-header pageTitle="" (close)="onClose($event)"></app-header>
 </ion-header>
 
 <ion-content padding fullscreen="true">
@@ -34,7 +34,13 @@
               file_copy
             </i></mat-icon>
 
-          <h4 style="color: grey;font-size: 40px">65</h4>
+          <div *ngIf="ordersCount == null">
+            <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+          </div>
+          <h4 style="color: grey;font-size: 40px" *ngIf="ordersCount != null">
+            {{ordersCount}}
+          </h4>
+
           <h1 style="color:#009DE0">Service Order Preparation</h1>
         </mat-card>
       </mat-grid-tile>
@@ -94,12 +100,12 @@
                 error
               </i></mat-icon>
 
-              <div *ngIf="dataAvailable==false">
-                  <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
-                </div>
-                <h4 style="color: grey;font-size: 40px" *ngIf="dataAvailable==true">
-                  {{notifsCount}}
-                </h4>
+            <div *ngIf="dataAvailable==false">
+              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+            </div>
+            <h4 style="color: grey;font-size: 40px" *ngIf="dataAvailable==true">
+              {{notifsCount}}
+            </h4>
             <h6 style="color:#009DE0">Notification List<br /></h6>
           </mat-card>
         </mat-grid-tile>
@@ -108,8 +114,13 @@
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 file_copy
               </i></mat-icon>
-
-            <h4 style="color: grey;font-size: 40px">65</h4>
+              
+            <div *ngIf="ordersCount == null">
+              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+            </div>
+            <h4 style="color: grey;font-size: 40px" *ngIf="ordersCount != null">
+              {{ordersCount}}
+            </h4>
             <h6 style="color:#009DE0">Service Order Preparation</h6>
           </mat-card>
         </mat-grid-tile>

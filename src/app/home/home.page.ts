@@ -12,6 +12,7 @@ import { EffectService } from '../providers/effect.service';
 import { CausegroupService } from '../providers/causegroup.service';
 import { CausecodeService } from '../providers/causecode.service';
 import { FunctlocService } from '../providers/functloc.service';
+import { ServiceOrderPreparationService } from '../providers/service-order-preparation.service';
 
 
 @Component({
@@ -28,6 +29,7 @@ export class HomePage implements OnInit {
     plants = [];
     modal: any;
     notifsCount = null;
+    ordersCount = null;
     dataAvailable = false;
 
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
@@ -35,7 +37,8 @@ export class HomePage implements OnInit {
         private screenOrientation: ScreenOrientation, private plantService: PlantsService,
         private notifService: NotificationService, private priorityService: PriorityService,
         private effectService: EffectService, private causeCodeService: CausecodeService,
-        private causeGroupService: CausegroupService, private functLocService: FunctlocService) {
+        private causeGroupService: CausegroupService, private functLocService: FunctlocService,
+        public orderService: ServiceOrderPreparationService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -111,6 +114,23 @@ export class HomePage implements OnInit {
                 console.log(err);
             }
         )
+
+        //getting service orders 
+        this.storage.get("choosenPlant").then(
+            (choosenPlantcode) => {
+                if (choosenPlantcode != null) {
+                    this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
+                        (orders) =>{
+                            this.orderService.setOrders(orders.d.results);
+                            console.log(orders.d.results.length);
+                            this.ordersCount = orders.d.results.length;
+                        }
+                    )
+                }
+            },
+            (err) => {
+                console.log(err);
+            })
 
     }
 

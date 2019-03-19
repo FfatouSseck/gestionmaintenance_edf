@@ -9,9 +9,9 @@
     </div>
     <ng-template #availContent>
       <p *ngIf="noData == true">
-        No data available
+        No data available for this plant
       </p>
-      <ion-list *ngIf="noData == false && choosenOrder.OrderNo != null">
+      <ion-list *ngIf="noData == false">
         <ion-item detail (click)="presentDetails(ord)" *ngFor="let ord of ordersList" [color]="ord.color">
           <ion-label text-wrap>
             <ion-text color="primary">
