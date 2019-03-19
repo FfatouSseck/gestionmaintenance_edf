@@ -20,6 +20,14 @@ export class ServiceOrderPreparationService extends BaseService {
     return this.getAll("OrderHeaderSet?$filter=PlanPlant eq '" + codePlant + "'");
   }
 
+  getOrderOperations(orderNo){
+    return this.getAll("OrderHeaderSet('"+orderNo+"')/Operations");
+  }
+
+  getOrderComponents(orderNo){
+    return this.getAll("OrderHeaderSet('"+orderNo+"')/Components");
+  }
+
   setOrders(orders) {
     let done = false;
     if (orders.length > 0) {

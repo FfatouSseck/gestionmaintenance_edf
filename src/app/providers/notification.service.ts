@@ -27,6 +27,10 @@ export class NotificationService extends BaseService {
     return this.getAll("NotifHeaderSet?$filter=PlanPlant eq '" + codePlant + "'");
   }
 
+  getNotifByNumber(notifNo){
+    return this.getAll("NotifHeaderSet('"+notifNo+"')");
+  }
+
   updateNotif(notifNnumber: string, notifUpdated: any) {
     let hd = this.headers;
     hd.append('X-CSRF-Token', 'Fetch');

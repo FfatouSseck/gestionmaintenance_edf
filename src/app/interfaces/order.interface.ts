@@ -50,4 +50,7 @@ export interface Order{
     TasklistGroup?: string;
     TasklistGroupCounter?: string;
     TasklistDescr?: string;
+
+
+    color?: string;
 }

@@ -10,6 +10,7 @@ import { Storage } from '@ionic/storage';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { Router } from '@angular/router';
 import { BaseOrderPage } from '../base.order.page';
+import { NotificationService } from 'src/app/providers/notification.service';
 
 @Component({
   selector: 'app-service-order-preparation',
@@ -18,22 +19,96 @@ import { BaseOrderPage } from '../base.order.page';
 })
 export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit {
 
+  operations: any[] = [];
+  components: any[] = [];
+  pmAct = "";
+  orderStatus = "";
   searchTerm: string = '';
   modif = false;
   notAvailable = true;
   noData = false;
+  loadNotif = true;
 
   ordersList:Order[] = []
 
   choosenOrder: Order = {
+    EquipUnderWarranty: null,
+    WorkCenter: null,
+    OrderNo: null,
+    WorkCenterShort: null,
+    PlanPlantDescr: null,
+    WorkCenterDescr: null,
+    EquipCustWarranty: null,
+    PriorityDescr: null,
+    EquipCustWarrantyDescr: null,
+    Mine: null,
+    EquipCustWarrantyStartDate: null,
+    OrderType: null,
+    EquipCustWarrantyEndDate: null,
+    PmActivityType: null,
+    EquipVendWarranty: null,
+    PmActivityTypeDescr: null,
+    EquipVendWarrantyDescr: null,
+    PlanPlant: null,
+    EquipVendWarrantyStartDate: null,
+    FunctLoc: null,
+    EquipVendWarrantyEndDate: null,
+    FunctLocDescr: null,
+    Equipment: null,
+    FlocUnderWarranty: null,
+    EquipmentDescr: null,
+    FlocCustWarranty: null,
+    FlocCustWarrantyDescr: null,
+    NotifNo: null,
+    FlocCustWarrantyStartDate: null,
+    ShortText: null,
+    FlocCustWarrantyEndDate: null,
+    LongText: null,
+    FlocVendWarranty: null,
+    Priority: null,
+    Assignee: null,
+    FlocVendWarrantyDescr: null,
+    AssigneeName: null,
+    FlocVendWarrantyStartDate: null,
+    FlocVendWarrantyEndDate: null,
+    Status: null,
+    StatusShort: null,
+    StatusDescr: null,
+    CreationDate: null,
+    InProcess: null,
+    Complete: null,
+    Confirmed: null,
+    TecoRefDate: null,
+    TasklistGroup: null,
+    TasklistGroupCounter: null,
+    TasklistDescr: null
   };
 
   orientation = "landscape_primary";
+  choosenNotif: any = {
+    breakdownIndic: null,
+    cause: "",
+    damageCode: null,
+    description: null,
+    equipment: null,
+    functloc: null,
+    longText: null,
+    NotifNo: null,
+    objectPart: null,
+    priority: null,
+    productionEff: null,
+    startDate: null
+  };
+  displayedColumns: string[] = ['Operation','Description','NumberOfCapacities', 
+                                'WorkForecast','ActivityType'];
+  displayedComponentsColumns: string[] = ['Material','MaterialDescr','ItemNo',
+                                          'PlanPlant','StgeLoc','ValType',
+                                          'RequirementQuantity'];
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public orderService: ServiceOrderPreparationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
-    private screenOrientation: ScreenOrientation, public router: Router) {
+    private screenOrientation: ScreenOrientation, public router: Router,public notifService: NotificationService) {
 
     super(_formBuilder,platform,toastController,snackBar,alertController,modalController)
 
@@ -70,17 +145,51 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   }
 
   ionViewDidEnter() {
+    this.loadNotif = true;
+    this.operations = [];
     let available = this.orderService.checkAvailability();
     if (available) {
       this.ordersList = this.orderService.filterOrders(this.searchTerm);
       if (this.ordersList[0].OrderNo != null) {
         this.notAvailable = false;
         this.noData = false;
-        this.choosenOrder = this.ordersList[0];
+        //this.choosenOrder = this.ordersList[0];
+        this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
+        this.orderStatus = this.choosenOrder.StatusShort + " - "+ this.choosenOrder.StatusDescr;
+        this.getOrderNotification(this.choosenOrder.NotifNo);
+        this.getOrderOperations(this.choosenOrder.OrderNo);
+        this.getOrderComponents(this.choosenOrder.OrderNo);
+        if(this.choosenNotif.NotifNo != null){
+          this.loadNotif = false;
+        }
       }
     }
     else {
       this.getOrders();
+    }
+  }
+
+  presentDetails(order: Order){
+    this.operations = [];
+    this.loadNotif = true;
+    this.choosenOrder = order;
+    this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
+    this.orderStatus = this.choosenOrder.StatusShort + " - "+ this.choosenOrder.StatusDescr;
+    this.getOrderNotification(this.choosenOrder.NotifNo);
+    this.getOrderOperations(this.choosenOrder.OrderNo);
+    this.getOrderComponents(this.choosenOrder.OrderNo);
+    this.modif = false;
+
+    let index = this.ordersList.indexOf(order);
+
+    for (let i = 0; i < this.ordersList.length; i++) {
+      this.ordersList[i].color = null
+    }
+
+    this.ordersList[index].color = "light";
+    this.orderService.setCurrentOrder(order);
+    if (this.orientation === 'portrait-primary') {
+      this.router.navigateByUrl("/order-details");
     }
   }
 
@@ -99,11 +208,11 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
                 let done = this.orderService.setOrders(orders.d.results);
                 if (done) {
                   this.ordersList = this.orderService.filterOrders(this.searchTerm);
-                  console.log(orders.d.results);
-                  this.choosenOrder = this.ordersList[0];
+                  //this.choosenOrder = this.ordersList[0];
                   if (this.ordersList[0].OrderNo != null) {
                     this.notAvailable = false;
                     this.noData = false;
+
                   }
                 }
                 else this.noData = true;
@@ -121,6 +230,33 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
           )
         }
 
+      }
+    )
+  }
+
+  getOrderNotification(notifNo){
+    this.notifService.getNotifByNumber(notifNo).subscribe(
+      (notif) =>{
+        this.choosenNotif = notif.d;
+        if(this.choosenNotif.NotifNo != null){
+          this.loadNotif = false;
+        }
+      }
+    )
+  }
+
+  getOrderOperations(orderNo: string){
+    this.orderService.getOrderOperations(orderNo).subscribe(
+      (operations) =>{
+        this.operations = operations.d.results;
+      }
+    )
+  }
+
+  getOrderComponents(orderNo: string){
+    this.orderService.getOrderComponents(orderNo).subscribe(
+      (components) =>{
+        this.components = components.d.results;
       }
     )
   }

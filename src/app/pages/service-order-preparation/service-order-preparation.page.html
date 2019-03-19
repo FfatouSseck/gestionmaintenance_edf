@@ -11,13 +11,13 @@
       <p *ngIf="noData == true">
         No data available
       </p>
-      <ion-list *ngIf="noData == false">
+      <ion-list *ngIf="noData == false && choosenOrder.OrderNo != null">
         <ion-item detail (click)="presentDetails(ord)" *ngFor="let ord of ordersList" [color]="ord.color">
           <ion-label text-wrap>
             <ion-text color="primary">
               <h2 style="font-weight: bold">{{ord.OrderNo}}</h2>
             </ion-text>
-            <p>{{ord.WorkCenterShort}} <span *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
+            <p>{{ord.ShortText}} <span *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
             <ion-text color="dark">
               <p>{{ord.FunctLoc}}</p>
             </ion-text>
@@ -50,7 +50,7 @@
                   <ion-text color="primary">
                     <h2 style="font-weight: bold">{{ord.OrderNo}}</h2>
                   </ion-text>
-                  <p>{{ord.WorkCenterShort}} <span *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
+                  <p>{{ord.ShortText}} <span *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
                   <ion-text color="dark">
                     <p>{{ord.FunctLoc}}</p>
                   </ion-text>
@@ -65,70 +65,196 @@
 
         <!-- the main content -->
         <ion-content id="menu-content">
-          <p *ngIf="choosenord.OrderNo == null && noData==false">Choose one notification to see details</p>
-          <!--form *ngIf="modif == false && choosenord.notifNumber!=null">
+          <p *ngIf="choosenOrder.OrderNo == null && noData==false">Choose one order to see details</p>
+          <form *ngIf="modif == false && choosenOrder.OrderNo!=null">
             <ion-row style="background-color: #F2F2F2">
-              <h4 style="font-weight: bold;color: #000;font-size: 15px">General information</h4>
+              <h4 style="font-weight: bold;color: #000;font-size: 15px">Service Order Informations</h4>
             </ion-row>
             <mat-form-field class="example-form">
-              <input matInput placeholder="Notification Number" readonly="true" [value]="choosenord.notifNumber">
+              <input matInput placeholder="Order Number" readonly="true" [value]="choosenOrder.OrderNo">
             </mat-form-field>
             <mat-form-field class="example-form">
-              <input matInput placeholder="Description" readonly="true" [value]="choosenord.description">
+              <input matInput placeholder="Description" readonly="true" [value]="choosenOrder.TasklistDescr">
             </mat-form-field>
             <mat-form-field class="example-form">
-              <input matInput placeholder="Functional location" readonly="true" [value]="choosenord.functloc">
+              <input matInput placeholder="PM activity type" readonly="true" [value]="pmAct">
             </mat-form-field>
             <mat-form-field class="example-form">
-              <input matInput placeholder="Equipment" readonly="true" [value]="choosenord.equipment">
+              <input matInput placeholder="Assignee" readonly="true" [value]="choosenOrder.Assignee">
             </mat-form-field>
-            <br />
-            <mat-checkbox disabled [checked]="choosenord.breakdownIndic" color="primary" class="example-form">
-              Breakdown
-              Indicator</mat-checkbox>
-            <br /><br />
             <mat-form-field class="example-form">
-              <input matInput placeholder="Effect on production" readonly="true" [value]="choosenord.productionEff">
+              <input matInput placeholder="Functionnal Location" readonly="true" [value]="choosenOrder.FunctLocDescr">
             </mat-form-field>
+            <mat-form-field class="example-form">
+              <input matInput placeholder="Equipment Number" readonly="true" [value]="choosenOrder.Equipment">
+            </mat-form-field>
+            <mat-form-field class="example-form">
+              <input matInput placeholder="Priority" readonly="true" [value]="choosenOrder.PriorityDescr">
+            </mat-form-field>
+            <mat-form-field class="example-form">
+              <input matInput placeholder="Status" readonly="true" [value]="orderStatus">
+            </mat-form-field>
+            <mat-form-field class="example-form">
+              <textarea matInput placeholder="Text" readonly="true" [value]="choosenOrder.LongText"></textarea>
+            </mat-form-field>
+            <!--Notification Informations-->
             <ion-row style="background-color: #F2F2F2">
               <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
             </ion-row>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Priority" readonly="true" [value]="choosenord.priority">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Malfunction start date" readonly="true"
-                [value]="getHoursandMinutes(choosenord.startDate)">
-              <mat-icon matSuffix>calendar_today</mat-icon>
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Damage code" readonly="true" [value]="choosenord.damageCode">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Cause" readonly="true" [value]="choosenord.cause">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Object part" readonly="true" [value]="choosenord.objectPart">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <textarea matInput placeholder="Long text" readonly="true" [value]="choosenord.longText"></textarea>
-            </mat-form-field>
+            <!--Loading spinner-->
+            <div *ngIf="loadNotif">
+              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+            </div>
+            <!--Displaying Informations-->
+            <div *ngIf="choosenNotif.NotifNo != null && loadNotif==false">
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo">
+              </mat-form-field>
+              <br />
+              <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
+                Breakdown
+                Indicator</mat-checkbox>
+              <br /><br />
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.CauseCode">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Cause Description" readonly="true" [value]="choosenNotif.CauseDescr">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Object Part" readonly="true" [value]="choosenNotif.ObjectPartCodeDescr">
+              </mat-form-field>
+            </div>
+
+            <!--Operations-->
+            <ion-row style="background-color: #F2F2F2">
+              <h4 style="font-weight: bold;color: #000;font-size: 15px">Operations</h4>
+            </ion-row>
+
+            <div *ngIf="operations.length == 0">
+              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+            </div>
+            <div *ngIf="operations.length>0">
+              <table mat-table [dataSource]="operations" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Operation">
+                  <th mat-header-cell *matHeaderCellDef> Operation </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Activity}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Description">
+                  <th mat-header-cell *matHeaderCellDef> Description </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="NumberOfCapacities">
+                  <th mat-header-cell *matHeaderCellDef> Capacities </th>
+                  <td mat-cell *matCellDef="let element"> {{element.NumberOfCapacities}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="WorkForecast">
+                  <th mat-header-cell *matHeaderCellDef> Forecasted work </th>
+                  <td mat-cell *matCellDef="let element"> {{element.WorkForecast}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="ActivityType">
+                  <th mat-header-cell *matHeaderCellDef> Activity Type </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ActivityType}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+
+
+            <!--Components-->
+            <ion-row style="background-color: #F2F2F2">
+              <h4 style="font-weight: bold;color: #000;font-size: 15px">Components</h4>
+            </ion-row>
+
+            <div *ngIf="components.length == 0">
+              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+            </div>
+            <div *ngIf="components.length>0">
+              <table mat-table [dataSource]="components" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Material">
+                  <th mat-header-cell *matHeaderCellDef> Material </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Material}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="MaterialDescr">
+                  <th mat-header-cell *matHeaderCellDef> Description </th>
+                  <td mat-cell *matCellDef="let element"> {{element.MaterialDescr}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="ItemNo">
+                  <th mat-header-cell *matHeaderCellDef> Operation </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ItemNo}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="PlanPlant">
+                  <th mat-header-cell *matHeaderCellDef> Stock plant </th>
+                  <td mat-cell *matCellDef="let element"> {{element.PlanPlant}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="StgeLoc">
+                  <th mat-header-cell *matHeaderCellDef> Storage Location </th>
+                  <td mat-cell *matCellDef="let element"> {{element.StgeLoc}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="ValType">
+                  <th mat-header-cell *matHeaderCellDef> Valuation </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ValType}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="RequirementQuantity">
+                  <th mat-header-cell *matHeaderCellDef> Requirement Quantity </th>
+                  <td mat-cell *matCellDef="let element"> {{element.RequirementQuantity}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedComponentsColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedComponentsColumns;"></tr>
+              </table>
+            </div>
           </form>
 
-          <form [formGroup]="notifFormGroup" *ngIf="modif == true">
+          <!--form [formGroup]="notifFormGroup" *ngIf="modif == true">
             <ion-row style="background-color:#F2F2F2">
               <h4 style="font-weight: bold;color:#000;font-size: 15px">General information</h4>
             </ion-row>
             <mat-form-field class="example-form">
-              <input matInput placeholder="Notification Number" readonly="true" [value]="choosenord.notifNumber">
+              <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.notifNumber">
             </mat-form-field>
             <mat-form-field class="example-form" color="secondary">
-              <input [(ngModel)]="choosenord.description" matInput placeholder="Description" maxlength="40"
+              <input [(ngModel)]="choosenOrder.description" matInput placeholder="Description" maxlength="40"
                 formControlName="description" required>
             </mat-form-field>
             <mat-form-field class="form-85" class="example-form">
               <mat-select placeholder="Functional location" formControlName="functloc" required
-                [(ngModel)]="choosenord.functloc">
+                [(ngModel)]="choosenOrder.functloc">
                 <mat-option *ngFor="let l of locations" [value]="l.loc">
                   {{l.loc}}-{{l.description}}...
                 </mat-option>
@@ -147,7 +273,7 @@
             <br />
             <mat-form-field class="example-form">
               <mat-select placeholder="Effect on production" formControlName="productionEff"
-                [(ngModel)]="choosenord.productionEff">
+                [(ngModel)]="choosenOrder.productionEff">
                 <mat-option *ngFor="let pe of productionEffects" [value]="pe.id">
                   {{pe.desc}}
                 </mat-option>
@@ -157,7 +283,7 @@
               <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
             </ion-row>
             <mat-form-field class="example-form">
-              <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenord.priority">
+              <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenOrder.priority">
                 <mat-option *ngFor="let p of priorities" [value]="p.desc">
                   {{p.id}}-{{p.desc}}
                 </mat-option>
@@ -165,7 +291,7 @@
             </mat-form-field>
             <mat-form-field class="example-form">
               <input matInput placeholder="Malfunction start date" maxlength="40"
-                [value]="getHoursandMinutes(choosenord.startDate)" formControlName="startDate" required>
+                [value]="getHoursandMinutes(choosenOrder.startDate)" formControlName="startDate" required>
               <mat-icon matSuffix>calendar_today</mat-icon>
             </mat-form-field>
             <mat-form-field class="example-form">
@@ -207,17 +333,11 @@
   <ion-toolbar style="--background: #3E4649;--min-height:50px"
     *ngIf=" orientation === 'landscape-primary' && noData == false">
     <ion-buttons slot="end">
-      <ion-button style="background-color: green;color: white">
-        Create Service Order
-      </ion-button>
+
       <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true"
-        size="large" type="reset">Reject</ion-button>
+        size="large" type="reset">Release SO</ion-button>
       <ion-button (click)="modifyNotif()" style="background-color: #009DE0;color: white;--height:40px" strong="true"
-        size="large" type="reset">Modify</ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
-        strong="true" size="large" type="reset">Similar Notifications</ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
-        strong="true" size="large" type="reset">Copy</ion-button>
+        size="large" type="reset">Update SO</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
