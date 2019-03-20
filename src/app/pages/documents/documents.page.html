@@ -1,0 +1,10 @@
+<ion-header>
+    <app-header pageTitle="Documents" (close)="onClose($event)"></app-header>
+</ion-header>
+
+<ion-content padding>
+    <p>Here</p>
+    <iframe *ngIf="pdfLink" [src]="pdfLink" width="100%" height="100%" frameborder="0">
+        
+    </iframe>
+</ion-content>

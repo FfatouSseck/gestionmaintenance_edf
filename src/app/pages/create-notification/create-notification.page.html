@@ -85,8 +85,9 @@
       <h4 style="text-align: center">No attachments</h4>
       <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
     </div>
-    <div *ngIf="nbAttachments > 0">
+    <div>
       <ion-list>
+        <ion-item *ngIf="nbAttachments>0">Nombre d'images: {{nbAttachments}}</ion-item>
         <ion-item *ngFor="let img of images; index as pos" text-wrap>
           <ion-thumbnail slot="start">
             <ion-img [src]="img.path"></ion-img>
@@ -94,9 +95,6 @@
           <ion-label>
             {{ img.name }}
           </ion-label>
-          <ion-button slot="end" fill="clear" (click)="startUpload(img)">
-            <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
-          </ion-button>
           <ion-button slot="end" fill="clear" (click)="deleteImage(img, pos)">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
           </ion-button>

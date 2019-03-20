@@ -90,7 +90,6 @@
     <plugin name="cordova-plugin-filepath" spec="^1.5.1" />
     <plugin name="cordova-sqlite-storage" spec="^3.1.0" />
     <plugin name="cordova-plugin-nativestorage" spec="^2.3.2" />
-    <engine name="android" spec="8.0.0" />
     <plugin name="cordova-plugin-safariviewcontroller" spec="^1.5.4" />
     <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
         <variable name="URL_SCHEME" value="fs.kalydia.edf" />
@@ -98,4 +97,5 @@
         <variable name="ANDROID_HOST" value="kal01.auth0.com" />
         <variable name="ANDROID_PATHPREFIX" value="/cordova/fs.kalydia.edf/callback" />
     </plugin>
+    <engine name="android" spec="7.0.0" />
 </widget>

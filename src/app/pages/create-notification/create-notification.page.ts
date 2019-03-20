@@ -19,14 +19,6 @@ import { FunctlocService } from '../../providers/functloc.service';
 import { Storage } from '@ionic/storage';
 import { EffectService } from 'src/app/providers/effect.service';
 import { CausegroupService } from 'src/app/providers/causegroup.service';
-import { CauseGroupListPage } from '../cause-group-list/cause-group-list.page';
-import { CauseCodeListPage } from '../cause-code-list/cause-code-list.page';
-import { FunctLocListPage } from '../funct-loc-list/funct-loc-list.page';
-import { EquipmentListPage } from '../equipment-list/equipment-list.page';
-import { ObjectPartCodeListPage } from '../object-part-code-list/object-part-code-list.page';
-import { ObjectPartGroupListPage } from '../object-part-group-list/object-part-group-list.page';
-import { DamageGroupPage } from '../damage-group/damage-group.page';
-import { DamageCodePage } from '../damage-code/damage-code.page';
 
 const STORAGE_KEY = 'my_images';
 
@@ -39,7 +31,8 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   nbAttachments = 0;
   images = [];
-  
+  arr = [];
+
   choosenDC = ""  //choosen damage code
   choosenDG = ""  //choosen damage group
   choosenCG = ""; //choosen cause group
@@ -55,7 +48,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     public snackBar: MatSnackBar, public alertController: AlertController, public modalController: ModalController,
     private camera: Camera, private file: File, private http: HttpClient, private webview: WebView,
     private actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
-    private plt: Platform, private loadingController: LoadingController, private effectService: EffectService,
+    private loadingController: LoadingController, private effectService: EffectService,
     private ref: ChangeDetectorRef, private filePath: FilePath, private priorityService: PriorityService,
     private causeGroupService: CausegroupService, private functLocService: FunctlocService) {
 
@@ -77,26 +70,22 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       longText: [''],
       breakdownIndic: ['']
     });
+
   }
 
   loadStoredImages() {
-    this.nativeStorage.getItem(STORAGE_KEY).then(images => {
-      if (images) {
-        let arr = JSON.parse(images);
         this.images = [];
-        for (let img of arr) {
+        for (let img of this.arr) {
           let filePath = this.file.dataDirectory + img;
           let resPath = this.pathForImage(filePath);
           this.images.push({ name: img, path: resPath, filePath: filePath });
         }
-      }
-    },
-      (err) => {
-        console.log("Error", err)
-      });
+   
   }
 
   ionViewDidEnter() {
+    this.arr = [];
+    this.images = [];
     //getting PrioritySet from server
     if (this.priorityService.checkAvailability()) {
       this.priorities = this.priorityService.getPriorities();
@@ -183,19 +172,19 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   async selectFunctLoc() {
-    this.choosenFunctLoc = await this.selectFLoc( this.choosenPlantcode );
-    if(this.choosenFunctLoc !== ""){
+    this.choosenFunctLoc = await this.selectFLoc(this.choosenPlantcode);
+    if (this.choosenFunctLoc !== "") {
       await this.selectEquipment(this.choosenFunctLoc);
     }
   }
 
   async selectEquipment(fl: string) {
-     this.choosenEquipment = await this.selectEq(fl);
+    this.choosenEquipment = await this.selectEq(fl);
   }
 
   async selectCauseGroup() {
     this.choosenCG = await this.selectCG();
-    if(this.choosenCG !== ""){
+    if (this.choosenCG !== "") {
       await this.selectCauseCode(this.choosenCG);
     }
   }
@@ -206,24 +195,24 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   async selectObjectPartGroup() {
     this.choosenObjectPartGroup = await this.selectOPGroup();
-    if(this.choosenObjectPartGroup !== ""){
+    if (this.choosenObjectPartGroup !== "") {
       await this.selectObjectPartCode(this.choosenObjectPartGroup);
     }
   }
-  
-  async selectObjectPartCode(og: any){
+
+  async selectObjectPartCode(og: any) {
     this.choosenObjectPartCode = await this.selectOPCode(og);
   }
 
   //Damage Codes & Groups
   async selectDamageGroup() {
     this.choosenDG = await this.selectDG();
-    if(this.choosenDG !== ""){
+    if (this.choosenDG !== "") {
       await this.selectDamageCode(this.choosenDG);
     }
   }
-  
-  async selectDamageCode(dg: string){
+
+  async selectDamageCode(dg: string) {
     this.choosenDC = await this.selectDC(dg);
   }
 
@@ -274,17 +263,25 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         this.filePath.resolveNativePath(imagePath)
           .then(filePath => {
             let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
+
             let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
+            this.openSnackBar("Android: correctPath: " + correctPath + " currentName: " + correctPath);
+
             this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
             this.nbAttachments++;
           });
       } else {
+        this.openSnackBar("no ok")
         var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
         var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
+
+        this.openSnackBar("correctPath: " + correctPath + " currentName: " + correctPath);
+
         this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+        this.nbAttachments++;
       }
     },
-      (err) => {
+      () => {
         this.openSnackBar("Camera not available")
       });
 
@@ -298,51 +295,39 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   copyFileToLocalDir(namePath, currentName, newFileName) {
-    this.file.copyFile(namePath, currentName, this.file.dataDirectory, newFileName).then(success => {
+    this.file.copyFile(namePath, currentName, this.file.dataDirectory, newFileName).then(() => {
       this.updateStoredImages(newFileName);
-    }, error => {
+    }, () => {
       this.openSnackBar('Error while storing file.');
     });
   }
 
   updateStoredImages(name) {
-    this.nativeStorage.getItem(STORAGE_KEY).then(images => {
-      let arr = JSON.parse(images);
-      if (!arr) {
-        let newImages = [name];
-        this.nativeStorage.setItem(STORAGE_KEY, JSON.stringify(newImages));
-      } else {
-        arr.push(name);
-        this.nativeStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-      }
+    this.arr.push(name);
 
-      let filePath = this.file.dataDirectory + name;
-      let resPath = this.pathForImage(filePath);
+    let filePath = this.file.dataDirectory + name;
+    let resPath = this.pathForImage(filePath);
 
-      let newEntry = {
-        name: name,
-        path: resPath,
-        filePath: filePath
-      };
+    let newEntry = {
+      name: name,
+      path: resPath,
+      filePath: filePath
+    };
 
-      this.images = [newEntry, ...this.images];
-      this.ref.detectChanges(); // trigger change detection cycle
-    });
+    this.images.push(newEntry, ...this.images);
+    this.ref.detectChanges(); // trigger change detection cycle
   }
+
   deleteImage(imgEntry, position) {
     this.images.splice(position, 1);
 
-    this.nativeStorage.getItem(STORAGE_KEY).then(images => {
-      let arr = JSON.parse(images);
-      let filtered = arr.filter(name => name != imgEntry.name);
-      this.nativeStorage.setItem(STORAGE_KEY, JSON.stringify(filtered));
+      let filtered = this.arr.filter(name => name != imgEntry.name);
 
       var correctPath = imgEntry.filePath.substr(0, imgEntry.filePath.lastIndexOf('/') + 1);
 
-      this.file.removeFile(correctPath, imgEntry.name).then(res => {
+      this.file.removeFile(correctPath, imgEntry.name).then(() => {
         this.openSnackBar('File removed.');
       });
-    });
   }
 
   startUpload(imgEntry) {
@@ -350,7 +335,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       .then(entry => {
         (<FileEntry>entry).file(file => this.readFile(file))
       })
-      .catch(err => {
+      .catch(() => {
         this.openSnackBar('Error while reading file.');
       });
   }

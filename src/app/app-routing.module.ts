@@ -11,6 +11,11 @@ const routes: Routes = [
   { path: 'details-settings', loadChildren: './pages/details-settings/details-settings.module#DetailsSettingsPageModule',/*canActivate: [ AuthGuardService ]*/ },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'service-order-preparation', loadChildren: './pages/service-order-preparation/service-order-preparation.module#ServiceOrderPreparationPageModule' },  { path: 'order-details', loadChildren: './pages/order-details/order-details.module#OrderDetailsPageModule' },
+  { path: 'check-list-assignment', loadChildren: './pages/check-list-assignment/check-list-assignment.module#CheckListAssignmentPageModule' },
+  { path: 'service-order', loadChildren: './pages/service-order/service-order.module#ServiceOrderPageModule' },
+  { path: 'time-and-material-confirmation', loadChildren: './pages/time-and-material-confirmation/time-and-material-confirmation.module#TimeAndMaterialConfirmationPageModule' },
+  { path: 'documents', loadChildren: './pages/documents/documents.module#DocumentsPageModule' },
+  { path: 'my-orders', loadChildren: './pages/my-orders/my-orders.module#MyOrdersPageModule' },
 
 
 

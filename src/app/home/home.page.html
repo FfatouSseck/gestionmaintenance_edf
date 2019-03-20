@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content padding fullscreen="true">
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
     <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
       refreshingText="Refreshing...">
     </ion-refresher-content>
@@ -50,7 +50,7 @@
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
+        <mat-card style="background-color: #ffffff" routerLink="/check-list-assignment">
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               assignment
             </i></mat-icon>
@@ -58,7 +58,7 @@
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
+        <mat-card style="background-color: #ffffff" routerLink="/service-order">
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               book
             </i></mat-icon>
@@ -68,7 +68,7 @@
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
+        <mat-card style="background-color: #ffffff" routerLink="/time-and-material-confirmation">
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               settings
             </i></mat-icon>
@@ -78,7 +78,7 @@
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
+        <mat-card style="background-color: #ffffff" routerLink="/documents">
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               note
             </i></mat-icon>
@@ -86,7 +86,7 @@
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff">
+        <mat-card style="background-color: #ffffff" routerLink="/my-orders">
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               reorder
             </i></mat-icon>
@@ -138,7 +138,7 @@
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card style="background-color: #ffffff">
+          <mat-card style="background-color: #ffffff" routerLink="/check-list-assignment">
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 assignment
               </i></mat-icon>
@@ -146,7 +146,7 @@
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card style="background-color: #ffffff">
+          <mat-card style="background-color: #ffffff" routerLink="/service-order">
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 book
               </i></mat-icon>
@@ -156,7 +156,7 @@
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card style="background-color: #ffffff">
+          <mat-card style="background-color: #ffffff" routerLink="/time-and-material-confirmation">
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 settings
               </i></mat-icon>
@@ -166,7 +166,7 @@
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card style="background-color: #ffffff">
+          <mat-card style="background-color: #ffffff" routerLink="/documents">
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 note
               </i></mat-icon>
@@ -176,7 +176,7 @@
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card style="background-color: #ffffff">
+          <mat-card style="background-color: #ffffff" routerLink="/my-orders">
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 reorder
               </i></mat-icon>
