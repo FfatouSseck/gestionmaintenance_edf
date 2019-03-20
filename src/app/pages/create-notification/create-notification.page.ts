@@ -326,7 +326,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       var correctPath = imgEntry.filePath.substr(0, imgEntry.filePath.lastIndexOf('/') + 1);
 
       this.file.removeFile(correctPath, imgEntry.name).then(() => {
-        this.openSnackBar('File removed.');
+       // this.openSnackBar('File removed.');
+       if(this.nbAttachments>0) this.nbAttachments--;
+       else this.nbAttachments=0
       });
   }
 
