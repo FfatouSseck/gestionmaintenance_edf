@@ -87,8 +87,70 @@ export class HomePage implements OnInit {
     }
 
     ionViewDidEnter() {
-        //getting PrioritySet from server
-        this.priorityService.getAllPriorities().subscribe(
+        this.initialisation();
+    }
+
+    //list available plants
+    async presentPlantsModal() {
+        this.modal = await this.modalController.create({
+            component: DetailsSettingsPage,
+            componentProps: {},
+        });
+        this.modal.backdropDismiss = false;
+        await this.modal.present();
+
+        const { data } = await this.modal.onDidDismiss();
+        this.getNotifList(data.result);
+    }
+
+    doRefresh(event) {
+        console.log('Begin async operation');
+        this.initialisation();
+    
+        setTimeout(() => {
+          console.log('Async operation has ended');
+          event.target.complete();
+        }, 2000);
+      }
+
+
+    openSnackBar(message: string) {
+        this.snackBar.open(message, null, {
+            duration: 2000,
+        });
+    }
+
+    onClose(evt: { result: string; }) {
+        this.getNotifList(evt.result);
+    }
+
+
+    getNotifList(plant) {
+        this.dataAvailable = false;
+        this.notifService.getAllNotifs(plant).subscribe(
+            (notifs: any) => {
+                this.notifService.setNotifs(notifs.d.results);
+                this.notifsCount = notifs.d.results.length;
+                this.dataAvailable = true;
+            }
+        )
+    }
+
+    initialisation(){
+        this.ordersCount = null;
+        this.notifsCount = null;
+
+        if(this.notifsCount == null){
+            this.storage.get("choosenPlant").then(
+                (choosenPlantcode) => {
+                    if (choosenPlantcode != null) {
+                        this.choosenPlant = choosenPlantcode;
+                        this.getNotifList(this.choosenPlant);
+                    }
+                });
+        }
+         //getting PrioritySet from server
+         this.priorityService.getAllPriorities().subscribe(
             (priorities) => {
                 this.priorityService.setPriorities(priorities.d.results);
             },
@@ -130,42 +192,5 @@ export class HomePage implements OnInit {
             (err) => {
                 console.log(err);
             })
-
-    }
-
-    //list available plants
-    async presentPlantsModal() {
-        this.modal = await this.modalController.create({
-            component: DetailsSettingsPage,
-            componentProps: {},
-        });
-        this.modal.backdropDismiss = false;
-        await this.modal.present();
-
-        const { data } = await this.modal.onDidDismiss();
-        this.getNotifList(data.result);
-    }
-
-
-    openSnackBar(message: string) {
-        this.snackBar.open(message, null, {
-            duration: 2000,
-        });
-    }
-
-    onClose(evt: { result: string; }) {
-        this.getNotifList(evt.result);
-    }
-
-
-    getNotifList(plant) {
-        this.dataAvailable = false;
-        this.notifService.getAllNotifs(plant).subscribe(
-            (notifs: any) => {
-                this.notifService.setNotifs(notifs.d.results);
-                this.notifsCount = notifs.d.results.length;
-                this.dataAvailable = true;
-            }
-        )
     }
 }

@@ -1,8 +1,13 @@
 <ion-header>
-  <app-header pageTitle="" (close)="onClose($event)"></app-header>
+  <app-header pageTitle="Pull to refresh" (close)="onClose($event)"></app-header>
 </ion-header>
 
 <ion-content padding fullscreen="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
   <div *ngIf="orientation === 'portrait-primary'; else landscapeContent" class="principalContent">
     <mat-grid-list cols="3" rowHeight="1:1.2" gutterSize="20px">
       <mat-grid-tile>
@@ -19,10 +24,10 @@
               error
             </i></mat-icon>
 
-          <div *ngIf="dataAvailable==false">
+          <div *ngIf="notifsCount == null">
             <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
           </div>
-          <h4 style="color: grey;font-size: 40px" *ngIf="dataAvailable==true">
+          <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
             {{notifsCount}}
           </h4>
           <h1 style="color:#009DE0">Notification List<br /></h1>
@@ -80,6 +85,14 @@
           <h1 style="color:#009DE0">Documents</h1>
         </mat-card>
       </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card style="background-color: #ffffff">
+          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+              reorder
+            </i></mat-icon>
+          <h1 style="color:#009DE0">My Orders</h1>
+        </mat-card>
+      </mat-grid-tile>
     </mat-grid-list>
   </div>
   <ng-template #landscapeContent>
@@ -114,7 +127,7 @@
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 file_copy
               </i></mat-icon>
-              
+
             <div *ngIf="ordersCount == null">
               <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
             </div>
@@ -160,6 +173,14 @@
 
             <h4 style="color: grey;font-size: 40px">65</h4>
             <h6 style="color:#009DE0">Documents</h6>
+          </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-card style="background-color: #ffffff">
+            <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+                reorder
+              </i></mat-icon>
+            <h6 style="color:#009DE0">My Orders</h6>
           </mat-card>
         </mat-grid-tile>
       </mat-grid-list>
