@@ -111,7 +111,7 @@
               <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
             </ion-row>
             <mat-form-field class="example-form">
-              <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.PriorityDescr">
+              <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.Priority">
             </mat-form-field>
             <mat-form-field class="example-form">
               <input matInput placeholder="Malfunction start date" readonly="true"
@@ -143,30 +143,31 @@
               <input [(ngModel)]="choosenNotif.ShortText" matInput placeholder="Description" maxlength="40"
                 formControlName="description" required>
             </mat-form-field>
-            <mat-form-field class="form-85" class="example-form">
-              <mat-select placeholder="Functional location" formControlName="functloc" required
-                [(ngModel)]="floc">
-                <mat-option *ngFor="let l of locations" [value]="l.loc">
-                  {{l.loc}}-{{l.description}}...
-                </mat-option>
-              </mat-select>
+
+            <mat-form-field class="example-form" (click)="selectFunctLoc()">
+              <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
+                required>
+              <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
             </mat-form-field>
+
             <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
             <ion-button color="light" (click)="scanQRCode()">
               <ion-icon name="qr-scanner"></ion-icon>QR-CODE
             </ion-button>
-            <mat-form-field class="example-form">
-              <input matInput [(ngModel)]="choosenNotif.Equipment" placeholder="Equipment" maxlength="40" formControlName="equipment">
+            <mat-form-field class="example-form" (click)="selectEquipment(choosenFunctLoc)">
+              <input matInput [(ngModel)]="choosenNotif.Equipment" placeholder="Equipment" maxlength="40"
+                formControlName="equipment">
             </mat-form-field>
             <br />
-            <mat-checkbox [checked]="choosenNotif.Breakdown" color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator
+            <mat-checkbox [checked]="choosenNotif.Breakdown" color="primary" formControlName="breakdownIndic"
+              class="example-form">Breakdown Indicator
             </mat-checkbox>
             <br />
             <mat-form-field class="example-form">
               <mat-select placeholder="Effect on production" formControlName="productionEff"
                 [(ngModel)]="choosenNotif.EffectDescr">
-                <mat-option *ngFor="let pe of productionEffects" [value]="pe.id">
-                  {{pe.desc}}
+                <mat-option *ngFor="let pe of productionEffects" [value]="pe.EffectId">
+                  {{pe.EffectDescr}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
@@ -174,9 +175,9 @@
               <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
             </ion-row>
             <mat-form-field class="example-form">
-              <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenNotif.PriorityDescr">
-                <mat-option *ngFor="let p of priorities" [value]="p.desc">
-                  {{p.id}}-{{p.desc}}
+              <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenNotif.Priority">
+                <mat-option *ngFor="let p of priorities" [value]="p.PriorityId">
+                  {{p.PriorityDescr}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
@@ -185,29 +186,22 @@
                 [value]="getHoursandMinutes(choosenNotif.StartDate)" formControlName="startDate" required>
               <mat-icon matSuffix>calendar_today</mat-icon>
             </mat-form-field>
-            <mat-form-field class="example-form">
-              <mat-select placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenNotif.DamageCode">
-                <mat-option *ngFor="let p of priorities" [value]="p.desc">
-                  {{p.id}}-{{p.desc}}
-                </mat-option>
-              </mat-select>
+
+            <mat-form-field class="example-form" (click)="selectDamageGroup()">
+              <input matInput placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenDC" required>
+              <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
             </mat-form-field>
+            <mat-form-field class="example-form" (click)="selectCauseGroup()">
+                <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
+                <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+              </mat-form-field>
+              <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
+                  <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode" required>
+                  <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+              </mat-form-field>
+
             <mat-form-field class="example-form">
-              <mat-select placeholder="Cause" formControlName="cause">
-                <mat-option *ngFor="let p of priorities" [value]="p.desc">
-                  {{p.id}}-{{p.desc}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <mat-select placeholder="Object part" formControlName="objectPart">
-                <mat-option *ngFor="let p of priorities" [value]="p.desc">
-                  {{p.id}}-{{p.desc}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
+              <textarea matInput placeholder="Long text" formControlName="longText" [(ngModel)]="choosenNotif.LongText"></textarea>
             </mat-form-field>
 
           </form>

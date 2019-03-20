@@ -39,7 +39,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   nbAttachments = 0;
   images = [];
-  modal: any;
+  
   choosenDC = ""  //choosen damage code
   choosenDG = ""  //choosen damage group
   choosenCG = ""; //choosen cause group
@@ -183,142 +183,48 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   async selectFunctLoc() {
-
-    this.modal = await this.modalController.create({
-      component: FunctLocListPage,
-      componentProps: {
-        'plantCode': this.choosenPlantcode
-      },
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-
-    if (data != undefined) {
-      this.choosenFunctLoc = data.result.FunctLocId;
-      this.selectEquipment();
+    this.choosenFunctLoc = await this.selectFLoc( this.choosenPlantcode );
+    if(this.choosenFunctLoc !== ""){
+      await this.selectEquipment(this.choosenFunctLoc);
     }
-    else this.choosenFunctLoc = "";
   }
 
-  async selectEquipment() {
-    this.modal = await this.modalController.create({
-      component: EquipmentListPage,
-      componentProps: {
-        'functLoc': this.choosenFunctLoc
-      },
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      this.choosenEquipment = data.result.EquipmentDescr;
-    }
-    else this.choosenEquipment = "";
+  async selectEquipment(fl: string) {
+     this.choosenEquipment = await this.selectEq(fl);
   }
 
   async selectCauseGroup() {
-    this.modal = await this.modalController.create({
-      component: CauseGroupListPage,
-      componentProps: {},
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      this.choosenCG = data.result.CodeGroup;
-      this.selectCauseCode(this.choosenCG);
+    this.choosenCG = await this.selectCG();
+    if(this.choosenCG !== ""){
+      await this.selectCauseCode(this.choosenCG);
     }
-    else this.choosenCG = "";
   }
 
-  async selectCauseCode(cg) {
-    this.modal = await this.modalController.create({
-      component: CauseCodeListPage,
-      componentProps: {
-        'cg': cg
-      },
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      this.choosenCC = data.result.CodeDescr + " - " + this.choosenCG;
-    }
-    else this.choosenCC = "";
+  async selectCauseCode(cg: string) {
+    this.choosenCC = await this.selectCC(cg);
   }
 
   async selectObjectPartGroup() {
-    this.modal = await this.modalController.create({
-      component: ObjectPartGroupListPage,
-      componentProps: {},
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      this.choosenObjectPartGroup = data.result.CodeGroup;
-      this.selectObjectPartCode(this.choosenObjectPartGroup);
+    this.choosenObjectPartGroup = await this.selectOPGroup();
+    if(this.choosenObjectPartGroup !== ""){
+      await this.selectObjectPartCode(this.choosenObjectPartGroup);
     }
-    else this.choosenObjectPartGroup = "";
   }
   
-  async selectObjectPartCode(og){
-    this.modal = await this.modalController.create({
-      component: ObjectPartCodeListPage,
-      componentProps: {
-        'og': og
-      },
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-
-    if (data != undefined) {
-      this.choosenObjectPartCode = data.result.CodeDescr + " - " + this.choosenObjectPartGroup;
-    }
-    else this.choosenObjectPartCode = "";
+  async selectObjectPartCode(og: any){
+    this.choosenObjectPartCode = await this.selectOPCode(og);
   }
 
   //Damage Codes & Groups
   async selectDamageGroup() {
-    this.modal = await this.modalController.create({
-      component: DamageGroupPage,
-      componentProps: {},
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      this.choosenDG = data.result.CodeGroup;
-      this.selectDamageCode(this.choosenDG);
+    this.choosenDG = await this.selectDG();
+    if(this.choosenDG !== ""){
+      await this.selectDamageCode(this.choosenDG);
     }
-    else this.choosenDG = "";
   }
   
-  async selectDamageCode(dg){
-    this.modal = await this.modalController.create({
-      component: DamageCodePage,
-      componentProps: {
-        'dg': dg
-      },
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
-
-    const { data } = await this.modal.onDidDismiss();
-
-    if (data != undefined) {
-      this.choosenDC = data.result.CodeDescr + " - " + this.choosenDG;
-    }
-    else this.choosenDC = "";
+  async selectDamageCode(dg: string){
+    this.choosenDC = await this.selectDC(dg);
   }
 
   pathForImage(img) {

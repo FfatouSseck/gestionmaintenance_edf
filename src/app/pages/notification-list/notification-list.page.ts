@@ -10,6 +10,8 @@ import { NotificationService } from '../../providers/notification.service';
 import { Storage } from '@ionic/storage';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { Router } from '@angular/router';
+import { Priority } from 'src/app/interfaces/priority.interface';
+import { PriorityService } from 'src/app/providers/priority.service';
 
 @Component({
   selector: 'app-notification-list',
@@ -25,19 +27,30 @@ export class NotificationListPage extends BasePage implements OnInit {
   cause = "";
   objectPart = "";
 
-  notifList: NotifHeader[] = [];
-  firstDisplay = [];
+  choosenDC = ""  //choosen damage code
+  choosenDG = ""  //choosen damage group
+  choosenCG = ""; //choosen cause group
+  choosenCC = ""; //choosen cause code
+  choosenFunctLoc = "";
+  choosenPlantcode = "";
+  choosenEquipment = "";
+  choosenObjectPartCode = "";
+  choosenObjectPartGroup = "";
 
+  notifList: NotifHeader[] = [];
   choosenNotif: NotifHeader = {
-    NotifNo : null
+    NotifNo: null
   };
+
+  priorities: Priority[] = []
 
   orientation = "landscape_primary";
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public notifService: NotificationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
-    private screenOrientation: ScreenOrientation, public router: Router) {
+    private screenOrientation: ScreenOrientation, public router: Router,
+    public priorityService: PriorityService) {
 
     super(_formBuilder, platform, null, qrScanner, toastController, snackBar, alertController, modalController);
 
@@ -71,16 +84,38 @@ export class NotificationListPage extends BasePage implements OnInit {
   ionViewDidEnter() {
     let available = this.notifService.notifsAvailable();
     if (available) {
+      this.storage.get("choosenPlant").then(
+        (choosenPlantcode) => {
+          if (choosenPlantcode != null) {
+            this.choosenPlantcode = choosenPlantcode;
+          }
+        });
+
       this.notifList = this.notifService.filterNotifs(this.searchTerm);
-      this.firstDisplay = this.notifList.slice(0, 2);
       if (this.notifList[0].NotifNo != null) {
         this.notAvailable = false;
         this.noData = false;
-       
+
       }
     }
     else {
       this.getNotifs();
+    }
+
+    //getting PrioritySet from server
+    if (this.priorityService.checkAvailability()) {
+      this.priorities = this.priorityService.getPriorities();
+    }
+    else {
+      this.priorityService.getAllPriorities().subscribe(
+        (priorities) => {
+          this.priorityService.setPriorities(priorities.d.results);
+          this.priorities = this.priorityService.getPriorities();
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
     }
   }
 
@@ -100,8 +135,12 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
 
     this.floc = this.choosenNotif.FunctLoc + " " + this.choosenNotif.FunctLocDescr;
+    this.choosenFunctLoc = this.choosenNotif.FunctLoc;
+    this.choosenDC = this.choosenNotif.DamageCode + " " + this.choosenNotif.DamageCodeDescr;
     this.cause = this.choosenNotif.CauseCode + " " + this.choosenNotif.CauseDescr;
-    this.objectPart = this.choosenNotif.ObjectPartCode + " " +this.choosenNotif.ObjectPartCodeDescr; 
+    this.objectPart = this.choosenNotif.ObjectPartCode + " " + this.choosenNotif.ObjectPartCodeDescr;
+    this.choosenCC = this.cause;
+    this.choosenObjectPartCode = this.objectPart;
 
     this.notifList[index].color = "light";
     this.notifService.setCurrentNotif(notif);
@@ -194,16 +233,14 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null) {
+          this.choosenPlantcode = choosenPlantcode;
           this.notifService.getAllNotifs(choosenPlantcode).subscribe(
             (notifs: any) => {
               if (notifs.d.results.length > 0) {
                 console.log(notifs.d.results[0]);
-                this.firstDisplay = notifs.d.results.slice(0, 2);
                 let done = this.notifService.setNotifs(notifs.d.results);
                 if (done) {
                   this.notifList = this.notifService.filterNotifs(this.searchTerm);
-                  console.log(this.notifList)
-                  this.notifList = this.notifList.slice(2, this.notifList.length);
                   this.choosenNotif = this.notifList[0];
                   if (this.notifList[0].NotifNo != null) {
                     this.notAvailable = false;
@@ -228,5 +265,110 @@ export class NotificationListPage extends BasePage implements OnInit {
       }
     )
   }
+
+  async selectFunctLoc() {
+    let functLoc = "";
+    if (this.choosenFunctLoc !== "") {
+      functLoc = this.choosenFunctLoc;   
+    }
+
+    this.choosenFunctLoc = await this.selectFLoc(this.choosenPlantcode);
+    
+    if (this.choosenFunctLoc !== "") {
+      await this.selectEquipment(this.choosenFunctLoc);
+    }
+    else{
+      this.choosenFunctLoc = functLoc;
+    }
+  }
+
+  async selectEquipment(fl: string) {
+    let eq = "";
+    if(this.choosenEquipment !== ""){
+      eq = this.choosenEquipment;
+    }
+    this.choosenEquipment = await this.selectEq(fl);
+    if(this.choosenEquipment === ""){
+      this.choosenEquipment = eq;
+    }
+  }
+
+  async selectCauseGroup() {
+    let cg = "";
+    if(this.choosenCG !== ""){
+      cg = this.choosenCG;
+    }
+    this.choosenCG = await this.selectCG();
+
+    if (this.choosenCG !== "") {
+      await this.selectCauseCode(this.choosenCG);
+    }
+    else{
+      this.choosenCG = cg;
+    }
+  }
+
+  async selectCauseCode(cg: string) {
+    let cc = "";
+    if(this.choosenCC !== ""){
+      cc = this.choosenCC;
+    }
+    this.choosenCC = await this.selectCC(cg);
+    if(this.choosenCC === ""){
+      this.choosenCC = cc;
+    }
+  }
+
+  async selectObjectPartGroup() {
+    let opg = "";
+    if(this.choosenObjectPartGroup !== ""){
+      opg = this.choosenObjectPartGroup;
+    }
+    this.choosenObjectPartGroup = await this.selectOPGroup();
+    if (this.choosenObjectPartGroup !== "") {
+      await this.selectObjectPartCode(this.choosenObjectPartGroup);
+    }
+    else{
+      this.choosenObjectPartGroup = opg;
+    }
+  }
+
+  async selectObjectPartCode(og: any) {
+    let opc = "";
+    if(this.choosenObjectPartCode !== ""){
+      opc =  this.choosenObjectPartCode;
+    }
+    this.choosenObjectPartCode = await this.selectOPCode(og);
+    if(this.choosenObjectPartCode === ""){
+      this.choosenObjectPartCode = opc;
+    }
+  }
+
+  //Damage Codes & Groups
+  async selectDamageGroup() {
+    let dg = "";
+    if(this.choosenDG !== ""){
+      dg = this.choosenDG;
+    }
+    this.choosenDG = await this.selectDG();
+    if (this.choosenDG !== "") {
+      await this.selectDamageCode(this.choosenDG);
+    }
+    else{
+      this.choosenDG = dg;
+    }
+  }
+
+  async selectDamageCode(dg: string) {
+    let dc = "";
+    if(this.choosenDC !== ""){
+      dc = this.choosenDC;
+    }
+    this.choosenDC = await this.selectDC(dg);
+    if(this.choosenDC === ""){
+      this.choosenDC = dc;
+    }
+  }
+
 
 }

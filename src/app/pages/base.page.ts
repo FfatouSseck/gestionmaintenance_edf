@@ -9,6 +9,14 @@ import { CauseCode } from '../interfaces/causecode.interface';
 import { CauseGroup } from '../interfaces/causegroup.interface';
 import { FunctlocService } from '../providers/functloc.service';
 import { DetailsSettingsPage } from './details-settings/details-settings.page';
+import { FunctLocListPage } from './funct-loc-list/funct-loc-list.page';
+import { EquipmentListPage } from './equipment-list/equipment-list.page';
+import { CauseGroupListPage } from './cause-group-list/cause-group-list.page';
+import { CauseCodeListPage } from './cause-code-list/cause-code-list.page';
+import { ObjectPartGroupListPage } from './object-part-group-list/object-part-group-list.page';
+import { ObjectPartCodeListPage } from './object-part-code-list/object-part-code-list.page';
+import { DamageGroupPage } from './damage-group/damage-group.page';
+import { DamageCodePage } from './damage-code/damage-code.page';
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -16,7 +24,7 @@ import { DetailsSettingsPage } from './details-settings/details-settings.page';
   selector: 'app-base',
   styleUrls: [],
 })
-export class BasePage implements OnInit{
+export class BasePage implements OnInit {
 
   notifFormGroup: FormGroup;
   modal: any;
@@ -25,20 +33,28 @@ export class BasePage implements OnInit{
   productionEffects: ProductionEffect[] = [];
   causeCodes: CauseCode[] = [];
   causeGroups: CauseGroup[] = [];
-  priorities:Priority[] = []
+  priorities: Priority[] = []
   today = new Date();
   dateauj = "";
   mobile = false;
+  choosenFunctLoc = "";
+  choosenEquipment = "";
+  choosenCG = "";
+  choosenCC = "";
+  choosenObjectPartGroup = "";
+  choosenObjectPartCode = "";
+  choosenDG = "";
+  choosenDC = "";
 
-  constructor(public _formBuilder: FormBuilder, public platform: Platform,public functlocService:FunctlocService,
-              public qrScanner: QRScanner, public toastController: ToastController,
-              public snackBar: MatSnackBar,public alertController: AlertController,public modalController: ModalController) {
-    
+  constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
+    public qrScanner: QRScanner, public toastController: ToastController,
+    public snackBar: MatSnackBar, public alertController: AlertController, public modalController: ModalController) {
+
     this.initDate();
     if (platform.is("mobile")) this.mobile = true;
   }
 
-  initDate(){
+  initDate() {
     let m = this.today.getMonth() + 1;
     let d = this.today.getDate();
     let min = this.today.getMinutes();
@@ -60,9 +76,9 @@ export class BasePage implements OnInit{
       hours = "0" + h;
     } else hours = h.toString();
 
-    if(d.toString().length < 2){
-      day = "0"+d;
-    }else day = d.toString();
+    if (d.toString().length < 2) {
+      day = "0" + d;
+    } else day = d.toString();
 
     this.dateauj = day + "/" + month + "/" + this.today.getFullYear() + " " + hours + ":" + minutes;
 
@@ -91,28 +107,179 @@ export class BasePage implements OnInit{
     });
   }
 
-   //list available plants
-   async presentPlantsModal() {
+  //list available plants
+  async presentPlantsModal() {
     this.modal = await this.modalController.create({
-        component: DetailsSettingsPage,
-        componentProps: {},
+      component: DetailsSettingsPage,
+      componentProps: {},
     });
     this.modal.backdropDismiss = false;
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
     console.log(data.result);
-}
+  }
 
-  getFunctLocsByPlant(plantCode){
-    
+  async selectFLoc(plantCode: string) {
+    this.modal = await this.modalController.create({
+      component: FunctLocListPage,
+      componentProps: {
+        'plantCode': plantCode
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+
+    if (data != undefined) {
+      this.choosenFunctLoc = data.result.FunctLocId;
+    }
+    else this.choosenFunctLoc = "";
+
+    return this.choosenFunctLoc;
+  }
+
+  async selectEq(fl: string){
+    this.modal = await this.modalController.create({
+      component: EquipmentListPage,
+      componentProps: {
+        'functLoc': fl
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } =await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenEquipment = data.result.EquipmentDescr;
+    }
+    else this.choosenEquipment = "";
+
+    return this.choosenEquipment;
+  }
+
+  async selectCG() {
+    this.modal = await this.modalController.create({
+      component: CauseGroupListPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenCG = data.result.CodeGroup;
+    }
+    else this.choosenCG = "";
+
+    return this.choosenCG;
+  }
+
+  async selectCC(cg: string) {
+    this.modal = await this.modalController.create({
+      component: CauseCodeListPage,
+      componentProps: {
+        'cg': cg
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenCC = data.result.CodeDescr + " - " + this.choosenCG;
+    }
+    else this.choosenCC = "";
+
+    return this.choosenCC;
+  }
+
+  async selectOPGroup() {
+    this.modal = await this.modalController.create({
+      component: ObjectPartGroupListPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenObjectPartGroup = data.result.CodeGroup;
+    }
+    else this.choosenObjectPartGroup = "";
+
+    return this.choosenObjectPartGroup;
+  }
+  
+  async selectOPCode(og: string){
+    this.modal = await this.modalController.create({
+      component: ObjectPartCodeListPage,
+      componentProps: {
+        'og': og
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+
+    if (data != undefined) {
+      this.choosenObjectPartCode = data.result.CodeDescr + " - " + this.choosenObjectPartGroup;
+    }
+    else this.choosenObjectPartCode = "";
+
+    return this.choosenObjectPartCode;
+  }
+
+  //Damage Codes & Groups
+  async selectDG() {
+    this.modal = await this.modalController.create({
+      component: DamageGroupPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      this.choosenDG = data.result.CodeGroup;
+    }
+    else this.choosenDG = "";
+
+    return this.choosenDG;
+  }
+  
+  async selectDC(dg: string){
+    this.modal = await this.modalController.create({
+      component: DamageCodePage,
+      componentProps: {
+        'dg': dg
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+
+    if (data != undefined) {
+      this.choosenDC = data.result.CodeDescr + " - " + this.choosenDG;
+    }
+    else this.choosenDC = "";
+
+    return this.choosenDC;
+  }
+
+
+  getFunctLocsByPlant(plantCode) {
+
     this.functlocService.getAllFunctLocByPlant(plantCode).subscribe(
-      (locs)=>{
+      (locs) => {
         this.locations = locs.d.results;
         console.log(this.locations)
       },
-      (err) =>{
-        console.log("Erreur",err)
+      (err) => {
+        console.log("Erreur", err)
       }
     )
   }
@@ -149,12 +316,12 @@ export class BasePage implements OnInit{
         this.presentQRAlert();
       });
 
-      if(!this.mobile){
-        console.log("Sur ordinateur")
-      }
+    if (!this.mobile) {
+      console.log("Sur ordinateur")
+    }
   }
 
-  
+
 
   async presentQRAlert() {
     const alert = await this.alertController.create({
@@ -184,7 +351,7 @@ export class BasePage implements OnInit{
     await alert.present();
   }
 
-  reset(){
+  reset() {
     this.notifFormGroup.controls.description.setValue("");
     this.notifFormGroup.controls.functloc.setValue("");
     this.notifFormGroup.controls.damageCode.setValue("");
