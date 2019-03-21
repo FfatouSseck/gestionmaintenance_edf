@@ -16,6 +16,11 @@ export class ServiceOrderPreparationService extends BaseService {
     super(http);
   }
 
+  getOrdersByType(type:string,codePlant:string){
+    //&OrderType
+    return this.getAll("OrderHeaderSet?$filter=PlanPlant eq '" + codePlant + "'&OrderType eq '"+type+"'");
+  }
+
   getAllOrdersByChoosenPlant(codePlant) {
     return this.getAll("OrderHeaderSet?$filter=PlanPlant eq '" + codePlant + "'");
   }

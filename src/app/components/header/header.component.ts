@@ -52,6 +52,13 @@ export class HeaderComponent implements OnInit {
                 }
             },
             {
+                text: 'Logout',
+                icon: 'power',
+                handler: () => {
+                    this.router.navigateByUrl("/login")
+                }
+            },
+            {
                 text: 'Cancel',
                 icon: 'close',
                 role: 'cancel'

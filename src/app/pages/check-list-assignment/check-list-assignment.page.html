@@ -3,5 +3,65 @@
 </ion-header>
 
 <ion-content padding>
+    <div *ngIf="types.length>0">
+        <ion-segment (ionChange)="segmentChanged($event)" scrollable [(ngModel)]="orderType">
+            <ion-segment-button [value]="type" *ngFor="let type of types">
+                <ion-label>{{type}}</ion-label>
+            </ion-segment-button>
+        </ion-segment>
 
+        <div *ngIf="ordersByType.length==0">
+            <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+        </div>
+        <div *ngIf="ordersByType.length>0">
+            <div [ngSwitch]="orderType" (tabChanged)="onTabChanged($event)" class="swipe-area"
+                *ngFor="let type of types">
+                <br />
+                <div *ngSwitchCase="type">
+                    <table mat-table [dataSource]="ordersByType" class="mat-elevation-z8">>
+                        <ng-container matColumnDef="OrderNo">
+                            <th mat-header-cell *matHeaderCellDef>Order number
+                            </th>
+                            <td mat-cell *matCellDef="let element"> {{element.orderPart.OrderNo}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="StatusDescr">
+                            <th mat-header-cell *matHeaderCellDef> Status </th>
+                            <td mat-cell *matCellDef="let element"> {{element.orderPart.StatusDescr}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="FunctLoc">
+                            <th mat-header-cell *matHeaderCellDef> Functional location </th>
+                            <td mat-cell *matCellDef="let element"> {{element.orderPart.FunctLoc}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Operation">
+                            <th mat-header-cell *matHeaderCellDef> Operation </th>
+                            <td mat-cell *matCellDef="let element"> {{element.Operation}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Description">
+                            <th mat-header-cell *matHeaderCellDef> Description </th>
+                            <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="Checklist">
+                            <th mat-header-cell *matHeaderCellDef> Checklist </th>
+                            <td mat-cell *matCellDef="let element"> {{element.Checklist}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="prodStartDate">
+                            <th mat-header-cell *matHeaderCellDef> Production start date </th>
+                            <td mat-cell *matCellDef="let element"> {{element.prodStartDate}} </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <table>
+            <th>OrderNo</th>
+            <tr *ngFor="let ord of ordersByType">
+                <td>{{ord.orderPart.OrderType}}</td>
+            </tr>
+        </table>
 </ion-content>
