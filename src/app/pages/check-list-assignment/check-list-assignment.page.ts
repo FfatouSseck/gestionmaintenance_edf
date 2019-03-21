@@ -82,7 +82,7 @@ export class CheckListAssignmentPage implements OnInit {
     }
 
     ords.forEach(function(item, i){
-      console.log(item)
+      this.getOrderOperations(item.orderPart.OrderNo);
     });
    /* for(x=0;x<ords.length;x++){
       await this.getOrderOperations(ords[x].orderPart.OrderNo);
