@@ -3,6 +3,9 @@ import { BaseService } from './base.service';
 import { HttpClient } from '@angular/common/http';
 import { Order } from '../interfaces/order.interface';
 
+import { Observable } from 'rxjs/internal/Observable';
+import { forkJoin } from 'rxjs';  // RxJS 6 syntax
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,8 +20,14 @@ export class ServiceOrderPreparationService extends BaseService {
   }
 
   getOrdersByType(type:string,codePlant:string){
-    //&OrderType
     return this.getAll("OrderHeaderSet?$filter=PlanPlant eq '" + codePlant + "'&OrderType eq '"+type+"'");
+  }
+
+  public requestDataFromMultipleSources(codePlant: string,orderNo?: string): Observable<any[]> {
+    let response1 = this.getAllOrdersByChoosenPlant(codePlant);
+    let response2 = this.getOrderOperations(orderNo);
+    // Observable.forkJoin (RxJS 5) changes to just forkJoin() in RxJS 6
+    return forkJoin([response1, response2]);
   }
 
   getAllOrdersByChoosenPlant(codePlant) {

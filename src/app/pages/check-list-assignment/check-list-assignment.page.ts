@@ -11,110 +11,150 @@ import { newOrder } from 'src/app/interfaces/newOrder.interface';
 })
 export class CheckListAssignmentPage implements OnInit {
   orderList: Order[] = [];
-  ordersByType: newOrder[] = []; 
+  ordersByType: newOrder[] = [];
   orderType = "";
   types: string[] = [];
   codePlant = "";
   displayedColumns: string[] = [
-    'OrderNo', 'StatusDescr', 
-    'FunctLoc', 'Operation', 
+    'OrderNo', 'StatusDescr',
+    'FunctLoc', 'Operation',
     'Description', 'Checklist', 'prodStartDate'
   ];
+  public response2: any;
+  newOrds: any[] = [];
 
-  constructor(private orderService: ServiceOrderPreparationService,private storage: Storage) { }
+  constructor(private orderService: ServiceOrderPreparationService, private storage: Storage) { }
 
   ngOnInit() {
 
   }
 
-  getAllOrders(){
+  getAllOrders() {
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
-        if(choosenPlantcode != null && choosenPlantcode != undefined){
+        if (choosenPlantcode != null && choosenPlantcode != undefined) {
           this.codePlant = choosenPlantcode;
-          this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
-            (orders) =>{
-              this.orderList = orders.d.results;
+          /* this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
+             (orders) =>{
+               this.orderList = orders.d.results;
+               let types = this.getOrderTypes(this.orderList);
+               this.types=this.getUnique(types);
+               this.orderType = this.types[0];
+               //this.ordersByType.push(this.orderList[18]);
+             }
+           )*/
+          this.orderService.requestDataFromMultipleSources(this.codePlant).subscribe(
+            (responseList) => {
+              this.orderList = responseList[0].d.results;
               let types = this.getOrderTypes(this.orderList);
-              this.types=this.getUnique(types);
+              this.types = this.getUnique(types);
               this.orderType = this.types[0];
-              //this.ordersByType.push(this.orderList[18]);
+              let ev = {
+                detail: {
+                  value: this.orderType
+                }
+              }
+              this.segmentChanged(ev);
+              //console.log(orders);
             }
-          )
+          );
         }
       }).catch(
-        (err)=>{
+        (err) => {
 
         }
       );
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
     this.getAllOrders();
   }
 
-  getOrderTypes(arr:Order[]){
+  async getData(newOrd: newOrder, tabOrders?: any[]) {
+    this.orderService.requestDataFromMultipleSources(this.codePlant, newOrd.orderPart.OrderNo)
+      .subscribe(
+        (resp) => {
+          let op = resp[1].d.results;
+          op.forEach((element) => {
+            tabOrders.push({
+              orderPart: newOrd.orderPart,
+              operation: {
+                Checklist: '',
+                Description: element.Description,
+                Operation: element.Activity,
+                prodStartDate: this.getHoursandMinutes(element.ProductionStartDate)
+              }
+            })
+          });
+          console.log(tabOrders);
+        })
+  }
+
+  getOrderTypes(arr: Order[]) {
     let types: string[] = [];
-    for(let i=0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
       types.push(arr[i].OrderType);
     }
     return types;
   }
 
-  getUnique(arr:string []) {
-    return arr.filter(function(elem, index, self) {
+  getUnique(arr: string[]) {
+    return arr.filter(function (elem, index, self) {
       return index === self.indexOf(elem);
     })
   }
 
   segmentChanged(ev: any) {
-    let cpt = 0;
     let ords: newOrder[] = [];
-    let newOrds: newOrder[] = [];
-    let j=0,i=0,x=0;
+    this.ordersByType = [];
+    let j = 0, i = 0, x = 0;
 
-    for(i=0;i<this.orderList.length;i++){
-      if(this.orderList[i].OrderType === ev.detail.value){
+    for (i = 0; i < this.orderList.length; i++) {
+      if (this.orderList[i].OrderType === ev.detail.value) {
         ords.push({
           orderPart: this.orderList[i]
         });
       }
     }
-
-    ords.forEach(function(item, i){
-      this.getOrderOperations(item.orderPart.OrderNo);
+    //on recupere la ligne d'opération pour chaque ordre
+    ords.forEach(async (element, index) => {
+      this.orderService.getOrderOperations(element.orderPart.OrderNo)
+        .subscribe(
+          (operations) => {
+            //tabOperations.push(operations.d.results)
+            let ops = operations.d.results;
+            //console.log(index+1,"- Les opérations pour ",element.orderPart.OrderNo,ops);
+            //ords[index].opRTab = ops;
+            ops.forEach( elt => {
+              ords[index].Checklist = '';
+              ords[index].Description = elt.Description;
+              ords[index].Operation = elt.Operation;
+              ords[index].prodStartDate = this.getHoursandMinutes(elt.prodStartDate);
+            });
+          });
     });
-   /* for(x=0;x<ords.length;x++){
-      await this.getOrderOperations(ords[x].orderPart.OrderNo);
-      //console.log("Nombre d'opérations pour ",ords[x].orderPart.OrderNo,"= ",op.length);
-    
-          /*for(let j=0;j<op.length;j++){
-            let newOrd : newOrder;
-            console.log(j)
-            newOrd = {
-              orderPart: ords[i].orderPart
-            }
-            newOrd.Checklist = '';
-            newOrd.Description = op[j].Description;
-            newOrd.Operation = op[j].Activity;
-            newOrd.prodStartDate = this.getHoursandMinutes(op[j].ProductionStartDate);
 
-            this.newOrds.push(newOrd);
-          }
-          
-          //console.log(this.ordersByType,ev.detail.value);
-    }*/
+    this.getFullTab(ords);
+
   }
 
-  getOrderOperations(orderNo){
-    let opR =[];
-    this.orderService.getOrderOperations(orderNo).subscribe(
-      (operations) =>{
-        console.log(operations.d.results);
-        opR = operations.d.results
-       // return op;
-      });
-      console.log(opR);
+  getFullTab(orders: newOrder[]) {
+    let ord = orders;
+    let fullTab: newOrder[] = [];
+
+    console.log("orders", ord);
+   /* for (let i = 0; i < orders.length; i++) {
+      for (let j = 0; j < orders[i].opRTab.length; j++) {
+        fullTab.push({
+          Checklist: '',
+          Description: orders[i].opRTab[j].Description,
+          Operation:  orders[i].opRTab[j].Activity,
+          prodStartDate: this.getHoursandMinutes(orders[i].opRTab[j].ProductionStartDate)
+        })
+      }
+    }*/
+
+    console.log("Full tab",fullTab);
   }
 
   getHoursandMinutes(d) {
@@ -139,7 +179,18 @@ export class CheckListAssignmentPage implements OnInit {
     return dateD;
   }
 
-  
+  getOrderOp(orderNo) {
+    let opR = [];
+    this.orderService.getOrderOperations(orderNo).subscribe(
+      (operations) => {
+        opR = operations.d.results
+        return opR;
+      },
+      (err) => {
+        console.log("Erreur: ", err);
+      });
+  }
+
   formatDate(newD: string) {
 
     let d1 = newD.replace('/Date(', '');

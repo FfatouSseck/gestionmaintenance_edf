@@ -22,7 +22,7 @@
                         <ng-container matColumnDef="OrderNo">
                             <th mat-header-cell *matHeaderCellDef>Order number
                             </th>
-                            <td mat-cell *matCellDef="let element"> {{element.orderPart.OrderNo}} </td>
+                            <td mat-cell *matCellDef="let element; let i = index;">{{i}}/ {{element.orderPart.OrderNo}} </td>
                         </ng-container>
                         <ng-container matColumnDef="StatusDescr">
                             <th mat-header-cell *matHeaderCellDef> Status </th>
@@ -34,7 +34,7 @@
                         </ng-container>
                         <ng-container matColumnDef="Operation">
                             <th mat-header-cell *matHeaderCellDef> Operation </th>
-                            <td mat-cell *matCellDef="let element"> {{element.Operation}} </td>
+                            <td mat-cell *matCellDef="let element; let i = index;"> {{element.Operation}} </td>
                         </ng-container>
                         <ng-container matColumnDef="Description">
                             <th mat-header-cell *matHeaderCellDef> Description </th>
@@ -57,11 +57,4 @@
 
         </div>
     </div>
-    
-    <table>
-            <th>OrderNo</th>
-            <tr *ngFor="let ord of ordersByType">
-                <td>{{ord.orderPart.OrderType}}</td>
-            </tr>
-        </table>
 </ion-content>

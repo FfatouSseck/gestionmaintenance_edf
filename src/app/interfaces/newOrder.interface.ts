@@ -6,4 +6,6 @@ export interface newOrder{
     Description?: string;
     Checklist?: any;
     prodStartDate?: string;
+
+    opRTab?: any[];
 }
