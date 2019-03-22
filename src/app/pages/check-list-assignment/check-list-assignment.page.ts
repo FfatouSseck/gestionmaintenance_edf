@@ -124,25 +124,19 @@ export class CheckListAssignmentPage implements OnInit {
             //tabOperations.push(operations.d.results)
             let ops = operations.d.results;
             //console.log(index+1,"- Les opérations pour ",element.orderPart.OrderNo,ops);
-            //ords[index].opRTab = ops;
-            ops.forEach( elt => {
-              ords[index].Checklist = '';
-              ords[index].Description = elt.Description;
-              ords[index].Operation = elt.Operation;
-              ords[index].prodStartDate = this.getHoursandMinutes(elt.prodStartDate);
-            });
+            ords[index].opRTab = ops;
           });
     });
 
-    this.getFullTab(ords);
+    let orders = ords;
+    this.getFullTab(orders);
 
   }
 
   getFullTab(orders: newOrder[]) {
-    let ord = orders;
     let fullTab: newOrder[] = [];
 
-    console.log("orders", ord);
+    console.log("orders",  JSON.stringify(orders[0]));
    /* for (let i = 0; i < orders.length; i++) {
       for (let j = 0; j < orders[i].opRTab.length; j++) {
         fullTab.push({
