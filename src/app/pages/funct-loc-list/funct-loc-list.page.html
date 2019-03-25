@@ -19,13 +19,18 @@
       No functionnal location available for this plant
     </div>
     <div *ngIf="!noData">
-      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+
+      <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+      </div>
+
       <ion-list>
         <ion-list-header>
           <ion-label>Choose the Functionnal Location</ion-label>
         </ion-list-header>
         <ion-item (click)="choose(fl)" *ngFor="let fl of functLocs;let i=index">
-              {{fl.FunctLocId}} &nbsp; - &nbsp;{{fl.FunctLocDescr}}
+          {{fl.FunctLocId}} &nbsp; - &nbsp;{{fl.FunctLocDescr}}
         </ion-item>
       </ion-list>
     </div>

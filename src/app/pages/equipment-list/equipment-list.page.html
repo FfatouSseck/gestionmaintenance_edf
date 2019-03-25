@@ -20,13 +20,19 @@
       No equipment available for this functionnal location
     </div>
     <div *ngIf="!noData">
-      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
+      </ion-searchbar>
+
+      <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+      </div>
+
       <ion-list>
         <ion-list-header>
           <ion-label>Choose the Equipment</ion-label>
         </ion-list-header>
         <ion-item (click)="choose(eq)" *ngFor="let eq of equipments">
-              {{eq.EquipmentDescr}}   
+          {{eq.EquipmentDescr}}
         </ion-item>
       </ion-list>
     </div>

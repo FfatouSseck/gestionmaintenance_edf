@@ -18,6 +18,7 @@ export class FunctLocListPage implements OnInit {
   notAvailable = true;
   noData = false;
   plantCode = "";
+  searching: any = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
     public snackBar: MatSnackBar, public navParams: NavParams,
@@ -25,14 +26,19 @@ export class FunctLocListPage implements OnInit {
 
     this.plantCode = navParams.get('plantCode');
     this.searchControl = new FormControl();
-    this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
+    this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
 
+      this.searching = false;
       this.setFilteredItems();
 
     });
   }
 
   ngOnInit() {
+  }
+
+  onSearchInput() {
+    this.searching = true;
   }
 
   setFilteredItems() {

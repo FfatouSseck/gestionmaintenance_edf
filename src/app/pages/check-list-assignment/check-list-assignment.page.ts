@@ -27,6 +27,8 @@ export class CheckListAssignmentPage implements OnInit {
 
   getAllOrders() {
     this.loading = true;
+    this.noData = false;
+    
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null && choosenPlantcode != undefined) {

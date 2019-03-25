@@ -19,6 +19,7 @@ export class EquipmentListPage implements OnInit {
   notAvailable = true;
   noData = false;
   functLoc = "";
+  searching: any = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
     public snackBar: MatSnackBar, public navParams: NavParams,
@@ -36,6 +37,10 @@ export class EquipmentListPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSearchInput() {
+    this.searching = true;
   }
 
   setFilteredItems() {

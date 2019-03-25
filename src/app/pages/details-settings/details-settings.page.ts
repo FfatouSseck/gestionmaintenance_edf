@@ -18,16 +18,18 @@ export class DetailsSettingsPage implements OnInit {
   searchTerm: string = '';
   searchControl: FormControl;
   plants: any;
-  checkedPlants:IPlant[] = [];
+  checkedPlants: IPlant[] = [];
   choosenPlant: any;
   notAvailable = true;
+  searching: any = false;
 
   constructor(public navCtrl: NavController, public dataService: Data, public modalController: ModalController,
     public snackBar: MatSnackBar, public storage: Storage, public navParams: NavParams, public plantService: PlantsService) {
 
     this.searchControl = new FormControl();
-    this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
+    this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
 
+      this.searching = false;
       this.setFilteredItems();
 
     });
@@ -35,42 +37,46 @@ export class DetailsSettingsPage implements OnInit {
 
   }
 
+  onSearchInput() {
+    this.searching = true;
+  }
+
   setFilteredItems() {
     this.plants = [];
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
-        if(choosenPlantcode != null){
+        if (choosenPlantcode != null) {
           this.choosenPlant = choosenPlantcode;
 
           this.plants = this.dataService.filterItems(this.searchTerm);
           let plts = this.dataService.filterItems(this.searchTerm);
-  
+
           let index = this.getPlantIndexFromCode(this.choosenPlant);
           /*let plant = this.getPlantFromCode(this.choosenPlant);
           this.checkedPlants.push(plant);*/
-  
-  
+
+
           if (index >= 0) {
-  
+
             for (let i = 0; i < plts.length; i++) {
               plts[i].state = "unchecked";
             }
             plts[index].state = 'checked';
             this.plants = plts;
-  
+
           }
-         /* if (this.checkedPlants.length > 0) {
-            if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
-              let plant = this.getPlantFromCode(this.choosenPlant);
-              this.checkedPlants.push(plant);
-            }
-  
-          }*/
+          /* if (this.checkedPlants.length > 0) {
+             if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
+               let plant = this.getPlantFromCode(this.choosenPlant);
+               this.checkedPlants.push(plant);
+             }
+   
+           }*/
         }
         else {
           this.plants = this.dataService.filterItems(this.searchTerm);
         }
-     
+
 
       },
       (err) => {
@@ -80,11 +86,11 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   ngOnInit() {
-    
+
   }
 
-  ionViewDidEnter(){
-    this.checkedPlants=[];
+  ionViewDidEnter() {
+    this.checkedPlants = [];
     let available = this.dataService.plantsAvailable();
     if (available) {
       this.notAvailable = false;
@@ -110,15 +116,14 @@ export class DetailsSettingsPage implements OnInit {
       this.openSnackBar("You have choosen more than one plant");
     }
     else if (this.checkedPlants.length == 0) {
-      if( this.choosenPlant === "")
-        {
-          this.openSnackBar("Please select at least one planning plant");
-        }
-        else{
-          this.modalController.dismiss({
-            'result': this.choosenPlant
-          });
-        }
+      if (this.choosenPlant === "") {
+        this.openSnackBar("Please select at least one planning plant");
+      }
+      else {
+        this.modalController.dismiss({
+          'result': this.choosenPlant
+        });
+      }
     }
     else if (this.checkedPlants.length == 1) {
       //we save the item to session storage and close the modal

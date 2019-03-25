@@ -25,6 +25,7 @@
             <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
         </div>
         <div *ngIf="ordersByType.length>0">
+            <h3 style="text-align: center;">Pull to refresh</h3>
             <div [ngSwitch]="orderType" (tabChanged)="onTabChanged($event)" class="swipe-area"
                 *ngFor="let type of types">
                 <br />
@@ -38,6 +39,7 @@
                             <div class="mat-header-cell">Description</div>
                             <div class="mat-header-cell">Checklist</div>
                             <div class="mat-header-cell">Production start date</div>
+                            <div class="mat-header-cell">&nbsp;&nbsp;&nbsp;&nbsp;</div>
                         </div>
                         <div class="mat-row" *ngFor="let ord of ordersByType">
                             <div class="mat-cell">{{ord.orderPart.OrderNo}}</div>
@@ -47,6 +49,11 @@
                             <div class="mat-cell">{{ord.Description}}</div>
                             <div class="mat-cell">{{ord.Checklist}}</div>
                             <div class="mat-cell">{{ord.prodStartDate}}</div>
+                            <div class="mat-cell">
+                                <ion-button color="light" (click)="scanQRCode()">
+                                    <i class="material-icons"style="color: grey">note_add</i>
+                                </ion-button>
+                            </div>
                         </div>
                     </div>
 
