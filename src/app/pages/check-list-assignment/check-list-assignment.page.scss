@@ -21,3 +21,34 @@ table {
     overflow: hidden;
     word-wrap: break-word;
   }  
+
+  .mat-header-cell {
+    font-weight: bold;
+  }
+
+  ion-segment{
+    font-weight: bold;
+  }
+
+  /* Styles for tab labels */
+.mat-tab-label {
+  //min-width: 45px !important;
+  //padding: 5px;
+  background-color: transparent;
+  color: #007CC0;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  //min-width: 45px !important;
+  //padding: 5px;
+  background-color: transparent;
+  color: #007CC0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: green;
+}

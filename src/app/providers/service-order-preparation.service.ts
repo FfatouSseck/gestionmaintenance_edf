@@ -58,8 +58,8 @@ export class ServiceOrderPreparationService extends BaseService {
     return this.available;
   }
 
-  filterOrders(searchTerm) {
-    return this.ordersList.filter((ord) => {
+  filterOrders(searchTerm,orders) {
+    return orders.filter((ord) => {
       return (ord.OrderNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
         || ord.WorkCenter.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
         || ord.PlanPlantDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1

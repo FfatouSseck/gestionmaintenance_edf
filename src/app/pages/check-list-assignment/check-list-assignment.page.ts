@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ServiceOrderPreparationService } from 'src/app/providers/service-order-preparation.service';
 import { Storage } from '@ionic/storage';
 import { Order } from 'src/app/interfaces/order.interface';
 import { newOrder } from 'src/app/interfaces/newOrder.interface';
+import { FormControl } from '@angular/forms';
+import { debounceTime } from 'rxjs/internal/operators';
+
 
 @Component({
   selector: 'app-check-list-assignment',
   templateUrl: './check-list-assignment.page.html',
   styleUrls: ['./check-list-assignment.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CheckListAssignmentPage implements OnInit {
   orderList: Order[] = [];
@@ -18,17 +22,37 @@ export class CheckListAssignmentPage implements OnInit {
   newOrds: any[] = [];
   loading = false;
   noData = false;
+  clicked = false;
+  searchTerm: string = '';
+  searchControl: FormControl;
 
-  constructor(private orderService: ServiceOrderPreparationService, private storage: Storage) { }
+  constructor(private orderService: ServiceOrderPreparationService, private storage: Storage) {
+    this.searchControl = new FormControl();
+    this.searchControl.valueChanges.pipe(debounceTime(250)).subscribe(search => {
+
+      if (this.ordersByType.length > 0) {
+        this.setFilteredItems();
+      }
+
+    });
+  }
 
   ngOnInit() {
 
   }
 
+  onSearchInput() {
+    this.loading = true;
+  }
+
+  setFilteredItems() {
+    this.ordersByType = this.orderService.filterOrders(this.searchTerm,this.ordersByType);
+  }
+
   getAllOrders() {
     this.loading = true;
     this.noData = false;
-    
+
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null && choosenPlantcode != undefined) {
@@ -47,8 +71,8 @@ export class CheckListAssignmentPage implements OnInit {
                 this.noData = false;
                 this.orderType = this.types[0];
                 let ev = {
-                  detail: {
-                    value: this.orderType
+                  tab: {
+                    textLabel: this.orderType
                   }
                 }
                 this.segmentChanged(ev);
@@ -87,7 +111,7 @@ export class CheckListAssignmentPage implements OnInit {
     let i = 0;
 
     for (i = 0; i < this.orderList.length; i++) {
-      if (this.orderList[i].OrderType === ev.detail.value) {
+      if (this.orderList[i].OrderType === ev.tab.textLabel) {
         ords.push({
           orderPart: this.orderList[i]
         });
