@@ -3,6 +3,12 @@
 </ion-header>
 
 <ion-content padding>
+    <div *ngIf="loading">
+        <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+    </div>
+    <div *ngIf="noData">
+        <p>No Data available</p>
+    </div>
     <div *ngIf="types.length>0">
         <ion-segment (ionChange)="segmentChanged($event)" scrollable [(ngModel)]="orderType">
             <ion-segment-button [value]="type" *ngFor="let type of types">
@@ -18,39 +24,27 @@
                 *ngFor="let type of types">
                 <br />
                 <div *ngSwitchCase="type">
-                    <table mat-table [dataSource]="ordersByType" class="mat-elevation-z8">>
-                        <ng-container matColumnDef="OrderNo">
-                            <th mat-header-cell *matHeaderCellDef>Order number
-                            </th>
-                            <td mat-cell *matCellDef="let element; let i = index;">{{i}}/ {{element.orderPart.OrderNo}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="StatusDescr">
-                            <th mat-header-cell *matHeaderCellDef> Status </th>
-                            <td mat-cell *matCellDef="let element"> {{element.orderPart.StatusDescr}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="FunctLoc">
-                            <th mat-header-cell *matHeaderCellDef> Functional location </th>
-                            <td mat-cell *matCellDef="let element"> {{element.orderPart.FunctLoc}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="Operation">
-                            <th mat-header-cell *matHeaderCellDef> Operation </th>
-                            <td mat-cell *matCellDef="let element; let i = index;"> {{element.Operation}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="Description">
-                            <th mat-header-cell *matHeaderCellDef> Description </th>
-                            <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="Checklist">
-                            <th mat-header-cell *matHeaderCellDef> Checklist </th>
-                            <td mat-cell *matCellDef="let element"> {{element.Checklist}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="prodStartDate">
-                            <th mat-header-cell *matHeaderCellDef> Production start date </th>
-                            <td mat-cell *matCellDef="let element"> {{element.prodStartDate}} </td>
-                        </ng-container>
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                    </table>
+                    <div class="mat-table">
+                        <div class="mat-header-row">
+                            <div class="mat-header-cell">Order number</div>
+                            <div class="mat-header-cell">Status</div>
+                            <div class="mat-header-cell">Functional location</div>
+                            <div class="mat-header-cell">Operation</div>
+                            <div class="mat-header-cell">Description</div>
+                            <div class="mat-header-cell">Checklist</div>
+                            <div class="mat-header-cell">Production start date</div>
+                        </div>
+                        <div class="mat-row" *ngFor="let ord of ordersByType">
+                            <div class="mat-cell">{{ord.orderPart.OrderNo}}</div>
+                            <div class="mat-cell">{{ord.orderPart.StatusDescr}}</div>
+                            <div class="mat-cell">{{ord.orderPart.FunctLoc}}</div>
+                            <div class="mat-cell">{{ord.Operation}}</div>
+                            <div class="mat-cell">{{ord.Description}}</div>
+                            <div class="mat-cell">{{ord.Checklist}}</div>
+                            <div class="mat-cell">{{ord.prodStartDate}}</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

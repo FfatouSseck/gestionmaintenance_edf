@@ -15,13 +15,9 @@ export class CheckListAssignmentPage implements OnInit {
   orderType = "";
   types: string[] = [];
   codePlant = "";
-  displayedColumns: string[] = [
-    'OrderNo', 'StatusDescr',
-    'FunctLoc', 'Operation',
-    'Description', 'Checklist', 'prodStartDate'
-  ];
-  public response2: any;
   newOrds: any[] = [];
+  loading = false;
+  noData = false;
 
   constructor(private orderService: ServiceOrderPreparationService, private storage: Storage) { }
 
@@ -30,32 +26,31 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   getAllOrders() {
+    this.loading = true;
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null && choosenPlantcode != undefined) {
           this.codePlant = choosenPlantcode;
-          /* this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
-             (orders) =>{
-               this.orderList = orders.d.results;
-               let types = this.getOrderTypes(this.orderList);
-               this.types=this.getUnique(types);
-               this.orderType = this.types[0];
-               //this.ordersByType.push(this.orderList[18]);
-             }
-           )*/
           this.orderService.requestDataFromMultipleSources(this.codePlant).subscribe(
             (responseList) => {
               this.orderList = responseList[0].d.results;
               let types = this.getOrderTypes(this.orderList);
               this.types = this.getUnique(types);
-              this.orderType = this.types[0];
-              let ev = {
-                detail: {
-                  value: this.orderType
-                }
+              if (this.types.length == 0) {
+                this.loading = false;
+                this.noData = true;
               }
-              this.segmentChanged(ev);
-              //console.log(orders);
+              else {
+                this.loading = false;
+                this.noData = false;
+                this.orderType = this.types[0];
+                let ev = {
+                  detail: {
+                    value: this.orderType
+                  }
+                }
+                this.segmentChanged(ev);
+              }
             }
           );
         }
@@ -68,26 +63,6 @@ export class CheckListAssignmentPage implements OnInit {
 
   ionViewDidEnter() {
     this.getAllOrders();
-  }
-
-  async getData(newOrd: newOrder, tabOrders?: any[]) {
-    this.orderService.requestDataFromMultipleSources(this.codePlant, newOrd.orderPart.OrderNo)
-      .subscribe(
-        (resp) => {
-          let op = resp[1].d.results;
-          op.forEach((element) => {
-            tabOrders.push({
-              orderPart: newOrd.orderPart,
-              operation: {
-                Checklist: '',
-                Description: element.Description,
-                Operation: element.Activity,
-                prodStartDate: this.getHoursandMinutes(element.ProductionStartDate)
-              }
-            })
-          });
-          console.log(tabOrders);
-        })
   }
 
   getOrderTypes(arr: Order[]) {
@@ -107,7 +82,7 @@ export class CheckListAssignmentPage implements OnInit {
   segmentChanged(ev: any) {
     let ords: newOrder[] = [];
     this.ordersByType = [];
-    let j = 0, i = 0, x = 0;
+    let i = 0;
 
     for (i = 0; i < this.orderList.length; i++) {
       if (this.orderList[i].OrderType === ev.detail.value) {
@@ -116,6 +91,9 @@ export class CheckListAssignmentPage implements OnInit {
         });
       }
     }
+
+    let newOrds: newOrder[];
+    newOrds = [];
     //on recupere la ligne d'opération pour chaque ordre
     ords.forEach(async (element, index) => {
       this.orderService.getOrderOperations(element.orderPart.OrderNo)
@@ -123,32 +101,26 @@ export class CheckListAssignmentPage implements OnInit {
           (operations) => {
             //tabOperations.push(operations.d.results)
             let ops = operations.d.results;
-            //console.log(index+1,"- Les opérations pour ",element.orderPart.OrderNo,ops);
-            ords[index].opRTab = ops;
+            ops.forEach(op => {
+              newOrds.push({
+                orderPart: element.orderPart,
+                Checklist: '',
+                Description: op.Description,
+                Operation: op.Activity,
+                prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
+              });
+            });
+
           });
     });
-
-    let orders = ords;
-    this.getFullTab(orders);
+    this.ordersByType = newOrds;
 
   }
 
-  getFullTab(orders: newOrder[]) {
-    let fullTab: newOrder[] = [];
-
-    console.log("orders",  JSON.stringify(orders[0]));
-   /* for (let i = 0; i < orders.length; i++) {
-      for (let j = 0; j < orders[i].opRTab.length; j++) {
-        fullTab.push({
-          Checklist: '',
-          Description: orders[i].opRTab[j].Description,
-          Operation:  orders[i].opRTab[j].Activity,
-          prodStartDate: this.getHoursandMinutes(orders[i].opRTab[j].ProductionStartDate)
-        })
-      }
-    }*/
-
-    console.log("Full tab",fullTab);
+  onClose(evt: { result: string; }) {
+    this.types = [];
+    this.loading = true;
+    this.getAllOrders();
   }
 
   getHoursandMinutes(d) {
