@@ -3,6 +3,11 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
     <div *ngIf="loading">
         <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
     </div>

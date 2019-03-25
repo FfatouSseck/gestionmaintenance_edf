@@ -123,6 +123,14 @@ export class CheckListAssignmentPage implements OnInit {
     this.getAllOrders();
   }
 
+  doRefresh(event) {
+    this.getAllOrders();
+
+    setTimeout(() => {
+      event.target.complete();
+    }, 3000);
+  }
+
   getHoursandMinutes(d) {
     let d1 = d.replace('/Date(', '');
     let startDate = d1.replace(')/', '');
