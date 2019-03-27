@@ -5,6 +5,7 @@ import { Order } from '../interfaces/order.interface';
 
 import { Observable } from 'rxjs/internal/Observable';
 import { forkJoin } from 'rxjs';  // RxJS 6 syntax
+import { newOrder } from '../interfaces/newOrder.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -54,17 +55,21 @@ export class ServiceOrderPreparationService extends BaseService {
     return done;
   }
 
+  getAllOrders(){
+    return this.ordersList;
+  }
+
   checkAvailability() {
     return this.available;
   }
 
-  filterOrders(searchTerm,orders) {
+  filterOrders(searchTerm,orders: newOrder[]) {
     return orders.filter((ord) => {
-      return (ord.OrderNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
-        || ord.WorkCenter.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
-        || ord.PlanPlantDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
-        || ord.PlanPlant.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
-        || ord.WorkCenterShort.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+      return (ord.orderPart.OrderNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || ord.orderPart.StatusDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || ord.orderPart.FunctLoc.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || ord.Operation.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || ord.Description.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
     });
   }
 

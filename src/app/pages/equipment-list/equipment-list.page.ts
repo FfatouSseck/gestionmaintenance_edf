@@ -45,6 +45,7 @@ export class EquipmentListPage implements OnInit {
 
   setFilteredItems() {
     this.equipments = this.equipmentService.filterItems(this.searchTerm);
+    this.searching = false;
   }
 
   ionViewDidEnter() {

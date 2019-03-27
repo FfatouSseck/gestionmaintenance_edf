@@ -149,7 +149,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.operations = [];
     let available = this.orderService.checkAvailability();
     if (available) {
-      this.ordersList = this.orderService.filterOrders(this.searchTerm);
+      this.ordersList = this.orderService.getAllOrders();
       if (this.ordersList[0].OrderNo != null) {
         this.notAvailable = false;
         this.noData = false;
@@ -201,7 +201,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
               if (orders.d.results.length > 0) {
                 let done = this.orderService.setOrders(orders.d.results);
                 if (done) {
-                  this.ordersList = this.orderService.filterOrders(this.searchTerm);
+                  this.ordersList = this.orderService.getAllOrders();
                   //this.choosenOrder = this.ordersList[0];
                   if (this.ordersList[0].OrderNo != null) {
                     this.notAvailable = false;

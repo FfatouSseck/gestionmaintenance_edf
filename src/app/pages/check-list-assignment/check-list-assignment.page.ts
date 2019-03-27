@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { ServiceOrderPreparationService } from 'src/app/providers/service-order-preparation.service';
 import { Storage } from '@ionic/storage';
 import { Order } from 'src/app/interfaces/order.interface';
 import { newOrder } from 'src/app/interfaces/newOrder.interface';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/internal/operators';
+import { MatTableDataSource } from '@angular/material';
 
 
 @Component({
@@ -14,6 +15,11 @@ import { debounceTime } from 'rxjs/internal/operators';
   encapsulation: ViewEncapsulation.None
 })
 export class CheckListAssignmentPage implements OnInit {
+
+
+  searchTerm: string = '';
+  searchControl: FormControl;
+  @ViewChild('search') search: any;
   orderList: Order[] = [];
   ordersByType: newOrder[] = [];
   orderType = "";
@@ -23,16 +29,22 @@ export class CheckListAssignmentPage implements OnInit {
   loading = false;
   noData = false;
   clicked = false;
-  searchTerm: string = '';
-  searchControl: FormControl;
+  orders:any;
+  refresh = false;
+  ok = false;
+  displayedColumns: string[] = [
+    'OrderNo', 'StatusDescr',
+    'FunctLoc', 'Operation',
+    'Description', 'Checklist', 'prodStartDate','button'
+  ];
+
+
 
   constructor(private orderService: ServiceOrderPreparationService, private storage: Storage) {
-    this.searchControl = new FormControl();
-    this.searchControl.valueChanges.pipe(debounceTime(250)).subscribe(search => {
 
-      if (this.ordersByType.length > 0) {
-        this.setFilteredItems();
-      }
+    this.searchControl = new FormControl();
+    this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
+      this.setFilteredItems();
 
     });
   }
@@ -41,12 +53,20 @@ export class CheckListAssignmentPage implements OnInit {
 
   }
 
-  onSearchInput() {
-    this.loading = true;
+  toggleSearch() {
+    if (this.clicked) {
+      this.clicked = false;
+    } else {
+      this.clicked = true;
+      setTimeout(() => {
+        this.search.setFocus();
+      }, 500);
+
+    }
   }
 
   setFilteredItems() {
-    this.ordersByType = this.orderService.filterOrders(this.searchTerm,this.ordersByType);
+    this.ordersByType = this.orderService.filterOrders(this.searchTerm, this.orders);
   }
 
   getAllOrders() {
@@ -75,7 +95,7 @@ export class CheckListAssignmentPage implements OnInit {
                     textLabel: this.orderType
                   }
                 }
-                this.segmentChanged(ev);
+                console.log(this.segmentChanged(ev));
               }
             }
           );
@@ -106,8 +126,10 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   segmentChanged(ev: any) {
+    this.ok = false;
     let ords: newOrder[] = [];
     this.ordersByType = [];
+    this.loading = true;
     let i = 0;
 
     for (i = 0; i < this.orderList.length; i++) {
@@ -118,14 +140,12 @@ export class CheckListAssignmentPage implements OnInit {
       }
     }
 
-    let newOrds: newOrder[];
-    newOrds = [];
+    let newOrds = [];
     //on recupere la ligne d'opération pour chaque ordre
     ords.forEach(async (element, index) => {
       this.orderService.getOrderOperations(element.orderPart.OrderNo)
         .subscribe(
           (operations) => {
-            //tabOperations.push(operations.d.results)
             let ops = operations.d.results;
             ops.forEach(op => {
               newOrds.push({
@@ -137,9 +157,28 @@ export class CheckListAssignmentPage implements OnInit {
               });
             });
 
-          });
+          },
+          error => console.log("Error: ", error),
+          async () => {
+            this.ordersByType = newOrds;
+            this.orders = await new MatTableDataSource(this.ordersByType);
+            this.ok = true;
+            this.loading = false;
+          }
+        );
     });
-    this.ordersByType = newOrds;
+
+    /*let newOne  = [];
+    newOne.push("ici","laba");
+    console.log("orders: ",this.orders," length: ",this.orders.length);
+    
+
+    newOrds.forEach(element => {
+      newOne.push(element);
+      console.log("element",element)
+    });
+    console.log("newOne: ",newOne," length: ",newOne.length);*/
+    return newOrds;
 
   }
 
@@ -150,10 +189,12 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   doRefresh(event) {
+    this.refresh = true;
     this.getAllOrders();
 
     setTimeout(() => {
       event.target.complete();
+      this.refresh = false;
     }, 3000);
   }
 

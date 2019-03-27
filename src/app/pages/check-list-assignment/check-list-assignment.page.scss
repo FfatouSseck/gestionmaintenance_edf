@@ -1,54 +1,30 @@
-table {
-    width: 100%;
-  }
-  .mat-table {
-    display: block;
-  }
+app-check-list-assignment{
   
-  .mat-row,
-  .mat-header-row {
-    display: flex;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    align-items: center;
-    min-height: 48px;
-    padding: 0 24px;
-  }
-  
-  .mat-cell,
-  .mat-header-cell {
-    flex: 1;
-    overflow: hidden;
-    word-wrap: break-word;
-  }  
-
-  .mat-header-cell {
-    font-weight: bold;
-  }
-
-  ion-segment{
-    font-weight: bold;
-  }
+//@import "../../../assets/css/main.css";
+//@import "../../../assets/css/util.css";
 
   /* Styles for tab labels */
-.mat-tab-label {
-  //min-width: 45px !important;
-  //padding: 5px;
-  background-color: transparent;
-  color: #007CC0;
-}
+  .mat-tab-label {
+    //min-width: 45px !important;
+    //padding: 5px;
+    background-color: transparent;
+    color: #007CC0;
+  }
+  
+  /* Styles for the active tab label */
+  .mat-tab-label.mat-tab-label-active {
+    //min-width: 45px !important;
+    //padding: 5px;
+    background-color: transparent;
+    color: #007CC0;
+    font-weight: bold;
+    font-size: 20px;
+  }
 
-/* Styles for the active tab label */
-.mat-tab-label.mat-tab-label-active {
-  //min-width: 45px !important;
-  //padding: 5px;
-  background-color: transparent;
-  color: #007CC0;
-  font-weight: bold;
-  font-size: 20px;
-}
+  table {
+    width: 100%;
+  }
+  
 
-/* Styles for the ink bar */
-.mat-ink-bar {
-  background-color: green;
+
 }

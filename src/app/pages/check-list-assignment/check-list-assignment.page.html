@@ -15,37 +15,83 @@
         <p>No Data available</p>
     </div>
     <div *ngIf="types.length>0">
-        <div>
-            <!--<h5> 
-                <span style="text-align: center;">Pull to refresh</span> 
-                <ion-icon name="search"></ion-icon>
-            </h5>-->
-        </div>
         <ion-toolbar>
+            <div *ngIf="clicked">
+                <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm"
+                    [formControl]="searchControl" (ionBlur)="toggleSearch()" showCancelButton>
+                </ion-searchbar>
+            </div>
             <ion-buttons slot="end">
-                <button style="background-color: #007CC0; color: white;"
-                        mat-mini-fab *ngIf="clicked == false"
-                        (click)="clicked = !clicked">
+                <button style="background-color: #007CC0; color: white;" mat-mini-fab *ngIf="!clicked"
+                    (click)="toggleSearch()">
                     <mat-icon>search</mat-icon>
                 </button>
             </ion-buttons>
-            <ion-title *ngIf="clicked == false">
+            <ion-title *ngIf="!refresh">
                 Pull to refresh
             </ion-title>
-            <ion-searchbar autocomplete="on" (ionBlur)="clicked = !clicked" 
-                           animated *ngIf="clicked"
-                           [(ngModel)]="searchTerm" [formControl]="searchControl" 
-                           (ionInput)="onSearchInput()"></ion-searchbar>
         </ion-toolbar>
         <mat-tab-group (selectedTabChange)="segmentChanged($event)">
             <mat-tab *ngFor="let type of types" [label]="type">
-
-                <div *ngIf="ordersByType.length>0">
+                <div *ngIf="ok">
                     <div [ngSwitch]="orderType" (tabChanged)="onTabChanged($event)" class="swipe-area"
                         *ngFor="let type of types">
                         <br />
                         <div *ngSwitchCase="type">
-                            <mat-card>
+                            <br />
+                            <table mat-table [dataSource]="orders" class="mat-elevation-z8">
+                                <ng-container matColumnDef="OrderNo">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px">
+                                        N°
+                                    </th>
+                                    <td mat-cell *matCellDef="let element; let i = index;">{{i+1}} -
+                                        {{element.orderPart.OrderNo}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="StatusDescr">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px"> Status </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.orderPart.StatusDescr}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="FunctLoc">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px"> FLOC </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.orderPart.FunctLoc}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="Operation">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px"> Operation </th>
+                                    <td mat-cell *matCellDef="let element; let i = index;"> {{element.Operation}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="Description">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px"> Description </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="Checklist">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px"> Checklist </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.Checklist}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="prodStartDate">
+                                    <th mat-header-cell *matHeaderCellDef
+                                        style="font-weight: bold; color: white;font-size: 17px"> Start date </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.prodStartDate}} </td>
+                                </ng-container>
+                                <ng-container matColumnDef="button">
+                                    <th mat-header-cell *matHeaderCellDef></th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <button mat-button>
+                                            <i class="material-icons" style="color: grey">note_add</i>
+                                        </button>
+                                    </td>
+                                </ng-container>
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                                    style="background-color: #007CC0;"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            </table>
+
+                            <!--mat-card class="mat-elevation-z8">
                                 <div class="mat-table">
                                     <div class="mat-header-row">
                                         <div class="mat-header-cell">Order number</div>
@@ -66,21 +112,20 @@
                                         <div class="mat-cell">{{ord.Checklist}}</div>
                                         <div class="mat-cell">{{ord.prodStartDate}}</div>
                                         <div class="mat-cell">
-                                            <ion-button color="light" (click)="scanQRCode()">
+                                            <button mat-button>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <i class="material-icons" style="color: grey">note_add</i>
-                                            </ion-button>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </mat-card>
+                            </mat-card>-->
                         </div>
+                        <!--Fin ngswitch-->
                     </div>
                 </div>
+
             </mat-tab>
         </mat-tab-group>
-
-        <div *ngIf="ordersByType.length==0">
-            <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
-        </div>
     </div>
 </ion-content>

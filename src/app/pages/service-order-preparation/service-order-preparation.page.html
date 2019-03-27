@@ -67,73 +67,82 @@
         <ion-content id="menu-content">
           <p *ngIf="choosenOrder.OrderNo == null && noData==false">Choose one order to see details</p>
           <form *ngIf="modif == false && choosenOrder.OrderNo!=null">
-            <ion-row style="background-color: #F2F2F2">
-              <h4 style="font-weight: bold;color: #000;font-size: 15px">Service Order Informations</h4>
-            </ion-row>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Order Number" readonly="true" [value]="choosenOrder.OrderNo">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Description" readonly="true" [value]="choosenOrder.TasklistDescr">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="PM activity type" readonly="true" [value]="pmAct">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Assignee" readonly="true" [value]="choosenOrder.Assignee">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Functionnal Location" readonly="true" [value]="choosenOrder.FunctLocDescr">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Equipment Number" readonly="true" [value]="choosenOrder.Equipment">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Priority" readonly="true" [value]="choosenOrder.PriorityDescr">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <input matInput placeholder="Status" readonly="true" [value]="orderStatus">
-            </mat-form-field>
-            <mat-form-field class="example-form">
-              <textarea matInput placeholder="Text" readonly="true" [value]="choosenOrder.LongText"></textarea>
-            </mat-form-field>
+            <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
+              <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">Service Order
+                Informations</h4>
+            </mat-card>
+            <br />
+            <mat-card class="mat-elevation-z8">
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Order Number" readonly="true" [value]="choosenOrder.OrderNo">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Description" readonly="true" [value]="choosenOrder.TasklistDescr">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="PM activity type" readonly="true" [value]="pmAct">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Assignee" readonly="true" [value]="choosenOrder.Assignee">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Functionnal Location" readonly="true" [value]="choosenOrder.FunctLocDescr">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Equipment Number" readonly="true" [value]="choosenOrder.Equipment">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Priority" readonly="true" [value]="choosenOrder.PriorityDescr">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <input matInput placeholder="Status" readonly="true" [value]="orderStatus">
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                <textarea matInput placeholder="Text" readonly="true" [value]="choosenOrder.LongText"></textarea>
+              </mat-form-field>
+            </mat-card>
+            <br />
             <!--Notification Informations-->
-            <ion-row style="background-color: #F2F2F2">
-              <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
-            </ion-row>
+            <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+              <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Notification informations
+              </h4>
+            </mat-card>
+            <br />
             <!--Loading spinner-->
             <div *ngIf="loadNotif">
               <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
             </div>
             <!--Displaying Informations-->
             <div *ngIf="choosenNotif.NotifNo != null && loadNotif==false">
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo">
-              </mat-form-field>
-              <br />
-              <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
-                Breakdown
-                Indicator</mat-checkbox>
-              <br /><br />
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.CauseCode">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Cause Description" readonly="true" [value]="choosenNotif.CauseDescr">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Object Part" readonly="true" [value]="choosenNotif.ObjectPartCodeDescr">
-              </mat-form-field>
+              <mat-card class="mat-elevation-z8">
+                <mat-form-field class="example-form">
+                  <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo">
+                </mat-form-field>
+                <br />
+                <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
+                  Breakdown
+                  Indicator</mat-checkbox>
+                <br /><br />
+                <mat-form-field class="example-form">
+                  <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
+                </mat-form-field>
+                <mat-form-field class="example-form">
+                  <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.CauseCode">
+                </mat-form-field>
+                <mat-form-field class="example-form">
+                  <input matInput placeholder="Cause Description" readonly="true" [value]="choosenNotif.CauseDescr">
+                </mat-form-field>
+                <mat-form-field class="example-form">
+                  <input matInput placeholder="Object Part" readonly="true" [value]="choosenNotif.ObjectPartCodeDescr">
+                </mat-form-field>
+              </mat-card>
             </div>
-
+            <br />
             <!--Operations-->
-            <ion-row style="background-color: #F2F2F2">
-              <h4 style="font-weight: bold;color: #000;font-size: 15px">Operations</h4>
-            </ion-row>
-
+            <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+              <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Operations</h4>
+            </mat-card>
+            <br>
             <div *ngIf="operations.length == 0">
               <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
             </div>
@@ -178,12 +187,12 @@
               </table>
             </div>
 
-
+            <br />
             <!--Components-->
-            <ion-row style="background-color: #F2F2F2">
-              <h4 style="font-weight: bold;color: #000;font-size: 15px">Components</h4>
-            </ion-row>
-
+            <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+              <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Components</h4>
+            </mat-card>
+            <br />
             <div *ngIf="components.length == 0">
               <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
             </div>
@@ -240,7 +249,7 @@
               </table>
             </div>
           </form>
-
+          <br />
           <!--form [formGroup]="notifFormGroup" *ngIf="modif == true">
             <ion-row style="background-color:#F2F2F2">
               <h4 style="font-weight: bold;color:#000;font-size: 15px">General information</h4>
