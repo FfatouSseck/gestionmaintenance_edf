@@ -29,13 +29,13 @@ export class CheckListAssignmentPage implements OnInit {
   loading = false;
   noData = false;
   clicked = false;
-  orders:any;
+  orders: any;
   refresh = false;
   ok = false;
   displayedColumns: string[] = [
-    'OrderNo', 'StatusDescr',
+    'numero', 'OrderNo', 'StatusDescr',
     'FunctLoc', 'Operation',
-    'Description', 'Checklist', 'prodStartDate','button'
+    'Description', 'Checklist', 'prodStartDate', 'button'
   ];
 
 
@@ -58,15 +58,15 @@ export class CheckListAssignmentPage implements OnInit {
       this.clicked = false;
     } else {
       this.clicked = true;
-      setTimeout(() => {
-        this.search.setFocus();
-      }, 500);
-
+        setTimeout(() => {
+          this.search.setFocus();
+        }, 100);
     }
   }
 
   setFilteredItems() {
-    this.ordersByType = this.orderService.filterOrders(this.searchTerm, this.orders);
+    this.orders = new MatTableDataSource(
+      this.orderService.filterOrders(this.searchTerm, this.ordersByType));
   }
 
   getAllOrders() {
@@ -95,7 +95,7 @@ export class CheckListAssignmentPage implements OnInit {
                     textLabel: this.orderType
                   }
                 }
-                console.log(this.segmentChanged(ev));
+                this.segmentChanged(ev);
               }
             }
           );
@@ -126,6 +126,8 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   segmentChanged(ev: any) {
+    this.search.value = "";
+    this.clicked = false;
     this.ok = false;
     let ords: newOrder[] = [];
     this.ordersByType = [];
@@ -167,19 +169,6 @@ export class CheckListAssignmentPage implements OnInit {
           }
         );
     });
-
-    /*let newOne  = [];
-    newOne.push("ici","laba");
-    console.log("orders: ",this.orders," length: ",this.orders.length);
-    
-
-    newOrds.forEach(element => {
-      newOne.push(element);
-      console.log("element",element)
-    });
-    console.log("newOne: ",newOne," length: ",newOne.length);*/
-    return newOrds;
-
   }
 
   onClose(evt: { result: string; }) {

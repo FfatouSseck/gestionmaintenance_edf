@@ -25,6 +25,26 @@ app-check-list-assignment{
     width: 100%;
   }
   
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+  .mat-column-FunctLoc,.mat-column-OrderNo,.mat-column-StatusDescr
+  ,.mat-column-Operation,.mat-column-Description,.mat-column-Checklist
+  ,.mat-column-prodStartDate,.mat-column-button {
+    flex: 0 0 75px;
+  }
+
+  .searchbar{
+    font-size: 20px !important;
+    --background: #007CC0;
+    --color: #fff;
+    --icon-color: #007CC0;
+    --placeholder-color :#fff;
+    --clear-button-color:#fff;
+  }
+  
 
 
 }
