@@ -109,8 +109,9 @@
             </mat-card>
             <br />
             <!--Loading spinner-->
-            <div *ngIf="loadNotif">
-              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+            <div>
+              <mat-spinner *ngIf="loadNotif" style="margin: 0 auto" [diameter]="25"></mat-spinner>
+              <p *ngIf="noNotif">Unable to find the notification</p>
             </div>
             <!--Displaying Informations-->
             <div *ngIf="choosenNotif.NotifNo != null && loadNotif==false">
@@ -144,7 +145,8 @@
             </mat-card>
             <br>
             <div *ngIf="operations.length == 0">
-              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+              <mat-spinner  *ngIf="!noOperations" style="margin: 0 auto" [diameter]="25"></mat-spinner>
+              <p *ngIf="noOperations">No operations available</p>
             </div>
             <div *ngIf="operations.length>0">
               <table mat-table [dataSource]="operations" class="mat-elevation-z8">
@@ -194,7 +196,8 @@
             </mat-card>
             <br />
             <div *ngIf="components.length == 0">
-              <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+              <mat-spinner *ngIf="!noComponents" style="margin: 0 auto" [diameter]="25"></mat-spinner>
+              <p *ngIf="noComponents">No components available</p>
             </div>
             <div *ngIf="components.length>0">
               <table mat-table [dataSource]="components" class="mat-elevation-z8">

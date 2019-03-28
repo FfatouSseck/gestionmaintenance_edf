@@ -28,6 +28,9 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   notAvailable = true;
   noData = false;
   loadNotif = true;
+  noComponents = false;
+  noOperations = false;
+  noNotif = false;
 
   ordersList: Order[] = []
 
@@ -229,28 +232,41 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   }
 
   getOrderNotification(notifNo) {
+    this.noNotif = false;
     this.notifService.getNotifByNumber(notifNo).subscribe(
       (notif) => {
         this.choosenNotif = notif.d;
-        if (this.choosenNotif.NotifNo != null) {
-          this.loadNotif = false;
+        if (this.choosenNotif.NotifNo == null) {
+          this.noNotif = true;
         }
+          this.loadNotif = false;
+        
+      },
+      (err) =>{
+        this.noNotif = true;
+        this.loadNotif = false;
       }
     )
   }
 
   getOrderOperations(orderNo: string) {
+    this.operations = [];
+    this.noOperations = false;
     this.orderService.getOrderOperations(orderNo).subscribe(
       (operations) => {
         this.operations = operations.d.results;
+        if(this.operations.length == 0) this.noOperations = true;
       }
     )
   }
 
   getOrderComponents(orderNo: string) {
+    this.components = [];
+    this.noComponents = false;
     this.orderService.getOrderComponents(orderNo).subscribe(
       (components) => {
         this.components = components.d.results;
+        if(this.components.length == 0) this.noComponents = true;
       }
     )
   }

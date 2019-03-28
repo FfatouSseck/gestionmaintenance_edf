@@ -23,7 +23,7 @@ export class SimilarNotificationsPage implements OnInit {
   }
 
   getDetails(element){
-    
+    console.log(element);
   }
 
   
