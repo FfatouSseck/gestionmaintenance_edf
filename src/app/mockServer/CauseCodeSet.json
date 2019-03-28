@@ -1,0 +1,1151 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Cause 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Cause 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "1",
+	"CodeDescr": "Ebauche"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "11",
+	"CodeDescr": "Développement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='12')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='12')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "12",
+	"CodeDescr": "Bureau études"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "2",
+	"CodeDescr": "Approvisionnement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "3",
+	"CodeDescr": "Article"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "4",
+	"CodeDescr": "Production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='41')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='41')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "41",
+	"CodeDescr": "Planification de la production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='42')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='42')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "42",
+	"CodeDescr": "Pilotage production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='43')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='43')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "43",
+	"CodeDescr": "Production / Machine"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='44')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='44')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "44",
+	"CodeDescr": "Production / Personnel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "5",
+	"CodeDescr": "Contrôle qualité"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='51')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='51')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "51",
+	"CodeDescr": "Planif.du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='52')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='52')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "52",
+	"CodeDescr": "Exécution du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='6')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='6')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "6",
+	"CodeDescr": "Stockage"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='7')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='7')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "7",
+	"CodeDescr": "Distribution"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='71')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='71')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "71",
+	"CodeDescr": "Administration des ventes (ADV)"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='72')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='72')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "72",
+	"CodeDescr": "Expédition"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='8')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='8')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "8",
+	"CodeDescr": "Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='81')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='81')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "81",
+	"CodeDescr": "Entretien"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='82')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='82')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "82",
+	"CodeDescr": "Remise en état"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='83')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='000000001',CodeGroup='QM',Code='83')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"Code": "83",
+	"CodeDescr": "No Cause"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Cause 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Cause 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "1",
+	"CodeDescr": "Ebauche"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "11",
+	"CodeDescr": "Développement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='12')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='12')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "12",
+	"CodeDescr": "Bureau études"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "2",
+	"CodeDescr": "Approvisionnement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "3",
+	"CodeDescr": "Article"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "4",
+	"CodeDescr": "Production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='41')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='41')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "41",
+	"CodeDescr": "Planification de la production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='42')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='42')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "42",
+	"CodeDescr": "Pilotage production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='43')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='43')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "43",
+	"CodeDescr": "Production / Machine"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='44')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='44')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "44",
+	"CodeDescr": "Production / Personnel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "5",
+	"CodeDescr": "Contrôle qualité"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='51')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='51')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "51",
+	"CodeDescr": "Planif.du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='52')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='52')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "52",
+	"CodeDescr": "Exécution du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='6')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='6')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "6",
+	"CodeDescr": "Stockage"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='7')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='7')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "7",
+	"CodeDescr": "Distribution"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='71')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='71')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "71",
+	"CodeDescr": "Administration des ventes (ADV)"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='72')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='72')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "72",
+	"CodeDescr": "Expédition"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='8')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='8')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "8",
+	"CodeDescr": "Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='81')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='81')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "81",
+	"CodeDescr": "Entretien"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='82')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='82')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "82",
+	"CodeDescr": "Remise en état"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='83')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CA-N',CodeGroup='QM',Code='83')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"Code": "83",
+	"CodeDescr": "No Cause"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Cause 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Cause 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "1",
+	"CodeDescr": "Ebauche"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "11",
+	"CodeDescr": "Développement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='12')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='12')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "12",
+	"CodeDescr": "Bureau études"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "2",
+	"CodeDescr": "Approvisionnement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "3",
+	"CodeDescr": "Article"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "4",
+	"CodeDescr": "Production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='41')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='41')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "41",
+	"CodeDescr": "Planification de la production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='42')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='42')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "42",
+	"CodeDescr": "Pilotage production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='43')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='43')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "43",
+	"CodeDescr": "Production / Machine"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='44')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='44')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "44",
+	"CodeDescr": "Production / Personnel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "5",
+	"CodeDescr": "Contrôle qualité"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='51')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='51')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "51",
+	"CodeDescr": "Planif.du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='52')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='52')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "52",
+	"CodeDescr": "Exécution du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='6')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='6')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "6",
+	"CodeDescr": "Stockage"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='7')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='7')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "7",
+	"CodeDescr": "Distribution"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='71')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='71')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "71",
+	"CodeDescr": "Administration des ventes (ADV)"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='72')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='72')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "72",
+	"CodeDescr": "Expédition"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='8')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='8')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "8",
+	"CodeDescr": "Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='81')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='81')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "81",
+	"CodeDescr": "Entretien"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='82')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='82')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "82",
+	"CodeDescr": "Remise en état"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='83')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='CLM000001',CodeGroup='QM',Code='83')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"Code": "83",
+	"CodeDescr": "No Cause"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Cause 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Cause 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "1",
+	"CodeDescr": "Ebauche"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "11",
+	"CodeDescr": "Développement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='12')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='12')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "12",
+	"CodeDescr": "Bureau études"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "2",
+	"CodeDescr": "Approvisionnement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "3",
+	"CodeDescr": "Article"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "4",
+	"CodeDescr": "Production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='41')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='41')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "41",
+	"CodeDescr": "Planification de la production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='42')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='42')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "42",
+	"CodeDescr": "Pilotage production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='43')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='43')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "43",
+	"CodeDescr": "Production / Machine"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='44')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='44')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "44",
+	"CodeDescr": "Production / Personnel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "5",
+	"CodeDescr": "Contrôle qualité"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='51')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='51')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "51",
+	"CodeDescr": "Planif.du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='52')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='52')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "52",
+	"CodeDescr": "Exécution du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='6')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='6')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "6",
+	"CodeDescr": "Stockage"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='7')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='7')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "7",
+	"CodeDescr": "Distribution"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='71')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='71')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "71",
+	"CodeDescr": "Administration des ventes (ADV)"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='72')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='72')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "72",
+	"CodeDescr": "Expédition"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='8')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='8')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "8",
+	"CodeDescr": "Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='81')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='81')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "81",
+	"CodeDescr": "Entretien"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='82')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='82')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "82",
+	"CodeDescr": "Remise en état"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='83')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='QM0000001',CodeGroup='QM',Code='83')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"Code": "83",
+	"CodeDescr": "No Cause"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Cause 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Cause 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "1",
+	"CodeDescr": "Ebauche"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "11",
+	"CodeDescr": "Développement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='12')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='12')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "12",
+	"CodeDescr": "Bureau études"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "2",
+	"CodeDescr": "Approvisionnement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "3",
+	"CodeDescr": "Article"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "4",
+	"CodeDescr": "Production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='41')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='41')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "41",
+	"CodeDescr": "Planification de la production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='42')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='42')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "42",
+	"CodeDescr": "Pilotage production"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='43')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='43')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "43",
+	"CodeDescr": "Production / Machine"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='44')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='44')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "44",
+	"CodeDescr": "Production / Personnel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "5",
+	"CodeDescr": "Contrôle qualité"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='51')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='51')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "51",
+	"CodeDescr": "Planif.du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='52')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='52')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "52",
+	"CodeDescr": "Exécution du contrôle"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='6')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='6')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "6",
+	"CodeDescr": "Stockage"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='7')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='7')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "7",
+	"CodeDescr": "Distribution"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='71')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='71')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "71",
+	"CodeDescr": "Administration des ventes (ADV)"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='72')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='72')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "72",
+	"CodeDescr": "Expédition"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='8')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='8')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "8",
+	"CodeDescr": "Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='81')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='81')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "81",
+	"CodeDescr": "Entretien"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='82')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='82')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "82",
+	"CodeDescr": "Remise en état"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='83')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseCodeSet(CatalogProfile='ZENXCO',CodeGroup='QM',Code='83')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"Code": "83",
+	"CodeDescr": "No Cause"
+}]

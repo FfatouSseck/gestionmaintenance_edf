@@ -7,6 +7,7 @@ import { MatSnackBar } from '@angular/material';
 import { Storage } from '@ionic/storage';
 import { PlantsService } from '../../providers/plants.service';
 import { IPlant } from '../../interfaces/plant.interface';
+import { MockService } from 'src/app/providers/mock.service';
 
 @Component({
   selector: 'app-details-settings',
@@ -24,7 +25,8 @@ export class DetailsSettingsPage implements OnInit {
   searching: any = false;
 
   constructor(public navCtrl: NavController, public dataService: Data, public modalController: ModalController,
-    public snackBar: MatSnackBar, public storage: Storage, public navParams: NavParams, public plantService: PlantsService) {
+    public snackBar: MatSnackBar, public storage: Storage, public navParams: NavParams, public plantService: PlantsService,
+    public mockService: MockService) {
 
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
@@ -97,16 +99,29 @@ export class DetailsSettingsPage implements OnInit {
       this.setFilteredItems();
     }
     else {
-      this.plantService.getAllPlants().subscribe(
-        (plts) => {
-          let p = plts.d.results;
-          let done = this.dataService.setPlants(p);
-          if (done) {
-            this.notAvailable = false;
-            this.setFilteredItems();
+      this.storage.get("mock").then(
+        (mock) => {
+          if (mock != null && mock != undefined && mock == true) {
+            let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
+            if (done) {
+              this.notAvailable = false;
+              this.setFilteredItems();
+            }
+          }
+          else {
+            this.plantService.getAllPlants().subscribe(
+              (plts) => {
+                let p = plts.d.results;
+                let done = this.dataService.setPlants(p);
+                if (done) {
+                  this.notAvailable = false;
+                  this.setFilteredItems();
+                }
+              });
           }
         }
       )
+
     }
   }
 

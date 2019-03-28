@@ -1,0 +1,57 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='000000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='000000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Partie d'objet PM",
+	"ObjectPartCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='000000001',CodeGroup='PM1')/ObjectPartCode"
+		}
+	} 
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Partie d'objet PM",
+	"ObjectPartCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')/ObjectPartCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Partie d'objet PM",
+	"ObjectPartCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')/ObjectPartCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Partie d'objet PM",
+	"ObjectPartCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')/ObjectPartCode"
+		}
+	}
+}]

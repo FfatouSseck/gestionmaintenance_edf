@@ -64,7 +64,8 @@ export class LoginPage implements OnInit {
             buttons: ['OK']
           });
           await alert.present();
-          console.log("Authentication failed: ",err)
+          console.log("Authentication failed: ",err);
+          this.storage.set("mock",true);
           this.router.navigateByUrl("/home");
         });
     }

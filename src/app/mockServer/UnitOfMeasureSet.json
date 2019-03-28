@@ -1,0 +1,2796 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M-2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M-2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M-2",
+		"Dimension": "SURINV",
+		"UnitDescr": "1 / square meter",
+		"DimensionDescr": "Inverse area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TC3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TC3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TC3",
+		"Dimension": "TKONZ",
+		"UnitDescr": "1/cubic centimeter",
+		"DimensionDescr": "Particle concentrat."
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TM3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TM3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TM3",
+		"Dimension": "TKONZ",
+		"UnitDescr": "1/cubic meter",
+		"DimensionDescr": "Particle concentrat."
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PMI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PMI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PMI",
+		"Dimension": "FREQU",
+		"UnitDescr": "1/minute",
+		"DimensionDescr": "Frequency"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ACR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ACR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "ACR",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Acre",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('AU')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('AU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "AU",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Activity unit",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('A')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('A')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "A",
+		"Dimension": "ECURR",
+		"UnitDescr": "Ampere",
+		"DimensionDescr": "Electr. Current"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BAG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BAG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BAG",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Bag",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BQK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BQK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BQK",
+		"Dimension": "SPARAD",
+		"UnitDescr": "Becquerel/kilogram",
+		"DimensionDescr": "Spec.act.radioac.sub"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BT",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Bottle",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BTU')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BTU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BTU",
+		"Dimension": "ENERGY",
+		"UnitDescr": "British thermal units",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BYT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BYT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BYT",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Bytes",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CN')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CN",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Can",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CAD')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CAD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CAD",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Canadian currency",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CD')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CD",
+		"Dimension": "LIGHT",
+		"UnitDescr": "Candela",
+		"DimensionDescr": "Luminous intensity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CAN')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CAN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CAN",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Canister",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CT",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Carton",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CTG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CTG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CTG",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Cartridge",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CV')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CV",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Case",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CL",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Centiliter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CM",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Centimeter",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CMS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CMS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CMS",
+		"Dimension": "SPEED",
+		"UnitDescr": "Centimeter/Second",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CMH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CMH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CMH",
+		"Dimension": "SPEED",
+		"UnitDescr": "Centimeter/hour",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FTE')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FTE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "FTE",
+		"Dimension": "TIME",
+		"UnitDescr": "Consulting Days",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CR",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Crate",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CM3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CM3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CM3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic centimeter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('C3S')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('C3S')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "C3S",
+		"Dimension": "VOLFLO",
+		"UnitDescr": "Cubic centimeter/second",
+		"DimensionDescr": "Volume rate of flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CD3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CD3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CD3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic decimeter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FT3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FT3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "FT3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic foot",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IN3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IN3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "IN3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic inch",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic meter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KMK",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Cubic meter/Cubic meter",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M3H')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M3H')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M3H",
+		"Dimension": "VOLFLO",
+		"UnitDescr": "Cubic meter/Hour",
+		"DimensionDescr": "Volume rate of flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M3S')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M3S')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M3S",
+		"Dimension": "VOLFLO",
+		"UnitDescr": "Cubic meter/second",
+		"DimensionDescr": "Volume rate of flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MM3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MM3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MM3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic millimeter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YD3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YD3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "YD3",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Cubic yard",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DAY')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DAY')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "DAY",
+		"Dimension": "TIME",
+		"UnitDescr": "Days",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('D')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('D')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "D",
+		"Dimension": "TIME",
+		"UnitDescr": "Days",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('Dt')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('Dt')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "Dt",
+		"Dimension": "ENERGY",
+		"UnitDescr": "Decatherm",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "DM",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Decimeter",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DEG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DEG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "DEG",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Degree",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B0C')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B0C')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "°C",
+		"Dimension": "TEMP",
+		"UnitDescr": "Degrees Celsius",
+		"DimensionDescr": "Temperature"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "DZ",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Dozen",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "DR",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Drum",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('EU')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('EU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "EU",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Enzyme Units",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('EML')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('EML')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "EML",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Enzyme Units / Milliliter",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B0F')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B0F')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "°F",
+		"Dimension": "TEMP",
+		"UnitDescr": "Fahrenheit",
+		"DimensionDescr": "Temperature"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('F')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('F')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "F",
+		"Dimension": "CAPACI",
+		"UnitDescr": "Farad",
+		"DimensionDescr": "Electr. capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FOZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FOZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "FOZ",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Fluid Ounce US",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "FT",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Foot",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BPH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BPH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BPH",
+		"Dimension": "VOLFLO",
+		"UnitDescr": "Gallons per hour (US)",
+		"DimensionDescr": "Volume rate of flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GPM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GPM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GPM",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Gallons per mile (US)",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FY')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FY')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "FY",
+		"Dimension": "ENERGY",
+		"UnitDescr": "Gigajoule",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GOH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GOH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GOH",
+		"Dimension": "RESIST",
+		"UnitDescr": "Gigaohm",
+		"DimensionDescr": "Elec. Resistance"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GAU')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GAU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GAU",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Gram Gold",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GI",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Gram act. ingrd.",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GM3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GM3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GM3",
+		"Dimension": "DENSI",
+		"UnitDescr": "Gram/Cubic meter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GM",
+		"Dimension": "MOLMAS",
+		"UnitDescr": "Gram/Mol",
+		"DimensionDescr": "Mole mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GHG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GHG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GHG",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Gram/hectogram",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GKG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GKG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GKG",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Gram/kilogram",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GLI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GLI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GLI",
+		"Dimension": "DENSI",
+		"UnitDescr": "Gram/liter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GM2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GM2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GM2",
+		"Dimension": "MASSBD",
+		"UnitDescr": "Gram/square meter",
+		"DimensionDescr": "Mass coverage"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('RHO')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('RHO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "RHO",
+		"Dimension": "DENSI",
+		"UnitDescr": "Gramm/Cubic centimeter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GRO')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GRO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GRO",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Gross",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PRC')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PRC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PRC",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Group proportion",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('WMK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('WMK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "WMK",
+		"Dimension": "THCOND",
+		"UnitDescr": "Heat Conductivity",
+		"DimensionDescr": "Heat Conductivity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "HA",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Hectare",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "HL",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Hectoliter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HPA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HPA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "HPA",
+		"Dimension": "PRESS",
+		"UnitDescr": "Hectopascal",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "HZ",
+		"Dimension": "FREQU",
+		"UnitDescr": "Hertz (1/second)",
+		"DimensionDescr": "Frequency"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('H')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('H')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "H",
+		"Dimension": "TIME",
+		"UnitDescr": "Hour",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('HR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "HR",
+		"Dimension": "TIME",
+		"UnitDescr": "Hours",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IN')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "IN",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Inch",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('J')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('J')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "J",
+		"Dimension": "ENERGY",
+		"UnitDescr": "Joule",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('JKG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('JKG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "JKG",
+		"Dimension": "SPENER",
+		"UnitDescr": "Joule/Kilogram",
+		"DimensionDescr": "Specific energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('JMO')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('JMO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "JMO",
+		"Dimension": "MOENER",
+		"UnitDescr": "Joule/Mol",
+		"DimensionDescr": "Molar energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('K')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('K')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "K",
+		"Dimension": "TEMP",
+		"UnitDescr": "Kelvin",
+		"DimensionDescr": "Temperature"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMN')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KMN",
+		"Dimension": "TEMPRT",
+		"UnitDescr": "Kelvin/Minute",
+		"DimensionDescr": "Rate of temp. change"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KMS",
+		"Dimension": "TEMPRT",
+		"UnitDescr": "Kelvin/Second",
+		"DimensionDescr": "Rate of temp. change"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KA",
+		"Dimension": "ECURR",
+		"UnitDescr": "Kiloampere",
+		"DimensionDescr": "Electr. Current"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KBK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KBK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KBK",
+		"Dimension": "SPARAD",
+		"UnitDescr": "Kilobecquerel/kilogram",
+		"DimensionDescr": "Spec.act.radioac.sub"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KG",
+		"Dimension": "MASS",
+		"UnitDescr": "Kilogram",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KAI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KAI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KAI",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Kilogram act. ingrd.",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KGK",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Kilogram/Kilogram",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KGM",
+		"Dimension": "MOLMAS",
+		"UnitDescr": "Kilogram/Mol",
+		"DimensionDescr": "Mole mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGF')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KGF",
+		"Dimension": "MASSBD",
+		"UnitDescr": "Kilogram/Square meter",
+		"DimensionDescr": "Mass coverage"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KD3')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KD3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KD3",
+		"Dimension": "DENSI",
+		"UnitDescr": "Kilogram/cubic decimeter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGV')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KGV",
+		"Dimension": "DENSI",
+		"UnitDescr": "Kilogram/cubic meter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KGS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KGS",
+		"Dimension": "MASFLO",
+		"UnitDescr": "Kilogram/second",
+		"DimensionDescr": "Mass flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KHZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KHZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KHZ",
+		"Dimension": "FREQU",
+		"UnitDescr": "Kilohertz",
+		"DimensionDescr": "Frequency"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KJ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KJ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KJ",
+		"Dimension": "ENERGY",
+		"UnitDescr": "Kilojoule",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KJM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KJM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KJM",
+		"Dimension": "MOENER",
+		"UnitDescr": "Kilojoule/Mol",
+		"DimensionDescr": "Molar energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KJK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KJK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KJK",
+		"Dimension": "SPENER",
+		"UnitDescr": "Kilojoule/kilogram",
+		"DimensionDescr": "Specific energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KM",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Kilometer",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KMH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KMH",
+		"Dimension": "SPEED",
+		"UnitDescr": "Kilometer/hour",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('QML')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('QML')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "QML",
+		"Dimension": "MOLQU",
+		"UnitDescr": "Kilomol",
+		"DimensionDescr": "Mole quantity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "NI",
+		"Dimension": "FORCE",
+		"UnitDescr": "Kilonewton",
+		"DimensionDescr": "Force"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KNM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KNM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KNM",
+		"Dimension": "PRESS",
+		"UnitDescr": "Kilonewton per square meter",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KOH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KOH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KOH",
+		"Dimension": "RESIST",
+		"UnitDescr": "Kiloohm",
+		"DimensionDescr": "Elec. Resistance"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KPA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KPA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KPA",
+		"Dimension": "PRESS",
+		"UnitDescr": "Kilopascal",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KT",
+		"Dimension": "MASS",
+		"UnitDescr": "Kilotonne",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KV')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KV",
+		"Dimension": "VOLTAG",
+		"UnitDescr": "Kilovolt",
+		"DimensionDescr": "Electr. Tension"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KVA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KVA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KVA",
+		"Dimension": "POWER",
+		"UnitDescr": "Kilovoltampere",
+		"DimensionDescr": "Power"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KW')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KW",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Kilowatt",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('kWh')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('kWh')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "kWh",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Kilowatt hours",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LAG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LAG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LAG",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Layer",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('L')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('L')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "L",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Liter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LHK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LHK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LHK",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Liter per 100 km",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LPH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LPH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LPH",
+		"Dimension": "VOLFLO",
+		"UnitDescr": "Liter per hour",
+		"DimensionDescr": "Volume rate of flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LMI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LMI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LMI",
+		"Dimension": "VOLFLO",
+		"UnitDescr": "Liter/Minute",
+		"DimensionDescr": "Volume rate of flow"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LMS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LMS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LMS",
+		"Dimension": "HYDROL",
+		"UnitDescr": "Liter/Molsecond",
+		"DimensionDescr": "Hydrolysis rate"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPB')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPB",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Mass parts per billion",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPM",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Mass parts per million",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPT",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Mass parts per trillion",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MHZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MHZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MHZ",
+		"Dimension": "FREQU",
+		"UnitDescr": "Megahertz",
+		"DimensionDescr": "Frequency"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MEJ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MEJ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MEJ",
+		"Dimension": "ENERGY",
+		"UnitDescr": "Megajoule",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MN')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MN",
+		"Dimension": "FORCE",
+		"UnitDescr": "Meganewton",
+		"DimensionDescr": "Force"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPA",
+		"Dimension": "PRESS",
+		"UnitDescr": "Megapascal",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MHV')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MHV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MHV",
+		"Dimension": "VOLTAG",
+		"UnitDescr": "Megavolt",
+		"DimensionDescr": "Electr. Tension"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PCT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PCT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PCT",
+		"Dimension": "POWER",
+		"UnitDescr": "Megavoltampere",
+		"DimensionDescr": "Power"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGW')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGW",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Megawatt",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MWH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MWH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MWH",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Megawatt hours",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGO')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGO",
+		"Dimension": "RESIST",
+		"UnitDescr": "Megohm",
+		"DimensionDescr": "Elec. Resistance"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Meter",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M/H",
+		"Dimension": "SPEED",
+		"UnitDescr": "Meter/Hour",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "000",
+		"Dimension": "SPEED",
+		"UnitDescr": "Meter/Minute",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M/S",
+		"Dimension": "SPEED",
+		"UnitDescr": "Meter/second",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MS2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MS2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MS2",
+		"Dimension": "ACCEL",
+		"UnitDescr": "Meter/second squared",
+		"DimensionDescr": "Acceleration"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MBZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MBZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MBZ",
+		"Dimension": "STEXKZ",
+		"UnitDescr": "Meterbar/second",
+		"DimensionDescr": "Dust explosion ratio"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPZ",
+		"Dimension": "STEXKZ",
+		"UnitDescr": "Meterpascal/second",
+		"DimensionDescr": "Dust explosion ratio"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5A')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5A')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "µA",
+		"Dimension": "ECURR",
+		"UnitDescr": "Microampere",
+		"DimensionDescr": "Electr. Current"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5F')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5F')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "µF",
+		"Dimension": "CAPACI",
+		"UnitDescr": "Microfarad",
+		"DimensionDescr": "Electr. capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5GQ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5GQ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "µGQ",
+		"Dimension": "DENSI",
+		"UnitDescr": "Microgram/cubic meter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5GL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5GL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "µGL",
+		"Dimension": "DENSI",
+		"UnitDescr": "Microgram/liter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5L')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5L')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "µL",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Microliter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5M')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%C2%B5M')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "µM",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Micrometer",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MIS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MIS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MIS",
+		"Dimension": "TIME",
+		"UnitDescr": "Microsecond",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MSC')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MSC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MSC",
+		"Dimension": "CONDUC",
+		"UnitDescr": "Microsiemens per centimeter",
+		"DimensionDescr": "Conductivity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MI",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Mile",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPG",
+		"Dimension": "SURINV",
+		"UnitDescr": "Miles per gallon (US)",
+		"DimensionDescr": "Inverse area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MA",
+		"Dimension": "ECURR",
+		"UnitDescr": "Milliampere",
+		"DimensionDescr": "Electr. Current"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MBA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MBA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MBA",
+		"Dimension": "PRESS",
+		"UnitDescr": "Millibar",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('RF')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('RF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "RF",
+		"Dimension": "CAPACI",
+		"UnitDescr": "Millifarad",
+		"DimensionDescr": "Electr. capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MG",
+		"Dimension": "MASS",
+		"UnitDescr": "Milligram",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGE')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGE",
+		"Dimension": "MASSBD",
+		"UnitDescr": "Milligram/Square centimeter",
+		"DimensionDescr": "Mass coverage"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGQ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGQ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGQ",
+		"Dimension": "DENSI",
+		"UnitDescr": "Milligram/cubic meter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGG",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Milligram/gram",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGK",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Milligram/kilogram",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MGL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MGL",
+		"Dimension": "DENSI",
+		"UnitDescr": "Milligram/liter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MIJ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MIJ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MIJ",
+		"Dimension": "ENERGY",
+		"UnitDescr": "Millijoule",
+		"DimensionDescr": "Energy"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ML')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ML')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "ML",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Milliliter",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MLI')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MLI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MLI",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Milliliter act. ingr.",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MLK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MLK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MLK",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Milliliter/cubic meter",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MM",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Millimeter",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MMH",
+		"Dimension": "SPEED",
+		"UnitDescr": "Millimeter/hour",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MMS",
+		"Dimension": "SPEED",
+		"UnitDescr": "Millimeter/second",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MMA",
+		"Dimension": "SPEED",
+		"UnitDescr": "Millimeter/year",
+		"DimensionDescr": "Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMO')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MMO",
+		"Dimension": "MOLQU",
+		"UnitDescr": "Millimol",
+		"DimensionDescr": "Mole quantity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPL",
+		"Dimension": "ACBAC",
+		"UnitDescr": "Millimol per liter",
+		"DimensionDescr": "Acid/Base capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMG')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MMG",
+		"Dimension": "SPAEQU",
+		"UnitDescr": "Millimol/gram",
+		"DimensionDescr": "Spec. equivalent"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MMK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MMK",
+		"Dimension": "SPAEQU",
+		"UnitDescr": "Millimol/kilogram",
+		"DimensionDescr": "Spec. equivalent"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MNM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MNM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MNM",
+		"Dimension": "SURFTE",
+		"UnitDescr": "Millinewton/meter",
+		"DimensionDescr": "Surface tension"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MPS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MPS",
+		"Dimension": "VISDYN",
+		"UnitDescr": "Millipascal seconds",
+		"DimensionDescr": "Dynamic viscosity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MS",
+		"Dimension": "TIME",
+		"UnitDescr": "Millisecond",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MTE')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MTE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MTE",
+		"Dimension": "MAGNFD",
+		"UnitDescr": "Millitesla",
+		"DimensionDescr": "Magnet. field dens."
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MV')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MV",
+		"Dimension": "VOLTAG",
+		"UnitDescr": "Millivolt",
+		"DimensionDescr": "Electr. Tension"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MW')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MW",
+		"Dimension": "POWER",
+		"UnitDescr": "Milliwatt",
+		"DimensionDescr": "Power"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MIN')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MIN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MIN",
+		"Dimension": "TIME",
+		"UnitDescr": "Minute",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MOL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MOL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MOL",
+		"Dimension": "MOLQU",
+		"UnitDescr": "Mol",
+		"DimensionDescr": "Mole quantity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M/M",
+		"Dimension": "ACBAC",
+		"UnitDescr": "Mol per cubic meter",
+		"DimensionDescr": "Acid/Base capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%2FL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M/L",
+		"Dimension": "ACBAC",
+		"UnitDescr": "Mol per liter",
+		"DimensionDescr": "Acid/Base capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MOK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MOK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MOK",
+		"Dimension": "SPAEQU",
+		"UnitDescr": "Mol/kilogram",
+		"DimensionDescr": "Spec. equivalent"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MON')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MON')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MON",
+		"Dimension": "TIME",
+		"UnitDescr": "Months",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "NA",
+		"Dimension": "ECURR",
+		"UnitDescr": "Nanoampere",
+		"DimensionDescr": "Electr. Current"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('R-U')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('R-U')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "R-U",
+		"Dimension": "CAPACI",
+		"UnitDescr": "Nanofarad",
+		"DimensionDescr": "Electr. capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NAM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NAM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "NAM",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Nanometer",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "NS",
+		"Dimension": "TIME",
+		"UnitDescr": "Nanosecond",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('N')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('N')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "N",
+		"Dimension": "FORCE",
+		"UnitDescr": "Newton",
+		"DimensionDescr": "Force"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NMM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NMM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "NMM",
+		"Dimension": "PRESS",
+		"UnitDescr": "Newton/Square millimeter",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('NM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "NM",
+		"Dimension": "SURFTE",
+		"UnitDescr": "Newton/meter",
+		"DimensionDescr": "Surface tension"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PRS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PRS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PRS",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Number of persons",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OHM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OHM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "OHM",
+		"Dimension": "RESIST",
+		"UnitDescr": "Ohm",
+		"DimensionDescr": "Elec. Resistance"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ONE')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ONE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "ONE",
+		"Dimension": "PROPOR",
+		"UnitDescr": "One",
+		"DimensionDescr": "Proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OPH')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OPH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "OPH",
+		"Dimension": "TIME",
+		"UnitDescr": "Operating Hours",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PAC')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PAC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PAC",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Pack",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PL",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Pail",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PR",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Pair",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PAL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PAL",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Pallet",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PPB')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PPB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PPB",
+		"Dimension": "PROPOR",
+		"UnitDescr": "Parts per billion",
+		"DimensionDescr": "Proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PPM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PPM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PPM",
+		"Dimension": "PROPOR",
+		"UnitDescr": "Parts per million",
+		"DimensionDescr": "Proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PPT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PPT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PPT",
+		"Dimension": "PROPOR",
+		"UnitDescr": "Parts per trillion",
+		"DimensionDescr": "Proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PA",
+		"Dimension": "PRESS",
+		"UnitDescr": "Pascal",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PAS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PAS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PAS",
+		"Dimension": "VISDYN",
+		"UnitDescr": "Pascal second",
+		"DimensionDescr": "Dynamic viscosity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%25O')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%25O')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "%O",
+		"Dimension": "PROPOR",
+		"UnitDescr": "Per mille",
+		"DimensionDescr": "Proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%25')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%25')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M%",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Percent mass",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('V%25')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('V%25')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "V%",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Percent volume",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%25')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('%25')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "%",
+		"Dimension": "PROPOR",
+		"UnitDescr": "Percentage",
+		"DimensionDescr": "Proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PU')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PU",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Performance unit",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%25O')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M%25O')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M%O",
+		"Dimension": "MPROPO",
+		"UnitDescr": "Permille mass",
+		"DimensionDescr": "Mass proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('V%25O')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('V%25O')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "V%O",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Permille volume",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PS",
+		"Dimension": "TIME",
+		"UnitDescr": "Picosecond",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PCE')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PCE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PCE",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Piece",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IB')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "IB",
+		"Dimension": "CAPACI",
+		"UnitDescr": "Pikofarad",
+		"DimensionDescr": "Electr. capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PT",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Pint, US liquid",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('P')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('P')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "P",
+		"Dimension": "POINTS",
+		"UnitDescr": "Points",
+		"DimensionDescr": "Points"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('QT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('QT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "QT",
+		"Dimension": "VOLUME",
+		"UnitDescr": "Quart, US liquid",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ROL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('ROL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "ROL",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Roll",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('S')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('S')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "S",
+		"Dimension": "TIME",
+		"UnitDescr": "Second",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('A%2FV')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('A%2FV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "A/V",
+		"Dimension": "CONDUC",
+		"UnitDescr": "Siemens per meter",
+		"DimensionDescr": "Conductivity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "OM",
+		"Dimension": "SPREST",
+		"UnitDescr": "Spec. Elec. Resistance",
+		"DimensionDescr": "Sp. Elec. Resistance"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OCM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OCM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "OCM",
+		"Dimension": "SPREST",
+		"UnitDescr": "Spec. Elec. Resistance",
+		"DimensionDescr": "Sp. Elec. Resistance"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('JKK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('JKK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "JKK",
+		"Dimension": "SPHCAP",
+		"UnitDescr": "Spec. Heat Capacity",
+		"DimensionDescr": "Spec. Heat Capacity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YD2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YD2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "YD2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square Yard",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CM2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('CM2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "CM2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square centimeter",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FT2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('FT2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "FT2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square foot",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IN2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('IN2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "IN2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square inch",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KM2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KM2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KM2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square kilometer",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square meter",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M2S')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('M2S')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "M2S",
+		"Dimension": "VISKIN",
+		"UnitDescr": "Square meter/second",
+		"DimensionDescr": "Kinematic viscosity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MI2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MI2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MI2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square mile",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MM2')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('MM2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "MM2",
+		"Dimension": "SURFAC",
+		"UnitDescr": "Square millimeter",
+		"DimensionDescr": "Area"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('22S')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('22S')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "22S",
+		"Dimension": "VISKIN",
+		"UnitDescr": "Square millimeter/second",
+		"DimensionDescr": "Kinematic viscosity"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TES')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TES')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TES",
+		"Dimension": "MAGNFD",
+		"UnitDescr": "Tesla",
+		"DimensionDescr": "Magnet. field dens."
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TS')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TS",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Thousands",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TOM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TOM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TOM",
+		"Dimension": "DENSI",
+		"UnitDescr": "Ton/Cubic meter",
+		"DimensionDescr": "Density"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TOT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TOT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TOT",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Tote",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('USD')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('USD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "USD",
+		"Dimension": "AAAADL",
+		"UnitDescr": "U.S. currency",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LB')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LB",
+		"Dimension": "MASS",
+		"UnitDescr": "US pound",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TON')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('TON')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "TON",
+		"Dimension": "MASS",
+		"UnitDescr": "US ton (2000 lb)",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VAL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "VAL",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Value-only material",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('WKY')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('WKY')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "WKY",
+		"Dimension": "EVARA",
+		"UnitDescr": "Vaporization Speed",
+		"DimensionDescr": "Vaporization Speed"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('V')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('V')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "V",
+		"Dimension": "VOLTAG",
+		"UnitDescr": "Volt",
+		"DimensionDescr": "Electr. Tension"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "VA",
+		"Dimension": "POWER",
+		"UnitDescr": "Voltampere",
+		"DimensionDescr": "Power"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VPB')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VPB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "VPB",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Volume parts per billion",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VPM')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VPM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "VPM",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Volume parts per million",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VPT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('VPT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "VPT",
+		"Dimension": "VPROPO",
+		"UnitDescr": "Volume parts per trillion",
+		"DimensionDescr": "Volume proportion"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('W')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('W')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "W",
+		"Dimension": "AAAADL",
+		"UnitDescr": "Watt",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('WK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('WK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "WK",
+		"Dimension": "TIME",
+		"UnitDescr": "Weeks",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YD')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "YD",
+		"Dimension": "LENGTH",
+		"UnitDescr": "Yards",
+		"DimensionDescr": "Length"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('YR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "YR",
+		"Dimension": "TIME",
+		"UnitDescr": "Years",
+		"DimensionDescr": "Time"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BAR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('BAR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "BAR",
+		"Dimension": "PRESS",
+		"UnitDescr": "bar",
+		"DimensionDescr": "Pressure"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DRR')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('DRR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "DRR",
+		"Dimension": "AAAADL",
+		"UnitDescr": "cProjects: Unit f. Req. Capcty",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('EA')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('EA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "EA",
+		"Dimension": "AAAADL",
+		"UnitDescr": "each",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GAL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GAL",
+		"Dimension": "VOLUME",
+		"UnitDescr": "gallon, US",
+		"DimensionDescr": "Volume"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GWh')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('GWh')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "GWh",
+		"Dimension": "AAAADL",
+		"UnitDescr": "gigawatt hours",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('G')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('G')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "G",
+		"Dimension": "MASS",
+		"UnitDescr": "gram",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('G%2FL')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('G%2FL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "G/L",
+		"Dimension": "AAAADL",
+		"UnitDescr": "gram act.ingrd / liter",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KIK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KIK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KIK",
+		"Dimension": "AAAADL",
+		"UnitDescr": "kg act.ingrd. / kg",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KIT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('KIT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "KIT",
+		"Dimension": "AAAADL",
+		"UnitDescr": "kit",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LNK')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('LNK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "LNK",
+		"Dimension": "AAAADL",
+		"UnitDescr": "link",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OZ')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('OZ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "OZ",
+		"Dimension": "MASS",
+		"UnitDescr": "ounze",
+		"DimensionDescr": "Mass"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PC')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('PC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "PC",
+		"Dimension": "AAAADL",
+		"UnitDescr": "pieces",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('SET')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('SET')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "SET",
+		"Dimension": "AAAADL",
+		"UnitDescr": "set",
+		"DimensionDescr": "(no dimensions)"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('T')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/UnitOfMeasureSet('T')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.UnitOfMeasure"
+		},
+		"Unit": "T",
+		"Dimension": "MASS",
+		"UnitDescr": "ton, metric (1000 kg)",
+		"DimensionDescr": "Mass"
+	}
+]

@@ -1,0 +1,2796 @@
+[
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2ARA',Plant='2ARA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2ARA',Plant='2ARA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2ARA",
+		"Plant": "2ARA",
+		"PlantDescr": "Arnprior A - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2ARB',Plant='2ARB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2ARB',Plant='2ARB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2ARB",
+		"Plant": "2ARB",
+		"PlantDescr": "Arnprior B - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2BCB',Plant='2BCB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2BCB',Plant='2BCB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2BCB",
+		"Plant": "2BCB",
+		"PlantDescr": "Bobcat Bluff Wind Project, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2CFL',Plant='2CFL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2CFL',Plant='2CFL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2CFL",
+		"Plant": "2CFL",
+		"PlantDescr": "Chestnut Flats Lessee, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2GRA',Plant='2GRA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2GRA',Plant='2GRA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2GRA",
+		"Plant": "2GRA",
+		"PlantDescr": "Granit (ext of St Robert) GEN",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2HER',Plant='2HER')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2HER',Plant='2HER')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2HER",
+		"Plant": "2HER",
+		"PlantDescr": "TX Hereford Wind, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2LAC',Plant='2LAC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2LAC',Plant='2LAC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2LAC",
+		"Plant": "2LAC",
+		"PlantDescr": "Lac Alfred - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2LFL',Plant='2LFL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2LFL',Plant='2LFL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2LFL",
+		"Plant": "2LFL",
+		"PlantDescr": "LWP Lessee, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2MDS',Plant='2MDS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2MDS',Plant='2MDS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2MDS",
+		"Plant": "2MDS",
+		"PlantDescr": "Massif du Sud - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2MIT',Plant='2MIT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2MIT',Plant='2MIT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2MIT",
+		"Plant": "2MIT",
+		"PlantDescr": "La Mitis(ext of Lac Alfred)GEN",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2MTR',Plant='2MTR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2MTR',Plant='2MTR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2MTR",
+		"Plant": "2MTR",
+		"PlantDescr": "Mont Rothery - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PHW',Plant='2PHW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PHW',Plant='2PHW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2PHW",
+		"Plant": "2PHW",
+		"PlantDescr": "Pilot Hill Wind, LLC (North)",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PS1',Plant='2PS1')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PS1',Plant='2PS1')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2PS1",
+		"Plant": "2PS1",
+		"PlantDescr": "Playa Solar 1",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PS2',Plant='2PS2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PS2',Plant='2PS2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2PS2",
+		"Plant": "2PS2",
+		"PlantDescr": "Playa Solar 2",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PWL',Plant='2PWL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PWL',Plant='2PWL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2PWL",
+		"Plant": "2PWL",
+		"PlantDescr": "Pacific Wind Lessee, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PWP',Plant='2PWP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2PWP',Plant='2PWP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2PWP",
+		"Plant": "2PWP",
+		"PlantDescr": "Pacific Wind, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2RDM',Plant='2RDM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2RDM',Plant='2RDM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2RDM",
+		"Plant": "2RDM",
+		"PlantDescr": "Riviere du Moulin (2RDM) - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2RFW',Plant='2RFW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2RFW',Plant='2RFW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2RFW",
+		"Plant": "2RFW",
+		"PlantDescr": "Rock Falls Wind Project, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2RPW',Plant='2RPW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2RPW',Plant='2RPW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2RPW",
+		"Plant": "2RPW",
+		"PlantDescr": "Red Pine Wind Project, LLC.",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2S3L',Plant='2S3L')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2S3L',Plant='2S3L')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2S3L",
+		"Plant": "2S3L",
+		"PlantDescr": "Shiloh III Lessee, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2S4L',Plant='2S4L')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2S4L',Plant='2S4L')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2S4L",
+		"Plant": "2S4L",
+		"PlantDescr": "Shiloh IV Lessee, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHC',Plant='2SHC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHC',Plant='2SHC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SHC",
+		"Plant": "2SHC",
+		"PlantDescr": "Copenhagen Wind Farm, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHG',Plant='2SHG')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHG',Plant='2SHG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SHG",
+		"Plant": "2SHG",
+		"PlantDescr": "StoneHagen Holdings, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHH',Plant='2SHH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHH',Plant='2SHH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SHH",
+		"Plant": "2SHH",
+		"PlantDescr": "StoneHagen Holdco, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHS',Plant='2SHS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SHS',Plant='2SHS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SHS",
+		"Plant": "2SHS",
+		"PlantDescr": "Stoneray Power Partners, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SP3',Plant='2SP3')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SP3',Plant='2SP3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SP3",
+		"Plant": "2SP3",
+		"PlantDescr": "Spearville 3, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SPH',Plant='2SPH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SPH',Plant='2SPH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SPH",
+		"Plant": "2SPH",
+		"PlantDescr": "Sunspear Holdco",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SPS',Plant='2SPS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SPS',Plant='2SPS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SPS",
+		"Plant": "2SPS",
+		"PlantDescr": "Spinning Spur Wind, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SRB',Plant='2SRB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SRB',Plant='2SRB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SRB",
+		"Plant": "2SRB",
+		"PlantDescr": "Saint-Robert Bellarmin - Gen",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SS3',Plant='2SS3')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='2SS3',Plant='2SS3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "2SS3",
+		"Plant": "2SS3",
+		"PlantDescr": "Spinning Spur Wind Three, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3000',Plant='3000')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3000',Plant='3000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3000",
+		"Plant": "3000",
+		"PlantDescr": "It.IM&C LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3001',Plant='3001')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3001',Plant='3001')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3001",
+		"Plant": "3001",
+		"PlantDescr": "It.IM&C LLC Distribution Ctr.",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3AAV',Plant='3AAV')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3AAV',Plant='3AAV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3AAV",
+		"Plant": "3AAV",
+		"PlantDescr": "Anse a Valleau",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ADB',Plant='3ADB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ADB',Plant='3ADB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ADB",
+		"Plant": "3ADB",
+		"PlantDescr": "Allendale O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ADB',Plant='2PAB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ADB',Plant='2PAB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ADB",
+		"Plant": "2PAB",
+		"PlantDescr": "Allendale Biomass, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARA',Plant='3ARA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARA',Plant='3ARA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ARA",
+		"Plant": "3ARA",
+		"PlantDescr": "Arnprior A - O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARB',Plant='3ARB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARB',Plant='3ARB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ARB",
+		"Plant": "3ARB",
+		"PlantDescr": "Arnprior B - O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARN',Plant='3ARN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARN',Plant='3ARN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ARN",
+		"Plant": "3ARN",
+		"PlantDescr": "Arnprior A and B",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARN',Plant='2ARN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ARN',Plant='2ARN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ARN",
+		"Plant": "2ARN",
+		"PlantDescr": "2Arnprior A and B",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BAL',Plant='3BAL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BAL',Plant='3BAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BAL",
+		"Plant": "3BAL",
+		"PlantDescr": "Balko Wind, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BAR',Plant='3BAR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BAR',Plant='3BAR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BAR",
+		"Plant": "3BAR",
+		"PlantDescr": "Barlow Energy Centre LP",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BCB',Plant='3BCB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BCB',Plant='3BCB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BCB",
+		"Plant": "3BCB",
+		"PlantDescr": "Bobcat Bluff O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BCB',Plant='2BCB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BCB',Plant='2BCB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BCB",
+		"Plant": "2BCB",
+		"PlantDescr": "Bobcat Bluff Wind Project, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BDS',Plant='3BDS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BDS',Plant='3BDS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BDS",
+		"Plant": "3BDS",
+		"PlantDescr": "Baie des Sables",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BHW',Plant='3BHW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BHW',Plant='3BHW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BHW",
+		"Plant": "3BHW",
+		"PlantDescr": "Bishop Hill Wind Farm",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BLC',Plant='3BLC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BLC',Plant='3BLC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BLC",
+		"Plant": "3BLC",
+		"PlantDescr": "Bull Creek O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BLU',Plant='3BLU')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BLU',Plant='3BLU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BLU",
+		"Plant": "3BLU",
+		"PlantDescr": "BluEarth Renewables CAN O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BRG',Plant='3BRG')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BRG',Plant='3BRG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BRG",
+		"Plant": "3BRG",
+		"PlantDescr": "Brantgate",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BSL',Plant='3BSL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BSL',Plant='3BSL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BSL",
+		"Plant": "3BSL",
+		"PlantDescr": "Bellevue Solar LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BWF',Plant='3BWF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3BWF',Plant='3BWF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3BWF",
+		"Plant": "3BWF",
+		"PlantDescr": "Brookfield - DTE O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAD',Plant='3CAD')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAD',Plant='3CAD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CAD",
+		"Plant": "3CAD",
+		"PlantDescr": "Canada – O&M US",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAS',Plant='3CAS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAS',Plant='3CAS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CAS",
+		"Plant": "3CAS",
+		"PlantDescr": "Cascade",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAT',Plant='3CAT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAT',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CAT",
+		"Plant": "3CAT",
+		"PlantDescr": "Catalina O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAT',Plant='CASL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CAT',Plant='CASL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CAT",
+		"Plant": "CASL",
+		"PlantDescr": "Catalina Solar Lessee, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CFW',Plant='3CFW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CFW',Plant='3CFW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CFW",
+		"Plant": "3CFW",
+		"PlantDescr": "Chestnut Flats Wind, LLC O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CFW',Plant='2CFL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CFW',Plant='2CFL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CFW",
+		"Plant": "2CFL",
+		"PlantDescr": "Chestnut Flats Lessee, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CHA',Plant='3CHA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CHA',Plant='3CHA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CHA",
+		"Plant": "3CHA",
+		"PlantDescr": "Chaparral",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CHW',Plant='3CHW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CHW',Plant='3CHW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CHW",
+		"Plant": "3CHW",
+		"PlantDescr": "Canadian Hills",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CPH',Plant='3CPH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CPH',Plant='3CPH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CPH",
+		"Plant": "3CPH",
+		"PlantDescr": "Copenhagen Wind Farm, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CRB',Plant='3CRB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CRB',Plant='3CRB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CRB",
+		"Plant": "3CRB",
+		"PlantDescr": "Northern Wind Energy, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CSN',Plant='3CSN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3CSN',Plant='3CSN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3CSN",
+		"Plant": "3CSN",
+		"PlantDescr": "New Mexico - Other O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DCB',Plant='3DCB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DCB',Plant='3DCB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3DCB",
+		"Plant": "3DCB",
+		"PlantDescr": "Dorchester O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DCB',Plant='2PDB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DCB',Plant='2PDB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3DCB",
+		"Plant": "2PDB",
+		"PlantDescr": "Dorchester Biomass, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DGS',Plant='3DGS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DGS',Plant='3DGS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3DGS",
+		"Plant": "3DGS",
+		"PlantDescr": "DG",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DLL',Plant='3DLL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DLL',Plant='3DLL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3DLL",
+		"Plant": "3DLL",
+		"PlantDescr": "DLL",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DOL',Plant='3DOL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DOL',Plant='3DOL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3DOL",
+		"Plant": "3DOL",
+		"PlantDescr": "Dollarhide",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DUN',Plant='3DUN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3DUN',Plant='3DUN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3DUN",
+		"Plant": "3DUN",
+		"PlantDescr": "Dunlap 1 O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ECH',Plant='3ECH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ECH',Plant='3ECH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ECH",
+		"Plant": "3ECH",
+		"PlantDescr": "Echo Facility - DTE O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ELM',Plant='3ELM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ELM',Plant='3ELM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ELM",
+		"Plant": "3ELM",
+		"PlantDescr": "Elmsley East and West",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ENC',Plant='3ENC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ENC',Plant='3ENC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ENC",
+		"Plant": "3ENC",
+		"PlantDescr": "Enfinity CPB",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ENF',Plant='3ENF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ENF',Plant='3ENF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ENF",
+		"Plant": "3ENF",
+		"PlantDescr": "Enfinity",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ENL',Plant='3ENL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ENL',Plant='3ENL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ENL",
+		"Plant": "3ENL",
+		"PlantDescr": "Enfinity Lemoore",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3FBY',Plant='3FBY')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3FBY',Plant='3FBY')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3FBY",
+		"Plant": "3FBY",
+		"PlantDescr": "Forebay Wind O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3FRM',Plant='3FRM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3FRM',Plant='3FRM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3FRM",
+		"Plant": "3FRM",
+		"PlantDescr": "Fermeuse Wind Power",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3FWR',Plant='3FWR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3FWR',Plant='3FWR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3FWR",
+		"Plant": "3FWR",
+		"PlantDescr": "Flat Water Wind Farm, LLC O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GCW',Plant='3GCW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GCW',Plant='3GCW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3GCW",
+		"Plant": "3GCW",
+		"PlantDescr": "Gratiot County O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GRA',Plant='3GRA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GRA',Plant='3GRA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3GRA",
+		"Plant": "3GRA",
+		"PlantDescr": "Granit -extension of St Robert",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GRA',Plant='2GRA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GRA',Plant='2GRA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3GRA",
+		"Plant": "2GRA",
+		"PlantDescr": "Granit (ext of St Robert) GEN",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GWW',Plant='3GWW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3GWW',Plant='3GWW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3GWW",
+		"Plant": "3GWW",
+		"PlantDescr": "Great Western Wind",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HBU',Plant='3HBU')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HBU',Plant='3HBU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3HBU",
+		"Plant": "3HBU",
+		"PlantDescr": "Horse Butte O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HER',Plant='3HER')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HER',Plant='3HER')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3HER",
+		"Plant": "3HER",
+		"PlantDescr": "Hereford O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HER',Plant='2HER')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HER',Plant='2HER')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3HER",
+		"Plant": "2HER",
+		"PlantDescr": "TX Hereford Wind, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HOP',Plant='3HOP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HOP',Plant='3HOP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3HOP",
+		"Plant": "3HOP",
+		"PlantDescr": "Hopi",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HRE',Plant='3HRE')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3HRE',Plant='3HRE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3HRE",
+		"Plant": "3HRE",
+		"PlantDescr": "Heartland Renewable Energy,LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ISI',Plant='3ISI')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ISI',Plant='3ISI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ISI",
+		"Plant": "3ISI",
+		"PlantDescr": "St. Isidore A and B",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3IWI',Plant='3IWI')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3IWI',Plant='3IWI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3IWI",
+		"Plant": "3IWI",
+		"PlantDescr": "International Wind O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3JAL',Plant='3JAL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3JAL',Plant='3JAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3JAL",
+		"Plant": "3JAL",
+		"PlantDescr": "JAL",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KAW',Plant='3KAW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KAW',Plant='3KAW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3KAW",
+		"Plant": "3KAW",
+		"PlantDescr": "Kawailoa Wind, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KBR',Plant='3KBR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KBR',Plant='3KBR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3KBR",
+		"Plant": "3KBR",
+		"PlantDescr": "Kent Breeze",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KCW',Plant='3KCW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KCW',Plant='3KCW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3KCW",
+		"Plant": "3KCW",
+		"PlantDescr": "Kelly Creek Wind",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KWO',Plant='3KWO')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3KWO',Plant='3KWO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3KWO",
+		"Plant": "3KWO",
+		"PlantDescr": "K2 Wind Ontario LP",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LAC',Plant='3LAC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LAC',Plant='3LAC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LAC",
+		"Plant": "3LAC",
+		"PlantDescr": "Lac Alfred - O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LAL',Plant='3LAL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LAL',Plant='3LAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LAL",
+		"Plant": "3LAL",
+		"PlantDescr": "Lalamilo Wind Company, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LAN',Plant='3LAN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LAN',Plant='3LAN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LAN",
+		"Plant": "3LAN",
+		"PlantDescr": "Lancaster Solar, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LDR',Plant='3LDR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LDR',Plant='3LDR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LDR",
+		"Plant": "3LDR",
+		"PlantDescr": "Linden Ranch O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LEA',Plant='3LEA')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LEA',Plant='3LEA')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LEA",
+		"Plant": "3LEA",
+		"PlantDescr": "LEA",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LEP',Plant='3LEP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LEP',Plant='3LEP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LEP",
+		"Plant": "3LEP",
+		"PlantDescr": "Lepomis Solar, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LHW',Plant='3LHW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LHW',Plant='3LHW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LHW",
+		"Plant": "3LHW",
+		"PlantDescr": "Longhorn O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LIN',Plant='3LIN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LIN',Plant='3LIN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LIN",
+		"Plant": "3LIN",
+		"PlantDescr": "Lindsay Solar LP",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LKF',Plant='3LKF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LKF',Plant='3LKF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LKF",
+		"Plant": "3LKF",
+		"PlantDescr": "Lakefield O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LKF',Plant='2LFL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LKF',Plant='2LFL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LKF",
+		"Plant": "2LFL",
+		"PlantDescr": "LWP Lessee, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LKF',Plant='2LKF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3LKF',Plant='2LKF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3LKF",
+		"Plant": "2LKF",
+		"PlantDescr": "Lakefield Wind Project LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MAR',Plant='3MAR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MAR',Plant='3MAR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MAR",
+		"Plant": "3MAR",
+		"PlantDescr": "Marsh Hill III LP",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MCH',Plant='3MCH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MCH',Plant='3MCH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MCH",
+		"Plant": "3MCH",
+		"PlantDescr": "Macho Springs Power I, LLC O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MDS',Plant='3MDS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MDS',Plant='3MDS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MDS",
+		"Plant": "3MDS",
+		"PlantDescr": "Massif du Sud - O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MES',Plant='3MES')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MES',Plant='3MES')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MES",
+		"Plant": "3MES",
+		"PlantDescr": "Mesquite Creek",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MEX',Plant='3MEX')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MEX',Plant='3MEX')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MEX",
+		"Plant": "3MEX",
+		"PlantDescr": "Mexico – O&M US",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MHB',Plant='3MHB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MHB',Plant='3MHB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MHB",
+		"Plant": "3MHB",
+		"PlantDescr": "McHenry Battery Storage, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MHP',Plant='3MHP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MHP',Plant='3MHP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MHP",
+		"Plant": "3MHP",
+		"PlantDescr": "McFadden Ridge/High Plains O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MIL',Plant='3MIL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MIL',Plant='3MIL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MIL",
+		"Plant": "3MIL",
+		"PlantDescr": "Milo Wind Project, LLC O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MIT',Plant='3MIT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MIT',Plant='3MIT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MIT",
+		"Plant": "3MIT",
+		"PlantDescr": "La Mitis (extn of Lac Alfred)",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MIT',Plant='2MIT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MIT',Plant='2MIT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MIT",
+		"Plant": "2MIT",
+		"PlantDescr": "La Mitis(ext of Lac Alfred)GEN",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MON',Plant='3MON')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MON',Plant='3MON')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MON",
+		"Plant": "3MON",
+		"PlantDescr": "Monument",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MTF',Plant='3MTF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MTF',Plant='3MTF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MTF",
+		"Plant": "3MTF",
+		"PlantDescr": "Mojave Test Facility",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MTR',Plant='3MTR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3MTR',Plant='3MTR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3MTR",
+		"Plant": "3MTR",
+		"PlantDescr": "Mont Rothery LP",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3NCW',Plant='3NCW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3NCW',Plant='3NCW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3NCW",
+		"Plant": "3NCW",
+		"PlantDescr": "Nine Canyon Wind Project O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3NEW',Plant='3NEW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3NEW',Plant='3NEW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3NEW",
+		"Plant": "3NEW",
+		"PlantDescr": "New York/New Jersey Solar Plan",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3NIC',Plant='3NIC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3NIC',Plant='3NIC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3NIC",
+		"Plant": "3NIC",
+		"PlantDescr": "Nicolas-Riou Wind Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3OM2',Plant='3OM2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3OM2',Plant='3OM2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3OM2",
+		"Plant": "3OM2",
+		"PlantDescr": "Oldman 2 Wind Farm",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ON1',Plant='3ON1')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ON1',Plant='3ON1')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ON1",
+		"Plant": "3ON1",
+		"PlantDescr": "Little Creek Solar Plant",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3OR1',Plant='3OR1')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3OR1',Plant='3OR1')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3OR1",
+		"Plant": "3OR1",
+		"PlantDescr": "Orion I",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3OR2',Plant='3OR2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3OR2',Plant='3OR2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3OR2",
+		"Plant": "3OR2",
+		"PlantDescr": "Orion II",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ORG',Plant='3ORG')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3ORG',Plant='3ORG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3ORG",
+		"Plant": "3ORG",
+		"PlantDescr": "Oregon Solar Plants",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PAC',Plant='3PAC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PAC',Plant='3PAC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PAC",
+		"Plant": "3PAC",
+		"PlantDescr": "Pacific Wind O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PAC',Plant='2PWL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PAC',Plant='2PWL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PAC",
+		"Plant": "2PWL",
+		"PlantDescr": "Pacific Wind Lessee, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PAS',Plant='3PAS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PAS',Plant='3PAS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PAS",
+		"Plant": "3PAS",
+		"PlantDescr": "Passadumkeag Windpark, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PDS',Plant='3PDS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PDS',Plant='3PDS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PDS",
+		"Plant": "3PDS",
+		"PlantDescr": "EDF Renewables-Prjct Dplymnt",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PEN',Plant='3PEN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PEN',Plant='3PEN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PEN",
+		"Plant": "3PEN",
+		"PlantDescr": "Pendleton Solar Energy Center",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PHS',Plant='3PHS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PHS',Plant='3PHS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PHS",
+		"Plant": "3PHS",
+		"PlantDescr": "Port Hope",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PKS',Plant='3PKS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PKS',Plant='3PKS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PKS",
+		"Plant": "3PKS",
+		"PlantDescr": "Pukana Solar(Beretania,Hilo)",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PLH',Plant='3PLH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PLH',Plant='3PLH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PLH",
+		"Plant": "3PLH",
+		"PlantDescr": "Pilot Hill O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PLH',Plant='2PHW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PLH',Plant='2PHW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PLH",
+		"Plant": "2PHW",
+		"PlantDescr": "Pilot Hill Wind, LLC (North)",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PTR',Plant='3PTR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PTR',Plant='3PTR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PTR",
+		"Plant": "3PTR",
+		"PlantDescr": "TPW Petersburg O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PTU',Plant='3PTU')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3PTU',Plant='3PTU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3PTU",
+		"Plant": "3PTU",
+		"PlantDescr": "PaTu O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RCN',Plant='3RCN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RCN',Plant='3RCN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RCN",
+		"Plant": "3RCN",
+		"PlantDescr": "EDF RS Ontario North",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RCS',Plant='3RCS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RCS',Plant='3RCS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RCS",
+		"Plant": "3RCS",
+		"PlantDescr": "EDF RS Ontario South",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RDM',Plant='3RDM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RDM',Plant='3RDM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RDM",
+		"Plant": "3RDM",
+		"PlantDescr": "Riviere du Moulin (3RDM)",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RDM',Plant='2RDM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RDM',Plant='2RDM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RDM",
+		"Plant": "2RDM",
+		"PlantDescr": "Riviere du Moulin (2RDM) - Gen",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RFW',Plant='3RFW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RFW',Plant='3RFW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RFW",
+		"Plant": "3RFW",
+		"PlantDescr": "Rock Falls Wind",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RGF',Plant='3RGF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RGF',Plant='3RGF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RGF",
+		"Plant": "3RGF",
+		"PlantDescr": "Ridgefield",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RLD',Plant='3RLD')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RLD',Plant='3RLD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RLD",
+		"Plant": "3RLD",
+		"PlantDescr": "Rockland Wind Farm LLC O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RPP',Plant='3RPP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RPP',Plant='3RPP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RPP",
+		"Plant": "3RPP",
+		"PlantDescr": "Ridgewind O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RPW',Plant='3RPW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RPW',Plant='3RPW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RPW",
+		"Plant": "3RPW",
+		"PlantDescr": "Red Pine Wind Project LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RRW',Plant='3RRW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RRW',Plant='3RRW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RRW",
+		"Plant": "3RRW",
+		"PlantDescr": "Roth Rock O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RSP',Plant='3RSP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RSP',Plant='3RSP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RSP",
+		"Plant": "3RSP",
+		"PlantDescr": "Roseplain",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RSV',Plant='3RSV')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RSV',Plant='3RSV')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RSV",
+		"Plant": "3RSV",
+		"PlantDescr": "Roosevelt Wind Project, LL O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RWP',Plant='3RWP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RWP',Plant='3RWP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RWP",
+		"Plant": "3RWP",
+		"PlantDescr": "Rocky Ridge  O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RYR',Plant='3RYR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3RYR',Plant='3RYR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3RYR",
+		"Plant": "3RYR",
+		"PlantDescr": "Rainy River 1 - Morley",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SAC',Plant='3SAC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SAC',Plant='3SAC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SAC",
+		"Plant": "3SAC",
+		"PlantDescr": "Northern California Solar Plan",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SAN',Plant='3SAN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SAN',Plant='3SAN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SAN",
+		"Plant": "3SAN",
+		"PlantDescr": "O&M San Diego",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SAT',Plant='3SAT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SAT',Plant='3SAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SAT",
+		"Plant": "3SAT",
+		"PlantDescr": "Saturn Solar 2 CAN O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SFK',Plant='3SFK')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SFK',Plant='3SFK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SFK",
+		"Plant": "3SFK",
+		"PlantDescr": "Salt Fork Wind",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH2',Plant='3SH2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH2',Plant='3SH2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SH2",
+		"Plant": "3SH2",
+		"PlantDescr": "Shiloh2 Wind Projects O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH2',Plant='SWP2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH2',Plant='SWP2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SH2",
+		"Plant": "SWP2",
+		"PlantDescr": "Shiloh Wind Project II",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH3',Plant='3SH3')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH3',Plant='3SH3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SH3",
+		"Plant": "3SH3",
+		"PlantDescr": "Shiloh3 Wind Projects O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH3',Plant='2S3L')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH3',Plant='2S3L')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SH3",
+		"Plant": "2S3L",
+		"PlantDescr": "Shiloh III Lessee, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH4',Plant='3SH4')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH4',Plant='3SH4')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SH4",
+		"Plant": "3SH4",
+		"PlantDescr": "Shiloh4 Wind Projects O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH4',Plant='2S4L')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SH4',Plant='2S4L')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SH4",
+		"Plant": "2S4L",
+		"PlantDescr": "Shiloh IV Lessee, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SLR',Plant='3SLR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SLR',Plant='3SLR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SLR",
+		"Plant": "3SLR",
+		"PlantDescr": "Solar – O&M (<5MW)",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SLW',Plant='3SLW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SLW',Plant='3SLW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SLW",
+		"Plant": "3SLW",
+		"PlantDescr": "Slate Creek Wind Project O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SM2',Plant='3SM2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SM2',Plant='3SM2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SM2",
+		"Plant": "3SM2",
+		"PlantDescr": "Sherbino Mesa II",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SP2',Plant='3SP2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SP2',Plant='3SP2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SP2",
+		"Plant": "3SP2",
+		"PlantDescr": "Spinning Spur Two, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SP2',Plant='SP2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SP2',Plant='SP2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SP2",
+		"Plant": "SP2",
+		"PlantDescr": "Spinning Spur Wind Two, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPP',Plant='3SPP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPP',Plant='3SPP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SPP",
+		"Plant": "3SPP",
+		"PlantDescr": "Stoneray Power Partners",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPR',Plant='3SPR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPR',Plant='3SPR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SPR",
+		"Plant": "3SPR",
+		"PlantDescr": "Spearville O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPR',Plant='2SP3')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPR',Plant='2SP3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SPR",
+		"Plant": "2SP3",
+		"PlantDescr": "Spearville 3, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPS',Plant='3SPS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPS',Plant='3SPS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SPS",
+		"Plant": "3SPS",
+		"PlantDescr": "Spinning Spur Wind I, LLC O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPS',Plant='2SPS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SPS',Plant='2SPS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SPS",
+		"Plant": "2SPS",
+		"PlantDescr": "Spinning Spur Wind, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SRB',Plant='3SRB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SRB',Plant='3SRB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SRB",
+		"Plant": "3SRB",
+		"PlantDescr": "Saint-Robert Bellarmin - O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SRB',Plant='2SRB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SRB',Plant='2SRB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SRB",
+		"Plant": "2SRB",
+		"PlantDescr": "Saint-Robert Bellarmin - Gen",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SRW',Plant='3SRW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SRW',Plant='3SRW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SRW",
+		"Plant": "3SRW",
+		"PlantDescr": "Stephens Ranch",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SS3',Plant='3SS3')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SS3',Plant='3SS3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SS3",
+		"Plant": "3SS3",
+		"PlantDescr": "Spinning Spur Wind Three, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SS3',Plant='2SS3')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SS3',Plant='2SS3')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SS3",
+		"Plant": "2SS3",
+		"PlantDescr": "Spinning Spur Wind Three, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SSL',Plant='3SSL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SSL',Plant='3SSL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SSL",
+		"Plant": "3SSL",
+		"PlantDescr": "Sacramento Soleil LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SSP',Plant='3SSP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SSP',Plant='3SSP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SSP",
+		"Plant": "3SSP",
+		"PlantDescr": "Southgate Solar Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SSW',Plant='3SSW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SSW',Plant='3SSW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SSW",
+		"Plant": "3SSW",
+		"PlantDescr": "Silver Star",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3STF',Plant='3STF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3STF',Plant='3STF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3STF",
+		"Plant": "3STF",
+		"PlantDescr": "Sandringham - TerraForm Solar",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SUN',Plant='3SUN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SUN',Plant='3SUN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SUN",
+		"Plant": "3SUN",
+		"PlantDescr": "RE Sunningdale 1 CAN O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SWD',Plant='3SWD')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3SWD',Plant='3SWD')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3SWD",
+		"Plant": "3SWD",
+		"PlantDescr": "Starwood SSM1, 2 and 3",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TBW',Plant='3TBW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TBW',Plant='3TBW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3TBW",
+		"Plant": "3TBW",
+		"PlantDescr": "Tyler Bluff Wind",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3THW',Plant='3THW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3THW',Plant='3THW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3THW",
+		"Plant": "3THW",
+		"PlantDescr": "Trinity Hills",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TUN',Plant='3TUN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TUN',Plant='3TUN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3TUN",
+		"Plant": "3TUN",
+		"PlantDescr": "Tundra Canada O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TWF',Plant='3TWF')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TWF',Plant='3TWF')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3TWF",
+		"Plant": "3TWF",
+		"PlantDescr": "Thumb Wind Project O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TWP',Plant='3TWP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3TWP',Plant='3TWP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3TWP",
+		"Plant": "3TWP",
+		"PlantDescr": "Tuolumne O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3VEG',Plant='3VEG')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3VEG',Plant='3VEG')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3VEG",
+		"Plant": "3VEG",
+		"PlantDescr": "Vega",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WAT',Plant='3WAT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WAT',Plant='3WAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WAT",
+		"Plant": "3WAT",
+		"PlantDescr": "Watts Wind II",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WDL',Plant='3WDL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WDL',Plant='3WDL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WDL",
+		"Plant": "3WDL",
+		"PlantDescr": "Woodland Springs Storage Area",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WHS',Plant='3WHS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WHS',Plant='3WHS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WHS",
+		"Plant": "3WHS",
+		"PlantDescr": "Wintering Hills Wind Farm",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WOO',Plant='3WOO')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WOO',Plant='3WOO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WOO",
+		"Plant": "3WOO",
+		"PlantDescr": "Woodville - TerraForm Solar",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WSP',Plant='3WSP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WSP',Plant='3WSP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WSP",
+		"Plant": "3WSP",
+		"PlantDescr": "Windsor Solar Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WT2',Plant='3WT2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WT2',Plant='3WT2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WT2",
+		"Plant": "3WT2",
+		"PlantDescr": "Windthorst-2",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WT2',Plant='WNT2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3WT2',Plant='WNT2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3WT2",
+		"Plant": "WNT2",
+		"PlantDescr": "Windthorst-Two, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3YSL',Plant='3YSL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='3YSL',Plant='3YSL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "3YSL",
+		"Plant": "3YSL",
+		"PlantDescr": "Yamhill Solar LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='ALT',Plant='ALT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='ALT',Plant='ALT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "ALT",
+		"Plant": "ALT",
+		"PlantDescr": "Altamont O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='BCW',Plant='BCW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='BCW',Plant='BCW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "BCW",
+		"Plant": "BCW",
+		"PlantDescr": "Benton Country O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CASL',Plant='CASL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CASL',Plant='CASL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CASL",
+		"Plant": "CASL",
+		"PlantDescr": "Catalina Solar Lessee, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CCY',Plant='CCY')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CCY',Plant='CCY')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CCY",
+		"Plant": "CCY",
+		"PlantDescr": "Charles City O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CDR',Plant='CDR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CDR',Plant='CDR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CDR",
+		"Plant": "CDR",
+		"PlantDescr": "Cedar Creek O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CEN',Plant='CEN')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CEN',Plant='CEN')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CEN",
+		"Plant": "CEN",
+		"PlantDescr": "Century O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CMP',Plant='CMP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CMP',Plant='CMP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CMP",
+		"Plant": "CMP",
+		"PlantDescr": "Camp Grove O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CPH',Plant='CPH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CPH',Plant='CPH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CPH",
+		"Plant": "CPH",
+		"PlantDescr": "Copenhagen Wind Farm, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CRB',Plant='CRB')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CRB',Plant='CRB')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CRB",
+		"Plant": "CRB",
+		"PlantDescr": "Chanarambie O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CRB',Plant='NWE')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CRB',Plant='NWE')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CRB",
+		"Plant": "NWE",
+		"PlantDescr": "Northern Wind",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CRK',Plant='CRK')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CRK',Plant='CRK')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CRK",
+		"Plant": "CRK",
+		"PlantDescr": "Crane Creek O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CSP',Plant='CSP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='CSP',Plant='CSP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "CSP",
+		"Plant": "CSP",
+		"PlantDescr": "Casper Wind Project O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='D6',Plant='D6')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='D6',Plant='D6')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "D6",
+		"Plant": "D6",
+		"PlantDescr": "DifWind VI O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='D6',Plant='DIF6')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='D6',Plant='DIF6')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "D6",
+		"Plant": "DIF6",
+		"PlantDescr": "DIFWIND VI",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='D8',Plant='D8')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='D8',Plant='D8')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "D8",
+		"Plant": "D8",
+		"PlantDescr": "DifWind VIII O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='DES',Plant='DES')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='DES',Plant='DES')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "DES",
+		"Plant": "DES",
+		"PlantDescr": "Dist.Electricty & Storage",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='ESCC',Plant='ESCC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='ESCC',Plant='ESCC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "ESCC",
+		"Plant": "ESCC",
+		"PlantDescr": "EDF Renewables Services Inc.",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='FNT',Plant='FNT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='FNT',Plant='FNT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "FNT",
+		"Plant": "FNT",
+		"PlantDescr": "Fenton O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='FNT',Plant='FPP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='FNT',Plant='FPP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "FNT",
+		"Plant": "FPP",
+		"PlantDescr": "Fenton Power Partners I, LLC",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='FPP',Plant='FPP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='FPP',Plant='FPP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "FPP",
+		"Plant": "FPP",
+		"PlantDescr": "Fenton Power Partners I, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='GH',Plant='GH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='GH',Plant='GH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "GH",
+		"Plant": "GH",
+		"PlantDescr": "Goodnoe Hill O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='GRH',Plant='GRH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='GRH',Plant='GRH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "GRH",
+		"Plant": "GRH",
+		"PlantDescr": "Glenrock / Rolling Hills O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HAW',Plant='HAW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HAW',Plant='HAW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HAW",
+		"Plant": "HAW",
+		"PlantDescr": "HAWI  O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HAW',Plant='HAWI')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HAW',Plant='HAWI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HAW",
+		"Plant": "HAWI",
+		"PlantDescr": "HAWI",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HAWI',Plant='HAWI')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HAWI',Plant='HAWI')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HAWI",
+		"Plant": "HAWI",
+		"PlantDescr": "HAWI",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HOU',Plant='HOU')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HOU',Plant='HOU')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HOU",
+		"Plant": "HOU",
+		"PlantDescr": "Houston Office",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HSR',Plant='HSR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HSR',Plant='HSR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HSR",
+		"Plant": "HSR",
+		"PlantDescr": "Hoosier O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HSR',Plant='HWP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HSR',Plant='HWP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HSR",
+		"Plant": "HWP",
+		"PlantDescr": "Hoosier Wind Project",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HWP',Plant='HWP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='HWP',Plant='HWP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "HWP",
+		"Plant": "HWP",
+		"PlantDescr": "Hoosier Wind Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='IAL',Plant='IAL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='IAL',Plant='IAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "IAL",
+		"Plant": "IAL",
+		"PlantDescr": "Iowa Lakes O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='INT',Plant='INT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='INT',Plant='INT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "INT",
+		"Plant": "INT",
+		"PlantDescr": "Intrepid",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='LJ',Plant='LJ')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='LJ',Plant='LJ')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "LJ",
+		"Plant": "LJ",
+		"PlantDescr": "Leaning Juniper O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='MES',Plant='MES')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='MES',Plant='MES')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "MES",
+		"Plant": "MES",
+		"PlantDescr": "Do Not Use",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='NBL',Plant='NBL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='NBL',Plant='NBL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "NBL",
+		"Plant": "NBL",
+		"PlantDescr": "Nobles Wind Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='NW',Plant='NW')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='NW',Plant='NW')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "NW",
+		"Plant": "NW",
+		"PlantDescr": "Northwind O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='OAS',Plant='OAS')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='OAS',Plant='OAS')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "OAS",
+		"Plant": "OAS",
+		"PlantDescr": "Oasis O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='OAS',Plant='OPP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='OAS',Plant='OPP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "OAS",
+		"Plant": "OPP",
+		"PlantDescr": "OPP",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='OPP',Plant='OPP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='OPP',Plant='OPP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "OPP",
+		"Plant": "OPP",
+		"PlantDescr": "OPP",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='POM',Plant='POM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='POM',Plant='POM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "POM",
+		"Plant": "POM",
+		"PlantDescr": "Pomeroy O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='PP',Plant='PP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='PP',Plant='PP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "PP",
+		"Plant": "PP",
+		"PlantDescr": "Patterson Pass O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='PSP',Plant='PSP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='PSP',Plant='PSP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "PSP",
+		"Plant": "PSP",
+		"PlantDescr": "Palm Springs O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='PT',Plant='PT')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='PT',Plant='PT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "PT",
+		"Plant": "PT",
+		"PlantDescr": "Peetz O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SH',Plant='SH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SH',Plant='SH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SH",
+		"Plant": "SH",
+		"PlantDescr": "Shiloh Wind Projects O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SHH',Plant='SHH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SHH',Plant='SHH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SHH",
+		"Plant": "SHH",
+		"PlantDescr": "StoneHagen Holdco, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SHP',Plant='SHP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SHP',Plant='SHP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SHP",
+		"Plant": "SHP",
+		"PlantDescr": "Do Not Use",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SMH',Plant='SMH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SMH',Plant='SMH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SMH",
+		"Plant": "SMH",
+		"PlantDescr": "Seven Mile Hill",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SOL',Plant='SOL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SOL',Plant='SOL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SOL",
+		"Plant": "SOL",
+		"PlantDescr": "Solano",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SOL',Plant='EWF5')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SOL',Plant='EWF5')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SOL",
+		"Plant": "EWF5",
+		"PlantDescr": "EDF Renewable Windfarm V, Inc.",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SP2',Plant='SP2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SP2',Plant='SP2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SP2",
+		"Plant": "SP2",
+		"PlantDescr": "Spinning Spur Wind Two, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SPR',Plant='SPR')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SPR',Plant='SPR')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SPR",
+		"Plant": "SPR",
+		"PlantDescr": "Do Not Use",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='STO',Plant='STO')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='STO',Plant='STO')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "STO",
+		"Plant": "STO",
+		"PlantDescr": "Stoneray Power Partners, LLC",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SWP2',Plant='SWP2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='SWP2',Plant='SWP2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "SWP2",
+		"Plant": "SWP2",
+		"PlantDescr": "Shiloh Wind Project II",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='TEH',Plant='TEH')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='TEH',Plant='TEH')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "TEH",
+		"Plant": "TEH",
+		"PlantDescr": "Mojave Distribution Center",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='TRC',Plant='TRC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='TRC',Plant='TRC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "TRC",
+		"Plant": "TRC",
+		"PlantDescr": "Tracy O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='VAL',Plant='VAL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='VAL',Plant='VAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "VAL",
+		"Plant": "VAL",
+		"PlantDescr": "Do Not Use",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='VC',Plant='VC')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='VC',Plant='VC')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "VC",
+		"Plant": "VC",
+		"PlantDescr": "Victory / Carroll O&M",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WAL',Plant='WAL')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WAL',Plant='WAL')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "WAL",
+		"Plant": "WAL",
+		"PlantDescr": "Walnut",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WAP',Plant='WAP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WAP',Plant='WAP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "WAP",
+		"Plant": "WAP",
+		"PlantDescr": "Wapsi Wind Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WAP',Plant='WNP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WAP',Plant='WNP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "WAP",
+		"Plant": "WNP",
+		"PlantDescr": "Wapsipincion Wind Project",
+		"IsStockPlant": true
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WNP',Plant='WNP')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WNP',Plant='WNP')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "WNP",
+		"Plant": "WNP",
+		"PlantDescr": "Wapsipincion Wind Project",
+		"IsStockPlant": false
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WNT2',Plant='WNT2')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/StockPlantSet(PlanPlant='WNT2',Plant='WNT2')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.StockPlant"
+		},
+		"PlanPlant": "WNT2",
+		"Plant": "WNT2",
+		"PlantDescr": "Windthorst-Two, LLC",
+		"IsStockPlant": false
+	}
+]

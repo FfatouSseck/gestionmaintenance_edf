@@ -1,0 +1,842 @@
+[
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "",
+		"Type": "D",
+		"Name": "",
+		"MimeType": "",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "D",
+		"Name": "Casper Wind",
+		"MimeType": "",
+		"ThumbnailUrl": "sap-icon://forlder-blank",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "D",
+		"Name": "Chanarambie",
+		"MimeType": "",
+		"ThumbnailUrl": "sap-icon://forlder-blank",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "D",
+		"Name": "Fenton",
+		"MimeType": "",
+		"ThumbnailUrl": "sap-icon://forlder-blank",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CMobility')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CMobility')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "D",
+		"Name": "Mobility",
+		"MimeType": "",
+		"ThumbnailUrl": "sap-icon://forlder-blank",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\Mobility",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "D",
+		"Name": "Patu",
+		"MimeType": "",
+		"ThumbnailUrl": "sap-icon://forlder-blank",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "D",
+		"Name": "St. Isidore A",
+		"MimeType": "",
+		"ThumbnailUrl": "sap-icon://forlder-blank",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5C100246-100246-90040727-L2-20151223-%20%20%20%20%20%20%20%200.00.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5C100246-100246-90040727-L2-20151223-%20%20%20%20%20%20%20%200.00.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "100246-100246-90040727-L2-20151223-        0.00.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\100246-100246-90040727-L2-20151223-        0.00.pdf",
+		"Length": 22512
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5C100246-100246-90040727-L2-20151223-238649.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5C100246-100246-90040727-L2-20151223-238649.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "100246-100246-90040727-L2-20151223-238649.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\100246-100246-90040727-L2-20151223-238649.pdf",
+		"Length": 22512
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CADUsers.csv')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CADUsers.csv')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "ADUsers.csv",
+		"MimeType": "application/vnd.ms-excel",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\ADUsers.csv",
+		"Length": 21346
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CIC%20S4L-IC%20S4L-90040878-F1-20160927-20.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CIC%20S4L-IC%20S4L-90040878-F1-20160927-20.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "IC S4L-IC S4L-90040878-F1-20160927-20.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\IC S4L-IC S4L-90040878-F1-20160927-20.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CICS4L-ICS4L-90040875-F1-20160926-1000.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CICS4L-ICS4L-90040875-F1-20160926-1000.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "ICS4L-ICS4L-90040875-F1-20160926-1000.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\ICS4L-ICS4L-90040875-F1-20160926-1000.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShiloh%20IV%20Lessee%20LLC-IC%20S4L-90040875-F1-26.09-100000.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShiloh%20IV%20Lessee%20LLC-IC%20S4L-90040875-F1-26.09-100000.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "Shiloh IV Lessee LLC-IC S4L-90040875-F1-26.09-100000.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Shiloh IV Lessee LLC-IC S4L-90040875-F1-26.09-100000.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShiloh%20IV%20Lessee%20LLC-IC%20S4L-90040879-F1-28.09-24756.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShiloh%20IV%20Lessee%20LLC-IC%20S4L-90040879-F1-28.09-24756.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "Shiloh IV Lessee LLC-IC S4L-90040879-F1-28.09-24756.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Shiloh IV Lessee LLC-IC S4L-90040879-F1-28.09-24756.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShiloh%20IV%20Lessee%20LLC_IC%20S4L_90040875_F1_20160926_100000.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShiloh%20IV%20Lessee%20LLC_IC%20S4L_90040875_F1_20160926_100000.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "Shiloh IV Lessee LLC_IC S4L_90040875_F1_20160926_100000.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Shiloh IV Lessee LLC_IC S4L_90040875_F1_20160926_100000.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShilohIVLessee%2CLLC_ICS4L_90040875_F1_20160926_100000.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShilohIVLessee%2CLLC_ICS4L_90040875_F1_20160926_100000.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "ShilohIVLessee,LLC_ICS4L_90040875_F1_20160926_100000.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\ShilohIVLessee,LLC_ICS4L_90040875_F1_20160926_100000.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShilohIVLessee%2CLLC_ICS4L_90040879_F1_20160928_24756.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShilohIVLessee%2CLLC_ICS4L_90040879_F1_20160928_24756.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "ShilohIVLessee,LLC_ICS4L_90040879_F1_20160928_24756.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\ShilohIVLessee,LLC_ICS4L_90040879_F1_20160928_24756.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShilohIVLesseeLLC_ICS4L_90040875_F1_20160926_100000.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CShilohIVLesseeLLC_ICS4L_90040875_F1_20160926_100000.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM",
+		"Type": "F",
+		"Name": "ShilohIVLesseeLLC_ICS4L_90040875_F1_20160926_100000.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\ShilohIVLesseeLLC_ICS4L_90040875_F1_20160926_100000.pdf",
+		"Length": 16080
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "5267-00 Generator Laser Alignment CI.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\5267-00 Generator Laser Alignment CI.pdf",
+		"Length": 51965
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5395-00%20GE%201XMW%20Annual%20Maintenance.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5395-00%20GE%201XMW%20Annual%20Maintenance.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "5395-00 GE 1XMW Annual Maintenance.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\5395-00 GE 1XMW Annual Maintenance.pdf",
+		"Length": 1079748
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5395A-00%20GE%201XMW%20Semi-Annual%20Maintenance.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5395A-00%20GE%201XMW%20Semi-Annual%20Maintenance.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "5395A-00 GE 1XMW Semi-Annual Maintenance.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\5395A-00 GE 1XMW Semi-Annual Maintenance.pdf",
+		"Length": 565298
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5490-02%20GE%20Maintenance%20Photograph%20Requirements.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5C5490-02%20GE%20Maintenance%20Photograph%20Requirements.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "5490-02 GE Maintenance Photograph Requirements.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\5490-02 GE Maintenance Photograph Requirements.pdf",
+		"Length": 57661
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5CCasper%20Wind%20-%20ONLY.txt')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5CCasper%20Wind%20-%20ONLY.txt')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "Casper Wind - ONLY.txt",
+		"MimeType": "text/plain",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\Casper Wind - ONLY.txt",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"Length": 126374
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "OEMS-PO0075 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\OEMS-PO0075 Blade Maintenance Program.pdf",
+		"Length": 116809
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "OEMS-PR0076 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\OEMS-PR0076 Blade Maintenance Program.pdf",
+		"Length": 110358
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CCasper%20Wind%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind",
+		"Type": "F",
+		"Name": "OEMS-WI2361 Blade Damage Grading.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Casper Wind\\OEMS-WI2361 Blade Damage Grading.pdf",
+		"Length": 1152888
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "5267-00 Generator Laser Alignment CI.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\5267-00 Generator Laser Alignment CI.pdf",
+		"Length": 51965
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5395-00%20GE%201XMW%20Annual%20Maintenance.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5395-00%20GE%201XMW%20Annual%20Maintenance.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "5395-00 GE 1XMW Annual Maintenance.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\5395-00 GE 1XMW Annual Maintenance.pdf",
+		"Length": 1079748
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5395A-00%20GE%201XMW%20Semi-Annual%20Maintenance.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5395A-00%20GE%201XMW%20Semi-Annual%20Maintenance.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "5395A-00 GE 1XMW Semi-Annual Maintenance.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\5395A-00 GE 1XMW Semi-Annual Maintenance.pdf",
+		"Length": 565298
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5490-02%20GE%20Maintenance%20Photograph%20Requirements.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5C5490-02%20GE%20Maintenance%20Photograph%20Requirements.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "5490-02 GE Maintenance Photograph Requirements.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\5490-02 GE Maintenance Photograph Requirements.pdf",
+		"Length": 57661
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5CChanarambie%20-%20ONLY.txt')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5CChanarambie%20-%20ONLY.txt')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "Chanarambie - ONLY.txt",
+		"MimeType": "text/plain",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\Chanarambie - ONLY.txt",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"Length": 126374
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "OEMS-PO0075 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\OEMS-PO0075 Blade Maintenance Program.pdf",
+		"Length": 116809
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "OEMS-PR0076 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\OEMS-PR0076 Blade Maintenance Program.pdf",
+		"Length": 110358
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CChanarambie%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie",
+		"Type": "F",
+		"Name": "OEMS-WI2361 Blade Damage Grading.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Chanarambie\\OEMS-WI2361 Blade Damage Grading.pdf",
+		"Length": 1152888
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5C5259-06%20GE%201%205%20MW%20SSB%20Semi_Annual%20Maintenance%20Checklist%20Fenton-Chanarambie-Wapsi-E5R.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5C5259-06%20GE%201%205%20MW%20SSB%20Semi_Annual%20Maintenance%20Checklist%20Fenton-Chanarambie-Wapsi-E5R.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "5259-06 GE 1 5 MW SSB Semi_Annual Maintenance Checklist Fenton-Chanarambie-Wapsi-E5R.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\5259-06 GE 1 5 MW SSB Semi_Annual Maintenance Checklist Fenton-Chanarambie-Wapsi-E5R.pdf",
+		"Length": 428223
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "5267-00 Generator Laser Alignment CI.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\5267-00 Generator Laser Alignment CI.pdf",
+		"Length": 51965
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5C5274-00%20ER003S%20Harrington%20Hoist%20Inspection%20Form.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5C5274-00%20ER003S%20Harrington%20Hoist%20Inspection%20Form.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "5274-00 ER003S Harrington Hoist Inspection Form.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\5274-00 ER003S Harrington Hoist Inspection Form.pdf",
+		"Length": 169134
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5CFENTON%20-%20ONLY.txt')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5CFENTON%20-%20ONLY.txt')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "FENTON - ONLY.txt",
+		"MimeType": "text/plain",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\FENTON - ONLY.txt",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"Length": 126374
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "OEMS-PO0075 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\OEMS-PO0075 Blade Maintenance Program.pdf",
+		"Length": 116809
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "OEMS-PR0076 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\OEMS-PR0076 Blade Maintenance Program.pdf",
+		"Length": 110358
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CFenton%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton",
+		"Type": "F",
+		"Name": "OEMS-WI2361 Blade Damage Grading.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Fenton\\OEMS-WI2361 Blade Damage Grading.pdf",
+		"Length": 1152888
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5C5259-06%20GE%201%205%20MW%20SSB%20Semi_Annual%20Maintenance%20Checklist%20Fenton-Chanarambie-Wapsi-E5R.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5C5259-06%20GE%201%205%20MW%20SSB%20Semi_Annual%20Maintenance%20Checklist%20Fenton-Chanarambie-Wapsi-E5R.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "5259-06 GE 1 5 MW SSB Semi_Annual Maintenance Checklist Fenton-Chanarambie-Wapsi-E5R.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\5259-06 GE 1 5 MW SSB Semi_Annual Maintenance Checklist Fenton-Chanarambie-Wapsi-E5R.pdf",
+		"Length": 428223
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "5267-00 Generator Laser Alignment CI.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\5267-00 Generator Laser Alignment CI.pdf",
+		"Length": 51965
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5C5274-00%20ER003S%20Harrington%20Hoist%20Inspection%20Form.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5C5274-00%20ER003S%20Harrington%20Hoist%20Inspection%20Form.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "5274-00 ER003S Harrington Hoist Inspection Form.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\5274-00 ER003S Harrington Hoist Inspection Form.pdf",
+		"Length": 169134
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"Length": 126374
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "OEMS-PO0075 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\OEMS-PO0075 Blade Maintenance Program.pdf",
+		"Length": 116809
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "OEMS-PR0076 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\OEMS-PR0076 Blade Maintenance Program.pdf",
+		"Length": 110358
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "OEMS-WI2361 Blade Damage Grading.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\OEMS-WI2361 Blade Damage Grading.pdf",
+		"Length": 1152888
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5CPATU%20-%20ONLY.txt')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CPatu%5CPATU%20-%20ONLY.txt')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu",
+		"Type": "F",
+		"Name": "PATU - ONLY.txt",
+		"MimeType": "text/plain",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\Patu\\PATU - ONLY.txt",
+		"Length": 0
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5C5259-06%20GE%201%205%20MW%20SSB%20Semi_Annual%20Maintenance%20Checklist%20Fenton-Chanarambie-Wapsi-E5R.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5C5259-06%20GE%201%205%20MW%20SSB%20Semi_Annual%20Maintenance%20Checklist%20Fenton-Chanarambie-Wapsi-E5R.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "5259-06 GE 1 5 MW SSB Semi_Annual Maintenance Checklist Fenton-Chanarambie-Wapsi-E5R.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\5259-06 GE 1 5 MW SSB Semi_Annual Maintenance Checklist Fenton-Chanarambie-Wapsi-E5R.pdf",
+		"Length": 428223
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5C5267-00%20Generator%20Laser%20Alignment%20CI.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "5267-00 Generator Laser Alignment CI.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\5267-00 Generator Laser Alignment CI.pdf",
+		"Length": 51965
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5C5274-00%20ER003S%20Harrington%20Hoist%20Inspection%20Form.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5C5274-00%20ER003S%20Harrington%20Hoist%20Inspection%20Form.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "5274-00 ER003S Harrington Hoist Inspection Form.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\5274-00 ER003S Harrington Hoist Inspection Form.pdf",
+		"Length": 169134
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-FO5111%20Blade%20Inspection%20-%20Grading%20Report.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\OEMS-FO5111 Blade Inspection - Grading Report.pdf",
+		"Length": 126374
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-PO0075%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "OEMS-PO0075 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\OEMS-PO0075 Blade Maintenance Program.pdf",
+		"Length": 116809
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-PR0076%20Blade%20Maintenance%20Program.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "OEMS-PR0076 Blade Maintenance Program.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\OEMS-PR0076 Blade Maintenance Program.pdf",
+		"Length": 110358
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5COEMS-WI2361%20Blade%20Damage%20Grading.pdf')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "OEMS-WI2361 Blade Damage Grading.pdf",
+		"MimeType": "application/pdf",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\OEMS-WI2361 Blade Damage Grading.pdf",
+		"Length": 1152888
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5CSt.%20Isidore%20A%20-%20ONLY.txt')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DirectoryItemSet('%5C%5CEnx-r3sdw11%5CIface%5CFTP%5CInbound%5CECRM%5CSt.%20Isidore%20A%5CSt.%20Isidore%20A%20-%20ONLY.txt')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.DirectoryItem"
+		},
+		"Directory": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A",
+		"Type": "F",
+		"Name": "St. Isidore A - ONLY.txt",
+		"MimeType": "text/plain",
+		"ThumbnailUrl": "",
+		"Url": "\\\\Enx-r3sdw11\\Iface\\FTP\\Inbound\\ECRM\\St. Isidore A\\St. Isidore A - ONLY.txt",
+		"Length": 0
+	}
+]

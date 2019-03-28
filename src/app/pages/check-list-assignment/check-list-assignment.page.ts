@@ -92,7 +92,6 @@ export class CheckListAssignmentPage implements OnInit {
                 this.loading = false;
                 this.noData = false;
                 if (segmentIndex != null && segmentIndex != undefined) {
-                  console.log("here")
                   this.orderType = this.types[segmentIndex];
                 }
                 else this.orderType = this.types[0];
@@ -186,7 +185,6 @@ export class CheckListAssignmentPage implements OnInit {
 
   doRefresh(event) {
     this.refresh = true;
-    console.log('afterViewInit => ', this.tabGroup.selectedIndex);
     this.getAllOrders(this.tabGroup.selectedIndex);
 
     setTimeout(() => {

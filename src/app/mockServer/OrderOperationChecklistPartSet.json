@@ -1,0 +1,506 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00018')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00018')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00018",
+		"PartQuantity": "1",
+		"PartDescr": "C00018",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00026')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00026')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00026",
+		"PartQuantity": "2",
+		"PartDescr": "C00026",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00028')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00028')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00028",
+		"PartQuantity": "3",
+		"PartDescr": "C00028",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00029')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00029')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00029",
+		"PartQuantity": "4",
+		"PartDescr": "C00029",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00039')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00039')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00039",
+		"PartQuantity": "5",
+		"PartDescr": "C00039",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00041')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00041')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00041",
+		"PartQuantity": "6",
+		"PartDescr": "C00041",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00056')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00056')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00056",
+		"PartQuantity": "7",
+		"PartDescr": "C00056",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00064')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00064')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00064",
+		"PartQuantity": "8",
+		"PartDescr": "C00064",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00066')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00066')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00066",
+		"PartQuantity": "9",
+		"PartDescr": "C00066",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00071')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00071')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00071",
+		"PartQuantity": "10",
+		"PartDescr": "C00071",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00072')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00072')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00072",
+		"PartQuantity": "11",
+		"PartDescr": "C00072",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00090')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00090')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00090",
+		"PartQuantity": "12",
+		"PartDescr": "C00090",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00094')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00094')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00094",
+		"PartQuantity": "13",
+		"PartDescr": "C00094",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00284')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00284')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00284",
+		"PartQuantity": "14",
+		"PartDescr": "C00284",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00286')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00286')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00286",
+		"PartQuantity": "15",
+		"PartDescr": "C00286",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00287')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00287')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00287",
+		"PartQuantity": "16",
+		"PartDescr": "C00287",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00289')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00289')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00289",
+		"PartQuantity": "17",
+		"PartDescr": "C00289",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00290')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00290')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00290",
+		"PartQuantity": "18",
+		"PartDescr": "C00290",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00291')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00291')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00291",
+		"PartQuantity": "19",
+		"PartDescr": "C00291",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00292')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00292')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00292",
+		"PartQuantity": "20",
+		"PartDescr": "C00292",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00336')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00336')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00336",
+		"PartQuantity": "21",
+		"PartDescr": "C00336",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00367')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00367')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00367",
+		"PartQuantity": "22",
+		"PartDescr": "C00367",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00483')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00483')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00483",
+		"PartQuantity": "23",
+		"PartDescr": "C00483",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00555')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='C00555')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "C00555",
+		"PartQuantity": "24",
+		"PartDescr": "C00555",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P00754')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P00754')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P00754",
+		"PartQuantity": "25",
+		"PartDescr": "P00754",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P00761')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P00761')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P00761",
+		"PartQuantity": "26",
+		"PartDescr": "P00761",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01002')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01002')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P01002",
+		"PartQuantity": "27",
+		"PartDescr": "P01002",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01016')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01016')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P01016",
+		"PartQuantity": "28",
+		"PartDescr": "P01016",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01019')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01019')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P01019",
+		"PartQuantity": "29",
+		"PartDescr": "P01019",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01020')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01020')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P01020",
+		"PartQuantity": "30",
+		"PartDescr": "P01020",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01742')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01742')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P01742",
+		"PartQuantity": "31",
+		"PartDescr": "P01742",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01793R')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P01793R')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P01793R",
+		"PartQuantity": "32",
+		"PartDescr": "P01793R",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P05018')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P05018')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P05018",
+		"PartQuantity": "33",
+		"PartDescr": "P05018",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P05153')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P05153')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P05153",
+		"PartQuantity": "34",
+		"PartDescr": "P05153",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P05154')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P05154')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P05154",
+		"PartQuantity": "35",
+		"PartDescr": "P05154",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P06004')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistPartSet(OrderNo='5322303',Activity='0010',PartId='P06004')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistPart"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"PartId": "P06004",
+		"PartQuantity": "36",
+		"PartDescr": "P06004",
+		"Plant": "3CAT",
+		"Picked": false
+	}
+]

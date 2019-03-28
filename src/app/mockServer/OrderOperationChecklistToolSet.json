@@ -1,0 +1,86 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00001')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00001')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTool"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolId": "00001",
+		"ToolDescr": "Tool 1",
+		"ToolQuantity": "2",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00002')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00002')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTool"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolId": "00002",
+		"ToolDescr": "Tool 2",
+		"ToolQuantity": "12",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00003')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00003')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTool"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolId": "00003",
+		"ToolDescr": "Tool 3",
+		"ToolQuantity": "12",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00004')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00004')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTool"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolId": "00004",
+		"ToolDescr": "Tool 4",
+		"ToolQuantity": "3",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00005')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00005')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTool"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolId": "00005",
+		"ToolDescr": "Tool 5",
+		"ToolQuantity": "6",
+		"Plant": "3CAT",
+		"Picked": false
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00006')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistToolSet(OrderNo='5322303',Activity='0010',ToolId='00006')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTool"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolId": "00006",
+		"ToolDescr": "Tool 6",
+		"ToolQuantity": "3",
+		"Plant": "3CAT",
+		"Picked": false
+	}
+]

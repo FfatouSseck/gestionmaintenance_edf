@@ -1,0 +1,39 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Checklist"
+		},
+		"ChklstId": "00001",
+		"Plant": "3CAT",
+		"ChklstSiteId": "CAT",
+		"Title": "Test checklist's title",
+		"CreatedOn": "\/Date(1546955290000)\/",
+		"Document": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')/Document"
+			}
+		},
+		"Measure": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')/Measure"
+			}
+		},
+		"Part": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')/Part"
+			}
+		},
+		"Task": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')/Task"
+			}
+		},
+		"Tool": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistSet('00001')/Tool"
+			}
+		}
+	}
+]

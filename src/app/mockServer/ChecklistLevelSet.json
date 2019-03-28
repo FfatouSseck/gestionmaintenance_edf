@@ -1,0 +1,496 @@
+[
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='0',ChklstLoc3='0',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='0',ChklstLoc3='0',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "0",
+		"ChklstLoc3": "0",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00136",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Remotely',ChklstLoc3='0',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Remotely',ChklstLoc3='0',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Remotely",
+		"ChklstLoc3": "0",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00004",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Remotely',ChklstLoc3='N%2FA',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Remotely',ChklstLoc3='N%2FA',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Remotely",
+		"ChklstLoc3": "N/A",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00002",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='0',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='0',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "0",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00132",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00083",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Brake')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Brake')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Brake",
+		"TaskCounter": "00003",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Cabinets')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Cabinets')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Cabinets",
+		"TaskCounter": "00006",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Cooling%20circuit')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Cooling%20circuit')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Cooling circuit",
+		"TaskCounter": "00003",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Gearbox')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Gearbox')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Gearbox",
+		"TaskCounter": "00006",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Generator')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Generator')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Generator",
+		"TaskCounter": "00018",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Hub')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Hub')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Hub",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Hydraulic%20pitch%20%283%20cylinders%29')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Hydraulic%20pitch%20%283%20cylinders%29')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Hydraulic pitch (3 cylinders)",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Hydraulic%20station')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Hydraulic%20station')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Hydraulic station",
+		"TaskCounter": "00008",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Internal%20crane')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Internal%20crane')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Internal crane",
+		"TaskCounter": "00011",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Main%20frame')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Main%20frame')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Main frame",
+		"TaskCounter": "00002",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Main%20shaft')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Main%20shaft')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Main shaft",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Nacelle')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Nacelle')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Nacelle",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Roof')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Roof')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Roof",
+		"TaskCounter": "00005",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Rotor%20slipring')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Rotor%20slipring')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Rotor slipring",
+		"TaskCounter": "00003",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Safety%20equipments')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Safety%20equipments')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Safety equipments",
+		"TaskCounter": "00004",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Yaw%20system')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Nacelle',ChklstLoc4='Yaw%20system')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Nacelle",
+		"ChklstLoc4": "Yaw system",
+		"TaskCounter": "00008",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00022",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Blade%20bearings')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Blade%20bearings')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "Blade bearings",
+		"TaskCounter": "00003",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Blades')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Blades')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "Blades",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Hub')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Hub')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "Hub",
+		"TaskCounter": "00002",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Hydraulic%20pitch%20%283%20cylinders%29')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Hydraulic%20pitch%20%283%20cylinders%29')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "Hydraulic pitch (3 cylinders)",
+		"TaskCounter": "00009",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Main%20frame')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Main%20frame')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "Main frame",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Safety%20equipments')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Rotor',ChklstLoc4='Safety%20equipments')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Rotor",
+		"ChklstLoc4": "Safety equipments",
+		"TaskCounter": "00004",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00007",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower',ChklstLoc4='High%20Voltage')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower',ChklstLoc4='High%20Voltage')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower",
+		"ChklstLoc4": "High Voltage",
+		"TaskCounter": "00002",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower',ChklstLoc4='Tower')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower',ChklstLoc4='Tower')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower",
+		"ChklstLoc4": "Tower",
+		"TaskCounter": "00003",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='0')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='0')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "0",
+		"TaskCounter": "00021",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Blades')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Blades')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "Blades",
+		"TaskCounter": "00002",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Converter')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Converter')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "Converter",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Foundation')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Foundation')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "Foundation",
+		"TaskCounter": "00010",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Inverter')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Inverter')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "Inverter",
+		"TaskCounter": "00002",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Safety%20equipments')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Safety%20equipments')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "Safety equipments",
+		"TaskCounter": "00003",
+		"Plant": "3CAT"
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Tower%20base')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistLevelSet(ChklstId='00001',ChklstLoc2='Wind%20turbine',ChklstLoc3='Tower%20base',ChklstLoc4='Tower%20base')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistLevel"
+		},
+		"ChklstId": "00001",
+		"ChklstLoc2": "Wind turbine",
+		"ChklstLoc3": "Tower base",
+		"ChklstLoc4": "Tower base",
+		"TaskCounter": "00001",
+		"Plant": "3CAT"
+	}
+]

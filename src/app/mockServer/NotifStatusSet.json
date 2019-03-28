@@ -1,0 +1,46 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifStatus"
+	},
+	"Status": "E0001",
+	"StatusShort": "INIT",
+	"StatusDescr": "Initial"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifStatus"
+	},
+	"Status": "E0002",
+	"StatusShort": "RWCA",
+	"StatusDescr": "Repair Waiting Cust. Approval"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifStatus"
+	},
+	"Status": "E0003",
+	"StatusShort": "RAPP",
+	"StatusDescr": "Repair Approved by Customer"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifStatus"
+	},
+	"Status": "E0004",
+	"StatusShort": "WMAT",
+	"StatusDescr": "Waiting on Materials"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0005')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifStatusSet('E0005')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifStatus"
+	},
+	"Status": "E0005",
+	"StatusShort": "RWPM",
+	"StatusDescr": "Waiting on Prev. Maintenance"
+}]

@@ -1,0 +1,79 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413051',Plant='3CAT',StgeLoc='1000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413051',Plant='3CAT',StgeLoc='1000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailability"
+		},
+		"Material": "SX413051",
+		"Plant": "3CAT",
+		"StgeLoc": "1000",
+		"StgeLocDescr": "Parts",
+		"Quantity": "0.000",
+		"Unit": "EA"
+	},{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413051',Plant='CASL',StgeLoc='1000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413051',Plant='CASL',StgeLoc='1000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailability"
+		},
+		"Material": "SX413051",
+		"Plant": "CASL",
+		"StgeLoc": "1000",
+		"StgeLocDescr": "Parts",
+		"Quantity": "1.000",
+		"Unit": "EA"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413052',Plant='3CAT',StgeLoc='1000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413052',Plant='3CAT',StgeLoc='1000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailability"
+		},
+		"Material": "SX413052",
+		"Plant": "3CAT",
+		"StgeLoc": "1000",
+		"StgeLocDescr": "Parts",
+		"Quantity": "10.000",
+		"Unit": "EA"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413052',Plant='CASL',StgeLoc='1000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413052',Plant='CASL',StgeLoc='1000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailability"
+		},
+		"Material": "SX413052",
+		"Plant": "CASL",
+		"StgeLoc": "1000",
+		"StgeLocDescr": "Parts",
+		"Quantity": "100.000",
+		"Unit": "EA"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413053',Plant='3CAT',StgeLoc='1000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413053',Plant='3CAT',StgeLoc='1000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailability"
+		},
+		"Material": "SX413053",
+		"Plant": "3CAT",
+		"StgeLoc": "1000",
+		"StgeLocDescr": "Parts",
+		"Quantity": "1000.000",
+		"Unit": "EA"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413053',Plant='CASL',StgeLoc='1000')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySet(Material='SX413053',Plant='CASL',StgeLoc='1000')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailability"
+		},
+		"Material": "SX413053",
+		"Plant": "CASL",
+		"StgeLoc": "1000",
+		"StgeLocDescr": "Parts",
+		"Quantity": "10000.000",
+		"Unit": "EA"
+	}
+]

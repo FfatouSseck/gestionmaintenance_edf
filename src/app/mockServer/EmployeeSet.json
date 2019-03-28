@@ -1,0 +1,386 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000002",
+	"Myself": true,
+	"UserFullName": "Lawrence Barr",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000025')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000025')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000025",
+	"Myself": false,
+	"UserFullName": "Henry Avila",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000028')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000028')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000028",
+	"Myself": false,
+	"UserFullName": "Todd Brogna",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000031')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000031')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000031",
+	"Myself": false,
+	"UserFullName": "Michael Cookson",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000033')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000033')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000033",
+	"Myself": false,
+	"UserFullName": "Michael Cushman",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000035')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000035')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000035",
+	"Myself": false,
+	"UserFullName": "Hugo Galindo",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000037')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000037')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000037",
+	"Myself": false,
+	"UserFullName": "Ian Krygowski2",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000046')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000046')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000046",
+	"Myself": false,
+	"UserFullName": "Dale Layten",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000049')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000049')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000049",
+	"Myself": false,
+	"UserFullName": "Tad Miller",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000058')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000058')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000058",
+	"Myself": false,
+	"UserFullName": "Patrick Moyer",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000062')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000062')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000062",
+	"Myself": false,
+	"UserFullName": "Brian Pedro",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000066')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000066')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000066",
+	"Myself": false,
+	"UserFullName": "Daniel Severson",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000066')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000066')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000066",
+	"Myself": false,
+	"UserFullName": "Daniel Severson",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000070')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000070')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000070",
+	"Myself": false,
+	"UserFullName": "Christopher Thomas",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000073')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000073')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000073",
+	"Myself": false,
+	"UserFullName": "Luis Ybarreche",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000074')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000074')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000074",
+	"Myself": false,
+	"UserFullName": "Henrik Tolstrup",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000086')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000086')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000086",
+	"Myself": false,
+	"UserFullName": "Bryce Cooper",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000089')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000089')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000089",
+	"Myself": false,
+	"UserFullName": "Brook Thomas",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000096')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000096')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000096",
+	"Myself": false,
+	"UserFullName": "Joseph Huber",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000096')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000096')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000096",
+	"Myself": false,
+	"UserFullName": "Joseph Huber",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000098')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000098')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000098",
+	"Myself": false,
+	"UserFullName": "Jim Tsuhako",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000098')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000098')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000098",
+	"Myself": false,
+	"UserFullName": "Jim Tsuhako",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000112')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000112')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000112",
+	"Myself": false,
+	"UserFullName": "Hank Koegel2",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000132')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000132')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000132",
+	"Myself": false,
+	"UserFullName": "Christopher Dreiman",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000132')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000132')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000132",
+	"Myself": false,
+	"UserFullName": "Christopher Dreiman",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000138')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000138')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000138",
+	"Myself": false,
+	"UserFullName": "Alan Pigman",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000140')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000140')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000140",
+	"Myself": false,
+	"UserFullName": "Raul Jimenez",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000141')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000141')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000141",
+	"Myself": false,
+	"UserFullName": "Garvey Bunting",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000143')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000143')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000143",
+	"Myself": false,
+	"UserFullName": "Edward Ross",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000151')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000151')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000151",
+	"Myself": false,
+	"UserFullName": "Todd Austin",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000158')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000158')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000158",
+	"Myself": false,
+	"UserFullName": "Jose Tovar",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000165')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000165')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000165",
+	"Myself": false,
+	"UserFullName": "Kirk Garlick",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000166')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000166')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000166",
+	"Myself": false,
+	"UserFullName": "John Opris",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000166')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000166')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000166",
+	"Myself": false,
+	"UserFullName": "John Opris",
+	"Technician": true,
+	"AreaManager": true
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000180')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EmployeeSet('00000180')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Employee"
+	},
+	"PersonNo": "00000180",
+	"Myself": false,
+	"UserFullName": "Richard Jigarjian2",
+	"Technician": true,
+	"AreaManager": true
+}]

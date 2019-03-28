@@ -1,0 +1,74 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00001')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00001')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistTool"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"ToolDescr": "Tool 1",
+		"ToolId": "00001",
+		"ToolQuantity": "2"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00002')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00002')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistTool"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"ToolDescr": "Tool 2",
+		"ToolId": "00002",
+		"ToolQuantity": "12"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00003')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00003')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistTool"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"ToolDescr": "Tool 3",
+		"ToolId": "00003",
+		"ToolQuantity": "12"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00004')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00004')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistTool"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"ToolDescr": "Tool 4",
+		"ToolId": "00004",
+		"ToolQuantity": "3"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00005')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00005')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistTool"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"ToolDescr": "Tool 5",
+		"ToolId": "00005",
+		"ToolQuantity": "6"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00006')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistToolSet(ChklstId='00001',ToolId='00006')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistTool"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"ToolDescr": "Tool 6",
+		"ToolId": "00006",
+		"ToolQuantity": "3"
+	}
+]

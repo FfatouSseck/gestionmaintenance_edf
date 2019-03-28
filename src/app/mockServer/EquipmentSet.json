@@ -1,0 +1,86 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005283')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005283')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Equipment"
+		},
+		"EquipmentId": "10005283",
+		"UnderWarranty": false,
+		"CustomerWarranty": false,
+		"EquipmentDescr": "Soil Measurement Station - Helios",
+		"CustomerWarrantyDescr": "",
+		"PlanPlant": "3CAT",
+		"CustomerWarrantyStartDate": null,
+		"FunctLoc": "CAT/S04",
+		"CatalogProfile": "",
+		"CustomerWarrantyEndDate": null,
+		"VendorWarranty": false,
+		"VendorWarrantyDescr": "",
+		"VendorWarrantyStartDate": null,
+		"VendorWarrantyEndDate": null
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005284')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005284')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Equipment"
+		},
+		"EquipmentId": "10005284",
+		"UnderWarranty": false,
+		"CustomerWarranty": false,
+		"EquipmentDescr": "Soil Measurement Station - Helios",
+		"CustomerWarrantyDescr": "",
+		"PlanPlant": "3CAT",
+		"CustomerWarrantyStartDate": null,
+		"FunctLoc": "CAT/S12",
+		"CatalogProfile": "",
+		"CustomerWarrantyEndDate": null,
+		"VendorWarranty": false,
+		"VendorWarrantyDescr": "",
+		"VendorWarrantyStartDate": null,
+		"VendorWarrantyEndDate": null
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005285')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005285')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Equipment"
+		},
+		"EquipmentId": "10005285",
+		"UnderWarranty": false,
+		"CustomerWarranty": false,
+		"EquipmentDescr": "Soil Measurement Station - Helios",
+		"CustomerWarrantyDescr": "",
+		"PlanPlant": "3CAT",
+		"CustomerWarrantyStartDate": null,
+		"FunctLoc": "CAT/F57",
+		"CatalogProfile": "",
+		"CustomerWarrantyEndDate": null,
+		"VendorWarranty": false,
+		"VendorWarrantyDescr": "",
+		"VendorWarrantyStartDate": null,
+		"VendorWarrantyEndDate": null
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005286')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/EquipmentSet('10005286')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Equipment"
+		},
+		"EquipmentId": "10005286",
+		"UnderWarranty": false,
+		"CustomerWarranty": false,
+		"EquipmentDescr": "Soil Measurement Station - Helios",
+		"CustomerWarrantyDescr": "",
+		"PlanPlant": "3CAT",
+		"CustomerWarrantyStartDate": null,
+		"FunctLoc": "CAT/F29",
+		"CatalogProfile": "",
+		"CustomerWarrantyEndDate": null,
+		"VendorWarranty": false,
+		"VendorWarrantyDescr": "",
+		"VendorWarrantyStartDate": null,
+		"VendorWarrantyEndDate": null
+	}
+]

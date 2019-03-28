@@ -1,0 +1,1962 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20HOLIDAY',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20HOLIDAY',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ADMIN HOLIDAY",
+		"Plant": "3CAT",
+		"MaterialDescr": "Admin - Holiday Rate",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20HOLIDAY',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20HOLIDAY',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20HOLIDAY',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20OVERTIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20OVERTIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ADMIN OVERTIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "admin - Overtime",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20OVERTIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20OVERTIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20OVERTIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20REGULAR',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20REGULAR',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ADMIN REGULAR",
+		"Plant": "3CAT",
+		"MaterialDescr": "Admin - Regular",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20REGULAR',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20REGULAR',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ADMIN%20REGULAR',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MGT%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MGT%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ASSET MGT FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Asset Management Fee",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MGT%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MGT%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MGT%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MNGMT%20FEES',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MNGMT%20FEES',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ASSET MNGMT FEES",
+		"Plant": "3CAT",
+		"MaterialDescr": "Asset Management Fees",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MNGMT%20FEES',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MNGMT%20FEES',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ASSET%20MNGMT%20FEES',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='AVAILABILITY%20BONUS',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='AVAILABILITY%20BONUS',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "AVAILABILITY BONUS",
+		"Plant": "3CAT",
+		"MaterialDescr": "Availability Bonus",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='AVAILABILITY%20BONUS',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='AVAILABILITY%20BONUS',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='AVAILABILITY%20BONUS',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BOOM%20TRUCK',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BOOM%20TRUCK',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "BOOM TRUCK",
+		"Plant": "3CAT",
+		"MaterialDescr": "Boom Truck",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BOOM%20TRUCK',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BOOM%20TRUCK',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BOOM%20TRUCK',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BUSINESS%20RULES',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BUSINESS%20RULES',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "BUSINESS RULES",
+		"Plant": "3CAT",
+		"MaterialDescr": "Scheduled  Service/Maintenance",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BUSINESS%20RULES',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BUSINESS%20RULES',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='BUSINESS%20RULES',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CABLE%20LOCATOR',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CABLE%20LOCATOR',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "CABLE LOCATOR",
+		"Plant": "3CAT",
+		"MaterialDescr": "Cable Locator",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CABLE%20LOCATOR',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CABLE%20LOCATOR',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CABLE%20LOCATOR',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20SRVC%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20SRVC%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "CONTRACT SRVC FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Scheduled  Service/Maintenance",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20SRVC%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20SRVC%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20SRVC%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20TERM%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20TERM%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "CONTRACT TERM FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Contract Termination Fee",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20TERM%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20TERM%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='CONTRACT%20TERM%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='DEMOBILIZATION%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='DEMOBILIZATION%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "DEMOBILIZATION FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Demobilization Fees",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='DEMOBILIZATION%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='DEMOBILIZATION%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='DEMOBILIZATION%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20BOOM%20TRUCK',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20BOOM%20TRUCK',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT BOOM TRUCK",
+		"Plant": "3CAT",
+		"MaterialDescr": "Boom Truck Rental",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20BOOM%20TRUCK',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20BOOM%20TRUCK',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20BOOM%20TRUCK',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CONSUMABLES',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CONSUMABLES',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT CONSUMABLES",
+		"Plant": "3CAT",
+		"MaterialDescr": "External Consumables",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CONSUMABLES',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CONSUMABLES',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CONSUMABLES',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CRANE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CRANE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT CRANE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Crane Rental",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CRANE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CRANE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20CRANE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FORKLIFT',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FORKLIFT',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT FORKLIFT",
+		"Plant": "3CAT",
+		"MaterialDescr": "Forklift Rental",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FORKLIFT',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FORKLIFT',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FORKLIFT',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FREIGHT%20PARTS',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FREIGHT%20PARTS',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT FREIGHT PARTS",
+		"Plant": "3CAT",
+		"MaterialDescr": "External Freight Parts",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FREIGHT%20PARTS',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FREIGHT%20PARTS',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20FREIGHT%20PARTS',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PARTS',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PARTS',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT PARTS",
+		"Plant": "3CAT",
+		"MaterialDescr": "External Parts",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PARTS',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PARTS',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PARTS',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PERSONNEL%20COST',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PERSONNEL%20COST',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "EXT PERSONNEL COST",
+		"Plant": "3CAT",
+		"MaterialDescr": "External Personnel Cost",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PERSONNEL%20COST',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PERSONNEL%20COST',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='EXT%20PERSONNEL%20COST',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='FIXED%20PRICE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='FIXED%20PRICE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "FIXED PRICE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Fixed Price",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='FIXED%20PRICE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='FIXED%20PRICE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='FIXED%20PRICE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='GB208634',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='GB208634',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "GB208634",
+		"Plant": "3CAT",
+		"MaterialDescr": "Bearing, Fan Motor, GE Converter",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='GB208634',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='GB208634',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='GB208634',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HOLIDAY%20PAY',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HOLIDAY%20PAY',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "HOLIDAY PAY",
+		"Plant": "3CAT",
+		"MaterialDescr": "Field Technician - Holiday Pay",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HOLIDAY%20PAY',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HOLIDAY%20PAY',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HOLIDAY%20PAY',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20OVERTIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20OVERTIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "HV OVERTIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "High Voltage - Overtime",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20OVERTIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20OVERTIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20OVERTIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20REGULAR',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20REGULAR',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "HV REGULAR",
+		"Plant": "3CAT",
+		"MaterialDescr": "High Voltage - Regular",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20REGULAR',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20REGULAR',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='HV%20REGULAR',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCENTIVE%20BONUS',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCENTIVE%20BONUS',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "INCENTIVE BONUS",
+		"Plant": "3CAT",
+		"MaterialDescr": "Incentive Bonus",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCENTIVE%20BONUS',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCENTIVE%20BONUS',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCENTIVE%20BONUS',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20LABOR',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20LABOR',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "INCLUDED LABOR",
+		"Plant": "3CAT",
+		"MaterialDescr": "Contract Included Labor",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20LABOR',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20LABOR',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20LABOR',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20OVERTIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20OVERTIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "INCLUDED OVERTIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "Contract Included Overtime",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20OVERTIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20OVERTIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INCLUDED%20OVERTIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INVENTORY%20MGT%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INVENTORY%20MGT%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "INVENTORY MGT FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Inventory Management Fee",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INVENTORY%20MGT%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INVENTORY%20MGT%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='INVENTORY%20MGT%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='IR%20CAMERA',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='IR%20CAMERA',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "IR CAMERA",
+		"Plant": "3CAT",
+		"MaterialDescr": "Infared Camera",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='IR%20CAMERA',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='IR%20CAMERA',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='IR%20CAMERA',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MAINSHAFT%20CLAMP',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MAINSHAFT%20CLAMP',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "MAINSHAFT CLAMP",
+		"Plant": "3CAT",
+		"MaterialDescr": "MainShaft Clamp",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MAINSHAFT%20CLAMP',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MAINSHAFT%20CLAMP',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MAINSHAFT%20CLAMP',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MOBILIZATION%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MOBILIZATION%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "MOBILIZATION FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Mobilization Fees",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MOBILIZATION%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MOBILIZATION%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='MOBILIZATION%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OCC%20CONTRACT%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OCC%20CONTRACT%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "OCC CONTRACT FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Operations Control Center Contract Fee",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OCC%20CONTRACT%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OCC%20CONTRACT%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OCC%20CONTRACT%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTH%20OPS%20EQP%20RENTAL',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTH%20OPS%20EQP%20RENTAL',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "OTH OPS EQP RENTAL",
+		"Plant": "3CAT",
+		"MaterialDescr": "Other Operating Equipment Rental",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTH%20OPS%20EQP%20RENTAL',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTH%20OPS%20EQP%20RENTAL',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTH%20OPS%20EQP%20RENTAL',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20OUTSIDE%20SERV',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20OUTSIDE%20SERV',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "OTHER OUTSIDE SERV",
+		"Plant": "3CAT",
+		"MaterialDescr": "Other outside services",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20OUTSIDE%20SERV',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20OUTSIDE%20SERV',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20OUTSIDE%20SERV',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20PROF%20SVCS',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20PROF%20SVCS',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "OTHER PROF SVCS",
+		"Plant": "3CAT",
+		"MaterialDescr": "Other professional services",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20PROF%20SVCS',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20PROF%20SVCS',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OTHER%20PROF%20SVCS',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OVERTIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OVERTIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "OVERTIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "Field Technician - Overtime",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OVERTIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OVERTIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='OVERTIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='PRE%20CONTRACT%20FEE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='PRE%20CONTRACT%20FEE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "PRE CONTRACT FEE",
+		"Plant": "3CAT",
+		"MaterialDescr": "PRE Contract Service Fee",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='PRE%20CONTRACT%20FEE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='PRE%20CONTRACT%20FEE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='PRE%20CONTRACT%20FEE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-OSLS-O-GC-SOL',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-OSLS-O-GC-SOL',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "R-OSLS-O-GC-SOL",
+		"Plant": "3CAT",
+		"MaterialDescr": "Other Sales - O+M - GC - Solar",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-OSLS-O-GC-SOL',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-OSLS-O-GC-SOL',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-OSLS-O-GC-SOL',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-PRTS-O-GC-SOL',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-PRTS-O-GC-SOL',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "R-PRTS-O-GC-SOL",
+		"Plant": "3CAT",
+		"MaterialDescr": "Parts - O+M - GC - Solar",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-PRTS-O-GC-SOL',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-PRTS-O-GC-SOL',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-PRTS-O-GC-SOL',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-RMB-O-GC-SOL',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-RMB-O-GC-SOL',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "R-RMB-O-GC-SOL",
+		"Plant": "3CAT",
+		"MaterialDescr": "Reimbursables - O+M - GC - Solar",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-RMB-O-GC-SOL',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-RMB-O-GC-SOL',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='R-RMB-O-GC-SOL',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REGULAR%20TIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REGULAR%20TIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REGULAR TIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "Field Technician - Regular",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REGULAR%20TIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REGULAR%20TIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REGULAR%20TIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMAIRFARE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMAIRFARE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMAIRFARE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Airfare Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMAIRFARE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMAIRFARE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMAIRFARE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMBMILEAGE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMBMILEAGE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMBMILEAGE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Reimburseable Mileage",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMBMILEAGE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMBMILEAGE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMBMILEAGE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONFERENCE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONFERENCE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMCONFERENCE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Conference/Seminar Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONFERENCE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONFERENCE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONFERENCE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONSUMABLES',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONSUMABLES',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMCONSUMABLES",
+		"Plant": "3CAT",
+		"MaterialDescr": "Reimbursable Consumables",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONSUMABLES',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONSUMABLES',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMCONSUMABLES',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMEQUIP',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMEQUIP',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMEQUIP",
+		"Plant": "3CAT",
+		"MaterialDescr": "Equipment Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMEQUIP',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMEQUIP',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMEQUIP',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFACILITY',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFACILITY',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMFACILITY",
+		"Plant": "3CAT",
+		"MaterialDescr": "Facility Maintenance Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFACILITY',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFACILITY',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFACILITY',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFREIGHT',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFREIGHT',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMFREIGHT",
+		"Plant": "3CAT",
+		"MaterialDescr": "Freight Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFREIGHT',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFREIGHT',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFREIGHT',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFUEL',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFUEL',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMFUEL",
+		"Plant": "3CAT",
+		"MaterialDescr": "Fuel Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFUEL',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFUEL',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMFUEL',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMLODGING',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMLODGING',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMLODGING",
+		"Plant": "3CAT",
+		"MaterialDescr": "Lodging Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMLODGING',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMLODGING',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMLODGING',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMMEALSANDENT',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMMEALSANDENT',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMMEALSANDENT",
+		"Plant": "3CAT",
+		"MaterialDescr": "Travel Meals Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMMEALSANDENT',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMMEALSANDENT',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMMEALSANDENT',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMVEHICLE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMVEHICLE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REIMVEHICLE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Vehicle Rental Reimbursable",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMVEHICLE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMVEHICLE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REIMVEHICLE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REPOWER%20ROTOR%20LOCK',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REPOWER%20ROTOR%20LOCK',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "REPOWER ROTOR LOCK",
+		"Plant": "3CAT",
+		"MaterialDescr": "Repower Rotor Lock",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REPOWER%20ROTOR%20LOCK',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REPOWER%20ROTOR%20LOCK',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='REPOWER%20ROTOR%20LOCK',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SHOP%20REPAIR',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SHOP%20REPAIR',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SHOP REPAIR",
+		"Plant": "3CAT",
+		"MaterialDescr": "Shop Repair Work",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SHOP%20REPAIR',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SHOP%20REPAIR',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SHOP%20REPAIR',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SITE%20SERVICES',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SITE%20SERVICES',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SITE SERVICES",
+		"Plant": "3CAT",
+		"MaterialDescr": "This line is for Tech Objects / SOs",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SITE%20SERVICES',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SITE%20SERVICES',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SITE%20SERVICES',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SKY%20CLIMBER',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SKY%20CLIMBER',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SKY CLIMBER",
+		"Plant": "3CAT",
+		"MaterialDescr": "Sky Climber",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SKY%20CLIMBER',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SKY%20CLIMBER',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SKY%20CLIMBER',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20BLOWER',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20BLOWER',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SNOW BLOWER",
+		"Plant": "3CAT",
+		"MaterialDescr": "Snow Blower",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20BLOWER',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20BLOWER',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20BLOWER',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20PLOW',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20PLOW',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SNOW PLOW",
+		"Plant": "3CAT",
+		"MaterialDescr": "Snow Plow",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20PLOW',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20PLOW',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SNOW%20PLOW',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413050',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413050',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SX413050",
+		"Plant": "3CAT",
+		"MaterialDescr": "Substation Light LED Blue",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413050',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413050',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413050',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413051',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413051',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SX413051",
+		"Plant": "3CAT",
+		"MaterialDescr": "Substation Light LED Green",
+		"StockItem": true,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413051',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413051',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413051',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413052',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413052',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SX413052",
+		"Plant": "3CAT",
+		"MaterialDescr": "Substation Light LED Red",
+		"StockItem": true,
+		"WithSn": false,
+		"WithSplitVal": true,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413052',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413052',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413052',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413053',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413053',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "SX413053",
+		"Plant": "3CAT",
+		"MaterialDescr": "Substation Light LED Yellow",
+		"StockItem": true,
+		"WithSn": true,
+		"WithSplitVal": true,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413053',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413053',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='SX413053',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TAX%20ADJUSTMENT',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TAX%20ADJUSTMENT',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "TAX ADJUSTMENT",
+		"Plant": "3CAT",
+		"MaterialDescr": "Tax Adjustments",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TAX%20ADJUSTMENT',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TAX%20ADJUSTMENT',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TAX%20ADJUSTMENT',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TOTAL%20FIXED%20FEES',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TOTAL%20FIXED%20FEES',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "TOTAL FIXED FEES",
+		"Plant": "3CAT",
+		"MaterialDescr": "Scheduled Service/Maintenance",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TOTAL%20FIXED%20FEES',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TOTAL%20FIXED%20FEES',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TOTAL%20FIXED%20FEES',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TRAINING',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TRAINING',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "TRAINING",
+		"Plant": "3CAT",
+		"MaterialDescr": "Training",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TRAINING',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TRAINING',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='TRAINING',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='VIDEO%20PROBE',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='VIDEO%20PROBE',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "VIDEO PROBE",
+		"Plant": "3CAT",
+		"MaterialDescr": "Video Probe",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='VIDEO%20PROBE',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='VIDEO%20PROBE',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='VIDEO%20PROBE',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='WEED%20ABATEMENT',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='WEED%20ABATEMENT',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "WEED ABATEMENT",
+		"Plant": "3CAT",
+		"MaterialDescr": "Weed Abatement",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='WEED%20ABATEMENT',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='WEED%20ABATEMENT',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='WEED%20ABATEMENT',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20OVERTIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20OVERTIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ZSPM OVERTIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "ZSPM - Overtime",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20OVERTIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20OVERTIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20OVERTIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20REGULAR%20TIME',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20REGULAR%20TIME',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ZSPM REGULAR TIME",
+		"Plant": "3CAT",
+		"MaterialDescr": "ZSPM - Regular",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20REGULAR%20TIME',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20REGULAR%20TIME',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20REGULAR%20TIME',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20TRAINING',Plant='3CAT')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20TRAINING',Plant='3CAT')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.Material"
+		},
+		"MaterialId": "ZSPM TRAINING",
+		"Plant": "3CAT",
+		"MaterialDescr": "ZSPM - Training",
+		"StockItem": false,
+		"WithSn": false,
+		"WithSplitVal": false,
+		"Availabilities": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20TRAINING',Plant='3CAT')/Availabilities"
+			}
+		},
+		"AvailabilitiesSv": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20TRAINING',Plant='3CAT')/AvailabilitiesSv"
+			}
+		},
+		"AvailabilitiesSn": {
+			"__deferred": {
+				"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialSet(MaterialId='ZSPM%20TRAINING',Plant='3CAT')/AvailabilitiesSn"
+			}
+		}
+	}
+]

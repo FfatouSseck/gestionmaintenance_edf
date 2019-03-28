@@ -205,11 +205,9 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
                 let done = this.orderService.setOrders(orders.d.results);
                 if (done) {
                   this.ordersList = this.orderService.getAllOrders();
-                  //this.choosenOrder = this.ordersList[0];
                   if (this.ordersList[0].OrderNo != null) {
                     this.notAvailable = false;
                     this.noData = false;
-
                   }
                 }
                 else this.noData = true;
@@ -240,7 +238,6 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
           this.noNotif = true;
         }
           this.loadNotif = false;
-        
       },
       (err) =>{
         this.noNotif = true;

@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment.prod';
-import { Notification, NotifHeader } from '../interfaces/notification.interface';
+import { NotifHeader } from '../interfaces/notification.interface';
 import { BaseService } from './base.service';
 import { Storage } from '@ionic/storage';
+
 
 
 @Injectable({
@@ -70,7 +71,7 @@ export class NotificationService extends BaseService {
     return done;
   }
 
-  getAvailableNotifs(){
+  getAvailableNotifs() {
     return this.notifs;
   }
 
@@ -78,9 +79,9 @@ export class NotificationService extends BaseService {
     return this.available;
   }
 
-  filterNotifsByFLOC(floc: string){
+  filterNotifsByFLOC(floc: string) {
     return this.notifs.filter(
-      (notif) =>{
+      (notif) => {
         return notif.FunctLoc.toLowerCase().indexOf(floc.toLowerCase()) > -1;
       }
     )
@@ -88,8 +89,8 @@ export class NotificationService extends BaseService {
 
   filterNotifs(searchTerm) {
     return this.notifs.filter((notif) => {
-      return (notif.NotifNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 
-            || notif.ShortText.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+      return (notif.NotifNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        || notif.ShortText.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
     });
   }
 

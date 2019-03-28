@@ -1,0 +1,1219 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "$$-OSS-SM",
+	"CodeGroup": "$$OSS001",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "$$-OSS-SM",
+	"CodeGroup": "$$OSS002",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS002')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "$$-OSS-SM",
+	"CodeGroup": "$$OSS003",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS003')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "$$-OSS-SM",
+	"CodeGroup": "$$OSS004",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='%24%24-OSS-SM',CodeGroup='%24%24OSS004')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "$$OSS001",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "$$OSS002",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS002')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "$$OSS003",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS003')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "$$OSS004",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='%24%24OSS004')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='CLM-01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='CLM-01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "CLM-01",
+	"CodeDescr": "Tasks for claim",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='CLM-01')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='ECM-MTS')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='ECM-MTS')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "ECM-MTS",
+	"CodeDescr": "Notification - ECM - MTS",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='ECM-MTS')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='GN-00001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='GN-00001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "GN-00001",
+	"CodeDescr": "Tasks for general notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='GN-00001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance tasks",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='PM1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-G1",
+	"CodeDescr": "General task for customer complaint",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-G3",
+	"CodeDescr": "General task for internal notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-G4",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-G4')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-S1",
+	"CodeDescr": "Corrective task for customer problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-S2",
+	"CodeDescr": "Corr. task for probl. with vendor goods",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM-S3",
+	"CodeDescr": "Corrective task for internal problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='QM-S3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='SAPISR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='SAPISR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "SAPISR",
+	"CodeDescr": "Interventions pr demande de service int.",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='000000001',CodeGroup='SAPISR')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "$$OSS001",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "$$OSS002",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS002')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "$$OSS003",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS003')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "$$OSS004",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='%24%24OSS004')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='CLM-01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='CLM-01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "CLM-01",
+	"CodeDescr": "Tasks for claim",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='CLM-01')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='ECM-MTS')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='ECM-MTS')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "ECM-MTS",
+	"CodeDescr": "Notification - ECM - MTS",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='ECM-MTS')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='GN-00001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='GN-00001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "GN-00001",
+	"CodeDescr": "Tasks for general notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='GN-00001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance tasks",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-G1",
+	"CodeDescr": "General task for customer complaint",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-G3",
+	"CodeDescr": "General task for internal notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-G4",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-G4')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-S1",
+	"CodeDescr": "Corrective task for customer problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-S2",
+	"CodeDescr": "Corr. task for probl. with vendor goods",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM-S3",
+	"CodeDescr": "Corrective task for internal problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='QM-S3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='SAPISR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='SAPISR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "SAPISR",
+	"CodeDescr": "Interventions pr demande de service int.",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CA-N',CodeGroup='SAPISR')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "$$OSS001",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "$$OSS002",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS002')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "$$OSS003",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS003')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "$$OSS004",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='%24%24OSS004')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='CLM-01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='CLM-01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "CLM-01",
+	"CodeDescr": "Tasks for claim",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='CLM-01')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='ECM-MTS')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='ECM-MTS')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "ECM-MTS",
+	"CodeDescr": "Notification - ECM - MTS",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='ECM-MTS')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='GN-00001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='GN-00001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "GN-00001",
+	"CodeDescr": "Tasks for general notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='GN-00001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance tasks",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-G1",
+	"CodeDescr": "General task for customer complaint",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-G3",
+	"CodeDescr": "General task for internal notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-G4",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-G4')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-S1",
+	"CodeDescr": "Corrective task for customer problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-S2",
+	"CodeDescr": "Corr. task for probl. with vendor goods",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM-S3",
+	"CodeDescr": "Corrective task for internal problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='QM-S3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='SAPISR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='SAPISR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "SAPISR",
+	"CodeDescr": "Interventions pr demande de service int.",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='CLM000001',CodeGroup='SAPISR')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "$$OSS001",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "$$OSS002",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS002')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "$$OSS003",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS003')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "$$OSS004",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='%24%24OSS004')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='CLM-01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='CLM-01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "CLM-01",
+	"CodeDescr": "Tasks for claim",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='CLM-01')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='ECM-MTS')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='ECM-MTS')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "ECM-MTS",
+	"CodeDescr": "Notification - ECM - MTS",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='ECM-MTS')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='GN-00001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='GN-00001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "GN-00001",
+	"CodeDescr": "Tasks for general notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='GN-00001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance tasks",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='PM1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-G1",
+	"CodeDescr": "General task for customer complaint",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-G3",
+	"CodeDescr": "General task for internal notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-G4",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-G4')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-S1",
+	"CodeDescr": "Corrective task for customer problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-S2",
+	"CodeDescr": "Corr. task for probl. with vendor goods",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "QM-S3",
+	"CodeDescr": "Corrective task for internal problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='QM-S3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='SAPISR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='SAPISR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ECM_MTS",
+	"CodeGroup": "SAPISR",
+	"CodeDescr": "Interventions pr demande de service int.",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ECM_MTS',CodeGroup='SAPISR')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "$$OSS001",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS002')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS002')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "$$OSS002",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS002')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "$$OSS003",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS003')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS004')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS004')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "$$OSS004",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='%24%24OSS004')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='CLM-01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='CLM-01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "CLM-01",
+	"CodeDescr": "Tasks for claim",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='CLM-01')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='ECM-MTS')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='ECM-MTS')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "ECM-MTS",
+	"CodeDescr": "Notification - ECM - MTS",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='ECM-MTS')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='GN-00001')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='GN-00001')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "GN-00001",
+	"CodeDescr": "Tasks for general notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='GN-00001')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance tasks",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='PM1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-G1",
+	"CodeDescr": "General task for customer complaint",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-G3",
+	"CodeDescr": "General task for internal notification",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-G4",
+	"CodeDescr": "",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-G4')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-S1",
+	"CodeDescr": "Corrective task for customer problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S1')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-S2",
+	"CodeDescr": "Corr. task for probl. with vendor goods",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM-S3",
+	"CodeDescr": "Corrective task for internal problem",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='QM-S3')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='SAPISR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='SAPISR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "SAPISR",
+	"CodeDescr": "Interventions pr demande de service int.",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='QM0000001',CodeGroup='SAPISR')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='SAPISR',CodeGroup='SAPISR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='SAPISR',CodeGroup='SAPISR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "SAPISR",
+	"CodeGroup": "SAPISR",
+	"CodeDescr": "Interventions pr demande de service int.",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='SAPISR',CodeGroup='SAPISR')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='YA72',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='YA72',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "YA72",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='YA72',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ZENXCO',CodeGroup='QM-G2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ZENXCO',CodeGroup='QM-G2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.TaskGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM-G2",
+	"CodeDescr": "General task for complaint to vendor",
+	"TaskCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/TaskGroupSet(CatalogProfile='ZENXCO',CodeGroup='QM-G2')/TaskCode"
+		}
+	}
+}]

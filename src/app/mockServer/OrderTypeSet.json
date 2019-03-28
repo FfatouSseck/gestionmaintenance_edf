@@ -1,0 +1,222 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "PM01",
+	"OrderTypeDescr": "Maintenance Request Order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM01')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM02')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM02')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "PM02",
+	"OrderTypeDescr": "Maintenance Malfunction Order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM02')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM03')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM03')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "PM03",
+	"OrderTypeDescr": "Preventive Maintenance Order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM03')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "PM04",
+	"OrderTypeDescr": "Refurbishment order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM04')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM05')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM05')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "PM05",
+	"OrderTypeDescr": "Calibration order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM05')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM06')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM06')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "PM06",
+	"OrderTypeDescr": "Capital investment order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('PM06')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "SM01",
+	"OrderTypeDescr": "Contract/Scheduled Service",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM01')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM02')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM02')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "SM02",
+	"OrderTypeDescr": "Service order (with revenues)",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM02')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM03')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM03')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "SM03",
+	"OrderTypeDescr": "BioMass Service Order (w. revenue)",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM03')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "SM04",
+	"OrderTypeDescr": "Biogas Service Order (w. revenue)",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM04')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM05')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM05')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "SM05",
+	"OrderTypeDescr": "Solar Service order (with revenues)",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('SM05')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "ZM01",
+	"OrderTypeDescr": "Fixed Price Service Order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM01')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM02')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM02')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "ZM02",
+	"OrderTypeDescr": "Reimbursable Service order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM02')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "ZM04",
+	"OrderTypeDescr": "Installation Service Order",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM04')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM05')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM05')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "ZM05",
+	"OrderTypeDescr": "SCADA SIG OCC NERC (with revenues)",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM05')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM06')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM06')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "ZM06",
+	"OrderTypeDescr": "PRE (with revenues)",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZM06')/PMActType"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZSPM')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZSPM')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderType"
+	},
+	"OrderTypeCode": "ZSPM",
+	"OrderTypeDescr": "Standing Order for Routine Tasks",
+	"PMActType": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderTypeSet('ZSPM')/PMActType"
+		}
+	}
+}]

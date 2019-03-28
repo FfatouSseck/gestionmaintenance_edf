@@ -1,0 +1,53 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='3CAT',StgeLoc='1000',SerialNo='10007034')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='3CAT',StgeLoc='1000',SerialNo='10007034')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailabilitySn"
+	},
+	"Material": "SX413053",
+	"ValType": "NEW",
+	"Plant": "3CAT",
+	"StgeLoc": "1000",
+	"StgeLocDescr": "Parts",
+	"SerialNo": "10007034",
+	"Unit": "EA"
+},{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='3CAT',StgeLoc='1000',SerialNo='10007035')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='3CAT',StgeLoc='1000',SerialNo='10007035')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailabilitySn"
+	},
+	"Material": "SX413053",
+	"ValType": "REFURB",
+	"Plant": "3CAT",
+	"StgeLoc": "1000",
+	"StgeLocDescr": "Parts",
+	"SerialNo": "10007035",
+	"Unit": "EA"
+},{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='CASL',StgeLoc='1000',SerialNo='10007036')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='CASL',StgeLoc='1000',SerialNo='10007036')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailabilitySn"
+	},
+	"Material": "SX413053",
+	"ValType": "NEW",
+	"Plant": "CASL",
+	"StgeLoc": "1000",
+	"StgeLocDescr": "Parts",
+	"SerialNo": "10007036",
+	"Unit": "EA"
+},{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='CASL',StgeLoc='1000',SerialNo='10007037')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/MaterialAvailabilitySnSet(Material='SX413053',Plant='CASL',StgeLoc='1000',SerialNo='10007037')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.MaterialAvailabilitySn"
+	},
+	"Material": "SX413053",
+	"ValType": "REFURB",
+	"Plant": "CASL",
+	"StgeLoc": "1000",
+	"StgeLocDescr": "Parts",
+	"SerialNo": "10007037",
+	"Unit": "EA"
+}]

@@ -1,0 +1,505 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('%24%24')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('%24%24')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "$$",
+	"NotifTypeDescr": "Avis SAP",
+	"CatalogProfile": "$$-OSS-SM"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "01",
+	"NotifTypeDescr": "Coût occasionné ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('02')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('02')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "02",
+	"NotifTypeDescr": "ISR général",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('50')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('50')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "50",
+	"NotifTypeDescr": "Modif. donn.base ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('52')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('52')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "52",
+	"NotifTypeDescr": "Cession immobil. ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('54')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('54')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "54",
+	"NotifTypeDescr": "Avis de modification",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('56')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('56')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "56",
+	"NotifTypeDescr": "PCR avec permis",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('57')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('57')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "57",
+	"NotifTypeDescr": "PCR sans permis",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('58')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('58')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "58",
+	"NotifTypeDescr": "RQ avec permis",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('59')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('59')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "59",
+	"NotifTypeDescr": "RQ sans permis",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5A')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5A')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "5A",
+	"NotifTypeDescr": "CR avec permis",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5B')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5B')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "5B",
+	"NotifTypeDescr": "CR sans permis",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5C')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5C')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "5C",
+	"NotifTypeDescr": "Demande EIC",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5D')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('5D')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "5D",
+	"NotifTypeDescr": "Prct/form. int. HCM",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('60')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('60')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "60",
+	"NotifTypeDescr": "Enreg.correction ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('61')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('61')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "61",
+	"NotifTypeDescr": "Budgétisation ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('62')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('62')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "62",
+	"NotifTypeDescr": "Budg.avec approb.ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('70')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('70')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "70",
+	"NotifTypeDescr": "CC/CF ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('71')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('71')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "71",
+	"NotifTypeDescr": "ISR nouvel. utilis.",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('81')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('81')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "81",
+	"NotifTypeDescr": "ISR : demde avec aut",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('82')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('82')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "82",
+	"NotifTypeDescr": "ISR : demde sans aut",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('90')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('90')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "90",
+	"NotifTypeDescr": "Mod. données base",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('91')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('91')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "91",
+	"NotifTypeDescr": "Demander modificat.",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('92')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('92')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "92",
+	"NotifTypeDescr": "Signaler perte",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('93')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('93')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "93",
+	"NotifTypeDescr": "Enreg.correction ISR",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('94')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('94')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "94",
+	"NotifTypeDescr": "ISR Correct.av.appr.",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('95')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('95')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "95",
+	"NotifTypeDescr": "Consultation manager",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('96')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('96')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "96",
+	"NotifTypeDescr": "Signaler écart",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('97')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('97')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "97",
+	"NotifTypeDescr": "ISR - fonct. analyt.",
+	"CatalogProfile": "SAPISR"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('C1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('C1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "C1",
+	"NotifTypeDescr": "Réclamation interne",
+	"CatalogProfile": "CLM000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('C2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('C2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "C2",
+	"NotifTypeDescr": "Réclamation externe",
+	"CatalogProfile": "000000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('F1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('F1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "F1",
+	"NotifTypeDescr": "Défaut par client",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('F2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('F2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "F2",
+	"NotifTypeDescr": "Défaut par fourniss.",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('F3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('F3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "F3",
+	"NotifTypeDescr": "Défaut par article",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('G0')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('G0')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "G0",
+	"NotifTypeDescr": "Avis",
+	"CatalogProfile": "CA-N"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('I1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('I1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "I1",
+	"NotifTypeDescr": "Avis immobilier",
+	"CatalogProfile": "ISRE"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "M1",
+	"NotifTypeDescr": "Demande de trav.(DT)",
+	"CatalogProfile": "000000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "M2",
+	"NotifTypeDescr": "Avis de panne",
+	"CatalogProfile": "ZPM000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "M3",
+	"NotifTypeDescr": "Avis d'activité",
+	"CatalogProfile": "ZPM000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('M4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "M4",
+	"NotifTypeDescr": "Demande de trav.(DT)",
+	"CatalogProfile": "ROTRFB-01"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('PC')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('PC')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "PC",
+	"NotifTypeDescr": "PCR Test",
+	"CatalogProfile": ""
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('Q1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('Q1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "Q1",
+	"NotifTypeDescr": "Réclamation client",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('Q2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('Q2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "Q2",
+	"NotifTypeDescr": "Réclamation à fourn.",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('Q3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('Q3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "Q3",
+	"NotifTypeDescr": "Problème interne",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QD')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QD')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "QD",
+	"NotifTypeDescr": "Avis client",
+	"CatalogProfile": "ZENXCO"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QR')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QR')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "QR",
+	"NotifTypeDescr": "Etud.stab.ss article",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QS')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QS')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "QS",
+	"NotifTypeDescr": "Etud.stab.av.article",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QT')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('QT')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "QT",
+	"NotifTypeDescr": "EtudeStabilité essai",
+	"CatalogProfile": "QM0000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('S1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('S1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "S1",
+	"NotifTypeDescr": "Avis client",
+	"CatalogProfile": "ZENXCO"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('S2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('S2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "S2",
+	"NotifTypeDescr": "Avis d'activité",
+	"CatalogProfile": "ZENXCO"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('S3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('S3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "S3",
+	"NotifTypeDescr": "Demande de service",
+	"CatalogProfile": "ZENXCO"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('V1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('V1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "V1",
+	"NotifTypeDescr": "Propositions",
+	"CatalogProfile": "VW1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('W1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('W1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "W1",
+	"NotifTypeDescr": "Réclamation interne",
+	"CatalogProfile": "WTYCLM-01"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('YP')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('YP')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "YP",
+	"NotifTypeDescr": "ECM - Notification",
+	"CatalogProfile": "ECM_MTS"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('ZC')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('ZC')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "ZC",
+	"NotifTypeDescr": "Prod. Compnt Rework",
+	"CatalogProfile": "ZQM000001"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('ZI')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifTypeSet('ZI')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifType"
+	},
+	"NotifTypeCode": "ZI",
+	"NotifTypeDescr": "Prod. Parent Rework",
+	"CatalogProfile": "ZQM000001"
+}]

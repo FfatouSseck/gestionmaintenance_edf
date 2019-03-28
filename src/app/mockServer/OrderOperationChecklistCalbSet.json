@@ -1,0 +1,17 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistCalbSet(OrderNo='5322303',Activity='0010',ToolcalId='1',ToolcalSn='123456789')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistCalbSet(OrderNo='5322303',Activity='0010',ToolcalId='1',ToolcalSn='123456789')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistCalb"
+		},
+		"OrderNo": "5322303",
+		"Activity": "0010",
+		"ToolcalId": "1",
+		"ToolcalDescr": "First calibrated tool",
+		"ToolcalSn": "123456789",
+		"ToolcalIntRef": "ABCDEF",
+		"Comment": "Comment for the\r\nfirst calibrated tool",
+		"Plant": "3CAT"
+	}
+]

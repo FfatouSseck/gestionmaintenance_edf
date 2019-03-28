@@ -1,0 +1,33 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Priority"
+	},
+	"PriorityId": "1",
+	"PriorityDescr": "1-Very high"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Priority"
+	},
+	"PriorityId": "2",
+	"PriorityDescr": "2-High"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('3')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('3')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Priority"
+	},
+	"PriorityId": "3",
+	"PriorityDescr": "3-Medium"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('4')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PrioritySet('4')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.Priority"
+	},
+	"PriorityId": "4",
+	"PriorityDescr": "4-Low"
+}]

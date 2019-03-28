@@ -13,6 +13,7 @@ import { CausegroupService } from '../providers/causegroup.service';
 import { CausecodeService } from '../providers/causecode.service';
 import { FunctlocService } from '../providers/functloc.service';
 import { ServiceOrderPreparationService } from '../providers/service-order-preparation.service';
+import { MockService } from '../providers/mock.service';
 
 
 @Component({
@@ -38,7 +39,7 @@ export class HomePage implements OnInit {
         private notifService: NotificationService, private priorityService: PriorityService,
         private effectService: EffectService, private causeCodeService: CausecodeService,
         private causeGroupService: CausegroupService, private functLocService: FunctlocService,
-        public orderService: ServiceOrderPreparationService) {
+        public orderService: ServiceOrderPreparationService, private mockService: MockService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -51,39 +52,46 @@ export class HomePage implements OnInit {
     }
 
     ngOnInit(): void {
-        this.plantService.getAllPlants().subscribe(
-            (plants) => {
-                let plts = plants.d.results;
-                this.plants = plts;
-                //we check if there is a choosen plant
-                this.storage.get("choosenPlant").then(
-                    (choosenPlantcode) => {
-                        if (choosenPlantcode != null) {
-                            this.choosenPlant = choosenPlantcode;
-                            this.getNotifList(this.choosenPlant);
-                            //getting FunctLocSet from server
-                            this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
-                                (functlocs) => {
-                                    this.functLocService.setFunctLocs(functlocs.d.results);
+        this.storage.get("mock").then(
+            (mock) => {
+                if (mock != undefined && mock != null && mock == true) {
+                    //we call the mock server
+                    this.plants = this.mockService.getAllMockPlants();
+                }
+                else {
+                    this.plantService.getAllPlants().subscribe(
+                        (plants) => {
+                            let plts = plants.d.results;
+                            this.plants = plts;
+                            //we check if there is a choosen plant
+                            this.storage.get("choosenPlant").then(
+                                (choosenPlantcode) => {
+                                    if (choosenPlantcode != null) {
+                                        this.choosenPlant = choosenPlantcode;
+                                        this.updateData(this.choosenPlant);
+                                        //getting FunctLocSet from server
+                                        this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
+                                            (functlocs) => {
+                                                this.functLocService.setFunctLocs(functlocs.d.results);
+                                            },
+                                            (err) => {
+                                                console.log(err);
+                                            }
+                                        )
+                                    }
+                                    //otherwise we ask the user to choose a plant
+                                    else this.presentPlantsModal();
                                 },
                                 (err) => {
-                                    console.log(err);
-                                }
-                            )
+                                    console.log("error", err);
+                                })
+                        },
+                        (err) => {
+                            console.log("Erreur", err);
                         }
-                        //otherwise we ask the user to choose a plant
-                        else this.presentPlantsModal();
-                    },
-                    (err) => {
-                        console.log("error", err);
-                    })
-            },
-            (err) => {
-                console.log("Erreur", err);
-            }
-        )
-
-
+                    )
+                }
+            });
     }
 
     ionViewDidEnter() {
@@ -100,18 +108,18 @@ export class HomePage implements OnInit {
         await this.modal.present();
 
         const { data } = await this.modal.onDidDismiss();
-        this.getNotifList(data.result);
+        this.updateData(data.result);
     }
 
     doRefresh(event) {
         console.log('Begin async operation');
         this.initialisation();
-    
+
         setTimeout(() => {
-          console.log('Async operation has ended');
-          event.target.complete();
+            console.log('Async operation has ended');
+            event.target.complete();
         }, 3000);
-      }
+    }
 
 
     openSnackBar(message: string) {
@@ -121,36 +129,84 @@ export class HomePage implements OnInit {
     }
 
     onClose(evt: { result: string; }) {
-        this.getNotifList(evt.result);
+        this.initialisation();
     }
 
 
-    getNotifList(plant) {
+    updateData(plant) {
         this.dataAvailable = false;
-        this.notifService.getAllNotifs(plant).subscribe(
-            (notifs: any) => {
-                this.notifService.setNotifs(notifs.d.results);
-                this.notifsCount = notifs.d.results.length;
-                this.dataAvailable = true;
-            }
-        )
+        this.storage.get("mock").then(
+            (mock) => {
+                if (mock != undefined && mock != null && mock == true) {
+                    //we call the mock server
+                    this.storage.get("choosenPlant").then(
+                        (choosenPlantcode) => {
+                            if (choosenPlantcode != null && choosenPlantcode != undefined) {
+                                this.choosenPlant = choosenPlantcode;
+                                this.getMockNotifs(choosenPlantcode);
+                            }
+                        });
+                }
+                else {
+                    this.notifService.getAllNotifs(plant).subscribe(
+                        (notifs: any) => {
+                            this.notifService.setNotifs(notifs.d.results);
+                            this.notifsCount = notifs.d.results.length;
+                            this.dataAvailable = true;
+                        }
+                    )
+                }
+            });
+
+            //getting service orders 
+        this.storage.get("choosenPlant").then(
+            (choosenPlantcode) => {
+                if (choosenPlantcode != null) {
+                    this.storage.get("mock").then(
+                        (mock) => {
+                            if (mock != undefined && mock != null && mock == true) {
+                                this.ordersCount = this.mockService.getAllMockSOP(choosenPlantcode).length;
+                            }
+                            else {
+                                this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
+                                    (orders) => {
+                                        this.orderService.setOrders(orders.d.results);
+                                        this.ordersCount = orders.d.results.length;
+                                    }
+                                )
+                            }
+                        });
+                }
+            },
+            (err) => {
+                console.log(err);
+            })
     }
 
-    initialisation(){
+    getMockNotifs(plant) {
+        this.dataAvailable = false;
+        let ntfs = this.mockService.getAllMockNotifs(plant);
+
+        this.notifsCount = ntfs.length;
+        this.dataAvailable = true;
+    }
+
+    initialisation() {
         this.ordersCount = null;
         this.notifsCount = null;
+        this.dataAvailable = false;
 
-        if(this.notifsCount == null){
+        if (this.notifsCount == null) {
             this.storage.get("choosenPlant").then(
                 (choosenPlantcode) => {
-                    if (choosenPlantcode != null) {
+                    if (choosenPlantcode != null && choosenPlantcode != undefined) {
                         this.choosenPlant = choosenPlantcode;
-                        this.getNotifList(this.choosenPlant);
+                        this.updateData(choosenPlantcode);
                     }
                 });
         }
-         //getting PrioritySet from server
-         this.priorityService.getAllPriorities().subscribe(
+        //getting PrioritySet from server
+        this.priorityService.getAllPriorities().subscribe(
             (priorities) => {
                 this.priorityService.setPriorities(priorities.d.results);
             },
@@ -176,21 +232,5 @@ export class HomePage implements OnInit {
                 console.log(err);
             }
         )
-
-        //getting service orders 
-        this.storage.get("choosenPlant").then(
-            (choosenPlantcode) => {
-                if (choosenPlantcode != null) {
-                    this.orderService.getAllOrdersByChoosenPlant(choosenPlantcode).subscribe(
-                        (orders) =>{
-                            this.orderService.setOrders(orders.d.results);
-                            this.ordersCount = orders.d.results.length;
-                        }
-                    )
-                }
-            },
-            (err) => {
-                console.log(err);
-            })
     }
 }

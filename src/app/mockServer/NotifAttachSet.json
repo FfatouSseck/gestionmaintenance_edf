@@ -1,0 +1,29 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifAttachSet(NotifNo='300329543',DocId='FOL35000000000004EXT43000000037353')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifAttachSet(NotifNo='300329543',DocId='FOL35000000000004EXT43000000037353')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifAttach",
+		"content_type": "image/gif",
+		"media_src": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifAttachSet(NotifNo='300329543',DocId='FOL35000000000004EXT43000000037353')/$value"
+	},
+	"NotifNo": "300329543",
+	"PlanPlant": "3SPR",
+	"DocId": "FOL35000000000004EXT43000000037353",
+	"DocDescr": "2017-05-09_15h47_25",
+	"MimeType": "image/gif",
+	"Length": 7650 
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifAttachSet(NotifNo='300330016',DocId='FOL35000000000004EXT43000000036944')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifAttachSet(NotifNo='300330016',DocId='FOL35000000000004EXT43000000036944')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.NotifAttach",
+		"content_type": "image/png",
+		"media_src": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/NotifAttachSet(NotifNo='300330016',DocId='FOL35000000000004EXT43000000036944')/$value"
+	},
+	"NotifNo": "300330016",
+	"PlanPlant": "FNT",
+	"DocId": "FOL35000000000004EXT43000000036944",
+	"DocDescr": "edf-renewables-fb",
+	"MimeType": "image/png",
+	"Length": 40035
+}]

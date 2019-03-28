@@ -1,0 +1,81 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Partie objet 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='000000001',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Partie objet 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Partie objet 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CA-N',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Partie objet 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Partie objet 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='CLM000001',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Partie objet 2"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"Code": "1",
+	"CodeDescr": "Partie objet 1"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ObjectPartCodeSet(CatalogProfile='ZENXCO',CodeGroup='PM1',Code='2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"Code": "2",
+	"CodeDescr": "Partie objet 2"
+}]

@@ -1,0 +1,253 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"CodeDescr": "Adv Energy 500NX Grid-Tie Photov. Invrtr",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='BONUS120')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='BONUS120')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "BONUS120",
+	"CodeDescr": "Bonus 120 Turbine",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='BONUS120')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='BONUS150')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='BONUS150')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "BONUS150",
+	"CodeDescr": "Bonus 150 Turbine",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='BONUS150')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='CLM-01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='CLM-01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "CLM-01",
+	"CodeDescr": "Long texts for claim",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='CLM-01')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GAMESA1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GAMESA1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GAMESA1",
+	"CodeDescr": "Gamesa G87 G90",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GAMESA1')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GE1.5",
+	"CodeDescr": "GE 1.5 Turbine",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.5')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.6')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.6')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GE1.6",
+	"CodeDescr": "GE 1.6 Turbine",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.6')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.7')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.7')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GE1.7",
+	"CodeDescr": "GE 1.7-100 ESS",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.7')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.85')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.85')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GE1.85",
+	"CodeDescr": "GE 1.85 mw ESS",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE1.85')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE2.5')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE2.5')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GE2.5",
+	"CodeDescr": "GE 2.5 ESS Turbine",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GE2.5')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GT500')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GT500')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "GT500",
+	"CodeDescr": "Xantrex GT500 Solar Inverter",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='GT500')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='MICON108')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='MICON108')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "MICON108",
+	"CodeDescr": "Micon 108 Turbine",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='MICON108')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='MITM100')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='MITM100')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "MITM100",
+	"CodeDescr": "Mitsubishi M1000",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='MITM100')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='NEGM900')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='NEGM900')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "NEGM900",
+	"CodeDescr": "NEGM900",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='NEGM900')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Profil de panne 1 PM",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM2')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM2')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM2",
+	"CodeDescr": "Profil de panne 2 PM",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM2')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='REMM92')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='REMM92')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "REMM92",
+	"CodeDescr": "REpower MM82/92",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='REMM92')/DamageCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='SIE2.300')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='SIE2.300')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "SIE2.300",
+	"CodeDescr": "Siemens 2.3 0000-9999",
+	"DamageCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageGroupSet(CatalogProfile='ZENXCO',CodeGroup='SIE2.300')/DamageCode"
+		}
+	}
+}]

@@ -1,0 +1,81 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='00')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='00')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "00",
+	"CodeDescr": "Aux Supply Error"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='02')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='02')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "02",
+	"CodeDescr": "Master Control Open"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='03')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='03')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "03",
+	"CodeDescr": "Coolant Flow Error"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "04",
+	"CodeDescr": "Coolant Temp in Excess of Limit"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='05')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='05')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "05",
+	"CodeDescr": "DSP Watchdog - Faulty Logic Board"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='06')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='06')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "06",
+	"CodeDescr": "Config/ptr/size/xor Error"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='07')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='07')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "07",
+	"CodeDescr": "Communication Watchdog Timeout"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='09')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/DamageCodeSet(CatalogProfile='ZENXCO',CodeGroup='AE-500NX',Code='09')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.DamageCode"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "AE-500NX",
+	"Code": "09",
+	"CodeDescr": "Vitual Fault"
+}]

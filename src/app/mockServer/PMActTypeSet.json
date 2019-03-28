@@ -1,0 +1,1045 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "003",
+	"ActivityTypeDescr": "Outside Services"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='023')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='023')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "023",
+	"ActivityTypeDescr": "Inventory Count"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='041')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='041')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "041",
+	"ActivityTypeDescr": "Tool Calibration"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='042')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='042')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "042",
+	"ActivityTypeDescr": "Vehicle Maintenance/Inspection"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='043')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='043')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "043",
+	"ActivityTypeDescr": "Facility / Field Inspection"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='044')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='044')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "044",
+	"ActivityTypeDescr": "Inventory"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='045')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='045')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "045",
+	"ActivityTypeDescr": "Rebuild"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='051')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='051')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "051",
+	"ActivityTypeDescr": "Training - Other"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='053')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='053')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "053",
+	"ActivityTypeDescr": "Machine / Tool"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='054')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='054')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "054",
+	"ActivityTypeDescr": "General"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='055')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='055')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "055",
+	"ActivityTypeDescr": "Safety Training"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='059')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM01',ActivityType='059')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM01",
+	"ActivityType": "059",
+	"ActivityTypeDescr": "Travel - Site to Site"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM03',ActivityType='003')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM03',ActivityType='003')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM03",
+	"ActivityType": "003",
+	"ActivityTypeDescr": "Outside Services"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM04',ActivityType='101')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM04',ActivityType='101')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM04",
+	"ActivityType": "101",
+	"ActivityTypeDescr": "Rebuild"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM04',ActivityType='102')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM04',ActivityType='102')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM04",
+	"ActivityType": "102",
+	"ActivityTypeDescr": "Fabricate"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM04',ActivityType='A09')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='PM04',ActivityType='A09')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "PM04",
+	"ActivityType": "A09",
+	"ActivityTypeDescr": "Refurbishment"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM01',ActivityType='A02')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM01',ActivityType='A02')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM01",
+	"ActivityType": "A02",
+	"ActivityTypeDescr": "Break-In Maintenance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM01',ActivityType='A08')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM01',ActivityType='A08')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM01",
+	"ActivityType": "A08",
+	"ActivityTypeDescr": "Preventative Maintenance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A01",
+	"ActivityTypeDescr": "Administrative"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A03')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A03')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A03",
+	"ActivityTypeDescr": "HSE Compliance Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A04",
+	"ActivityTypeDescr": "Inspection"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A05')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A05')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A05",
+	"ActivityTypeDescr": "Insurance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A06')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A06')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A06",
+	"ActivityTypeDescr": "Monitoring"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A07')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A07')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A07",
+	"ActivityTypeDescr": "Performance analysis"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A10')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A10')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A10",
+	"ActivityTypeDescr": "Repair"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM02',ActivityType='A11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM02",
+	"ActivityType": "A11",
+	"ActivityTypeDescr": "Warranty"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='011')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='011')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "011",
+	"ActivityTypeDescr": "Control Panel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='014')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='014')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "014",
+	"ActivityTypeDescr": "Electrical"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='023')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='023')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "023",
+	"ActivityTypeDescr": "Inventory Count"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='073')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='073')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "073",
+	"ActivityTypeDescr": "BOP - Utilities"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='074')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='074')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "074",
+	"ActivityTypeDescr": "Fuel Feed"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='075')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='075')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "075",
+	"ActivityTypeDescr": "Fuel Handling"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='076')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='076')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "076",
+	"ActivityTypeDescr": "Major Maintenance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='104')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='104')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "104",
+	"ActivityTypeDescr": "Auxiliary Cooling Water"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='105')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='105')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "105",
+	"ActivityTypeDescr": "Buildings"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='107')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='107')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "107",
+	"ActivityTypeDescr": "Boiler"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='125')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='125')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "125",
+	"ActivityTypeDescr": "Fly Ash System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='128')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='128')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "128",
+	"ActivityTypeDescr": "Fuel Unloading/Delivery"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='151')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='151')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "151",
+	"ActivityTypeDescr": "Steam Turbine"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='156')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='156')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "156",
+	"ActivityTypeDescr": "Wet Ash"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='158')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM03',ActivityType='158')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM03",
+	"ActivityType": "158",
+	"ActivityTypeDescr": "Water Treatment/Demin"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='008')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='008')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "008",
+	"ActivityTypeDescr": "Cables & Sensors"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='009')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='009')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "009",
+	"ActivityTypeDescr": "Scada System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='010')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='010')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "010",
+	"ActivityTypeDescr": "Condition Based Monitoring"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='011')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='011')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "011",
+	"ActivityTypeDescr": "Control Panel"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='014')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='014')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "014",
+	"ActivityTypeDescr": "Electrical"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='015')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='015')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "015",
+	"ActivityTypeDescr": "Engineering"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='017')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='017')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "017",
+	"ActivityTypeDescr": "Equipment Testing"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='018')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='018')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "018",
+	"ActivityTypeDescr": "Facility/Site Maintenance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='020')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='020')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "020",
+	"ActivityTypeDescr": "Generator"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='022')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='022')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "022",
+	"ActivityTypeDescr": "Infrared Scanning"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='023')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='023')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "023",
+	"ActivityTypeDescr": "Inventory Count"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='030')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='030')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "030",
+	"ActivityTypeDescr": "Road Maintenance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='032')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='032')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "032",
+	"ActivityTypeDescr": "Snow Removal"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='035')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='035')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "035",
+	"ActivityTypeDescr": "Transformer & High Voltage"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='040')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='040')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "040",
+	"ActivityTypeDescr": "Weed Abatement"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='046')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='046')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "046",
+	"ActivityTypeDescr": "Administrative Duties"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='051')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='051')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "051",
+	"ActivityTypeDescr": "Training - Other"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='105')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='105')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "105",
+	"ActivityTypeDescr": "Buildings"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='107')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='107')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "107",
+	"ActivityTypeDescr": "Boiler"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='118')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='118')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "118",
+	"ActivityTypeDescr": "Consumable Supplies"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='164')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='164')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "164",
+	"ActivityTypeDescr": "Lagoon System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='165')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='165')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "165",
+	"ActivityTypeDescr": "Covered Area Lagoon System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='166')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='166')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "166",
+	"ActivityTypeDescr": "Anaerobic Digestion System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='167')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='167')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "167",
+	"ActivityTypeDescr": "Biogas Upgrading System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='168')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='168')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "168",
+	"ActivityTypeDescr": "Gas Pipeline System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='169')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='169')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "169",
+	"ActivityTypeDescr": "Transfer Blower System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='170')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='170')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "170",
+	"ActivityTypeDescr": "Compressor System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='172')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='172')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "172",
+	"ActivityTypeDescr": "Centrysis System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='173')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='173')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "173",
+	"ActivityTypeDescr": "Biorem System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='174')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='174')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "174",
+	"ActivityTypeDescr": "PSA Drier System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='176')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='176')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "176",
+	"ActivityTypeDescr": "Instrument Air System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='177')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='177')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "177",
+	"ActivityTypeDescr": "Water System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='178')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='178')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "178",
+	"ActivityTypeDescr": "Dosing System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='179')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='179')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "179",
+	"ActivityTypeDescr": "Flare System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='180')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='180')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "180",
+	"ActivityTypeDescr": "HVAC System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='181')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='181')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "181",
+	"ActivityTypeDescr": "Kanuka System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='182')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='182')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "182",
+	"ActivityTypeDescr": "Substrate System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='183')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='183')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "183",
+	"ActivityTypeDescr": "Manure System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='184')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='184')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "184",
+	"ActivityTypeDescr": "Digester Effluent System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='185')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='185')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "185",
+	"ActivityTypeDescr": "Plant Lighting System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='187')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='187')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "187",
+	"ActivityTypeDescr": "Chemical Sampling & Testing"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='188')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='188')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "188",
+	"ActivityTypeDescr": "Instrumentation Activity"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='189')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='189')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "189",
+	"ActivityTypeDescr": "Communications System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='190')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='190')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "190",
+	"ActivityTypeDescr": "Manure Delivery"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='191')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='191')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "191",
+	"ActivityTypeDescr": "Substrate Delivery"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='192')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='192')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "192",
+	"ActivityTypeDescr": "DPS Delivery"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='193')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='193')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "193",
+	"ActivityTypeDescr": "Digested Solids Handling"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='195')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='195')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "195",
+	"ActivityTypeDescr": "Rolling Stock"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='196')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='196')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "196",
+	"ActivityTypeDescr": "Deox System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='197')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='197')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "197",
+	"ActivityTypeDescr": "Centrate System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='198')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='198')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "198",
+	"ActivityTypeDescr": "Biogas Cooling System"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='199')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='199')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "199",
+	"ActivityTypeDescr": "Enviromental Monitoring"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='222')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM04',ActivityType='222')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM04",
+	"ActivityType": "222",
+	"ActivityTypeDescr": "Digested Solids Shipping"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A01')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A01')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A01",
+	"ActivityTypeDescr": "Administrative"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A03')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A03')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A03",
+	"ActivityTypeDescr": "HSE Compliance Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A04",
+	"ActivityTypeDescr": "Inspection"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A05')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A05')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A05",
+	"ActivityTypeDescr": "Insurance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A06')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A06')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A06",
+	"ActivityTypeDescr": "Monitoring"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A07')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A07')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A07",
+	"ActivityTypeDescr": "Performance analysis"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A10')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A10')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A10",
+	"ActivityTypeDescr": "Repair"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A11')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='SM05',ActivityType='A11')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "SM05",
+	"ActivityType": "A11",
+	"ActivityTypeDescr": "Warranty"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A03')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A03')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM01",
+	"ActivityType": "A03",
+	"ActivityTypeDescr": "HSE Compliance Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A04')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A04')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM01",
+	"ActivityType": "A04",
+	"ActivityTypeDescr": "Inspection"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A06')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A06')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM01",
+	"ActivityType": "A06",
+	"ActivityTypeDescr": "Monitoring"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A07')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A07')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM01",
+	"ActivityType": "A07",
+	"ActivityTypeDescr": "Performance analysis"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A08')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM01',ActivityType='A08')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM01",
+	"ActivityType": "A08",
+	"ActivityTypeDescr": "Preventative Maintenance"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM02',ActivityType='70')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM02',ActivityType='70')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM02",
+	"ActivityType": "70",
+	"ActivityTypeDescr": "Reimbursable"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM05',ActivityType='A13')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM05',ActivityType='A13')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM05",
+	"ActivityType": "A13",
+	"ActivityTypeDescr": "SCADA SIG Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM05',ActivityType='A14')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM05',ActivityType='A14')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM05",
+	"ActivityType": "A14",
+	"ActivityTypeDescr": "OCC Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM05',ActivityType='A15')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM05',ActivityType='A15')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM05",
+	"ActivityType": "A15",
+	"ActivityTypeDescr": "NERC Regulatory Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM06',ActivityType='A16')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZM06',ActivityType='A16')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZM06",
+	"ActivityType": "A16",
+	"ActivityTypeDescr": "PRE Service"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='046')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='046')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZSPM",
+	"ActivityType": "046",
+	"ActivityTypeDescr": "Administrative Duties"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='047')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='047')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZSPM",
+	"ActivityType": "047",
+	"ActivityTypeDescr": "Safety"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='051')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='051')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZSPM",
+	"ActivityType": "051",
+	"ActivityTypeDescr": "Training - Other"
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='058')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/PMActTypeSet(OrderType='ZSPM',ActivityType='058')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.PMActType"
+	},
+	"OrderType": "ZSPM",
+	"ActivityType": "058",
+	"ActivityTypeDescr": "PTO"
+}]

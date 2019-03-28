@@ -1,0 +1,141 @@
+[{
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='000000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='000000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='000000001',CodeGroup='PM1')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='000000001',CodeGroup='QM')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='000000001',CodeGroup='QM')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "000000001",
+	"CodeGroup": "QM",
+	"CodeDescr": "Problem causes, nonconformity causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='000000001',CodeGroup='QM')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CA-N',CodeGroup='PM1')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CA-N',CodeGroup='QM')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CA-N',CodeGroup='QM')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "CA-N",
+	"CodeGroup": "QM",
+	"CodeDescr": "Problem causes, nonconformity causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CA-N',CodeGroup='QM')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CLM000001',CodeGroup='PM1')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CLM000001',CodeGroup='QM')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CLM000001',CodeGroup='QM')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "CLM000001",
+	"CodeGroup": "QM",
+	"CodeDescr": "Problem causes, nonconformity causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='CLM000001',CodeGroup='QM')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='QM0000001',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='QM0000001',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='QM0000001',CodeGroup='PM1')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='QM0000001',CodeGroup='QM')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='QM0000001',CodeGroup='QM')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "QM0000001",
+	"CodeGroup": "QM",
+	"CodeDescr": "Problem causes, nonconformity causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='QM0000001',CodeGroup='QM')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "PM1",
+	"CodeDescr": "Maintenance causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='ZENXCO',CodeGroup='PM1')/CauseCode"
+		}
+	}
+}, {
+	"__metadata": {
+		"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='ZENXCO',CodeGroup='QM')",
+		"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='ZENXCO',CodeGroup='QM')",
+		"type": "ZPM_OM_WORKMANAGER_V2_SRV.CauseGroup"
+	},
+	"CatalogProfile": "ZENXCO",
+	"CodeGroup": "QM",
+	"CodeDescr": "Problem causes, nonconformity causes",
+	"CauseCode": {
+		"__deferred": {
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/CauseGroupSet(CatalogProfile='ZENXCO',CodeGroup='QM')/CauseCode"
+		}
+	}
+}]

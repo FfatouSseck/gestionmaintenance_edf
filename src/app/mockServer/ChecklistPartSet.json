@@ -1,0 +1,434 @@
+[
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00018')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00018')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "1",
+		"PartDescr": "C00018",
+		"PartId": "C00018"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00026')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00026')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "2",
+		"PartDescr": "C00026",
+		"PartId": "C00026"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00028')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00028')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "3",
+		"PartDescr": "C00028",
+		"PartId": "C00028"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00029')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00029')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "4",
+		"PartDescr": "C00029",
+		"PartId": "C00029"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00039')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00039')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "5",
+		"PartDescr": "C00039",
+		"PartId": "C00039"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00041')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00041')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "6",
+		"PartDescr": "C00041",
+		"PartId": "C00041"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00056')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00056')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "7",
+		"PartDescr": "C00056",
+		"PartId": "C00056"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00064')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00064')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "8",
+		"PartDescr": "C00064",
+		"PartId": "C00064"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00066')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00066')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "9",
+		"PartDescr": "C00066",
+		"PartId": "C00066"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00071')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00071')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "10",
+		"PartDescr": "C00071",
+		"PartId": "C00071"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00072')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00072')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "11",
+		"PartDescr": "C00072",
+		"PartId": "C00072"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00090')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00090')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "12",
+		"PartDescr": "C00090",
+		"PartId": "C00090"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00094')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00094')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "13",
+		"PartDescr": "C00094",
+		"PartId": "C00094"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00284')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00284')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "14",
+		"PartDescr": "C00284",
+		"PartId": "C00284"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00286')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00286')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "15",
+		"PartDescr": "C00286",
+		"PartId": "C00286"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00287')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00287')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "16",
+		"PartDescr": "C00287",
+		"PartId": "C00287"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00289')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00289')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "17",
+		"PartDescr": "C00289",
+		"PartId": "C00289"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00290')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00290')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "18",
+		"PartDescr": "C00290",
+		"PartId": "C00290"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00291')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00291')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "19",
+		"PartDescr": "C00291",
+		"PartId": "C00291"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00292')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00292')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "20",
+		"PartDescr": "C00292",
+		"PartId": "C00292"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00336')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00336')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "21",
+		"PartDescr": "C00336",
+		"PartId": "C00336"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00367')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00367')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "22",
+		"PartDescr": "C00367",
+		"PartId": "C00367"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00483')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00483')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "23",
+		"PartDescr": "C00483",
+		"PartId": "C00483"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00555')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='C00555')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "24",
+		"PartDescr": "C00555",
+		"PartId": "C00555"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P00754')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P00754')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "25",
+		"PartDescr": "P00754",
+		"PartId": "P00754"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P00761')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P00761')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "26",
+		"PartDescr": "P00761",
+		"PartId": "P00761"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01002')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01002')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "27",
+		"PartDescr": "P01002",
+		"PartId": "P01002"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01016')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01016')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "28",
+		"PartDescr": "P01016",
+		"PartId": "P01016"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01019')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01019')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "29",
+		"PartDescr": "P01019",
+		"PartId": "P01019"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01020')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01020')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "30",
+		"PartDescr": "P01020",
+		"PartId": "P01020"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01742')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01742')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "31",
+		"PartDescr": "P01742",
+		"PartId": "P01742"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01793R')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P01793R')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "32",
+		"PartDescr": "P01793R",
+		"PartId": "P01793R"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P05018')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P05018')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "33",
+		"PartDescr": "P05018",
+		"PartId": "P05018"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P05153')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P05153')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "34",
+		"PartDescr": "P05153",
+		"PartId": "P05153"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P05154')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P05154')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "35",
+		"PartDescr": "P05154",
+		"PartId": "P05154"
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P06004')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/ChecklistPartSet(ChklstId='00001',PartId='P06004')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.ChecklistPart"
+		},
+		"Plant": "3CAT",
+		"ChklstId": "00001",
+		"PartQuantity": "36",
+		"PartDescr": "P06004",
+		"PartId": "P06004"
+	}
+]
