@@ -14,23 +14,23 @@
     <div *ngIf="noData">
         <p>No Data available</p>
     </div>
-    <ion-toolbar>
-        <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
-            <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm" [formControl]="searchControl"
-                (ionBlur)="toggleSearch()" class="searchbar">
-            </ion-searchbar>
-        </div>
-        <ion-buttons slot="end">
-            <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()"
-                style="--background: #007CC0; color: #fff;">
-                <ion-icon name="search"></ion-icon>
-            </ion-fab-button>
-        </ion-buttons>
-        <ion-title *ngIf="!refresh && !clicked">
-            Pull to refresh
-        </ion-title>
-    </ion-toolbar>
     <div *ngIf="types.length>0">
+        <ion-toolbar>
+            <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
+                <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm"
+                    [formControl]="searchControl" (ionBlur)="toggleSearch()" class="searchbar">
+                </ion-searchbar>
+            </div>
+            <ion-buttons slot="end">
+                <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()"
+                    style="--background: #007CC0; color: #fff;">
+                    <ion-icon name="search"></ion-icon>
+                </ion-fab-button>
+            </ion-buttons>
+            <ion-title *ngIf="!refresh && !clicked">
+                Pull to refresh
+            </ion-title>
+        </ion-toolbar>
         <mat-tab-group (selectedTabChange)="segmentChanged($event)" #tabGroup>
             <mat-tab *ngFor="let type of types" [label]="type">
                 <div *ngIf="ok">

@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'time-and-material-confirmation', loadChildren: './pages/time-and-material-confirmation/time-and-material-confirmation.module#TimeAndMaterialConfirmationPageModule' },
   { path: 'documents', loadChildren: './pages/documents/documents.module#DocumentsPageModule' },
   { path: 'my-orders', loadChildren: './pages/my-orders/my-orders.module#MyOrdersPageModule' },
+  { path: 'similar-notifications', loadChildren: './pages/similar-notifications/similar-notifications.module#SimilarNotificationsPageModule' },
 
 
 

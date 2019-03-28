@@ -1,8 +1,5 @@
 app-check-list-assignment{
-  
-//@import "../../../assets/css/main.css";
-//@import "../../../assets/css/util.css";
-
+ 
   /* Styles for tab labels */
   .mat-tab-label {
     //min-width: 45px !important;
@@ -24,11 +21,6 @@ app-check-list-assignment{
   table {
     width: 100%;
   }
-  
-.mat-form-field {
-  font-size: 14px;
-  width: 100%;
-}
 
   .mat-column-FunctLoc,.mat-column-OrderNo,.mat-column-StatusDescr
   ,.mat-column-Operation,.mat-column-Description,.mat-column-Checklist

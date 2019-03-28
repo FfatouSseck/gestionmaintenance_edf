@@ -60,23 +60,6 @@ export class NotificationService extends BaseService {
     let done = false;
 
     if (ntfs.length > 0) {
-      /*for (let i = 0; i < ntfs.length; i++) {
-        this.notifs.push({
-          breakdownIndic: ntfs[i].Breakdown,
-          cause: ntfs[i].CauseCode + " " + ntfs[i].CauseDescr,
-          color: null,
-          damageCode: ntfs[i].DamageCode,
-          description: ntfs[i].ShortText,
-          equipment: ntfs[i].Equipment,
-          functloc: ntfs[i].FunctLoc + " " + ntfs[i].FunctLocDescr,
-          longText: ntfs[i].LongText,
-          notifNumber: ntfs[i].NotifNo,
-          objectPart: ntfs[i].ObjectPartCode + " " + ntfs[i].ObjectPartCodeDescr,
-          priority: ntfs[i].PriorityDescr,
-          productionEff: ntfs[i].EffectDescr,
-          startDate: ntfs[i].StartDate
-        });
-      }*/
       this.notifs = ntfs;
 
       done = true;
@@ -87,8 +70,20 @@ export class NotificationService extends BaseService {
     return done;
   }
 
+  getAvailableNotifs(){
+    return this.notifs;
+  }
+
   notifsAvailable(): boolean {
     return this.available;
+  }
+
+  filterNotifsByFLOC(floc: string){
+    return this.notifs.filter(
+      (notif) =>{
+        return notif.FunctLoc.toLowerCase().indexOf(floc.toLowerCase()) > -1;
+      }
+    )
   }
 
   filterNotifs(searchTerm) {

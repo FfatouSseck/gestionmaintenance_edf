@@ -59,9 +59,9 @@ export class CheckListAssignmentPage implements OnInit {
       this.clicked = false;
     } else {
       this.clicked = true;
-        setTimeout(() => {
-          this.search.setFocus();
-        }, 100);
+      setTimeout(() => {
+        this.search.setFocus();
+      }, 100);
     }
   }
 
@@ -91,7 +91,7 @@ export class CheckListAssignmentPage implements OnInit {
               else {
                 this.loading = false;
                 this.noData = false;
-                if(segmentIndex != null && segmentIndex != undefined){
+                if (segmentIndex != null && segmentIndex != undefined) {
                   console.log("here")
                   this.orderType = this.types[segmentIndex];
                 }
@@ -132,7 +132,9 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   segmentChanged(ev: any) {
-    this.search.value = "";
+    if (this.search != undefined) {
+      this.search.value = "";
+    }
     this.clicked = false;
     this.ok = false;
     let ords: newOrder[] = [];
@@ -164,7 +166,6 @@ export class CheckListAssignmentPage implements OnInit {
                 prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
               });
             });
-
           },
           error => console.log("Error: ", error),
           async () => {

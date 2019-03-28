@@ -214,7 +214,7 @@
   </ng-template>
 
 </ion-content>
-<ion-footer *ngIf="modif == false && notAvailable==false">
+<ion-footer *ngIf="modif == false && notAvailable==false && choosenNotif.NotifNo!=null">
   <ion-toolbar style="--background: #3E4649;--min-height:50px"
     *ngIf=" orientation === 'landscape-primary' && noData == false">
     <ion-buttons slot="end">
@@ -225,14 +225,14 @@
         size="large" type="reset">Reject</ion-button>
       <ion-button (click)="modifyNotif()" style="background-color: #009DE0;color: white;--height:40px" strong="true"
         size="large" type="reset">Modify</ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
-        strong="true" size="large" type="reset">Similar Notifications</ion-button>
+      <ion-button (click)="displaySimilarNotifs()" style="background-color: #009DE0;color: white;--height:40px"
+        strong="true" size="large">Similar Notifications</ion-button>
       <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
         strong="true" size="large" type="reset">Copy</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-<ion-footer *ngIf="modif == true && notAvailable==false">
+<ion-footer *ngIf="modif == true && notAvailable==false && choosenNotif.NotifNo!=null">
   <ion-toolbar style="--background: #3E4649;--min-height:50px"
     *ngIf=" orientation === 'landscape-primary' && noData == false">
     <ion-buttons slot="end">
@@ -241,7 +241,7 @@
       </ion-button>
       <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
         (click)="modif = !modif">Cancel</ion-button>
-      <ion-button style="background-color: #009DE0;color: white;--height:40px" strong="true" size="large" type="reset">
+      <ion-button style="background-color: #009DE0;color: white;--height:40px" strong="true" size="large" (click)="displaySimilarNotifs()">
         Similar
         Notifications</ion-button>
     </ion-buttons>

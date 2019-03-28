@@ -125,11 +125,10 @@ export class NotificationListPage extends BasePage implements OnInit {
   }
 
   presentDetails(notif: NotifHeader) {
-    console.log(notif);
     this.choosenNotif = notif;
     this.modif = false;
     let index = this.notifList.indexOf(notif);
-
+   
     for (let i = 0; i < this.notifList.length; i++) {
       this.notifList[i].color = null
     }
@@ -221,6 +220,10 @@ export class NotificationListPage extends BasePage implements OnInit {
     return dateD;
   }
 
+  displaySimilarNotifs(){
+    this.router.navigateByUrl("/similar-notifications");
+  }
+
   modifyNotif() {
     this.modif = true;
   }
@@ -237,11 +240,9 @@ export class NotificationListPage extends BasePage implements OnInit {
           this.notifService.getAllNotifs(choosenPlantcode).subscribe(
             (notifs: any) => {
               if (notifs.d.results.length > 0) {
-                console.log(notifs.d.results[0]);
                 let done = this.notifService.setNotifs(notifs.d.results);
                 if (done) {
                   this.notifList = this.notifService.filterNotifs(this.searchTerm);
-                  this.choosenNotif = this.notifList[0];
                   if (this.notifList[0].NotifNo != null) {
                     this.notAvailable = false;
                     this.noData = false;

@@ -6,7 +6,7 @@
       </ion-back-button>
   </ion-buttons>
   <img alt="logo" height="40" src="../../../assets/img/logo.png" *ngIf="currentUrl === '/home' ">
-  <ion-buttons slot="end">
+  <ion-buttons slot="end" *ngIf="currentUrl !== '/similar-notifications' ">
     <ion-button fill="clear" (click)="presentActionSheet()">
         <ion-icon name="settings" style="color: grey"></ion-icon>
     </ion-button>
