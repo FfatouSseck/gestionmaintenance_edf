@@ -20,6 +20,7 @@ export class CheckListAssignmentPage implements OnInit {
   searchTerm: string = '';
   searchControl: FormControl;
   @ViewChild('search') search: any;
+  @ViewChild('tabGroup') tabGroup;
   orderList: Order[] = [];
   ordersByType: newOrder[] = [];
   orderType = "";
@@ -69,9 +70,10 @@ export class CheckListAssignmentPage implements OnInit {
       this.orderService.filterOrders(this.searchTerm, this.ordersByType));
   }
 
-  getAllOrders() {
+  getAllOrders(segmentIndex?: number) {
     this.loading = true;
     this.noData = false;
+    this.orders = [];
 
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
@@ -89,7 +91,11 @@ export class CheckListAssignmentPage implements OnInit {
               else {
                 this.loading = false;
                 this.noData = false;
-                this.orderType = this.types[0];
+                if(segmentIndex != null && segmentIndex != undefined){
+                  console.log("here")
+                  this.orderType = this.types[segmentIndex];
+                }
+                else this.orderType = this.types[0];
                 let ev = {
                   tab: {
                     textLabel: this.orderType
@@ -179,7 +185,8 @@ export class CheckListAssignmentPage implements OnInit {
 
   doRefresh(event) {
     this.refresh = true;
-    this.getAllOrders();
+    console.log('afterViewInit => ', this.tabGroup.selectedIndex);
+    this.getAllOrders(this.tabGroup.selectedIndex);
 
     setTimeout(() => {
       event.target.complete();

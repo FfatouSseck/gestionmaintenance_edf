@@ -31,7 +31,7 @@
         </ion-title>
     </ion-toolbar>
     <div *ngIf="types.length>0">
-        <mat-tab-group (selectedTabChange)="segmentChanged($event)">
+        <mat-tab-group (selectedTabChange)="segmentChanged($event)" #tabGroup>
             <mat-tab *ngFor="let type of types" [label]="type">
                 <div *ngIf="ok">
                     <div [ngSwitch]="orderType" (tabChanged)="onTabChanged($event)" class="swipe-area"
