@@ -33,7 +33,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   noOperations = false;
   noNotif = false;
 
-  ordersList: Order[] = []
+  ordersList: any[] = []
 
   choosenOrder: Order = {
     EquipUnderWarranty: null,

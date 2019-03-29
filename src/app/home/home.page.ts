@@ -57,6 +57,29 @@ export class HomePage implements OnInit {
                 if (mock != undefined && mock != null && mock == true) {
                     //we call the mock server
                     this.plants = this.mockService.getAllMockPlants();
+
+                    //we check if there is a choosen plant
+                    this.storage.get("choosenPlant").then(
+                        (choosenPlantcode) => {
+                            if (choosenPlantcode != null) {
+                                this.choosenPlant = choosenPlantcode;
+                                this.updateData(this.choosenPlant);
+                                //getting FunctLocSet from server
+                                /*this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
+                                    (functlocs) => {
+                                        this.functLocService.setFunctLocs(functlocs.d.results);
+                                    },
+                                    (err) => {
+                                        console.log(err);
+                                    }
+                                )*/
+                            }
+                            //otherwise we ask the user to choose a plant
+                            else this.presentPlantsModal();
+                        },
+                        (err) => {
+                            console.log("error", err);
+                        })
                 }
                 else {
                     this.plantService.getAllPlants().subscribe(

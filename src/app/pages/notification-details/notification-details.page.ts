@@ -18,7 +18,7 @@ export class NotificationDetailsPage implements OnInit {
 
   ngOnInit() {
     this.choosenNotif =  this.notifService.getCurrentNotif();
-    console.log(this.choosenNotif);
+    console.log("choosenNotif: ",this.choosenNotif);
 
     this.notifDetailsFormGroup = this._formBuilder.group({
       description: ['', Validators.required],

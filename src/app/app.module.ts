@@ -35,6 +35,7 @@ import { ObjectPartGroupListPage } from './pages/object-part-group-list/object-p
 import { ObjectPartCodeListPage } from './pages/object-part-code-list/object-part-code-list.page';
 import { DamageCodePage } from './pages/damage-code/damage-code.page';
 import { DamageGroupPage } from './pages/damage-group/damage-group.page';
+import { Globalization } from '@ionic-native/globalization/ngx';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,7 @@ import { DamageGroupPage } from './pages/damage-group/damage-group.page';
     FilePath,
     NativeStorage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-   // { provide: QRScanner, useClass: QRScannerMock }
+    Globalization
   ],
   bootstrap: [AppComponent]
 })

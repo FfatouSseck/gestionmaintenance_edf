@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 import { Priority } from 'src/app/interfaces/priority.interface';
 import { PriorityService } from 'src/app/providers/priority.service';
 import { MockService } from 'src/app/providers/mock.service';
-import { truncateSync } from 'fs';
 
 @Component({
   selector: 'app-notification-list',
@@ -39,7 +38,7 @@ export class NotificationListPage extends BasePage implements OnInit {
   choosenObjectPartCode = "";
   choosenObjectPartGroup = "";
 
-  notifList: NotifHeader[] = [];
+  notifList: any[] = [];
   choosenNotif: NotifHeader = {
     NotifNo: null
   };
@@ -138,18 +137,23 @@ export class NotificationListPage extends BasePage implements OnInit {
   }
 
   getMockNotifs(plant) {
-    console.log("plant: ",plant);
     this.notAvailable = true;
     let ntfs = this.mockService.getAllMockNotifs(plant);
     this.notifList = ntfs;
-    if (this.notifList[0].NotifNo != null) {
-      this.notAvailable = false;
-      this.noData = false;
-    }
+    console.log(this.notifList);
     if(this.notifList.length == 0){
+      console.log("here");
       this.notAvailable = false;
       this.noData = true;
     }
+    else{
+      if (this.notifList[0].NotifNo != null) {
+        this.notAvailable = false;
+        this.noData = false;
+      }
+    }
+    
+    
   }
 
   onClose(evt) {

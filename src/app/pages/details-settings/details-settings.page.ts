@@ -127,12 +127,13 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   closeModal() {
+    console.log("checkedPlants:",this.checkedPlants,"choosen: ",this.choosenPlant);
     //we gonna check if there are more than one plant choosen  
     if (this.checkedPlants.length > 1) {
       this.openSnackBar("You have choosen more than one plant");
     }
     else if (this.checkedPlants.length == 0) {
-      if (this.choosenPlant === "") {
+      if (this.choosenPlant === "" || this.choosenPlant == undefined) {
         this.openSnackBar("Please select at least one planning plant");
       }
       else {
