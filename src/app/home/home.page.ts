@@ -183,7 +183,7 @@ export class HomePage implements OnInit {
             })
     }
 
-    getMockNotifs(plant) {
+    getMockNotifs(plant: any) {
         this.dataAvailable = false;
         let ntfs = this.mockService.getAllMockNotifs(plant);
 

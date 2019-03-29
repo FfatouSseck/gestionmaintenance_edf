@@ -93,20 +93,23 @@ export class DetailsSettingsPage implements OnInit {
 
   ionViewDidEnter() {
     this.checkedPlants = [];
-    let available = this.dataService.plantsAvailable();
-    if (available) {
-      this.notAvailable = false;
-      this.setFilteredItems();
-    }
-    else {
-      this.storage.get("mock").then(
-        (mock) => {
-          if (mock != null && mock != undefined && mock == true) {
-            let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
-            if (done) {
-              this.notAvailable = false;
-              this.setFilteredItems();
-            }
+
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != null && mock != undefined && mock == true) {
+          console.log("from mock server");
+          let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
+          if (done) {
+            this.notAvailable = false;
+            this.setFilteredItems();
+          }
+        }
+        else {
+          console.log("from remote server");
+          let available = this.dataService.plantsAvailable();
+          if (available) {
+            this.notAvailable = false;
+            this.setFilteredItems();
           }
           else {
             this.plantService.getAllPlants().subscribe(
@@ -120,9 +123,7 @@ export class DetailsSettingsPage implements OnInit {
               });
           }
         }
-      )
-
-    }
+      })
   }
 
   closeModal() {

@@ -55,6 +55,7 @@ export class LoginPage implements OnInit {
       this.loginservice.login(this.credentials.login,this.credentials.pwd).subscribe(
         (res) =>{
           console.log("iciiiiiiiiii",res);
+          this.storage.set("mock",false);
           this.router.navigateByUrl("/home");
         },
         async (err) =>{

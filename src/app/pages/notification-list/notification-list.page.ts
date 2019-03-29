@@ -12,6 +12,8 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { Router } from '@angular/router';
 import { Priority } from 'src/app/interfaces/priority.interface';
 import { PriorityService } from 'src/app/providers/priority.service';
+import { MockService } from 'src/app/providers/mock.service';
+import { truncateSync } from 'fs';
 
 @Component({
   selector: 'app-notification-list',
@@ -50,7 +52,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     public qrScanner: QRScanner, public toastController: ToastController, public notifService: NotificationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
     private screenOrientation: ScreenOrientation, public router: Router,
-    public priorityService: PriorityService) {
+    public priorityService: PriorityService, public mockService: MockService) {
 
     super(_formBuilder, platform, null, qrScanner, toastController, snackBar, alertController, modalController);
 
@@ -83,23 +85,39 @@ export class NotificationListPage extends BasePage implements OnInit {
 
   ionViewDidEnter() {
     let available = this.notifService.notifsAvailable();
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) => {
+        if (choosenPlantcode != null) {
+          this.choosenPlantcode = choosenPlantcode;
+        }
+      });
+
     if (available) {
-      this.storage.get("choosenPlant").then(
-        (choosenPlantcode) => {
-          if (choosenPlantcode != null) {
-            this.choosenPlantcode = choosenPlantcode;
+
+      this.storage.get("mock").then(
+        (mock) => {
+          if (mock != undefined && mock != null && mock == true) {
+            this.getMockNotifs(this.choosenPlantcode);
           }
-        });
-
-      this.notifList = this.notifService.filterNotifs(this.searchTerm);
-      if (this.notifList[0].NotifNo != null) {
-        this.notAvailable = false;
-        this.noData = false;
-
-      }
+          else {
+            this.notifList = this.notifService.filterNotifs(this.searchTerm);
+            if (this.notifList[0].NotifNo != null) {
+              this.notAvailable = false;
+              this.noData = false;
+            }
+          }
+        })
     }
     else {
-      this.getNotifs();
+      this.storage.get("mock").then(
+        (mock) => {
+          if (mock != undefined && mock != null && mock == true) {
+            this.getMockNotifs(this.choosenPlantcode);
+          }
+          else {
+            this.getNotifs();
+          }
+        })
     }
 
     //getting PrioritySet from server
@@ -119,16 +137,46 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
   }
 
+  getMockNotifs(plant) {
+    console.log("plant: ",plant);
+    this.notAvailable = true;
+    let ntfs = this.mockService.getAllMockNotifs(plant);
+    this.notifList = ntfs;
+    if (this.notifList[0].NotifNo != null) {
+      this.notAvailable = false;
+      this.noData = false;
+    }
+    if(this.notifList.length == 0){
+      this.notAvailable = false;
+      this.noData = true;
+    }
+  }
+
   onClose(evt) {
     this.notAvailable = true;
-    this.getNotifs();
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) => {
+        if (choosenPlantcode != null) {
+          this.choosenPlantcode = choosenPlantcode;
+        }
+      });
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null && mock == true) {
+          this.getMockNotifs(this.choosenPlantcode);
+        }
+        else{
+          this.getNotifs();
+        }
+      });
+    
   }
 
   presentDetails(notif: NotifHeader) {
     this.choosenNotif = notif;
     this.modif = false;
     let index = this.notifList.indexOf(notif);
-   
+
     for (let i = 0; i < this.notifList.length; i++) {
       this.notifList[i].color = null
     }
@@ -220,7 +268,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     return dateD;
   }
 
-  displaySimilarNotifs(){
+  displaySimilarNotifs() {
     this.router.navigateByUrl("/similar-notifications");
   }
 
@@ -250,7 +298,6 @@ export class NotificationListPage extends BasePage implements OnInit {
                 }
                 else this.noData = true;
               }
-
               else {
                 this.noData = true;
                 this.notAvailable = false;
@@ -259,44 +306,41 @@ export class NotificationListPage extends BasePage implements OnInit {
             (err) => {
               console.log(err);
               this.noData = true;
-            }
-          )
+            })
         }
-
-      }
-    )
+      })
   }
 
   async selectFunctLoc() {
     let functLoc = "";
     if (this.choosenFunctLoc !== "") {
-      functLoc = this.choosenFunctLoc;   
+      functLoc = this.choosenFunctLoc;
     }
 
     this.choosenFunctLoc = await this.selectFLoc(this.choosenPlantcode);
-    
+
     if (this.choosenFunctLoc !== "") {
       await this.selectEquipment(this.choosenFunctLoc);
     }
-    else{
+    else {
       this.choosenFunctLoc = functLoc;
     }
   }
 
   async selectEquipment(fl: string) {
     let eq = "";
-    if(this.choosenEquipment !== ""){
+    if (this.choosenEquipment !== "") {
       eq = this.choosenEquipment;
     }
     this.choosenEquipment = await this.selectEq(fl);
-    if(this.choosenEquipment === ""){
+    if (this.choosenEquipment === "") {
       this.choosenEquipment = eq;
     }
   }
 
   async selectCauseGroup() {
     let cg = "";
-    if(this.choosenCG !== ""){
+    if (this.choosenCG !== "") {
       cg = this.choosenCG;
     }
     this.choosenCG = await this.selectCG();
@@ -304,43 +348,43 @@ export class NotificationListPage extends BasePage implements OnInit {
     if (this.choosenCG !== "") {
       await this.selectCauseCode(this.choosenCG);
     }
-    else{
+    else {
       this.choosenCG = cg;
     }
   }
 
   async selectCauseCode(cg: string) {
     let cc = "";
-    if(this.choosenCC !== ""){
+    if (this.choosenCC !== "") {
       cc = this.choosenCC;
     }
     this.choosenCC = await this.selectCC(cg);
-    if(this.choosenCC === ""){
+    if (this.choosenCC === "") {
       this.choosenCC = cc;
     }
   }
 
   async selectObjectPartGroup() {
     let opg = "";
-    if(this.choosenObjectPartGroup !== ""){
+    if (this.choosenObjectPartGroup !== "") {
       opg = this.choosenObjectPartGroup;
     }
     this.choosenObjectPartGroup = await this.selectOPGroup();
     if (this.choosenObjectPartGroup !== "") {
       await this.selectObjectPartCode(this.choosenObjectPartGroup);
     }
-    else{
+    else {
       this.choosenObjectPartGroup = opg;
     }
   }
 
   async selectObjectPartCode(og: any) {
     let opc = "";
-    if(this.choosenObjectPartCode !== ""){
-      opc =  this.choosenObjectPartCode;
+    if (this.choosenObjectPartCode !== "") {
+      opc = this.choosenObjectPartCode;
     }
     this.choosenObjectPartCode = await this.selectOPCode(og);
-    if(this.choosenObjectPartCode === ""){
+    if (this.choosenObjectPartCode === "") {
       this.choosenObjectPartCode = opc;
     }
   }
@@ -348,25 +392,25 @@ export class NotificationListPage extends BasePage implements OnInit {
   //Damage Codes & Groups
   async selectDamageGroup() {
     let dg = "";
-    if(this.choosenDG !== ""){
+    if (this.choosenDG !== "") {
       dg = this.choosenDG;
     }
     this.choosenDG = await this.selectDG();
     if (this.choosenDG !== "") {
       await this.selectDamageCode(this.choosenDG);
     }
-    else{
+    else {
       this.choosenDG = dg;
     }
   }
 
   async selectDamageCode(dg: string) {
     let dc = "";
-    if(this.choosenDC !== ""){
+    if (this.choosenDC !== "") {
       dc = this.choosenDC;
     }
     this.choosenDC = await this.selectDC(dg);
-    if(this.choosenDC === ""){
+    if (this.choosenDC === "") {
       this.choosenDC = dc;
     }
   }

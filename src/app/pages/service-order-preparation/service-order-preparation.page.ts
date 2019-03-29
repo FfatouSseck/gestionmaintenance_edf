@@ -11,6 +11,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { Router } from '@angular/router';
 import { BaseOrderPage } from '../base.order.page';
 import { NotificationService } from 'src/app/providers/notification.service';
+import { MockService } from 'src/app/providers/mock.service';
 
 @Component({
   selector: 'app-service-order-preparation',
@@ -110,7 +111,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public orderService: ServiceOrderPreparationService,
-    public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
+    public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage, public mockService: MockService,
     private screenOrientation: ScreenOrientation, public router: Router, public notifService: NotificationService) {
 
     super(_formBuilder, platform, toastController, snackBar, alertController, modalController)
@@ -150,20 +151,30 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   ionViewDidEnter() {
     this.loadNotif = true;
     this.operations = [];
-    let available = this.orderService.checkAvailability();
-    if (available) {
-      this.ordersList = this.orderService.getAllOrders();
-      if (this.ordersList[0].OrderNo != null) {
-        this.notAvailable = false;
-        this.noData = false;
-        if (this.choosenNotif.NotifNo != null) {
-          this.loadNotif = false;
+
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null && mock == true) {
+          this.getMockOrders();
         }
-      }
-    }
-    else {
-      this.getOrders();
-    }
+        else {
+          let available = this.orderService.checkAvailability();
+          if (available) {
+            this.ordersList = this.orderService.getAllOrders();
+            if (this.ordersList[0].OrderNo != null) {
+              this.notAvailable = false;
+              this.noData = false;
+              if (this.choosenNotif.NotifNo != null) {
+                this.loadNotif = false;
+              }
+            }
+          }
+          else {
+            this.getOrders();
+          }
+        }
+      })
+
   }
 
   presentDetails(order: Order) {
@@ -172,9 +183,21 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.choosenOrder = order;
     this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
     this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
-    this.getOrderNotification(this.choosenOrder.NotifNo);
-    this.getOrderOperations(this.choosenOrder.OrderNo);
-    this.getOrderComponents(this.choosenOrder.OrderNo);
+
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null && mock == true) {
+          this.getMockNotifByNumber(this.choosenOrder.NotifNo);
+          this.getMockOrderOperations(this.choosenOrder.OrderNo);
+          this.getMockOrderComponents(this.choosenOrder.OrderNo);
+        }
+        else {
+          this.getOrderNotification(this.choosenOrder.NotifNo);
+          this.getOrderOperations(this.choosenOrder.OrderNo);
+          this.getOrderComponents(this.choosenOrder.OrderNo);
+        }
+      });
+
     this.modif = false;
 
     let index = this.ordersList.indexOf(order);
@@ -192,7 +215,15 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
 
   onClose(evt) {
     this.notAvailable = true;
-    this.getOrders();
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null && mock == true) {
+          this.getMockOrders();
+        }
+        else {
+          this.getOrders();
+        }
+      })
   }
 
   getOrders() {
@@ -229,6 +260,26 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     )
   }
 
+  getMockOrders() {
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) => {
+        if (choosenPlantcode != null) {
+          this.ordersList = this.mockService.getAllMockSOP(choosenPlantcode);
+          if (this.ordersList[0].OrderNo != null) {
+            this.notAvailable = false;
+            this.noData = false;
+            if (this.choosenNotif.NotifNo != null) {
+              this.loadNotif = false;
+            }
+          }
+          if (this.ordersList.length == 0) {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+        }
+      })
+  }
+
   getOrderNotification(notifNo) {
     this.noNotif = false;
     this.notifService.getNotifByNumber(notifNo).subscribe(
@@ -237,13 +288,27 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
         if (this.choosenNotif.NotifNo == null) {
           this.noNotif = true;
         }
-          this.loadNotif = false;
+        this.loadNotif = false;
       },
-      (err) =>{
+      (err) => {
         this.noNotif = true;
         this.loadNotif = false;
       }
     )
+  }
+
+  getMockNotifByNumber(notifNo) {
+    this.noNotif = false;
+    let choosenNotif = this.mockService.getMockNotifByNumber(notifNo)[0];
+    console.log(choosenNotif);
+    if(choosenNotif == undefined){
+      this.noNotif = true;
+      this.choosenNotif.NotifNo = null;
+    }
+    else{
+      this.choosenNotif = choosenNotif;
+    }
+    this.loadNotif = false;
   }
 
   getOrderOperations(orderNo: string) {
@@ -252,9 +317,17 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.orderService.getOrderOperations(orderNo).subscribe(
       (operations) => {
         this.operations = operations.d.results;
-        if(this.operations.length == 0) this.noOperations = true;
-      }
-    )
+        if (this.operations.length == 0) this.noOperations = true;
+      });
+  }
+
+  getMockOrderOperations(orderNo: string){
+    this.operations = [];
+    this.noOperations = false;
+    this.operations = this.mockService.getMockOrderOperations(orderNo);
+    if (this.operations.length == 0) {
+      this.noOperations = true;
+    }
   }
 
   getOrderComponents(orderNo: string) {
@@ -263,9 +336,18 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.orderService.getOrderComponents(orderNo).subscribe(
       (components) => {
         this.components = components.d.results;
-        if(this.components.length == 0) this.noComponents = true;
+        if (this.components.length == 0) this.noComponents = true;
       }
     )
+  }
+
+  getMockOrderComponents(orderNo: string){
+    this.components = [];
+    this.noComponents = false;
+    this.components = this.mockService.getMockOrderComponents(orderNo);
+    if (this.components.length == 0){
+      this.noComponents = true;
+     }
   }
 
 }

@@ -4,6 +4,8 @@ import { NotifHeader } from '../interfaces/notification.interface';
 import * as NotifHeaderdata from '../mockServer/NotifHeaderSet.json';
 import * as Plantdata from '../mockServer/PlanPlantSet.json';
 import * as SOP from '../mockServer/OrderHeaderSet.json';
+import * as Orderoperations from '../mockServer/OrderOperationSet.json';
+import * as Ordercomponents from '../mockServer/OrderComponentSet.json';
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +35,37 @@ export class MockService {
       }
     )
   }
+
+  getMockNotifByNumber(notifNo: string){
+    console.log("notif n°: ",notifNo);
+    let notifList = NotifHeaderdata.default;
+    return notifList.filter(
+      (notif:NotifHeader) =>{
+        if(notif.NotifNo != null){
+          return notif.NotifNo.toLowerCase().indexOf(notifNo.toLowerCase()) > -1;
+        }
+      })
+  }
+
+  getMockOrderOperations(orderNo: string){
+    let operations = Orderoperations.default;
+    return operations.filter(
+      (op) =>{
+        return op.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1;
+      }
+    )
+  }
+
+  getMockOrderComponents(orderNo: string){
+    let components = Ordercomponents.default;
+    return components.filter(
+      (cp) =>{
+        if(cp.OrderNo != null && orderNo != null){
+          return cp.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1;
+        }
+      }
+    )
+  }
+
+
 }
