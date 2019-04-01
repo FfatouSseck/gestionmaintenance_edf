@@ -5,6 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { DamageGroup } from 'src/app/interfaces/damagegroup.interface';
 import { DamagegroupService } from 'src/app/providers/damagegroup.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
 
 @Component({
   selector: 'app-damage-group',
@@ -17,10 +19,11 @@ export class DamageGroupPage implements OnInit {
   damageGroups: DamageGroup[] = [];
   notAvailable = true;
   noData = false;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-    public snackBar: MatSnackBar, public navParams: NavParams,
-    public damageGroupService: DamagegroupService) {
+    public snackBar: MatSnackBar, public navParams: NavParams, private mockService: MockService,
+    public damageGroupService: DamagegroupService, private storage: Storage) {
 
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
@@ -32,6 +35,12 @@ export class DamageGroupPage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   setFilteredItems() {
@@ -40,32 +49,55 @@ export class DamageGroupPage implements OnInit {
 
   ionViewDidEnter() {
     //getting CauseGroupSet from server
+    this.getDamageGroups();
+  }
 
-    this.damageGroupService.getAllDamageGroups().subscribe(
-      (damagegroups) => {
-        this.damageGroupService.setDamageGroups(damagegroups.d.results);
+  getDamageGroups() {
+    if (this.mock) {
+      this.damageGroupService.setDamageGroups(this.mockService.getMockDamageGroups());
+      if (this.damageGroupService.checkAvailability()) {
+        this.damageGroups = this.damageGroupService.getAvailableDamageGroups();
 
-        if (this.damageGroupService.checkAvailability()) {
-          this.damageGroups = this.damageGroupService.getAvailableDamageGroups();
-
-          if (this.damageGroups.length == 0) {
-            this.notAvailable = true;
-            this.noData = false;
-          }
-          else {
-            this.notAvailable = false;
-            this.noData = false;
-          }
+        if (this.damageGroups.length == 0) {
+          this.notAvailable = true;
+          this.noData = false;
         }
         else {
           this.notAvailable = false;
-          this.noData = true;
+          this.noData = false;
         }
-      },
-      (err) => {
-        console.log(err);
       }
-    )
+      else {
+        this.notAvailable = false;
+        this.noData = true;
+      }
+    }
+    else {
+      this.damageGroupService.getAllDamageGroups().subscribe(
+        (damagegroups) => {
+          this.damageGroupService.setDamageGroups(damagegroups.d.results);
+
+          if (this.damageGroupService.checkAvailability()) {
+            this.damageGroups = this.damageGroupService.getAvailableDamageGroups();
+
+            if (this.damageGroups.length == 0) {
+              this.notAvailable = true;
+              this.noData = false;
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = false;
+            }
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+        },
+        (err) => {
+          console.log(err);
+        })
+    }
   }
 
   closeModal() {

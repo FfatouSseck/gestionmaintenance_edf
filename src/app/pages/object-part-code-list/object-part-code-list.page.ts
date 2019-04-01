@@ -5,6 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { ObjectPartCode } from 'src/app/interfaces/objectpartcode.interface';
 import { ObjectpartcodeService } from 'src/app/providers/objectpartcode.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
 
 @Component({
   selector: 'app-object-part-code-list',
@@ -18,13 +20,13 @@ export class ObjectPartCodeListPage implements OnInit {
   objectPartGroup = "";
   notAvailable = true;
   noData = false;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
     public snackBar: MatSnackBar, public navParams: NavParams,
-    public objectPartCodeService: ObjectpartcodeService) {
+    public objectPartCodeService: ObjectpartcodeService, private mockService: MockService, private storage: Storage, ) {
 
     this.objectPartGroup = navParams.get('og');
-    console.log("og", this.objectPartGroup);
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
 
@@ -34,6 +36,12 @@ export class ObjectPartCodeListPage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   setFilteredItems() {
@@ -42,18 +50,19 @@ export class ObjectPartCodeListPage implements OnInit {
 
   ionViewDidEnter() {
     //getting CauseGroupSet from server
+    this.getOPCodes(this.objectPartGroup);
+  }
 
-    this.objectPartCodeService.getAllObjectPartCodesByGroup(this.objectPartGroup).subscribe(
-      (objectPartCodes) => {
-        console.log(objectPartCodes.d.results)
-        this.objectPartCodeService.setObjectPartCodes(objectPartCodes.d.results);
-
+  getOPCodes(opGroup) {
+    if (this.mock) {
+      this.objectPartCodeService.setObjectPartCodes(
+        this.mockService.getObjectPartCodes(opGroup));
         if (this.objectPartCodeService.checkAvailability()) {
           this.objectPartCodes = this.objectPartCodeService.getAvailableObjectPartCodes();
 
           if (this.objectPartCodes.length == 0) {
-            this.notAvailable = true;
-            this.noData = false;
+            this.notAvailable = false;
+            this.noData = true;
           }
           else {
             this.notAvailable = false;
@@ -64,11 +73,35 @@ export class ObjectPartCodeListPage implements OnInit {
           this.notAvailable = false;
           this.noData = true;
         }
-      },
-      (err) => {
-        console.log(err);
-      }
-    )
+    }
+    else {
+      this.objectPartCodeService.getAllObjectPartCodesByGroup(this.objectPartGroup).subscribe(
+        (objectPartCodes) => {
+          console.log(objectPartCodes.d.results)
+          this.objectPartCodeService.setObjectPartCodes(objectPartCodes.d.results);
+
+          if (this.objectPartCodeService.checkAvailability()) {
+            this.objectPartCodes = this.objectPartCodeService.getAvailableObjectPartCodes();
+
+            if (this.objectPartCodes.length == 0) {
+              this.notAvailable = false;
+              this.noData = true;
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = false;
+            }
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    }
   }
 
   closeModal() {

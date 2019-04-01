@@ -5,6 +5,8 @@ import { ModalController, NavController, NavParams } from '@ionic/angular';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { CauseGroup } from 'src/app/interfaces/causegroup.interface';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
 
 
 @Component({
@@ -18,10 +20,10 @@ export class CauseGroupListPage implements OnInit {
   searchControl: FormControl;
   causeGroups: CauseGroup[]=[];
   notAvailable= true;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-              public snackBar: MatSnackBar, public navParams: NavParams,
-              public causeGroupService: CausegroupService) {
+              public causeGroupService: CausegroupService,private mockService: MockService,private storage: Storage,) {
 
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
@@ -33,6 +35,12 @@ export class CauseGroupListPage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   setFilteredItems(){
@@ -41,7 +49,20 @@ export class CauseGroupListPage implements OnInit {
 
   ionViewDidEnter(){
     //getting CauseGroupSet from server
- 
+    this.getCauseGroups();
+  }
+
+  getCauseGroups(){
+    if(this.mock){
+      this.causeGroupService.setCauseGroups(this.mockService.getMockCG());
+          this.causeGroups = this.causeGroupService.getAvailableCausegroups();
+
+          if(this.causeGroups.length==0){
+            this.notAvailable = true;
+          }
+          else this.notAvailable=false;
+    }
+    else{
       this.causeGroupService.getAllCauseGroups().subscribe(
         (causegroups) => {
           this.causeGroupService.setCauseGroups(causegroups.d.results);
@@ -56,6 +77,7 @@ export class CauseGroupListPage implements OnInit {
           console.log(err);
         }
       )
+    }
   }
 
   closeModal() {

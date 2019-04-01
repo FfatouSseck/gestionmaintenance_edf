@@ -19,7 +19,7 @@
 		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
 	},
 	"CatalogProfile": "CA-N",
-	"CodeGroup": "PM1",
+	"CodeGroup": "PM2",
 	"CodeDescr": "Partie d'objet PM",
 	"ObjectPartCode": {
 		"__deferred": {
@@ -33,7 +33,7 @@
 		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
 	},
 	"CatalogProfile": "CLM000001",
-	"CodeGroup": "PM1",
+	"CodeGroup": "PM3",
 	"CodeDescr": "Partie d'objet PM",
 	"ObjectPartCode": {
 		"__deferred": {
@@ -47,7 +47,7 @@
 		"type": "ZPM_OM_WORKMANAGER_V2_SRV.ObjectPartGroup"
 	},
 	"CatalogProfile": "ZENXCO",
-	"CodeGroup": "PM1",
+	"CodeGroup": "PM4",
 	"CodeDescr": "Partie d'objet PM",
 	"ObjectPartCode": {
 		"__deferred": {

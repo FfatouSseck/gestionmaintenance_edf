@@ -38,14 +38,12 @@
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               file_copy
             </i></mat-icon>
-
           <div *ngIf="ordersCount == null">
             <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
           </div>
           <h4 style="color: grey;font-size: 40px" *ngIf="ordersCount != null">
             {{ordersCount}}
           </h4>
-
           <h1 style="color:#009DE0">Service Order Preparation</h1>
         </mat-card>
       </mat-grid-tile>

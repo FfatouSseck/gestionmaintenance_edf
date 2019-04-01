@@ -19,7 +19,6 @@ export class EquipmentService extends BaseService{
   }
 
   getAllEquipmentsByFunctLoc(codeFunctLoc): Observable<any> {
-    console.log(codeFunctLoc)
     return this.getAll("/EquipmentSet?$filter=FunctLoc eq '"+codeFunctLoc+"'");
   }
 

@@ -24,8 +24,8 @@ export class FunctLocListPage implements OnInit {
   mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-    public snackBar: MatSnackBar, public navParams: NavParams,private storage: Storage,
-    public functLocService: FunctlocService, private mockService: MockService) {
+    public snackBar: MatSnackBar, public navParams: NavParams,public functLocService: FunctlocService, 
+    private mockService: MockService,private storage: Storage,) {
 
     this.plantCode = navParams.get('plantCode');
     this.searchControl = new FormControl();

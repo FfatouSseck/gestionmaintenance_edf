@@ -1,50 +1,50 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar style="--background: #007CC0">
       <ion-buttons slot="start">
-        <ion-button (click)="closeModal()">
+        <ion-button (click)="closeModal()" style="color: white ">
           <ion-icon name="arrow-back"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>Group</ion-title>
+      <ion-title style="color: white ">Group</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-content padding>
-    <div *ngIf="notAvailable;else contentAvailable">
-      <mat-spinner style="margin: 0 auto"></mat-spinner>
+
+<ion-content padding>
+  <div *ngIf="notAvailable;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
+
+  <ng-template #contentAvailable>
+    <div *ngIf="noData">
+      No object part code available for this group
     </div>
-  
-    <ng-template #contentAvailable>
-      <div *ngIf="noData">
-        No object part code available for this group
-      </div>
-      <div *ngIf="!noData">
-        <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
-        <ion-list>
-          <ion-list-header>
-            <ion-label>Choose the damage group</ion-label>
-          </ion-list-header>
-          <ion-item (click)="choose(dg)" *ngFor="let dg of damageGroups;let i=index">
-            <ion-label>
-              <ion-text>
-                {{dg.CodeGroup}}
-              </ion-text>
-              <p>
-                {{dg.CodeDescr}}
-              </p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </div>
-    </ng-template>
-  </ion-content>
-  
-  <ion-footer>
-    <ion-toolbar style="--background: #3E4649;--min-height:50px">
-      <ion-buttons slot="end">
-        <ion-button style="background-color: #3E4649;color: white" (click)="closeModal()">
-          Cancel
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
+    <div *ngIf="!noData">
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Choose the damage group</ion-label>
+        </ion-list-header>
+        <ion-item (click)="choose(dg)" *ngFor="let dg of damageGroups;let i=index">
+          <ion-label>
+            <ion-text>
+              {{dg.CodeGroup}}
+            </ion-text>
+            <p>
+              {{dg.CodeDescr}}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ng-template>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -4,9 +4,11 @@
 
 <ion-content padding>
   <form [formGroup]="notifFormGroup">
-    <ion-row style="background-color: #F2F2F2">
-      <h3 style="font-weight: bold;color: #000;font-size: 20px">General information</h3>
-    </ion-row>
+    <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+      <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">General information
+      </h4>
+    </mat-card>
+    <br/>
     <mat-form-field class="example-form" color="secondary">
       <input disabled matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
     </mat-form-field>
@@ -22,14 +24,13 @@
     </ion-button>
 
     <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
-        <input matInput placeholder="Equipment" formControlName="equipment" 
-               [(ngModel)]="choosenEquipment" required>
-        <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
-      </mat-form-field>
-    <br />
+      <input matInput placeholder="Equipment" formControlName="equipment" [(ngModel)]="choosenEquipment" required>
+      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+    </mat-form-field>
+    <br /><br />
     <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator
     </mat-checkbox>
-    <br />
+    <br /><br />
     <mat-form-field class="example-form">
       <mat-select placeholder="Effect on production" formControlName="productionEff">
         <mat-option *ngFor="let pe of productionEffects" [value]="pe.EffectId">
@@ -37,9 +38,11 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <ion-row style="background-color: #F2F2F2">
-      <h3 style="font-weight: bold;color: #000;font-size: 20px">Notification informations</h3>
-    </ion-row>
+    <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+      <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Notification informations
+      </h4>
+    </mat-card>
+    <br/>
     <mat-form-field class="example-form">
       <mat-select placeholder="Priority" formControlName="priority">
         <mat-option *ngFor="let p of priorities" [value]="p.PriorityId">
@@ -61,8 +64,9 @@
       <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
-        <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode" required>
-        <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode"
+        required>
+      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
       <textarea matInput placeholder="Long text" formControlName="longText"></textarea>

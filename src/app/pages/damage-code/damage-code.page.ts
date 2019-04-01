@@ -5,6 +5,9 @@ import { ModalController, NavController, NavParams } from '@ionic/angular';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { DamagecodeService } from 'src/app/providers/damagecode.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
+
 
 @Component({
   selector: 'app-damage-code',
@@ -18,13 +21,13 @@ export class DamageCodePage implements OnInit {
   damageGroup = "";
   notAvailable = true;
   noData = false;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-    public snackBar: MatSnackBar, public navParams: NavParams,
-    public damagecodeService: DamagecodeService) {
+    public snackBar: MatSnackBar, public navParams: NavParams,public damagecodeService: DamagecodeService, 
+    private mockService: MockService,private storage: Storage,) {
 
     this.damageGroup = navParams.get('dg');
-    console.log("dg", this.damageGroup);
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
 
@@ -34,6 +37,12 @@ export class DamageCodePage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   
@@ -43,7 +52,32 @@ export class DamageCodePage implements OnInit {
 
   ionViewDidEnter() {
     //getting CauseGroupSet from server
+    this.getDamageCodes(this.damageGroup);
+  }
 
+  getDamageCodes(damageGroup){
+    if(this.mock){
+      this.damagecodeService.setDamageCodes(
+        this.mockService.getMockDamageCodes(damageGroup));
+
+        if (this.damagecodeService.checkAvailability()) {
+          this.damageCodes = this.damagecodeService.getAvailableDamageCodes();
+
+          if (this.damageCodes.length == 0) {
+            this.notAvailable = true;
+            this.noData = false;
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = false;
+          }
+        }
+        else {
+          this.notAvailable = false;
+          this.noData = true;
+        }
+    }else{
+      
     this.damagecodeService.getAllDamageCodesByGroup(this.damageGroup).subscribe(
       (objectPartCodes) => {
         console.log(objectPartCodes.d.results)
@@ -70,6 +104,7 @@ export class DamageCodePage implements OnInit {
         console.log(err);
       }
     )
+    }
   }
 
   closeModal() {

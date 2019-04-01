@@ -5,6 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { CauseCode } from 'src/app/interfaces/causecode.interface';
 import { CausecodeService } from 'src/app/providers/causecode.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
 
 
 @Component({
@@ -19,10 +21,11 @@ export class CauseCodeListPage implements OnInit {
   causeCodes: CauseCode[] = [];
   causeGroup = "";
   notAvailable = true;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
     public snackBar: MatSnackBar, public navParams: NavParams,
-    public causeCodeService: CausecodeService) {
+    public causeCodeService: CausecodeService,private mockService: MockService,private storage: Storage,) {
 
     this.causeGroup = navParams.get('cg');
 
@@ -35,6 +38,12 @@ export class CauseCodeListPage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   setFilteredItems() {
@@ -44,6 +53,19 @@ export class CauseCodeListPage implements OnInit {
   ionViewDidEnter() {
     //getting CauseGroupSet from server
       this.causeCodes = [];
+      this.getCauseCodes(this.causeGroup);
+  }
+
+  getCauseCodes(causeGroup){
+    if(this.mock){
+      this.causeCodeService.setCauseCodes(this.mockService.getMockCC(causeGroup));
+      this.causeCodes = this.causeCodeService.getAvailableCausecodes();
+          if(this.causeCodes.length==0){
+            this.notAvailable = true;
+          }
+          else this.notAvailable=false;
+    }
+    else{
       this.causeCodeService.getAllCauseCodesByGroup(this.causeGroup).subscribe(
         (causeCodes) => {
           console.log(causeCodes.d.results);
@@ -58,7 +80,7 @@ export class CauseCodeListPage implements OnInit {
           console.log(err);
         }
       )
-    
+    }
   }
 
   closeModal() {

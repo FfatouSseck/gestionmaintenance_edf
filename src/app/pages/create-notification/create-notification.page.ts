@@ -60,13 +60,6 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   ngOnInit() {
-    this.storage.get("mock").then(
-      (mock) => {
-        if (mock != undefined && mock != null) {
-          this.mock = mock;
-        }
-      })
-
     this.notifFormGroup = this._formBuilder.group({
       description: ['', Validators.required],
       functloc: ['', Validators.required],
@@ -88,29 +81,41 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   ionViewDidEnter() {
     this.arr = [];
     this.images = [];
-    //getting PrioritySet from server
-    this.getPriorities();
 
-    //we check if there is a choosen plant
-    this.storage.get("choosenPlant").then(
-      (choosenPlantcode) => {
-        if (choosenPlantcode != null && choosenPlantcode != undefined) {
-          this.choosenPlantcode = choosenPlantcode;
-          //getting FunctLocSet from server
-          this.getFunctLocsByPlant(choosenPlantcode);
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
         }
-        //otherwise we ask the user to choose a plant
-        else this.presentPlantsModal();
-      },
-      (err) => {
-        console.log("error", err);
       })
+      .finally(
+        () => {
+          //getting PrioritySet from server
+          this.getPriorities();
 
-    //getting EffectSet from server
-    this.getEffects();
+          //we check if there is a choosen plant
+          this.storage.get("choosenPlant").then(
+            (choosenPlantcode) => {
+              if (choosenPlantcode != null && choosenPlantcode != undefined) {
+                this.choosenPlantcode = choosenPlantcode;
+                //getting FunctLocSet from server
+                this.getFunctLocsByPlant(choosenPlantcode);
+              }
+              //otherwise we ask the user to choose a plant
+              else this.presentPlantsModal();
+            },
+            (err) => {
+              console.log("error", err);
+            })
 
-    //getting CauseGroupSet from server
-    this.getCauseGroups();
+          //getting EffectSet from server
+          this.getEffects();
+
+          //getting CauseGroupSet from server
+          this.getCauseGroups();
+
+        }
+      )
 
   }
 
@@ -225,7 +230,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     }
   }
 
-  getPriorities(){
+  getPriorities() {
     if (this.mock) {
       this.priorityService.setPriorities(this.mockService.getMockPriorities());
       this.priorities = this.mockService.getMockPriorities();

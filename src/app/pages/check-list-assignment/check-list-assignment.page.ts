@@ -6,6 +6,7 @@ import { newOrder } from 'src/app/interfaces/newOrder.interface';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/internal/operators';
 import { MatTableDataSource } from '@angular/material';
+import { MockService } from 'src/app/providers/mock.service';
 
 
 @Component({
@@ -38,10 +39,12 @@ export class CheckListAssignmentPage implements OnInit {
     'FunctLoc', 'Operation',
     'Description', 'Checklist', 'prodStartDate', 'button'
   ];
+  mock = false;
 
 
 
-  constructor(private orderService: ServiceOrderPreparationService, private storage: Storage) {
+  constructor(private orderService: ServiceOrderPreparationService, private storage: Storage,
+    private mockService: MockService) {
 
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
@@ -51,7 +54,12 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   ngOnInit() {
-
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   toggleSearch() {
@@ -79,37 +87,65 @@ export class CheckListAssignmentPage implements OnInit {
       (choosenPlantcode) => {
         if (choosenPlantcode != null && choosenPlantcode != undefined) {
           this.codePlant = choosenPlantcode;
-          this.orderService.requestDataFromMultipleSources(this.codePlant).subscribe(
-            (responseList) => {
-              this.orderList = responseList[0].d.results;
-              let types = this.getOrderTypes(this.orderList);
-              this.types = this.getUnique(types);
-              if (this.types.length == 0) {
-                this.loading = false;
-                this.noData = true;
-              }
-              else {
-                this.loading = false;
-                this.noData = false;
-                if (segmentIndex != null && segmentIndex != undefined) {
-                  this.orderType = this.types[segmentIndex];
-                }
-                else this.orderType = this.types[0];
-                let ev = {
-                  tab: {
-                    textLabel: this.orderType
-                  }
-                }
-                this.segmentChanged(ev);
-              }
-            }
-          );
+          this.getData(segmentIndex);
         }
       }).catch(
         (err) => {
 
+        });
+  }
+
+  getData(segmentIndex?: number) {
+    if (this.mock) {
+      this.orderList = this.mockService.getMockOrderByPlant(this.codePlant);
+      let types = this.getOrderTypes(this.orderList);
+      this.types = this.getUnique(types);
+      if (this.types.length == 0) {
+        this.loading = false;
+        this.noData = true;
+      }
+      else {
+        this.loading = false;
+        this.noData = false;
+        if (segmentIndex != null && segmentIndex != undefined) {
+          this.orderType = this.types[segmentIndex];
+        }
+        else this.orderType = this.types[0];
+        let ev = {
+          tab: {
+            textLabel: this.orderType
+          }
+        }
+        this.segmentChanged(ev);
+      }
+    }
+    else {
+      this.orderService.requestDataFromMultipleSources(this.codePlant).subscribe(
+        (responseList) => {
+          this.orderList = responseList[0].d.results;
+          let types = this.getOrderTypes(this.orderList);
+          this.types = this.getUnique(types);
+          if (this.types.length == 0) {
+            this.loading = false;
+            this.noData = true;
+          }
+          else {
+            this.loading = false;
+            this.noData = false;
+            if (segmentIndex != null && segmentIndex != undefined) {
+              this.orderType = this.types[segmentIndex];
+            }
+            else this.orderType = this.types[0];
+            let ev = {
+              tab: {
+                textLabel: this.orderType
+              }
+            }
+            this.segmentChanged(ev);
+          }
         }
       );
+    }
   }
 
   ionViewDidEnter() {
@@ -151,30 +187,54 @@ export class CheckListAssignmentPage implements OnInit {
 
     let newOrds = [];
     //on recupere la ligne d'opération pour chaque ordre
-    ords.forEach(async (element, index) => {
-      this.orderService.getOrderOperations(element.orderPart.OrderNo)
-        .subscribe(
-          (operations) => {
-            let ops = operations.d.results;
-            ops.forEach(op => {
-              newOrds.push({
-                orderPart: element.orderPart,
-                Checklist: '',
-                Description: op.Description,
-                Operation: op.Activity,
-                prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
+
+    if (this.mock) {
+      console.log("from mock server");
+      ords.forEach((element) => {
+        let ops = this.mockService.getMockOrderOperations(element.orderPart.OrderNo);
+
+        ops.forEach(op => {
+          newOrds.push({
+            orderPart: element.orderPart,
+            Checklist: '',
+            Description: op.Description,
+            Operation: op.Activity,
+            prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
+          });
+        })
+        this.ordersByType = newOrds;
+        this.orders = new MatTableDataSource(this.ordersByType);
+        this.ok = true;
+        this.loading = false;
+      })
+    }
+    else {
+      console.log("from remote server");
+      ords.forEach(async (element) => {
+        this.orderService.getOrderOperations(element.orderPart.OrderNo)
+          .subscribe(
+            (operations) => {
+              let ops = operations.d.results;
+              ops.forEach(op => {
+                newOrds.push({
+                  orderPart: element.orderPart,
+                  Checklist: '',
+                  Description: op.Description,
+                  Operation: op.Activity,
+                  prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
+                });
               });
-            });
-          },
-          error => console.log("Error: ", error),
-          async () => {
-            this.ordersByType = newOrds;
-            this.orders = await new MatTableDataSource(this.ordersByType);
-            this.ok = true;
-            this.loading = false;
-          }
-        );
-    });
+            },
+            error => console.log("Error: ", error),
+            async () => {
+              this.ordersByType = newOrds;
+              this.orders = await new MatTableDataSource(this.ordersByType);
+              this.ok = true;
+              this.loading = false;
+            }
+          );
+      });
+    }
   }
 
   onClose(evt: { result: string; }) {

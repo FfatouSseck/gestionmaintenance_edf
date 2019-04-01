@@ -14,6 +14,7 @@ import DamageCodeSet from '../mockServer/DamageCodeSet.json';
 import DamageGroupSet from '../mockServer/DamageGroupSet.json';
 import ObjectPartCodeSet from '../mockServer/ObjectPartCodeSet.json';
 import ObjectPartGroupSet from '../mockServer/ObjectPartGroupSet.json';
+import OrderHeaderSet from '../mockServer/OrderHeaderSet.json'
 
 @Injectable({
   providedIn: 'root'
@@ -70,6 +71,14 @@ export class MockService {
         if(cp.OrderNo != null && orderNo != null){
           return cp.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1;
         }
+      }
+    )
+  }
+
+  getMockOrderByPlant(codePlant){
+    return OrderHeaderSet.filter(
+      (ord) =>{
+        return ord.PlanPlant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
       }
     )
   }
