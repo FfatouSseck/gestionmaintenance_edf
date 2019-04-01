@@ -32,6 +32,7 @@ export class HomePage implements OnInit {
     notifsCount = null;
     ordersCount = null;
     dataAvailable = false;
+    mock = false;
 
     constructor(public actionSheetController: ActionSheetController, public storage: Storage,
         public snackBar: MatSnackBar, public modalController: ModalController,
@@ -52,73 +53,63 @@ export class HomePage implements OnInit {
     }
 
     ngOnInit(): void {
-        this.storage.get("mock").then(
-            (mock) => {
-                if (mock != undefined && mock != null && mock == true) {
-                    //we call the mock server
-                    this.plants = this.mockService.getAllMockPlants();
-
-                    //we check if there is a choosen plant
-                    this.storage.get("choosenPlant").then(
-                        (choosenPlantcode) => {
-                            if (choosenPlantcode != null) {
-                                this.choosenPlant = choosenPlantcode;
-                                this.updateData(this.choosenPlant);
-                                //getting FunctLocSet from server
-                                /*this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
-                                    (functlocs) => {
-                                        this.functLocService.setFunctLocs(functlocs.d.results);
-                                    },
-                                    (err) => {
-                                        console.log(err);
-                                    }
-                                )*/
-                            }
-                            //otherwise we ask the user to choose a plant
-                            else this.presentPlantsModal();
-                        },
-                        (err) => {
-                            console.log("error", err);
-                        })
-                }
-                else {
-                    this.plantService.getAllPlants().subscribe(
-                        (plants) => {
-                            let plts = plants.d.results;
-                            this.plants = plts;
-                            //we check if there is a choosen plant
-                            this.storage.get("choosenPlant").then(
-                                (choosenPlantcode) => {
-                                    if (choosenPlantcode != null) {
-                                        this.choosenPlant = choosenPlantcode;
-                                        this.updateData(this.choosenPlant);
-                                        //getting FunctLocSet from server
-                                        this.functLocService.getAllFunctLocByPlant(choosenPlantcode).subscribe(
-                                            (functlocs) => {
-                                                this.functLocService.setFunctLocs(functlocs.d.results);
-                                            },
-                                            (err) => {
-                                                console.log(err);
-                                            }
-                                        )
-                                    }
-                                    //otherwise we ask the user to choose a plant
-                                    else this.presentPlantsModal();
-                                },
-                                (err) => {
-                                    console.log("error", err);
-                                })
-                        },
-                        (err) => {
-                            console.log("Erreur", err);
-                        }
-                    )
-                }
-            });
     }
 
     ionViewDidEnter() {
-        this.initialisation();
+        this.storage.get("mock").then(
+            (mock) => {
+                if (mock != undefined && mock != null) {
+                    this.mock = mock;
+                }
+            }).finally(
+                () => {
+                    if (this.mock) {
+                        console.log('here')
+                        //we call the mock server
+                        this.plants = this.mockService.getAllMockPlants();
+
+                        //we check if there is a choosen plant
+                        this.storage.get("choosenPlant").then(
+                            (choosenPlantcode) => {
+                                if (choosenPlantcode != null) {
+                                    this.choosenPlant = choosenPlantcode;
+                                    this.updateData(this.choosenPlant);
+                                }
+                                //otherwise we ask the user to choose a plant
+                                else this.presentPlantsModal();
+                            },
+                            (err) => {
+                                console.log("error", err);
+                            })
+                    }
+                    else {
+                        this.plantService.getAllPlants().subscribe(
+                            (plants) => {
+                                let plts = plants.d.results;
+                                this.plants = plts;
+                                //we check if there is a choosen plant
+                                this.storage.get("choosenPlant").then(
+                                    (choosenPlantcode) => {
+                                        if (choosenPlantcode != null) {
+                                            this.choosenPlant = choosenPlantcode;
+                                            this.updateData(this.choosenPlant);
+                                        }
+                                        //otherwise we ask the user to choose a plant
+                                        else this.presentPlantsModal();
+                                    },
+                                    (err) => {
+                                        console.log("error", err);
+                                    })
+                            },
+                            (err) => {
+                                console.log("Erreur", err);
+                            }
+                        )
+                    }
+                    this.initialisation();
+                }
+            );
+
     }
 
     //list available plants
@@ -158,30 +149,28 @@ export class HomePage implements OnInit {
 
     updateData(plant) {
         this.dataAvailable = false;
-        this.storage.get("mock").then(
-            (mock) => {
-                if (mock != undefined && mock != null && mock == true) {
-                    //we call the mock server
-                    this.storage.get("choosenPlant").then(
-                        (choosenPlantcode) => {
-                            if (choosenPlantcode != null && choosenPlantcode != undefined) {
-                                this.choosenPlant = choosenPlantcode;
-                                this.getMockNotifs(choosenPlantcode);
-                            }
-                        });
-                }
-                else {
-                    this.notifService.getAllNotifs(plant).subscribe(
-                        (notifs: any) => {
-                            this.notifService.setNotifs(notifs.d.results);
-                            this.notifsCount = notifs.d.results.length;
-                            this.dataAvailable = true;
-                        }
-                    )
-                }
-            });
 
-            //getting service orders 
+        if (this.mock != undefined && this.mock != null && this.mock == true) {
+            //we call the mock server
+            this.storage.get("choosenPlant").then(
+                (choosenPlantcode) => {
+                    if (choosenPlantcode != null && choosenPlantcode != undefined) {
+                        this.choosenPlant = choosenPlantcode;
+                        this.getMockNotifs(choosenPlantcode);
+                    }
+                });
+        }
+        else {
+            this.notifService.getAllNotifs(plant).subscribe(
+                (notifs: any) => {
+                    this.notifService.setNotifs(notifs.d.results);
+                    this.notifsCount = notifs.d.results.length;
+                    this.dataAvailable = true;
+                }
+            )
+        }
+
+        //getting service orders 
         this.storage.get("choosenPlant").then(
             (choosenPlantcode) => {
                 if (choosenPlantcode != null) {
@@ -229,31 +218,59 @@ export class HomePage implements OnInit {
                 });
         }
         //getting PrioritySet from server
-        this.priorityService.getAllPriorities().subscribe(
-            (priorities) => {
-                this.priorityService.setPriorities(priorities.d.results);
-            },
-            (err) => {
-                console.log(err);
-            }
-        )
+        this.getPriorities();
         //getting EffectSet from server
-        this.effectService.getAllEffects().subscribe(
-            (effects) => {
-                this.effectService.setEffects(effects.d.results);
-            },
-            (err) => {
-                console.log(err);
-            }
-        )
+        this.getEffects();
         //getting CauseGroupSet from server
-        this.causeGroupService.getAllCauseGroups().subscribe(
-            (causegroups) => {
-                this.causeGroupService.setCauseGroups(causegroups.d.results);
-            },
-            (err) => {
-                console.log(err);
-            }
-        )
+        this.getCauseGroups();
+    }
+
+
+    getEffects() {
+        if (this.mock) {
+            this.effectService.setEffects(this.mockService.getMockEffects());
+        }
+        else {
+            this.effectService.getAllEffects().subscribe(
+                (effects) => {
+                    this.effectService.setEffects(effects.d.results);
+                },
+                (err) => {
+                    console.log(err);
+                }
+            )
+        }
+    }
+
+    getCauseGroups() {
+        if (this.mock) {
+            this.causeGroupService.setCauseGroups(this.mockService.getMockCG());
+        }
+        else {
+            this.causeGroupService.getAllCauseGroups().subscribe(
+                (causegroups) => {
+                    this.causeGroupService.setCauseGroups(causegroups.d.results);
+                },
+                (err) => {
+                    console.log(err);
+                }
+            )
+        }
+    }
+
+    getPriorities() {
+        if (this.mock) {
+            this.priorityService.setPriorities(this.mockService.getMockPriorities());
+        }
+        else {
+            this.priorityService.getAllPriorities().subscribe(
+                (priorities) => {
+                    this.priorityService.setPriorities(priorities.d.results);
+                },
+                (err) => {
+                    console.log(err);
+                }
+            )
+        }
     }
 }

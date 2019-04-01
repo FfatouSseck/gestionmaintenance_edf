@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
-import { ModalController, Platform, ToastController, AlertController } from '@ionic/angular';
+import { ModalController, Platform, ToastController, AlertController, LoadingController, ActionSheetController } from '@ionic/angular';
 import { Notification, NotificationLight, NotifHeader } from '../../interfaces/notification.interface';
 import { BasePage } from '../base.page';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -13,6 +13,11 @@ import { Router } from '@angular/router';
 import { Priority } from 'src/app/interfaces/priority.interface';
 import { PriorityService } from 'src/app/providers/priority.service';
 import { MockService } from 'src/app/providers/mock.service';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { Camera } from '@ionic-native/Camera/ngx';
+import { HttpClient } from '@angular/common/http';
+import { File } from '@ionic-native/File/ngx';
 
 @Component({
   selector: 'app-notification-list',
@@ -46,14 +51,20 @@ export class NotificationListPage extends BasePage implements OnInit {
   priorities: Priority[] = []
 
   orientation = "landscape_primary";
+  mock = false;
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder, public platform: Platform,
     public qrScanner: QRScanner, public toastController: ToastController, public notifService: NotificationService,
     public snackBar: MatSnackBar, public alertController: AlertController, public storage: Storage,
     private screenOrientation: ScreenOrientation, public router: Router,
-    public priorityService: PriorityService, public mockService: MockService) {
+    public priorityService: PriorityService, public mockService: MockService,
+    public webview: WebView,
+    public ref: ChangeDetectorRef, public filePath: FilePath, public camera: Camera,
+    public file: File, public http: HttpClient, public loadingController: LoadingController,
+    public actionSheetController: ActionSheetController ) {
 
-    super(_formBuilder, platform, null, qrScanner, toastController, snackBar, alertController, modalController);
+    super(_formBuilder, platform, null, qrScanner, toastController, snackBar, alertController, modalController,
+      webview, actionSheetController, ref, filePath, camera, file, http, loadingController);
 
     this.orientation = this.screenOrientation.type;
     // detect orientation changes
@@ -63,7 +74,12 @@ export class NotificationListPage extends BasePage implements OnInit {
       }
     );
 
-    //this.notifList[0].color="light";
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   ngOnInit() {
@@ -91,48 +107,43 @@ export class NotificationListPage extends BasePage implements OnInit {
         }
       });
 
-    if (available) {
 
-      this.storage.get("mock").then(
-        (mock) => {
-          if (mock != undefined && mock != null && mock == true) {
-            this.getMockNotifs(this.choosenPlantcode);
-          }
-          else {
-            this.notifList = this.notifService.filterNotifs(this.searchTerm);
-            if (this.notifList[0].NotifNo != null) {
-              this.notAvailable = false;
-              this.noData = false;
-            }
-          }
-        })
+    if (this.mock) {
+      this.getMockNotifs(this.choosenPlantcode);
     }
     else {
-      this.storage.get("mock").then(
-        (mock) => {
-          if (mock != undefined && mock != null && mock == true) {
-            this.getMockNotifs(this.choosenPlantcode);
-          }
-          else {
-            this.getNotifs();
-          }
-        })
+      if (available) {
+        this.notifList = this.notifService.filterNotifs(this.searchTerm);
+        if (this.notifList[0].NotifNo != null) {
+          this.notAvailable = false;
+          this.noData = false;
+        }
+      }
+      else {
+        this.getNotifs();
+      }
     }
 
     //getting PrioritySet from server
-    if (this.priorityService.checkAvailability()) {
-      this.priorities = this.priorityService.getPriorities();
+    if (this.mock) {
+      this.priorityService.setPriorities(this.mockService.getMockPriorities());
+      this.priorities = this.mockService.getMockPriorities();
     }
     else {
-      this.priorityService.getAllPriorities().subscribe(
-        (priorities) => {
-          this.priorityService.setPriorities(priorities.d.results);
-          this.priorities = this.priorityService.getPriorities();
-        },
-        (err) => {
-          console.log(err);
-        }
-      )
+      if (this.priorityService.checkAvailability()) {
+        this.priorities = this.priorityService.getPriorities();
+      }
+      else {
+        this.priorityService.getAllPriorities().subscribe(
+          (priorities) => {
+            this.priorityService.setPriorities(priorities.d.results);
+            this.priorities = this.priorityService.getPriorities();
+          },
+          (err) => {
+            console.log(err);
+          }
+        )
+      }
     }
   }
 
@@ -141,19 +152,19 @@ export class NotificationListPage extends BasePage implements OnInit {
     let ntfs = this.mockService.getAllMockNotifs(plant);
     this.notifList = ntfs;
     console.log(this.notifList);
-    if(this.notifList.length == 0){
+    if (this.notifList.length == 0) {
       console.log("here");
       this.notAvailable = false;
       this.noData = true;
     }
-    else{
+    else {
       if (this.notifList[0].NotifNo != null) {
         this.notAvailable = false;
         this.noData = false;
       }
     }
-    
-    
+
+
   }
 
   onClose(evt) {
@@ -169,11 +180,11 @@ export class NotificationListPage extends BasePage implements OnInit {
         if (mock != undefined && mock != null && mock == true) {
           this.getMockNotifs(this.choosenPlantcode);
         }
-        else{
+        else {
           this.getNotifs();
         }
       });
-    
+
   }
 
   presentDetails(notif: NotifHeader) {

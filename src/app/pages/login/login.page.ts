@@ -56,7 +56,7 @@ export class LoginPage implements OnInit {
         console.log(res);
         const alert = await this.alertCtrl.create({
           header: 'Preferred language',
-          message: res+"",
+          message: JSON.stringify(res),
           buttons: ['OK']
         });
         await alert.present();

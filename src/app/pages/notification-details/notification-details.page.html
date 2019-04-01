@@ -13,46 +13,46 @@
       <h4 style="font-weight: bold;color: #000;font-size: 15px">General information</h4>
     </ion-row>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.notifNumber">
+      <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Description" readonly="true" [value]="choosenNotif.description">
+      <input matInput placeholder="Description" readonly="true" [value]="choosenNotif.ShortText">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Functional location" readonly="true" [value]="choosenNotif.functloc">
+      <input matInput placeholder="Functional location" readonly="true" [value]="choosenNotif.FunctLoc">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Equipment" readonly="true" [value]="choosenNotif.equipment">
+      <input matInput placeholder="Equipment" readonly="true" [value]="choosenNotif.Equipment">
     </mat-form-field>
     <br />
-    <mat-checkbox disabled [checked]="choosenNotif.breakdownIndic" color="primary" class="example-form">
+    <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
       Breakdown
       Indicator</mat-checkbox>
     <br /><br />
     <mat-form-field class="example-form">
-      <input matInput placeholder="Effect on production" readonly="true" [value]="choosenNotif.productionEff">
+      <input matInput placeholder="Effect on production" readonly="true" [value]="choosenNotif.Effect">
     </mat-form-field>
     <ion-row style="background-color: #F2F2F2">
       <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
     </ion-row>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.priority">
+      <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.Priority">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" readonly="true" [value]="initDate(choosenNotif.startDate)">
+      <input matInput placeholder="Malfunction start date" readonly="true" [value]="initDate(choosenNotif.StartDate)">
       <mat-icon matSuffix>calendar_today</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.damageCode">
+      <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.cause">
+      <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.CauseCode">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Object part" readonly="true" [value]="choosenNotif.objectPart">
+      <input matInput placeholder="Object part" readonly="true" [value]="choosenNotif.ObjectPartCode">
     </mat-form-field>
     <mat-form-field class="example-form">
-      <textarea matInput placeholder="Long text" readonly="true" [value]="choosenNotif.longText"></textarea>
+      <textarea matInput placeholder="Long text" readonly="true" [value]="choosenNotif.LongText"></textarea>
     </mat-form-field>
   </form>
 
@@ -61,15 +61,15 @@
       <h4 style="font-weight: bold;color:#000;font-size: 15px">General information</h4>
     </ion-row>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.notifNumber">
+      <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
     </mat-form-field>
     <mat-form-field class="example-form" color="secondary">
-      <input [(ngModel)]="choosenNotif.description" matInput placeholder="Description" maxlength="40"
+      <input [(ngModel)]="choosenNotif.ShortText" matInput placeholder="Description" maxlength="40"
         formControlName="description" required>
     </mat-form-field>
     <mat-form-field class="form-85" class="example-form">
       <mat-select placeholder="Functional location" formControlName="functloc" required
-        [(ngModel)]="choosenNotif.functloc">
+        [(ngModel)]="choosenNotif.FunctLoc">
         <mat-option *ngFor="let l of locations" [value]="l.loc">
           {{l.loc}}-{{l.description}}...
         </mat-option>
@@ -80,15 +80,15 @@
       <ion-icon name="qr-scanner"></ion-icon>QR-CODE
     </ion-button>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Equipment" maxlength="40" formControlName="equipment">
+      <input matInput placeholder="Equipment" maxlength="40" formControlName="equipment" [(ngModel)]="choosenNotif.Equipment">
     </mat-form-field>
     <br />
-    <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator
+    <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form" [checked]="choosenNotif.Breakdown">Breakdown Indicator
     </mat-checkbox>
     <br />
     <mat-form-field class="example-form">
       <mat-select placeholder="Effect on production" formControlName="productionEff"
-        [(ngModel)]="choosenNotif.productionEff">
+        [(ngModel)]="choosenNotif.Effect">
         <mat-option *ngFor="let pe of productionEffects" [value]="pe.id">
           {{pe.desc}}
         </mat-option>
@@ -98,40 +98,40 @@
       <h4 style="font-weight: bold;color: #000;font-size: 15px">Notification informations</h4>
     </ion-row>
     <mat-form-field class="example-form">
-      <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenNotif.priority">
+      <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenNotif.Priority">
         <mat-option *ngFor="let p of priorities" [value]="p.desc">
           {{p.id}}-{{p.desc}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" maxlength="40" [value]="initDate(choosenNotif.startDate)"
+      <input matInput placeholder="Malfunction start date" maxlength="40" [value]="initDate(choosenNotif.StartDate)"
         formControlName="startDate" required>
       <mat-icon matSuffix>calendar_today</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <mat-select placeholder="Damage code" formControlName="damageCode">
+      <mat-select placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenNotif.DamageCode">
         <mat-option *ngFor="let p of priorities" [value]="p.desc">
           {{p.id}}-{{p.desc}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <mat-select placeholder="Cause" formControlName="cause">
+      <mat-select placeholder="Cause" formControlName="cause" [(ngModel)]="choosenNotif.CauseCode">
         <mat-option *ngFor="let p of priorities" [value]="p.desc">
           {{p.id}}-{{p.desc}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <mat-select placeholder="Object part" formControlName="objectPart">
+      <mat-select placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenNotif.ObjectPartCode">
         <mat-option *ngFor="let p of priorities" [value]="p.desc">
           {{p.id}}-{{p.desc}}
         </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
+      <textarea matInput placeholder="Long text" formControlName="longText" [(ngModel)]="choosenNotif.LongText"></textarea>
     </mat-form-field>
 
   </form>

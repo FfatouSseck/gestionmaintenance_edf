@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NotificationService } from 'src/app/providers/notification.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-notification-details',
@@ -14,11 +15,14 @@ export class NotificationDetailsPage implements OnInit {
   notifDetailsFormGroup: FormGroup;
 
   constructor(private modalCtrl:ModalController,private notifService: NotificationService,
-              private _formBuilder:FormBuilder) { }
+              private _formBuilder:FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.choosenNotif =  this.notifService.getCurrentNotif();
     console.log("choosenNotif: ",this.choosenNotif);
+    if(this.choosenNotif == undefined){
+      this.router.navigateByUrl("/notification-list");
+    }
 
     this.notifDetailsFormGroup = this._formBuilder.group({
       description: ['', Validators.required],
@@ -46,7 +50,6 @@ export class NotificationDetailsPage implements OnInit {
   }
 
   initDate(newD:string){
-
     let d1 = newD.replace('/Date(','');
     let startDate = d1.replace(')/','');
     let newDate = new Date(Number(startDate));

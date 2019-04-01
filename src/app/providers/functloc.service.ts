@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
 import { BaseService } from './base.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from './mock.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +13,12 @@ export class FunctlocService extends BaseService {
   available = false;
   functLocsList: any[] = [];
   
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private storage: Storage,private mockService: MockService) {
     super(http);
    }
 
   
-  getAllFunctLocByPlant(codePlant): Observable<any> {
+  getAllFunctLocByPlant(codePlant: string): Observable<any> {
     return this.getAll("/FunctLocSet?$filter=PlanPlant eq '"+codePlant+"'");
   }
 

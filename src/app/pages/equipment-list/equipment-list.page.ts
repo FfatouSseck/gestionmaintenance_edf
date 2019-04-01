@@ -4,6 +4,8 @@ import { ModalController, NavController, NavParams } from '@ionic/angular';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { EquipmentService } from 'src/app/providers/equipment.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
 
 
 @Component({
@@ -20,10 +22,11 @@ export class EquipmentListPage implements OnInit {
   noData = false;
   functLoc = "";
   searching: any = false;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-    public snackBar: MatSnackBar, public navParams: NavParams,
-    public equipmentService: EquipmentService) {
+    public snackBar: MatSnackBar, public navParams: NavParams, private mockService: MockService,
+    public equipmentService: EquipmentService, private storage: Storage) {
 
     this.functLoc = "";
     this.functLoc = navParams.get('functLoc');
@@ -37,6 +40,12 @@ export class EquipmentListPage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   onSearchInput() {
@@ -52,31 +61,54 @@ export class EquipmentListPage implements OnInit {
     this.noData = false;
     //getting CauseGroupSet from server
     this.equipments = [];
-    this.equipmentService.getAllEquipmentsByFunctLoc(this.functLoc).subscribe(
-      (equipments) => {
-        this.equipmentService.setEquipments(equipments.d.results);
-        if (this.equipmentService.checkAvailability()) {
-          this.equipments = this.equipmentService.getAvailableEquipments();
-          if (this.equipments.length == 0) {
-            this.notAvailable = false;
-            this.noData = true;
-          }
-          else {
-            this.notAvailable = false;
-            this.noData = false;
-          }
-        }
-        else {
+    this.getEquipments(this.functLoc);
+  }
+
+  getEquipments(functLoc) {
+    if (this.mock) {
+      this.equipmentService.setEquipments(this.mockService.getMockequipments(functLoc));
+      if (this.equipmentService.checkAvailability()) {
+        this.equipments = this.equipmentService.getAvailableEquipments();
+        if (this.equipments.length == 0) {
           this.notAvailable = false;
           this.noData = true;
         }
-
-      },
-      (err) => {
-        console.log(err);
+        else {
+          this.notAvailable = false;
+          this.noData = false;
+        }
       }
-    )
+      else {
+        this.notAvailable = false;
+        this.noData = true;
+      }
+    }
+    else {
+      this.equipmentService.getAllEquipmentsByFunctLoc(this.functLoc).subscribe(
+        (equipments) => {
+          this.equipmentService.setEquipments(equipments.d.results);
+          if (this.equipmentService.checkAvailability()) {
+            this.equipments = this.equipmentService.getAvailableEquipments();
+            if (this.equipments.length == 0) {
+              this.notAvailable = false;
+              this.noData = true;
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = false;
+            }
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = true;
+          }
 
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    }
   }
 
   closeModal() {

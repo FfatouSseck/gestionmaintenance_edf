@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Platform, ToastController, AlertController, ModalController } from '@ionic/angular';
+import { Platform, ToastController, AlertController, ModalController, ActionSheetController, LoadingController } from '@ionic/angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { Priority } from '../interfaces/priority.interface';
@@ -17,6 +17,13 @@ import { ObjectPartGroupListPage } from './object-part-group-list/object-part-gr
 import { ObjectPartCodeListPage } from './object-part-code-list/object-part-code-list.page';
 import { DamageGroupPage } from './damage-group/damage-group.page';
 import { DamageCodePage } from './damage-code/damage-code.page';
+import { ImageHandlingComponent } from '../components/image-handling/image-handling.component';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { HttpClient } from '@angular/common/http';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { Camera} from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/File/ngx';
+
 
 //import { QRScannerMock } from '@ionic-native-mocks/qr-scanner';
 
@@ -24,7 +31,7 @@ import { DamageCodePage } from './damage-code/damage-code.page';
   selector: 'app-base',
   styleUrls: [],
 })
-export class BasePage implements OnInit {
+export class BasePage extends ImageHandlingComponent implements OnInit {
 
   notifFormGroup: FormGroup;
   modal: any;
@@ -47,9 +54,15 @@ export class BasePage implements OnInit {
   choosenDC = "";
 
   constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
-    public qrScanner: QRScanner, public toastController: ToastController,
-    public snackBar: MatSnackBar, public alertController: AlertController, public modalController: ModalController) {
+    public qrScanner: QRScanner, public toastController: ToastController,public snackBar: MatSnackBar, 
+    public alertController: AlertController, public modalController: ModalController,
+    public webview: WebView, public actionSheetController: ActionSheetController,
+    public ref: ChangeDetectorRef, public filePath: FilePath, public camera: Camera,
+    public file: File, public http: HttpClient, public loadingController: LoadingController, ) {
 
+    super(webview,actionSheetController,
+      ref,filePath,camera,platform,
+      snackBar,file,http,loadingController);
     this.initDate();
     if (platform.is("mobile")) this.mobile = true;
   }

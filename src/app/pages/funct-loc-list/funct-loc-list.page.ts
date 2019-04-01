@@ -4,6 +4,8 @@ import { ModalController, NavController, NavParams } from '@ionic/angular';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs/internal/operators';
 import { FunctlocService } from 'src/app/providers/functloc.service';
+import { Storage } from '@ionic/storage';
+import { MockService } from 'src/app/providers/mock.service';
 
 
 @Component({
@@ -19,10 +21,11 @@ export class FunctLocListPage implements OnInit {
   noData = false;
   plantCode = "";
   searching: any = false;
+  mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-    public snackBar: MatSnackBar, public navParams: NavParams,
-    public functLocService: FunctlocService) {
+    public snackBar: MatSnackBar, public navParams: NavParams,private storage: Storage,
+    public functLocService: FunctlocService, private mockService: MockService) {
 
     this.plantCode = navParams.get('plantCode');
     this.searchControl = new FormControl();
@@ -35,6 +38,12 @@ export class FunctLocListPage implements OnInit {
   }
 
   ngOnInit() {
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != undefined && mock != null) {
+          this.mock = mock;
+        }
+      })
   }
 
   onSearchInput() {
@@ -49,33 +58,7 @@ export class FunctLocListPage implements OnInit {
     this.noData = false;
     //getting FunctLocSet from server
     this.functLocs = [];
-    this.functLocService.getAllFunctLocByPlant(this.plantCode).subscribe(
-      (functLocs) => {
-        this.functLocService.setFunctLocs(functLocs.d.results);
-        if (this.functLocService.checkAvailability()) {
-          this.functLocs = this.functLocService.getAvailableFunctLocs();
-
-          if (this.functLocs.length == 0) {
-            this.notAvailable = false;
-            this.noData = true;
-          }
-          else {
-            this.notAvailable = false;
-            this.noData = false;
-          }
-        }
-        else {
-          this.notAvailable = false;
-          this.noData = true;
-        }
-
-
-      },
-      (err) => {
-        console.log(err);
-      }
-    )
-
+    this.getFunctLocs(this.plantCode);
   }
 
   closeModal() {
@@ -86,6 +69,54 @@ export class FunctLocListPage implements OnInit {
     this.modalController.dismiss({
       'result': functloc
     });
+  }
+
+  getFunctLocs(codePlant){
+    if(this.mock){
+      this.functLocService.setFunctLocs(this.mockService.getMockFunctLocsByPlant(codePlant));
+      if (this.functLocService.checkAvailability()) {
+            this.functLocs = this.functLocService.getAvailableFunctLocs();
+  
+            if (this.functLocs.length == 0) {
+              this.notAvailable = false;
+              this.noData = true;
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = false;
+            }
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+    }
+    else{
+      this.functLocService.getAllFunctLocByPlant(this.plantCode).subscribe(
+        (functLocs) => {
+          this.functLocService.setFunctLocs(functLocs.d.results);
+          if (this.functLocService.checkAvailability()) {
+            this.functLocs = this.functLocService.getAvailableFunctLocs();
+  
+            if (this.functLocs.length == 0) {
+              this.notAvailable = false;
+              this.noData = true;
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = false;
+            }
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+    }
   }
 
 

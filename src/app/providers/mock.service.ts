@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { NotifHeader } from '../interfaces/notification.interface';
 import NotifHeaderdata from '../mockServer/NotifHeaderSet.json';
 import Plantdata from '../mockServer/PlanPlantSet.json';
 import SOP from '../mockServer/OrderHeaderSet.json';
 import Orderoperations from '../mockServer/OrderOperationSet.json';
 import Ordercomponents from '../mockServer/OrderComponentSet.json';
+import FunctLocs from '../mockServer/FunctLocSet.json';
+import Priorities from '../mockServer/PrioritySet.json';
+import Effects from '../mockServer/EffectSet.json';
+import CauseGroupSet from '../mockServer/CauseGroupSet.json';
+import CauseCodeSet from '../mockServer/CauseCodeSet.json';
+import EquipmentSet from '../mockServer/EquipmentSet.json';
+import DamageCodeSet from '../mockServer/DamageCodeSet.json';
+import DamageGroupSet from '../mockServer/DamageGroupSet.json';
+import ObjectPartCodeSet from '../mockServer/ObjectPartCodeSet.json';
+import ObjectPartGroupSet from '../mockServer/ObjectPartGroupSet.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MockService {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   getAllMockNotifs(codePlant) {
     let notifList = NotifHeaderdata;
@@ -66,5 +74,64 @@ export class MockService {
     )
   }
 
+  getMockFunctLocsByPlant(codePlant){
+    let functLocs = FunctLocs;
+    return functLocs.filter(
+      (fl) =>{
+        return fl.PlanPlant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
+      }
+    )
+  }
+
+  getMockPriorities(){
+    return Priorities;
+  }
+
+  getMockEffects(){
+    return Effects;
+  }
+
+  getMockequipments(functLoc){
+    return EquipmentSet.filter(
+      (eq) =>{
+        return eq.FunctLoc.toLowerCase().indexOf(functLoc.toLowerCase()) > -1;
+      }
+    )
+  }
+
+  
+  getMockCG(){
+    return CauseGroupSet;
+  }
+
+  getMockCC(causeGroup){
+    return CauseCodeSet.filter(
+      (cc: any) =>{
+        return cc.CodeGroup.toLowerCase().indexOf(causeGroup.toLowerCase()) > -1;
+      }
+    )
+  }
+
+  getMockDamageGroups(){
+    return DamageGroupSet;
+  }
+
+  getMockDamageCodes(damageGroup){
+    return DamageCodeSet.filter(
+      (dc: any) =>{
+        return dc.CodeGroup.toLowerCase().indexOf(damageGroup.toLowerCase()) > -1;
+      });
+  }
+
+  getObjectPartGroups(){
+    return ObjectPartGroupSet;
+  }
+
+  getObjectPartCodes(opGroup){
+    return ObjectPartCodeSet.filter(
+      (oc: any) =>{
+        return oc.CodeGroup.toLowerCase().indexOf(opGroup.toLowerCase()) > -1;
+      });
+  }
 
 }
