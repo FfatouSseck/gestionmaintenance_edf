@@ -36,6 +36,7 @@ import { ObjectPartCodeListPage } from './pages/object-part-code-list/object-par
 import { DamageCodePage } from './pages/damage-code/damage-code.page';
 import { DamageGroupPage } from './pages/damage-group/damage-group.page';
 import { Globalization } from '@ionic-native/globalization/ngx';
+import { ChecklistPage } from './pages/checklist/checklist.page';
 
 @NgModule({
   declarations: [
