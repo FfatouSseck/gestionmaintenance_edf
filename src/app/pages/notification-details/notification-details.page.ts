@@ -19,7 +19,6 @@ export class NotificationDetailsPage implements OnInit {
 
   ngOnInit() {
     this.choosenNotif =  this.notifService.getCurrentNotif();
-    console.log("choosenNotif: ",this.choosenNotif);
     if(this.choosenNotif == undefined){
       this.router.navigateByUrl("/notification-list");
     }

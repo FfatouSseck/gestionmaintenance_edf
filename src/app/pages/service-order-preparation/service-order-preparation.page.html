@@ -44,22 +44,24 @@
         <ion-menu content-id="menu-content">
           <ion-content scrollEvents="true">
 
-            <ion-list>
-              <ion-item detail (click)="presentDetails(ord)" *ngFor="let ord of ordersList" [color]="ord.color">
-                <ion-label text-wrap>
-                  <ion-text color="primary">
-                    <h2 style="font-weight: bold">{{ord.OrderNo}}</h2>
-                  </ion-text>
-                  <p>{{ord.ShortText}} <span *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
-                  <ion-text color="dark">
-                    <p>{{ord.FunctLoc}}</p>
-                  </ion-text>
-                  <ion-text color="danger">
-                    <p>{{ord.Priority}}</p>
-                  </ion-text>
-                </ion-label>
-              </ion-item>
-            </ion-list>
+            <mat-list>
+              <mat-list-item *ngFor="let ord of ordersList" (click)="presentDetails(ord)"
+                [style.background-color]="ord.bgcolor" [style.color]="ord.color">
+                <h3 matLine style="font-weight: bold;color: #007CC0;">{{ord.OrderNo}} </h3>
+                <p matLine [style.font-weight]="ord.fw">{{ord.ShortText}} <span
+                    *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
+                <p matLine [style.font-weight]="ord.fw" class="demo-2"> {{ord.FunctLoc}}</p>
+                <p style="color: red;" *ngIf="ord.Priority === '1'" [style.font-weight]="ord.fw" matLine>
+                  {{ord.PriorityDescr}}</p>
+                <p style="color: blue;" *ngIf="ord.Priority === '2'" [style.font-weight]="ord.fw" matLine>
+                  {{ord.PriorityDescr}}</p>
+                <p style="color: gray;" *ngIf="ord.Priority === '3'" [style.font-weight]="ord.fw" matLine>
+                  {{ord.PriorityDescr}}</p>
+                <p style="color: green;" *ngIf="ord.Priority === '4'" [style.font-weight]="ord.fw" matLine>
+                  {{ord.PriorityDescr}}</p>
+                <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
           </ion-content>
         </ion-menu>
 
@@ -143,9 +145,9 @@
             <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
               <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Operations</h4>
             </mat-card>
-            <br>  
+            <br>
             <div *ngIf="operations.length == 0">
-              <mat-spinner  *ngIf="!noOperations" style="margin: 0 auto" [diameter]="25"></mat-spinner>
+              <mat-spinner *ngIf="!noOperations" style="margin: 0 auto" [diameter]="25"></mat-spinner>
               <p *ngIf="noOperations">No operations available</p>
             </div>
             <div *ngIf="operations.length>0">

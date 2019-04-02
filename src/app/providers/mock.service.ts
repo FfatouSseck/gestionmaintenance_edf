@@ -45,7 +45,6 @@ export class MockService {
   }
 
   getMockNotifByNumber(notifNo: string){
-    console.log("notif n°: ",notifNo);
     let notifList = NotifHeaderdata;
     return notifList.filter(
       (notif:any) =>{

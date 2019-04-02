@@ -300,7 +300,6 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   getMockNotifByNumber(notifNo) {
     this.noNotif = false;
     let choosenNotif = this.mockService.getMockNotifByNumber(notifNo)[0];
-    console.log(choosenNotif);
     if(choosenNotif == undefined){
       this.noNotif = true;
       this.choosenNotif.NotifNo = null;

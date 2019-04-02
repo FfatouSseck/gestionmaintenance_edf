@@ -155,11 +155,13 @@ export class HomePage implements OnInit {
                 (choosenPlantcode) => {
                     if (choosenPlantcode != null && choosenPlantcode != undefined) {
                         this.choosenPlant = choosenPlantcode;
+                        console.log(this.choosenPlant);
                         this.getMockNotifs(choosenPlantcode);
                     }
                 });
         }
         else {
+            this.choosenPlant = plant;
             this.notifService.getAllNotifs(plant).subscribe(
                 (notifs: any) => {
                     this.notifService.setNotifs(notifs.d.results);

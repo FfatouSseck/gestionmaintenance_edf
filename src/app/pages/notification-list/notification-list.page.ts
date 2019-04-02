@@ -61,7 +61,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     public webview: WebView,
     public ref: ChangeDetectorRef, public filePath: FilePath, public camera: Camera,
     public file: File, public http: HttpClient, public loadingController: LoadingController,
-    public actionSheetController: ActionSheetController ) {
+    public actionSheetController: ActionSheetController) {
 
     super(_formBuilder, platform, null, qrScanner, toastController, snackBar, alertController, modalController,
       webview, actionSheetController, ref, filePath, camera, file, http, loadingController);
@@ -190,9 +190,23 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.modif = false;
     let index = this.notifList.indexOf(notif);
 
-    for (let i = 0; i < this.notifList.length; i++) {
-      this.notifList[i].color = null
+    if (this.orientation !== 'portrait-primary') {
+      for (let i = 0; i < this.notifList.length; i++) {
+        this.notifList[i].bgcolor = "white";
+        this.notifList[i].color = "black";
+        this.notifList[i].fw = "normal";
+      }
+      this.notifList[index].color = "black";
+      this.notifList[index].fw = "bold";
     }
+
+    if (this.orientation === 'portrait-primary') 
+    {
+      for (let i = 0; i < this.notifList.length; i++) {
+        this.notifList[i].bgcolor = "white";
+      }
+    }
+    this.notifList[index].bgcolor = "#F7F7F7";
 
     this.floc = this.choosenNotif.FunctLoc + " " + this.choosenNotif.FunctLocDescr;
     this.choosenFunctLoc = this.choosenNotif.FunctLoc;
@@ -202,7 +216,6 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.choosenCC = this.cause;
     this.choosenObjectPartCode = this.objectPart;
 
-    this.notifList[index].color = "light";
     this.notifService.setCurrentNotif(notif);
     if (this.orientation === 'portrait-primary') {
       this.router.navigateByUrl("/notification-details");
