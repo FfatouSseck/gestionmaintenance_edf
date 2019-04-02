@@ -29,11 +29,13 @@ app-check-list-assignment{
   }
 
   .searchbar{
-    --background: #007CC0;
-    --color: #fff;
-    --icon-color: #007CC0;
-    --placeholder-color :#fff;
-    --clear-button-color:#fff;
+    --background: #F7F7F7;
+    --color: #000;
+    --icon-color: #000;
+    --placeholder-color :#000;
+    --clear-button-color:#000;
+    margin-left: 50%;
+    width: 50%;
   }
 
   ion-searchbar{        

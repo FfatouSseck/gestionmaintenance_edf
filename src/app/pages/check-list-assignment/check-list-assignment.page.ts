@@ -7,6 +7,9 @@ import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/internal/operators';
 import { MatTableDataSource } from '@angular/material';
 import { MockService } from 'src/app/providers/mock.service';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { ModalController } from '@ionic/angular';
+import { ChecklistPage } from '../checklist/checklist.page';
 
 
 @Component({
@@ -35,22 +38,34 @@ export class CheckListAssignmentPage implements OnInit {
   refresh = false;
   ok = false;
   displayedColumns: string[] = [
-    'numero', 'OrderNo', 'StatusDescr',
+    'OrderNo', 'StatusDescr',
     'FunctLoc', 'Operation',
-    'Description', 'Checklist', 'prodStartDate', 'button'
+    'Description', 'Checklist', 'prodStartDate', 'button', 'detail'
+  ];
+  displayedPortraitColumns: string[] = [
+    'OrderNo',
+    'FunctLoc', 'Operation',
+    'Description', 'Checklist', 'button', 'detail'
   ];
   mock = false;
-
-
+  orientation = "portrait-primary";
+  modal : any;
 
   constructor(private orderService: ServiceOrderPreparationService, private storage: Storage,
-    private mockService: MockService) {
+    private mockService: MockService, private screenOrientation: ScreenOrientation,private modalController: ModalController) {
 
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
       this.setFilteredItems();
 
     });
+    this.orientation = this.screenOrientation.type;
+    // detect orientation changes
+    this.screenOrientation.onChange().subscribe(
+      () => {
+        this.orientation = this.screenOrientation.type;
+      }
+    );
   }
 
   ngOnInit() {
@@ -95,16 +110,26 @@ export class CheckListAssignmentPage implements OnInit {
         });
   }
 
+  sortAlphaNumeric = (a, b) => {
+    // convert to strings and force lowercase
+    a = typeof a === 'string' ? a.toLowerCase() : a.toString();
+    b = typeof b === 'string' ? b.toLowerCase() : b.toString();
+
+    return a.localeCompare(b);
+  };
+
   getData(segmentIndex?: number) {
     if (this.mock) {
       this.orderList = this.mockService.getMockOrderByPlant(this.codePlant);
       let types = this.getOrderTypes(this.orderList);
       this.types = this.getUnique(types);
+
       if (this.types.length == 0) {
         this.loading = false;
         this.noData = true;
       }
       else {
+        this.types.sort(this.sortAlphaNumeric);
         this.loading = false;
         this.noData = false;
         if (segmentIndex != null && segmentIndex != undefined) {
@@ -130,6 +155,7 @@ export class CheckListAssignmentPage implements OnInit {
             this.noData = true;
           }
           else {
+            this.types.sort(this.sortAlphaNumeric);
             this.loading = false;
             this.noData = false;
             if (segmentIndex != null && segmentIndex != undefined) {
@@ -189,7 +215,6 @@ export class CheckListAssignmentPage implements OnInit {
     //on recupere la ligne d'opération pour chaque ordre
 
     if (this.mock) {
-      console.log("from mock server");
       ords.forEach((element) => {
         let ops = this.mockService.getMockOrderOperations(element.orderPart.OrderNo);
 
@@ -199,7 +224,7 @@ export class CheckListAssignmentPage implements OnInit {
             Checklist: '',
             Description: op.Description,
             Operation: op.Activity,
-            prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
+            prodStartDate: this.formatDate(op.ProductionStartDate)
           });
         })
         this.ordersByType = newOrds;
@@ -221,7 +246,7 @@ export class CheckListAssignmentPage implements OnInit {
                   Checklist: '',
                   Description: op.Description,
                   Operation: op.Activity,
-                  prodStartDate: this.getHoursandMinutes(op.ProductionStartDate)
+                  prodStartDate: this.formatDate(op.ProductionStartDate)
                 });
               });
             },
@@ -235,6 +260,19 @@ export class CheckListAssignmentPage implements OnInit {
           );
       });
     }
+  }
+
+  //all checklists
+  async presentCheckListsModal() {
+    this.modal = await this.modalController.create({
+      component: ChecklistPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    console.log(data.result);
   }
 
   onClose(evt: { result: string; }) {
@@ -251,28 +289,6 @@ export class CheckListAssignmentPage implements OnInit {
       event.target.complete();
       this.refresh = false;
     }, 3000);
-  }
-
-  getHoursandMinutes(d) {
-    let d1 = d.replace('/Date(', '');
-    let startDate = d1.replace(')/', '');
-    let newDate = new Date(Number(startDate));
-
-    let min = newDate.getMinutes();
-    let h = newDate.getHours();
-    let minutes = "";
-    let hours = "";
-
-    if (min.toString().length < 2) {
-      minutes = "0" + min;
-    } else minutes = min.toString();
-
-    if (h.toString().length < 2) {
-      hours = "0" + h;
-    } else hours = h.toString();
-
-    let dateD = this.formatDate(d) + " " + hours + ":" + minutes;
-    return dateD;
   }
 
   getOrderOp(orderNo) {

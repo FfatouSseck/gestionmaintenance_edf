@@ -183,7 +183,25 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.choosenOrder = order;
     this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
     this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
+    let index = this.ordersList.indexOf(order);
 
+    if (this.orientation === 'portrait-primary') {
+      for (let i = 0; i < this.ordersList.length; i++) {
+        this.ordersList[i].bgcolor = "white";
+      }
+    }
+    else {
+      //landscape content
+      for (let i = 0; i < this.ordersList.length; i++) {
+        this.ordersList[i].bgcolor = "white";
+        this.ordersList[i].color = "black";
+        this.ordersList[i].fw = "normal";
+      }
+
+      this.ordersList[index].color = "black";
+      this.ordersList[index].fw = "bold";
+    }
+    this.ordersList[index].bgcolor = "#F7F7F7";
     this.storage.get("mock").then(
       (mock) => {
         if (mock != undefined && mock != null && mock == true) {
@@ -200,13 +218,6 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
 
     this.modif = false;
 
-    let index = this.ordersList.indexOf(order);
-
-    for (let i = 0; i < this.ordersList.length; i++) {
-      this.ordersList[i].color = null
-    }
-
-    this.ordersList[index].color = "light";
     this.orderService.setCurrentOrder(order);
     if (this.orientation === 'portrait-primary') {
       this.router.navigateByUrl("/order-details");
@@ -300,11 +311,11 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   getMockNotifByNumber(notifNo) {
     this.noNotif = false;
     let choosenNotif = this.mockService.getMockNotifByNumber(notifNo)[0];
-    if(choosenNotif == undefined){
+    if (choosenNotif == undefined) {
       this.noNotif = true;
       this.choosenNotif.NotifNo = null;
     }
-    else{
+    else {
       this.choosenNotif = choosenNotif;
     }
     this.loadNotif = false;
@@ -320,7 +331,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
       });
   }
 
-  getMockOrderOperations(orderNo: string){
+  getMockOrderOperations(orderNo: string) {
     this.operations = [];
     this.noOperations = false;
     this.operations = this.mockService.getMockOrderOperations(orderNo);
@@ -340,13 +351,13 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     )
   }
 
-  getMockOrderComponents(orderNo: string){
+  getMockOrderComponents(orderNo: string) {
     this.components = [];
     this.noComponents = false;
     this.components = this.mockService.getMockOrderComponents(orderNo);
-    if (this.components.length == 0){
+    if (this.components.length == 0) {
       this.noComponents = true;
-     }
+    }
   }
 
 }

@@ -2,24 +2,26 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { ActionSheetController, ModalController } from '@ionic/angular';
 import { DetailsSettingsPage } from 'src/app/pages/details-settings/details-settings.page';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
-  modal: any;
-  currentUrl = "";
-  @Input() pageTitle: string;
-  @Output() close: EventEmitter<any> = new EventEmitter();
+    modal: any;
+    currentUrl = "";
+    @Input() pageTitle: string;
+    @Output() close: EventEmitter<any> = new EventEmitter();
 
-  constructor(private actionSheetController: ActionSheetController, 
-              private modalController: ModalController,private router: Router) { }
+    constructor(private actionSheetController: ActionSheetController,
+        private modalController: ModalController, private router: Router,
+        private storage: Storage) { }
 
     ngOnInit() {
-      this.currentUrl = this.router.url;
+        this.currentUrl = this.router.url;
     }
 
     //list available plants
@@ -55,7 +57,15 @@ export class HeaderComponent implements OnInit {
                 text: 'Logout',
                 icon: 'power',
                 handler: () => {
-                    this.router.navigateByUrl("/login")
+                    this.storage.remove("choosenPlant")
+                        .then(
+                            () => {
+                                this.router.navigateByUrl("/login");
+                            })
+                        .catch(
+                            () => {
+                                this.router.navigateByUrl("/login");
+                            })
                 }
             },
             {

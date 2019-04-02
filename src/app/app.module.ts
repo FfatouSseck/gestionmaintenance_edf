@@ -48,7 +48,8 @@ import { Globalization } from '@ionic-native/globalization/ngx';
     ObjectPartCodeListPage,
     ObjectPartGroupListPage,
     DamageCodePage,
-    DamageGroupPage
+    DamageGroupPage,
+    ChecklistPage
   ],
   entryComponents: [
     NotificationListPage,
@@ -60,7 +61,8 @@ import { Globalization } from '@ionic-native/globalization/ngx';
     ObjectPartCodeListPage,
     ObjectPartGroupListPage,
     DamageCodePage,
-    DamageGroupPage
+    DamageGroupPage,
+    ChecklistPage
   ],
   imports: [
     BrowserModule, 

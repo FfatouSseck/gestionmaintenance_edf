@@ -14,7 +14,8 @@ import DamageCodeSet from '../mockServer/DamageCodeSet.json';
 import DamageGroupSet from '../mockServer/DamageGroupSet.json';
 import ObjectPartCodeSet from '../mockServer/ObjectPartCodeSet.json';
 import ObjectPartGroupSet from '../mockServer/ObjectPartGroupSet.json';
-import OrderHeaderSet from '../mockServer/OrderHeaderSet.json'
+import OrderHeaderSet from '../mockServer/OrderHeaderSet.json';
+import CheckListSet from '../mockServer/CheckListSet.json';
 
 @Injectable({
   providedIn: 'root'
@@ -140,6 +141,14 @@ export class MockService {
       (oc: any) =>{
         return oc.CodeGroup.toLowerCase().indexOf(opGroup.toLowerCase()) > -1;
       });
+  }
+
+  getMockCheckListByPlant(codePlant){
+    return CheckListSet.filter(
+      (ck) =>{
+        return ck.Plant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
+      }
+    )
   }
 
 }

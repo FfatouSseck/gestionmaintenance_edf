@@ -155,7 +155,6 @@ export class HomePage implements OnInit {
                 (choosenPlantcode) => {
                     if (choosenPlantcode != null && choosenPlantcode != undefined) {
                         this.choosenPlant = choosenPlantcode;
-                        console.log(this.choosenPlant);
                         this.getMockNotifs(choosenPlantcode);
                     }
                 });
