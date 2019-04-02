@@ -64,7 +64,6 @@ export class HomePage implements OnInit {
             }).finally(
                 () => {
                     if (this.mock) {
-                        console.log('here')
                         //we call the mock server
                         this.plants = this.mockService.getAllMockPlants();
 

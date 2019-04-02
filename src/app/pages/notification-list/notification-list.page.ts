@@ -151,9 +151,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.notAvailable = true;
     let ntfs = this.mockService.getAllMockNotifs(plant);
     this.notifList = ntfs;
-    console.log(this.notifList);
     if (this.notifList.length == 0) {
-      console.log("here");
       this.notAvailable = false;
       this.noData = true;
     }

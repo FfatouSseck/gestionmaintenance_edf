@@ -22,7 +22,7 @@ export class CheckListAssignmentPage implements OnInit {
   searchControl: FormControl;
   @ViewChild('search') search: any;
   @ViewChild('tabGroup') tabGroup;
-  orderList: Order[] = [];
+  orderList: any[] = [];
   ordersByType: newOrder[] = [];
   orderType = "";
   types: string[] = [];

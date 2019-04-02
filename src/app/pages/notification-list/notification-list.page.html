@@ -12,38 +12,18 @@
         No data available
       </p>
 
-      <ion-list>
-        <ion-item detail (click)="presentDetails(notif)" *ngFor="let notif of firstDisplay" [color]="notif.color">
-          <ion-label text-wrap>
-            <ion-text color="primary">
-              <h2 style="font-weight: bold">{{notif.NotifNo}}</h2>
-            </ion-text>
-            <p>{{notif.ShortText | slice:0:25}} <span *ngIf="notif.ShortText.length>26">...</span> </p>
-            <ion-text color="dark">
-              <p>{{formatDate(notif.StartDate)}}</p>
-            </ion-text>
-            <ion-text color="danger">
-              <p>{{notif.Priority}}</p>
-            </ion-text>
-          </ion-label>
-        </ion-item>
-        <div *ngIf="noData == false">
-          <ion-item detail (click)="presentDetails(notif)" *ngFor="let notif of notifList" [color]="notif.color">
-            <ion-label text-wrap>
-              <ion-text color="primary">
-                <h2 style="font-weight: bold">{{notif.NotifNo}}</h2>
-              </ion-text>
-              <p>{{notif.ShortText | slice:0:25}} <span *ngIf="notif.ShortText.length>26">...</span> </p>
-              <ion-text color="dark">
-                <p>{{formatDate(notif.StartDate)}}</p>
-              </ion-text>
-              <ion-text color="danger">
-                <p>{{notif.Priority}}</p>
-              </ion-text>
-            </ion-label>
-          </ion-item>
-        </div>
-      </ion-list>
+      <mat-list>
+        <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)" >
+          <h3 matLine style="font-weight: bold;color: #007CC0;">{{notif.NotifNo}} </h3>
+          <p matLine> {{notif.ShortText | slice:0:25}} </p>
+          <p matLine class="demo-2"> {{formatDate(notif.StartDate)}} </p>
+          <p style="color: blue;" *ngIf="notif.Priority === '1'" matLine >{{notif.PriorityDescr}}</p>
+          <p style="color: red;" *ngIf="notif.Priority === '2'"  matLine >{{notif.PriorityDescr}}</p>
+          <p style="color: gray;" *ngIf="notif.Priority === '3'" matLine >{{notif.PriorityDescr}}</p>
+          <p style="color: green;" *ngIf="notif.Priority === '4'" matLine >{{notif.PriorityDescr}}</p>
+          <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+        </mat-list-item>
+      </mat-list>
     </ng-template>
 
   </div>
@@ -61,28 +41,33 @@
         <ion-menu content-id="menu-content">
           <ion-content scrollEvents="true">
 
-            <ion-list>
-              <ion-item detail (click)="presentDetails(notif)" *ngFor="let notif of notifList" [color]="notif.color">
-                <ion-label text-wrap>
-                  <ion-text color="primary">
-                    <h2 style="font-weight: bold">{{notif.NotifNo}}</h2>
-                  </ion-text>
-                  <p>{{notif.ShortText | slice:0:25}} <span *ngIf="notif.ShortText.length>26">...</span> </p>
-                  <ion-text color="dark">
-                    <p>{{formatDate(notif.StartDate)}}</p>
-                  </ion-text>
-                  <ion-text color="danger">
-                    <p>{{notif.Priority}}</p>
-                  </ion-text>
-                </ion-label>
-              </ion-item>
-            </ion-list>
+              <mat-list>
+                  <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)" >
+                    <h3 matLine style="font-weight: bold;color: #007CC0;">{{notif.NotifNo}} </h3>
+                    <p matLine> {{notif.ShortText | slice:0:25}} </p>
+                    <p matLine class="demo-2"> {{formatDate(notif.StartDate)}} </p>
+                    <p style="color: blue;" *ngIf="notif.Priority === '1'" matLine >{{notif.PriorityDescr}}</p>
+                    <p style="color: red;" *ngIf="notif.Priority === '2'"  matLine >{{notif.PriorityDescr}}</p>
+                    <p style="color: gray;" *ngIf="notif.Priority === '3'" matLine >{{notif.PriorityDescr}}</p>
+                    <p style="color: green;" *ngIf="notif.Priority === '4'" matLine >{{notif.PriorityDescr}}</p>
+                    <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+                  </mat-list-item>
+                </mat-list>
           </ion-content>
         </ion-menu>
 
         <!-- the main content -->
         <ion-content id="menu-content">
-          <p *ngIf="choosenNotif.NotifNo == null && noData==false">Choose one notification to see details</p>
+          <p *ngIf="choosenNotif.NotifNo == null && noData==false">
+            Choose one notification to see details
+          </p>
+          <mat-list>
+            <mat-list-item *ngFor="let notif of test">
+              <h3 matLine>{{notif.NotifNo}} </h3>
+              <p matLine> {{notif.ShortText | slice:0:25}} </p>
+              <p matLine class="demo-2"> {{formatDate(notif.StartDate)}} </p>
+            </mat-list-item>
+          </mat-list>
           <form *ngIf="modif == false && choosenNotif.NotifNo!=null">
             <ion-row style="background-color: #F2F2F2">
               <h4 style="font-weight: bold;color: #000;font-size: 15px">General information</h4>
@@ -192,16 +177,18 @@
               <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
             </mat-form-field>
             <mat-form-field class="example-form" (click)="selectCauseGroup()">
-                <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
-                <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
-              </mat-form-field>
-              <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
-                  <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode" required>
-                  <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
-              </mat-form-field>
+              <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
+              <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
+              <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode"
+                required>
+              <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+            </mat-form-field>
 
             <mat-form-field class="example-form">
-              <textarea matInput placeholder="Long text" formControlName="longText" [(ngModel)]="choosenNotif.LongText"></textarea>
+              <textarea matInput placeholder="Long text" formControlName="longText"
+                [(ngModel)]="choosenNotif.LongText"></textarea>
             </mat-form-field>
 
           </form>
@@ -241,7 +228,8 @@
       </ion-button>
       <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
         (click)="modif = !modif">Cancel</ion-button>
-      <ion-button style="background-color: #009DE0;color: white;--height:40px" strong="true" size="large" (click)="displaySimilarNotifs()">
+      <ion-button style="background-color: #009DE0;color: white;--height:40px" strong="true" size="large"
+        (click)="displaySimilarNotifs()">
         Similar
         Notifications</ion-button>
     </ion-buttons>
