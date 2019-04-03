@@ -104,7 +104,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     startDate: null
   };
   displayedColumns: string[] = ['Operation', 'Description', 'NumberOfCapacities',
-    'WorkForecast', 'ActivityType'];
+    'WorkForecast', 'ActivityType','detail'];
   displayedComponentsColumns: string[] = ['Material', 'MaterialDescr', 'ItemNo',
     'PlanPlant', 'StgeLoc', 'ValType',
     'RequirementQuantity'];
@@ -329,6 +329,10 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
         this.operations = operations.d.results;
         if (this.operations.length == 0) this.noOperations = true;
       });
+  }
+
+  getOperationDetails(index:number){
+    this.presentOperationModal(this.operations[index]);
   }
 
   getMockOrderOperations(orderNo: string) {

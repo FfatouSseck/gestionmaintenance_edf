@@ -21,6 +21,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule,MatButtonToggleModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -44,6 +45,8 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatTabsModule,
     MatListModule,
+    MatTooltipModule,
+    MatButtonToggleModule
   ],
   declarations: [],
   exports:[
@@ -64,6 +67,8 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatTabsModule,
     MatListModule,
+    MatTooltipModule,
+    MatButtonToggleModule
   ]
 })
 export class AngularMaterialPageModule {}

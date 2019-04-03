@@ -16,11 +16,11 @@
     </div>
     <div *ngIf="types.length>0">
         <ion-toolbar>
-            <ion-buttons slot="start">
+            <!--ion-buttons slot="start">
                 <ion-fab-button size="small" *ngIf="!refresh" style="--background: #007CC0;">
                     <i class="material-icons" style="color: #fff;">sort</i>
                 </ion-fab-button>
-            </ion-buttons>
+            </ion-buttons>-->
             <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
                 <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm"
                     [formControl]="searchControl" (ionBlur)="toggleSearch()" class="searchbar">
@@ -86,10 +86,14 @@
                                     </ng-container>
                                     <ng-container matColumnDef="button">
                                         <th mat-header-cell *matHeaderCellDef></th>
-                                        <td mat-cell *matCellDef="let element">
+                                        <td mat-cell *matCellDef="let element;let i=index;">
                                             <ion-fab-button size="small" style="--background: #007CC0; "
-                                                (click)="presentCheckListsModal()">
+                                                (click)="presentCheckListsModal(i)" *ngIf="element.Checklist === ''">
                                                 <i class="material-icons" style="color: #fff;">note_add</i>
+                                            </ion-fab-button>
+                                            <ion-fab-button size="small" style="--background: #007CC0; "
+                                                (click)="removeCheckList(i)" *ngIf="element.Checklist !== ''">
+                                                <i class="material-icons" style="color: #fff;">delete_outline</i>
                                             </ion-fab-button>
                                         </td>
                                     </ng-container>
@@ -138,10 +142,13 @@
                                     </ng-container>
                                     <ng-container matColumnDef="button">
                                         <th mat-header-cell *matHeaderCellDef></th>
-                                        <td mat-cell *matCellDef="let element">
+                                        <td mat-cell *matCellDef="let element;let i=index;">
                                             <ion-fab-button size="small" style="--background: #007CC0; "
-                                                (click)="presentCheckListsModal()">
-                                                <i class="material-icons" style="color: #fff;">note_add</i>
+                                                (click)="presentCheckListsModal(i)">
+                                                <i class="material-icons" style="color: #fff;"
+                                                    *ngIf="element.Checklist === ''">note_add</i>
+                                                <i class="material-icons" style="color: #fff;"
+                                                    *ngIf="element.Checklist !== ''">delete_outline</i>
                                             </ion-fab-button>
                                         </td>
                                     </ng-container>

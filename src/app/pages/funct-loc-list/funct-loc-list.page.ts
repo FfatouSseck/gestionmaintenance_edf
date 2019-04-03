@@ -30,10 +30,8 @@ export class FunctLocListPage implements OnInit {
     this.plantCode = navParams.get('plantCode');
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
-
       this.searching = false;
       this.setFilteredItems();
-
     });
   }
 

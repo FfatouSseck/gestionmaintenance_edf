@@ -3,17 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
+import { SpeedDialFabComponent } from './speed-dial-fab/speed-dial-fab.component';
+import { AngularMaterialPageModule } from '../pages/angular-material/angular-material.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    AngularMaterialPageModule
   ],
   declarations: [
-      HeaderComponent
+      HeaderComponent,
+      SpeedDialFabComponent
   ],
   exports:[
-      HeaderComponent
+      HeaderComponent,
+      SpeedDialFabComponent
   ]
 })
 export class GeneralModule {}

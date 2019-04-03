@@ -15,7 +15,7 @@ export class CheckListAssignmentService extends BaseService {
   }
 
   getChecklistsByPlant(codePlant){
-    return this.getAll("/CheckListSet?$filter=PlanPlant eq '"+codePlant+"'");
+    return this.getAll("ChecklistSet?$filter=Plant eq '"+codePlant+"'");
   }
 
   setCheckLists(cks){

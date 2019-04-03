@@ -10,6 +10,7 @@ import { MockService } from 'src/app/providers/mock.service';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { ModalController } from '@ionic/angular';
 import { ChecklistPage } from '../checklist/checklist.page';
+import { SpeedDialFabPosition } from 'src/app/components/speed-dial-fab/speed-dial-fab.component';
 
 
 @Component({
@@ -50,6 +51,37 @@ export class CheckListAssignmentPage implements OnInit {
   mock = false;
   orientation = "portrait-primary";
   modal : any;
+  
+
+  name = 'Angular 6';
+
+  private speedDialFabButtons = [
+    {
+      icon: 'timeline',
+      tooltip: 'Do some timeline here'
+    },
+    {
+      icon: 'view_headline',
+      tooltip: 'Do some headline here'
+    },
+    {
+      icon: 'room',
+      tooltip: 'get some room here'
+    },
+    {
+      icon: 'lightbulb_outline',
+      tooltip: 'Do some outline here'
+    },
+    {
+      icon: 'lock',
+      tooltip: 'Do lock down'
+    }
+  ];
+
+  SpeedDialFabPosition = SpeedDialFabPosition;
+  speedDialFabColumnDirection = 'column';
+  speedDialFabPosition = SpeedDialFabPosition.Top;
+  speedDialFabPositionClassName = 'speed-dial-container-top';
 
   constructor(private orderService: ServiceOrderPreparationService, private storage: Storage,
     private mockService: MockService, private screenOrientation: ScreenOrientation,private modalController: ModalController) {
@@ -200,7 +232,7 @@ export class CheckListAssignmentPage implements OnInit {
     this.ok = false;
     let ords: newOrder[] = [];
     this.ordersByType = [];
-    this.loading = true;
+    //this.loading = true;
     let i = 0;
 
     for (i = 0; i < this.orderList.length; i++) {
@@ -263,7 +295,7 @@ export class CheckListAssignmentPage implements OnInit {
   }
 
   //all checklists
-  async presentCheckListsModal() {
+  async presentCheckListsModal(index) {
     this.modal = await this.modalController.create({
       component: ChecklistPage,
       componentProps: {},
@@ -272,7 +304,19 @@ export class CheckListAssignmentPage implements OnInit {
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
-    console.log(data.result);
+    if(data != undefined){
+      if(data.result.Title.length > 22){
+        let x = data.result.Title;
+        this.orders.data[index].Checklist = x.slice(0,20)+"...";
+      }
+      else{
+        this.orders.data[index].Checklist = data.result.Title;
+      }
+    }
+  }
+
+  removeCheckList(index){
+    this.orders.data[index].Checklist = '';
   }
 
   onClose(evt: { result: string; }) {
@@ -325,6 +369,22 @@ export class CheckListAssignmentPage implements OnInit {
     let datec = day + "/" + month + "/" + newDate.getFullYear();
     return datec
 
+  }
+
+  onPositionChange(position: SpeedDialFabPosition) {
+    switch(position) {
+      case SpeedDialFabPosition.Bottom:
+        this.speedDialFabPositionClassName = 'speed-dial-container-bottom';
+        this.speedDialFabColumnDirection = 'column-reverse';
+        break;
+      default:
+        this.speedDialFabPositionClassName = 'speed-dial-container-top';
+        this.speedDialFabColumnDirection = 'column';
+    }
+  }
+
+  onSpeedDialFabClicked(btn: {icon: string}) {
+    console.log(btn);
   }
 
 }

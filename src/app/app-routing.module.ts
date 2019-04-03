@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'my-orders', loadChildren: './pages/my-orders/my-orders.module#MyOrdersPageModule' },
   { path: 'similar-notifications', loadChildren: './pages/similar-notifications/similar-notifications.module#SimilarNotificationsPageModule' },
   { path: 'checklist', loadChildren: './pages/checklist/checklist.module#ChecklistPageModule' },
+  { path: 'operation-details', loadChildren: './pages/operation-details/operation-details.module#OperationDetailsPageModule' },
 
 
 

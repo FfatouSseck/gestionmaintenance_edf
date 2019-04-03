@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar style="--background: #007CC0">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">Operation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Operation">
+      <th mat-header-cell *matHeaderCellDef> Operation </th>
+      <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.Activity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Plant">
+      <th mat-header-cell *matHeaderCellDef> Plant </th>
+      <td mat-cell *matCellDef="let element"> {{element.PlanPlant}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="WorkCenter">
+      <th mat-header-cell *matHeaderCellDef> Work center </th>
+      <td mat-cell *matCellDef="let element"> {{element.WorkCenterShort}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ActType">
+      <th mat-header-cell *matHeaderCellDef> Activity type </th>
+      <td mat-cell *matCellDef="let element"> {{element.ActivityType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Duration">
+      <th mat-header-cell *matHeaderCellDef> Duration </th>
+      <td mat-cell *matCellDef="let element"> {{element.Duration}}&nbsp;{{element.DurationUnit}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="NumEmp">
+      <th mat-header-cell *matHeaderCellDef> Number of employees </th>
+      <td mat-cell *matCellDef="let element"> {{element.NumberOfCapacities}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;let element" (click)="chooseChecklist(element)"></tr>
+  </table>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

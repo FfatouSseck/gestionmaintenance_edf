@@ -5,6 +5,7 @@ import { MockService } from 'src/app/providers/mock.service';
 import { MatTableDataSource } from '@angular/material';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/internal/operators';
+import { ModalController } from '@ionic/angular';
 
 
 @Component({
@@ -15,31 +16,36 @@ import { debounceTime } from 'rxjs/internal/operators';
 export class ChecklistPage implements OnInit {
   checklists: any[] = [];
   noData = false;
-  loading = true;
+  notAvailable = true;
   displayedColumns: string[] = ['id', 'title', 'creationDate'];
   dataSource: any;
-  searchTerm = "";
+  searchTerm: string = '';
   searchControl: FormControl;
+  searching = false;
 
   constructor(private storage: Storage, private checklistService: CheckListAssignmentService,
-    private mockService: MockService) {
+    private mockService: MockService,private modalController: ModalController) {
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
-
+      this.searching = false;
       this.setFilteredItems();
-
     });
 
   }
 
-  setFilteredItems(){
-    this.checklists = this.checklistService.filterItems(this.searchTerm);
+  setFilteredItems() {
+    this.dataSource = new MatTableDataSource(this.checklistService.filterItems(this.searchTerm));
   }
 
   ngOnInit() {
   }
 
+  onSearchInput() {
+    this.searching = true;
+  }
+
   ionViewDidEnter() {
+    this.noData = false;
     this.storage.get("choosenPlant").then(
       (plant) => {
         if (plant != null && plant != undefined && plant !== "") {
@@ -49,28 +55,29 @@ export class ChecklistPage implements OnInit {
               if (mock != null && mock != undefined && mock == true) {
                 this.checklists = this.mockService.getMockCheckListByPlant(plant);
                 if (this.checklists.length == 0) {
-                  this.loading = false;
+                  this.notAvailable = false;
                   this.noData = true;
                 }
                 else {
-                  this.loading = false;
+                  this.notAvailable = false;
                   this.noData = false;
                   this.dataSource = new MatTableDataSource(this.checklists);
+                  this.checklistService.setCheckLists(this.checklists);
                 }
               }
               else {
                 this.checklistService.getChecklistsByPlant(plant).subscribe(
                   (checklists) => {
-                    console.log(checklists.d.results);
                     this.checklists = checklists.d.results;
                     if (this.checklists.length == 0) {
-                      this.loading = false;
+                      this.notAvailable = false;
                       this.noData = true;
                     }
                     else {
-                      this.loading = false;
+                      this.notAvailable = false;
                       this.noData = false;
                       this.dataSource = new MatTableDataSource(this.checklists);
+                      this.checklistService.setCheckLists(this.checklists);
                     }
                   })
               }
@@ -79,6 +86,16 @@ export class ChecklistPage implements OnInit {
       }
     )
 
+  }
+
+  closeModal() {
+    this.modalController.dismiss();
+  }
+
+  chooseChecklist(ck){
+    this.modalController.dismiss({
+      'result' : ck
+    });
   }
 
   formatDate(newD: string) {

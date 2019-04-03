@@ -37,6 +37,7 @@ import { DamageCodePage } from './pages/damage-code/damage-code.page';
 import { DamageGroupPage } from './pages/damage-group/damage-group.page';
 import { Globalization } from '@ionic-native/globalization/ngx';
 import { ChecklistPage } from './pages/checklist/checklist.page';
+import { OperationDetailsPage } from './pages/operation-details/operation-details.page';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ChecklistPage } from './pages/checklist/checklist.page';
     ObjectPartGroupListPage,
     DamageCodePage,
     DamageGroupPage,
-    ChecklistPage
+    ChecklistPage,
+    OperationDetailsPage
   ],
   entryComponents: [
     NotificationListPage,
@@ -63,7 +65,8 @@ import { ChecklistPage } from './pages/checklist/checklist.page';
     ObjectPartGroupListPage,
     DamageCodePage,
     DamageGroupPage,
-    ChecklistPage
+    ChecklistPage,
+    OperationDetailsPage
   ],
   imports: [
     BrowserModule, 
