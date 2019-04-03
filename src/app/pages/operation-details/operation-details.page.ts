@@ -9,8 +9,7 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./operation-details.page.scss'],
 })
 export class OperationDetailsPage implements OnInit {
-  @Input() op:any;
-  operations: any[] = [];
+  @Input() ops:any;
   displayedColumns: string[] = ['Operation', 'Description', 'Plant',
                                 'WorkCenter','ActType','Duration','NumEmp'];
   dataSource: any;
@@ -18,9 +17,8 @@ export class OperationDetailsPage implements OnInit {
   constructor(public modalController: ModalController) { }
 
   ngOnInit() {
-    console.log(this.op);
-    this.operations.push(this.op);
-    this.dataSource = new MatTableDataSource(this.operations);
+    console.log(this.ops);
+    this.dataSource = new MatTableDataSource(this.ops);
   }
 
   closeModal() {

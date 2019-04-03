@@ -111,11 +111,11 @@ export class BaseOrderPage implements OnInit {
   }
 
   //list operation details
-  async presentOperationModal(operation) {
+  async presentOperationModal(operations) {
     this.modal = await this.modalController.create({
       component: OperationDetailsPage,
       componentProps: {
-        'op' : operation
+        'ops' : operations
       },
     });
     this.modal.backdropDismiss = false;

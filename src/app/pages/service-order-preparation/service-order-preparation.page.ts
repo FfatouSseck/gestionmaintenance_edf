@@ -331,8 +331,8 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
       });
   }
 
-  getOperationDetails(index:number){
-    this.presentOperationModal(this.operations[index]);
+  getOperationDetails(){
+    this.presentOperationModal(this.operations);
   }
 
   getMockOrderOperations(orderNo: string) {
