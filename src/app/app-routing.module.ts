@@ -19,6 +19,9 @@ const routes: Routes = [
   { path: 'similar-notifications', loadChildren: './pages/similar-notifications/similar-notifications.module#SimilarNotificationsPageModule' },
   { path: 'checklist', loadChildren: './pages/checklist/checklist.module#ChecklistPageModule' },
   { path: 'operation-details', loadChildren: './pages/operation-details/operation-details.module#OperationDetailsPageModule' },
+  { path: 'standard-text-list', loadChildren: './pages/standard-text-list/standard-text-list.module#StandardTextListPageModule' },
+  { path: 'plant-list', loadChildren: './pages/plant-list/plant-list.module#PlantListPageModule' },
+  { path: 'work-center-list', loadChildren: './pages/work-center-list/work-center-list.module#WorkCenterListPageModule' },
 
 
 

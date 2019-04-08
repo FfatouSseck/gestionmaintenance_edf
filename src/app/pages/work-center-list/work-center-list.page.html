@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar style="--background: #007CC0">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">Work Center</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="notAvailable;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
+
+  <ng-template #contentAvailable>
+    <div *ngIf="noData">
+      No work center available
+    </div>
+    <div *ngIf="!noData">
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
+      </ion-searchbar>
+
+      <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+      </div>
+
+      <ion-list>
+        <ion-list-header>
+        </ion-list-header>
+        <ion-item (click)="choose(wc)" *ngFor="let wc of workCenters">
+          <ion-label>
+            <ion-text>
+              {{ wc.WorkCenterId }}
+            </ion-text>
+            <p>
+              {{ wc.WorkCenterDescr }}
+            </p>
+            <p>
+              {{ wc.WorkCenterShort }}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ng-template>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

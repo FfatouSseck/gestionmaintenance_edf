@@ -146,6 +146,7 @@ export class DetailsSettingsPage implements OnInit {
       this.storage.remove("choosenPlant").then(
         () => {
           this.storage.set("choosenPlant", this.checkedPlants[0].Plant);
+          this.storage.set("choosenPlantDescr", this.checkedPlants[0].PlantDescr);
           this.modalController.dismiss({
             'result': this.checkedPlants[0].Plant
           });

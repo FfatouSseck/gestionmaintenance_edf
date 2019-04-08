@@ -16,6 +16,8 @@ import ObjectPartCodeSet from '../mockServer/ObjectPartCodeSet.json';
 import ObjectPartGroupSet from '../mockServer/ObjectPartGroupSet.json';
 import OrderHeaderSet from '../mockServer/OrderHeaderSet.json';
 import CheckListSet from '../mockServer/CheckListSet.json';
+import StandardTextSet from '../mockServer/StandardTextSet.json';
+import WorkCenterSet from '../mockServer/WorkCenterSet.json';
 
 @Injectable({
   providedIn: 'root'
@@ -149,6 +151,18 @@ export class MockService {
         return ck.Plant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
       }
     )
+  }
+
+  getMockStandardTextsSet(){
+    return StandardTextSet;
+  }
+
+  getMockWorkCentersByPlant(codePlant){
+    console.log("plant: ",codePlant);
+    return WorkCenterSet.filter(
+      (wc) =>{
+        return wc.Plant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
+      })
   }
 
 }

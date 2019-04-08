@@ -10,13 +10,13 @@
     </mat-card>
     <br/>
     <mat-form-field class="example-form" color="secondary">
-      <input disabled matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
+      <input matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
     </mat-form-field>
 
     <mat-form-field class="example-form" (click)="selectFunctLoc()">
       <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
         required>
-      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
     <ion-button color="light" (click)="scanQRCode()">
@@ -25,7 +25,7 @@
 
     <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
       <input matInput placeholder="Equipment" formControlName="equipment" [(ngModel)]="choosenEquipment" required>
-      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <br /><br />
     <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">Breakdown Indicator
@@ -57,16 +57,16 @@
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectDamageGroup()">
       <input matInput placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenDC" required>
-      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectCauseGroup()">
       <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
-      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
       <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode"
         required>
-      <mat-icon matSuffix style="color: grey">file_copy</mat-icon>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
       <textarea matInput placeholder="Long text" formControlName="longText"></textarea>

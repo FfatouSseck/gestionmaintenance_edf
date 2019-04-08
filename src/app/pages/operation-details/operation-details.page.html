@@ -7,54 +7,65 @@
     </ion-buttons>
     <ion-title style="color: white ">Operation</ion-title>
     <ion-buttons slot="end">
-        <ion-button (click)="closeModal()" style="color: white ">
-          <ion-icon name="add"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <form [formGroup]="operationFormGroup">
+    <mat-form-field class="example-form" color="secondary">
+      <input matInput placeholder="Operation" maxlength="40" formControlName="operation" required
+        [(ngModel)]="op.Activity">
+    </mat-form-field>
+    <mat-form-field class="example-form" color="secondary">
+      <input matInput placeholder="Description" maxlength="40" formControlName="description"
+        [(ngModel)]="op.Description">
+    </mat-form-field>
+    <mat-form-field class="example-form" (click)="selectStandardText()">
+      <input matInput placeholder="Standard Text" formControlName="standardText" required
+        [(ngModel)]="standardText">
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <input matInput placeholder="Plant" formControlName="plant" required [(ngModel)]="plant" readonly="true">
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form" (click)="selectWorkCenter()">
+      <input matInput placeholder="Work Center" formControlName="workCenter" required [(ngModel)]="workCenter">
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form" (click)="selectAssignee()">
+      <input matInput placeholder="Assignee" formControlName="assignee" required [(ngModel)]="op.Assignee">
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form" (click)="selectActType()">
+      <input matInput placeholder="Activity Type" formControlName="actType" required [(ngModel)]="op.ActivityType">
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form2">
+      <mat-icon matPrefix style="color: black" (click)="decDuration()">remove</mat-icon>
+      <input matInput placeholder="Duration" formControlName="duration" required [(ngModel)]="op.Duration">
+      <mat-icon matSuffix style="color: black" (click)="incDuration()">add</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form2">
+      <mat-icon matPrefix style="color: black" (click)="dec()">remove</mat-icon>
+      <input matInput placeholder="Number of employees" formControlName="numEmployees" required
+        [(ngModel)]="op.NumberOfCapacities">
+      <mat-icon matSuffix style="color: black" (click)="inc()">add</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="example-form" (click)="selectCheckList()">
+      <input matInput placeholder="Checklist" formControlName="checklist" required [(ngModel)]="op.ChklstId">
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+  </form>
 
-    <ng-container matColumnDef="Operation">
-      <th mat-header-cell *matHeaderCellDef> Operation </th>
-      <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.Activity}} </td>
-    </ng-container>
+  <form *ngIf="mode === 'create'">
 
-    <ng-container matColumnDef="Description">
-      <th mat-header-cell *matHeaderCellDef> Description </th>
-      <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
-    </ng-container>
+  </form>
 
-    <ng-container matColumnDef="Plant">
-      <th mat-header-cell *matHeaderCellDef> Plant </th>
-      <td mat-cell *matCellDef="let element"> {{element.PlanPlant}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="WorkCenter">
-      <th mat-header-cell *matHeaderCellDef> Work center </th>
-      <td mat-cell *matCellDef="let element"> {{element.WorkCenterShort}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="ActType">
-      <th mat-header-cell *matHeaderCellDef> Activity type </th>
-      <td mat-cell *matCellDef="let element"> {{element.ActivityType}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="Duration">
-      <th mat-header-cell *matHeaderCellDef> Duration </th>
-      <td mat-cell *matCellDef="let element"> {{element.Duration}}&nbsp;{{element.DurationUnit}}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="NumEmp">
-      <th mat-header-cell *matHeaderCellDef> Number of employees </th>
-      <td mat-cell *matCellDef="let element"> {{element.NumberOfCapacities}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;let element" (click)="chooseChecklist(element)"></tr>
-  </table>
 </ion-content>
 
 <ion-footer>

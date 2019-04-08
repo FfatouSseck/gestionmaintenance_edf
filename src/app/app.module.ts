@@ -38,6 +38,8 @@ import { DamageGroupPage } from './pages/damage-group/damage-group.page';
 import { Globalization } from '@ionic-native/globalization/ngx';
 import { ChecklistPage } from './pages/checklist/checklist.page';
 import { OperationDetailsPage } from './pages/operation-details/operation-details.page';
+import { StandardTextListPage } from './pages/standard-text-list/standard-text-list.page';
+import { WorkCenterListPage } from './pages/work-center-list/work-center-list.page';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { OperationDetailsPage } from './pages/operation-details/operation-detail
     DamageCodePage,
     DamageGroupPage,
     ChecklistPage,
-    OperationDetailsPage
+    OperationDetailsPage,
+    StandardTextListPage,
+    WorkCenterListPage
   ],
   entryComponents: [
     NotificationListPage,
@@ -66,7 +70,9 @@ import { OperationDetailsPage } from './pages/operation-details/operation-detail
     DamageCodePage,
     DamageGroupPage,
     ChecklistPage,
-    OperationDetailsPage
+    OperationDetailsPage,
+    StandardTextListPage,
+    WorkCenterListPage
   ],
   imports: [
     BrowserModule, 

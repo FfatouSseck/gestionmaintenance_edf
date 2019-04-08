@@ -101,7 +101,7 @@ export class BaseOrderPage implements OnInit {
   async presentPlantsModal() {
     this.modal = await this.modalController.create({
       component: DetailsSettingsPage,
-      componentProps: {},
+      componentProps: {}
     });
     this.modal.backdropDismiss = false;
     await this.modal.present();
@@ -111,12 +111,14 @@ export class BaseOrderPage implements OnInit {
   }
 
   //list operation details
-  async presentOperationModal(operations) {
+  async presentOperationModal(operation,mode) {
     this.modal = await this.modalController.create({
       component: OperationDetailsPage,
       componentProps: {
-        'ops' : operations
+        'op' : operation,
+        'mode' : mode
       },
+      cssClass: 'modal1'
     });
     this.modal.backdropDismiss = false;
     await this.modal.present();
