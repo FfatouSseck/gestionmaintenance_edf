@@ -158,7 +158,6 @@ export class MockService {
   }
 
   getMockWorkCentersByPlant(codePlant){
-    console.log("plant: ",codePlant);
     return WorkCenterSet.filter(
       (wc) =>{
         return wc.Plant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;

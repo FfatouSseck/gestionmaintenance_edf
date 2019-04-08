@@ -15,6 +15,7 @@ export class Data {
 
     setPlants(plts): boolean{
         let done = false;
+        this.emptyArray();
         for(let i=0;i<plts.length;i++){
             this.plants.push({
                 Plant: plts[i].Plant,
@@ -26,6 +27,10 @@ export class Data {
         if(this.plants.length>0) done=true;
         return done;
 
+    }
+
+    emptyArray(){
+        this.plants = [];
     }
 
     plantsAvailable():boolean{

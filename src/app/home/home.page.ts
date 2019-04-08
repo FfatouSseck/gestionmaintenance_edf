@@ -207,6 +207,7 @@ export class HomePage implements OnInit {
         this.ordersCount = null;
         this.notifsCount = null;
         this.dataAvailable = false;
+        this.choosenPlant = "";
 
         if (this.notifsCount == null) {
             this.storage.get("choosenPlant").then(

@@ -18,7 +18,7 @@ export class DetailsSettingsPage implements OnInit {
 
   searchTerm: string = '';
   searchControl: FormControl;
-  plants: any;
+  plants: any[]=[];
   checkedPlants: IPlant[] = [];
   choosenPlant: any;
   notAvailable = true;
@@ -29,54 +29,52 @@ export class DetailsSettingsPage implements OnInit {
     public mockService: MockService) {
 
     this.searchControl = new FormControl();
-    this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
-
+    /*this.searchControl.valueChanges.pipe(debounceTime(70)).subscribe(search => {
+      console.log("iciiii changing")
       this.searching = false;
       this.setFilteredItems();
 
-    });
+    });*/
 
 
   }
 
   onSearchInput() {
     this.searching = true;
+    this.setFilteredItems();
   }
 
   setFilteredItems() {
-    this.plants = [];
+    
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null) {
           this.choosenPlant = choosenPlantcode;
 
-          this.plants = this.dataService.filterItems(this.searchTerm);
+          this.plants = [];
           let plts = this.dataService.filterItems(this.searchTerm);
+          console.log("plts: ",plts);
 
           let index = this.getPlantIndexFromCode(this.choosenPlant);
-          /*let plant = this.getPlantFromCode(this.choosenPlant);
-          this.checkedPlants.push(plant);*/
-
 
           if (index >= 0) {
-
             for (let i = 0; i < plts.length; i++) {
               plts[i].state = "unchecked";
             }
             plts[index].state = 'checked';
-            this.plants = plts;
-
           }
-          /* if (this.checkedPlants.length > 0) {
-             if (this.checkedPlants.findIndex(x => x.Plant === this.choosenPlant) < 0) {
-               let plant = this.getPlantFromCode(this.choosenPlant);
-               this.checkedPlants.push(plant);
-             }
-   
-           }*/
+          this.plants = plts;
+          if(this.plants.length > 0){
+            this.notAvailable = false;
+            this.searching = false;
+          }
         }
         else {
           this.plants = this.dataService.filterItems(this.searchTerm);
+          if(this.plants.length > 0){
+            this.notAvailable = false;
+            this.searching = false;
+          }
         }
 
 
@@ -93,14 +91,16 @@ export class DetailsSettingsPage implements OnInit {
 
   ionViewDidEnter() {
     this.checkedPlants = [];
+    this.plants = [];
 
     this.storage.get("mock").then(
       (mock) => {
         if (mock != null && mock != undefined && mock == true) {
-          console.log("from mock server");
+          this.dataService.emptyArray();
           let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
           if (done) {
-            this.notAvailable = false;
+            console.log("from mock server: done=>",done);
+            this.notAvailable = true;
             this.setFilteredItems();
           }
         }
@@ -108,16 +108,17 @@ export class DetailsSettingsPage implements OnInit {
           console.log("from remote server");
           let available = this.dataService.plantsAvailable();
           if (available) {
-            this.notAvailable = false;
+            this.notAvailable = true;
             this.setFilteredItems();
           }
           else {
             this.plantService.getAllPlants().subscribe(
               (plts) => {
                 let p = plts.d.results;
+                this.dataService.emptyArray();
                 let done = this.dataService.setPlants(p);
                 if (done) {
-                  this.notAvailable = false;
+                  this.notAvailable = true;
                   this.setFilteredItems();
                 }
               });
@@ -171,6 +172,7 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   notify(event, index) {
+    console.log("icii",event,index);
     let ind = this.getPlantIndexFromCode(this.choosenPlant);
     if (index != ind && event.detail.checked == true) {
       //if the item is checked we add it to the choosen ones

@@ -85,7 +85,10 @@ export class OperationDetailsPage implements OnInit {
         WorkForecast: ""
       };
     }
-    this.standardText = this.op.StandardTextKey;
+    else {
+      this.workCenter = this.op.WorkCenterDescr + " - " + this.op.WorkCenterShort;
+      this.standardText = this.op.StandardTextKey;
+    }
     this.getPlant();
   }
 
@@ -191,15 +194,13 @@ export class OperationDetailsPage implements OnInit {
     if (this.mock) {
       if (this.op.Plant !== '') {
         workCenters = this.mockService.getMockWorkCentersByPlant(this.op.Plant);
-        console.log("iciii",workCenters);
       }
     }
     else {
       if (this.op.Plant !== '') {
         this.workcenterService.getWorkCentersByPlant(this.op.Plant).subscribe(
-          (wc) =>{
+          (wc) => {
             workCenters = wc.d.results;
-            console.log("iciii",workCenters);
           }
         )
       }

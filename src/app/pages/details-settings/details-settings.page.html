@@ -20,16 +20,16 @@
     <div *ngIf="searching" class="spinner-container">
       <ion-spinner></ion-spinner>
     </div>
-    
-    <ion-list>
-      <ion-list-header>
-        <ion-label>Choose the plant you want to synchronize</ion-label>
-      </ion-list-header>
-      <ion-item (click)="choose(plant)" *ngFor="let plant of plants;let i=index">
+
+    <mat-list>
+      <mat-list-item *ngFor="let plant of plants;let i=index" (click)="choose(plant)">
         <ion-toggle (ionChange)="notify($event,i)" color="primary"
-          [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>{{plant.Plant}}-{{plant.PlantDescr}}
-      </ion-item>
-    </ion-list>
+          [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>
+        <p matLine style="color: #000;">{{plant.Plant}}-{{plant.PlantDescr}}</p>
+        <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+
   </ng-template>
 
 
