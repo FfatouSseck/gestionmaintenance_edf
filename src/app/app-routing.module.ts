@@ -22,6 +22,8 @@ const routes: Routes = [
   { path: 'standard-text-list', loadChildren: './pages/standard-text-list/standard-text-list.module#StandardTextListPageModule' },
   { path: 'plant-list', loadChildren: './pages/plant-list/plant-list.module#PlantListPageModule' },
   { path: 'work-center-list', loadChildren: './pages/work-center-list/work-center-list.module#WorkCenterListPageModule' },
+  { path: 'employee-list', loadChildren: './pages/employee-list/employee-list.module#EmployeeListPageModule' },
+  { path: 'act-type-list', loadChildren: './pages/act-type-list/act-type-list.module#ActTypeListPageModule' },
 
 
 

@@ -7,6 +7,8 @@ import { MockService } from 'src/app/providers/mock.service';
 import { StandardTextListPage } from '../standard-text-list/standard-text-list.page';
 import { WorkCenterService } from 'src/app/providers/work-center.service';
 import { WorkCenterListPage } from '../work-center-list/work-center-list.page';
+import { ActTypeService } from 'src/app/providers/act-type.service';
+import { EmployeeListPage } from '../employee-list/employee-list.page';
 
 @Component({
   selector: 'app-operation-details',
@@ -28,7 +30,7 @@ export class OperationDetailsPage implements OnInit {
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, private mockService: MockService, public workcenterService: WorkCenterService,
-    private standardTextService: StandardTextService) { }
+    private standardTextService: StandardTextService, private actTypeService: ActTypeService) { }
 
   ngOnInit() {
     this.storage.get("mock").then(
@@ -86,8 +88,8 @@ export class OperationDetailsPage implements OnInit {
       };
     }
     else {
-      this.workCenter = this.op.WorkCenterDescr + " - " + this.op.WorkCenterShort;
-      this.standardText = this.op.StandardTextKey;
+      this.workCenter = this.op.WorkCenterShort + " - " + this.op.WorkCenterDescr;
+      this.standardText = this.op.StandardTextKey + " - " + this.op.StandardTextDescr;
     }
     this.getPlant();
   }
@@ -177,11 +179,71 @@ export class OperationDetailsPage implements OnInit {
     }
   }
 
-  selectAssignee() {
+  async selectAssignee() {
+    let employeeList: any;
+    if(this.mock){
+      employeeList = this.mockService.getMockEmployees();
+    }
+    else{//if(this.mock)
 
+    }
+
+    this.modal = await this.modalController.create({
+      component: EmployeeListPage,
+      componentProps: {
+        'employeeList': employeeList
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      
+    }
   }
 
-  selectActType() {
+  async selectActType() {
+    let actTypes: any;
+
+    if (this.op.WorkCenter !== '') {
+      if (this.op.Plant !== '') {
+        if (this.mock) {
+          actTypes = this.mockService.getMockActTypes(this.op.Plant, this.op.WorkCenter)
+          console.log("actTypes: ", actTypes);
+        }
+        else {//if(this.mock)
+          this.actTypeService.getAllActTypesByPlantAndWorkCenter(this.op.Plant, this.op.WorkCenter)
+            .subscribe(
+              (acts) => {
+                console.log("activities: ", acts.d.results);
+              },
+              (err) => {
+
+              })
+        }
+      }
+      else {//if(this.op.Plant !== '')
+        console.log("No workCenter available !");
+      }
+    }
+    else {//if(this.op.WorkCenter !== '')
+      console.log("No workCenter available !");
+    }
+
+    this.modal = await this.modalController.create({
+      component: ActTypeListPage,
+      componentProps: {
+        'actTypes': actTypes
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      
+    }
 
   }
 

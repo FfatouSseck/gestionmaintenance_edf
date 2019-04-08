@@ -41,47 +41,16 @@ export class CheckListAssignmentPage implements OnInit {
   displayedColumns: string[] = [
     'OrderNo', 'StatusDescr',
     'FunctLoc', 'Operation',
-    'Description', 'Checklist', 'prodStartDate', 'button', 'detail'
+    'Description', 'Checklist', 'prodStartDate', 'button'
   ];
   displayedPortraitColumns: string[] = [
     'OrderNo',
     'FunctLoc', 'Operation',
-    'Description', 'Checklist', 'button', 'detail'
+    'Description', 'Checklist', 'button'
   ];
   mock = false;
   orientation = "portrait-primary";
   modal : any;
-  
-
-  name = 'Angular 6';
-
-  private speedDialFabButtons = [
-    {
-      icon: 'timeline',
-      tooltip: 'Do some timeline here'
-    },
-    {
-      icon: 'view_headline',
-      tooltip: 'Do some headline here'
-    },
-    {
-      icon: 'room',
-      tooltip: 'get some room here'
-    },
-    {
-      icon: 'lightbulb_outline',
-      tooltip: 'Do some outline here'
-    },
-    {
-      icon: 'lock',
-      tooltip: 'Do lock down'
-    }
-  ];
-
-  SpeedDialFabPosition = SpeedDialFabPosition;
-  speedDialFabColumnDirection = 'column';
-  speedDialFabPosition = SpeedDialFabPosition.Top;
-  speedDialFabPositionClassName = 'speed-dial-container-top';
 
   constructor(private orderService: ServiceOrderPreparationService, private storage: Storage,
     private mockService: MockService, private screenOrientation: ScreenOrientation,private modalController: ModalController) {
@@ -369,22 +338,6 @@ export class CheckListAssignmentPage implements OnInit {
     let datec = day + "/" + month + "/" + newDate.getFullYear();
     return datec
 
-  }
-
-  onPositionChange(position: SpeedDialFabPosition) {
-    switch(position) {
-      case SpeedDialFabPosition.Bottom:
-        this.speedDialFabPositionClassName = 'speed-dial-container-bottom';
-        this.speedDialFabColumnDirection = 'column-reverse';
-        break;
-      default:
-        this.speedDialFabPositionClassName = 'speed-dial-container-top';
-        this.speedDialFabColumnDirection = 'column';
-    }
-  }
-
-  onSpeedDialFabClicked(btn: {icon: string}) {
-    console.log(btn);
   }
 
 }

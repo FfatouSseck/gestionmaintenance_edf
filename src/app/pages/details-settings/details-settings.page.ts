@@ -29,19 +29,17 @@ export class DetailsSettingsPage implements OnInit {
     public mockService: MockService) {
 
     this.searchControl = new FormControl();
-    /*this.searchControl.valueChanges.pipe(debounceTime(70)).subscribe(search => {
-      console.log("iciiii changing")
+    this.searchControl.valueChanges.pipe(debounceTime(70)).subscribe(search => {
       this.searching = false;
       this.setFilteredItems();
 
-    });*/
+    });
 
 
   }
 
   onSearchInput() {
     this.searching = true;
-    this.setFilteredItems();
   }
 
   setFilteredItems() {
@@ -53,17 +51,17 @@ export class DetailsSettingsPage implements OnInit {
 
           this.plants = [];
           let plts = this.dataService.filterItems(this.searchTerm);
-          console.log("plts: ",plts);
+          this.plants = plts;
 
           let index = this.getPlantIndexFromCode(this.choosenPlant);
 
           if (index >= 0) {
-            for (let i = 0; i < plts.length; i++) {
-              plts[i].state = "unchecked";
+            for (let i = 0; i < this.plants.length; i++) {
+              this.plants[i].state = "unchecked";
             }
-            plts[index].state = 'checked';
+            this.plants[index].state = "checked";
           }
-          this.plants = plts;
+          //this.plants = plts;
           if(this.plants.length > 0){
             this.notAvailable = false;
             this.searching = false;
@@ -76,8 +74,6 @@ export class DetailsSettingsPage implements OnInit {
             this.searching = false;
           }
         }
-
-
       },
       (err) => {
         console.log("error", err);
@@ -99,7 +95,6 @@ export class DetailsSettingsPage implements OnInit {
           this.dataService.emptyArray();
           let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
           if (done) {
-            console.log("from mock server: done=>",done);
             this.notAvailable = true;
             this.setFilteredItems();
           }
@@ -154,8 +149,7 @@ export class DetailsSettingsPage implements OnInit {
         },
         (err) => {
           console.log(err);
-        }
-      )
+        })
 
     }
     else if (this.choosenPlant !== "") {
@@ -172,7 +166,6 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   notify(event, index) {
-    console.log("icii",event,index);
     let ind = this.getPlantIndexFromCode(this.choosenPlant);
     if (index != ind && event.detail.checked == true) {
       //if the item is checked we add it to the choosen ones
@@ -213,7 +206,6 @@ export class DetailsSettingsPage implements OnInit {
 
   getPlantIndexFromCode(code: string) {
     let i = 0;
-    let x;
     for (i = 0; i < this.plants.length; i++) {
       if (this.plants[i].Plant === code) {
         return i;

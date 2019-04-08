@@ -18,6 +18,8 @@ import OrderHeaderSet from '../mockServer/OrderHeaderSet.json';
 import CheckListSet from '../mockServer/CheckListSet.json';
 import StandardTextSet from '../mockServer/StandardTextSet.json';
 import WorkCenterSet from '../mockServer/WorkCenterSet.json';
+import EmployeeSet from '../mockServer/EmployeeSet.json';
+import ActTypeSet from '../mockServer/ActTypeSet.json';
 
 @Injectable({
   providedIn: 'root'
@@ -161,6 +163,19 @@ export class MockService {
     return WorkCenterSet.filter(
       (wc) =>{
         return wc.Plant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
+      })
+  }
+
+  getMockEmployees(){
+    return EmployeeSet;
+  }
+
+  getMockActTypes(codePlant,workCenter){
+    console.log("codePlant: ",codePlant," workCenter: ",workCenter);
+    return ActTypeSet.filter(
+      (at) =>{
+        return (at.Plant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1
+            && at.WorkCenter.toLowerCase().indexOf(workCenter.toLowerCase()) > -1)
       })
   }
 

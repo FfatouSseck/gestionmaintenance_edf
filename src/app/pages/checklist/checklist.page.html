@@ -10,17 +10,15 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" 
-                   (ionInput)="onSearchInput()" [style.visibility]="noData ? 'hidden' : 'visible' ">
-      </ion-searchbar>
+  <p *ngIf="noData">No checklist available</p>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"
+    [style.visibility]="noData ? 'hidden' : 'visible' ">
+  </ion-searchbar>
   <div *ngIf="notAvailable;else contentAvailable">
     <mat-spinner style="margin: 0 auto"></mat-spinner>
   </div>
 
   <ng-template #contentAvailable>
-    <div *ngIf="noData">
-     <p>No checklist available</p>
-    </div>
 
     <div *ngIf="!noData">
 
@@ -30,7 +28,7 @@
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> Checklist ID. </th>
-          <td mat-cell *matCellDef="let element"style="height: 70px;"> {{element.ChklstId}} </td>
+          <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.ChklstId}} </td>
         </ng-container>
 
         <ng-container matColumnDef="title">
@@ -52,11 +50,11 @@
 </ion-content>
 
 <ion-footer>
-    <ion-toolbar style="--background: #fff;--min-height:50px">
-      <ion-buttons slot="end">
-        <ion-button style="background-color: red;color: white" (click)="closeModal()">
-          Cancel
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
