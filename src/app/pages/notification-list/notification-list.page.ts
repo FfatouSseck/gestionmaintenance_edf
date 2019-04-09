@@ -149,8 +149,14 @@ export class NotificationListPage extends BasePage implements OnInit {
 
   getMockNotifs(plant) {
     this.notAvailable = true;
+    let notifNumbers : any[] = []
     let ntfs = this.mockService.getAllMockNotifs(plant);
     this.notifList = ntfs;
+    //var sortedArray:Array<number> = this.notifList.sort((n1,n2) => n1 - n2);
+    this.notifList.forEach(nt => {
+      notifNumbers.push(nt.NotifNo)
+    });
+    console.log("notifNumbers",notifNumbers);
     this.notifService.setNotifs(ntfs)
     if (this.notifList.length == 0) {
       this.notAvailable = false;

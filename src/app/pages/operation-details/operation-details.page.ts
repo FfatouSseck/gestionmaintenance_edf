@@ -9,6 +9,7 @@ import { WorkCenterService } from 'src/app/providers/work-center.service';
 import { WorkCenterListPage } from '../work-center-list/work-center-list.page';
 import { ActTypeService } from 'src/app/providers/act-type.service';
 import { EmployeeListPage } from '../employee-list/employee-list.page';
+import { ActTypeListPage } from '../act-type-list/act-type-list.page';
 
 @Component({
   selector: 'app-operation-details',
@@ -231,8 +232,10 @@ export class OperationDetailsPage implements OnInit {
       console.log("No workCenter available !");
     }
 
+    //ici on instancie la popup en lui disant quel contenu afficher
     this.modal = await this.modalController.create({
-      component: ActTypeListPage,
+      component: ActTypeListPage,/*ceci est une page qu'on a créé
+      avec la cde ionic g page nomDeLaPage*/
       componentProps: {
         'actTypes': actTypes
       },
@@ -240,6 +243,7 @@ export class OperationDetailsPage implements OnInit {
     this.modal.backdropDismiss = false;
     await this.modal.present();
 
+    //ici on récupère les données prises depuis le popup
     const { data } = await this.modal.onDidDismiss();
     if (data != undefined) {
       
