@@ -104,7 +104,6 @@ export class NotificationListPage extends BasePage implements OnInit {
       (choosenPlantcode) => {
         if (choosenPlantcode != null && choosenPlantcode != null && choosenPlantcode != undefined) {
           this.choosenPlantcode = choosenPlantcode;
-          console.log("choosenPlantcode", this.choosenPlantcode);
           if (this.mock) {
             this.getMockNotifs(this.choosenPlantcode);
           }
@@ -157,7 +156,6 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.notAvailable = true;
     let notifNumbers: any[] = []
     let ntfs = this.mockService.getAllMockNotifs(plant);
-    console.log("plant: ", plant, "ntfs length", ntfs);
     this.notifList = ntfs;
     //var sortedArray:Array<number> = this.notifList.sort((n1,n2) => n1 - n2);
     this.notifList.forEach(nt => {
@@ -165,7 +163,7 @@ export class NotificationListPage extends BasePage implements OnInit {
       notifNumbers.push(stringNum)
     });
 
-    console.log("Sorted notifs by date", this.sortByStartDate(ntfs));
+    //console.log("Sorted notifs by date", this.sortByStartDate(ntfs));
     //console.log("Sorted notifs notifNo", this.sortByNotifNo(ntfs));
     //console.log("Sorted notifs priority", this.sortByPriority(ntfs));
     this.notifService.setNotifs(ntfs);
@@ -181,6 +179,23 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
 
 
+  }
+
+  sortBy(event) {
+    let option = event.detail.value;
+    console.log("option", option);
+    if (option === 'startDate') {
+      this.notifList = this.sortByStartDate(this.notifList);
+    }
+    else if (option === 'priority') {
+      this.notifList = this.sortByPriority(this.notifList);
+    }
+    else if (option === 'notifNo') {
+      this.notifList = this.sortByNotifNo(this.notifList);
+    }
+    else if (option === 'floc') {
+      this.notifList.sort(this.sortAlphaNumeric);
+    }
   }
 
   sortByPriority(tab) {
@@ -212,15 +227,23 @@ export class NotificationListPage extends BasePage implements OnInit {
   sortByFLOC(tab) {
     return tab.sort(
       function (a, b) {
-        if (+a.FunctLoc < +b.FunctLoc) {
+        if (a.FunctLoc < b.FunctLoc) {
           return -1;
         }
-        if (+a.FunctLoc > +b.FunctLoc) {
+        if (a.FunctLoc > b.FunctLoc) {
           return 1;
         }
         return 0;
       })
   }
+
+  sortAlphaNumeric = (a, b) => {
+    // convert to strings and force lowercase
+    a.FunctLoc = typeof a.FunctLoc === 'string' ? a.FunctLoc : a.FunctLoc.toString();
+    b.FunctLoc = typeof b.FunctLoc === 'string' ? b.FunctLoc : b.FunctLoc.toString();
+
+    return a.FunctLoc.localeCompare(b.FunctLoc);
+  };
 
   getTime(date?: Date) {
     return date != null ? date.getTime() : 0;
@@ -237,25 +260,17 @@ export class NotificationListPage extends BasePage implements OnInit {
 
       if (this.getTime(this.stringToDate(this.formatDate(a.StartDate))) <
         this.getTime(this.stringToDate(this.formatDate(b.StartDate)))) {
-
-        console.log("a: ", this.getTime(this.stringToDate(this.formatDate(a.StartDate))), "<",
-          "b: ", this.getTime(this.stringToDate(this.formatDate(b.StartDate))));
         return -1;
       }
       else if (this.getTime(this.stringToDate(this.formatDate(a.StartDate))) >
         this.getTime(this.stringToDate(this.formatDate(b.StartDate)))) {
-        console.log("a: ", this.getTime(this.stringToDate(this.formatDate(a.StartDate))), ">",
-          "b: ", this.getTime(this.stringToDate(this.formatDate(b.StartDate))));
         return 1;
       }
       else {
-        console.log("a: ", this.getTime(this.stringToDate(this.formatDate(a.StartDate))), "?",
-          "b: ", this.getTime(this.stringToDate(this.formatDate(b.StartDate))));
         return 0;
       }
     });
-
-    console.log("sorted tab: ",sortedTab);
+    return sortedTab;
   }
 
   onClose(evt) {
@@ -283,7 +298,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.modif = false;
     let index = this.notifList.indexOf(notif);
 
-    if (this.orientation !== 'portrait-primary') {
+    /*if (this.orientation !== 'portrait-primary') {
       for (let i = 0; i < this.notifList.length; i++) {
         this.notifList[i].bgcolor = "white";
         this.notifList[i].color = "black";
@@ -291,12 +306,10 @@ export class NotificationListPage extends BasePage implements OnInit {
       }
       this.notifList[index].color = "black";
       this.notifList[index].fw = "bold";
-    }
+    }*/
 
-    if (this.orientation === 'portrait-primary') {
-      for (let i = 0; i < this.notifList.length; i++) {
-        this.notifList[i].bgcolor = "white";
-      }
+    for (let i = 0; i < this.notifList.length; i++) {
+      this.notifList[i].bgcolor = "white";
     }
     this.notifList[index].bgcolor = "#F7F7F7";
 
@@ -309,9 +322,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.choosenObjectPartCode = this.objectPart;
 
     this.notifService.setCurrentNotif(notif);
-    if (this.orientation === 'portrait-primary') {
-      this.router.navigateByUrl("/notification-details");
-    }
+    this.router.navigateByUrl("/notification-details");
   }
 
   updateNotif(notif: Notification) {

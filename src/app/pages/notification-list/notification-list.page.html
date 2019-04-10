@@ -12,11 +12,11 @@
         No data available
       </p>
 
-      <mat-list>
+      <mat-nav-list>
         <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
           [style.background-color]="notif.bgcolor" [style.color]="notif.color">
           <h3 matLine style="font-weight: bold;color: #007CC0;">{{notif.NotifNo}} </h3>
-          <p matLine [style.font-weight]="notif.fw"> {{notif.ShortText | slice:0:25}} </p>
+          <p matLine [style.font-weight]="notif.fw"> {{notif.ShortText}} </p>
           <p matLine [style.font-weight]="notif.fw" class="demo-2"> {{formatDate(notif.StartDate)}} </p>
           <p style="color: blue;" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}{{notif.color}}</p>
@@ -26,9 +26,12 @@
             {{notif.PriorityDescr}}</p>
           <p style="color: green;" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
+          <button mat-icon-button>
+            <i class="material-icons" style="color: grey;">navigate_next</i>
+          </button>
           <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
         </mat-list-item>
-      </mat-list>
+      </mat-nav-list>
     </ng-template>
 
   </div>
@@ -41,233 +44,44 @@
       <p *ngIf="noData == true">
         No data available
       </p>
-      <ion-split-pane content-id="menu-content" *ngIf="noData == false">
-        <!--  our side menu  -->
-        <ion-menu content-id="menu-content">
-          <ion-content scrollEvents="true">
-            <mat-list>
-              <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
-                [style.background-color]="notif.bgcolor" [style.color]="notif.color">
-                <h3 matLine style="font-weight: bold;color: #007CC0;">{{notif.NotifNo}} </h3>
-                <p matLine [style.font-weight]="notif.fw"> {{notif.ShortText | slice:0:25}} </p>
-                <p matLine [style.font-weight]="notif.fw" class="demo-2"> {{formatDate(notif.StartDate)}} </p>
-                <p style="color: blue;" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
-                  {{notif.PriorityDescr}}{{notif.color}}</p>
-                <p style="color: red;" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
-                  {{notif.PriorityDescr}}</p>
-                <p style="color: gray;" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
-                  {{notif.PriorityDescr}}</p>
-                <p style="color: green;" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
-                  {{notif.PriorityDescr}}</p>
-                <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
-              </mat-list-item>
-            </mat-list>
-          </ion-content>
-        </ion-menu>
-
-        <!-- the main content -->
-        <ion-content id="menu-content">
-          <p *ngIf="choosenNotif.NotifNo == null && noData==false">
-            Choose one notification to see details
-          </p>
-          <form *ngIf="modif == false && choosenNotif.NotifNo!=null">
-            <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
-              <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-                General Information
-              </h4>
-            </mat-card>
-            <br />
-            <mat-card>
-
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Description" readonly="true" [value]="choosenNotif.ShortText">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Functional location" readonly="true" [value]="floc">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Equipment" readonly="true" [value]="choosenNotif.Equipment">
-              </mat-form-field>
-              <br />
-              <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
-                Breakdown
-                Indicator</mat-checkbox>
-              <br /><br />
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Effect on production" readonly="true" [value]="choosenNotif.EffectDescr">
-              </mat-form-field>
-            </mat-card>
-            <br />
-            <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
-              <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-                Notification Informations
-              </h4>
-            </mat-card>
-            <br />
-            <mat-card>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.Priority">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Malfunction start date" readonly="true"
-                  [value]="getHoursandMinutes(choosenNotif.StartDate)">
-                <mat-icon matSuffix>calendar_today</mat-icon>
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Cause" readonly="true" [value]="cause">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Object part" readonly="true" [value]="objectPart">
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <textarea matInput placeholder="Long text" readonly="true" [value]="choosenNotif.LongText"></textarea>
-              </mat-form-field>
-            </mat-card>
-          </form>
-
-          <form [formGroup]="notifFormGroup" *ngIf="modif == true">
-            <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
-              <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-                General Information
-              </h4>
-            </mat-card>
-            <br />
-            <mat-card>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
-              </mat-form-field>
-              <mat-form-field class="example-form" color="secondary">
-                <input [(ngModel)]="choosenNotif.ShortText" matInput placeholder="Description" maxlength="40"
-                  formControlName="description" required>
-              </mat-form-field>
-
-              <mat-form-field class="example-form" (click)="selectFunctLoc()">
-                <input matInput placeholder="Functional location" formControlName="functloc"
-                  [(ngModel)]="choosenFunctLoc" required>
-                <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-              </mat-form-field>
-
-              <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
-              <ion-button color="light" (click)="scanQRCode()">
-                <ion-icon name="qr-scanner"></ion-icon>QR-CODE
-              </ion-button>
-              <mat-form-field class="example-form" (click)="selectEquipment(choosenFunctLoc)">
-                <input matInput [(ngModel)]="choosenNotif.Equipment" placeholder="Equipment" maxlength="40"
-                  formControlName="equipment">
-              </mat-form-field>
-              <br />
-              <mat-checkbox [checked]="choosenNotif.Breakdown" color="primary" formControlName="breakdownIndic"
-                class="example-form">Breakdown Indicator
-              </mat-checkbox>
-              <br />
-              <mat-form-field class="example-form">
-                <mat-select placeholder="Effect on production" formControlName="productionEff"
-                  [(ngModel)]="choosenNotif.EffectDescr">
-                  <mat-option *ngFor="let pe of productionEffects" [value]="pe.EffectId">
-                    {{pe.EffectDescr}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-
-            </mat-card>
-            <br />
-            <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
-              <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-                Notification Informations
-              </h4>
-            </mat-card>
-            <br />
-            <mat-card>
-              <mat-form-field class="example-form">
-                <mat-select placeholder="Priority" formControlName="priority" [(ngModel)]="choosenNotif.Priority">
-                  <mat-option *ngFor="let p of priorities" [value]="p.PriorityId">
-                    {{p.PriorityDescr}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-              <mat-form-field class="example-form">
-                <input matInput placeholder="Malfunction start date" maxlength="40"
-                  [value]="getHoursandMinutes(choosenNotif.StartDate)" formControlName="startDate" required>
-                <mat-icon matSuffix>calendar_today</mat-icon>
-              </mat-form-field>
-
-              <mat-form-field class="example-form" (click)="selectDamageGroup()">
-                <input matInput placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenDC" required>
-                <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-              </mat-form-field>
-              <mat-form-field class="example-form" (click)="selectCauseGroup()">
-                <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
-                <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-              </mat-form-field>
-              <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
-                <input matInput placeholder="Object part" formControlName="objectPart"
-                  [(ngModel)]="choosenObjectPartCode" required>
-                <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-              </mat-form-field>
-
-              <mat-form-field class="example-form">
-                <textarea matInput placeholder="Long text" formControlName="longText"
-                  [(ngModel)]="choosenNotif.LongText"></textarea>
-              </mat-form-field>
-
-            </mat-card>
-
-          </form>
-
-        </ion-content>
-
-      </ion-split-pane>
+      <div *ngIf="noData == false">
+        <mat-nav-list>
+          <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
+            [style.background-color]="notif.bgcolor" [style.color]="notif.color">
+            <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 20px">{{notif.NotifNo}} </h3>
+            <p matLine [style.font-weight]="notif.fw" style="font-size: 20px"> {{notif.ShortText}} </p>
+            <p matLine [style.font-weight]="notif.fw" style="font-size: 20px" class="demo-2"> {{formatDate(notif.StartDate)}} </p>
+            <p style="color: blue;font-size: 20px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
+              {{notif.PriorityDescr}}{{notif.color}}</p>
+            <p style="color: red;font-size: 20px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
+              {{notif.PriorityDescr}}</p>
+            <p style="color: gray;font-size: 20px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
+              {{notif.PriorityDescr}}</p>
+            <p style="color: green;font-size: 20px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
+              {{notif.PriorityDescr}}</p>
+            <button mat-icon-button>
+              <i class="material-icons" style="color: grey;">navigate_next</i>
+            </button>
+            <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
     </ng-template>
 
   </ng-template>
 
 </ion-content>
-<ion-footer *ngIf="modif == false && notAvailable==false && choosenNotif.NotifNo!=null">
-  <ion-toolbar style="--background: #3E4649;--min-height:50px"
-    *ngIf=" orientation === 'landscape-primary' && noData == false">
-
+<ion-footer>
+  <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf="noData == false">
     <ion-buttons slot="start">
-      <ion-select value="brown" okText="Okay" cancelText="Dismiss"style="background-color: white">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
+      <ion-select value="sort" okText="OK" cancelText="Cancel" style="background-color: white"
+        (ionChange)="sortBy($event)">
+        <ion-select-option value="sort">Sort By ...</ion-select-option>
+        <ion-select-option value="notifNo">Notif No</ion-select-option>
+        <ion-select-option value="startDate">Malfunction Start Date</ion-select-option>
+        <ion-select-option value="priority">Priority</ion-select-option>
+        <ion-select-option value="floc">Functional Location</ion-select-option>
       </ion-select>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button style="background-color: green;color: white">
-        Create Service Order
-      </ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true"
-        size="large" type="reset">Reject</ion-button>
-      <ion-button (click)="modifyNotif()" style="background-color: #009DE0;color: white;--height:40px" strong="true"
-        size="large" type="reset">Modify</ion-button>
-      <ion-button (click)="displaySimilarNotifs()" style="background-color: #009DE0;color: white;--height:40px"
-        strong="true" size="large">Similar Notifications</ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
-        strong="true" size="large" type="reset">Copy</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
-<ion-footer *ngIf="modif == true && notAvailable==false && choosenNotif.NotifNo!=null">
-  <ion-toolbar style="--background: #3E4649;--min-height:50px"
-    *ngIf=" orientation === 'landscape-primary' && noData == false">
-    <ion-buttons slot="end">
-      <ion-button (click)="updateNotif(choosenNotif)" style="background-color: green;color: white">
-        Save
-      </ion-button>
-      <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
-        (click)="modif = !modif">Cancel</ion-button>
-      <ion-button style="background-color: #009DE0;color: white;--height:40px" strong="true" size="large"
-        (click)="displaySimilarNotifs()">
-        Similar
-        Notifications</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
