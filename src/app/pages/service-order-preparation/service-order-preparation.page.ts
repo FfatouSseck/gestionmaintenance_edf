@@ -104,7 +104,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     startDate: null
   };
   displayedColumns: string[] = ['Operation', 'Description', 'NumberOfCapacities',
-    'WorkForecast', 'ActivityType','detail'];
+    'WorkForecast', 'ActivityType', 'detail'];
   displayedComponentsColumns: string[] = ['Material', 'MaterialDescr', 'ItemNo',
     'PlanPlant', 'StgeLoc', 'ValType',
     'RequirementQuantity'];
@@ -178,50 +178,20 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   }
 
   presentDetails(order: Order) {
-    this.operations = [];
     this.loadNotif = true;
     this.choosenOrder = order;
-    this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
-    this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
     let index = this.ordersList.indexOf(order);
 
-    if (this.orientation === 'portrait-primary') {
-      for (let i = 0; i < this.ordersList.length; i++) {
-        this.ordersList[i].bgcolor = "white";
-      }
+    for (let i = 0; i < this.ordersList.length; i++) {
+      this.ordersList[i].bgcolor = "white";
     }
-    else {
-      //landscape content
-      for (let i = 0; i < this.ordersList.length; i++) {
-        this.ordersList[i].bgcolor = "white";
-        this.ordersList[i].color = "black";
-        this.ordersList[i].fw = "normal";
-      }
 
-      this.ordersList[index].color = "black";
-      this.ordersList[index].fw = "bold";
-    }
     this.ordersList[index].bgcolor = "#F7F7F7";
-    this.storage.get("mock").then(
-      (mock) => {
-        if (mock != undefined && mock != null && mock == true) {
-          this.getMockNotifByNumber(this.choosenOrder.NotifNo);
-          this.getMockOrderOperations(this.choosenOrder.OrderNo);
-          this.getMockOrderComponents(this.choosenOrder.OrderNo);
-        }
-        else {
-          this.getOrderNotification(this.choosenOrder.NotifNo);
-          this.getOrderOperations(this.choosenOrder.OrderNo);
-          this.getOrderComponents(this.choosenOrder.OrderNo);
-        }
-      });
 
     this.modif = false;
 
     this.orderService.setCurrentOrder(order);
-    if (this.orientation === 'portrait-primary') {
-      this.router.navigateByUrl("/order-details");
-    }
+    this.router.navigateByUrl("/order-details");
   }
 
   onClose(evt) {
@@ -289,83 +259,6 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
           }
         }
       })
-  }
-
-  getOrderNotification(notifNo) {
-    this.noNotif = false;
-    this.notifService.getNotifByNumber(notifNo).subscribe(
-      (notif) => {
-        this.choosenNotif = notif.d;
-        if (this.choosenNotif.NotifNo == null) {
-          this.noNotif = true;
-        }
-        this.loadNotif = false;
-      },
-      (err) => {
-        this.noNotif = true;
-        this.loadNotif = false;
-      }
-    )
-  }
-
-  getMockNotifByNumber(notifNo) {
-    this.noNotif = false;
-    let choosenNotif = this.mockService.getMockNotifByNumber(notifNo)[0];
-    if (choosenNotif == undefined) {
-      this.noNotif = true;
-      this.choosenNotif.NotifNo = null;
-    }
-    else {
-      this.choosenNotif = choosenNotif;
-    }
-    this.loadNotif = false;
-  }
-
-  getOrderOperations(orderNo: string) {
-    this.operations = [];
-    this.noOperations = false;
-    this.orderService.getOrderOperations(orderNo).subscribe(
-      (operations) => {
-        this.operations = operations.d.results;
-        if (this.operations.length == 0) this.noOperations = true;
-      });
-  }
-
-  getOperationDetails(index){
-    this.presentOperationModal(this.operations[index],'detail');
-  }
-
-  addNewOperation(){
-    this.presentOperationModal(null,'create');
-  }
-
-  getMockOrderOperations(orderNo: string) {
-    this.operations = [];
-    this.noOperations = false;
-    this.operations = this.mockService.getMockOrderOperations(orderNo);
-    if (this.operations.length == 0) {
-      this.noOperations = true;
-    }
-  }
-
-  getOrderComponents(orderNo: string) {
-    this.components = [];
-    this.noComponents = false;
-    this.orderService.getOrderComponents(orderNo).subscribe(
-      (components) => {
-        this.components = components.d.results;
-        if (this.components.length == 0) this.noComponents = true;
-      }
-    )
-  }
-
-  getMockOrderComponents(orderNo: string) {
-    this.components = [];
-    this.noComponents = false;
-    this.components = this.mockService.getMockOrderComponents(orderNo);
-    if (this.components.length == 0) {
-      this.noComponents = true;
-    }
   }
 
 }

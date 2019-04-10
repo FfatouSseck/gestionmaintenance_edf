@@ -15,17 +15,17 @@
       <mat-nav-list>
         <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
           [style.background-color]="notif.bgcolor" [style.color]="notif.color">
-          <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 20px">{{notif.NotifNo}} </h3>
-          <p matLine [style.font-weight]="notif.fw" style="font-size: 20px"> {{notif.ShortText}} </p>
-          <p matLine [style.font-weight]="notif.fw" style="font-size: 20px" class="demo-2">
+          <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 15px">{{notif.NotifNo}} </h3>
+          <p matLine [style.font-weight]="notif.fw" style="font-size: 15px"> {{notif.ShortText}} </p>
+          <p matLine [style.font-weight]="notif.fw" style="font-size: 15px" class="demo-2">
             {{formatDate(notif.StartDate)}} </p>
-          <p style="color: blue;font-size: 20px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: blue;font-size: 15px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}{{notif.color}}</p>
-          <p style="color: red;font-size: 20px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: red;font-size: 15px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
-          <p style="color: gray;font-size: 20px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: gray;font-size: 15px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
-          <p style="color: green;font-size: 20px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: green;font-size: 15px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
           <button mat-icon-button>
             <i class="material-icons" style="color: grey;">navigate_next</i>
@@ -49,19 +49,19 @@
         <mat-nav-list>
           <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
             [style.background-color]="notif.bgcolor" [style.color]="notif.color">
-            <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 20px">{{notif.NotifNo}} </h3>
-            <p matLine [style.font-weight]="notif.fw" style="font-size: 20px"> {{notif.ShortText}} </p>
-            <p matLine [style.font-weight]="notif.fw" style="font-size: 20px" class="demo-2">
+            <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 15px">{{notif.NotifNo}} </h3>
+            <p matLine [style.font-weight]="notif.fw" style="font-size: 15px"> {{notif.ShortText}} </p>
+            <p matLine [style.font-weight]="notif.fw" style="font-size: 15px" class="demo-2">
               {{formatDate(notif.StartDate)}} </p>
-            <p style="color: blue;font-size: 20px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw"
+            <p style="color: blue;font-size: 15px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw"
               matLine>
               {{notif.PriorityDescr}}{{notif.color}}</p>
-            <p style="color: red;font-size: 20px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
+            <p style="color: red;font-size: 15px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
               {{notif.PriorityDescr}}</p>
-            <p style="color: gray;font-size: 20px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw"
+            <p style="color: gray;font-size: 15px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw"
               matLine>
               {{notif.PriorityDescr}}</p>
-            <p style="color: green;font-size: 20px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw"
+            <p style="color: green;font-size: 15px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw"
               matLine>
               {{notif.PriorityDescr}}</p>
             <button mat-icon-button>
