@@ -2,7 +2,7 @@
   <app-header pageTitle="Notifications" (close)="onClose($event)"></app-header>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding scrollEvents="true">
   <div *ngIf="orientation === 'portrait-primary';else landscapeContent">
     <div *ngIf="notifList.length==0;else availContent">
       <mat-spinner style="margin: 0 auto"></mat-spinner>
@@ -15,16 +15,17 @@
       <mat-nav-list>
         <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
           [style.background-color]="notif.bgcolor" [style.color]="notif.color">
-          <h3 matLine style="font-weight: bold;color: #007CC0;">{{notif.NotifNo}} </h3>
-          <p matLine [style.font-weight]="notif.fw"> {{notif.ShortText}} </p>
-          <p matLine [style.font-weight]="notif.fw" class="demo-2"> {{formatDate(notif.StartDate)}} </p>
-          <p style="color: blue;" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
+          <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 20px">{{notif.NotifNo}} </h3>
+          <p matLine [style.font-weight]="notif.fw" style="font-size: 20px"> {{notif.ShortText}} </p>
+          <p matLine [style.font-weight]="notif.fw" style="font-size: 20px" class="demo-2">
+            {{formatDate(notif.StartDate)}} </p>
+          <p style="color: blue;font-size: 20px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}{{notif.color}}</p>
-          <p style="color: red;" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: red;font-size: 20px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
-          <p style="color: gray;" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: gray;font-size: 20px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
-          <p style="color: green;" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
+          <p style="color: green;font-size: 20px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
             {{notif.PriorityDescr}}</p>
           <button mat-icon-button>
             <i class="material-icons" style="color: grey;">navigate_next</i>
@@ -50,14 +51,18 @@
             [style.background-color]="notif.bgcolor" [style.color]="notif.color">
             <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 20px">{{notif.NotifNo}} </h3>
             <p matLine [style.font-weight]="notif.fw" style="font-size: 20px"> {{notif.ShortText}} </p>
-            <p matLine [style.font-weight]="notif.fw" style="font-size: 20px" class="demo-2"> {{formatDate(notif.StartDate)}} </p>
-            <p style="color: blue;font-size: 20px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
+            <p matLine [style.font-weight]="notif.fw" style="font-size: 20px" class="demo-2">
+              {{formatDate(notif.StartDate)}} </p>
+            <p style="color: blue;font-size: 20px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw"
+              matLine>
               {{notif.PriorityDescr}}{{notif.color}}</p>
             <p style="color: red;font-size: 20px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
               {{notif.PriorityDescr}}</p>
-            <p style="color: gray;font-size: 20px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw" matLine>
+            <p style="color: gray;font-size: 20px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw"
+              matLine>
               {{notif.PriorityDescr}}</p>
-            <p style="color: green;font-size: 20px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw" matLine>
+            <p style="color: green;font-size: 20px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw"
+              matLine>
               {{notif.PriorityDescr}}</p>
             <button mat-icon-button>
               <i class="material-icons" style="color: grey;">navigate_next</i>
