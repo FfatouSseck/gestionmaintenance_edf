@@ -231,6 +231,15 @@
 <ion-footer *ngIf="modif == false && notAvailable==false && choosenNotif.NotifNo!=null">
   <ion-toolbar style="--background: #3E4649;--min-height:50px"
     *ngIf=" orientation === 'landscape-primary' && noData == false">
+
+    <ion-buttons slot="start">
+      <ion-select value="brown" okText="Okay" cancelText="Dismiss"style="background-color: white">
+        <ion-select-option value="brown">Brown</ion-select-option>
+        <ion-select-option value="blonde">Blonde</ion-select-option>
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button style="background-color: green;color: white">
         Create Service Order

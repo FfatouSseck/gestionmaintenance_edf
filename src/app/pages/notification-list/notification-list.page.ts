@@ -102,27 +102,33 @@ export class NotificationListPage extends BasePage implements OnInit {
     let available = this.notifService.notifsAvailable();
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
-        if (choosenPlantcode != null) {
+        if (choosenPlantcode != null && choosenPlantcode != null && choosenPlantcode != undefined) {
           this.choosenPlantcode = choosenPlantcode;
+          console.log("choosenPlantcode", this.choosenPlantcode);
+          if (this.mock) {
+            this.getMockNotifs(this.choosenPlantcode);
+          }
+          else {
+            if (available) {
+              this.notifList = this.notifService.filterNotifs(this.searchTerm);
+              if (this.notifList[0].NotifNo != null) {
+                this.notAvailable = false;
+                this.noData = false;
+              }
+            }
+            else {
+              this.getNotifs();
+            }
+          }
+        }
+        else {
+          this.notAvailable = false;
+          this.noData = true;
         }
       });
 
 
-    if (this.mock) {
-      this.getMockNotifs(this.choosenPlantcode);
-    }
-    else {
-      if (available) {
-        this.notifList = this.notifService.filterNotifs(this.searchTerm);
-        if (this.notifList[0].NotifNo != null) {
-          this.notAvailable = false;
-          this.noData = false;
-        }
-      }
-      else {
-        this.getNotifs();
-      }
-    }
+
 
     //getting PrioritySet from server
     if (this.mock) {
@@ -149,15 +155,20 @@ export class NotificationListPage extends BasePage implements OnInit {
 
   getMockNotifs(plant) {
     this.notAvailable = true;
-    let notifNumbers : any[] = []
+    let notifNumbers: any[] = []
     let ntfs = this.mockService.getAllMockNotifs(plant);
+    console.log("plant: ", plant, "ntfs length", ntfs);
     this.notifList = ntfs;
     //var sortedArray:Array<number> = this.notifList.sort((n1,n2) => n1 - n2);
     this.notifList.forEach(nt => {
-      notifNumbers.push(nt.NotifNo)
+      let stringNum: number = +nt.NotifNo;
+      notifNumbers.push(stringNum)
     });
-    console.log("notifNumbers",notifNumbers);
-    this.notifService.setNotifs(ntfs)
+
+    console.log("Sorted notifs by date", this.sortByStartDate(ntfs));
+    //console.log("Sorted notifs notifNo", this.sortByNotifNo(ntfs));
+    //console.log("Sorted notifs priority", this.sortByPriority(ntfs));
+    this.notifService.setNotifs(ntfs);
     if (this.notifList.length == 0) {
       this.notAvailable = false;
       this.noData = true;
@@ -170,6 +181,81 @@ export class NotificationListPage extends BasePage implements OnInit {
     }
 
 
+  }
+
+  sortByPriority(tab) {
+    return tab.sort(
+      function (a, b) {
+        if (+a.Priority < +b.Priority) {
+          return -1;
+        }
+        else if (+a.Priority > +b.Priority) {
+          return 1;
+        }
+        else return 0;
+      })
+  }
+
+  sortByNotifNo(tab) {
+    return tab.sort(
+      function (a, b) {
+        if (+a.NotifNo < +b.NotifNo) {
+          return -1;
+        }
+        if (+a.NotifNo > +b.NotifNo) {
+          return 1;
+        }
+        return 0;
+      })
+  }
+
+  sortByFLOC(tab) {
+    return tab.sort(
+      function (a, b) {
+        if (+a.FunctLoc < +b.FunctLoc) {
+          return -1;
+        }
+        if (+a.FunctLoc > +b.FunctLoc) {
+          return 1;
+        }
+        return 0;
+      })
+  }
+
+  getTime(date?: Date) {
+    return date != null ? date.getTime() : 0;
+  }
+
+  stringToDate(dateString) {
+    const [dd, mm, yyyy] = dateString.split("-");
+    return new Date(`${yyyy}-${mm}-${dd}`);
+  };
+
+  sortByStartDate(tab) {
+    let sortedTab: any[] = [];
+    sortedTab = tab.sort((a: any, b: any) => {
+
+      if (this.getTime(this.stringToDate(this.formatDate(a.StartDate))) <
+        this.getTime(this.stringToDate(this.formatDate(b.StartDate)))) {
+
+        console.log("a: ", this.getTime(this.stringToDate(this.formatDate(a.StartDate))), "<",
+          "b: ", this.getTime(this.stringToDate(this.formatDate(b.StartDate))));
+        return -1;
+      }
+      else if (this.getTime(this.stringToDate(this.formatDate(a.StartDate))) >
+        this.getTime(this.stringToDate(this.formatDate(b.StartDate)))) {
+        console.log("a: ", this.getTime(this.stringToDate(this.formatDate(a.StartDate))), ">",
+          "b: ", this.getTime(this.stringToDate(this.formatDate(b.StartDate))));
+        return 1;
+      }
+      else {
+        console.log("a: ", this.getTime(this.stringToDate(this.formatDate(a.StartDate))), "?",
+          "b: ", this.getTime(this.stringToDate(this.formatDate(b.StartDate))));
+        return 0;
+      }
+    });
+
+    console.log("sorted tab: ",sortedTab);
   }
 
   onClose(evt) {
@@ -207,8 +293,7 @@ export class NotificationListPage extends BasePage implements OnInit {
       this.notifList[index].fw = "bold";
     }
 
-    if (this.orientation === 'portrait-primary') 
-    {
+    if (this.orientation === 'portrait-primary') {
       for (let i = 0; i < this.notifList.length; i++) {
         this.notifList[i].bgcolor = "white";
       }
@@ -274,7 +359,7 @@ export class NotificationListPage extends BasePage implements OnInit {
       day = "0" + d;
     } else day = d.toString();
 
-    let datec = day + "/" + month + "/" + newDate.getFullYear();
+    let datec = day + "-" + month + "-" + newDate.getFullYear();
     return datec
 
   }
