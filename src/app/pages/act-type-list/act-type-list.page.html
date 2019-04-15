@@ -1,9 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>ActTypeList</ion-title>
+  <ion-toolbar style="--background: #007CC0">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">Activity Type</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

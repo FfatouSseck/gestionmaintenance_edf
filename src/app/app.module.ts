@@ -40,6 +40,8 @@ import { ChecklistPage } from './pages/checklist/checklist.page';
 import { OperationDetailsPage } from './pages/operation-details/operation-details.page';
 import { StandardTextListPage } from './pages/standard-text-list/standard-text-list.page';
 import { WorkCenterListPage } from './pages/work-center-list/work-center-list.page';
+import { EmployeeListPage } from './pages/employee-list/employee-list.page';
+import { ActTypeListPage } from './pages/act-type-list/act-type-list.page';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { WorkCenterListPage } from './pages/work-center-list/work-center-list.pa
     ChecklistPage,
     OperationDetailsPage,
     StandardTextListPage,
-    WorkCenterListPage
+    WorkCenterListPage,
+    EmployeeListPage,
+    ActTypeListPage
   ],
   entryComponents: [
     NotificationListPage,
@@ -72,7 +76,9 @@ import { WorkCenterListPage } from './pages/work-center-list/work-center-list.pa
     ChecklistPage,
     OperationDetailsPage,
     StandardTextListPage,
-    WorkCenterListPage
+    WorkCenterListPage,
+    EmployeeListPage,
+    ActTypeListPage
   ],
   imports: [
     BrowserModule, 

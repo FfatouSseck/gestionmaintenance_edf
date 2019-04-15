@@ -10,6 +10,7 @@ import { WorkCenterListPage } from '../work-center-list/work-center-list.page';
 import { ActTypeService } from 'src/app/providers/act-type.service';
 import { EmployeeListPage } from '../employee-list/employee-list.page';
 import { ActTypeListPage } from '../act-type-list/act-type-list.page';
+import { EmployeeService } from 'src/app/providers/employee.service';
 
 @Component({
   selector: 'app-operation-details',
@@ -28,10 +29,12 @@ export class OperationDetailsPage implements OnInit {
   standardText = "";
   plant = "";
   workCenter = "";
+  assignee = "";
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, private mockService: MockService, public workcenterService: WorkCenterService,
-    private standardTextService: StandardTextService, private actTypeService: ActTypeService) { }
+    private standardTextService: StandardTextService, private actTypeService: ActTypeService,
+    private employeeService: EmployeeService) { }
 
   ngOnInit() {
     this.storage.get("mock").then(
@@ -91,6 +94,8 @@ export class OperationDetailsPage implements OnInit {
     else {
       this.workCenter = this.op.WorkCenterShort + " - " + this.op.WorkCenterDescr;
       this.standardText = this.op.StandardTextKey + " - " + this.op.StandardTextDescr;
+      this.assignee += this.op.Assignee !== "" ? this.op.Assignee : '';
+      this.assignee += this.op.Assignee === "" ? '' : " - " + this.op.AssigneeName;
     }
     this.getPlant();
   }
@@ -181,18 +186,9 @@ export class OperationDetailsPage implements OnInit {
   }
 
   async selectAssignee() {
-    let employeeList: any;
-    if(this.mock){
-      employeeList = this.mockService.getMockEmployees();
-    }
-    else{//if(this.mock)
-
-    }
-
     this.modal = await this.modalController.create({
       component: EmployeeListPage,
       componentProps: {
-        'employeeList': employeeList
       },
     });
     this.modal.backdropDismiss = false;
@@ -200,55 +196,57 @@ export class OperationDetailsPage implements OnInit {
 
     const { data } = await this.modal.onDidDismiss();
     if (data != undefined) {
-      
+      this.op.Assignee = data.result.PersonNo;
+      this.op.AssigneeName = data.result.UserFullName;
+      this.assignee = this.op.Assignee + " - " + this.op.AssigneeName;
     }
+
   }
 
   async selectActType() {
-    let actTypes: any;
 
-    if (this.op.WorkCenter !== '') {
-      if (this.op.Plant !== '') {
-        if (this.mock) {
-          actTypes = this.mockService.getMockActTypes(this.op.Plant, this.op.WorkCenter)
-          console.log("actTypes: ", actTypes);
-        }
-        else {//if(this.mock)
-          this.actTypeService.getAllActTypesByPlantAndWorkCenter(this.op.Plant, this.op.WorkCenter)
-            .subscribe(
-              (acts) => {
-                console.log("activities: ", acts.d.results);
-              },
-              (err) => {
+    if(this.workCenter === ""){
 
-              })
-        }
-      }
-      else {//if(this.op.Plant !== '')
-        console.log("No workCenter available !");
-      }
     }
-    else {//if(this.op.WorkCenter !== '')
-      console.log("No workCenter available !");
-    }
-
-    //ici on instancie la popup en lui disant quel contenu afficher
-    this.modal = await this.modalController.create({
-      component: ActTypeListPage,/*ceci est une page qu'on a créé
+    if (this.mode === 'detail') {
+      //ici on instancie la popup en lui disant quel contenu afficher
+      this.modal = await this.modalController.create({
+        component: ActTypeListPage,/*ceci est une page qu'on a créé
       avec la cde ionic g page nomDeLaPage*/
-      componentProps: {
-        'actTypes': actTypes
-      },
-    });
-    this.modal.backdropDismiss = false;
-    await this.modal.present();
+        componentProps: {
+          'plant': this.op.Plant,
+          'workCenter': this.op.WorkCenter
+        },
+      });
+      this.modal.backdropDismiss = false;
+      await this.modal.present();
 
-    //ici on récupère les données prises depuis le popup
-    const { data } = await this.modal.onDidDismiss();
-    if (data != undefined) {
-      
+      //ici on récupère les données prises depuis le popup
+      const { data } = await this.modal.onDidDismiss();
+      if (data != undefined) {
+
+      }
     }
+    else if (this.mode === 'create') {
+      console.log("mode:create");
+      
+      //ici on instancie la popup en lui disant quel contenu afficher
+      this.modal = await this.modalController.create({
+        component: ActTypeListPage,/*ceci est une page qu'on a créé
+      avec la cde ionic g page nomDeLaPage*/
+        componentProps: {
+        },
+      });
+      this.modal.backdropDismiss = false;
+      await this.modal.present();
 
+      //ici on récupère les données prises depuis le popup
+      const { data } = await this.modal.onDidDismiss();
+      if (data != undefined) {
+
+      }
+
+    }
   }
 
   selectCheckList() {
@@ -256,27 +254,9 @@ export class OperationDetailsPage implements OnInit {
   }
 
   async selectWorkCenter() {
-    let workCenters: any[] = [];
-    if (this.mock) {
-      if (this.op.Plant !== '') {
-        workCenters = this.mockService.getMockWorkCentersByPlant(this.op.Plant);
-      }
-    }
-    else {
-      if (this.op.Plant !== '') {
-        this.workcenterService.getWorkCentersByPlant(this.op.Plant).subscribe(
-          (wc) => {
-            workCenters = wc.d.results;
-          }
-        )
-      }
-    }
-
     this.modal = await this.modalController.create({
       component: WorkCenterListPage,
-      componentProps: {
-        'workCenters': workCenters
-      },
+      componentProps: {},
     });
     this.modal.backdropDismiss = false;
     await this.modal.present();

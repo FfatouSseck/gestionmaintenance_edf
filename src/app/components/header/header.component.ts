@@ -49,7 +49,7 @@ export class HeaderComponent implements OnInit {
             },
             {
                 text: 'User settings',
-                icon: 'settings',
+                icon: 'person',
                 handler: () => {
                 }
             },

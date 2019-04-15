@@ -43,9 +43,11 @@ export class HomePage implements OnInit {
         public orderService: ServiceOrderPreparationService, private mockService: MockService) {
 
         this.orientation = this.screenOrientation.type;
+        console.log("orientation: ", this.screenOrientation.type);
         // detect orientation changes
         this.screenOrientation.onChange().subscribe(
             () => {
+                console.log("changing: ", this.screenOrientation.type);
                 this.orientation = this.screenOrientation.type;
             }
         );

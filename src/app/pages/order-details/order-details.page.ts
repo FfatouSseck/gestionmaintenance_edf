@@ -6,6 +6,7 @@ import { NotificationService } from 'src/app/providers/notification.service';
 import { Storage } from '@ionic/storage';
 import { MockService } from 'src/app/providers/mock.service';
 import { OperationDetailsPage } from '../operation-details/operation-details.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-details',
@@ -40,19 +41,24 @@ export class OrderDetailsPage implements OnInit {
     startDate: null
   };
   displayedColumns: string[] = ['Operation', 'Description', 'NumberOfCapacities',
-    'WorkForecast', 'ActivityType','detail'];
+    'WorkForecast', 'ActivityType', 'detail'];
   displayedComponentsColumns: string[] = ['Material', 'MaterialDescr', 'ItemNo',
     'PlanPlant', 'StgeLoc', 'ValType',
     'RequirementQuantity'];
-    modal: any;
+  modal: any;
 
 
   constructor(public orderService: ServiceOrderPreparationService, private modalCtrl: ModalController,
-    private _formBuilder: FormBuilder,public notifService: NotificationService, public storage: Storage,
-    private mockService: MockService, private modalController: ModalController) { }
+    private _formBuilder: FormBuilder, public notifService: NotificationService, public storage: Storage,
+    private mockService: MockService, private modalController: ModalController, public router: Router) {
+  }
 
   ngOnInit() {
     this.choosenOrder = this.orderService.getCurrentOrder();
+    
+    if( this.choosenOrder == undefined) {
+      this.router.navigateByUrl("/service-order-preparation");
+    }
 
     this.orderDetailsFormGroup = this._formBuilder.group({
       description: ['', Validators.required],
@@ -79,25 +85,28 @@ export class OrderDetailsPage implements OnInit {
   }
 
   ionViewDidEnter() {
-    this.operations = [];
-    this.loadNotif = true;
-    
-    this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
-    this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
+    this.choosenOrder = this.orderService.getCurrentOrder();
+    if (this.choosenOrder != undefined) {
+      this.operations = [];
+      this.loadNotif = true;
 
-    this.storage.get("mock").then(
-      (mock) => {
-        if (mock != undefined && mock != null && mock == true) {
-          this.getMockNotifByNumber(this.choosenOrder.NotifNo);
-          this.getMockOrderOperations(this.choosenOrder.OrderNo);
-          this.getMockOrderComponents(this.choosenOrder.OrderNo);
-        }
-        else {
-          this.getOrderNotification(this.choosenOrder.NotifNo);
-          this.getOrderOperations(this.choosenOrder.OrderNo);
-          this.getOrderComponents(this.choosenOrder.OrderNo);
-        }
-      });
+      this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
+      this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
+
+      this.storage.get("mock").then(
+        (mock) => {
+          if (mock != undefined && mock != null && mock == true) {
+            this.getMockNotifByNumber(this.choosenOrder.NotifNo);
+            this.getMockOrderOperations(this.choosenOrder.OrderNo);
+            this.getMockOrderComponents(this.choosenOrder.OrderNo);
+          }
+          else {
+            this.getOrderNotification(this.choosenOrder.NotifNo);
+            this.getOrderOperations(this.choosenOrder.OrderNo);
+            this.getOrderComponents(this.choosenOrder.OrderNo);
+          }
+        });
+    }
   }
 
   getMockNotifByNumber(notifNo) {
@@ -166,12 +175,12 @@ export class OrderDetailsPage implements OnInit {
     this.presentOperationModal(null, 'create');
   }
 
-  async presentOperationModal(operation,mode) {
+  async presentOperationModal(operation, mode) {
     this.modal = await this.modalController.create({
       component: OperationDetailsPage,
       componentProps: {
-        'op' : operation,
-        'mode' : mode
+        'op': operation,
+        'mode': mode
       },
       cssClass: 'modal1'
     });
@@ -179,7 +188,7 @@ export class OrderDetailsPage implements OnInit {
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
-    if(data != undefined){
+    if (data != undefined) {
       console.log(data.result);
     }
   }

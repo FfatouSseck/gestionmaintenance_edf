@@ -1,5 +1,6 @@
 <ion-header>
-  <app-header pageTitle="Pull to refresh" (close)="onClose($event)"></app-header>
+  <app-header *ngIf="choosenPlant !== '' && choosenPlant != null && choosenPlant != undefined"
+               [pageTitle]="choosenPlant" (close)="onClose($event)"></app-header>
 </ion-header>
 
 <ion-content padding fullscreen="true">
@@ -10,93 +11,99 @@
   </ion-refresher>
 
   <div *ngIf="orientation === 'portrait-primary'; else landscapeContent" class="principalContent">
-    <mat-card *ngIf="choosenPlant !== '' && choosenPlant != null && choosenPlant != undefined" class="mat-elevation-z8"
-      style=" background-color: #fff;text-align: center;">
-      <h4 style="font-weight: bold;color: #007CC0;font-size: 20px;display: inline-block">
-        {{choosenPlant}}
-      </h4>
-    </mat-card>
     <br />
     <mat-grid-list cols="3" rowHeight="1:1.2" gutterSize="20px">
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/create-notification">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
-              add_circle
+        <mat-card style="background-color: #E64A19" routerLink="/create-notification">
+          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+              add_alert
             </i></mat-icon>
-          <h1 style="color:#009DE0">Create Notification</h1>
+            <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+                &nbsp;
+              </h4>
+          <h1 style="color:#fff">Create Notification</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/notification-list">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+        <mat-card style="background-color: #00796B" routerLink="/notification-list">
+          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
               error
             </i></mat-icon>
 
           <div *ngIf="notifsCount == null">
             <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
           </div>
-          <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+          <h4 style="color: #fff;font-size: 40px" *ngIf="notifsCount != null">
             {{notifsCount}}
           </h4>
-          <h1 style="color:#009DE0">Notification List<br /></h1>
+          <h1 style="color:#99d5cf">Notification List<br /></h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/service-order-preparation">
+        <mat-card style="background-color: #09367C" routerLink="/service-order-preparation">
           <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
               filter_none
             </i></mat-icon>
           <div *ngIf="ordersCount == null">
             <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
           </div>
-          <h4 style="color: grey;font-size: 40px" *ngIf="ordersCount != null">
+          <h4 style="color: #fff;font-size: 40px" *ngIf="ordersCount != null">
             {{ordersCount}}
           </h4>
           <h1 style="color:#009DE0">Service Order Preparation</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/check-list-assignment">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+        <mat-card style="background-color: #7B1FA2" routerLink="/check-list-assignment">
+          <mat-icon style="color: #d7bce3"><i class="material-icons" style="font-size: 40px">
               assignment
             </i></mat-icon>
-          <h1 style="color:#009DE0">Checklist assignment</h1>
+            <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+                &nbsp;
+              </h4>
+          <h1 style="color:#d7bce3">Checklist assignment</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/service-order">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+        <mat-card style="background-color: #0288D1" routerLink="/service-order">
+          <mat-icon style="color: #9acfed"><i class="material-icons" style="font-size: 40px">
               book
             </i></mat-icon>
 
-          <h4 style="color: grey;font-size: 40px">65</h4>
-          <h1 style="color:#009DE0">Service Order</h1>
+          <h4 style="color: #fff;font-size: 40px">65</h4>
+          <h1 style="color:#9acfed">Service Order</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/time-and-material-confirmation">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+        <mat-card style="background-color: #FFC107" routerLink="/time-and-material-confirmation">
+          <mat-icon style="color: #ffe69c"><i class="material-icons" style="font-size: 40px">
               settings
             </i></mat-icon>
 
-          <h4 style="color: grey;font-size: 40px">65</h4>
-          <h1 style="color:#009DE0">Time & Material Confirmation</h1>
+          <h4 style="color: #fff;font-size: 40px">65</h4>
+          <h1 style="color:#ffe69c">Time & Material Confirmation</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/documents">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+        <mat-card style="background-color: #303F9F" routerLink="/documents">
+          <mat-icon style="color: #acb2d9"><i class="material-icons" style="font-size: 40px">
               note
             </i></mat-icon>
-          <h1 style="color:#009DE0">Documents</h1>
+            <h4 style="color: #fff;font-size: 40px" *ngIf="notifsCount != null">
+                &nbsp;
+              </h4>
+          <h1 style="color:#acb2d9">Documents</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
-        <mat-card style="background-color: #ffffff" routerLink="/my-orders">
-          <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
+        <mat-card style="background-color: #99264d" routerLink="/my-orders">
+          <mat-icon style="color: #ffa0c0"><i class="material-icons" style="font-size: 40px">
               reorder
             </i></mat-icon>
-          <h1 style="color:#009DE0">My Orders</h1>
+            <h4 style="color: #fff;font-size: 40px" *ngIf="notifsCount != null">
+                &nbsp;
+              </h4>
+          <h1 style="color:#ffa0c0">My Orders</h1>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
@@ -116,7 +123,9 @@
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 add_circle
               </i></mat-icon>
-            <br />
+              <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+                  &nbsp;
+                </h4>
             <h6 style="color:#009DE0">Create Notification</h6>
           </mat-card>
         </mat-grid-tile>
@@ -155,6 +164,9 @@
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 assignment
               </i></mat-icon>
+              <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+                  &nbsp;
+                </h4>
             <h6 style="color:#009DE0">Checklist assignment</h6>
           </mat-card>
         </mat-grid-tile>
@@ -193,6 +205,9 @@
             <mat-icon style="color: #007CC0"><i class="material-icons" style="font-size: 40px">
                 reorder
               </i></mat-icon>
+              <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+                  &nbsp;
+                </h4>
             <h6 style="color:#009DE0">My Orders</h6>
           </mat-card>
         </mat-grid-tile>

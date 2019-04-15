@@ -1,9 +1,53 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>EmployeeList</ion-title>
+  <ion-toolbar style="--background: #007CC0">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">Employees</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <div *ngIf="notAvailable;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
+
+  <ng-template #contentAvailable>
+    <div *ngIf="noData">
+      No employee available
+    </div>
+    <div *ngIf="!noData">
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
+      </ion-searchbar>
+
+      <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+      </div>
+
+      <mat-list>
+        <mat-list-item (click)="choose(em)" *ngFor="let em of employeeList">
+          <ion-label>
+            <h4 matLine>
+              {{em.PersonNo}}
+            </h4>
+            <p matLine>
+              {{em.UserFullName}}
+            </p>
+          </ion-label>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </ng-template>
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

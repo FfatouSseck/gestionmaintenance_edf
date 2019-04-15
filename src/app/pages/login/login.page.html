@@ -1,40 +1,29 @@
-<ion-content padding fullscreen="true">
+<ion-content padding fullscreen="true" class="content">
+  <br/><br/><br/><br/>
+  <img src="../../../assets/img/logo.png" alt="" class="center">
+
   <div *ngIf="orientation === 'portrait-primary';else landscapeContent">
-      <mat-card style="background-color: #ffffff" class="principalContent">
-        <form [formGroup]="loginFormGroup" [style.fontSize.px]="30" (ngSubmit)="login()">
-          <mat-form-field class="example-form">
-            <input matInput placeholder="User Name" [(ngModel)]="credentials.login" formControlName="login" required>
-            <mat-icon matSuffix>person</mat-icon>
-          </mat-form-field>
-          <br/>
-          <mat-form-field class="example-form">
-            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"  [(ngModel)]="credentials.pwd" formControlName="pwd" required>
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </mat-form-field>
-          <ion-button color="primary" class="example-form" (click)="login()">OK</ion-button>    
+        <form [formGroup]="loginFormGroup" [style.fontSize.px]="30" class="loginFormPortrait">
+            <input class="matInput" placeholder="User Name" [(ngModel)]="credentials.login" formControlName="login" required>
+
+            <input class="matInput" placeholder="Password" [type]="hide ? 'password' : 'text'"  [(ngModel)]="credentials.pwd" formControlName="pwd" required>
+          <button class="btn2" (click)="login()">Login</button>    
           <p class="example-form2" style="color: red" *ngIf="formInvalid">Please check the information entered</p>
         </form>
-      </mat-card>
   </div>
 
   <ng-template #landscapeContent>
-      <mat-card style="background-color: #ffffff" class="landscapeContent">
-        <form [formGroup]="loginFormGroup" [style.fontSize.px]="30">
-          <mat-form-field class="example-form2">
-            <input matInput placeholder="User Name" maxlength="40" [(ngModel)]="credentials.login" formControlName="login" required>
-            <mat-icon matSuffix>person</mat-icon>
-          </mat-form-field>
-          <br/>
-          <mat-form-field class="example-form2">
-            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"  [(ngModel)]="credentials.pwd" formControlName="pwd" required>
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </mat-form-field>
-          <ion-button color="primary" class="example-form2" (click)="login()">OK</ion-button>
+      
+        <form [formGroup]="loginFormGroup" [style.fontSize.px]="30" class="loginForm">
+            <input class="matInput" placeholder="User Name" maxlength="40" [(ngModel)]="credentials.login" formControlName="login" required>
+            
+            <input class="matInput" placeholder="Password" [type]="hide ? 'password' : 'text'"  [(ngModel)]="credentials.pwd" formControlName="pwd" required>
+            
+          <button class="btn" (click)="login()">Login</button>
 
           
         <p class="example-form2" style="color: red" *ngIf="formInvalid">Please check the information entered</p>
         </form>
         
-      </mat-card>
   </ng-template>
 </ion-content>
