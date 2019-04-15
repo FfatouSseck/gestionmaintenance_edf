@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 import { StandardTextService } from 'src/app/providers/standard-text.service';
@@ -34,7 +34,7 @@ export class OperationDetailsPage implements OnInit {
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, private mockService: MockService, public workcenterService: WorkCenterService,
     private standardTextService: StandardTextService, private actTypeService: ActTypeService,
-    private employeeService: EmployeeService) { }
+    private employeeService: EmployeeService, private alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.storage.get("mock").then(
@@ -205,47 +205,66 @@ export class OperationDetailsPage implements OnInit {
 
   async selectActType() {
 
-    if(this.workCenter === ""){
+    if (this.workCenter === "") {
+      console.log("we are in this case");
+      const alert = await this.alertCtrl.create({
+        header: 'Error',
+        message: 'Please choose a work center first',
+        buttons: ['OK']
+      });
+      await alert.present();
 
     }
-    if (this.mode === 'detail') {
-      //ici on instancie la popup en lui disant quel contenu afficher
-      this.modal = await this.modalController.create({
-        component: ActTypeListPage,/*ceci est une page qu'on a créé
-      avec la cde ionic g page nomDeLaPage*/
-        componentProps: {
-          'plant': this.op.Plant,
-          'workCenter': this.op.WorkCenter
-        },
-      });
-      this.modal.backdropDismiss = false;
-      await this.modal.present();
+    else {
 
-      //ici on récupère les données prises depuis le popup
-      const { data } = await this.modal.onDidDismiss();
-      if (data != undefined) {
+      if (this.mode === 'detail') {
+        //ici on instancie la popup en lui disant quel contenu afficher
+        this.modal = await this.modalController.create({
+          component: ActTypeListPage,/*ceci est une page qu'on a créé
+      avec la cde ionic g page nomDeLaPage*/
+          componentProps: {
+            'plant': this.op.Plant,
+            'workCenter': this.op.WorkCenter
+          },
+        });
+        this.modal.backdropDismiss = false;
+        await this.modal.present();
+
+        //ici on récupère les données prises depuis le popup
+        const { data } = await this.modal.onDidDismiss();
+        if (data != undefined) {
+
+        }
+      }
+      else if (this.mode === 'create') {
+        let plt = "";
+        console.log("mode:create");
+        this.storage.get("choosenPlant").then(
+          (plant) =>{
+            if(plant != null && plant != undefined && plant !== ""){
+              plt = plant;
+            }
+          }
+        )
+        //ici on instancie la popup en lui disant quel contenu afficher
+        this.modal = await this.modalController.create({
+          component: ActTypeListPage,/*ceci est une page qu'on a créé
+      avec la cde ionic g page nomDeLaPage*/
+          componentProps: {
+            'plant': plt,
+            'workCenter': this.workCenter
+          },
+        });
+        this.modal.backdropDismiss = false;
+        await this.modal.present();
+
+        //ici on récupère les données prises depuis le popup
+        const { data } = await this.modal.onDidDismiss();
+        if (data != undefined) {
+
+        }
 
       }
-    }
-    else if (this.mode === 'create') {
-      console.log("mode:create");
-      
-      //ici on instancie la popup en lui disant quel contenu afficher
-      this.modal = await this.modalController.create({
-        component: ActTypeListPage,/*ceci est une page qu'on a créé
-      avec la cde ionic g page nomDeLaPage*/
-        componentProps: {
-        },
-      });
-      this.modal.backdropDismiss = false;
-      await this.modal.present();
-
-      //ici on récupère les données prises depuis le popup
-      const { data } = await this.modal.onDidDismiss();
-      if (data != undefined) {
-
-      }
-
     }
   }
 
