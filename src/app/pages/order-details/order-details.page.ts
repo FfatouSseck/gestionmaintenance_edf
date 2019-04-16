@@ -7,6 +7,7 @@ import { Storage } from '@ionic/storage';
 import { MockService } from 'src/app/providers/mock.service';
 import { OperationDetailsPage } from '../operation-details/operation-details.page';
 import { Router } from '@angular/router';
+import { ComponentDetailsPage } from '../component-details/component-details.page';
 
 @Component({
   selector: 'app-order-details',
@@ -44,7 +45,7 @@ export class OrderDetailsPage implements OnInit {
     'WorkForecast', 'ActivityType', 'detail'];
   displayedComponentsColumns: string[] = ['Material', 'MaterialDescr', 'ItemNo',
     'PlanPlant', 'StgeLoc', 'ValType',
-    'RequirementQuantity'];
+    'RequirementQuantity', 'detail'];
   modal: any;
 
 
@@ -182,8 +183,16 @@ export class OrderDetailsPage implements OnInit {
     this.presentOperationModal(this.operations[index], 'detail');
   }
 
+  getComponentDetails(index) {
+    this.presentComponentModal(this.components[index],'detail');
+  }
+
   addNewOperation() {
     this.presentOperationModal(null, 'create');
+  }
+
+  addNewComponent(){
+    this.presentComponentModal(null,'create');
   }
 
   async presentOperationModal(operation, mode) {
@@ -191,6 +200,25 @@ export class OrderDetailsPage implements OnInit {
       component: OperationDetailsPage,
       componentProps: {
         'op': operation,
+        'mode': mode
+      },
+      cssClass: 'modal1'
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      console.log(data.result);
+    }
+  }
+
+  
+  async presentComponentModal(component, mode) {
+    this.modal = await this.modalController.create({
+      component: ComponentDetailsPage,
+      componentProps: {
+        'op': component,
         'mode': mode
       },
       cssClass: 'modal1'

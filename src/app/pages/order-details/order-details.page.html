@@ -147,10 +147,17 @@
 
 
     <!--Components-->
-    <mat-card class="mat-elevation-z8" style="background-color: #005BBB; text-align: center">
-        <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Components</h4>
-      </mat-card>
-      <br />
+    <ion-toolbar class="mat-elevation-z8" style="--background: #005BBB; text-align: center">
+        <ion-title>
+          <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Components</h4>
+        </ion-title>
+        <ion-buttons slot="end">
+          <ion-fab-button size="small" style="--background: #E53F00; " (click)="addNewComponent()">
+            <i class="material-icons" style="color: #fff;">add</i>
+          </ion-fab-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <br>
       <div *ngIf="components.length == 0">
         <mat-spinner *ngIf="!noComponents" style="margin: 0 auto" [diameter]="25"></mat-spinner>
         <p *ngIf="noComponents">No components available</p>
@@ -193,8 +200,18 @@
             <td mat-cell *matCellDef="let element"> {{element.RequirementQuantity}} </td>
           </ng-container>
 
+          <ng-container matColumnDef="detail">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element;let i=index">
+                <ion-fab-button size="small" style="--background: #005BBB; ">
+                  <i class="material-icons" style="color: #fff;">navigate_next</i>
+                </ion-fab-button>
+              </td>
+            </ng-container>
+
           <tr mat-header-row *matHeaderRowDef="displayedComponentsColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedComponentsColumns;"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedComponentsColumns;let i=index"
+          (click)="getComponentDetails(i)"></tr>
         </table>
       </div>
   </form>
