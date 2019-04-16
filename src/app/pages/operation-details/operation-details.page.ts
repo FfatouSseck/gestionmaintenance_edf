@@ -11,6 +11,7 @@ import { ActTypeService } from 'src/app/providers/act-type.service';
 import { EmployeeListPage } from '../employee-list/employee-list.page';
 import { ActTypeListPage } from '../act-type-list/act-type-list.page';
 import { EmployeeService } from 'src/app/providers/employee.service';
+import { ChecklistPage } from '../checklist/checklist.page';
 
 @Component({
   selector: 'app-operation-details',
@@ -31,6 +32,7 @@ export class OperationDetailsPage implements OnInit {
   workCenter = "";
   assignee = "";
   actType = "";
+  checkList = "";
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, private mockService: MockService, public workcenterService: WorkCenterService,
@@ -93,21 +95,42 @@ export class OperationDetailsPage implements OnInit {
       };
     }
     else {
-      this.workCenter = this.op.WorkCenterShort + " - " + this.op.WorkCenterDescr;
-      this.standardText = this.op.StandardTextKey + " - " + this.op.StandardTextDescr;
-      if(this.op.Assignee !== ""){
+
+      if (this.op.WorkCenterShort !== "") {
+        this.workCenter = this.op.WorkCenterShort;
+        if (this.op.WorkCenterDescr !== "") {
+          this.workCenter += " - " + this.op.WorkCenterDescr;
+        }
+      }
+
+      if (this.op.StandardTextKey !== "") {
+        this.standardText = this.op.StandardTextKey;
+        if (this.op.StandardTextDescr !== "") {
+          this.standardText += " - " + this.op.StandardTextDescr;
+        }
+      }
+
+      if (this.op.Assignee !== "") {
         this.assignee += this.op.Assignee;
-        if(this.op.AssigneeName !== ""){
+        if (this.op.AssigneeName !== "") {
           this.assignee += " - " + this.op.AssigneeName;
         }
       }
 
-      if(this.op.ActivityType !== ""){
+      if (this.op.ActivityType !== "") {
         this.actType += this.op.ActivityType;
-        if(this.op.ActivityTypeDescr !== ""){
+        if (this.op.ActivityTypeDescr !== "") {
           this.actType += " - " + this.op.ActivityTypeDescr;
         }
       }
+
+      if (this.op.ChklstId !== "") {
+        this.checkList = this.op.ChklstId;
+        if (this.op.ChklstTitle !== "") {
+          this.checkList += " - " + this.op.ChklstTitle;
+        }
+      }
+
     }
     this.getPlant();
   }
@@ -193,7 +216,12 @@ export class OperationDetailsPage implements OnInit {
     if (data != undefined) {
       this.op.StandardTextKey = data.result.StandardTextKey;
       this.op.StandardTextDescr = data.result.ShortText;
-      this.standardText = this.op.StandardTextKey + " - " + this.op.StandardTextDescr;
+      if (this.op.StandardTextKey !== "") {
+        this.standardText = this.op.StandardTextKey;
+        if (this.op.StandardTextDescr !== "") {
+          this.standardText += " - " + this.op.StandardTextDescr;
+        }
+      }
     }
   }
 
@@ -210,7 +238,12 @@ export class OperationDetailsPage implements OnInit {
     if (data != undefined) {
       this.op.Assignee = data.result.PersonNo;
       this.op.AssigneeName = data.result.UserFullName;
-      this.assignee = this.op.Assignee + " - " + this.op.AssigneeName;
+      if (this.op.Assignee !== "") {
+        this.assignee += this.op.Assignee;
+        if (this.op.AssigneeName !== "") {
+          this.assignee += " - " + this.op.AssigneeName;
+        }
+      }
     }
 
   }
@@ -244,7 +277,14 @@ export class OperationDetailsPage implements OnInit {
         //ici on récupère les données prises depuis le popup
         const { data } = await this.modal.onDidDismiss();
         if (data != undefined) {
-
+          this.op.ActivityType = data.result.ActivityType;
+          this.op.ActivityTypeDescr = data.result.ActivityTypeDescr;
+          if (this.op.ActivityType !== "") {
+            this.actType += this.op.ActivityType;
+            if (this.op.ActivityTypeDescr !== "") {
+              this.actType += " - " + this.op.ActivityTypeDescr;
+            }
+          }
         }
       }
       else if (this.mode === 'create') {
@@ -269,6 +309,14 @@ export class OperationDetailsPage implements OnInit {
               const { data } = await this.modal.onDidDismiss();
               if (data != undefined) {
                 console.log("data:", data);
+                this.op.ActivityType = data.result.ActivityType;
+                this.op.ActivityTypeDescr = data.result.ActivityTypeDescr;
+                if (this.op.ActivityType !== "") {
+                  this.actType += this.op.ActivityType;
+                  if (this.op.ActivityTypeDescr !== "") {
+                    this.actType += " - " + this.op.ActivityTypeDescr;
+                  }
+                }
               }
             }
           })
@@ -277,7 +325,34 @@ export class OperationDetailsPage implements OnInit {
     }
   }
 
-  selectCheckList() {
+  async selectCheckList() {
+    this.modal = await this.modalController.create({
+      component: ChecklistPage,
+      componentProps: {},
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined) {
+      console.log(data.result);
+      this.op.ChklstId = data.result.ChklstId;
+
+      if (data.result.Title.length > 22) {
+        let x = data.result.Title;
+        this.op.ChklstTitle = x + "...";
+      }
+      else {
+        this.op.ChklstTitle = data.result.Title;
+      }
+
+      if (this.op.ChklstId !== "") {
+        this.checkList = this.op.ChklstId;
+        if (this.op.ChklstTitle !== "") {
+          this.checkList += " - " + this.op.ChklstTitle;
+        }
+      }
+    }
 
   }
 
@@ -294,8 +369,42 @@ export class OperationDetailsPage implements OnInit {
       this.op.WorkCenter = data.result.WorkCenterId;
       this.op.WorkCenterDescr = data.result.WorkCenterDescr;
       this.op.WorkCenterShort = data.result.WorkCenterShort;
-      this.workCenter = this.op.WorkCenterShort + " - " + this.op.WorkCenterDescr;
+      if (this.op.WorkCenterShort !== "") {
+        this.workCenter = this.op.WorkCenterShort;
+        if (this.op.WorkCenterDescr !== "") {
+          this.workCenter += " - " + this.op.WorkCenterDescr;
+        }
+      }
     }
+  }
+
+  async presentRestConfirm() {
+    const alert = await this.alertCtrl.create({
+      header: 'Warning',
+      message: '<strong>All data will be lost. Do you want to continue </strong>?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+          }
+        }, {
+          text: 'Okay',
+          handler: () => {
+            this.reset();
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  reset(){
+    let plt = this.plant;
+    this.operationFormGroup.reset();
+    console.log("plant: ",plt);
   }
 
 }

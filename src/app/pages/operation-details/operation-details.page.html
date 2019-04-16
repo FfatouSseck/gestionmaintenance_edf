@@ -25,8 +25,7 @@
         [(ngModel)]="op.Description">
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectStandardText()">
-      <input matInput placeholder="Standard Text" formControlName="standardText" required
-        [(ngModel)]="standardText">
+      <input matInput placeholder="Standard Text" formControlName="standardText" required [(ngModel)]="standardText">
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form">
@@ -57,13 +56,9 @@
       <mat-icon matSuffix style="color: black" (click)="inc()">add</mat-icon>
     </mat-form-field>
     <mat-form-field class="example-form" (click)="selectCheckList()">
-      <input matInput placeholder="Checklist" formControlName="checklist" required [(ngModel)]="op.ChklstId">
+      <input matInput placeholder="Checklist" formControlName="checklist" required [(ngModel)]="checkList">
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
-  </form>
-
-  <form *ngIf="mode === 'create'">
-
   </form>
 
 </ion-content>
@@ -71,6 +66,8 @@
 <ion-footer>
   <ion-toolbar style="--background: #fff;--min-height:50px">
     <ion-buttons slot="end">
+      <ion-button (click)="presentRestConfirm()" style="background-color: grey;color: white;--height:40px" strong="true"
+        type="reset">Clear</ion-button>
       <ion-button style="background-color: red;color: white" (click)="closeModal()">
         Cancel
       </ion-button>

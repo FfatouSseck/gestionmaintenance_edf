@@ -90,8 +90,19 @@ export class OrderDetailsPage implements OnInit {
       this.operations = [];
       this.loadNotif = true;
 
-      this.pmAct = this.choosenOrder.PmActivityType + " - " + this.choosenOrder.PmActivityTypeDescr;
-      this.orderStatus = this.choosenOrder.StatusShort + " - " + this.choosenOrder.StatusDescr;
+      if(this.choosenOrder.PmActivityType !== ""){
+        this.pmAct = this.choosenOrder.PmActivityType;
+        if(this.choosenOrder.PmActivityTypeDescr !== ""){
+          this.pmAct += " - " + this.choosenOrder.PmActivityTypeDescr
+        }
+      }
+
+      if(this.choosenOrder.StatusShort !== ""){
+        this.orderStatus = this.choosenOrder.StatusShort;
+        if(this.choosenOrder.StatusDescr !== ""){
+          this.orderStatus += " - " + this.choosenOrder.StatusDescr;
+        }
+      }
 
       this.storage.get("mock").then(
         (mock) => {
