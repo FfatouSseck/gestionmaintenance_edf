@@ -30,6 +30,7 @@ export class OperationDetailsPage implements OnInit {
   plant = "";
   workCenter = "";
   assignee = "";
+  actType = "";
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, private mockService: MockService, public workcenterService: WorkCenterService,
@@ -94,8 +95,19 @@ export class OperationDetailsPage implements OnInit {
     else {
       this.workCenter = this.op.WorkCenterShort + " - " + this.op.WorkCenterDescr;
       this.standardText = this.op.StandardTextKey + " - " + this.op.StandardTextDescr;
-      this.assignee += this.op.Assignee !== "" ? this.op.Assignee : '';
-      this.assignee += this.op.Assignee === "" ? '' : " - " + this.op.AssigneeName;
+      if(this.op.Assignee !== ""){
+        this.assignee += this.op.Assignee;
+        if(this.op.AssigneeName !== ""){
+          this.assignee += " - " + this.op.AssigneeName;
+        }
+      }
+
+      if(this.op.ActivityType !== ""){
+        this.actType += this.op.ActivityType;
+        if(this.op.ActivityTypeDescr !== ""){
+          this.actType += " - " + this.op.ActivityTypeDescr;
+        }
+      }
     }
     this.getPlant();
   }
@@ -206,7 +218,6 @@ export class OperationDetailsPage implements OnInit {
   async selectActType() {
 
     if (this.workCenter === "") {
-      console.log("we are in this case");
       const alert = await this.alertCtrl.create({
         header: 'Error',
         message: 'Please choose a work center first',
@@ -238,31 +249,29 @@ export class OperationDetailsPage implements OnInit {
       }
       else if (this.mode === 'create') {
         let plt = "";
-        console.log("mode:create");
         this.storage.get("choosenPlant").then(
-          (plant) =>{
-            if(plant != null && plant != undefined && plant !== ""){
+          async (plant) => {
+            if (plant != null && plant != undefined && plant !== "") {
               plt = plant;
+              //ici on instancie la popup en lui disant quel contenu afficher
+              this.modal = await this.modalController.create({
+                component: ActTypeListPage,/*ceci est une page qu'on a créé
+                    avec la cde ionic g page nomDeLaPage*/
+                componentProps: {
+                  'plant': plt,
+                  'workCenter': this.op.WorkCenter
+                },
+              });
+              this.modal.backdropDismiss = false;
+              await this.modal.present();
+
+              //ici on récupère les données prises depuis le popup
+              const { data } = await this.modal.onDidDismiss();
+              if (data != undefined) {
+                console.log("data:", data);
+              }
             }
-          }
-        )
-        //ici on instancie la popup en lui disant quel contenu afficher
-        this.modal = await this.modalController.create({
-          component: ActTypeListPage,/*ceci est une page qu'on a créé
-      avec la cde ionic g page nomDeLaPage*/
-          componentProps: {
-            'plant': plt,
-            'workCenter': this.workCenter
-          },
-        });
-        this.modal.backdropDismiss = false;
-        await this.modal.present();
-
-        //ici on récupère les données prises depuis le popup
-        const { data } = await this.modal.onDidDismiss();
-        if (data != undefined) {
-
-        }
+          })
 
       }
     }

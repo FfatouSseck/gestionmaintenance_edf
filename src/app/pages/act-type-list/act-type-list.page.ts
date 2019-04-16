@@ -57,48 +57,52 @@ export class ActTypeListPage implements OnInit {
   filterActTypes() {
     return this.actList.filter(
       (act) => {
-        return (act.PersonNo.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1
-          || act.UserFullName.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1)
+        return (act.ActivityType.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1
+          || act.ActivityTypeDescr.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1)
       })
   }
 
   ionViewDidEnter() {
     this.notAvailable = true;
-    console.log("plant: ",this.plant,"wc: ",this.workCenter);
-    if(this.workCenter != undefined){
-      if(this.plant != undefined){
+    if (this.workCenter != undefined) {
+      if (this.plant != undefined) {
+        this.storage.get("mock").then(
+          (mock) => {
+            if (mock != undefined && mock != null && mock == true) {
+              this.actList = this.mockService.getMockActTypes(this.plant, this.workCenter);
+              console.log("activities: ",this.actList);
+              if(this.actList.length>0){
+                this.notAvailable = false;
+                this.noData = false;
+              }
+              else{
+                this.notAvailable = false;
+                this.noData = true;
+              }
+              
+            }
+            else {//no mock
+              this.actService.getAllActTypesByPlantAndWorkCenter(this.plant, this.workCenter)
+                      .subscribe(
+                        (acts) => {
+                          console.log("activities: ", acts.d.results);
+                          this.actList = acts.d.results;
+                          if(this.actList.length>0){
+                            this.notAvailable = false;
+                            this.noData = false;
+                          }
+                          else{
+                            this.notAvailable = false;
+                            this.noData = true;
+                          }
+                        },
+                        (err) => {
 
+                        })
+            }
+          })
       }
     }
-    else{//wc = undefined
-      console.log("Please choose a wc first");
-      
-    }
-    // if (this.op.WorkCenter !== '') {
-    //   if (this.op.Plant !== '') {
-    //     if (this.mock) {
-    //       actTypes = this.mockService.getMockActTypes(this.op.Plant, this.op.WorkCenter)
-    //       console.log("actTypes: ", actTypes);
-    //     }
-    //     else {//if(this.mock)
-    //       this.actTypeService.getAllActTypesByPlantAndWorkCenter(this.op.Plant, this.op.WorkCenter)
-    //         .subscribe(
-    //           (acts) => {
-    //             console.log("activities: ", acts.d.results);
-    //           },
-    //           (err) => {
-
-    //           })
-    //     }
-    //   }
-    //   else {//if(this.op.Plant !== '')
-    //     console.log("No workCenter available !");
-    //   }
-    // }
-    // else {//if(this.op.WorkCenter !== '')
-    //   console.log("No workCenter available !");
-    // }
-
   }
 
 }

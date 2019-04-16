@@ -23,7 +23,7 @@ export class WorkCenterListPage implements OnInit {
 
   constructor(public modalController: ModalController, private mockService: MockService,
     private storage: Storage, private wcService: WorkCenterService) {
-    console.log("workcenters");
+
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
       this.searching = false;

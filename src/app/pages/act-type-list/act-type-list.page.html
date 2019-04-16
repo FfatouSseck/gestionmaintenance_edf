@@ -10,6 +10,36 @@
 </ion-header>
 
 <ion-content padding>
+  <div *ngIf="notAvailable;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
+
+  <ng-template #contentAvailable>
+    <div *ngIf="noData">
+      No activity type available for this work center
+    </div>
+    <div *ngIf="!noData">
+      <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
+      </ion-searchbar>
+
+      <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+      </div>
+
+      <mat-list>
+        <mat-list-item (click)="choose(ac)" *ngFor="let ac of actList">
+          <ion-label>
+            <h4 matLine>
+              {{ac.ActivityType}}
+            </h4>
+            <p matLine>
+              {{ac.ActivityTypeDescr}}
+            </p>
+          </ion-label>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </ng-template>
 
 </ion-content>
 <ion-footer>

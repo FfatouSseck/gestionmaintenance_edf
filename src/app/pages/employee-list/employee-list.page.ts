@@ -66,7 +66,6 @@ export class EmployeeListPage implements OnInit {
       (mock)=>{
         if (mock != null && mock != undefined && mock == true) {
           this.employeeList = this.mockService.getMockEmployees();
-          console.log("from mock server:",this.employeeList);
           if(this.employeeList.length>0){
             this.notAvailable = false;
             this.noData = false;
@@ -80,7 +79,6 @@ export class EmployeeListPage implements OnInit {
           this.employeeService.getAllEmployees().subscribe(
             async (emp)=>{
               this.employeeList = emp.d.results;
-              console.log("from remote server:",this.employeeList);
               if(this.employeeList.length>0){
                 this.notAvailable = false;
                 this.noData = false;
