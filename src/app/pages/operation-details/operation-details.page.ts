@@ -191,22 +191,10 @@ export class OperationDetailsPage implements OnInit {
   }
 
   async selectStandardText() {
-    let standardTexts: any;
-    if (this.mock) {
-      standardTexts = this.mockService.getMockStandardTextsSet();
-    }
-    else {
-      this.standardTextService.getAllStandardTexts().subscribe(
-        (texts) => {
-          standardTexts = texts.d.results;
-          console.log("standardTexts", standardTexts);
-        });
-    }
 
     this.modal = await this.modalController.create({
       component: StandardTextListPage,
       componentProps: {
-        'standardTexts': standardTexts
       },
     });
     this.modal.backdropDismiss = false;
@@ -402,9 +390,15 @@ export class OperationDetailsPage implements OnInit {
   }
 
   reset(){
-    let plt = this.plant;
-    this.operationFormGroup.reset();
-    console.log("plant: ",plt);
+    this.operationFormGroup.controls.operation.setValue("");
+    this.operationFormGroup.controls.description.setValue("");
+    this.operationFormGroup.controls.standardText.setValue("");
+    this.operationFormGroup.controls.workCenter.setValue("");
+    this.operationFormGroup.controls.assignee.setValue("");
+    this.operationFormGroup.controls.actType.setValue("");
+    this.operationFormGroup.controls.duration.setValue("");
+    this.operationFormGroup.controls.numEmployees.setValue("");
+    this.operationFormGroup.controls.checklist.setValue("");
   }
 
 }

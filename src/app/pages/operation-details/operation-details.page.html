@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar style="--background: #007CC0">
+  <ion-toolbar style="--background: #005BBB">
     <ion-buttons slot="start">
       <ion-button (click)="closeModal()" style="color: white ">
         <ion-icon name="arrow-back"></ion-icon>
@@ -66,7 +66,7 @@
 <ion-footer>
   <ion-toolbar style="--background: #fff;--min-height:50px">
     <ion-buttons slot="end">
-      <ion-button (click)="presentRestConfirm()" style="background-color: grey;color: white;--height:40px" strong="true"
+      <ion-button *ngIf="mode === 'create'" (click)="presentRestConfirm()" style="background-color: grey;color: white;--height:40px" strong="true"
         type="reset">Clear</ion-button>
       <ion-button style="background-color: red;color: white" (click)="closeModal()">
         Cancel

@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <form *ngIf="modif == false">
-    <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
+    <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
         General Information
       </h4>
@@ -38,7 +38,7 @@
       </mat-form-field>
     </mat-card>
     <br />
-    <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
+    <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
         Notification Informations
       </h4>
@@ -67,7 +67,7 @@
   </form>
 
   <form [formGroup]="notifDetailsFormGroup" *ngIf="modif == true">
-    <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
+    <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
         General Information
       </h4>
@@ -112,7 +112,7 @@
       </mat-form-field>
     </mat-card>
     <br />
-    <mat-card class="mat-elevation-z8" style=" background-color: #007CC0;text-align: center">
+    <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
         Notification Informations
       </h4>
@@ -168,11 +168,11 @@
       </ion-button>
       <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true"
         size="large" type="reset">Reject</ion-button>
-      <ion-button (click)="modif=true" style="background-color: #009DE0;color: white;--height:40px" strong="true"
+      <ion-button (click)="modif=true" style="background-color: #005BBB;color: white;--height:40px" strong="true"
         size="large" type="reset">Modify</ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
+      <ion-button (click)="presentRestConfirm()" style="background-color: #005BBB;color: white;--height:40px"
         strong="true" size="large" type="reset">Similar Notifications</ion-button>
-      <ion-button (click)="presentRestConfirm()" style="background-color: #009DE0;color: white;--height:40px"
+      <ion-button (click)="presentRestConfirm()" style="background-color: #005BBB;color: white;--height:40px"
         strong="true" size="large" type="reset">Copy</ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -185,7 +185,7 @@
       </ion-button>
       <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
         (click)="modif = !modif">Cancel</ion-button>
-      <ion-button style="background-color: #009DE0;color: white;--height:40px" strong="true" size="large" type="reset">
+      <ion-button style="background-color: #005BBB;color: white;--height:40px" strong="true" size="large" type="reset">
         Similar
         Notifications</ion-button>
     </ion-buttons>

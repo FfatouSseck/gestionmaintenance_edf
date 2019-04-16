@@ -4,7 +4,7 @@
 
 <ion-content padding>
   <form [formGroup]="notifFormGroup">
-    <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+    <mat-card class="mat-elevation-z8" style="background-color: #005BBB; text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">General information
       </h4>
     </mat-card>
@@ -38,7 +38,7 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-card class="mat-elevation-z8" style="background-color: #007CC0; text-align: center">
+    <mat-card class="mat-elevation-z8" style="background-color: #005BBB; text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Notification informations
       </h4>
     </mat-card>
@@ -77,7 +77,7 @@
         <ion-label>Attachments({{nbAttachments}})</ion-label>
       </ion-buttons>
       <ion-buttons slot="end">
-        <ion-button (click)="selectImage()">
+        <ion-button (click)="selectImage()" style="color:#005BBB">
           <ion-icon name="camera"></ion-icon>
           Take picture
         </ion-button>
