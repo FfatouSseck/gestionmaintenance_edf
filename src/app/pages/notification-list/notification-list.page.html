@@ -3,6 +3,37 @@
 </ion-header>
 
 <ion-content padding scrollEvents="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-toolbar style="--min-height:50px" *ngIf="noData == false">
+    <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
+      <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm" [formControl]="searchControl"
+        (ionBlur)="toggleSearch()" class="searchbar">
+      </ion-searchbar>
+    </div>
+    <ion-buttons slot="start">
+      <ion-fab-button size="small" (click)="openSelect($event)" style="--background: #007CC0;">
+        <i class="material-icons" style="color: #fff;">sort</i>
+      </ion-fab-button>
+      <ion-select #select value="sort" okText="OK" cancelText="Cancel" style="background-color: white"
+        (ionChange)="sortBy($event)" [style.visibility]="'hidden'">
+        <ion-select-option value="sort">Sort By ...</ion-select-option>
+        <ion-select-option value="notifNo">Notif No</ion-select-option>
+        <ion-select-option value="startDate">Malfunction Start Date</ion-select-option>
+        <ion-select-option value="priority">Priority</ion-select-option>
+        <ion-select-option value="floc">Functional Location</ion-select-option>
+      </ion-select>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()" style="--background: #007CC0;">
+        <i class="material-icons" style="color: #fff;">search</i>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+
   <div *ngIf="orientation === 'portrait-primary';else landscapeContent">
     <div *ngIf="notifList.length==0;else availContent">
       <mat-spinner style="margin: 0 auto"></mat-spinner>
@@ -76,17 +107,3 @@
   </ng-template>
 
 </ion-content>
-<ion-footer>
-  <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf="noData == false">
-    <ion-buttons slot="start">
-      <ion-select value="sort" okText="OK" cancelText="Cancel" style="background-color: white"
-        (ionChange)="sortBy($event)">
-        <ion-select-option value="sort">Sort By ...</ion-select-option>
-        <ion-select-option value="notifNo">Notif No</ion-select-option>
-        <ion-select-option value="startDate">Malfunction Start Date</ion-select-option>
-        <ion-select-option value="priority">Priority</ion-select-option>
-        <ion-select-option value="floc">Functional Location</ion-select-option>
-      </ion-select>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>

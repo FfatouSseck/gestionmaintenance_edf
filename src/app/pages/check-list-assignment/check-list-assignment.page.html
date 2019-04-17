@@ -16,11 +16,6 @@
     </div>
     <div *ngIf="types.length>0">
         <ion-toolbar>
-            <!--ion-buttons slot="start">
-                <ion-fab-button size="small" *ngIf="!refresh" style="--background: #007CC0;">
-                    <i class="material-icons" style="color: #fff;">sort</i>
-                </ion-fab-button>
-            </ion-buttons>-->
             <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
                 <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm"
                     [formControl]="searchControl" (ionBlur)="toggleSearch()" class="searchbar">

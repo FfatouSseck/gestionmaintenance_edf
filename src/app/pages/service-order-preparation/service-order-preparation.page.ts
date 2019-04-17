@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Order } from 'src/app/interfaces/order.interface';
 import { ServiceOrderPreparationService } from 'src/app/providers/service-order-preparation.service';
 
 import { ModalController, Platform, ToastController, AlertController } from '@ionic/angular';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { Storage } from '@ionic/storage';
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 import { BaseOrderPage } from '../base.order.page';
 import { NotificationService } from 'src/app/providers/notification.service';
 import { MockService } from 'src/app/providers/mock.service';
+import { debounceTime } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-service-order-preparation',
@@ -25,6 +26,10 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   pmAct = "";
   orderStatus = "";
   searchTerm: string = '';
+  searchControl: FormControl;
+  @ViewChild('search') search: any;
+  clicked = false;
+
   modif = false;
   notAvailable = true;
   noData = false;
@@ -32,6 +37,7 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
   noComponents = false;
   noOperations = false;
   noNotif = false;
+  refresh = false;
 
   ordersList: any[] = []
 
@@ -121,9 +127,17 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     this.screenOrientation.onChange().subscribe(
       () => {
         this.orientation = this.screenOrientation.type;
-      }
-    );
+      });
+    this.searchControl = new FormControl();
+    this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
+      this.setFilteredItems();
 
+    });
+
+  }
+
+  setFilteredItems(){
+    this.ordersList = this.orderService.filterOrders(this.searchTerm);
   }
 
   ngOnInit() {
@@ -148,7 +162,22 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
 
   }
 
+  toggleSearch() {
+    if (this.clicked) {
+      this.clicked = false;
+    } else {
+      this.clicked = true;
+      setTimeout(() => {
+        this.search.setFocus();
+      }, 100);
+    }
+  }
+
   ionViewDidEnter() {
+    this.getAllOrders();
+  }
+
+  getAllOrders(){
     this.loadNotif = true;
     this.operations = [];
 
@@ -174,7 +203,16 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
           }
         }
       })
+  }
 
+  doRefresh(event) {
+    this.refresh = true;
+    this.getAllOrders();
+
+    setTimeout(() => {
+      event.target.complete();
+      this.refresh = false;
+    }, 3000);
   }
 
   presentDetails(order: Order) {
@@ -217,7 +255,8 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
                 let done = this.orderService.setOrders(orders.d.results);
                 if (done) {
                   this.ordersList = this.orderService.getAllOrders();
-                  if (this.ordersList[0].OrderNo != null) {
+                  if (this.ordersList.length > 0) {
+                    this.orderService.setOrders(this.ordersList);
                     this.notAvailable = false;
                     this.noData = false;
                   }
@@ -246,14 +285,15 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
       (choosenPlantcode) => {
         if (choosenPlantcode != null) {
           this.ordersList = this.mockService.getAllMockSOP(choosenPlantcode);
-          if (this.ordersList[0].OrderNo != null) {
+          if (this.ordersList.length > 0) {
+            this.orderService.setOrders(this.ordersList);
             this.notAvailable = false;
             this.noData = false;
             if (this.choosenNotif.NotifNo != null) {
               this.loadNotif = false;
             }
           }
-          if (this.ordersList.length == 0) {
+          else {
             this.notAvailable = false;
             this.noData = true;
           }

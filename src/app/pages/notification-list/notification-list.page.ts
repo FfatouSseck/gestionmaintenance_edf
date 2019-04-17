@@ -1,9 +1,9 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild } from '@angular/core';
 
 import { ModalController, Platform, ToastController, AlertController, LoadingController, ActionSheetController } from '@ionic/angular';
 import { Notification, NotificationLight, NotifHeader } from '../../interfaces/notification.interface';
 import { BasePage } from '../base.page';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { MatSnackBar } from '@angular/material';
 import { NotificationService } from '../../providers/notification.service';
@@ -18,6 +18,7 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 import { Camera } from '@ionic-native/Camera/ngx';
 import { HttpClient } from '@angular/common/http';
 import { File } from '@ionic-native/File/ngx';
+import { debounceTime } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-notification-list',
@@ -32,6 +33,12 @@ export class NotificationListPage extends BasePage implements OnInit {
   floc = "";
   cause = "";
   objectPart = "";
+
+  searchControl: FormControl;
+  @ViewChild('search') search: any;
+  @ViewChild('select') select;
+  clicked = false;
+  refresh = false;
 
   choosenDC = ""  //choosen damage code
   choosenDG = ""  //choosen damage group
@@ -74,12 +81,22 @@ export class NotificationListPage extends BasePage implements OnInit {
       }
     );
 
+    this.searchControl = new FormControl();
+    this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
+      this.setFilteredItems();
+
+    });
+
     this.storage.get("mock").then(
       (mock) => {
         if (mock != undefined && mock != null) {
           this.mock = mock;
         }
-      })
+      });
+  }
+
+  setFilteredItems() {
+    this.notifList = this.notifService.filterNotifs(this.searchTerm);
   }
 
   ngOnInit() {
@@ -99,6 +116,35 @@ export class NotificationListPage extends BasePage implements OnInit {
   }
 
   ionViewDidEnter() {
+    this.getAllNotifs();
+  }
+
+  doRefresh(event) {
+    this.refresh = true;
+    this.getAllNotifs();
+
+    setTimeout(() => {
+      event.target.complete();
+      this.refresh = false;
+    }, 3000);
+  }
+
+  toggleSearch() {
+    if (this.clicked) {
+      this.clicked = false;
+    } else {
+      this.clicked = true;
+      setTimeout(() => {
+        this.search.setFocus();
+      }, 100);
+    }
+  }
+
+  openSelect(evt){
+    this.select.open();
+  }
+
+  getAllNotifs() {
     let available = this.notifService.notifsAvailable();
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
@@ -125,9 +171,6 @@ export class NotificationListPage extends BasePage implements OnInit {
           this.noData = true;
         }
       });
-
-
-
 
     //getting PrioritySet from server
     if (this.mock) {
@@ -175,6 +218,7 @@ export class NotificationListPage extends BasePage implements OnInit {
       if (this.notifList[0].NotifNo != null) {
         this.notAvailable = false;
         this.noData = false;
+        this.notifService.setNotifs(this.notifList);
       }
     }
 
@@ -422,6 +466,7 @@ export class NotificationListPage extends BasePage implements OnInit {
                   if (this.notifList[0].NotifNo != null) {
                     this.notAvailable = false;
                     this.noData = false;
+                    this.notifService.setNotifs(this.notifList);
                   }
                 }
                 else this.noData = true;

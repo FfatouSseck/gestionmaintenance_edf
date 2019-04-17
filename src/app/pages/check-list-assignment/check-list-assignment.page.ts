@@ -10,7 +10,6 @@ import { MockService } from 'src/app/providers/mock.service';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { ModalController } from '@ionic/angular';
 import { ChecklistPage } from '../checklist/checklist.page';
-import { SpeedDialFabPosition } from 'src/app/components/speed-dial-fab/speed-dial-fab.component';
 
 
 @Component({
@@ -91,7 +90,7 @@ export class CheckListAssignmentPage implements OnInit {
 
   setFilteredItems() {
     this.orders = new MatTableDataSource(
-      this.orderService.filterOrders(this.searchTerm, this.ordersByType));
+      this.orderService.filterOrders1(this.searchTerm, this.ordersByType));
   }
 
   getAllOrders(segmentIndex?: number) {
