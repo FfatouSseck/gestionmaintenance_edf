@@ -87,6 +87,7 @@ export class DetailsSettingsPage implements OnInit {
           let index = this.getPlantIndexFromCode(syncPlant);
           console.log("syncPlant: ", syncPlant, " index: ", index);
           this.syncPlant = syncPlant;
+          this.plants[index].state = "checked";
         }
       }
     )
