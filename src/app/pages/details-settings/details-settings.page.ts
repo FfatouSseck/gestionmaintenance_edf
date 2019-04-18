@@ -18,11 +18,13 @@ export class DetailsSettingsPage implements OnInit {
 
   searchTerm: string = '';
   searchControl: FormControl;
-  plants: any[]=[];
+  plants: any[] = [];
   checkedPlants: IPlant[] = [];
-  choosenPlant: any;
+  choosenPlant: any = "";
+  syncPlant: any = "";
   notAvailable = true;
   searching: any = false;
+  i = 0;
 
   constructor(public navCtrl: NavController, public dataService: Data, public modalController: ModalController,
     public snackBar: MatSnackBar, public storage: Storage, public navParams: NavParams, public plantService: PlantsService,
@@ -43,7 +45,7 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   setFilteredItems() {
-    
+
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null) {
@@ -62,14 +64,14 @@ export class DetailsSettingsPage implements OnInit {
             this.plants[index].state = "checked";
           }
           //this.plants = plts;
-          if(this.plants.length > 0){
+          if (this.plants.length > 0) {
             this.notAvailable = false;
             this.searching = false;
           }
         }
         else {
           this.plants = this.dataService.filterItems(this.searchTerm);
-          if(this.plants.length > 0){
+          if (this.plants.length > 0) {
             this.notAvailable = false;
             this.searching = false;
           }
@@ -78,6 +80,16 @@ export class DetailsSettingsPage implements OnInit {
       (err) => {
         console.log("error", err);
       })
+
+    this.storage.get('syncPlant').then(
+      (syncPlant) => {
+        if (syncPlant != null && syncPlant != undefined && syncPlant !== "") {
+          let index = this.getPlantIndexFromCode(syncPlant);
+          console.log("syncPlant: ", syncPlant, " index: ", index);
+          this.syncPlant = syncPlant;
+        }
+      }
+    )
 
   }
 
@@ -123,12 +135,16 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   closeModal() {
+    console.log("let's close it");
+
     //we gonna check if there are more than one plant choosen  
-    if (this.checkedPlants.length > 1) {
-      this.openSnackBar("You have choosen more than one plant");
+    if (this.checkedPlants.length > 2) {
+      console.log("here");
+      this.openSnackBar("You have choosen too many plants");
     }
     else if (this.checkedPlants.length == 0) {
-      if (this.choosenPlant === "" || this.choosenPlant == undefined) {
+      console.log("here");
+      if (this.choosenPlant === "" || this.choosenPlant == undefined || this.choosenPlant == null) {
         this.openSnackBar("Please select at least one planning plant");
       }
       else {
@@ -137,22 +153,22 @@ export class DetailsSettingsPage implements OnInit {
         });
       }
     }
-    else if (this.checkedPlants.length == 1) {
+    else if (this.checkedPlants.length == 2) {
+      console.log("here");
       //we save the item to session storage and close the modal
-      this.storage.remove("choosenPlant").then(
-        () => {
-          this.storage.set("choosenPlant", this.checkedPlants[0].Plant);
-          this.storage.set("choosenPlantDescr", this.checkedPlants[0].PlantDescr);
-          this.modalController.dismiss({
-            'result': this.checkedPlants[0].Plant
-          });
-        },
-        (err) => {
-          console.log(err);
-        })
+
+      this.storage.set("choosenPlant", this.checkedPlants[0].Plant);
+      this.storage.set("choosenPlantDescr", this.checkedPlants[0].PlantDescr);
+      this.storage.set("syncPlant", this.checkedPlants[1].Plant);
+      this.storage.set("syncPlantDescr", this.checkedPlants[1].PlantDescr);
+      this.modalController.dismiss({
+        'result': this.checkedPlants
+      });
+
 
     }
     else if (this.choosenPlant !== "") {
+      console.log("here");
       this.modalController.dismiss({
         'result': this.choosenPlant
       });
@@ -160,34 +176,109 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   choose(plant) {
-    this.checkedPlants = [];
-    this.checkedPlants.push(plant);
-    this.closeModal();
+    console.log("here");
+    if (this.choosenPlant !== "") {
+      let ind = this.getPlantIndexFromCode(this.choosenPlant);
+      let indexToAdd = this.getPlantIndexFromCode(plant.Plant);
+
+      if (!this.checkedPlants.includes(this.plants[ind])) {
+        this.checkedPlants.push(this.plants[ind]);
+      }
+      if (ind != indexToAdd && !this.checkedPlants.includes(plant)) {
+        this.checkedPlants.push(plant);
+      }
+    }
+    else {
+      if (!this.checkedPlants.includes(plant)) {
+        this.checkedPlants.push(plant);
+      }
+    }
+    if (this.checkedPlants.length == 1) {
+      this.storage.set("choosenPlant", plant.Plant);
+      this.storage.set("choosenPlantDescr", plant.PlantDescr);
+    }
+    else if (this.checkedPlants.length == 2) {
+      this.storage.set("choosenPlant", this.checkedPlants[0].Plant);
+      this.storage.set("choosenPlantDescr", this.checkedPlants[0].PlantDescr);
+      this.storage.set("syncPlant", this.checkedPlants[1].Plant);
+      this.storage.set("syncPlantDescr", this.checkedPlants[1].PlantDescr);
+    }
+    this.modalController.dismiss({
+      'result': this.checkedPlants
+    });
   }
 
   notify(event, index) {
-    let ind = this.getPlantIndexFromCode(this.choosenPlant);
-    if (index != ind && event.detail.checked == true) {
-      //if the item is checked we add it to the choosen ones
-      this.checkedPlants.push(this.plants[index]);
-      if (this.checkedPlants.length == 1) {
-        this.closeModal();
+
+    if (event.detail.checked == true) {
+      console.log(this.checkedPlants);
+
+      if (this.choosenPlant !== "" && this.i == 0) {
+        this.storage.get("choosenPlantDescr").then(
+          (choosenPlantDescr) => {
+            if (choosenPlantDescr !== "" && choosenPlantDescr != null
+              && choosenPlantDescr != undefined) {
+              let elt = {
+                Plant: this.choosenPlant,
+                PlantDescr: this.choosenPlant,
+                state: "unchecked"
+              }
+              if (!this.checkedPlants.includes(elt)) {
+                console.log("here");
+
+                this.checkedPlants.push(elt);
+                console.log(this.checkedPlants)
+                this.i++;
+              }
+              else console.log("here");
+            }
+          })
+        let ind = this.getPlantIndexFromCode(this.choosenPlant);
+        console.log("index to add: ", index, " index of cp: ", ind);
+        if (index != ind && !this.checkedPlants.includes(this.plants[index])) {
+          this.checkedPlants.push(this.plants[index]);
+          console.log(this.checkedPlants)
+          if (this.checkedPlants.length == 2) {
+            this.closeModal();
+          }
+        }
       }
+      else {//we do not have a choosen plant
+        this.checkedPlants.push(this.plants[index]);
+        console.log(this.checkedPlants)
+        if (this.checkedPlants.length == 2) {
+          this.closeModal();
+        }
+      }
+
     }
+
     else if (event.detail.checked == false) {
+      console.log("here");
       //we remove the item from the array
+      let ind = this.getPlantIndexFromCode(this.choosenPlant);
       let i = this.getPlantIndexFromCode(this.plants[index].Plant);//index on global plants array
       for (let j = 0; j < this.checkedPlants.length; j++) {
         if (this.plants[i].Plant === this.checkedPlants[j].Plant) {
           this.checkedPlants.splice(j, 1);
-          break
+          break;
         }
       }
       this.plants[index].state = "unchecked";
-      if (this.checkedPlants.length == 1) {
-        this.closeModal();
+      console.log("index to delete: ", i, " index of cp: ", ind);
+      if (i == ind) {
+        console.log("here we remove choosenPlant")
+        this.storage.remove("choosenPlant").then(
+          () => {
+            this.storage.remove("choosenPlantDescr").then(
+              () => {
+                this.choosenPlant = "";
+              }
+            )
+          }
+        )
       }
-
+      console.log(this.checkedPlants);
     }
   }
 

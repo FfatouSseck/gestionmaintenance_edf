@@ -22,10 +22,10 @@
     </div>
 
     <mat-list>
-      <mat-list-item *ngFor="let plant of plants;let i=index" (click)="choose(plant)">
+      <mat-list-item *ngFor="let plant of plants;let i=index">
         <ion-toggle (ionChange)="notify($event,i)" color="primary"
           [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>
-        <p matLine style="color: #000;">{{plant.Plant}}-{{plant.PlantDescr}}</p>
+        <p  (click)="choose(plant)" matLine style="color: #000;">{{plant.Plant}}-{{plant.PlantDescr}}</p>
         <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
       </mat-list-item>
     </mat-list>

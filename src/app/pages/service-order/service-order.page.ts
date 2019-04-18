@@ -72,21 +72,30 @@ export class ServiceOrderPage implements OnInit {
               this.soList = this.serviceOrders;
             }
             else {//orderTypes
-              console.log("option: ",option);
+              console.log("option: ", option);
+              this.soList = this.getSOsByOrderType(option);
             }
   }
 
   getMySOs() {
-    return this.soList.filter(
+    return this.serviceOrders.filter(
       (so) => {
         return so.Mine == true;
       }
     )
   }
 
+  getSOsByOrderType(ord) {
+    return this.serviceOrders.filter(
+      (so) => {
+        return so.OrderType === ord;
+      }
+    )
+  }
+
   getSOsByPriority(pr: string) {
     if (pr === '1') {
-      return this.soList.filter(
+      return this.serviceOrders.filter(
         (so) => {
           return so.Priority === "1";
         }
@@ -94,7 +103,7 @@ export class ServiceOrderPage implements OnInit {
     }
     else
       if (pr === '2') {
-        return this.soList.filter(
+        return this.serviceOrders.filter(
           (so) => {
             return so.Priority === "2";
           }
@@ -102,7 +111,7 @@ export class ServiceOrderPage implements OnInit {
       }
       else
         if (pr === '3') {
-          return this.soList.filter(
+          return this.serviceOrders.filter(
             (so) => {
               return so.Priority === "3";
             }
@@ -110,7 +119,7 @@ export class ServiceOrderPage implements OnInit {
         }
         else
           if (pr === '4') {
-            return this.soList.filter(
+            return this.serviceOrders.filter(
               (so) => {
                 return so.Priority === "4";
               }
