@@ -44,7 +44,18 @@ export class MockService {
     let SOPList = SOP;
     return SOPList.filter(
       (sop) =>{
-        return sop.PlanPlant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1;
+        return (sop.PlanPlant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1
+             && sop.InProcess == false);
+      }
+    )
+  }
+
+  getAllMockSO(codePlant){
+    let SOPList = SOP;
+    return SOPList.filter(
+      (sop) =>{
+        return (sop.PlanPlant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1
+             && sop.InProcess == true);
       }
     )
   }

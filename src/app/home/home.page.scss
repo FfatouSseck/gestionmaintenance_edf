@@ -67,5 +67,7 @@ mat-card {
   background-color: #484848;
 }
 
-  
+.mat-spinner-color::ng-deep circle{
+  stroke: #FFFFFF !important;
+  } 
 

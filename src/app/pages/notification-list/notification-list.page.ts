@@ -337,7 +337,7 @@ export class NotificationListPage extends BasePage implements OnInit {
   }
 
   presentDetails(notif: NotifHeader) {
-    this.choosenNotif = notif;
+    /*this.choosenNotif = notif;
     this.modif = false;
     let index = this.notifList.indexOf(notif);
 
@@ -349,7 +349,7 @@ export class NotificationListPage extends BasePage implements OnInit {
       }
       this.notifList[index].color = "black";
       this.notifList[index].fw = "bold";
-    }*/
+    }
 
     for (let i = 0; i < this.notifList.length; i++) {
       this.notifList[i].bgcolor = "white";
@@ -362,7 +362,7 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.cause = this.choosenNotif.CauseCode + " " + this.choosenNotif.CauseDescr;
     this.objectPart = this.choosenNotif.ObjectPartCode + " " + this.choosenNotif.ObjectPartCodeDescr;
     this.choosenCC = this.cause;
-    this.choosenObjectPartCode = this.objectPart;
+    this.choosenObjectPartCode = this.objectPart;*/
 
     this.notifService.setCurrentNotif(notif);
     this.router.navigateByUrl("/notification-details");

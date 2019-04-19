@@ -6,6 +6,8 @@
       </ion-button>
     </ion-buttons>
     <ion-title>Plant</ion-title>
+    <ion-searchbar *ngIf="!notAvailable" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+
   </ion-toolbar>
 </ion-header>
 
@@ -15,8 +17,6 @@
   </div>
 
   <ng-template #contentAvailable>
-    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
-
     <div *ngIf="searching" class="spinner-container">
       <ion-spinner></ion-spinner>
     </div>

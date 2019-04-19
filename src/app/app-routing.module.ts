@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'work-center-list', loadChildren: './pages/work-center-list/work-center-list.module#WorkCenterListPageModule' },
   { path: 'employee-list', loadChildren: './pages/employee-list/employee-list.module#EmployeeListPageModule' },
   { path: 'act-type-list', loadChildren: './pages/act-type-list/act-type-list.module#ActTypeListPageModule' },
+  { path: 'component-details', loadChildren: './pages/component-details/component-details.module#ComponentDetailsPageModule' },
 
 
 
