@@ -252,7 +252,6 @@ export class HomePage implements OnInit {
                 if (cp != null && cp != undefined && cp !== "") {
                     this.choosenPlant = cp;
                     let plants = [{ Plant: this.choosenPlant }]
-                    console.log("plants[0]: ",plants[0])
                     this.updateData(plants);
 
                 }

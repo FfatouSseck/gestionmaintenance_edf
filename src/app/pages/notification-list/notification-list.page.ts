@@ -364,8 +364,9 @@ export class NotificationListPage extends BasePage implements OnInit {
     this.choosenCC = this.cause;
     this.choosenObjectPartCode = this.objectPart;*/
 
-    this.notifService.setCurrentNotif(notif);
+    
     this.router.navigateByUrl("/notification-details");
+    this.notifService.setCurrentNotif(notif);
   }
 
   updateNotif(notif: Notification) {

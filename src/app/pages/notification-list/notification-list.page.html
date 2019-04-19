@@ -44,8 +44,7 @@
       </p>
 
       <mat-nav-list>
-        <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
-          [style.background-color]="notif.bgcolor" [style.color]="notif.color">
+        <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)">
           <h3 matLine style="font-weight: bold;color: #005BBB;font-size: 15px">{{notif.NotifNo}} </h3>
           <p matLine [style.font-weight]="notif.fw" style="font-size: 15px"> {{notif.ShortText}} </p>
           <p matLine [style.font-weight]="notif.fw" style="font-size: 15px" class="demo-2">
@@ -78,8 +77,7 @@
       </p>
       <div *ngIf="noData == false">
         <mat-nav-list>
-          <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)"
-            [style.background-color]="notif.bgcolor" [style.color]="notif.color">
+          <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)">
             <h3 matLine style="font-weight: bold;color: #005BBB;font-size: 15px">{{notif.NotifNo}} </h3>
             <p matLine [style.font-weight]="notif.fw" style="font-size: 15px"> {{notif.ShortText}} </p>
             <p matLine [style.font-weight]="notif.fw" style="font-size: 15px" class="demo-2">

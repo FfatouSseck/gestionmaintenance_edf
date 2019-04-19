@@ -119,6 +119,8 @@ export class CheckListAssignmentPage implements OnInit {
   };
 
   getData(segmentIndex?: number) {
+    console.log("segmentIndex: ",segmentIndex);
+    
     if (this.mock) {
       this.orderList = this.mockService.getMockOrderByPlant(this.codePlant);
       let types = this.getOrderTypes(this.orderList);
@@ -145,11 +147,13 @@ export class CheckListAssignmentPage implements OnInit {
       }
     }
     else {
-      this.orderService.requestDataFromMultipleSources(this.codePlant).subscribe(
+      this.orderService.getAllOrdersByChoosenPlant(this.codePlant).subscribe(
         (responseList) => {
-          this.orderList = responseList[0].d.results;
+          console.log("orders: ",responseList)
+          this.orderList = responseList.d.results;
           let types = this.getOrderTypes(this.orderList);
           this.types = this.getUnique(types);
+          console.log("types: ",this.types);
           if (this.types.length == 0) {
             this.loading = false;
             this.noData = true;
@@ -202,7 +206,7 @@ export class CheckListAssignmentPage implements OnInit {
     this.ordersByType = [];
     //this.loading = true;
     let i = 0;
-
+    
     for (i = 0; i < this.orderList.length; i++) {
       if (this.orderList[i].OrderType === ev.tab.textLabel) {
         ords.push({
@@ -213,7 +217,8 @@ export class CheckListAssignmentPage implements OnInit {
 
     let newOrds = [];
     //on recupere la ligne d'opération pour chaque ordre
-
+    console.log("ords",ords);
+    
     if (this.mock) {
       ords.forEach((element) => {
         let ops = this.mockService.getMockOrderOperations(element.orderPart.OrderNo);
@@ -234,8 +239,7 @@ export class CheckListAssignmentPage implements OnInit {
       })
     }
     else {
-      console.log("from remote server");
-      ords.forEach(async (element) => {
+      ords.forEach( (element) => {
         this.orderService.getOrderOperations(element.orderPart.OrderNo)
           .subscribe(
             (operations) => {
@@ -253,7 +257,7 @@ export class CheckListAssignmentPage implements OnInit {
             error => console.log("Error: ", error),
             async () => {
               this.ordersByType = newOrds;
-              this.orders = await new MatTableDataSource(this.ordersByType);
+              this.orders = new MatTableDataSource(this.ordersByType);
               this.ok = true;
               this.loading = false;
             }
