@@ -55,14 +55,27 @@
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
   </form>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button data-desc="Description 1">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="do2()" data-desc="Description 2">
+        <ion-icon name="person-add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>
 
 <ion-footer>
   <ion-toolbar style="--background: #fff;--min-height:50px">
     <ion-buttons slot="end">
-      <ion-button *ngIf="mode === 'create'" (click)="presentRestConfirm()" style="background-color: grey;color: white;--height:40px" strong="true"
-        type="reset">Clear</ion-button>
+      <ion-button *ngIf="mode === 'create'" (click)="presentRestConfirm()"
+        style="background-color: grey;color: white;--height:40px" strong="true" type="reset">Clear</ion-button>
       <ion-button style="background-color: red;color: white" (click)="closeModal()">
         Cancel
       </ion-button>
