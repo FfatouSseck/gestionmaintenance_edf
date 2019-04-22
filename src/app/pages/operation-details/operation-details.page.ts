@@ -227,7 +227,7 @@ export class OperationDetailsPage implements OnInit {
       this.op.Assignee = data.result.PersonNo;
       this.op.AssigneeName = data.result.UserFullName;
       if (this.op.Assignee !== "") {
-        this.assignee += this.op.Assignee;
+        this.assignee = this.op.Assignee;
         if (this.op.AssigneeName !== "") {
           this.assignee += " - " + this.op.AssigneeName;
         }
@@ -268,7 +268,7 @@ export class OperationDetailsPage implements OnInit {
           this.op.ActivityType = data.result.ActivityType;
           this.op.ActivityTypeDescr = data.result.ActivityTypeDescr;
           if (this.op.ActivityType !== "") {
-            this.actType += this.op.ActivityType;
+            this.actType = this.op.ActivityType;
             if (this.op.ActivityTypeDescr !== "") {
               this.actType += " - " + this.op.ActivityTypeDescr;
             }
