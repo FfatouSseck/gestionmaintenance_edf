@@ -1,0 +1,274 @@
+<ion-header>
+  <ion-toolbar style="--background: #005BBB">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">CheckList</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Documents
+        </mat-panel-title>
+        <mat-panel-description>
+          All about docs
+          <mat-icon>class</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p>Documents</p>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Tools
+        </mat-panel-title>
+        <mat-panel-description>
+          All about equipments
+          <mat-icon>settings_applications
+          </mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf="noEquipments">No tool available</p>
+      <div *ngIf="loadingEquipments;else contentAvailable">
+        <mat-spinner style="margin: 0 auto"></mat-spinner>
+      </div>
+
+      <ng-template #contentAvailable>
+
+        <div *ngIf="noEquipments == false">
+          <div *ngIf="loadingEquipments == false">
+            <table mat-table [dataSource]="equipments">
+              <ng-container matColumnDef="Equipement">
+                <th mat-header-cell *matHeaderCellDef> Tool </th>
+                <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.ToolId}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Description">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center"> Description </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.ToolDescr}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Quantity">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center"> Quantity </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.ToolQuantity}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Checked">
+                <th mat-header-cell *matHeaderCellDef style="text-align: end"> Picked </th>
+                <td mat-cell *matCellDef="let element" style="text-align: end">
+                  <mat-checkbox [checked]="element.Picked" color="primary" class="example-form">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedEQColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedEQColumns;let element">
+              </tr>
+            </table>
+          </div>
+        </div>
+      </ng-template>
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Parts
+        </mat-panel-title>
+        <mat-panel-description>
+          All about parts
+          <mat-icon>settings_input_component</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf="noParts">No part available</p>
+      <div *ngIf="loadingParts;else partsAvailable">
+        <mat-spinner style="margin: 0 auto"></mat-spinner>
+      </div>
+
+      <ng-template #partsAvailable>
+
+        <div *ngIf="noParts == false">
+          <div *ngIf="loadingParts == false">
+            <table mat-table [dataSource]="parts">
+              <ng-container matColumnDef="Material">
+                <th mat-header-cell *matHeaderCellDef> Material </th>
+                <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.PartId}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Description">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center"> Description </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.PartDescr}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Quantity">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center"> Quantity </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.PartQuantity}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Picked">
+                <th mat-header-cell *matHeaderCellDef style="text-align: end"> Picked </th>
+                <td mat-cell *matCellDef="let element" style="text-align: end">
+                  <mat-checkbox [checked]="element.Picked" color="primary" class="example-form">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedPartsColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedPartsColumns;let element">
+              </tr>
+            </table>
+          </div>
+        </div>
+      </ng-template>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Calibrated tools
+        </mat-panel-title>
+        <mat-panel-description>
+          All about tools
+          <mat-icon>build</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <p *ngIf="noCalbs">No calibrated tool available</p>
+      <div *ngIf="loadingCalbs;else calbsAvailable">
+          <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+      </div>
+
+      <ng-template #calbsAvailable>
+
+        <div *ngIf="noCalbs == false">
+          <div *ngIf="loadingCalbs == false">
+            <table mat-table [dataSource]="calbs">
+              <ng-container matColumnDef="Tool">
+                <th mat-header-cell *matHeaderCellDef> Tool </th>
+                <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.ToolcalDescr}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Comment">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center"> Comment </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center"> {{element.Comment}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="SerialNumber">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center"> Serial N° </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;width: 20%"> {{element.ToolcalSn}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="InternRefCode">
+                <th mat-header-cell *matHeaderCellDef style="text-align: end"> Internal Ref </th>
+                <td mat-cell *matCellDef="let element" style="text-align: end;margin-right: 30%"> {{element.ToolcalIntRef}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Remove">
+                <th mat-header-cell *matHeaderCellDef style="text-align: end"> </th>
+                <td mat-cell *matCellDef="let element" style="text-align: end">
+                  <ion-fab-button size="small" style="--background: #E53F00;margin-left: 20% ">
+                    <i class="material-icons" style="color: #fff;">delete</i>
+                  </ion-fab-button>
+                </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedCalbsColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedCalbsColumns;let element">
+              </tr>
+            </table>
+          </div>
+        </div>
+      </ng-template>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Checklist
+        </mat-panel-title>
+        <mat-panel-description>
+          All about checklist
+          <mat-icon>date_range</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          To check
+        </mat-panel-title>
+        <mat-panel-description>
+          All about...
+          <mat-icon>date_range</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          NOK
+        </mat-panel-title>
+        <mat-panel-description>
+          Not OK
+          <mat-icon>date_range</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">End</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+  <ng-template #allTasks>
+    <p>All tasks</p>
+    
+  </ng-template>
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="end">
+      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

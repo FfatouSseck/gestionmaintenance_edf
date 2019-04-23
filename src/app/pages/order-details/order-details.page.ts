@@ -58,7 +58,7 @@ export class OrderDetailsPage implements OnInit {
     this.choosenOrder = this.orderService.getCurrentOrder();
     
     if( this.choosenOrder == undefined) {
-      this.router.navigateByUrl("/service-order-preparation");
+      this.router.navigateByUrl("/home");
     }
 
     this.orderDetailsFormGroup = this._formBuilder.group({

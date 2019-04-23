@@ -43,7 +43,12 @@ export class NotificationDetailsPage implements OnInit {
   {
     this.modalCtrl.dismiss();
   }
-
+  
+  
+  displaySimilarNotifs() {
+    this.router.navigateByUrl("/similar-notifications");
+  }
+  
   ionViewDidEnter(){
     
   }

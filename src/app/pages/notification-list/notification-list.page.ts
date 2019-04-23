@@ -441,9 +441,6 @@ export class NotificationListPage extends BasePage implements OnInit {
     return dateD;
   }
 
-  displaySimilarNotifs() {
-    this.router.navigateByUrl("/similar-notifications");
-  }
 
   modifyNotif() {
     this.modif = true;

@@ -12,6 +12,7 @@ import { EmployeeListPage } from '../employee-list/employee-list.page';
 import { ActTypeListPage } from '../act-type-list/act-type-list.page';
 import { EmployeeService } from 'src/app/providers/employee.service';
 import { ChecklistPage } from '../checklist/checklist.page';
+import { ChecklistDetailsPage } from '../checklist-details/checklist-details.page';
 
 @Component({
   selector: 'app-operation-details',
@@ -310,6 +311,23 @@ export class OperationDetailsPage implements OnInit {
           })
 
       }
+    }
+  }
+
+  async displayChecklistDetails(){
+    this.modal = await this.modalController.create({
+      component: ChecklistDetailsPage,
+      componentProps: {
+        'orderNo' : this.op.OrderNo,
+        'plant': this.op.Plant
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    if (data != undefined){
+      console.log(data);
     }
   }
 
