@@ -200,15 +200,10 @@ export class NotificationListPage extends BasePage implements OnInit {
     let notifNumbers: any[] = []
     let ntfs = this.mockService.getAllMockNotifs(plant);
     this.notifList = ntfs;
-    //var sortedArray:Array<number> = this.notifList.sort((n1,n2) => n1 - n2);
     this.notifList.forEach(nt => {
       let stringNum: number = +nt.NotifNo;
       notifNumbers.push(stringNum)
     });
-
-    //console.log("Sorted notifs by date", this.sortByStartDate(ntfs));
-    //console.log("Sorted notifs notifNo", this.sortByNotifNo(ntfs));
-    //console.log("Sorted notifs priority", this.sortByPriority(ntfs));
     this.notifService.setNotifs(ntfs);
     if (this.notifList.length == 0) {
       this.notAvailable = false;
@@ -260,19 +255,6 @@ export class NotificationListPage extends BasePage implements OnInit {
           return -1;
         }
         if (+a.NotifNo > +b.NotifNo) {
-          return 1;
-        }
-        return 0;
-      })
-  }
-
-  sortByFLOC(tab) {
-    return tab.sort(
-      function (a, b) {
-        if (a.FunctLoc < b.FunctLoc) {
-          return -1;
-        }
-        if (a.FunctLoc > b.FunctLoc) {
           return 1;
         }
         return 0;
@@ -336,34 +318,6 @@ export class NotificationListPage extends BasePage implements OnInit {
   }
 
   presentDetails(notif: NotifHeader) {
-    /*this.choosenNotif = notif;
-    this.modif = false;
-    let index = this.notifList.indexOf(notif);
-
-    /*if (this.orientation !== 'portrait-primary') {
-      for (let i = 0; i < this.notifList.length; i++) {
-        this.notifList[i].bgcolor = "white";
-        this.notifList[i].color = "black";
-        this.notifList[i].fw = "normal";
-      }
-      this.notifList[index].color = "black";
-      this.notifList[index].fw = "bold";
-    }
-
-    for (let i = 0; i < this.notifList.length; i++) {
-      this.notifList[i].bgcolor = "white";
-    }
-    this.notifList[index].bgcolor = "#F7F7F7";
-
-    this.floc = this.choosenNotif.FunctLoc + " " + this.choosenNotif.FunctLocDescr;
-    this.choosenFunctLoc = this.choosenNotif.FunctLoc;
-    this.choosenDC = this.choosenNotif.DamageCode + " " + this.choosenNotif.DamageCodeDescr;
-    this.cause = this.choosenNotif.CauseCode + " " + this.choosenNotif.CauseDescr;
-    this.objectPart = this.choosenNotif.ObjectPartCode + " " + this.choosenNotif.ObjectPartCodeDescr;
-    this.choosenCC = this.cause;
-    this.choosenObjectPartCode = this.objectPart;*/
-
-    
     this.router.navigateByUrl("/notification-details");
     this.notifService.setCurrentNotif(notif);
   }

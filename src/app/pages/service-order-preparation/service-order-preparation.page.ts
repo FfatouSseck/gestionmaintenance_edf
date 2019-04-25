@@ -280,6 +280,108 @@ export class ServiceOrderPreparationPage extends BaseOrderPage implements OnInit
     )
   }
 
+  sortAlphaNumeric = (a, b) => {
+    // convert to strings and force lowercase
+    a.FunctLoc = typeof a.FunctLoc === 'string' ? a.FunctLoc : a.FunctLoc.toString();
+    b.FunctLoc = typeof b.FunctLoc === 'string' ? b.FunctLoc : b.FunctLoc.toString();
+
+    return a.FunctLoc.localeCompare(b.FunctLoc);
+  };
+
+
+  sortBy(option) {
+    if (option === 'creationDate') {
+      this.ordersList = this.sortByStartDate(this.ordersList);
+    }
+    else if (option === 'priority') {
+      this.ordersList = this.sortByPriority(this.ordersList);
+    }
+    else if (option === 'orderNo') {
+      this.ordersList = this.sortByOrderNo(this.ordersList);
+    }
+    else if (option === 'floc') {
+      this.ordersList.sort(this.sortAlphaNumeric);
+    }
+  }
+
+  sortByOrderNo(tab: any[]): any[] {
+    return tab.sort(
+      function (a, b) {
+        if (+a.OrderNo < +b.OrderNo) {
+          return -1;
+        }
+        if (+a.OrderNo > +b.OrderNo) {
+          return 1;
+        }
+        return 0;
+      })
+  }
+
+  sortByPriority(tab: any[]): any[] {
+    return tab.sort(
+      function (a, b) {
+        if (+a.Priority < +b.Priority) {
+          return -1;
+        }
+        else if (+a.Priority > +b.Priority) {
+          return 1;
+        }
+        else return 0;
+      })
+  }
+  sortByStartDate(tab: any[]): any[] {
+    let sortedTab: any[] = [];
+    sortedTab = tab.sort((a: any, b: any) => {
+
+      if (this.getTime(this.stringToDate(this.formatDate(a.CreationDate))) <
+        this.getTime(this.stringToDate(this.formatDate(b.CreationDate)))) {
+        return -1;
+      }
+      else if (this.getTime(this.stringToDate(this.formatDate(a.CreationDate))) >
+        this.getTime(this.stringToDate(this.formatDate(b.CreationDate)))) {
+        return 1;
+      }
+      else {
+        return 0;
+      }
+    });
+    return sortedTab;
+  }
+
+  stringToDate(dateString) {
+    const [dd, mm, yyyy] = dateString.split("-");
+    return new Date(`${yyyy}-${mm}-${dd}`);
+  };
+
+  getTime(date?: Date) {
+    return date != null ? date.getTime() : 0;
+  }
+
+  
+  formatDate(newD: string) {
+
+    let d1 = newD.replace('/Date(', '');
+    let startDate = d1.replace(')/', '');
+    let newDate = new Date(Number(startDate));
+
+    let m = newDate.getMonth() + 1;
+    let d = newDate.getDate();
+    let month = "";
+    let day = "";
+
+    if (m.toString().length < 2) {
+      month = "0" + m;
+    } else month = m.toString();
+
+    if (d.toString().length < 2) {
+      day = "0" + d;
+    } else day = d.toString();
+
+    let datec = day + "-" + month + "-" + newDate.getFullYear();
+    return datec
+
+  }
+
   getMockOrders() {
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
