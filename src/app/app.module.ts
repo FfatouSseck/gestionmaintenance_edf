@@ -42,6 +42,8 @@ import { StandardTextListPage } from './pages/standard-text-list/standard-text-l
 import { WorkCenterListPage } from './pages/work-center-list/work-center-list.page';
 import { EmployeeListPage } from './pages/employee-list/employee-list.page';
 import { ActTypeListPage } from './pages/act-type-list/act-type-list.page';
+import { ChecklistDetailsPage } from './pages/checklist-details/checklist-details.page';
+import { NavHeaderComponent } from './components/navigation/header/header.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { ActTypeListPage } from './pages/act-type-list/act-type-list.page';
     StandardTextListPage,
     WorkCenterListPage,
     EmployeeListPage,
-    ActTypeListPage
+    ActTypeListPage,
+    ChecklistDetailsPage,
+    NavHeaderComponent,
   ],
   entryComponents: [
     NotificationListPage,
@@ -78,7 +82,9 @@ import { ActTypeListPage } from './pages/act-type-list/act-type-list.page';
     StandardTextListPage,
     WorkCenterListPage,
     EmployeeListPage,
-    ActTypeListPage
+    ActTypeListPage,
+    ChecklistDetailsPage,
+    NavHeaderComponent,
   ],
   imports: [
     BrowserModule, 

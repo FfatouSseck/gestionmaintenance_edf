@@ -15,17 +15,15 @@
       </ion-searchbar>
     </div>
     <ion-buttons slot="start">
-      <ion-fab-button size="small" (click)="openSelect($event)" style="--background: #007CC0;">
-        <i class="material-icons" style="color: #fff;">sort</i>
+      <ion-fab-button size="small" [matMenuTriggerFor]="menu" style="--background: #007CC0;">
+        <i class="material-icons" style="color: #fff;">swap_vert</i>
       </ion-fab-button>
-      <ion-select #select value="sort" okText="OK" cancelText="Cancel" style="background-color: white"
-        (ionChange)="sortBy($event)" [style.visibility]="'hidden'">
-        <ion-select-option value="sort">Sort By ...</ion-select-option>
-        <ion-select-option value="notifNo">Notif No</ion-select-option>
-        <ion-select-option value="startDate">Malfunction Start Date</ion-select-option>
-        <ion-select-option value="priority">Priority</ion-select-option>
-        <ion-select-option value="floc">Functional Location</ion-select-option>
-      </ion-select>
+      <mat-menu #menu="matMenu">
+        <button (click)="sortBy('notifNo')" mat-menu-item>Notif Number</button>
+        <button (click)="sortBy('startDate')" mat-menu-item>Malfunction Start Date</button>
+        <button (click)="sortBy('priority')" mat-menu-item>Priority</button>
+        <button (click)="sortBy('floc')" mat-menu-item>Functional Location</button>
+      </mat-menu>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()" style="--background: #007CC0;">

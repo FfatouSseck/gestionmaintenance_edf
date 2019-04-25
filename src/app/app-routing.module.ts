@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'employee-list', loadChildren: './pages/employee-list/employee-list.module#EmployeeListPageModule' },
   { path: 'act-type-list', loadChildren: './pages/act-type-list/act-type-list.module#ActTypeListPageModule' },
   { path: 'component-details', loadChildren: './pages/component-details/component-details.module#ComponentDetailsPageModule' },
+  { path: 'checklist-details', loadChildren: './pages/checklist-details/checklist-details.module#ChecklistDetailsPageModule' },
 
 
 

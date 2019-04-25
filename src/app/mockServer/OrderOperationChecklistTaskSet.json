@@ -39,11 +39,35 @@
 		"ChklstLoc2": "Remotely",
 		"ChklstLoc3": "N/A",
 		"ChklstLoc4": "Cabinets",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "Test 2",
 		"Measure": {
 			"__deferred": {
 				"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00002')/Measure"
+			}
+		}
+	},
+	{
+		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00003')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00003')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTask"
+		},
+		"OrderNo": "5322337",
+		"PerformedAt": null,
+		"Activity": "0010",
+		"WorkInstruction": "",
+		"TaskDescr": "Task 3",
+		"Status": "KO",
+		"TaskId": "00003",
+		"ChklstLoc2": "Remotely",
+		"ChklstLoc3": "N/A",
+		"ChklstLoc4": "Cabinets",
+		"Plant": "2BCB",
+		"Comment": "Test 3",
+		"Measure": {
+			"__deferred": {
+				"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00003')/Measure"
 			}
 		}
 	},
@@ -159,7 +183,7 @@
 		"ChklstLoc2": "Remotely",
 		"ChklstLoc3": "N/A",
 		"ChklstLoc4": "Cabinets",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2175,7 +2199,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Nacelle",
 		"ChklstLoc4": "Nacelle",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2271,7 +2295,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Rotor",
 		"ChklstLoc4": "Hydraulic pitch (3 cylinders)",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2319,7 +2343,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Rotor",
 		"ChklstLoc4": "Hydraulic pitch (3 cylinders)",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2439,7 +2463,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Rotor",
 		"ChklstLoc4": "Hydraulic pitch (3 cylinders)",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2583,7 +2607,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Rotor",
 		"ChklstLoc4": "Safety equipments",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2727,7 +2751,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Tower",
 		"ChklstLoc4": "Tower",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {
@@ -2847,7 +2871,7 @@
 		"ChklstLoc2": "Wind turbine",
 		"ChklstLoc3": "Tower base",
 		"ChklstLoc4": "Main frame",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Comment": "",
 		"Measure": {
 			"__deferred": {

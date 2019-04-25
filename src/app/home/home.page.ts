@@ -158,13 +158,14 @@ export class HomePage implements OnInit {
             duration: 2000,
         });
     }
-
+o
     onClose(evt) {
         console.log(evt, " is array: ", Array.isArray(evt.result));
         if (Array.isArray(evt.result)) {
             this.choosenPlant = evt.result[0].Plant;
         }
         else {
+            console.log("ici")
             this.choosenPlant = evt.result.choosenPlant;
         }
 
@@ -219,7 +220,6 @@ export class HomePage implements OnInit {
             (mock) => {
                 if (mock != undefined && mock != null && mock == true) {
                     this.soCount = this.mockService.getAllMockSO(this.choosenPlant).length;
-                    console.log("soCount from mock: ", this.soCount);
                 }
                 else {//no mock
                     this.soService.getAllOrdersByChoosenPlant(this.choosenPlant).subscribe(

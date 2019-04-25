@@ -38,7 +38,7 @@
 		"ToolId": "00003",
 		"ToolDescr": "Tool 3",
 		"ToolQuantity": "12",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{
@@ -66,7 +66,7 @@
 		"ToolId": "00005",
 		"ToolDescr": "Tool 5",
 		"ToolQuantity": "6",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{

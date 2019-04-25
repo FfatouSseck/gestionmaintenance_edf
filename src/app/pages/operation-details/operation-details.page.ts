@@ -60,7 +60,7 @@ export class OperationDetailsPage implements OnInit {
       numEmployees: ['', Validators.required],
       checklist: [''],
     });
-    console.log("mode: ", this.mode, "operation: ", this.op);
+    
     if (this.mode === 'create') {
       this.op = {
         Activity: "",

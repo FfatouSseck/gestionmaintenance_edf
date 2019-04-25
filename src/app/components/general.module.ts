@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
-import { SpeedDialFabComponent } from './speed-dial-fab/speed-dial-fab.component';
 import { AngularMaterialPageModule } from '../pages/angular-material/angular-material.module';
+import { NavHeaderComponent } from './navigation/header/header.component';
 
 @NgModule({
   imports: [
@@ -14,11 +14,9 @@ import { AngularMaterialPageModule } from '../pages/angular-material/angular-mat
   ],
   declarations: [
       HeaderComponent,
-      SpeedDialFabComponent
   ],
   exports:[
       HeaderComponent,
-      SpeedDialFabComponent
   ]
 })
 export class GeneralModule {}

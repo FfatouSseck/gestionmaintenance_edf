@@ -20,6 +20,10 @@ import StandardTextSet from '../mockServer/StandardTextSet.json';
 import WorkCenterSet from '../mockServer/WorkCenterSet.json';
 import EmployeeSet from '../mockServer/EmployeeSet.json';
 import ActTypeSet from '../mockServer/ActTypeSet.json';
+import OrderOperationChecklistToolSet from '../mockServer/OrderOperationChecklistToolSet.json';
+import OrderOperationChecklistPartSet from '../mockServer/OrderOperationChecklistPartSet.json';
+import OrderOperationChecklistCalbSet from '../mockServer/OrderOperationChecklistCalbSet.json';
+import OrderOperationChecklistTaskSet from '../mockServer/OrderOperationChecklistTaskSet.json';
 
 @Injectable({
   providedIn: 'root'
@@ -77,6 +81,46 @@ export class MockService {
         return op.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1;
       }
     )
+  }
+
+  getMockOrderOpChckToolSetByOrderNo(orderNo: string,codePlant: string){
+    let ordOpChckToolSet = OrderOperationChecklistToolSet;
+    return ordOpChckToolSet.filter(
+      (oct) =>{
+        return (oct.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
+                && oct.Plant === codePlant);
+      }
+    ) 
+  }
+
+  getMockOrderOperationChecklistPartSet(orderNo: string,codePlant: string){
+    let ordOpChckPartSet = OrderOperationChecklistPartSet;
+    return ordOpChckPartSet.filter(
+      (ocp) =>{
+        return (ocp.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
+                && ocp.Plant === codePlant);
+      }
+    ) 
+  }
+
+  getMockOrderOperationChecklistCalbSet(orderNo: string,codePlant: string){
+    let ordOpChckCalbSet = OrderOperationChecklistCalbSet;
+    return ordOpChckCalbSet.filter(
+      (occ) =>{
+        return (occ.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
+                && occ.Plant === codePlant);
+      }
+    ) 
+  }
+
+  getMockOrderOperationChecklistTaskSet(orderNo: string,codePlant: string){
+    let ordOpChckTaskSet = OrderOperationChecklistTaskSet;
+    return ordOpChckTaskSet.filter(
+      (oct) =>{
+        return (oct.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
+                && oct.Plant === codePlant);
+      }
+    ) 
   }
 
   getMockOrderComponents(orderNo: string){

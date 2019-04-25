@@ -154,7 +154,7 @@
 
       <p *ngIf="noCalbs">No calibrated tool available</p>
       <div *ngIf="loadingCalbs;else calbsAvailable">
-          <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
+        <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
       </div>
 
       <ng-template #calbsAvailable>
@@ -174,12 +174,14 @@
 
               <ng-container matColumnDef="SerialNumber">
                 <th mat-header-cell *matHeaderCellDef style="text-align: center"> Serial N° </th>
-                <td mat-cell *matCellDef="let element" style="text-align: center;width: 20%"> {{element.ToolcalSn}} </td>
+                <td mat-cell *matCellDef="let element" style="text-align: center;width: 20%"> {{element.ToolcalSn}}
+                </td>
               </ng-container>
 
               <ng-container matColumnDef="InternRefCode">
                 <th mat-header-cell *matHeaderCellDef style="text-align: end"> Internal Ref </th>
-                <td mat-cell *matCellDef="let element" style="text-align: end;margin-right: 30%"> {{element.ToolcalIntRef}} </td>
+                <td mat-cell *matCellDef="let element" style="text-align: end;margin-right: 30%">
+                  {{element.ToolcalIntRef}} </td>
               </ng-container>
 
               <ng-container matColumnDef="Remove">
@@ -211,9 +213,85 @@
         </mat-panel-title>
         <mat-panel-description>
           All about checklist
-          <mat-icon>date_range</mat-icon>
+          <mat-icon>assignment</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
+
+      <p *ngIf="noChecklists">No checklist available</p>
+      <div *ngIf="loadingChecklists;else checklistsAvailable">
+        <mat-spinner style="margin: 0 auto"></mat-spinner>
+      </div>
+
+      <ng-template #checklistsAvailable>
+        <div *ngIf="path === 'All Tasks';else otherTask">
+
+        </div>
+        <mat-tab-group *ngIf="secondLevellabels.length > 0 && level == 2" (selectedTabChange)="segmentChanged($event)" #tabGroup>
+          <mat-tab *ngFor="let label of secondLevellabels" [label]="getCount(label)">
+
+          </mat-tab>
+        </mat-tab-group>
+
+        <mat-tab-group *ngIf="level == 3 && thirdLevelLabels.length>0"
+          (selectedTabChange)="segmentLevel2Changed($event)" #tabGroup2>
+          <mat-tab *ngFor="let label of thirdLevelLabels" [label]="getCount(label)">
+
+          </mat-tab>
+        </mat-tab-group>
+
+        <mat-tab-group *ngIf="level == 4 && fourthLevelLabels.length>0"
+            (selectedTabChange)="segmentLevel3Changed($event)" #tabGroup3>
+            <mat-tab *ngFor="let label of fourthLevelLabels" [label]="getCount(label)">
+  
+            </mat-tab>
+          </mat-tab-group>
+
+        <table mat-table [dataSource]="checklists">
+          <ng-container matColumnDef="col1">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.TaskDescr}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="col2">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;height: 1%;"> </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center">
+              <ion-fab-button size="small" style="--background: #005BBB; ">
+                <i class="material-icons" style="color: #fff;">straighten</i>
+              </ion-fab-button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="col3">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center"> </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center">
+              <ion-fab-button size="small" style="--background: #005BBB;color: white ">
+                NOK
+              </ion-fab-button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="col4">
+            <th mat-header-cell *matHeaderCellDef style="text-align: end"> </th>
+            <td mat-cell *matCellDef="let element" style="text-align: end">
+              <ion-fab-button size="small" style="--background: #005BBB;color: white ">
+                OK
+              </ion-fab-button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="col5">
+            <th mat-header-cell *matHeaderCellDef style="text-align: end"> </th>
+            <td mat-cell *matCellDef="let element" style="text-align: end">
+              <ion-fab-button size="small" style="--background: #005BBB;color: white ">
+                N/A
+              </ion-fab-button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedChecklistsColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedChecklistsColumns;let element">
+          </tr>
+        </table>
+      </ng-template>
 
       <mat-action-row>
         <button mat-button color="warn" (click)="prevStep()">Previous</button>
@@ -257,11 +335,16 @@
 
   </mat-accordion>
 
-  <ng-template #allTasks>
-    <p>All tasks</p>
-    
+  <ng-template #otherTask>
+    <div *ngIf="level == 3">
+        <a (click)="goBack(2)">All Tasks</a>/<a (click)="goBack(2)">{{pathSecondLevel}}</a>/{{pathThirdLevel}}
+    </div>
+    <div *ngIf="level == 4">
+        <a (click)="goBack(2)">All Tasks</a>/<a (click)="goBack(2)">{{pathSecondLevel}}</a>/<a (click)="goBack(2)">{{pathThirdLevel}}</a>/{{pathFourthLevel}}
+    </div>
+    <br/><br/>
   </ng-template>
-  
+
 </ion-content>
 <ion-footer>
   <ion-toolbar style="--background: #fff;--min-height:50px">

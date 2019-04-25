@@ -225,8 +225,7 @@ export class NotificationListPage extends BasePage implements OnInit {
 
   }
 
-  sortBy(event) {
-    let option = event.detail.value;
+  sortBy(option) {
     if (option === 'startDate') {
       this.notifList = this.sortByStartDate(this.notifList);
     }

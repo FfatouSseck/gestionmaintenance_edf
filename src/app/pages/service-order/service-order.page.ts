@@ -50,8 +50,7 @@ export class ServiceOrderPage implements OnInit {
     this.getAllSOs();
   }
 
-  sortBy(event) {
-    let option = event.detail.value;
+  sortBy(option) {
     if (option === 'mySOs') {
       this.soList = this.getMySOs();
     }
@@ -72,7 +71,6 @@ export class ServiceOrderPage implements OnInit {
               this.soList = this.serviceOrders;
             }
             else {//orderTypes
-              console.log("option: ", option);
               this.soList = this.getSOsByOrderType(option);
             }
   }

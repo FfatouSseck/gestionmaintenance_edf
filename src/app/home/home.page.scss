@@ -11,10 +11,10 @@
    background: url("../../assets/img/background.jpg") no-repeat center center fixed;
    background-size: cover;
  }
+ 
  ion-content{
   --background: #fff url('../../assets/img/background.jpg') no-repeat center center / cover;
 }
-
 
 mat-grid-tile {
   background: lightblue;
@@ -36,35 +36,43 @@ mat-card {
 }
 
 .tuile1{
-  background-color: #001A70;
+  background-color: #001A70; 
+  opacity : 0.9;
 }
 
 .tuile7{
   background-color: #C4D600;
+  opacity : 0.9;
 }
 
 .tuile3{
   background-color: #005BBB;
+  opacity : 0.9;
 }
 
 .tuile4{
   background-color: #E53F00;
+  opacity : 0.9;
 }
 
 .tuile5{
   background-color: #378516;
+  opacity : 0.9;
 }
 
 .tuile2{
   background-color: #fff;
+  opacity : 0.9;
 }
 
 .tuile6{
   background-color: #FFA02F;
+  opacity : 0.9;
 }
 
 .tuile8{
   background-color: #484848;
+  opacity : 0.9;
 }
 
 .mat-spinner-color::ng-deep circle{

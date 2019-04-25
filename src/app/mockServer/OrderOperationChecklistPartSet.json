@@ -10,7 +10,7 @@
 		"PartId": "C00018",
 		"PartQuantity": "1",
 		"PartDescr": "C00018",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{
@@ -38,7 +38,7 @@
 		"PartId": "C00028",
 		"PartQuantity": "3",
 		"PartDescr": "C00028",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{
@@ -94,7 +94,7 @@
 		"PartId": "C00056",
 		"PartQuantity": "7",
 		"PartDescr": "C00056",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{
@@ -136,7 +136,7 @@
 		"PartId": "C00071",
 		"PartQuantity": "10",
 		"PartDescr": "C00071",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{
@@ -248,7 +248,7 @@
 		"PartId": "C00290",
 		"PartQuantity": "18",
 		"PartDescr": "C00290",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{
@@ -360,7 +360,7 @@
 		"PartId": "P00761",
 		"PartQuantity": "26",
 		"PartDescr": "P00761",
-		"Plant": "3CAT",
+		"Plant": "2BCB",
 		"Picked": false
 	},
 	{

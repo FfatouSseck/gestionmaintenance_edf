@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { NotificationListPage } from './notification-list.page';
 import { AngularMaterialPageModule } from '../angular-material/angular-material.module';
-import { HeaderComponent } from 'src/app/components/header/header.component';
 import { GeneralModule } from 'src/app/components/general.module';
 
 const routes: Routes = [
