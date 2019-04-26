@@ -47,7 +47,7 @@ export class ChecklistDetailsPage implements OnInit {
   level = 2;
 
   constructor(private mockService: MockService, private storage: Storage, private modalController: ModalController,
-              private checklistService: CheckListAssignmentService) { }
+    private checklistService: CheckListAssignmentService) { }
 
   ngOnInit() {
   }
@@ -71,23 +71,15 @@ export class ChecklistDetailsPage implements OnInit {
     if (pathSecondLevel != null && pathSecondLevel !== undefined) {
       this.pathSecondLevel = pathSecondLevel;
     }
-    
+
     else this.pathSecondLevel = this.secondLevellabels[this.tabGroup.selectedIndex];
     this.getSecondLevelChecklists();
-    if (this.pathSecondLevel !== 'All Tasks') {
-      this.thirdLevelLabels = this.getThirdLevelLabels(this.pathSecondLevel);
-      console.log("thirdLevelLabels: ",this.thirdLevelLabels);
-      
-      this.pathThirdLevel = this.thirdLevelLabels[0];
-      console.log("pathThirdLevel: ",this.pathThirdLevel);
-      this.getThirdLevelChecklists(this.pathSecondLevel, this.pathThirdLevel);
-    }
   }
 
 
   segmentLevel2Changed(ev: any) {
     console.log("here we are");
-    
+
     this.pathThirdLevel = this.thirdLevelLabels[this.tabGroup2.selectedIndex];
     this.getThirdLevelChecklists(this.pathSecondLevel, this.pathThirdLevel);
     this.fourthLevelLabels = this.getFourthLevelLabels(this.pathSecondLevel, this.pathThirdLevel);
@@ -101,15 +93,16 @@ export class ChecklistDetailsPage implements OnInit {
   }
 
   goBack(level: number) {
+    this.loadingChecklists = true;
     if (level == 2) {
       this.segmentChanged(null, 'All Tasks');
     }
     else if (level == 3) {
-        this.segmentLevel2Changed(null);
+      this.segmentLevel2Changed(null);
 
     }
     else if (level == 4) {
-        this.segmentLevel3Changed(null);
+      this.segmentLevel3Changed(null);
     }
   }
 
@@ -142,9 +135,9 @@ export class ChecklistDetailsPage implements OnInit {
         this.noEquipments = true;
       }
     }
-    else{
+    else {
       this.checklistService.geOrderOpChckToolSetByOrderNo(this.orderNo, this.plant).subscribe(
-        (tools) =>{
+        (tools) => {
           let eq = tools.d.results;
           if (eq.length > 0) {
             this.loadingEquipments = false;
@@ -173,9 +166,9 @@ export class ChecklistDetailsPage implements OnInit {
         this.noParts = true;
       }
     }
-    else{
+    else {
       this.checklistService.geOrderOperationChecklistPartSet(this.orderNo, this.plant).subscribe(
-        (parts) =>{
+        (parts) => {
           let pts = parts.d.results;
           if (pts.length > 0) {
             this.loadingParts = false;
@@ -204,9 +197,9 @@ export class ChecklistDetailsPage implements OnInit {
         this.noCalbs = true;
       }
     }
-    else{
+    else {
       this.checklistService.getOrderOperationChecklistCalbSet(this.orderNo, this.plant).subscribe(
-        (calbs) =>{
+        (calbs) => {
           let cbs = calbs.d.results;
           if (cbs.length > 0) {
             this.loadingCalbs = false;
@@ -227,15 +220,15 @@ export class ChecklistDetailsPage implements OnInit {
       if (label === 'All Tasks') {
         return label + "(" + this.initialChecklists.data.length + ")";
       }
-      else return label + "(" + this.initialChecklists.data.filter(x => x.ChklstLoc2 === this.pathSecondLevel).length + ")";
+      else return label + "(" + this.initialChecklists.data.filter(x => x.ChklstLoc2 === label).length + ")";
     }
     else if (this.level == 3) {
-      return label + "(" + this.initialChecklists.data.filter(x => x.ChklstLoc3 === this.pathThirdLevel &&
-                            x.ChklstLoc2 === this.pathSecondLevel).length + ")";
+      return label + "(" + this.initialChecklists.data.filter(x => x.ChklstLoc3 === label &&
+        x.ChklstLoc2 === this.pathSecondLevel).length + ")";
     }
     else if (this.level == 4) {
-      return label + "(" + this.initialChecklists.data.filter(x => x.ChklstLoc4 === this.pathFourthLevel &&
-        x.ChklstLoc2 === this.pathSecondLevel &&  x.ChklstLoc3 === this.pathThirdLevel   ).length + ")";
+      return label + "(" + this.initialChecklists.data.filter(x => x.ChklstLoc4 === label &&
+        x.ChklstLoc2 === this.pathSecondLevel && x.ChklstLoc3 === this.pathThirdLevel).length + ")";
     }
   }
 
@@ -265,18 +258,18 @@ export class ChecklistDetailsPage implements OnInit {
         this.checklists = new MatTableDataSource(ckl);
       }
     }
-    else{
+    else {
       this.checklistService.getOrderOperationChecklistTaskSet(this.orderNo, this.plant).subscribe(
-        (tasks) =>{
+        (tasks) => {
           let elts = tasks.d.results;
-          
+
           if (elts.length > 0) {
             this.secondLevellabels = this.getSecondLevelLabels(elts);
             this.secondLevellabels.unshift("All Tasks");
-            console.log("secondLevellabels: ",this.secondLevellabels);
+            console.log("secondLevellabels: ", this.secondLevellabels);
           }
-          console.log("pathSecondLevel: ",this.pathSecondLevel);
-          
+          console.log("pathSecondLevel: ", this.pathSecondLevel);
+
           if (this.pathSecondLevel === 'All Tasks') {
             let ckl = elts;
             if (ckl.length > 0) {
@@ -292,10 +285,21 @@ export class ChecklistDetailsPage implements OnInit {
           }
           else {
             let ckl = this.initialChecklists.data.filter(ck => ck.ChklstLoc2 === this.pathSecondLevel);
-            console.log("ckl 2nd level: ",ckl);
-            
+            console.log("ckl 2nd level: ", ckl);
+
             this.checklists = new MatTableDataSource(ckl);
+
+            this.thirdLevelLabels = this.getThirdLevelLabels(this.pathSecondLevel);
+            console.log("thirdLevelLabels: ", this.thirdLevelLabels);
+
+            this.pathThirdLevel = this.thirdLevelLabels[0];
+            console.log("pathThirdLevel: ", this.pathThirdLevel);
+            this.getThirdLevelChecklists(this.pathSecondLevel, this.pathThirdLevel);
           }
+
+          // if (this.pathSecondLevel !== 'All Tasks') {
+
+          // }
         }
       )
     }
@@ -307,9 +311,15 @@ export class ChecklistDetailsPage implements OnInit {
       (ck.ChklstLoc2.toLowerCase() === level2Label.toLowerCase() &&
         ck.ChklstLoc3.toLowerCase() === level3Label.toLowerCase())
     );
-    console.log("ThirdLevelChecklists",ckl);
-    
-    this.checklists = new MatTableDataSource(ckl);
+    console.log("ThirdLevelChecklists", ckl);
+    if (ckl.length > 0) {
+      this.loadingChecklists = false;
+      this.checklists = new MatTableDataSource(ckl);
+    }
+    else {
+      this.noChecklists = true;
+      this.loadingChecklists = false;
+    }
   }
 
   getFourthLevelChecklists(level2Label: string, level3Label: string, level4Label: string) {
@@ -325,7 +335,7 @@ export class ChecklistDetailsPage implements OnInit {
   getSecondLevelLabels(tab: any[]) {
     let labels: string[] = [];
     for (let i = 0; i < tab.length; i++) {
-      if(tab[i].ChklstLoc2 === ""){
+      if (tab[i].ChklstLoc2 === "") {
         labels.push("Others");
       }
       else labels.push(tab[i].ChklstLoc2);

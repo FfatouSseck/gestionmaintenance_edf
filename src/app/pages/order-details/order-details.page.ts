@@ -8,6 +8,7 @@ import { MockService } from 'src/app/providers/mock.service';
 import { OperationDetailsPage } from '../operation-details/operation-details.page';
 import { Router } from '@angular/router';
 import { ComponentDetailsPage } from '../component-details/component-details.page';
+import { CheckListAssignmentService } from 'src/app/providers/check-list-assignment.service';
 
 @Component({
   selector: 'app-order-details',
@@ -51,13 +52,14 @@ export class OrderDetailsPage implements OnInit {
 
   constructor(public orderService: ServiceOrderPreparationService, private modalCtrl: ModalController,
     private _formBuilder: FormBuilder, public notifService: NotificationService, public storage: Storage,
-    private mockService: MockService, private modalController: ModalController, public router: Router) {
+    private mockService: MockService, private modalController: ModalController, public router: Router,
+    private checklistService: CheckListAssignmentService) {
   }
 
   ngOnInit() {
     this.choosenOrder = this.orderService.getCurrentOrder();
-    
-    if( this.choosenOrder == undefined) {
+
+    if (this.choosenOrder == undefined) {
       this.router.navigateByUrl("/home");
     }
 
@@ -91,16 +93,16 @@ export class OrderDetailsPage implements OnInit {
       this.operations = [];
       this.loadNotif = true;
 
-      if(this.choosenOrder.PmActivityType !== ""){
+      if (this.choosenOrder.PmActivityType !== "") {
         this.pmAct = this.choosenOrder.PmActivityType;
-        if(this.choosenOrder.PmActivityTypeDescr !== ""){
+        if (this.choosenOrder.PmActivityTypeDescr !== "") {
           this.pmAct += " - " + this.choosenOrder.PmActivityTypeDescr
         }
       }
 
-      if(this.choosenOrder.StatusShort !== ""){
+      if (this.choosenOrder.StatusShort !== "") {
         this.orderStatus = this.choosenOrder.StatusShort;
-        if(this.choosenOrder.StatusDescr !== ""){
+        if (this.choosenOrder.StatusDescr !== "") {
           this.orderStatus += " - " + this.choosenOrder.StatusDescr;
         }
       }
@@ -180,27 +182,38 @@ export class OrderDetailsPage implements OnInit {
   }
 
   getOperationDetails(index) {
-    this.presentOperationModal(this.operations[index], 'detail');
+    this.checklistService.getOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant).subscribe(
+      (ckl) => {
+        let afficheChecklist = false;
+        if (ckl.d.results.length > 0) {
+          
+          afficheChecklist = true;
+        }
+        console.log("afficheChecklist: ",afficheChecklist);
+        this.presentOperationModal(this.operations[index], 'detail',afficheChecklist);
+      }
+    )
   }
 
   getComponentDetails(index) {
-    this.presentComponentModal(this.components[index],'detail');
+    this.presentComponentModal(this.components[index], 'detail');
   }
 
   addNewOperation() {
-    this.presentOperationModal(null, 'create');
+    this.presentOperationModal(null, 'create',null);
   }
 
-  addNewComponent(){
-    this.presentComponentModal(null,'create');
+  addNewComponent() {
+    this.presentComponentModal(null, 'create');
   }
 
-  async presentOperationModal(operation, mode) {
+  async presentOperationModal(operation, mode, afficheChecklist) {
     this.modal = await this.modalController.create({
       component: OperationDetailsPage,
       componentProps: {
         'op': operation,
-        'mode': mode
+        'mode': mode,
+        'afficheChecklist': afficheChecklist
       },
       cssClass: 'modal1'
     });
@@ -213,7 +226,7 @@ export class OrderDetailsPage implements OnInit {
     }
   }
 
-  
+
   async presentComponentModal(component, mode) {
     this.modal = await this.modalController.create({
       component: ComponentDetailsPage,

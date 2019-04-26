@@ -23,6 +23,7 @@ import { CheckListAssignmentService } from 'src/app/providers/check-list-assignm
 export class OperationDetailsPage implements OnInit {
   @Input() op: any;
   @Input() mode: string; //detail or create
+  @Input() afficheChecklist: boolean;
   displayedColumns: string[] = ['Operation', 'Description', 'Plant',
     'WorkCenter', 'ActType', 'Duration', 'NumEmp'];
   dataSource: any;
@@ -35,7 +36,6 @@ export class OperationDetailsPage implements OnInit {
   assignee = "";
   actType = "";
   checkList = "";
-  afficheChecklist = false;
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, public workcenterService: WorkCenterService,
@@ -135,20 +135,6 @@ export class OperationDetailsPage implements OnInit {
 
     }
     this.getPlant();
-    if(this.mode === 'detail'){
-      this.checklistService.getOrderOperationChecklistTaskSet(this.op.OrderNo,this.op.Plant).subscribe(
-        (ckl)=>{
-          console.log("ckl: ",ckl.d.results);
-          if(ckl.d.results.length > 0){
-            this.afficheChecklist = true;
-          }
-        }
-      )
-    }
-  }
-
-  ionViewDidEnter(){
-    
   }
 
   getPlant() {

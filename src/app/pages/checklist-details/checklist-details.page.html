@@ -41,7 +41,7 @@
 
       <p *ngIf="noEquipments">No tool available</p>
       <div *ngIf="loadingEquipments;else contentAvailable">
-        <mat-spinner style="margin: 0 auto"></mat-spinner>
+        <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
       </div>
 
       <ng-template #contentAvailable>
@@ -97,7 +97,7 @@
 
       <p *ngIf="noParts">No part available</p>
       <div *ngIf="loadingParts;else partsAvailable">
-        <mat-spinner style="margin: 0 auto"></mat-spinner>
+        <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
       </div>
 
       <ng-template #partsAvailable>
@@ -219,7 +219,7 @@
 
       <p *ngIf="noChecklists">No checklist available</p>
       <div *ngIf="loadingChecklists;else checklistsAvailable">
-        <mat-spinner style="margin: 0 auto"></mat-spinner>
+        <mat-spinner style="margin: 0 auto"  [diameter]="25"></mat-spinner>
       </div>
 
       <ng-template #checklistsAvailable>
