@@ -61,7 +61,7 @@
 <ion-footer>
   <ion-toolbar style="--background: #fff;--min-height:50px">
     <ion-buttons slot="end">
-      <ion-button *ngIf="mode === 'detail' && op.ChklstId !== ''" (click)="displayChecklistDetails()"
+      <ion-button *ngIf="mode === 'detail' && op.ChklstId !== '' && afficheChecklist" (click)="displayChecklistDetails()"
         style="background-color: #005BBB;color: white;--height:40px" strong="true">
         Checklist
       </ion-button>

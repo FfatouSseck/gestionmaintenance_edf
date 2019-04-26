@@ -42,4 +42,22 @@ export class CheckListAssignmentService extends BaseService {
       }
     )
   }
+
+
+  geOrderOpChckToolSetByOrderNo(orderNo: string,codePlant: string){
+    return this.getAll("OrderOperationChecklistToolSet?$filter=Plant eq '"+codePlant+"' and OrderNo eq '"+orderNo+"'");
+  }
+
+  geOrderOperationChecklistPartSet(orderNo: string,codePlant: string){
+    return this.getAll("OrderOperationChecklistPartSet?$filter=Plant eq '"+codePlant+"' and OrderNo eq '"+orderNo+"'");
+  }
+
+  getOrderOperationChecklistCalbSet(orderNo: string,codePlant: string){
+    return this.getAll("OrderOperationChecklistCalbSet?$filter=Plant eq '"+codePlant+"' and OrderNo eq '"+orderNo+"'");
+  }
+
+  getOrderOperationChecklistTaskSet(orderNo: string,codePlant: string){
+    return this.getAll("OrderOperationChecklistTaskSet?$filter=Plant eq '"+codePlant+"' and OrderNo eq '"+orderNo+"'");
+  }  
+
 }

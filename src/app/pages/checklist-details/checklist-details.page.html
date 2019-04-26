@@ -249,7 +249,7 @@
         <table mat-table [dataSource]="checklists">
           <ng-container matColumnDef="col1">
             <th mat-header-cell *matHeaderCellDef> </th>
-            <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.TaskDescr}} </td>
+            <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.TaskDescr | slice:0:15}} </td>
           </ng-container>
 
           <ng-container matColumnDef="col2">

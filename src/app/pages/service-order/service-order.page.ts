@@ -183,6 +183,8 @@ export class ServiceOrderPage implements OnInit {
                     }
                   });
 
+                  console.log("types: ",this.types);
+
                 }
                 else {
                   this.notAvailable = false;

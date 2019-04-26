@@ -115,7 +115,7 @@ export class HeaderComponent implements OnInit {
     async presentActionSheet() {//display user settings and plant options
 
         this.init();
-        if (this.syncPlant !== "" && this.syncPlant != null && this.syncPlant != undefined ) {
+        if (this.syncPlant !== "" && this.syncPlant != null && this.syncPlant != undefined) {
 
             const actionSheet = await this.actionSheetController.create({
                 header: 'Options',
@@ -188,19 +188,17 @@ export class HeaderComponent implements OnInit {
                         text: 'Logout',
                         icon: 'power',
                         handler: () => {
-                            this.storage.remove("choosenPlant")
-                                .then(
-                                    () => {
-                                        this.storage.remove("mock").then(
-                                            () => {
-                                                this.router.navigateByUrl("/login");
-                                            }
-                                        )
-                                    })
-                                .catch(
-                                    () => {
-                                        this.router.navigateByUrl("/login");
-                                    })
+                            this.storage.clear().then(
+                                () => {
+                                    console.log("done");
+                                    
+                                    this.router.navigateByUrl("/login");
+                                }
+                            ).catch(
+                                (err) => {
+                                    console.log("erreur: ", err);
+                                    this.router.navigateByUrl("/login");
+                                })
                         }
                     },
                     {

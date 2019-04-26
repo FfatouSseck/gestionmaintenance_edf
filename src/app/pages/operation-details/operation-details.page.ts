@@ -13,6 +13,7 @@ import { ActTypeListPage } from '../act-type-list/act-type-list.page';
 import { EmployeeService } from 'src/app/providers/employee.service';
 import { ChecklistPage } from '../checklist/checklist.page';
 import { ChecklistDetailsPage } from '../checklist-details/checklist-details.page';
+import { CheckListAssignmentService } from 'src/app/providers/check-list-assignment.service';
 
 @Component({
   selector: 'app-operation-details',
@@ -34,11 +35,11 @@ export class OperationDetailsPage implements OnInit {
   assignee = "";
   actType = "";
   checkList = "";
+  afficheChecklist = false;
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
-    private storage: Storage, private mockService: MockService, public workcenterService: WorkCenterService,
-    private standardTextService: StandardTextService, private actTypeService: ActTypeService,
-    private employeeService: EmployeeService, private alertCtrl: AlertController) { }
+    private storage: Storage, public workcenterService: WorkCenterService,
+    private alertCtrl: AlertController,private checklistService: CheckListAssignmentService) { }
 
   ngOnInit() {
     this.storage.get("mock").then(
@@ -134,6 +135,20 @@ export class OperationDetailsPage implements OnInit {
 
     }
     this.getPlant();
+    if(this.mode === 'detail'){
+      this.checklistService.getOrderOperationChecklistTaskSet(this.op.OrderNo,this.op.Plant).subscribe(
+        (ckl)=>{
+          console.log("ckl: ",ckl.d.results);
+          if(ckl.d.results.length > 0){
+            this.afficheChecklist = true;
+          }
+        }
+      )
+    }
+  }
+
+  ionViewDidEnter(){
+    
   }
 
   getPlant() {
@@ -393,7 +408,7 @@ export class OperationDetailsPage implements OnInit {
           text: 'Cancel',
           role: 'cancel',
           cssClass: 'secondary',
-          handler: (blah) => {
+          handler: () => {
           }
         }, {
           text: 'Okay',

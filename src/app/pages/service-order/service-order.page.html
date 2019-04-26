@@ -21,10 +21,6 @@
       <mat-menu #menu="matMenu">
         <button (click)="sortBy(type.val)" mat-menu-item *ngFor="let type of types">{{type.lib}}</button>
       </mat-menu>
-      <ion-select #select [value]="defaultFilter" okText="OK" cancelText="Cancel" style="background-color: white"
-        (ionChange)="sortBy($event)" [style.visibility]="'hidden'">
-        <ion-select-option [value]="type.val" *ngFor="let type of types">{{type.lib}}</ion-select-option>
-      </ion-select>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()" style="--background: #007CC0;">
