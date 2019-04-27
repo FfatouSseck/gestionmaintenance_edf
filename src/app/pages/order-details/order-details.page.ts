@@ -182,17 +182,37 @@ export class OrderDetailsPage implements OnInit {
   }
 
   getOperationDetails(index) {
-    this.checklistService.getOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant).subscribe(
-      (ckl) => {
-        let afficheChecklist = false;
-        if (ckl.d.results.length > 0) {
-          
-          afficheChecklist = true;
+    console.log(this.operations[index]);
+    
+    this.storage.get("mock").then(
+      (mock) => {
+        if (mock != null && mock != undefined) {
+          if (mock) {
+            let ckl = this.mockService.getMockOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant);
+            let afficheChecklist = false;
+            if (ckl.length > 0) {
+              afficheChecklist = true;
+            }
+            console.log("afficheChecklist: ", afficheChecklist);
+            this.presentOperationModal(this.operations[index], 'detail', afficheChecklist);
+          }
+          else {
+            this.checklistService.getOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant).subscribe(
+              (ckl) => {
+                let afficheChecklist = false;
+                if (ckl.d.results.length > 0) {
+
+                  afficheChecklist = true;
+                }
+                console.log("afficheChecklist: ", afficheChecklist);
+                this.presentOperationModal(this.operations[index], 'detail', afficheChecklist);
+              }
+            )
+          }
         }
-        console.log("afficheChecklist: ",afficheChecklist);
-        this.presentOperationModal(this.operations[index], 'detail',afficheChecklist);
       }
     )
+
   }
 
   getComponentDetails(index) {
@@ -200,7 +220,7 @@ export class OrderDetailsPage implements OnInit {
   }
 
   addNewOperation() {
-    this.presentOperationModal(null, 'create',null);
+    this.presentOperationModal(null, 'create', null);
   }
 
   addNewComponent() {

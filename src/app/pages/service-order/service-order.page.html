@@ -14,18 +14,16 @@
         (ionBlur)="toggleSearch()" class="searchbar">
       </ion-searchbar>
     </div>
-    <ion-buttons slot="start">
-      <ion-fab-button size="small" [matMenuTriggerFor]="menu" style="--background: #007CC0;">
-        <i class="material-icons" style="color: #fff;">swap_vert</i>
-      </ion-fab-button>
-      <mat-menu #menu="matMenu">
-        <button (click)="sortBy(type.val)" mat-menu-item *ngFor="let type of types">{{type.lib}}</button>
-      </mat-menu>
-    </ion-buttons>
     <ion-buttons slot="end">
       <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()" style="--background: #007CC0;">
         <i class="material-icons" style="color: #fff;">search</i>
       </ion-fab-button>
+      <ion-fab-button size="small" [matMenuTriggerFor]="menu" style="--background: #007CC0;">
+          <i class="material-icons" style="color: #fff;">swap_vert</i>
+        </ion-fab-button>
+        <mat-menu #menu="matMenu">
+          <button (click)="sortBy(type.val)" mat-menu-item *ngFor="let type of types">{{type.lib}}</button>
+        </mat-menu>
     </ion-buttons>
   </ion-toolbar>
   <div *ngIf="orientation === 'portrait-primary';else landscapeContent">

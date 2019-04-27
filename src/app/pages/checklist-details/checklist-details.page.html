@@ -218,34 +218,49 @@
       </mat-expansion-panel-header>
 
       <p *ngIf="noChecklists">No checklist available</p>
-      <div *ngIf="loadingChecklists;else checklistsAvailable">
-        <mat-spinner style="margin: 0 auto"  [diameter]="25"></mat-spinner>
+      <div *ngIf="loadingChecklists && noChecklists==false ;else checklistsAvailable">
+        <mat-spinner style="margin: 0 auto" [diameter]="25"></mat-spinner>
       </div>
 
       <ng-template #checklistsAvailable>
         <div *ngIf="path === 'All Tasks';else otherTask">
 
         </div>
-        <mat-tab-group *ngIf="secondLevellabels.length > 0 && level == 2" (selectedTabChange)="segmentChanged($event)" #tabGroup>
-          <mat-tab *ngFor="let label of secondLevellabels" [label]="getCount(label)">
+        <mat-tab-group *ngIf="secondLevellabels.length > 0 && level == 2" (selectedTabChange)="segmentChanged($event)"
+          #tabGroup>
+          <div *ngFor="let label of secondLevellabels">
+            <mat-tab *ngIf="label !== ''" [label]="getCount(label)">
 
-          </mat-tab>
-        </mat-tab-group>
-
-        <mat-tab-group *ngIf="level == 3 && thirdLevelLabels.length>0"
-          (selectedTabChange)="segmentLevel2Changed($event)" #tabGroup2>
-          <mat-tab *ngFor="let label of thirdLevelLabels" [label]="getCount(label)">
-
-          </mat-tab>
-        </mat-tab-group>
-
-        <mat-tab-group *ngIf="level == 4 && fourthLevelLabels.length>0"
-            (selectedTabChange)="segmentLevel3Changed($event)" #tabGroup3>
-            <mat-tab *ngFor="let label of fourthLevelLabels" [label]="getCount(label)">
-  
             </mat-tab>
-          </mat-tab-group>
+            <mat-tab *ngIf="label === ''" [label]="'Other' + getCount(label)">
 
+            </mat-tab>
+          </div>
+        </mat-tab-group>
+
+        <mat-tab-group *ngIf="level == 3 && thirdLevelLabels.length > 0"
+          (selectedTabChange)="segmentLevel2Changed($event)" #tabGroup2>
+          <div *ngFor="let label of thirdLevelLabels">
+            <mat-tab *ngIf="label !== ''" [label]="getCount(label)">
+
+            </mat-tab>
+            <mat-tab *ngIf="label === ''" [label]="'Other' + getCount(label)">
+
+            </mat-tab>
+          </div>
+        </mat-tab-group>
+
+        <mat-tab-group *ngIf="level == 4 && fourthLevelLabels.length > 0"
+          (selectedTabChange)="segmentLevel3Changed($event)" #tabGroup3>
+          <div *ngFor="let label of fourthLevelLabels">
+              <mat-tab *ngIf="label !== ''" [label]="getCount(label)">
+  
+              </mat-tab>
+              <mat-tab *ngIf="label === ''" [label]="'Other' + getCount(label)">
+  
+              </mat-tab>
+            </div>
+        </mat-tab-group>
         <table mat-table [dataSource]="checklists">
           <ng-container matColumnDef="col1">
             <th mat-header-cell *matHeaderCellDef> </th>
@@ -337,12 +352,13 @@
 
   <ng-template #otherTask>
     <div *ngIf="level == 3">
-        <a (click)="goBack(2)">All Tasks</a>/<a (click)="goBack(2)">{{pathSecondLevel}}</a>/{{pathThirdLevel}}
+      <a style="font-size: 20px" (click)="goBack(2)">All Tasks</a>/<a style="font-size: 20px" (click)="goBack(2)">{{pathSecondLevel === '' ? 'Others' : pathSecondLevel}}</a>/{{pathThirdLevel === '' ? 'Others' : pathThirdLevel}}
     </div>
     <div *ngIf="level == 4">
-        <a (click)="goBack(2)">All Tasks</a>/<a (click)="goBack(2)">{{pathSecondLevel}}</a>/<a (click)="goBack(2)">{{pathThirdLevel}}</a>/{{pathFourthLevel}}
+      <a style="font-size: 20px" (click)="goBack(2)">All Tasks</a>/<a style="font-size: 20px" (click)="goBack(2)">{{pathSecondLevel === '' ? 'Others' : pathSecondLevel}}</a>/<a style="font-size: 20px"
+        (click)="goBack(3)">{{pathThirdLevel === '' ? 'Others' : pathThirdLevel}}</a>/{{pathFourthLevel === '' ? 'Others' : pathFourthLevel}}
     </div>
-    <br/><br/>
+    <br />
   </ng-template>
 
 </ion-content>

@@ -45,6 +45,9 @@ export class ChecklistDetailsPage implements OnInit {
   thirdLevelLabels: string[] = [];
   fourthLevelLabels: string[] = [];
   level = 2;
+  ok2 = true;
+  ok3 = false;
+  ok4 = false;
 
   constructor(private mockService: MockService, private storage: Storage, private modalController: ModalController,
     private checklistService: CheckListAssignmentService) { }
@@ -67,7 +70,7 @@ export class ChecklistDetailsPage implements OnInit {
   }
 
   segmentChanged(event: any, pathSecondLevel?) {
-    console.log("iciiii");
+    this.loadingChecklists = true;
     if (pathSecondLevel != null && pathSecondLevel !== undefined) {
       this.pathSecondLevel = pathSecondLevel;
     }
@@ -78,7 +81,7 @@ export class ChecklistDetailsPage implements OnInit {
 
 
   segmentLevel2Changed(ev: any) {
-    console.log("here we are");
+    this.loadingChecklists = true;
 
     this.pathThirdLevel = this.thirdLevelLabels[this.tabGroup2.selectedIndex];
     this.getThirdLevelChecklists(this.pathSecondLevel, this.pathThirdLevel);
@@ -88,6 +91,7 @@ export class ChecklistDetailsPage implements OnInit {
   }
 
   segmentLevel3Changed(ev: any) {
+    this.loadingChecklists = true;
     this.pathFourthLevel = this.fourthLevelLabels[this.tabGroup3.selectedIndex];
     this.getFourthLevelChecklists(this.pathSecondLevel, this.pathThirdLevel, this.pathFourthLevel);
   }
@@ -98,7 +102,9 @@ export class ChecklistDetailsPage implements OnInit {
       this.segmentChanged(null, 'All Tasks');
     }
     else if (level == 3) {
-      this.segmentLevel2Changed(null);
+      this.level = 3;
+      console.log(this.thirdLevelLabels,this.tabGroup2);
+      //this.segmentLevel2Changed(null);
 
     }
     else if (level == 4) {
@@ -233,6 +239,7 @@ export class ChecklistDetailsPage implements OnInit {
   }
 
   getSecondLevelChecklists() {
+
     this.level = 2;
     if (this.mock) {
       let elts = this.mockService.getMockOrderOperationChecklistTaskSet(this.orderNo, this.plant);
@@ -246,6 +253,7 @@ export class ChecklistDetailsPage implements OnInit {
           this.loadingChecklists = false;
           this.noChecklists = false;
           this.checklists = new MatTableDataSource(ckl);
+          this.checkVisibility(this.secondLevellabels,2);
           this.initialChecklists = this.checklists;
         }
         else {
@@ -255,7 +263,21 @@ export class ChecklistDetailsPage implements OnInit {
       }
       else {
         let ckl = this.initialChecklists.data.filter(ck => ck.ChklstLoc2 === this.pathSecondLevel);
-        this.checklists = new MatTableDataSource(ckl);
+
+        if (ckl.length > 0) {
+          this.loadingChecklists = false;
+          this.noChecklists = false;
+          this.checklists = new MatTableDataSource(ckl);
+
+          this.thirdLevelLabels = this.getThirdLevelLabels(this.pathSecondLevel);
+
+          this.pathThirdLevel = this.thirdLevelLabels[0];
+          this.getThirdLevelChecklists(this.pathSecondLevel, this.pathThirdLevel);
+        }
+        else {
+          this.loadingChecklists = false;
+          this.noChecklists = true;
+        }
       }
     }
     else {
@@ -266,9 +288,7 @@ export class ChecklistDetailsPage implements OnInit {
           if (elts.length > 0) {
             this.secondLevellabels = this.getSecondLevelLabels(elts);
             this.secondLevellabels.unshift("All Tasks");
-            console.log("secondLevellabels: ", this.secondLevellabels);
           }
-          console.log("pathSecondLevel: ", this.pathSecondLevel);
 
           if (this.pathSecondLevel === 'All Tasks') {
             let ckl = elts;
@@ -285,16 +305,13 @@ export class ChecklistDetailsPage implements OnInit {
           }
           else {
             let ckl = this.initialChecklists.data.filter(ck => ck.ChklstLoc2 === this.pathSecondLevel);
-            console.log("ckl 2nd level: ", ckl);
 
             this.checklists = new MatTableDataSource(ckl);
-
             this.thirdLevelLabels = this.getThirdLevelLabels(this.pathSecondLevel);
-            console.log("thirdLevelLabels: ", this.thirdLevelLabels);
 
             this.pathThirdLevel = this.thirdLevelLabels[0];
-            console.log("pathThirdLevel: ", this.pathThirdLevel);
             this.getThirdLevelChecklists(this.pathSecondLevel, this.pathThirdLevel);
+
           }
 
           // if (this.pathSecondLevel !== 'All Tasks') {
@@ -311,15 +328,8 @@ export class ChecklistDetailsPage implements OnInit {
       (ck.ChklstLoc2.toLowerCase() === level2Label.toLowerCase() &&
         ck.ChklstLoc3.toLowerCase() === level3Label.toLowerCase())
     );
-    console.log("ThirdLevelChecklists", ckl);
-    if (ckl.length > 0) {
-      this.loadingChecklists = false;
-      this.checklists = new MatTableDataSource(ckl);
-    }
-    else {
-      this.noChecklists = true;
-      this.loadingChecklists = false;
-    }
+    this.checkVisibility(this.thirdLevelLabels,3);
+    this.checklists = new MatTableDataSource(ckl);
   }
 
   getFourthLevelChecklists(level2Label: string, level3Label: string, level4Label: string) {
@@ -329,16 +339,40 @@ export class ChecklistDetailsPage implements OnInit {
         ck.ChklstLoc3.toLowerCase() === level3Label.toLowerCase() &&
         ck.ChklstLoc4.toLowerCase() === level4Label.toLowerCase())
     );
-    this.checklists = new MatTableDataSource(ckl);
+
+    if (ckl.length > 0) {
+      this.loadingChecklists = false;
+      this.checklists = new MatTableDataSource(ckl);
+      this.checkVisibility(this.fourthLevelLabels,4);
+    }
+    else {
+      this.loadingChecklists = false;
+    }
+  }
+
+  checkVisibility(tab: any[],level: number){
+    if(this.level==level && level==2 && tab.length > 0){
+      this.ok2 = true;
+      this.ok3 = false;
+      this.ok4 = false;
+    }
+    else if(this.level==level && level==3 && tab.length > 0){
+      this.ok2 = false;
+      this.ok3 = true;
+      this.ok4 = false;
+    }
+    else if(this.level==level && level==4 && tab.length > 0){
+      this.ok2 = false;
+      this.ok3 = false;
+      this.ok4 = true;
+    }
+    
   }
 
   getSecondLevelLabels(tab: any[]) {
     let labels: string[] = [];
     for (let i = 0; i < tab.length; i++) {
-      if (tab[i].ChklstLoc2 === "") {
-        labels.push("Others");
-      }
-      else labels.push(tab[i].ChklstLoc2);
+      labels.push(tab[i].ChklstLoc2);
     }
 
     return this.getUnique(labels);
