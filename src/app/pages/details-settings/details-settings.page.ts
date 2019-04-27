@@ -44,7 +44,7 @@ export class DetailsSettingsPage implements OnInit {
     this.searching = true;
   }
 
-  filterPlants(){
+  filterPlants() {
     this.plants = this.dataService.filterItems(this.searchTerm);
     if (this.plants.length > 0) {
       this.notAvailable = false;
@@ -96,7 +96,6 @@ export class DetailsSettingsPage implements OnInit {
           let index = this.getPlantIndexFromCode(syncPlant);
           this.syncPlant = syncPlant;
           this.plants[index].state = "checked";
-          this.initialPlants = this.plants;
         }
       }
     )
@@ -109,38 +108,104 @@ export class DetailsSettingsPage implements OnInit {
 
   ionViewDidEnter() {
     this.checkedPlants = [];
-    this.plants = [];
 
     this.storage.get("mock").then(
       (mock) => {
         if (mock != null && mock != undefined && mock == true) {
-          this.dataService.emptyArray();
-          let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
-          if (done) {
-            this.notAvailable = true;
-            this.setFilteredItems();
-          }
-        }
-        else {
-          let available = this.dataService.plantsAvailable();
-          if (available) {
-            this.notAvailable = true;
-            this.setFilteredItems();
-          }
-          else {
-            this.plantService.getAllPlants().subscribe(
-              (plts) => {
-                let p = plts.d.results;
+          this.storage.get("plants").then(
+            (plts) => {
+              if (plts != null && plts != undefined) {
+                if (plts.elts.length > 0) {
+                  if (plts.fromMock == mock) {
+                    this.plants = plts.elts;
+                    console.log("here");
+                    
+                    if (this.plants.length > 0) {
+                      this.notAvailable = false;
+                      this.searching = false;
+                    }
+                  }
+                }
+              }
+              else{//if (plts != null && plts != undefined) -->
+                console.log("here");
                 this.dataService.emptyArray();
-                let done = this.dataService.setPlants(p);
+                let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
                 if (done) {
                   this.notAvailable = true;
                   this.setFilteredItems();
                 }
-              });
-          }
+              }
+            })
         }
-      })
+        else {//if mock == false
+          console.log("here");
+          let available = this.dataService.plantsAvailable();
+                if (available) {
+                  this.notAvailable = true;
+                  this.setFilteredItems();
+                }
+                else {
+                  this.plantService.getAllPlants().subscribe(
+                    (plts) => {
+                      let p = plts.d.results;
+                      this.dataService.emptyArray();
+                      let done = this.dataService.setPlants(p);
+                      if (done) {
+                        this.notAvailable = true;
+                        this.setFilteredItems();
+                      }
+                    });
+                }
+        }
+      }
+    )
+
+    // this.storage.get("plants").then(
+    //   (plts) => {
+    //     if (plts != null && plts != undefined) {
+    //       console.log("the plants", plts);
+    //       if (plts.elts.length > 0) {
+    //         if (plts.fromMock == true) {
+    //           this.plants = plts.fromMock
+    //         }
+    //       }
+    //     }
+    //     else {
+    //       this.storage.get("mock").then(
+    //         (mock) => {
+    //           if (mock != null && mock != undefined && mock == true) {
+    //             this.dataService.emptyArray();
+    //             let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
+    //             if (done) {
+    //               this.notAvailable = true;
+    //               this.setFilteredItems();
+    //             }
+    //           }
+    //           else {
+    //             let available = this.dataService.plantsAvailable();
+    //             if (available) {
+    //               this.notAvailable = true;
+    //               this.setFilteredItems();
+    //             }
+    //             else {
+    //               this.plantService.getAllPlants().subscribe(
+    //                 (plts) => {
+    //                   let p = plts.d.results;
+    //                   this.dataService.emptyArray();
+    //                   let done = this.dataService.setPlants(p);
+    //                   if (done) {
+    //                     this.notAvailable = true;
+    //                     this.setFilteredItems();
+    //                   }
+    //                 });
+    //             }
+    //           }
+    //         })
+
+    //     }
+    //   }
+    // )
   }
 
   cancel() {
@@ -179,7 +244,26 @@ export class DetailsSettingsPage implements OnInit {
       this.modalController.dismiss({
         'result': this.checkedPlants
       });
+      this.storage.get("mock").then(
+        (mock) => {
+          if (mock != null && mock != undefined && mock == true) {
+            let plants = {
+              elts: this.plants,
+              fromMock: true
+            }
+            this.storage.set("plants", plants)
+          }
+          else {
+            let plants = {
+              elts: this.plants,
+              fromMock: false
+            }
+            this.storage.set("plants", plants)
+          }
+        }
+      )
 
+      //this.storage.set()
 
     }
     else if (this.checkedPlants.length == 1) {
@@ -194,13 +278,13 @@ export class DetailsSettingsPage implements OnInit {
               });
             }
           )
-          .catch(
-            ()=>{
-              this.modalController.dismiss({
-                'result': this.choosenPlant
-              });
-            }
-          )
+            .catch(
+              () => {
+                this.modalController.dismiss({
+                  'result': this.choosenPlant
+                });
+              }
+            )
         }
       )
     }

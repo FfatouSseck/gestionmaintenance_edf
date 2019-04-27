@@ -14,13 +14,14 @@
 <ion-content padding>
   <div *ngIf="notAvailable;else contentAvailable">
     <mat-spinner style="margin: 0 auto"></mat-spinner>
+    labaaaaaaa
   </div>
 
   <ng-template #contentAvailable>
     <div *ngIf="searching" class="spinner-container">
       <ion-spinner></ion-spinner>
     </div>
-
+    {{plants[0].Plant}}
     <mat-list>
       <mat-list-item *ngFor="let plant of plants;let i=index">
         <ion-toggle (ionChange)="notify($event,i)" color="primary"

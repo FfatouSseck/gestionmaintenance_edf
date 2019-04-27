@@ -119,10 +119,16 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   }
 
-  onClose(evt: { result: string; }) {
+  onClose(evt: { result: any; }) {
     console.log("result:", evt);
     if (evt != undefined) {
-      this.choosenPlantcode = evt.result;
+      if (Array.isArray(evt.result)) {
+        this.choosenPlantcode = evt.result[0].Plant;
+    }
+    else {
+        console.log("ici")
+        this.choosenPlantcode = evt.result.choosenPlant;
+    }
       this.choosenFunctLoc = "";
       this.choosenEquipment = "";
     }
