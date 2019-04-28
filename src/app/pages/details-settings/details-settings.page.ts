@@ -53,7 +53,6 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   setFilteredItems() {
-
     this.storage.get("choosenPlant").then(
       (choosenPlantcode) => {
         if (choosenPlantcode != null && choosenPlantcode != undefined) {
@@ -71,7 +70,6 @@ export class DetailsSettingsPage implements OnInit {
             }
             this.plants[index].state = "checked";
           }
-          //this.plants = plts;
           if (this.plants.length > 0) {
             this.notAvailable = false;
             this.searching = false;
@@ -111,7 +109,7 @@ export class DetailsSettingsPage implements OnInit {
 
     this.storage.get("mock").then(
       (mock) => {
-        if (mock != null && mock != undefined && mock == true) {
+        if (mock != null && mock != undefined) {
           this.storage.get("plants").then(
             (plts) => {
               if (plts != null && plts != undefined) {
@@ -119,93 +117,69 @@ export class DetailsSettingsPage implements OnInit {
                   if (plts.fromMock == mock) {
                     this.plants = plts.elts;
                     console.log("here");
-                    
-                    if (this.plants.length > 0) {
+                    let done = this.dataService.setFromStorage(this.plants);
+                    if (done) {
                       this.notAvailable = false;
                       this.searching = false;
                     }
                   }
                 }
               }
-              else{//if (plts != null && plts != undefined) -->
-                console.log("here");
-                this.dataService.emptyArray();
-                let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
-                if (done) {
-                  this.notAvailable = true;
-                  this.setFilteredItems();
+              else {//on a un mock mais pas de plants
+                if (mock == true) {
+                  console.log("here");
+                  this.dataService.emptyArray();
+                  let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
+                  if (done) {
+                    this.notAvailable = true;
+                    this.setFilteredItems();
+                  }
                 }
+                else {//mock == false
+                  let available = this.dataService.plantsAvailable();
+                  if (available) {
+                    this.notAvailable = true;
+                    this.setFilteredItems();
+                  }
+                  else {
+                    this.plantService.getAllPlants().subscribe(
+                      (plts) => {
+                        let p = plts.d.results;
+                        this.dataService.emptyArray();
+                        let done = this.dataService.setPlants(p);
+                        if (done) {
+                          this.notAvailable = true;
+                          this.setFilteredItems();
+                        }
+                      });
+                  }
+                }
+
               }
             })
         }
-        else {//if mock == false
-          console.log("here");
-          let available = this.dataService.plantsAvailable();
-                if (available) {
-                  this.notAvailable = true;
-                  this.setFilteredItems();
-                }
-                else {
-                  this.plantService.getAllPlants().subscribe(
-                    (plts) => {
-                      let p = plts.d.results;
-                      this.dataService.emptyArray();
-                      let done = this.dataService.setPlants(p);
-                      if (done) {
-                        this.notAvailable = true;
-                        this.setFilteredItems();
-                      }
-                    });
-                }
-        }
+        // else {//if mock == undefined
+        //   console.log("here");
+        //   let available = this.dataService.plantsAvailable();
+        //   if (available) {
+        //     this.notAvailable = true;
+        //     this.setFilteredItems();
+        //   }
+        //   else {
+        //     this.plantService.getAllPlants().subscribe(
+        //       (plts) => {
+        //         let p = plts.d.results;
+        //         this.dataService.emptyArray();
+        //         let done = this.dataService.setPlants(p);
+        //         if (done) {
+        //           this.notAvailable = true;
+        //           this.setFilteredItems();
+        //         }
+        //       });
+        //   }
+        // }
       }
     )
-
-    // this.storage.get("plants").then(
-    //   (plts) => {
-    //     if (plts != null && plts != undefined) {
-    //       console.log("the plants", plts);
-    //       if (plts.elts.length > 0) {
-    //         if (plts.fromMock == true) {
-    //           this.plants = plts.fromMock
-    //         }
-    //       }
-    //     }
-    //     else {
-    //       this.storage.get("mock").then(
-    //         (mock) => {
-    //           if (mock != null && mock != undefined && mock == true) {
-    //             this.dataService.emptyArray();
-    //             let done = this.dataService.setPlants(this.mockService.getAllMockPlants());
-    //             if (done) {
-    //               this.notAvailable = true;
-    //               this.setFilteredItems();
-    //             }
-    //           }
-    //           else {
-    //             let available = this.dataService.plantsAvailable();
-    //             if (available) {
-    //               this.notAvailable = true;
-    //               this.setFilteredItems();
-    //             }
-    //             else {
-    //               this.plantService.getAllPlants().subscribe(
-    //                 (plts) => {
-    //                   let p = plts.d.results;
-    //                   this.dataService.emptyArray();
-    //                   let done = this.dataService.setPlants(p);
-    //                   if (done) {
-    //                     this.notAvailable = true;
-    //                     this.setFilteredItems();
-    //                   }
-    //                 });
-    //             }
-    //           }
-    //         })
-
-    //     }
-    //   }
-    // )
   }
 
   cancel() {
@@ -218,6 +192,7 @@ export class DetailsSettingsPage implements OnInit {
   }
 
   closeModal() {
+    this.checkedPlants = this.plants.filter(plt => plt.state === 'checked');
 
     //we gonna check if there are more than one plant choosen  
     if (this.checkedPlants.length > 2) {

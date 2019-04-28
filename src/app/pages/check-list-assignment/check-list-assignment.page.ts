@@ -119,7 +119,6 @@ export class CheckListAssignmentPage implements OnInit {
   };
 
   getData(segmentIndex?: number) {
-    console.log("segmentIndex: ",segmentIndex);
     
     if (this.mock) {
       this.orderList = this.mockService.getMockOrderByPlant(this.codePlant);
@@ -149,11 +148,9 @@ export class CheckListAssignmentPage implements OnInit {
     else {
       this.orderService.getAllOrdersByChoosenPlant(this.codePlant).subscribe(
         (responseList) => {
-          console.log("orders: ",responseList)
           this.orderList = responseList.d.results;
           let types = this.getOrderTypes(this.orderList);
           this.types = this.getUnique(types);
-          console.log("types: ",this.types);
           if (this.types.length == 0) {
             this.loading = false;
             this.noData = true;
@@ -217,7 +214,6 @@ export class CheckListAssignmentPage implements OnInit {
 
     let newOrds = [];
     //on recupere la ligne d'opération pour chaque ordre
-    console.log("ords",ords);
     
     if (this.mock) {
       ords.forEach((element) => {

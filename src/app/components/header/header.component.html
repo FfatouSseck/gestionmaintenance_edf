@@ -2,7 +2,8 @@
   <ion-buttons slot="start" *ngIf="currentUrl !== '/home'">
       <ion-back-button
           [text]=""
-          [icon]="home">
+          [icon]="home"
+          style="color: #005BBB">
       </ion-back-button>
   </ion-buttons>
   <img alt="logo" height="40" src="../../../assets/img/logo.png" *ngIf="currentUrl === '/home' ">
@@ -11,7 +12,7 @@
         <ion-icon name="person" style="color: grey"></ion-icon>&nbsp;Lawrence Barr
     </ion-button>
   </ion-buttons>
-  <ion-title>
+  <ion-title style="color: #005BBB"> 
     {{pageTitle}}
   </ion-title>
 </ion-toolbar>

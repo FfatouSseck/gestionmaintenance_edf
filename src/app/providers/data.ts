@@ -29,6 +29,15 @@ export class Data {
 
     }
 
+    setFromStorage(plts){
+        let done = false;
+        if(plts.length > 0){
+            this.plants = plts;
+            done = true;
+        }
+        return done;
+    }
+
     emptyArray(){
         this.plants = [];
     }
