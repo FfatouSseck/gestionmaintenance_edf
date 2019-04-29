@@ -288,12 +288,6 @@ export class ServiceOrderPage implements OnInit {
   }
 
   presentDetails(order) {
-    let index = this.soList.indexOf(order);
-    for (let i = 0; i < this.soList.length; i++) {
-      this.soList[i].bgcolor = "white";
-    }
-
-    this.soList[index].bgcolor = "#F7F7F7";
     this.orderPreparationService.setCurrentOrder(order);
     this.router.navigateByUrl("/order-details");
   }

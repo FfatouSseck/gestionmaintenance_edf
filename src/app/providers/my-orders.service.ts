@@ -43,7 +43,8 @@ export class MyOrdersService extends BaseService {
       ord => {
         return (ord.OrderNo.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
           || ord.StatusDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
-          || ord.FunctLoc.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
+          || ord.FunctLoc.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 
+          || ord.ShortText.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
       }
     )
   }

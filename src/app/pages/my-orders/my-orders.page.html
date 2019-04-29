@@ -39,12 +39,11 @@
             <ion-spinner></ion-spinner>
         </div>
         <mat-nav-list *ngIf="noData == false">
-            <mat-list-item *ngFor="let ord of mySoList" (click)="presentDetails(ord)"
-                [style.background-color]="ord.bgcolor" [style.color]="ord.color">
+            <mat-list-item *ngFor="let ord of mySoList" (click)="presentDetails(ord)">
                 <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 15px">{{ord.OrderNo}} </h3>
-                <p matLine [style.font-weight]="ord.fw" style="font-size: 15px">{{ord.ShortText}} <span
+                <p matLine style="font-size: 15px">{{ord.ShortText}} <span
                         *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
-                <p matLine [style.font-weight]="ord.fw" class="demo-2" style="font-size: 15px"> {{ord.FunctLoc}}</p>
+                <p matLine class="demo-2" style="font-size: 15px"> {{ord.FunctLoc}}</p>
                 <p style="color: red;font-size: 15px" *ngIf="ord.Priority === '1'" [style.font-weight]="ord.fw" matLine>
                     {{ord.PriorityDescr}}</p>
                 <p style="color: blue;font-size: 15px" *ngIf="ord.Priority === '2'" [style.font-weight]="ord.fw"

@@ -32,7 +32,7 @@
 
           <div *ngIf="notifsCount == null">
             <mat-spinner style="margin: 0 auto" [diameter]="45"></mat-spinner>
-            <br/>
+            <br />
           </div>
           <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
             {{notifsCount}}
@@ -47,7 +47,7 @@
             </i></mat-icon>
           <div *ngIf="ordersCount == null">
             <mat-spinner style="margin: 0 auto" class="mat-spinner-color" [diameter]="45"></mat-spinner>
-            <br/>
+            <br />
           </div>
           <h4 style="color: #fff;font-size: 40px" *ngIf="ordersCount != null">
             {{ordersCount}}
@@ -74,7 +74,7 @@
 
           <div *ngIf="soCount == null">
             <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
-            <br/>
+            <br />
           </div>
           <h4 style="color: white;font-size: 40px" *ngIf="soCount != null">
             {{soCount}}
@@ -97,7 +97,7 @@
           <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
               note
             </i></mat-icon>
-          <h4 style="color: #fff;font-size: 40px" >
+          <h4 style="color: #fff;font-size: 40px">
             &nbsp;
           </h4>
           <h1 style="color:#fff;font-family: Frutiger, sans-serif;">Documents</h1>
@@ -108,8 +108,12 @@
           <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
               reorder
             </i></mat-icon>
-          <h4 style="color: #fff;font-size: 40px" >
-            &nbsp;
+          <div *ngIf="mySoCount == null">
+            <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+            <br />
+          </div>
+          <h4 style="color: #fff;font-size: 40px" *ngIf="mySoCount != null">
+            {{mySoCount}}
           </h4>
           <h1 style="color:#fff;font-family: Frutiger, sans-serif;">My Service Orders</h1>
         </mat-card>
@@ -141,7 +145,7 @@
 
             <div *ngIf="dataAvailable==false">
               <mat-spinner style="margin: 0 auto" [diameter]="45"></mat-spinner>
-              <br/>
+              <br />
             </div>
             <h4 style="color: grey;font-size: 40px" *ngIf="dataAvailable==true">
               {{notifsCount}}
@@ -157,7 +161,7 @@
 
             <div *ngIf="ordersCount == null">
               <mat-spinner style="margin: 0 auto" class="mat-spinner-color" [diameter]="45"></mat-spinner>
-              <br/>
+              <br />
             </div>
             <h4 style="color: #fff;font-size: 40px" *ngIf="ordersCount != null">
               {{ordersCount}}
@@ -184,7 +188,7 @@
 
             <div *ngIf="soCount == null">
               <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
-              <br/>
+              <br />
             </div>
             <h4 style="color: white;font-size: 40px" *ngIf="soCount != null">
               {{soCount}}
@@ -217,8 +221,12 @@
             <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
                 reorder
               </i></mat-icon>
-            <h4 style="color: #fff;font-size: 40px" >
-              &nbsp;
+            <div *ngIf="mySoCount == null">
+              <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+              <br />
+            </div>
+            <h4 style="color: #fff;font-size: 40px" *ngIf="mySoCount != null">
+              {{mySoCount}}
             </h4>
             <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">My Service Orders</h6>
           </mat-card>

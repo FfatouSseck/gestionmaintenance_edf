@@ -11,11 +11,10 @@ import { PriorityService } from '../providers/priority.service';
 import { EffectService } from '../providers/effect.service';
 import { CausegroupService } from '../providers/causegroup.service';
 import { CausecodeService } from '../providers/causecode.service';
-import { FunctlocService } from '../providers/functloc.service';
 import { ServiceOrderPreparationService } from '../providers/service-order-preparation.service';
 import { MockService } from '../providers/mock.service';
 import { ServiceOrderService } from '../providers/service-order.service';
-import { PlantListPage } from '../pages/plant-list/plant-list.page';
+import { MyOrdersService } from '../providers/my-orders.service';
 
 
 @Component({
@@ -34,6 +33,7 @@ export class HomePage implements OnInit {
     notifsCount = null;
     ordersCount = null;
     soCount = null;
+    mySoCount = null;
     dataAvailable = false;
     mock = false;
 
@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
         private effectService: EffectService, private causeCodeService: CausecodeService,
         private causeGroupService: CausegroupService, private soService: ServiceOrderService,
         public orderService: ServiceOrderPreparationService, private mockService: MockService,
-        private platform: Platform) {
+        private platform: Platform,private myOrderService: MyOrdersService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes
@@ -65,6 +65,7 @@ export class HomePage implements OnInit {
         this.soCount = null;
         this.dataAvailable = false;
         this.notifsCount = null;
+        this.mySoCount = null;
 
         this.storage.get("mock").then(
             (mock) => {
@@ -176,6 +177,8 @@ export class HomePage implements OnInit {
         this.soCount = null;
         this.dataAvailable = false;
         this.notifsCount = null;
+        this.mySoCount = null;
+
         if (plants.length > 1) {
             this.choosenPlant = plants[1].Plant;
         }
@@ -228,6 +231,20 @@ export class HomePage implements OnInit {
                 }
             })
 
+        //getting my service orders    
+        this.storage.get("mock").then(
+            (mock) => {
+                if (mock != undefined && mock != null && mock == true) {
+                    this.mySoCount = this.mockService.getAllMyMockSO(this.choosenPlant).length;
+                }
+                else {//no mock
+                    this.myOrderService.getAllMySOsByChoosenPlant(this.choosenPlant).subscribe(
+                        (ords) => {
+                            this.mySoCount = ords.d.results.length;
+                        }
+                    )
+                }
+            })
 
     }
 
@@ -243,6 +260,7 @@ export class HomePage implements OnInit {
         this.ordersCount = null;
         this.notifsCount = null;
         this.soCount = null;
+        this.mySoCount = null;
         this.dataAvailable = false;
 
         this.storage.get("choosenPlant").then(

@@ -5,6 +5,8 @@ import { MyOrdersService } from 'src/app/providers/my-orders.service';
 import { MockService } from 'src/app/providers/mock.service';
 import { Storage } from '@ionic/storage';
 import { Order } from 'src/app/interfaces/order.interface';
+import { Router } from '@angular/router';
+import { ServiceOrderPreparationService } from 'src/app/providers/service-order-preparation.service';
 
 @Component({
   selector: 'app-my-orders',
@@ -27,7 +29,8 @@ export class MyOrdersPage implements OnInit {
   initialOrders: any[] = [];
   searching: any = false;
 
-  constructor(private myOrdersService: MyOrdersService, private mockService: MockService, private storage: Storage) {
+  constructor(private myOrdersService: MyOrdersService, private mockService: MockService, private storage: Storage,
+              private router: Router,private orderPreparationService: ServiceOrderPreparationService) {
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
       this.searching = false;
@@ -40,6 +43,16 @@ export class MyOrdersPage implements OnInit {
 
   onSearchInput() {
     this.searching = true;
+  }
+
+  presentDetails(order) {
+    this.orderPreparationService.setCurrentOrder(order);
+    this.router.navigateByUrl("/order-details");
+  }
+
+  onClose(evt) {
+    this.notAvailable = true;
+    this.setFilteredItems();
   }
 
   ionViewDidEnter() {
@@ -103,7 +116,66 @@ export class MyOrdersPage implements OnInit {
   }
 
   sortBy(option){
+    if (option === 'allOrders') {
+      this.mySoList = this.initialOrders;
+    }
+    else
+      if (option === 'veryHigh') {
+        this.mySoList = this.getSOsByPriority('1');
+      }
+      else
+        if (option === 'high') {
+          this.mySoList = this.getSOsByPriority('2');
+        }
+        else
+          if (option === 'medium') {
+            this.mySoList = this.getSOsByPriority('3');
+          }
+            else {//orderTypes
+              this.mySoList = this.getSOsByOrderType(option);
+            }
+  }
 
+  getSOsByOrderType(ord) {
+    return this.initialOrders.filter(
+      (so) => {
+        return so.OrderType === ord;
+      }
+    )
+  }
+
+  getSOsByPriority(pr: string) {
+    if (pr === '1') {
+      return this.initialOrders.filter(
+        (so) => {
+          return so.Priority === "1";
+        }
+      )
+    }
+    else
+      if (pr === '2') {
+        return this.initialOrders.filter(
+          (so) => {
+            return so.Priority === "2";
+          }
+        )
+      }
+      else
+        if (pr === '3') {
+          return this.initialOrders.filter(
+            (so) => {
+              return so.Priority === "3";
+            }
+          )
+        }
+        else
+          if (pr === '4') {
+            return this.initialOrders.filter(
+              (so) => {
+                return so.Priority === "4";
+              }
+            )
+          }
   }
 
   getOrderTypes(arr: Order[]) {
@@ -135,7 +207,8 @@ export class MyOrdersPage implements OnInit {
       if (this.mySoList.length > 0) {
         this.notAvailable = false;
         this.noData = false;
-        this.myOrdersService.setSOs(this.mySoList)
+        this.myOrdersService.setSOs(this.mySoList);
+        this.initialOrders = this.mySoList;
         this.getTypes();
       }
       else {
@@ -150,6 +223,8 @@ export class MyOrdersPage implements OnInit {
             this.notAvailable = false;
             this.noData = false;
             this.myOrdersService.setSOs(SOs.d.results);
+            this.mySoList = this.myOrdersService.getMySOs();
+            this.initialOrders = this.mySoList;
             this.getTypes();
           }
           else {
