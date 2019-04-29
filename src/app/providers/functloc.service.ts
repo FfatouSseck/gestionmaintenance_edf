@@ -22,6 +22,10 @@ export class FunctlocService extends BaseService {
     return this.getAll("/FunctLocSet?$filter=PlanPlant eq '"+codePlant+"'");
   }
 
+  getAllFunctLocByPlantAndFirstLevelFLOC(codePlant: string,firstLevelFLOC): Observable<any> {
+    return this.getAll("/FunctLocSet?$filter=PlanPlant eq '"+codePlant+"' and SupFunctLoc eq '"+firstLevelFLOC+"'");
+  }
+
   setFunctLocs(FunctLocs) {
     this.functLocsList = FunctLocs;
     if (FunctLocs.length > 0) {   
@@ -41,6 +45,12 @@ export class FunctlocService extends BaseService {
     return this.functLocsList.filter((fl) => {
       return (fl.FunctLocId.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
         || fl.FunctLocDescr.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
+    });
+  }
+
+  filterFirstLevel(searchTerm) {
+    return this.functLocsList.filter((fl) => {
+      return (fl.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 );
     });
   }
 

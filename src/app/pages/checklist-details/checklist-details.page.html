@@ -253,13 +253,13 @@
         <mat-tab-group *ngIf="level == 4 && fourthLevelLabels.length > 0"
           (selectedTabChange)="segmentLevel3Changed($event)" #tabGroup3>
           <div *ngFor="let label of fourthLevelLabels">
-              <mat-tab *ngIf="label !== ''" [label]="getCount(label)">
-  
-              </mat-tab>
-              <mat-tab *ngIf="label === ''" [label]="'Other' + getCount(label)">
-  
-              </mat-tab>
-            </div>
+            <mat-tab *ngIf="label !== ''" [label]="getCount(label)">
+
+            </mat-tab>
+            <mat-tab *ngIf="label === ''" [label]="'Other' + getCount(label)">
+
+            </mat-tab>
+          </div>
         </mat-tab-group>
         <table mat-table [dataSource]="checklists">
           <ng-container matColumnDef="col1">
@@ -278,8 +278,13 @@
 
           <ng-container matColumnDef="col3">
             <th mat-header-cell *matHeaderCellDef style="text-align: center"> </th>
-            <td mat-cell *matCellDef="let element" style="text-align: center">
-              <ion-fab-button size="small" style="--background: #005BBB;color: white ">
+            <td mat-cell *matCellDef="let element;let i = index" style="text-align: center">
+              <ion-fab-button *ngIf="element.nok == false" size="small" style="--background: #e0e0e0;color: black"
+                (click)="nok(i)">
+                NOK
+              </ion-fab-button>
+              <ion-fab-button *ngIf="element.nok == true" size="small" style="--background: red;color: white"
+                (click)="nok(i)">
                 NOK
               </ion-fab-button>
             </td>
@@ -352,10 +357,12 @@
 
   <ng-template #otherTask>
     <div *ngIf="level == 3">
-      <a style="font-size: 20px" (click)="goBack(2)">All Tasks</a>/<a style="font-size: 20px" (click)="goBack(2)">{{pathSecondLevel === '' ? 'Others' : pathSecondLevel}}</a>/{{pathThirdLevel === '' ? 'Others' : pathThirdLevel}}
+      <a style="font-size: 20px" (click)="goBack(2)">All Tasks</a>/<a style="font-size: 20px"
+        (click)="goBack(2)">{{pathSecondLevel === '' ? 'Others' : pathSecondLevel}}</a>/{{pathThirdLevel === '' ? 'Others' : pathThirdLevel}}
     </div>
     <div *ngIf="level == 4">
-      <a style="font-size: 20px" (click)="goBack(2)">All Tasks</a>/<a style="font-size: 20px" (click)="goBack(2)">{{pathSecondLevel === '' ? 'Others' : pathSecondLevel}}</a>/<a style="font-size: 20px"
+      <a style="font-size: 20px" (click)="goBack(2)">All Tasks</a>/<a style="font-size: 20px"
+        (click)="goBack(2)">{{pathSecondLevel === '' ? 'Others' : pathSecondLevel}}</a>/<a style="font-size: 20px"
         (click)="goBack(3)">{{pathThirdLevel === '' ? 'Others' : pathThirdLevel}}</a>/{{pathFourthLevel === '' ? 'Others' : pathFourthLevel}}
     </div>
     <br />

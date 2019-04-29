@@ -441,9 +441,10 @@ export class NotificationListPage extends BasePage implements OnInit {
       functLoc = this.choosenFunctLoc;
     }
 
-    this.choosenFunctLoc = await this.selectFLoc(this.choosenPlantcode);
+    this.choosenFunctLoc = await this.selectFirstLevelFLOC(this.choosenPlantcode);
 
     if (this.choosenFunctLoc !== "") {
+      console.log("selected floc: ",this.choosenFunctLoc);
       await this.selectEquipment(this.choosenFunctLoc);
     }
     else {

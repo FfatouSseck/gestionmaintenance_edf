@@ -36,7 +36,7 @@
         "Category":"S",
         "CustomerWarrantyDescr":"",
         "CustomerWarrantyStartDate":null,
-        "SupFunctLoc":"CAT",
+        "SupFunctLoc":"CAT", 
         "CustomerWarrantyEndDate":null,
         "PlanPlant":"3CAT",
         "CatalogProfile":"",

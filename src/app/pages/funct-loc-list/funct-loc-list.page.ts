@@ -20,14 +20,16 @@ export class FunctLocListPage implements OnInit {
   notAvailable = true;
   noData = false;
   plantCode = "";
+  firstLevelFLOC : any;
   searching: any = false;
   mock = false;
 
   constructor(public navCtrl: NavController, public modalController: ModalController,
-    public snackBar: MatSnackBar, public navParams: NavParams,public functLocService: FunctlocService, 
-    private mockService: MockService,private storage: Storage,) {
+    public snackBar: MatSnackBar, public navParams: NavParams, public functLocService: FunctlocService,
+    private mockService: MockService, private storage: Storage, ) {
 
     this.plantCode = navParams.get('plantCode');
+    this.firstLevelFLOC = navParams.get("firstLevelFLOC");
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(700)).subscribe(search => {
       this.searching = false;
@@ -49,7 +51,10 @@ export class FunctLocListPage implements OnInit {
   }
 
   setFilteredItems() {
-    this.functLocs = this.functLocService.filterItems(this.searchTerm);
+    if (this.firstLevelFLOC != null && this.firstLevelFLOC != undefined && this.firstLevelFLOC !== ""){
+      this.functLocService.filterItems(this.searchTerm);
+    }
+    else this.functLocs = this.functLocService.filterFirstLevel(this.searchTerm);
   }
 
   ionViewDidEnter() {
@@ -63,58 +68,132 @@ export class FunctLocListPage implements OnInit {
     this.modalController.dismiss();
   }
 
-  choose(functloc) {
+  choose(firstLevelFLOC) {
     this.modalController.dismiss({
-      'result': functloc
+      'result': firstLevelFLOC
     });
   }
 
-  getFunctLocs(codePlant){
-    if(this.mock){
-      this.functLocService.setFunctLocs(this.mockService.getMockFunctLocsByPlant(codePlant));
-      if (this.functLocService.checkAvailability()) {
-            this.functLocs = this.functLocService.getAvailableFunctLocs();
-  
-            if (this.functLocs.length == 0) {
-              this.notAvailable = false;
-              this.noData = true;
-            }
-            else {
-              this.notAvailable = false;
-              this.noData = false;
-            }
-          }
-          else {
+  chooseFL(fl){
+    this.modalController.dismiss({
+      'result': fl
+    });
+  }
+
+  getFunctLocs(codePlant) {
+    if (this.mock) {
+      if (this.firstLevelFLOC != null && this.firstLevelFLOC != undefined && this.firstLevelFLOC !== "") {
+        this.functLocService.setFunctLocs(this.mockService.getMockFunctLocsByPlantAndFirstLevelFLOC(codePlant,this.firstLevelFLOC));
+        if (this.functLocService.checkAvailability()) {
+          this.functLocs = this.functLocService.getAvailableFunctLocs();
+
+          if (this.functLocs.length == 0) {
             this.notAvailable = false;
             this.noData = true;
           }
-    }
-    else{
-      this.functLocService.getAllFunctLocByPlant(this.plantCode).subscribe(
-        (functLocs) => {
-          this.functLocService.setFunctLocs(functLocs.d.results);
-          if (this.functLocService.checkAvailability()) {
-            this.functLocs = this.functLocService.getAvailableFunctLocs();
-  
-            if (this.functLocs.length == 0) {
-              this.notAvailable = false;
-              this.noData = true;
-            }
-            else {
-              this.notAvailable = false;
-              this.noData = false;
-            }
-          }
           else {
             this.notAvailable = false;
-            this.noData = true;
+            this.noData = false;
           }
-        },
-        (err) => {
-          console.log(err);
         }
-      )
+        else {
+          this.notAvailable = false;
+          this.noData = true;
+        }
+      }
+      else {
+        this.functLocService.setFunctLocs(this.getFirstLevelFLOC(this.mockService.getMockFunctLocsByPlant(codePlant)));
+        if (this.functLocService.checkAvailability()) {
+          let functLocs1 = this.functLocService.getAvailableFunctLocs();
+
+          if (functLocs1.length == 0) {
+            this.notAvailable = false;
+            this.noData = true;
+          }
+          else {
+            this.notAvailable = false;
+            this.noData = false;
+            this.functLocs = this.getFirstLevelFLOC(functLocs1);
+          }
+        }
+        else {
+          this.notAvailable = false;
+          this.noData = true;
+        }
+      }
+
     }
+    else {
+      if (this.firstLevelFLOC != null && this.firstLevelFLOC != undefined && this.firstLevelFLOC !== "") {
+        this.functLocService.getAllFunctLocByPlantAndFirstLevelFLOC(this.plantCode,this.firstLevelFLOC).subscribe(
+          (functLocs) => {
+            this.functLocService.setFunctLocs(functLocs.d.results);
+            if (this.functLocService.checkAvailability()) {
+              this.functLocs = this.functLocService.getAvailableFunctLocs();
+
+              if (this.functLocs.length == 0) {
+                this.notAvailable = false;
+                this.noData = true;
+              }
+              else {
+                this.notAvailable = false;
+                this.noData = false;
+              }
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = true;
+            }
+          },
+          (err) => {
+            console.log(err);
+          })
+      }
+      else {
+        this.functLocService.getAllFunctLocByPlant(this.plantCode).subscribe(
+          (functLocs) => {
+            this.functLocService.setFunctLocs(this.getFirstLevelFLOC(functLocs.d.results));
+            if (this.functLocService.checkAvailability()) {
+              let functLocs1 = this.functLocService.getAvailableFunctLocs();
+
+              if (functLocs1.length == 0) {
+                this.notAvailable = false;
+                this.noData = true;
+              }
+              else {
+                this.notAvailable = false;
+                this.noData = false;
+                this.functLocs = this.getFirstLevelFLOC(functLocs1);
+                console.log(this.functLocs)
+              }
+            }
+            else {
+              this.notAvailable = false;
+              this.noData = true;
+            }
+          },
+          (err) => {
+            console.log(err);
+          })
+      }
+    }
+  }
+
+  getFirstLevelFLOC(arr) {
+    //SupFunctLoc
+    let firstLevelFLOCs: string[] = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].SupFunctLoc !== "") {
+        firstLevelFLOCs.push(arr[i].SupFunctLoc);
+      }
+    }
+    return this.getUnique(firstLevelFLOCs);
+  }
+
+  getUnique(arr: string[]) {
+    return arr.filter(function (elem, index, self) {
+      return index === self.indexOf(elem);
+    })
   }
 
 

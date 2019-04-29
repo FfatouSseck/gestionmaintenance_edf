@@ -133,11 +133,12 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
     console.log(data.result);
   }
 
-  async selectFLoc(plantCode: string) {
+  async selectFLoc(plantCode: string,firstLevelFLOC?) {
     this.modal = await this.modalController.create({
       component: FunctLocListPage,
       componentProps: {
-        'plantCode': plantCode
+        'plantCode': plantCode,
+        'firstLevelFLOC': firstLevelFLOC
       },
     });
     this.modal.backdropDismiss = false;
@@ -151,6 +152,28 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
     else this.choosenFunctLoc = "";
 
     return this.choosenFunctLoc;
+  }
+
+  async selectFirstLevelFLOC(plantCode: string){
+    this.modal = await this.modalController.create({
+      component: FunctLocListPage,
+      componentProps: {
+        'plantCode': plantCode
+      },
+    });
+    this.modal.backdropDismiss = false;
+    await this.modal.present();
+
+    const { data } = await this.modal.onDidDismiss();
+    let firstLevelFLOC= "";
+
+    if (data != undefined) {
+      console.log("1st level floc: ",data.result);
+      firstLevelFLOC = data.result;
+    }
+    else firstLevelFLOC = "";
+    let choosenFunctLoc = this.selectFLoc(plantCode,firstLevelFLOC);
+    return choosenFunctLoc;
   }
 
   async selectEq(fl: string){

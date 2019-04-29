@@ -70,6 +70,18 @@ export class ChecklistDetailsPage implements OnInit {
     )
   }
 
+  nok(index: number) {
+    this.checklists.data[index].nok=!this.checklists.data[index].nok;
+  }
+
+  ok(index: number) {
+    this.checklists.data[index].ok=!this.checklists.data[index].ok;
+  }
+
+  na(index: number) {
+    this.checklists.data[index].na=!this.checklists.data[index].na;
+  }
+
   segmentChanged(event: any, pathSecondLevel?) {
     this.loadingChecklists = true;
     if (pathSecondLevel != null && pathSecondLevel !== undefined) {
@@ -100,11 +112,11 @@ export class ChecklistDetailsPage implements OnInit {
   goBack(level: number) {
     this.loadingChecklists = true;
     if (level == 2) {
-      this.segmentChanged(null, 'All Tasks'); 
+      this.segmentChanged(null, 'All Tasks');
     }
     else if (level == 3) {
       this.level = 3;
-      console.log(this.thirdLevelLabels,this.tabGroup2);
+      console.log(this.thirdLevelLabels, this.tabGroup2);
       //this.segmentLevel2Changed(null);
 
     }
@@ -131,7 +143,7 @@ export class ChecklistDetailsPage implements OnInit {
 
   getTools() {
     if (this.mock) {
-      let eq = this.mockService.getMockOrderOpChckToolSetByOrderNo(this.orderNo, this.plant,this.operation);
+      let eq = this.mockService.getMockOrderOpChckToolSetByOrderNo(this.orderNo, this.plant, this.operation);
       if (eq.length > 0) {
         this.loadingEquipments = false;
         this.noEquipments = false;
@@ -143,7 +155,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.geOrderOpChckToolSetByOrderNo(this.orderNo, this.plant,this.operation).subscribe(
+      this.checklistService.geOrderOpChckToolSetByOrderNo(this.orderNo, this.plant, this.operation).subscribe(
         (tools) => {
           let eq = tools.d.results;
           if (eq.length > 0) {
@@ -162,7 +174,7 @@ export class ChecklistDetailsPage implements OnInit {
 
   getParts() {
     if (this.mock) {
-      let pts = this.mockService.getMockOrderOperationChecklistPartSet(this.orderNo, this.plant,this.operation);
+      let pts = this.mockService.getMockOrderOperationChecklistPartSet(this.orderNo, this.plant, this.operation);
       if (pts.length > 0) {
         this.loadingParts = false;
         this.noParts = false;
@@ -174,7 +186,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.geOrderOperationChecklistPartSet(this.orderNo, this.plant,this.operation).subscribe(
+      this.checklistService.geOrderOperationChecklistPartSet(this.orderNo, this.plant, this.operation).subscribe(
         (parts) => {
           let pts = parts.d.results;
           if (pts.length > 0) {
@@ -193,7 +205,7 @@ export class ChecklistDetailsPage implements OnInit {
 
   getCalbs() {
     if (this.mock) {
-      let cbs = this.mockService.getMockOrderOperationChecklistCalbSet(this.orderNo, this.plant,this.operation);
+      let cbs = this.mockService.getMockOrderOperationChecklistCalbSet(this.orderNo, this.plant, this.operation);
       if (cbs.length > 0) {
         this.loadingCalbs = false;
         this.noCalbs = false;
@@ -205,7 +217,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.getOrderOperationChecklistCalbSet(this.orderNo, this.plant,this.operation).subscribe(
+      this.checklistService.getOrderOperationChecklistCalbSet(this.orderNo, this.plant, this.operation).subscribe(
         (calbs) => {
           let cbs = calbs.d.results;
           if (cbs.length > 0) {
@@ -243,7 +255,7 @@ export class ChecklistDetailsPage implements OnInit {
 
     this.level = 2;
     if (this.mock) {
-      let elts = this.mockService.getMockOrderOperationChecklistTaskSet(this.orderNo, this.plant,this.operation);
+      let elts = this.mockService.getMockOrderOperationChecklistTaskSet(this.orderNo, this.plant, this.operation);
       if (elts.length > 0) {
         this.secondLevellabels = this.getSecondLevelLabels(elts);
         this.secondLevellabels.unshift("All Tasks");
@@ -254,8 +266,18 @@ export class ChecklistDetailsPage implements OnInit {
           this.loadingChecklists = false;
           this.noChecklists = false;
           this.checklists = new MatTableDataSource(ckl);
-          this.checkVisibility(this.secondLevellabels,2);
-          this.initialChecklists = this.checklists;
+          this.checkVisibility(this.secondLevellabels, 2);
+          this.initialChecklists = this.checklists
+          let initialChecklists = [];
+          this.checklists.data.forEach(ck => {
+            let elt: any = ck;
+            elt.nok = false;
+            elt.ok = false;
+            elt.na = false;
+            initialChecklists.push(elt);
+          });
+          console.log("after filling", this.initialChecklists);
+          //  = this.checklists;
         }
         else {
           this.loadingChecklists = false;
@@ -268,7 +290,15 @@ export class ChecklistDetailsPage implements OnInit {
         if (ckl.length > 0) {
           this.loadingChecklists = false;
           this.noChecklists = false;
-          this.checklists = new MatTableDataSource(ckl);
+          let checklists = new MatTableDataSource(ckl);
+          checklists.data.forEach(ck => {
+            let elt: any = ck;
+            elt.nok = false;
+            elt.ok = false;
+            elt.na = false;
+            this.checklists.data.push(elt);
+          });
+          console.log("after filling", this.checklists);
 
           this.thirdLevelLabels = this.getThirdLevelLabels(this.pathSecondLevel);
 
@@ -282,7 +312,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.getOrderOperationChecklistTaskSet(this.orderNo, this.plant,this.operation).subscribe(
+      this.checklistService.getOrderOperationChecklistTaskSet(this.orderNo, this.plant, this.operation).subscribe(
         (tasks) => {
           let elts = tasks.d.results;
 
@@ -329,8 +359,16 @@ export class ChecklistDetailsPage implements OnInit {
       (ck.ChklstLoc2.toLowerCase() === level2Label.toLowerCase() &&
         ck.ChklstLoc3.toLowerCase() === level3Label.toLowerCase())
     );
-    this.checkVisibility(this.thirdLevelLabels,3);
-    this.checklists = new MatTableDataSource(ckl);
+    this.checkVisibility(this.thirdLevelLabels, 3);
+    let checklists = new MatTableDataSource(ckl);
+    checklists.data.forEach(ck => {
+      let elt: any = ck;
+      elt.nok = false;
+      elt.ok = false;
+      elt.na = false;
+      this.checklists.data.push(elt);
+    });
+    console.log("after filling", this.checklists);
   }
 
   getFourthLevelChecklists(level2Label: string, level3Label: string, level4Label: string) {
@@ -343,31 +381,39 @@ export class ChecklistDetailsPage implements OnInit {
 
     if (ckl.length > 0) {
       this.loadingChecklists = false;
-      this.checklists = new MatTableDataSource(ckl);
-      this.checkVisibility(this.fourthLevelLabels,4);
+      let checklists = new MatTableDataSource(ckl);
+      checklists.data.forEach(ck => {
+        let elt: any = ck;
+        elt.nok = false;
+        elt.ok = false;
+        elt.na = false;
+        this.checklists.data.push(elt);
+      });
+      console.log("after filling", this.checklists);
+      this.checkVisibility(this.fourthLevelLabels, 4);
     }
     else {
       this.loadingChecklists = false;
     }
   }
 
-  checkVisibility(tab: any[],level: number){
-    if(this.level==level && level==2 && tab.length > 0){
+  checkVisibility(tab: any[], level: number) {
+    if (this.level == level && level == 2 && tab.length > 0) {
       this.ok2 = true;
       this.ok3 = false;
       this.ok4 = false;
     }
-    else if(this.level==level && level==3 && tab.length > 0){
+    else if (this.level == level && level == 3 && tab.length > 0) {
       this.ok2 = false;
       this.ok3 = true;
       this.ok4 = false;
     }
-    else if(this.level==level && level==4 && tab.length > 0){
+    else if (this.level == level && level == 4 && tab.length > 0) {
       this.ok2 = false;
       this.ok3 = false;
       this.ok4 = true;
     }
-    
+
   }
 
   getSecondLevelLabels(tab: any[]) {

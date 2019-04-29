@@ -135,7 +135,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   async selectFunctLoc() {
-    this.choosenFunctLoc = await this.selectFLoc(this.choosenPlantcode);
+    this.choosenFunctLoc = await this.selectFirstLevelFLOC(this.choosenPlantcode);
     if (this.choosenFunctLoc !== "") {
       await this.selectEquipment(this.choosenFunctLoc);
     }

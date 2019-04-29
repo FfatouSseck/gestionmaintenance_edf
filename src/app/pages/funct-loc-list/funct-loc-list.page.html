@@ -25,7 +25,7 @@
         <ion-spinner></ion-spinner>
       </div>
 
-      <ion-list>
+      <ion-list *ngIf="firstLevelFLOC != null && firstLevelFLOC != undefined && firstLevelFLOC !== ''">
         <ion-list-header>
           <ion-label>Choose the Functionnal Location</ion-label>
         </ion-list-header>
@@ -33,6 +33,15 @@
           {{fl.FunctLocId}} &nbsp; - &nbsp;{{fl.FunctLocDescr}}
         </ion-item>
       </ion-list>
+
+      <ion-list *ngIf="firstLevelFLOC == null || firstLevelFLOC == undefined || firstLevelFLOC === ''">
+          <ion-list-header>
+            <ion-label>Choose the Functionnal Location</ion-label>
+          </ion-list-header>
+          <ion-item (click)="chooseFL(fl)" *ngFor="let fl of functLocs;let i=index">
+            {{fl}}
+          </ion-item>
+        </ion-list>
     </div>
   </ng-template>
 </ion-content>

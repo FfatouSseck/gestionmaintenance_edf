@@ -161,6 +161,16 @@ export class MockService {
     )
   }
 
+  getMockFunctLocsByPlantAndFirstLevelFLOC(codePlant,firstLevelFLOC){
+    let functLocs = FunctLocs;
+    return functLocs.filter(
+      (fl) =>{
+        return (fl.PlanPlant.toLowerCase() === codePlant.toLowerCase()
+              && fl.SupFunctLoc.toLowerCase() === firstLevelFLOC.toLowerCase());
+      }
+    )
+  }
+
   getMockPriorities(){
     return Priorities;
   }
