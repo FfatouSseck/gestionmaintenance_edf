@@ -52,7 +52,14 @@ export class MyOrdersPage implements OnInit {
 
   onClose(evt) {
     this.notAvailable = true;
-    this.setFilteredItems();
+    this.storage.get("choosenPlant").then(
+      (choosenPlantcode) => {
+        if (choosenPlantcode != null) {
+          this.choosenPlant = choosenPlantcode;
+          this.setFilteredItems();
+        }
+      });
+    
   }
 
   ionViewDidEnter() {
