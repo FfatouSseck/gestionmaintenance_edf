@@ -11,7 +11,7 @@
     <ion-toolbar style="--min-height:50px" *ngIf="noData == false">
         <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
             <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm" [formControl]="searchControl"
-                (ionBlur)="toggleSearch()" class="searchbar">
+                (ionBlur)="toggleSearch()" class="searchbar" (ionInput)="onSearchInput()">
             </ion-searchbar>
         </div>
         <ion-buttons slot="end">
@@ -35,6 +35,9 @@
         <p *ngIf="noData == true">
             No data available for this plant
         </p>
+        <div *ngIf="searching" class="spinner-container">
+            <ion-spinner></ion-spinner>
+        </div>
         <mat-nav-list *ngIf="noData == false">
             <mat-list-item *ngFor="let ord of mySoList" (click)="presentDetails(ord)"
                 [style.background-color]="ord.bgcolor" [style.color]="ord.color">

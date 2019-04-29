@@ -1,0 +1,19 @@
+
+  .searchbar{
+    --background: #F7F7F7;
+    --color: #000;
+    --icon-color: #000;
+    --placeholder-color :#000;
+    --clear-button-color:#000;
+    margin-left: 50%;
+    width: 50%;
+  }
+
+  ion-searchbar{        
+    .searchbar-input-container{            
+        .searchbar-input{
+            border-radius: 20px;
+            font-size: 20px !important;
+        }
+    }
+ }

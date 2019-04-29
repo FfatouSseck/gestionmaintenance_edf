@@ -24,15 +24,22 @@ export class MyOrdersPage implements OnInit {
   notAvailable = true;
   noData = false;
   defaultFilter: string = '';
+  initialOrders: any[] = [];
+  searching: any = false;
 
   constructor(private myOrdersService: MyOrdersService, private mockService: MockService, private storage: Storage) {
     this.searchControl = new FormControl();
     this.searchControl.valueChanges.pipe(debounceTime(10)).subscribe(search => {
+      this.searching = false;
       this.filterOrders();
     });
   }
 
   ngOnInit() {
+  }
+
+  onSearchInput() {
+    this.searching = true;
   }
 
   ionViewDidEnter() {
@@ -62,10 +69,6 @@ export class MyOrdersPage implements OnInit {
       {
         lib: 'All Orders',
         val: 'allOrders'
-      },
-      {
-        lib: 'My Service Orders',
-        val: 'mySOs'
       },
       {
         lib: 'Very High',
@@ -99,6 +102,10 @@ export class MyOrdersPage implements OnInit {
     })
   }
 
+  sortBy(option){
+
+  }
+
   getOrderTypes(arr: Order[]) {
     let types: string[] = [];
     for (let i = 0; i < arr.length; i++) {
@@ -117,6 +124,9 @@ export class MyOrdersPage implements OnInit {
 
   filterOrders() {
     this.mySoList = this.myOrdersService.filterMySOs(this.searchTerm);
+    if(this.mySoList.length > 0){
+      this.searching = false;
+    }
   }
 
   setFilteredItems() {
