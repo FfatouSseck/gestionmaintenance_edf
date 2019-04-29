@@ -25,6 +25,30 @@
 	},
 	{
 		"__metadata": {
+			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00001')",
+			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00001')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTask"
+		},
+		"OrderNo": "5322284",
+		"PerformedAt": null,
+		"Activity": "0020",
+		"WorkInstruction": "",
+		"TaskDescr": "Task 1",
+		"Status": "NA",
+		"TaskId": "00001",
+		"ChklstLoc2": "Remotely",
+		"ChklstLoc3": "N/A",
+		"ChklstLoc4": "Cabinets",
+		"Plant": "3CAT",
+		"Comment": "Test 1",
+		"Measure": {
+			"__deferred": {
+				"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00001')/Measure"
+			}
+		}
+	},
+	{
+		"__metadata": {
 			"id": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00002')",
 			"uri": "https://enx-r3sdw11.edf-re.com:8400/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderOperationChecklistTaskSet(OrderNo='5322285',Activity='0010',TaskId='00002')",
 			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderOperationChecklistTask"

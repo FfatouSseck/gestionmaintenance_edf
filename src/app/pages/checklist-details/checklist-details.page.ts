@@ -14,6 +14,7 @@ export class ChecklistDetailsPage implements OnInit {
   step = 0;
   @Input() orderNo: string;
   @Input() plant: string;
+  @Input() operation: string;
   @ViewChild('tabGroup') tabGroup;
   @ViewChild('tabGroup2') tabGroup2;
   @ViewChild('tabGroup3') tabGroup3;
@@ -99,7 +100,7 @@ export class ChecklistDetailsPage implements OnInit {
   goBack(level: number) {
     this.loadingChecklists = true;
     if (level == 2) {
-      this.segmentChanged(null, 'All Tasks');
+      this.segmentChanged(null, 'All Tasks'); 
     }
     else if (level == 3) {
       this.level = 3;
@@ -130,7 +131,7 @@ export class ChecklistDetailsPage implements OnInit {
 
   getTools() {
     if (this.mock) {
-      let eq = this.mockService.getMockOrderOpChckToolSetByOrderNo(this.orderNo, this.plant);
+      let eq = this.mockService.getMockOrderOpChckToolSetByOrderNo(this.orderNo, this.plant,this.operation);
       if (eq.length > 0) {
         this.loadingEquipments = false;
         this.noEquipments = false;
@@ -142,7 +143,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.geOrderOpChckToolSetByOrderNo(this.orderNo, this.plant).subscribe(
+      this.checklistService.geOrderOpChckToolSetByOrderNo(this.orderNo, this.plant,this.operation).subscribe(
         (tools) => {
           let eq = tools.d.results;
           if (eq.length > 0) {
@@ -161,7 +162,7 @@ export class ChecklistDetailsPage implements OnInit {
 
   getParts() {
     if (this.mock) {
-      let pts = this.mockService.getMockOrderOperationChecklistPartSet(this.orderNo, this.plant);
+      let pts = this.mockService.getMockOrderOperationChecklistPartSet(this.orderNo, this.plant,this.operation);
       if (pts.length > 0) {
         this.loadingParts = false;
         this.noParts = false;
@@ -173,7 +174,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.geOrderOperationChecklistPartSet(this.orderNo, this.plant).subscribe(
+      this.checklistService.geOrderOperationChecklistPartSet(this.orderNo, this.plant,this.operation).subscribe(
         (parts) => {
           let pts = parts.d.results;
           if (pts.length > 0) {
@@ -192,7 +193,7 @@ export class ChecklistDetailsPage implements OnInit {
 
   getCalbs() {
     if (this.mock) {
-      let cbs = this.mockService.getMockOrderOperationChecklistCalbSet(this.orderNo, this.plant);
+      let cbs = this.mockService.getMockOrderOperationChecklistCalbSet(this.orderNo, this.plant,this.operation);
       if (cbs.length > 0) {
         this.loadingCalbs = false;
         this.noCalbs = false;
@@ -204,7 +205,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.getOrderOperationChecklistCalbSet(this.orderNo, this.plant).subscribe(
+      this.checklistService.getOrderOperationChecklistCalbSet(this.orderNo, this.plant,this.operation).subscribe(
         (calbs) => {
           let cbs = calbs.d.results;
           if (cbs.length > 0) {
@@ -242,7 +243,7 @@ export class ChecklistDetailsPage implements OnInit {
 
     this.level = 2;
     if (this.mock) {
-      let elts = this.mockService.getMockOrderOperationChecklistTaskSet(this.orderNo, this.plant);
+      let elts = this.mockService.getMockOrderOperationChecklistTaskSet(this.orderNo, this.plant,this.operation);
       if (elts.length > 0) {
         this.secondLevellabels = this.getSecondLevelLabels(elts);
         this.secondLevellabels.unshift("All Tasks");
@@ -281,7 +282,7 @@ export class ChecklistDetailsPage implements OnInit {
       }
     }
     else {
-      this.checklistService.getOrderOperationChecklistTaskSet(this.orderNo, this.plant).subscribe(
+      this.checklistService.getOrderOperationChecklistTaskSet(this.orderNo, this.plant,this.operation).subscribe(
         (tasks) => {
           let elts = tasks.d.results;
 

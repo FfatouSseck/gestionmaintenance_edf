@@ -18,7 +18,6 @@ export class ServiceOrderPage implements OnInit {
 
   searchControl: FormControl;
   @ViewChild('search') search: any;
-  @ViewChild('select') select;
   clicked = false;
   refresh = false;
   searchTerm: string = '';
@@ -247,10 +246,6 @@ export class ServiceOrderPage implements OnInit {
         }
       }
     )
-  }
-
-  openSelect(evt) {
-    this.select.open();
   }
 
   setFilteredItems() {

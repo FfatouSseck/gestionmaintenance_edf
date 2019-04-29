@@ -64,6 +64,16 @@ export class MockService {
     )
   }
 
+  getAllMyMockSO(codePlant){
+    let SOPList = SOP;
+    return SOPList.filter(
+      (sop) =>{
+        return (sop.PlanPlant.toLowerCase().indexOf(codePlant.toLowerCase()) > -1
+             && sop.Mine == true);
+      }
+    )
+  }
+
   getMockNotifByNumber(notifNo: string){
     let notifList = NotifHeaderdata;
     return notifList.filter(
@@ -78,47 +88,47 @@ export class MockService {
     let operations = Orderoperations;
     return operations.filter(
       (op) =>{
-        return op.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1;
+        return op.OrderNo.toLowerCase() === orderNo.toLowerCase();
       }
     )
   }
 
-  getMockOrderOpChckToolSetByOrderNo(orderNo: string,codePlant: string){
+  getMockOrderOpChckToolSetByOrderNo(orderNo: string,codePlant: string,operation: string){
     let ordOpChckToolSet = OrderOperationChecklistToolSet;
     return ordOpChckToolSet.filter(
       (oct) =>{
-        return (oct.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
-                && oct.Plant === codePlant);
+        return (oct.OrderNo.toLowerCase() === orderNo.toLowerCase() && oct.Plant === codePlant 
+                && oct.Activity.toLowerCase() === operation.toLowerCase());
       }
     ) 
   }
 
-  getMockOrderOperationChecklistPartSet(orderNo: string,codePlant: string){
+  getMockOrderOperationChecklistPartSet(orderNo: string,codePlant: string,operation: string){
     let ordOpChckPartSet = OrderOperationChecklistPartSet;
     return ordOpChckPartSet.filter(
       (ocp) =>{
-        return (ocp.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
-                && ocp.Plant === codePlant);
+        return (ocp.OrderNo.toLowerCase() === orderNo.toLowerCase()
+                && ocp.Plant === codePlant && ocp.Activity.toLowerCase() === operation.toLowerCase());
       }
     ) 
   }
 
-  getMockOrderOperationChecklistCalbSet(orderNo: string,codePlant: string){
+  getMockOrderOperationChecklistCalbSet(orderNo: string,codePlant: string,operation: string){
     let ordOpChckCalbSet = OrderOperationChecklistCalbSet;
     return ordOpChckCalbSet.filter(
       (occ) =>{
-        return (occ.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
-                && occ.Plant === codePlant);
+        return (occ.OrderNo.toLowerCase() === orderNo.toLowerCase()
+                && occ.Plant === codePlant && occ.Activity.toLowerCase() === operation.toLowerCase());
       }
     ) 
   }
 
-  getMockOrderOperationChecklistTaskSet(orderNo: string,codePlant: string){
+  getMockOrderOperationChecklistTaskSet(orderNo: string,codePlant: string,operation: string){
     let ordOpChckTaskSet = OrderOperationChecklistTaskSet;
     return ordOpChckTaskSet.filter(
       (oct) =>{
-        return (oct.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1
-                && oct.Plant === codePlant);
+        return (oct.OrderNo.toLowerCase() === orderNo.toLowerCase()
+                && oct.Plant === codePlant && oct.Activity.toLowerCase() === operation.toLowerCase());
       }
     ) 
   }

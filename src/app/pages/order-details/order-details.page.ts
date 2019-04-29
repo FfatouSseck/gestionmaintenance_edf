@@ -188,7 +188,9 @@ export class OrderDetailsPage implements OnInit {
       (mock) => {
         if (mock != null && mock != undefined) {
           if (mock) {
-            let ckl = this.mockService.getMockOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant);
+            let ckl = this.mockService.getMockOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant,this.operations[index].Activity);
+            console.log("parameters: ",this.operations[index].OrderNo, this.operations[index].Plant,this.operations[index].Activity);
+            
             let afficheChecklist = false;
             if (ckl.length > 0) {
               afficheChecklist = true;
@@ -197,7 +199,7 @@ export class OrderDetailsPage implements OnInit {
             this.presentOperationModal(this.operations[index], 'detail', afficheChecklist);
           }
           else {
-            this.checklistService.getOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant).subscribe(
+            this.checklistService.getOrderOperationChecklistTaskSet(this.operations[index].OrderNo, this.operations[index].Plant,this.operations[index].Activity).subscribe(
               (ckl) => {
                 let afficheChecklist = false;
                 if (ckl.d.results.length > 0) {

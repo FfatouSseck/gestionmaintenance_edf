@@ -99,7 +99,7 @@ export class OperationDetailsPage implements OnInit {
     else {
 
       if (this.op.WorkCenterShort !== "") {
-        this.workCenter = this.op.WorkCenterShort;
+        this.workCenter = this.op.WorkCenterShort; 
         if (this.op.WorkCenterDescr !== "") {
           this.workCenter += " - " + this.op.WorkCenterDescr;
         }
@@ -316,11 +316,14 @@ export class OperationDetailsPage implements OnInit {
   }
 
   async displayChecklistDetails(){
+    console.log("this.op.Activity: ",this.op.Activity);
+    
     this.modal = await this.modalController.create({
       component: ChecklistDetailsPage,
       componentProps: {
         'orderNo' : this.op.OrderNo,
-        'plant': this.op.Plant
+        'plant': this.op.Plant,
+        'operation': this.op.Activity
       },
     });
     this.modal.backdropDismiss = false;

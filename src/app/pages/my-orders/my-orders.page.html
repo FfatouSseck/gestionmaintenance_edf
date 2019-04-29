@@ -1,7 +1,63 @@
 <ion-header>
-    <app-header pageTitle="My orders" (close)="onClose($event)"></app-header>
+    <app-header pageTitle="My Serice Orders" (close)="onClose($event)"></app-header>
 </ion-header>
 
 <ion-content padding>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <ion-toolbar style="--min-height:50px" *ngIf="noData == false">
+        <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
+            <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm" [formControl]="searchControl"
+                (ionBlur)="toggleSearch()" class="searchbar">
+            </ion-searchbar>
+        </div>
+        <ion-buttons slot="end">
+            <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()"
+                style="--background: #007CC0;">
+                <i class="material-icons" style="color: #fff;">search</i>
+            </ion-fab-button>
+            <ion-fab-button size="small" [matMenuTriggerFor]="menu" style="--background: #007CC0;">
+                <i class="material-icons" style="color: #fff;">swap_vert</i>
+            </ion-fab-button>
+            <mat-menu #menu="matMenu">
+                <button (click)="sortBy(type.val)" mat-menu-item *ngFor="let type of types">{{type.lib}}</button>
+            </mat-menu>
+        </ion-buttons>
+    </ion-toolbar>
 
+    <div *ngIf="notAvailable;else availContent">
+        <mat-spinner style="margin: 0 auto"></mat-spinner>
+    </div>
+    <ng-template #availContent>
+        <p *ngIf="noData == true">
+            No data available for this plant
+        </p>
+        <mat-nav-list *ngIf="noData == false">
+            <mat-list-item *ngFor="let ord of mySoList" (click)="presentDetails(ord)"
+                [style.background-color]="ord.bgcolor" [style.color]="ord.color">
+                <h3 matLine style="font-weight: bold;color: #007CC0;font-size: 15px">{{ord.OrderNo}} </h3>
+                <p matLine [style.font-weight]="ord.fw" style="font-size: 15px">{{ord.ShortText}} <span
+                        *ngIf="ord.WorkCenterDescr.length>26">...</span> </p>
+                <p matLine [style.font-weight]="ord.fw" class="demo-2" style="font-size: 15px"> {{ord.FunctLoc}}</p>
+                <p style="color: red;font-size: 15px" *ngIf="ord.Priority === '1'" [style.font-weight]="ord.fw" matLine>
+                    {{ord.PriorityDescr}}</p>
+                <p style="color: blue;font-size: 15px" *ngIf="ord.Priority === '2'" [style.font-weight]="ord.fw"
+                    matLine>
+                    {{ord.PriorityDescr}}</p>
+                <p style="color: gray;font-size: 15px" *ngIf="ord.Priority === '3'" [style.font-weight]="ord.fw"
+                    matLine>
+                    {{ord.PriorityDescr}}</p>
+                <p style="color: green;font-size: 15px" *ngIf="ord.Priority === '4'" [style.font-weight]="ord.fw"
+                    matLine>
+                    {{ord.PriorityDescr}}</p>
+                <button mat-icon-button>
+                    <i class="material-icons" style="color: grey;">navigate_next</i>
+                </button>
+                <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+            </mat-list-item>
+        </mat-nav-list>
+    </ng-template>
 </ion-content>
