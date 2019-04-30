@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Platform, ToastController, AlertController, ModalController } from '@ionic/angular';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, ErrorStateMatcher } from '@angular/material';
 import { BasePage } from '../base.page';
 
 import { ActionSheetController, LoadingController } from '@ionic/angular';
@@ -20,6 +20,8 @@ import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { Camera } from '@ionic-native/Camera/ngx';
 import { NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
+import { NotificationService } from 'src/app/providers/notification.service';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 const STORAGE_KEY = 'my_images';
 
@@ -56,6 +58,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   choosenEquipment = "";
   choosenObjectPartCode = "";
   choosenObjectPartGroup = "";
+  orientation = "";
 
   mock = false;
 
@@ -65,12 +68,20 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     public actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
     private effectService: EffectService, private priorityService: PriorityService,
     private causeGroupService: CausegroupService, private functLocService: FunctlocService, private mockService: MockService,
-    public webview: WebView,
+    public webview: WebView,private notificationService: NotificationService,private screenOrientation: ScreenOrientation,
     public ref: ChangeDetectorRef, public filePath: FilePath, public camera: Camera,
     public file: File, public http: HttpClient, public loadingController: LoadingController, ) {
 
     super(_formBuilder, platform, functlocService, qrScanner, toastController, snackBar, alertController, modalController,
       webview, actionSheetController, ref, filePath, camera, file, http, loadingController
+    );
+
+    this.orientation = this.screenOrientation.type;
+    // detect orientation changes
+    this.screenOrientation.onChange().subscribe(
+        () => {
+            this.orientation = this.screenOrientation.type;
+        }
     );
   }
 
@@ -158,6 +169,14 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         "ObjectPartCode": "",
         "ObjectPartCodeDescr": ""
       }
+      this.notificationService.createNotif(notif).subscribe(
+        (elt) =>{
+          console.log("result: ",elt);
+        },
+        (err) =>{
+          console.log("err: ",err);
+        }
+      )
     }
     else {
       this.invalidForm();

@@ -77,12 +77,12 @@
         </mat-form-field>
         <br />
         <mat-form-field class="example-form">
-            <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo" style="visibility: hidden">
-          <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" >
+          <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo"
+            style="visibility: hidden">
+          <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary">
             Breakdown
             Indicator</mat-checkbox>
         </mat-form-field>
-
         <br />
         <mat-form-field class="example-form">
           <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
@@ -158,10 +158,7 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;let i=index" (click)="getOperationDetails(i)"></tr>
       </table>
     </div>
-
     <br />
-
-
     <!--Components-->
     <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
       <ion-title>
