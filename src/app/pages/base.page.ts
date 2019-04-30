@@ -320,6 +320,10 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
     )
   }
 
+  invalidForm(){
+    this.openSnackBar("Please fill all required fields!");
+  }
+
   scanQRCode() {
     //if we are on mobile device
     // Optionally request the permission early

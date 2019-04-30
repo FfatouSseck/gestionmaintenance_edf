@@ -19,6 +19,7 @@ import { MockService } from 'src/app/providers/mock.service';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { Camera } from '@ionic-native/Camera/ngx';
+import { NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
 
 const STORAGE_KEY = 'my_images';
 
@@ -30,6 +31,20 @@ const STORAGE_KEY = 'my_images';
 export class CreateNotificationPage extends BasePage implements OnInit {
 
   nbAttachments = 0;
+  darkTheme: NgxMaterialTimepickerTheme = {
+    container: {
+      bodyBackgroundColor: '#424242',
+      buttonColor: '#fff'
+    },
+    dial: {
+      dialBackgroundColor: '#555',
+    },
+    clockFace: {
+      clockFaceBackgroundColor: '#555',
+      clockHandColor: '#005BBB',
+      clockFaceTimeInactiveColor: '#fff'
+    }
+  };
 
 
   choosenDC = ""  //choosen damage code
@@ -76,7 +91,77 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   }
 
+  save() {
+    console.log(this.notifFormGroup);
+    let ps = this.priorities.filter(
+      priority => priority.PriorityId === this.notifFormGroup.controls.priority.value
+    )
+    console.log(ps);
 
+    if (this.notifFormGroup.valid) {
+      let notif = {
+        "EquipUnderWarranty": false,
+        "NotifNo": "10032167",
+        "EquipCustWarranty": false,
+        "PlanPlant": "2CFL",
+        "EquipCustWarrantyDescr": "",
+        "NotifType": "M1",
+        "EquipCustWarrantyStartDate": null,
+        "NotifTypeDescr": "Maintenance Request",
+        "EquipCustWarrantyEndDate": null,
+        "FunctLoc": this.notifFormGroup.controls.functloc.value,
+        "EquipVendWarranty": false,
+        "FunctLocDescr": this.choosenFunctLoc,
+        "Equipment": this.notifFormGroup.controls.equipment.value,
+        "EquipVendWarrantyDescr": "",
+        "EquipmentDescr": "",
+        "EquipVendWarrantyStartDate": null,
+        "Breakdown": false,
+        "EquipVendWarrantyEndDate": null,
+        "Effect": this.notifFormGroup.controls.productionEff.value,
+        "FlocUnderWarranty": false,
+        "EffectDescr": "",
+        "FlocCustWarranty": false,
+        "FlocCustWarrantyDescr": "",
+        "StartDate": "\/Date(1433980800000)\/",
+        "FlocCustWarrantyStartDate": null,
+        "InProcess": true,
+        "Complete": false,
+        "FlocCustWarrantyEndDate": null,
+        "FlocVendWarranty": false,
+        "ShortText": this.notifFormGroup.controls.description.value,
+        "FlocVendWarrantyDescr": "",
+        "LongText": "",
+        "FlocVendWarrantyStartDate": null,
+        "Priority": this.notifFormGroup.controls.priority.value,
+        "FlocVendWarrantyEndDate": null,
+        "PriorityDescr": ps[0].PriorityDescr,
+        "Status": "",
+        "StatusShort": "",
+        "StatusDescr": "",
+        "CreatedBy": "BPOTEAT",
+        "CreatedDate": "\/Date(1433980800000)\/",
+        "NotifDate": "\/Date(1433980800000)\/",
+        "CatalogProfile": "000000001",
+        "DamageGroup": "",
+        "DamageGroupDescr": "",
+        "DamageCode": "",
+        "DamageCodeDescr": "",
+        "CauseGroup": "",
+        "CauseGroupDescr": "",
+        "CauseCode": "",
+        "CauseCodeDescr": "",
+        "CauseDescr": "",
+        "ObjectPartGroup": "",
+        "ObjectPartGroupDescr": "",
+        "ObjectPartCode": "",
+        "ObjectPartCodeDescr": ""
+      }
+    }
+    else {
+      this.invalidForm();
+    }
+  }
 
   ionViewDidEnter() {
     this.arr = [];
@@ -124,11 +209,11 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     if (evt != undefined) {
       if (Array.isArray(evt.result)) {
         this.choosenPlantcode = evt.result[0].Plant;
-    }
-    else {
+      }
+      else {
         console.log("ici")
         this.choosenPlantcode = evt.result.choosenPlant;
-    }
+      }
       this.choosenFunctLoc = "";
       this.choosenEquipment = "";
     }

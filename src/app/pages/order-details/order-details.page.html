@@ -7,12 +7,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="text-align: center;">
   <form *ngIf="modif == false && choosenOrder != undefined">
-    <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
-      <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">Service Order
-        Informations</h4>
-    </mat-card>
+    <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
+      <ion-title>
+        <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Service Order</h4>
+      </ion-title>
+      <ion-buttons slot="end" style="visibility: hidden">
+        <ion-fab-button size="small" style="--background: #378516; " (click)="addNewOperation()">
+          <i class="material-icons" style="color: #fff;">add</i>
+        </ion-fab-button>
+      </ion-buttons>
+    </ion-toolbar>
     <br />
     <mat-card class="mat-elevation-z8">
       <mat-form-field class="example-form">
@@ -46,10 +52,16 @@
 
     <!--Notification Informations-->
     <br />
-    <mat-card class="mat-elevation-z8" style="background-color: #005BBB; text-align: center">
-      <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Notification informations
-      </h4>
-    </mat-card>
+    <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
+      <ion-title>
+        <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Notification informations</h4>
+      </ion-title>
+      <ion-buttons slot="end" style="visibility: hidden">
+        <ion-fab-button size="small" style="--background: #378516; " (click)="addNewOperation()">
+          <i class="material-icons" style="color: #fff;">add</i>
+        </ion-fab-button>
+      </ion-buttons>
+    </ion-toolbar>
     <br />
     <div>
       <!--Loading spinner-->
@@ -64,10 +76,14 @@
           <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo">
         </mat-form-field>
         <br />
-        <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
-          Breakdown
-          Indicator</mat-checkbox>
-        <br /><br />
+        <mat-form-field class="example-form">
+            <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo" style="visibility: hidden">
+          <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" >
+            Breakdown
+            Indicator</mat-checkbox>
+        </mat-form-field>
+
+        <br />
         <mat-form-field class="example-form">
           <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
         </mat-form-field>
@@ -85,14 +101,16 @@
     <br />
 
     <!--Operations-->
-    <mat-card class="mat-elevation-z8" style="background-color: #005BBB; text-align: center;height: 5%">
-     <div>
+    <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
+      <ion-title>
         <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Operations</h4>
-        <ion-fab-button size="small" style="--background: #378516;float: right;" (click)="addNewOperation()">
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-fab-button size="small" style="--background: #378516; " (click)="addNewOperation()">
           <i class="material-icons" style="color: #fff;">add</i>
         </ion-fab-button>
-     </div> 
-    </mat-card>
+      </ion-buttons>
+    </ion-toolbar>
 
     <br>
     <div *ngIf="operations.length == 0">
@@ -145,7 +163,7 @@
 
 
     <!--Components-->
-    <ion-toolbar class="mat-elevation-z8" style="--background: #005BBB; text-align: center">
+    <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
       <ion-title>
         <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Components</h4>
       </ion-title>
@@ -201,7 +219,7 @@
         <ng-container matColumnDef="detail">
           <th mat-header-cell *matHeaderCellDef></th>
           <td mat-cell *matCellDef="let element;let i=index">
-            <ion-fab-button size="small" style="--background: #005BBB; ">
+            <ion-fab-button size="small" style="--background: #005BBB;float:right ">
               <i class="material-icons" style="color: #fff;">navigate_next</i>
             </ion-fab-button>
           </td>

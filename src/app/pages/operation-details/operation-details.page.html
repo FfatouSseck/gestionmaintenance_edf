@@ -55,25 +55,49 @@
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
   </form>
-
 </ion-content>
-
 <ion-footer>
-  <ion-toolbar style="--background: #fff;--min-height:50px">
+  <!--ion-toolbar style="--background: #fff;--min-height:50px">
+    <ion-buttons slot="start">
+      <button *ngIf="mode === 'detail' && op.ChklstId !== '' && afficheChecklist" 
+      (click)="displayChecklistDetails()" style="background-color: #005BBB;color: white;" mat-flat-button >Checklist</button>
+      
+      <button *ngIf="mode === 'detail' && op.ChklstId !== ''" 
+       style="background-color: #005BBB;color: white;" mat-flat-button >Confirmations</button>
+
+    </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button *ngIf="mode === 'detail' && op.ChklstId !== '' && afficheChecklist" (click)="displayChecklistDetails()"
-        style="background-color: #005BBB;color: white;--height:40px" strong="true">
-        Checklist
-      </ion-button>
-      <ion-button *ngIf="mode === 'detail' && op.ChklstId !== ''"
-        style="background-color: #005BBB;color: white;--height:40px" strong="true">
-        Confirmations
-      </ion-button>
       <ion-button *ngIf="mode === 'create'" (click)="presentRestConfirm()"
         style="background-color: grey;color: white;--height:40px" strong="true" type="reset">Clear</ion-button>
+      <ion-button style="background-color: #378516;color: white" (click)="closeModal()">
+        Save
+      </ion-button>
       <ion-button style="background-color: red;color: white" (click)="closeModal()">
         Cancel
       </ion-button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-toolbar>-->
+  <mat-toolbar style="--background: #fff;">
+    <mat-toolbar-row>
+      <button *ngIf="mode === 'detail' && op.ChklstId !== '' && afficheChecklist" (click)="displayChecklistDetails()"
+        style="background-color: #005BBB;color: white;" mat-flat-button>Checklist</button>
+
+      <button *ngIf="mode === 'detail' && op.ChklstId !== ''" style="background-color: #005BBB;color: white;"
+        mat-flat-button class="example-icon">Confirmations</button>
+
+      <span class="example-spacer"></span>
+
+      <button *ngIf="mode === 'create'" (click)="presentRestConfirm()"
+        style="background-color: grey;color: white;--height:40px" mat-flat-button class="example-icon">
+        Clear</button>
+      <button style="background-color: #378516;color: white" (click)="closeModal()" mat-flat-button
+        class="example-icon">
+        Save
+      </button>
+
+      <button style="background-color: red;color: white" (click)="closeModal()" mat-flat-button>
+        Cancel
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
 </ion-footer>

@@ -21,8 +21,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
-import { MatTooltipModule,MatButtonToggleModule, MatMenuModule, MatToolbarModule } from '@angular/material';
+import { MatTooltipModule,MatButtonToggleModule, MatMenuModule, MatToolbarModule, MatNativeDateModule } from '@angular/material';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 
 @NgModule({
@@ -52,6 +54,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatMenuModule,
     MatExpansionModule,
     MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgxMaterialTimepickerModule,
   ],
   declarations: [],
   exports:[
@@ -77,6 +82,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatMenuModule,
     MatExpansionModule,
     MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgxMaterialTimepickerModule,
   ]
 })
 export class AngularMaterialPageModule {}

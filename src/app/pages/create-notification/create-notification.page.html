@@ -8,20 +8,21 @@
       <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">General information
       </h4>
     </mat-card>
-    <br/>
+    <br />
     <mat-form-field class="example-form" color="secondary">
       <input matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
     </mat-form-field>
 
-    <mat-form-field class="example-form2" (click)="selectFunctLoc()">
+    <mat-form-field class="example-form2" style="margin-right: 12px;" (click)="selectFunctLoc()">
       <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
         required>
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
     <!--button color="primary" mat-button><ion-icon name="qr-scanner"></ion-icon>QR-CODE</button>-->
-    <ion-button color="light" (click)="scanQRCode()">
+
+    <button mat-raised-button (click)="scanQRCode()">
       <ion-icon name="qr-scanner"></ion-icon>QR-CODE
-    </ion-button>
+    </button>
 
     <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
       <input matInput placeholder="Equipment" formControlName="equipment" [(ngModel)]="choosenEquipment" required>
@@ -42,7 +43,7 @@
       <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Notification informations
       </h4>
     </mat-card>
-    <br/>
+    <br />
     <mat-form-field class="example-form">
       <mat-select placeholder="Priority" formControlName="priority">
         <mat-option *ngFor="let p of priorities" [value]="p.PriorityId">
@@ -50,11 +51,20 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="example-form">
-      <input matInput placeholder="Malfunction start date" maxlength="40" [(ngModel)]="dateauj"
-        formControlName="startDate" required>
-      <mat-icon matSuffix style="color: grey">calendar_today</mat-icon>
+    <mat-form-field class="example-form" (click)="selectDamageGroup()">
+      <input matInput placeholder="Start date" formControlName="startDate" [(ngModel)]="dateauj" required>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
     </mat-form-field>
+    <mat-form-field class="example-form">
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="example-form">
+      <input [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly>
+      <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+      <ngx-material-timepicker #toggleTimepicker [ngxMaterialTimepickerTheme]="darkTheme"></ngx-material-timepicker>
+    </div>
     <mat-form-field class="example-form" (click)="selectDamageGroup()">
       <input matInput placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenDC" required>
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
@@ -112,7 +122,8 @@
     <ion-buttons slot="end">
       <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true"
         size="large" type="reset">Clear</ion-button>
-      <ion-button style="background-color: green;color: white;--height:40px" size="large" strong="true">
+      <ion-button style="background-color: green;color: white;--height:40px" size="large" strong="true"
+        (click)="save()">
         Save
       </ion-button>
     </ion-buttons>

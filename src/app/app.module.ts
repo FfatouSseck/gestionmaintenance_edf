@@ -45,6 +45,22 @@ import { ActTypeListPage } from './pages/act-type-list/act-type-list.page';
 import { ChecklistDetailsPage } from './pages/checklist-details/checklist-details.page';
 import { NavHeaderComponent } from './components/navigation/header/header.component';
 
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material';
+import { MomentDateAdapter } from '@angular/material-moment-adapter';
+
+//create our cost var with the information about the format that we want
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'DD/MM/YYYY',
+  },
+  display: {
+    dateInput: 'DD/MM/YYYY',
+    monthYearLabel: 'MM YYYY',
+    dateA11yLabel: 'DD/MM/YYYY',
+    monthYearA11yLabel: 'MM YYYY',
+  },
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,7 +118,7 @@ import { NavHeaderComponent } from './components/navigation/header/header.compon
     
     HttpClientModule,
     IonicStorageModule.forRoot(),
-    AngularMaterialPageModule
+    AngularMaterialPageModule,
   ],
   providers: [
     StatusBar,
@@ -115,7 +131,10 @@ import { NavHeaderComponent } from './components/navigation/header/header.compon
     FilePath,
     NativeStorage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Globalization
+    Globalization,
+    { provide: MAT_DATE_LOCALE, useValue: 'it' }, //you can change useValue
+    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
   ],
   bootstrap: [AppComponent]
 })

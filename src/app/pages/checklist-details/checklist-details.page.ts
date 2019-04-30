@@ -75,10 +75,13 @@ export class ChecklistDetailsPage implements OnInit {
   }
 
   ok(index: number) {
+    console.log("index: ",index,"elt: ",this.checklists.data[index]);
+    
     this.checklists.data[index].ok=!this.checklists.data[index].ok;
   }
 
   na(index: number) {
+    console.log("index: ",index,"elt: ",this.checklists.data[index]);
     this.checklists.data[index].na=!this.checklists.data[index].na;
   }
 
@@ -276,7 +279,6 @@ export class ChecklistDetailsPage implements OnInit {
             elt.na = false;
             initialChecklists.push(elt);
           });
-          console.log("after filling", this.initialChecklists);
           //  = this.checklists;
         }
         else {

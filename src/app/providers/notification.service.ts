@@ -33,6 +33,10 @@ export class NotificationService extends BaseService {
     return this.getAll("NotifHeaderSet('" + notifNo + "')");
   }
 
+  createNotif(notif){
+    return this.post(notif,'NotifHeaderSet');
+  }
+
   updateNotif(notifNnumber: string, notifUpdated: any) {
     let hd = this.headers;
     this.storage.get("auth_token").then(

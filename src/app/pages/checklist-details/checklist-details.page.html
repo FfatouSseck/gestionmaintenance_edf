@@ -292,8 +292,13 @@
 
           <ng-container matColumnDef="col4">
             <th mat-header-cell *matHeaderCellDef style="text-align: end"> </th>
-            <td mat-cell *matCellDef="let element" style="text-align: end">
-              <ion-fab-button size="small" style="--background: #005BBB;color: white ">
+            <td mat-cell *matCellDef="let element;let i = index" style="text-align: end">
+              <ion-fab-button *ngIf="element.ok == false" size="small" style="--background: #e0e0e0;color: black"
+                (click)="ok(i)">
+                OK
+              </ion-fab-button>
+              <ion-fab-button *ngIf="element.ok == true" size="small" style="--background: green;color: white"
+                (click)="ok(i)">
                 OK
               </ion-fab-button>
             </td>
@@ -301,9 +306,14 @@
 
           <ng-container matColumnDef="col5">
             <th mat-header-cell *matHeaderCellDef style="text-align: end"> </th>
-            <td mat-cell *matCellDef="let element" style="text-align: end">
-              <ion-fab-button size="small" style="--background: #005BBB;color: white ">
+            <td mat-cell *matCellDef="let element;let i = index" style="text-align: end">
+              <ion-fab-button *ngIf="element.na == false" size="small" style="--background: #e0e0e0;--color: black"
+                (click)="na(i)">
                 N/A
+              </ion-fab-button>
+              <ion-fab-button *ngIf="element.na == true" size="small" style="--background: #005BBB;color: white"
+                (click)="na(i)">
+                OK
               </ion-fab-button>
             </td>
           </ng-container>
