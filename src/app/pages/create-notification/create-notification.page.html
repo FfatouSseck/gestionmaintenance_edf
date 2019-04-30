@@ -51,20 +51,15 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="example-form" (click)="selectDamageGroup()">
-      <input matInput placeholder="Start date" formControlName="startDate" [(ngModel)]="dateauj" required>
-      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-    </mat-form-field>
     <mat-form-field class="example-form">
-      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <input matInput [matDatepicker]="picker" placeholder="Malfunction start date" formControlName="startDate" [(ngModel)]="dateauj" >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker touchUi #picker></mat-datepicker>
     </mat-form-field>
     <mat-form-field class="example-form">
-      <input [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly>
-      <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
-      <ngx-material-timepicker #toggleTimepicker [ngxMaterialTimepickerTheme]="darkTheme"></ngx-material-timepicker>
-    </div>
+      <input matInput placeholder="Malfunction start hour" aria-label="24hr format" [ngxTimepicker]="fullTime" formControlName="startHour" [format]="24" readonly [(ngModel)]="heureauj">
+      <ngx-material-timepicker #fullTime [ngxMaterialTimepickerTheme]="darkTheme"></ngx-material-timepicker>
+    </mat-form-field>
     <mat-form-field class="example-form" (click)="selectDamageGroup()">
       <input matInput placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenDC" required>
       <mat-icon matSuffix style="color: grey">filter_none</mat-icon>

@@ -43,6 +43,7 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
   priorities: Priority[] = []
   today = new Date();
   dateauj = "";
+  heureauj = "";
   mobile = false;
   choosenFunctLoc = "";
   choosenEquipment = "";
@@ -77,9 +78,7 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
     let hours = "";
     let day = "";
 
-    if (m.toString().length < 2) {
-      month = "0" + m;
-    } else month = m.toString();
+    month = m.toString();
 
     if (min.toString().length < 2) {
       minutes = "0" + min;
@@ -93,7 +92,8 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
       day = "0" + d;
     } else day = d.toString();
 
-    this.dateauj = day + "/" + month + "/" + this.today.getFullYear() + " " + hours + ":" + minutes;
+    this.dateauj = day + "/" + month + "/" + this.today.getFullYear();
+    this.heureauj = hours + ":" + minutes
 
   }
 
@@ -104,7 +104,7 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
       equipment: [''],
       productionEff: [''],
       priority: [''],
-      startDate: ['', Validators.required],
+      startDate: [new Date(), Validators.required],
       damageCode: [''],
       cause: [''],
       objectPart: [''],

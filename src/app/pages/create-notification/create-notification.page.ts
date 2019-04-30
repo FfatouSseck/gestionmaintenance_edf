@@ -33,15 +33,15 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   nbAttachments = 0;
   darkTheme: NgxMaterialTimepickerTheme = {
     container: {
-      bodyBackgroundColor: '#424242',
-      buttonColor: '#fff'
+      bodyBackgroundColor: '#fff',
+      buttonColor: '#005BBB'
     },
     dial: {
-      dialBackgroundColor: '#555',
+      dialBackgroundColor: '#005BBB',
     },
     clockFace: {
-      clockFaceBackgroundColor: '#555',
-      clockHandColor: '#005BBB',
+      clockFaceBackgroundColor: '#005BBB',
+      clockHandColor: '#8c8c8c',
       clockFaceTimeInactiveColor: '#fff'
     }
   };
@@ -82,6 +82,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
       productionEff: [''],
       priority: [''],
       startDate: ['', Validators.required],
+      startHour: ['', Validators.required],
       damageCode: [''],
       cause: [''],
       objectPart: [''],

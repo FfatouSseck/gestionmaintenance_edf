@@ -132,7 +132,7 @@ export const MY_FORMATS = {
     NativeStorage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Globalization,
-    { provide: MAT_DATE_LOCALE, useValue: 'it' }, //you can change useValue
+    { provide: MAT_DATE_LOCALE, useValue: 'fr' }, //you can change useValue
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
   ],
