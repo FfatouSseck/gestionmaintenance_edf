@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
 import { AngularMaterialPageModule } from '../pages/angular-material/angular-material.module';
-import { NavHeaderComponent } from './navigation/header/header.component';
+import { NotificationDetailsPage } from '../pages/notification-details/notification-details.page';
 
 @NgModule({
   imports: [
@@ -14,9 +14,11 @@ import { NavHeaderComponent } from './navigation/header/header.component';
   ],
   declarations: [
       HeaderComponent,
+      NotificationDetailsPage,
   ],
   exports:[
       HeaderComponent,
+      NotificationDetailsPage,
   ]
 })
 export class GeneralModule {}

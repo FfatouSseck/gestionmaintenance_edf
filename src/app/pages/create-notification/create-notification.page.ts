@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Platform, ToastController, AlertController, ModalController } from '@ionic/angular';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
-import { MatSnackBar, ErrorStateMatcher } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import { BasePage } from '../base.page';
 
 import { ActionSheetController, LoadingController } from '@ionic/angular';

@@ -8,7 +8,8 @@
 </ion-header>
 
 <ion-content padding>
-  <form *ngIf="modif == false">
+
+  <form *ngIf="modif == false && mode !== 'create'" [formGroup]="notifDetailsFormGroup">
     <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
         General Information
@@ -66,7 +67,128 @@
     </mat-card>
   </form>
 
-  <form [formGroup]="notifDetailsFormGroup" *ngIf="modif == true">
+  <!--Partie pour create notification-->
+
+  <div>
+
+    <form *ngIf="mode === 'create'" [formGroup]="notifFormGroup">
+      <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
+        <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
+          General Information
+        </h4>
+      </mat-card>
+      <br />
+      <mat-card>
+        <mat-form-field class="example-form">
+          <input matInput placeholder="Description" maxlength="40" formControlName="description" required>
+        </mat-form-field>
+        <mat-form-field class="example-form2">
+          <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
+            required>
+          <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button (click)="scanQRCode()">
+          <ion-icon name="qr-scanner"></ion-icon>QR-CODE
+        </button>
+        <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
+          <input matInput placeholder="Equipment" formControlName="equipment" [(ngModel)]="choosenEquipment" required>
+          <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+        </mat-form-field>
+        <br />
+        <mat-checkbox formControlName="breakdownIndic" color="primary" class="example-form">
+          Breakdown
+          Indicator</mat-checkbox>
+        <br /><br />
+        <mat-form-field class="example-form">
+          <mat-select placeholder="Effect on production" formControlName="productionEff">
+            <mat-option *ngFor="let pe of productionEffects" [value]="pe.EffectId">
+              {{pe.EffectDescr}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+      <br />
+      <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
+        <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
+          Notification Informations
+        </h4>
+      </mat-card>
+      <br />
+      <mat-card>
+        <mat-form-field class="example-form">
+          <mat-select placeholder="Priority" formControlName="priority">
+            <mat-option *ngFor="let p of priorities" [value]="p.PriorityId">
+              {{p.PriorityDescr}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-form">
+          <input matInput [matDatepicker]="picker" placeholder="Malfunction start date" formControlName="startDate"
+            [(ngModel)]="dateauj">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="example-form">
+          <input matInput placeholder="Malfunction start hour" aria-label="24hr format" [ngxTimepicker]="fullTime"
+            formControlName="startHour" [format]="24" readonly [(ngModel)]="heureauj">
+          <ngx-material-timepicker #fullTime [ngxMaterialTimepickerTheme]="darkTheme"></ngx-material-timepicker>
+        </mat-form-field>
+        <mat-form-field class="example-form" (click)="selectDamageGroup()">
+          <input matInput placeholder="Damage code" formControlName="damageCode" [(ngModel)]="choosenDC" required>
+          <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-form" (click)="selectCauseGroup()">
+          <input matInput placeholder="Cause" formControlName="cause" [(ngModel)]="choosenCC" required>
+          <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-form" (click)="selectObjectPartGroup()">
+          <input matInput placeholder="Object part" formControlName="objectPart" [(ngModel)]="choosenObjectPartCode"
+            required>
+          <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-form">
+          <textarea matInput placeholder="Long text" formControlName="longText"></textarea>
+        </mat-form-field>
+      </mat-card>
+
+
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-label>Attachments({{nbAttachments}})</ion-label>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="selectImage()" style="color:#005BBB">
+            <ion-icon name="camera"></ion-icon>
+            Take picture
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <mat-divider></mat-divider>
+      <div *ngIf="nbAttachments == 0">
+        <ion-icon name="attach" class="disp" style="font-size: 200px"></ion-icon>
+        <h4 style="text-align: center">No attachments</h4>
+        <p style="text-align: center;color: grey">Tap the camera icon to take a photo</p>
+      </div>
+      <div>
+        <ion-list>
+          <ion-item *ngIf="nbAttachments>0">Nombre d'images: {{nbAttachments}}</ion-item>
+          <ion-item *ngFor="let img of images; index as pos" text-wrap>
+            <ion-thumbnail slot="start">
+              <ion-img [src]="img.path"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+              {{ img.name }}
+            </ion-label>
+            <ion-button slot="end" fill="clear" (click)="deleteImage(img, pos)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </form>
+  </div>
+
+  <form [formGroup]="notifDetailsFormGroup" *ngIf="modif == true && mode !== 'create'">
     <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
       <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
         General Information
@@ -160,7 +282,7 @@
     </mat-card>
   </form>
 </ion-content>
-<ion-footer *ngIf="modif == false">
+<ion-footer *ngIf="modif == false && mode !== 'create'">
   <ion-toolbar style="--background: #3E4649;--min-height:50px">
     <ion-buttons slot="end">
       <ion-button style="background-color: green;color: white">
@@ -177,7 +299,7 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-<ion-footer *ngIf="modif == true">
+<ion-footer *ngIf="modif == true && mode !== 'create'">
   <ion-toolbar style="--background: #3E4649;--min-height:50px">
     <ion-buttons slot="end">
       <ion-button style="background-color: green;color: white">
@@ -185,9 +307,22 @@
       </ion-button>
       <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
         (click)="modif = !modif">Cancel</ion-button>
-      <ion-button style="background-color: #005BBB;color: white;--height:40px" (click)="displaySimilarNotifs()" strong="true" size="large" type="reset">
+      <ion-button style="background-color: #005BBB;color: white;--height:40px" (click)="displaySimilarNotifs()"
+        strong="true" size="large" type="reset">
         Similar
         Notifications</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
+<ion-footer *ngIf="mode === 'create'">
+    <ion-toolbar style="--background: #3E4649;--min-height:50px">
+      <ion-buttons slot="end">
+        <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px" strong="true"
+          size="large" type="reset">Clear</ion-button>
+        <ion-button style="background-color: green;color: white;--height:40px" size="large" strong="true"
+          (click)="save()">
+          Save
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

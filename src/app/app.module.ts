@@ -43,7 +43,6 @@ import { WorkCenterListPage } from './pages/work-center-list/work-center-list.pa
 import { EmployeeListPage } from './pages/employee-list/employee-list.page';
 import { ActTypeListPage } from './pages/act-type-list/act-type-list.page';
 import { ChecklistDetailsPage } from './pages/checklist-details/checklist-details.page';
-import { NavHeaderComponent } from './components/navigation/header/header.component';
 
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
@@ -80,7 +79,6 @@ export const MY_FORMATS = {
     EmployeeListPage,
     ActTypeListPage,
     ChecklistDetailsPage,
-    NavHeaderComponent,
   ],
   entryComponents: [
     NotificationListPage,
@@ -100,7 +98,6 @@ export const MY_FORMATS = {
     EmployeeListPage,
     ActTypeListPage,
     ChecklistDetailsPage,
-    NavHeaderComponent,
   ],
   imports: [
     BrowserModule, 
