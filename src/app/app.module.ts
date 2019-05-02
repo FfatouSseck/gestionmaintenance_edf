@@ -46,6 +46,7 @@ import { ChecklistDetailsPage } from './pages/checklist-details/checklist-detail
 
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
+import { Network } from '@ionic-native/network/ngx';
 
 //create our cost var with the information about the format that we want
 export const MY_FORMATS = {
@@ -132,6 +133,7 @@ export const MY_FORMATS = {
     { provide: MAT_DATE_LOCALE, useValue: 'fr' }, //you can change useValue
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
+    Network
   ],
   bootstrap: [AppComponent]
 })

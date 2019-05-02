@@ -3,7 +3,8 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Details</ion-title>
+    <ion-title *ngIf="mode !== 'create'">Details</ion-title>
+    <ion-title *ngIf="mode === 'create'">{{title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -74,7 +75,7 @@
     <form *ngIf="mode === 'create'" [formGroup]="notifFormGroup">
       <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
         <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-          General Information
+          General Informations
         </h4>
       </mat-card>
       <br />

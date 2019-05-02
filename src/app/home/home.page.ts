@@ -95,7 +95,7 @@ export class HomePage implements OnInit {
                         })
                 }
                 else {
-                    this.plantService.getAllPlants().subscribe(
+                    this.plantService.getAllPlants(false).subscribe(
                         (plants) => {
                             let plts = plants.d.results;
                             this.plants = plts;
