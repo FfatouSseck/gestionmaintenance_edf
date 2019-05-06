@@ -106,11 +106,10 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   save() {
-    console.log(this.notifFormGroup);
+    console.log("startDate: ",this.notifFormGroup.controls.startDate.value);
     let ps = this.priorities.filter(
       priority => priority.PriorityId === this.notifFormGroup.controls.priority.value
-    )
-    console.log(ps);
+    );
 
     if (this.notifFormGroup.valid) {
       let notif = {

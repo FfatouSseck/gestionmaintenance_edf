@@ -1,57 +1,47 @@
-<!--ion-header>
+<ion-header>
   <app-header pageTitle="Notification" (close)="onClose($event)"></app-header>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="text-align: center">
   <form [formGroup]="notifFormGroup">
     <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
-        <ion-title>
-          <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">General informations</h4>
-        </ion-title>
-        <ion-buttons slot="end" style="visibility: hidden">
-          <ion-fab-button size="small" style="--background: #378516; " (click)="addNewOperation()">
-            <i class="material-icons" style="color: #fff;">add</i>
-          </ion-fab-button>
-        </ion-buttons>
-      </ion-toolbar>
-    <div style="text-align: center;">
-      <mat-form-field class="example-form" color="secondary">
-        <input matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
-      </mat-form-field>
+      <ion-title>
+        <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">General informations</h4>
+      </ion-title>
+      <ion-buttons slot="end" style="visibility: hidden">
+        <ion-fab-button size="small" style="--background: #378516; " (click)="addNewOperation()">
+          <i class="material-icons" style="color: #fff;">add</i>
+        </ion-fab-button>
+      </ion-buttons>
+    </ion-toolbar>
 
-      <mat-form-field *ngIf="orientation === 'landscape-primary'" class="example-form2" style="margin-right: 12px;" (click)="selectFunctLoc()">
+    <mat-form-field class="example-form" color="secondary">
+      <input matInput placeholder="Description" maxlength="40" formControlName="description" required value="">
+    </mat-form-field>
+    
+    <div style="text-align: center">
+      <mat-form-field class="example-form2" (click)="selectFunctLoc()">
         <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
           required>
         <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
       </mat-form-field>
-
-      <mat-form-field  *ngIf="orientation === 'portrait-primary'" class="example-form3" style="margin-right: 12px;" (click)="selectFunctLoc()">
-        <input matInput placeholder="Functional location" formControlName="functloc" [(ngModel)]="choosenFunctLoc"
-          required>
-        <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-      </mat-form-field>
-
+      &nbsp;&nbsp;&nbsp;
       <button mat-raised-button (click)="scanQRCode()">
         <ion-icon name="qr-scanner"></ion-icon>QR-CODE
       </button>
-
-      <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
-        <input matInput placeholder="Equipment" formControlName="equipment" [(ngModel)]="choosenEquipment" required>
-        <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
-      </mat-form-field>
     </div>
 
+    <mat-form-field class="example-form" (click)="selectEquipment()" *ngIf="choosenFunctLoc !== ''">
+      <input matInput placeholder="Equipment" formControlName="equipment" [(ngModel)]="choosenEquipment" required>
+      <mat-icon matSuffix style="color: grey">filter_none</mat-icon>
+    </mat-form-field>
+
     <br /><br />
-    <mat-checkbox *ngIf="orientation === 'landscape-primary'" style="margin-left: 25%" color="primary"
-      formControlName="breakdownIndic" class="example-form">
-      Breakdown Indicator
-    </mat-checkbox>
-    <mat-checkbox *ngIf="orientation === 'portrait-primary'" style="margin-left: 14%" color="primary"
-      formControlName="breakdownIndic" class="example-form">
+    <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form">
       Breakdown Indicator
     </mat-checkbox>
     <br />
-    <div style="text-align: center">
+    <div>
       <mat-form-field class="example-form">
         <mat-select placeholder="Effect on production" formControlName="productionEff">
           <mat-option *ngFor="let pe of productionEffects" [value]="pe.EffectId">
@@ -65,7 +55,7 @@
       <h4 style="font-weight: bold;color: #fff;font-size: 20px; display: inline-block">Notification informations
       </h4>
     </mat-card>
-    <div style="text-align: center;">
+    <div>
 
       <mat-form-field class="example-form">
         <mat-select placeholder="Priority" formControlName="priority">
@@ -148,5 +138,4 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-footer>-->
-<app-notification-details mode="create" title="Notification"></app-notification-details>
+</ion-footer>

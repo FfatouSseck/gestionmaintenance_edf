@@ -49,12 +49,14 @@ export class NotificationDetailsPage implements OnInit {
     private _formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
-    console.log("mode: ", this.mode, "title: ", this.title);
     if (this.mode !== 'create') {
       this.choosenNotif = this.notifService.getCurrentNotif();
       if (this.choosenNotif == undefined) {
         this.router.navigateByUrl("/notification-list");
       }
+    }
+    else{
+      this.modif = undefined;
     }
 
     this.notifDetailsFormGroup = this._formBuilder.group({
