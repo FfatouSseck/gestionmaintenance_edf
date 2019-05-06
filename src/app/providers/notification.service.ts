@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment.prod';
 import { NotifHeader } from '../interfaces/notification.interface';
 import { BaseService } from './base.service';
 import { Storage } from '@ionic/storage';
+import { from } from 'rxjs';
+import { NetworkService, ConnectionStatus } from './network.service';
+import { OfflineManagerService } from './offline-manager.service';
 
 
 
@@ -19,7 +22,8 @@ export class NotificationService extends BaseService {
   available = false;
   currentNotif: any;
 
-  constructor(public http: HttpClient, private storage: Storage) {
+  constructor(public http: HttpClient, private storage: Storage, private networkService: NetworkService,
+              public offlineManager: OfflineManagerService) {
     super(http);
     this.headers.append("Accept", "application/json");
     this.headers.append("Content-Type", "application/json");
@@ -33,8 +37,24 @@ export class NotificationService extends BaseService {
     return this.getAll("NotifHeaderSet('" + notifNo + "')");
   }
 
-  createNotif(notif){
-    return this.post(notif,'NotifHeaderSet');
+  createNotif(notif) {
+    if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline) {
+      return from(this.offlineManager.storeRequest('NotifHeaderSet', 'POST', notif));
+    }
+    else{
+      return this.post(notif, 'NotifHeaderSet').pipe(
+        catchError(err => {
+          this.offlineManager.storeRequest('NotifHeaderSet', 'POST', notif);
+          throw new Error(err);
+        })
+      );
+    }
+    
+  }
+
+  // Save result of API requests
+  public setLocalData(key, data) {
+    this.storage.set(`${key}`, data);
   }
 
   updateNotif(notifNnumber: string, notifUpdated: any) {

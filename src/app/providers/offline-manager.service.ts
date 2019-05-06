@@ -80,7 +80,12 @@ export class OfflineManagerService {
     let obs = [];
  
     for (let op of operations) {
-      console.log('Make one request: ', op);
+      let toast = this.toastController.create({
+        message: `Make one request: `+op.url,
+        duration: 3000,
+        position: 'bottom'
+      });
+      toast.then(toast => toast.present());
       let oneObs = this.http.request(op.type, op.url, op.data);
       obs.push(oneObs);
     }

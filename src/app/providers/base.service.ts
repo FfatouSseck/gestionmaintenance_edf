@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment.prod';
+import { Storage } from '@ionic/storage';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})

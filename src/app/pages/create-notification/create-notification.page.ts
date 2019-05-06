@@ -22,6 +22,7 @@ import { Camera } from '@ionic-native/Camera/ngx';
 import { NgxMaterialTimepickerTheme } from 'ngx-material-timepicker';
 import { NotificationService } from 'src/app/providers/notification.service';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { OfflineManagerService } from 'src/app/providers/offline-manager.service';
 
 const STORAGE_KEY = 'my_images';
 
@@ -70,7 +71,8 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     private causeGroupService: CausegroupService, private functLocService: FunctlocService, private mockService: MockService,
     public webview: WebView,private notificationService: NotificationService,private screenOrientation: ScreenOrientation,
     public ref: ChangeDetectorRef, public filePath: FilePath, public camera: Camera,
-    public file: File, public http: HttpClient, public loadingController: LoadingController, ) {
+    public file: File, public http: HttpClient, public loadingController: LoadingController, 
+    public offlineService: OfflineManagerService ) {
 
     super(_formBuilder, platform, functlocService, qrScanner, toastController, snackBar, alertController, modalController,
       webview, actionSheetController, ref, filePath, camera, file, http, loadingController

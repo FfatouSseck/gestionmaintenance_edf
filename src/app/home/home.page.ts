@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
         private effectService: EffectService, private causeCodeService: CausecodeService,
         private causeGroupService: CausegroupService, private soService: ServiceOrderService,
         public orderService: ServiceOrderPreparationService, private mockService: MockService,
-        private platform: Platform,private myOrderService: MyOrdersService) {
+        private platform: Platform, private myOrderService: MyOrdersService) {
 
         this.orientation = this.screenOrientation.type;
         // detect orientation changes

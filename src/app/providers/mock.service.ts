@@ -24,13 +24,15 @@ import OrderOperationChecklistToolSet from '../mockServer/OrderOperationChecklis
 import OrderOperationChecklistPartSet from '../mockServer/OrderOperationChecklistPartSet.json';
 import OrderOperationChecklistCalbSet from '../mockServer/OrderOperationChecklistCalbSet.json';
 import OrderOperationChecklistTaskSet from '../mockServer/OrderOperationChecklistTaskSet.json';
+import { NetworkService, ConnectionStatus } from './network.service';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MockService {
 
-  constructor() { }
+  constructor(private networkService: NetworkService,public snackBar: MatSnackBar) { }
 
   getAllMockNotifs(codePlant) {
     let notifList = NotifHeaderdata;
@@ -40,8 +42,20 @@ export class MockService {
       })
   }
 
-  getAllMockPlants(){
+  getAllMockPlants(forceRefresh: boolean = false){
+    if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline || !forceRefresh) {
+      this.openSnackBar('OFFLINE MODE');
+    }
+    else{
+      this.openSnackBar('ONLINE MODE');
+    }
     return Plantdata;
+  }
+
+  openSnackBar(message: string) {
+    this.snackBar.open(message, null, {
+      duration: 2000,
+    });
   }
 
   getAllMockSOP(codePlant){
