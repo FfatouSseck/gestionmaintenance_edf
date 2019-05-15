@@ -47,6 +47,7 @@ import { ChecklistDetailsPage } from './pages/checklist-details/checklist-detail
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { Network } from '@ionic-native/network/ngx';
+import { TimeSheetsListPage } from './pages/time-sheets-list/time-sheets-list.page';
 
 //create our cost var with the information about the format that we want
 export const MY_FORMATS = {
@@ -80,6 +81,7 @@ export const MY_FORMATS = {
     EmployeeListPage,
     ActTypeListPage,
     ChecklistDetailsPage,
+    TimeSheetsListPage,
   ],
   entryComponents: [
     NotificationListPage,
@@ -99,6 +101,7 @@ export const MY_FORMATS = {
     EmployeeListPage,
     ActTypeListPage,
     ChecklistDetailsPage,
+    TimeSheetsListPage,
   ],
   imports: [
     BrowserModule, 

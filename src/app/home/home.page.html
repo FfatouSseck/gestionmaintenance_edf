@@ -3,7 +3,7 @@
     [pageTitle]="choosenPlant" (close)="onClose($event)"></app-header>
 </ion-header>
 
-<ion-content padding fullscreen="true">
+<ion-content padding fullscreen="true" style="align-items: center;">
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
     <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
       refreshingText="Refreshing...">
@@ -12,21 +12,21 @@
 
   <div *ngIf="orientation === 'portrait-primary'; else landscapeContent" class="principalContent">
     <br />
-    <mat-grid-list cols="3" rowHeight="1:1.2" gutterSize="20px">
+    <mat-grid-list cols="3" rowHeight="1:1" gutterSize="20px">
       <mat-grid-tile class="tuileLandscape tuile1">
         <mat-card class="tuileLandscape tuile1" routerLink="/create-notification">
-          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
-              add_alert
+          <mat-icon style="color: #001A70"><i class="material-icons" style="font-size: 40px">
+              add_circle
             </i></mat-icon>
-          <h4 style="color: #fff;font-size: 40px">
+          <h4 style="color: black;font-size: 40px">
             &nbsp;
           </h4>
-          <h1 style="color:#fff;font-family: Frutiger, sans-serif;">Create Notification</h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Create Notification</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile2">
         <mat-card class="tuileLandscape tuile2" routerLink="/notification-list">
-          <mat-icon style="color: grey"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #005238"><i class="material-icons" style="font-size: 40px">
               error
             </i></mat-icon>
 
@@ -34,88 +34,94 @@
             <mat-spinner style="margin: 0 auto" [diameter]="45"></mat-spinner>
             <br />
           </div>
-          <h4 style="color: grey;font-size: 40px" *ngIf="notifsCount != null">
+          <h4 style="color: black;font-size: 40px" *ngIf="notifsCount != null">
             {{notifsCount}}
           </h4>
-          <h1 style="color:grey;font-family: Frutiger, sans-serif;">Notification List<br /></h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Notification List<br /></h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile3">
         <mat-card class="tuileLandscape tuile3" routerLink="/service-order-preparation">
-          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #005BBB"><i class="material-icons" style="font-size: 40px">
               filter_none
             </i></mat-icon>
           <div *ngIf="ordersCount == null">
-            <mat-spinner style="margin: 0 auto" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+            <mat-spinner style="margin: 0 auto" [diameter]="45"></mat-spinner>
             <br />
           </div>
-          <h4 style="color: #fff;font-size: 40px" *ngIf="ordersCount != null">
+          <h4 style="color: black;font-size: 40px" *ngIf="ordersCount != null">
             {{ordersCount}}
           </h4>
-          <h1 style="color:#fff;font-family: Frutiger, sans-serif;">Service Order Preparation</h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Service Order Preparation</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile4">
         <mat-card class="tuileLandscape tuile4" routerLink="/check-list-assignment">
-          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #E53F00"><i class="material-icons" style="font-size: 40px">
               assignment
             </i></mat-icon>
-          <h4 style="color: #fff;font-size: 40px">
+          <h4 style="color: black;font-size: 40px">
             &nbsp;
           </h4>
-          <h1 style="color:#fff;font-family: Frutiger, sans-serif;">Checklist assignment</h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Checklist assignment</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile5">
         <mat-card class="tuileLandscape tuile5" routerLink="/service-order">
-          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #378516"><i class="material-icons" style="font-size: 40px">
               book
             </i></mat-icon>
 
           <div *ngIf="soCount == null">
-            <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+            <mat-spinner style="margin: 0 auto;" [diameter]="45"></mat-spinner>
             <br />
           </div>
-          <h4 style="color: white;font-size: 40px" *ngIf="soCount != null">
+          <h4 style="color: black;font-size: 40px" *ngIf="soCount != null">
             {{soCount}}
           </h4>
-          <h1 style="color:#fff;font-family: Frutiger, sans-serif;">Service Orders</h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Service Orders</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile6">
         <mat-card class="tuileLandscape tuile6" routerLink="/time-and-material-confirmation">
-          <mat-icon style="color: white"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #FFA02F"><i class="material-icons" style="font-size: 40px">
               settings
             </i></mat-icon>
 
-          <h4 style="color: white;font-size: 40px">65</h4>
-          <h1 style="color:white;font-family: Frutiger, sans-serif;">Time & Material Confirmation</h1>
+          <div *ngIf="soCount == null">
+            <mat-spinner style="margin: 0 auto;" [diameter]="45"></mat-spinner>
+            <br />
+          </div>
+          <h4 style="color: black;font-size: 40px" *ngIf="soCount != null">
+            {{soCount}}
+          </h4>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Time & Material Confirmation</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile7">
         <mat-card class="tuileLandscape tuile7" routerLink="/documents">
-          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #C4D600"><i class="material-icons" style="font-size: 40px">
               note
             </i></mat-icon>
-          <h4 style="color: #fff;font-size: 40px">
+          <h4 style="color: black;font-size: 40px">
             &nbsp;
           </h4>
-          <h1 style="color:#fff;font-family: Frutiger, sans-serif;">Documents</h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">Documents</h1>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile class="tuileLandscape tuile8">
         <mat-card class="tuileLandscape tuile8" routerLink="/my-orders">
-          <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+          <mat-icon style="color: #484848"><i class="material-icons" style="font-size: 40px">
               reorder
             </i></mat-icon>
           <div *ngIf="mySoCount == null">
-            <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+            <mat-spinner style="margin: 0 auto;" [diameter]="45"></mat-spinner>
             <br />
           </div>
-          <h4 style="color: #fff;font-size: 40px" *ngIf="mySoCount != null">
+          <h4 style="color: black;font-size: 40px" *ngIf="mySoCount != null">
             {{mySoCount}}
           </h4>
-          <h1 style="color:#fff;font-family: Frutiger, sans-serif;">My Service Orders</h1>
+          <h1 style="color:black;font-family: Frutiger, sans-serif;">My Service Orders</h1>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
@@ -125,21 +131,21 @@
   <ng-template #landscapeContent>
     <div class="principalContent">
       <br /><br />
-      <mat-grid-list cols="4" rowHeight="1:1.2" gutterSize="12px">
+      <mat-grid-list cols="4" rowHeight="1:1" gutterSize="20px">
         <mat-grid-tile class="tuileLandscape tuile1">
           <mat-card class="tuileLandscape tuile1" routerLink="/create-notification">
-            <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color: #001A70"><i class="material-icons" style="font-size: 40px">
                 add_circle
               </i></mat-icon>
-            <h4 style="color: #fff;font-size: 40px">
+            <h4 style="color: black;font-size: 40px">
               &nbsp;
             </h4>
-            <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">Create Notification</h6>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">Create Notification</h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile2">
           <mat-card class="tuileLandscape tuile2" routerLink="/notification-list">
-            <mat-icon style="color: grey;font-size: 30px"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color: #005238;font-size: 30px"><i class="material-icons" style="font-size: 40px">
                 error
               </i></mat-icon>
 
@@ -147,94 +153,99 @@
               <mat-spinner style="margin: 0 auto" [diameter]="45"></mat-spinner>
               <br />
             </div>
-            <h4 style="color: grey;font-size: 40px" *ngIf="dataAvailable==true">
+            <h4 style="color: black;font-size: 40px" *ngIf="dataAvailable==true">
               {{notifsCount}}
             </h4>
-            <h6 style="color:grey;font-size: 20px;font-family: Frutiger, sans-serif;">Notification List<br /></h6>
+            <h6 style="color:black;font-size: 20px;font-family: Frutiger, sans-serif;">Notification List<br /></h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile3">
           <mat-card class="tuileLandscape tuile3" routerLink="/service-order-preparation">
-            <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color:  #005BBB"><i class="material-icons" style="font-size: 40px">
                 filter_none
               </i></mat-icon>
 
             <div *ngIf="ordersCount == null">
-              <mat-spinner style="margin: 0 auto" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+              <mat-spinner style="margin: 0 auto" [diameter]="45"></mat-spinner>
               <br />
             </div>
-            <h4 style="color: #fff;font-size: 40px" *ngIf="ordersCount != null">
+            <h4 style="color: black;font-size: 40px" *ngIf="ordersCount != null">
               {{ordersCount}}
             </h4>
-            <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">Service Order Preparation</h6>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">Service Order Preparation</h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile4">
           <mat-card class="tuileLandscape tuile4" routerLink="/check-list-assignment">
-            <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color: #E53F00"><i class="material-icons" style="font-size: 40px">
                 assignment
               </i></mat-icon>
-            <h4 style="color: #fff;font-size: 40px">
+            <h4 style="color: black;font-size: 40px">
               &nbsp;
             </h4>
-            <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">Checklist assignment</h6>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">Checklist assignment</h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile5">
           <mat-card class="tuileLandscape tuile5" routerLink="/service-order">
-            <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color:  #378516"><i class="material-icons" style="font-size: 40px">
                 book
               </i></mat-icon>
 
             <div *ngIf="soCount == null">
-              <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+              <mat-spinner style="margin: 0 auto;" [diameter]="45"></mat-spinner>
               <br />
             </div>
-            <h4 style="color: white;font-size: 40px" *ngIf="soCount != null">
+            <h4 style="color: black;font-size: 40px" *ngIf="soCount != null">
               {{soCount}}
             </h4>
-            <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">Service Orders</h6>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">Service Orders</h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile6">
           <mat-card class="tuileLandscape tuile6" routerLink="/time-and-material-confirmation">
-            <mat-icon style="color: white"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color: #FFA02F"><i class="material-icons" style="font-size: 40px">
                 settings
               </i></mat-icon>
 
-            <h4 style="color: white;font-size: 40px">65</h4>
-            <h6 style="color:white;font-size: 20px;font-family: Frutiger, sans-serif;">Time & Material Confirmation</h6>
+            <div *ngIf="soCount == null">
+              <mat-spinner style="margin: 0 auto;" [diameter]="45"></mat-spinner>
+              <br />
+            </div>
+            <h4 style="color: black;font-size: 40px" *ngIf="soCount != null">
+              {{soCount}}
+            </h4>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">Time & Material Confirmation
+            </h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile7">
           <mat-card class="tuileLandscape tuile7" routerLink="/documents">
-            <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color: #C4D600"><i class="material-icons" style="font-size: 40px">
                 note
               </i></mat-icon>
 
-            <h4 style="color: #fff;font-size: 40px">65</h4>
-            <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">Documents</h6>
+            <h4 style="color: black;font-size: 40px">65</h4>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">Documents</h6>
           </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="tuileLandscape tuile8">
           <mat-card class="tuileLandscape tuile8" routerLink="/my-orders">
-            <mat-icon style="color: #fff"><i class="material-icons" style="font-size: 40px">
+            <mat-icon style="color: #484848"><i class="material-icons" style="font-size: 40px">
                 reorder
               </i></mat-icon>
             <div *ngIf="mySoCount == null">
-              <mat-spinner style="margin: 0 auto;" class="mat-spinner-color" [diameter]="45"></mat-spinner>
+              <mat-spinner style="margin: 0 auto;" [diameter]="45"></mat-spinner>
               <br />
             </div>
-            <h4 style="color: #fff;font-size: 40px" *ngIf="mySoCount != null">
+            <h4 style="color: black;font-size: 40px" *ngIf="mySoCount != null">
               {{mySoCount}}
             </h4>
-            <h6 style="color:#fff;font-size: 20px;font-family: Frutiger, sans-serif;">My Service Orders</h6>
+            <h6 style="color: black;font-size: 20px;font-family: Frutiger, sans-serif;">My Service Orders</h6>
           </mat-card>
         </mat-grid-tile>
       </mat-grid-list>
     </div>
-
-
   </ng-template>
 
 </ion-content>

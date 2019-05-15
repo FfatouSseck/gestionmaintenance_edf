@@ -1,4 +1,4 @@
-<ion-toolbar>
+<!--ion-toolbar style="">
   <ion-buttons slot="start" *ngIf="currentUrl !== '/home'">
       <ion-back-button
           [text]=""
@@ -8,11 +8,28 @@
   </ion-buttons>
   <img alt="logo" height="40" src="../../../assets/img/logo.png" *ngIf="currentUrl === '/home' ">
   <ion-buttons slot="end" *ngIf="currentUrl !== '/similar-notifications' ">
-    <ion-button fill="clear" (click)="presentActionSheet()" style="color: #005BBB">
-        <ion-icon name="person" style="color: grey"></ion-icon>&nbsp;Lawrence Barr
-    </ion-button>
+    <ion-button (click)="presentActionSheet()" style="color:#005BBB">
+        <i class="material-icons" style="color: grey;">person</i>
+        Lawrence Barr
+      </ion-button>
   </ion-buttons>
   <ion-title style="color: #005BBB"> 
     {{pageTitle}}
   </ion-title>
-</ion-toolbar>
+</ion-toolbar>-->
+<mat-toolbar>
+  <mat-toolbar-row>
+    <img alt="logo" height="40" src="../../../assets/img/logo.png" *ngIf="currentUrl === '/home' ">
+    <ion-back-button *ngIf="currentUrl !== '/home'" [text]="" [icon]="home" style="color: #005BBB">
+    </ion-back-button>
+    <ion-title style="color: #005BBB">
+      {{pageTitle}}
+    </ion-title>
+    <span class="example-spacer"></span>
+    <button mat-flat-button (click)="presentActionSheet()" *ngIf="currentUrl !== '/similar-notifications' "
+      style="color: #005BBB;font-size: 20px;background-color: #fff;">
+      <i class="material-icons">person</i>
+      <span> Lawrence Barr </span>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

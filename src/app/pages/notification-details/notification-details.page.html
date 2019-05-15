@@ -11,65 +11,85 @@
   <div *ngIf="modif == true || modif == false">
 
     <form *ngIf="modif == false" [formGroup]="notifDetailsFormGroup">
-      <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
-        <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-          General Information
-        </h4>
-      </mat-card>
-      <br/>
-      <mat-card>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Description" readonly="true" [value]="choosenNotif.ShortText">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Functional location" readonly="true" [value]="choosenNotif.FunctLoc">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Equipment" readonly="true" [value]="choosenNotif.Equipment">
-        </mat-form-field>
-        <br/>
-        <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" class="example-form">
+      <mat-card class="mat-elevation-z8">
+        <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
+          <ion-title>
+            <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">General Informations</h4>
+          </ion-title>
+          <ion-buttons slot="end" style="visibility: hidden">
+            <ion-fab-button size="small">
+              <i class="material-icons" style="color: #fff;">add</i>
+            </ion-fab-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <br />
+        <div class="content">
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Description" [readonly]="readonly" [value]="choosenNotif.ShortText">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Functional location" [readonly]="readonly" (click)="selectFunctL()" [value]="choosenNotif.FunctLoc">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Equipment" [readonly]="readonly" [value]="choosenNotif.Equipment">
+          </mat-form-field>
+          <br />
+        </div>
+        <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary" id="excluded">
           Breakdown
           Indicator</mat-checkbox>
         <br /><br />
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Effect on production" readonly="true" [value]="choosenNotif.Effect">
-        </mat-form-field>
+
+        <div class="content">
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Effect on production" [readonly]="readonly" [value]="choosenNotif.Effect">
+          </mat-form-field>
+        </div>
+
       </mat-card>
       <br />
-      <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
-        <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
-          Notification Informations
-        </h4>
-      </mat-card>
-      <br />
-      <mat-card>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Priority" readonly="true" [value]="choosenNotif.Priority">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Malfunction start date" readonly="true"
-            [value]="initDate(choosenNotif.StartDate)">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.CauseCode">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <input matInput placeholder="Object part" readonly="true" [value]="choosenNotif.ObjectPartCode">
-        </mat-form-field>
-        <mat-form-field class="example-form">
-          <textarea matInput placeholder="Long text" readonly="true" [value]="choosenNotif.LongText"></textarea>
-        </mat-form-field>
+      <mat-card class="mat-elevation-z8">
+        <ion-toolbar class="toolbar" style="--background: #005BBB; text-align: center">
+          <ion-title>
+            <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Notification Informations
+            </h4>
+          </ion-title>
+          <ion-buttons slot="end" style="visibility: hidden">
+            <ion-fab-button size="small">
+              <i class="material-icons" style="color: #fff;">add</i>
+            </ion-fab-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <br />
+        <div class="content">
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Priority" [readonly]="readonly" [value]="choosenNotif.Priority">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Malfunction start date" [readonly]="readonly"
+              [value]="initDate(choosenNotif.StartDate)">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Damage code" [readonly]="readonly" [value]="choosenNotif.DamageCode">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Cause" [readonly]="readonly" [value]="choosenNotif.CauseCode">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <input matInput placeholder="Object part" [readonly]="readonly" [value]="choosenNotif.ObjectPartCode">
+          </mat-form-field>
+          <mat-form-field class="example-form">
+            <textarea matInput placeholder="Long text" [readonly]="readonly" [value]="choosenNotif.LongText"></textarea>
+          </mat-form-field>
+        </div>
       </mat-card>
     </form>
 
-    <form [formGroup]="notifDetailsFormGroup" *ngIf="modif == true">
+    <!--Begin-->
+    <!--form [formGroup]="notifDetailsFormGroup" *ngIf="modif == true">
       <mat-card class="mat-elevation-z8" style=" background-color: #005BBB;text-align: center">
         <h4 style="font-weight: bold;color: #fff;font-size: 20px;display: inline-block">
           General Information
@@ -78,7 +98,7 @@
       <br />
       <mat-card>
         <mat-form-field class="example-form">
-          <input matInput placeholder="Notification Number" readonly="true" [value]="choosenNotif.NotifNo">
+          <input matInput placeholder="Notification Number" [readonly]="readonly" [value]="choosenNotif.NotifNo">
         </mat-form-field>
         <mat-form-field class="example-form" color="secondary">
           <input [(ngModel)]="choosenNotif.ShortText" matInput placeholder="Description" maxlength="40"
@@ -92,7 +112,7 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
-       <ion-button color="light" (click)="scanQRCode()">
+        <ion-button color="light" (click)="scanQRCode()">
           <ion-icon name="qr-scanner"></ion-icon>QR-CODE
         </ion-button>
         <mat-form-field class="example-form">
@@ -100,8 +120,8 @@
             [(ngModel)]="choosenNotif.Equipment">
         </mat-form-field>
         <br />
-        <mat-checkbox color="primary" formControlName="breakdownIndic" class="example-form"
-          [checked]="choosenNotif.Breakdown">Breakdown Indicator
+        <mat-checkbox color="primary" formControlName="breakdownIndic" id="excluded" [checked]="choosenNotif.Breakdown">
+          Breakdown Indicator
         </mat-checkbox>
         <br />
         <mat-form-field class="example-form">
@@ -159,41 +179,39 @@
             [(ngModel)]="choosenNotif.LongText"></textarea>
         </mat-form-field>
       </mat-card>
-    </form>
+    </form-->
+    <!--End-->
   </div>
 
 </ion-content>
 
 <ion-footer>
-    <div *ngIf="mode !== 'create'; else createFooter">
-      <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf="modif == false">
-        <ion-buttons slot="end">
-          <ion-button style="background-color: green;color: white">
-            Create Service Order
-          </ion-button>
-          <ion-button (click)="presentRestConfirm()" style="background-color: red;color: white;--height:40px"
-            strong="true" size="large" type="reset">Reject</ion-button>
-          <ion-button (click)="modif=true" style="background-color: #005BBB;color: white;--height:40px" strong="true"
-            size="large" type="reset">Modify</ion-button>
-          <ion-button (click)="displaySimilarNotifs()" style="background-color: #005BBB;color: white;--height:40px"
-            strong="true" size="large" type="reset">Similar Notifications</ion-button>
-          <ion-button (click)="presentRestConfirm()" style="background-color: #005BBB;color: white;--height:40px"
-            strong="true" size="large" type="reset">Copy</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-  
-      <ion-toolbar style="--background: #3E4649;--min-height:50px" *ngIf="modif == true">
-        <ion-buttons slot="end">
-          <ion-button style="background-color: green;color: white">
-            Save
-          </ion-button>
-          <ion-button style="background-color: red;color: white;--height:40px" strong="true" size="large"
-            (click)="modif = !modif">Cancel</ion-button>
-          <ion-button style="background-color: #005BBB;color: white;--height:40px" (click)="displaySimilarNotifs()"
-            strong="true" size="large" type="reset">
-            Similar
-            Notifications</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </div>
-  </ion-footer>
+  <div *ngIf="mode !== 'create'; else createFooter">
+    <mat-toolbar style="background-color: #3E4649;" *ngIf="readonly == true">
+      <mat-toolbar-row>
+
+        <button (click)="readonly = false" class="btn-standard" mat-flat-button>Modify</button>
+        &nbsp;&nbsp;
+        <button (click)="displaySimilarNotifs()" class="btn-standard" mat-flat-button>Similar Notifications</button>
+        &nbsp;&nbsp;
+        <button (click)="presentRestConfirm()" class="btn-standard" mat-flat-button>Copy</button>
+        <div class="example-spacer"></div>
+        <button class="btn-save" mat-flat-button>
+          Create Service Order
+        </button>
+        &nbsp;&nbsp;
+        <button (click)="presentRestConfirm()" class="btn-cancel" mat-flat-button>Reject</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-toolbar style="background-color: #3E4649;" *ngIf="readonly == false">
+      <mat-toolbar-row>
+        <button class="btn-standard" mat-flat-button (click)="displaySimilarNotifs()">Similar Notifications</button>
+        <div class="example-spacer"></div>
+        <button class="btn-save" mat-flat-button>Save</button>
+        &nbsp;&nbsp;
+        <button class="btn-cancel" mat-flat-button (click)="readonly = true">Cancel</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+</ion-footer>

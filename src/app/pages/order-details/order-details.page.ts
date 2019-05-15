@@ -17,6 +17,7 @@ import { CheckListAssignmentService } from 'src/app/providers/check-list-assignm
 })
 export class OrderDetailsPage implements OnInit {
 
+  origin: string;
   choosenOrder: any;
   noComponents = false;
   noOperations = false;
@@ -26,6 +27,7 @@ export class OrderDetailsPage implements OnInit {
   pmAct = "";
   orderStatus = "";
   modif = false;
+  readonly = true;
   orderDetailsFormGroup: FormGroup;
   loadNotif = true;
   choosenNotif: any = {
@@ -58,6 +60,7 @@ export class OrderDetailsPage implements OnInit {
 
   ngOnInit() {
     this.choosenOrder = this.orderService.getCurrentOrder();
+    this.origin = this.orderService.getCurrentOrigin();
 
     if (this.choosenOrder == undefined) {
       this.router.navigateByUrl("/home");
@@ -235,7 +238,8 @@ export class OrderDetailsPage implements OnInit {
       componentProps: {
         'op': operation,
         'mode': mode,
-        'afficheChecklist': afficheChecklist
+        'afficheChecklist': afficheChecklist,
+        'origin' : this.origin
       },
       cssClass: 'modal1'
     });

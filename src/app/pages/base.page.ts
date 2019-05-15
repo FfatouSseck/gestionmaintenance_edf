@@ -40,9 +40,9 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
   productionEffects: ProductionEffect[] = [];
   causeCodes: CauseCode[] = [];
   causeGroups: CauseGroup[] = [];
-  priorities: Priority[] = []
+  priorities: Priority[] = [];
   today = new Date();
-  dateauj = "";
+  dateauj: any;
   heureauj = "";
   mobile = false;
   choosenFunctLoc = "";
@@ -78,7 +78,10 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
     let hours = "";
     let day = "";
 
-    month = m.toString();
+    if(m.toString().length < 2){
+      month = "0" + m;
+    }
+    else month = m.toString();
 
     if (min.toString().length < 2) {
       minutes = "0" + min;
@@ -91,8 +94,9 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
     if (d.toString().length < 2) {
       day = "0" + d;
     } else day = d.toString();
-
-    this.dateauj = day + "/" + month + "/" + this.today.getFullYear();
+    
+    //this.dateauj = day + "/" + month + "/" + this.today.getFullYear();
+    this.dateauj = this.today;
     this.heureauj = hours + ":" + minutes
 
   }
@@ -166,13 +170,14 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
 
     const { data } = await this.modal.onDidDismiss();
     let firstLevelFLOC= "";
-
+    let choosenFunctLoc : any;
+    console.log("data returned: ",data);
     if (data != undefined) {
-      console.log("1st level floc: ",data.result);
       firstLevelFLOC = data.result;
+      choosenFunctLoc = this.selectFLoc(plantCode,firstLevelFLOC);
     }
     else firstLevelFLOC = "";
-    let choosenFunctLoc = this.selectFLoc(plantCode,firstLevelFLOC);
+    
     return choosenFunctLoc;
   }
 
@@ -323,6 +328,7 @@ export class BasePage extends ImageHandlingComponent implements OnInit {
   invalidForm(){
     this.openSnackBar("Please fill all required fields!");
   }
+
 
   scanQRCode() {
     //if we are on mobile device

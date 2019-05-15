@@ -26,6 +26,7 @@ import OrderOperationChecklistCalbSet from '../mockServer/OrderOperationChecklis
 import OrderOperationChecklistTaskSet from '../mockServer/OrderOperationChecklistTaskSet.json';
 import { NetworkService, ConnectionStatus } from './network.service';
 import { MatSnackBar } from '@angular/material';
+import OrderConfirmationSet  from '../mockServer/OrderConfirmationSet.json';
 
 @Injectable({
   providedIn: 'root'
@@ -103,6 +104,17 @@ export class MockService {
     return operations.filter(
       (op) =>{
         return op.OrderNo.toLowerCase() === orderNo.toLowerCase();
+      }
+    )
+  }
+
+  getMockOrderConfirmations(orderNo: string,operationNo: string,codePlant: string){
+    let orderConfirmations = OrderConfirmationSet;
+    return orderConfirmations.filter(
+      (or) =>{
+        return or.Activity.toLowerCase() === operationNo.toLowerCase() && 
+        or.OrderNo.toLowerCase() === orderNo.toLowerCase() &&
+        or.PlanPlant.toLowerCase() === codePlant.toLowerCase()
       }
     )
   }

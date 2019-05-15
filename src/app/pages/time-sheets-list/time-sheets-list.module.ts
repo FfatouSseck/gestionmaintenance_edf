@@ -5,14 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ServiceOrderPage } from './service-order.page';
-import { GeneralModule } from 'src/app/components/general.module';
+import { TimeSheetsListPage } from './time-sheets-list.page';
 import { AngularMaterialPageModule } from '../angular-material/angular-material.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: ServiceOrderPage
+    component: TimeSheetsListPage
   }
 ];
 
@@ -22,9 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    GeneralModule,
     AngularMaterialPageModule
   ],
-  declarations: []
+  declarations: [TimeSheetsListPage]
 })
-export class ServiceOrderPageModule {}
+export class TimeSheetsListPageModule {}

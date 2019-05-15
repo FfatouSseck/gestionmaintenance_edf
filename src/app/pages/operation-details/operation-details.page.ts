@@ -14,6 +14,7 @@ import { EmployeeService } from 'src/app/providers/employee.service';
 import { ChecklistPage } from '../checklist/checklist.page';
 import { ChecklistDetailsPage } from '../checklist-details/checklist-details.page';
 import { CheckListAssignmentService } from 'src/app/providers/check-list-assignment.service';
+import { TimeSheetsListPage } from '../time-sheets-list/time-sheets-list.page';
 
 @Component({
   selector: 'app-operation-details',
@@ -24,6 +25,7 @@ export class OperationDetailsPage implements OnInit {
   @Input() op: any;
   @Input() mode: string; //detail or create
   @Input() afficheChecklist: boolean;
+  @Input() origin: string; //T&M or undefined
   displayedColumns: string[] = ['Operation', 'Description', 'Plant',
     'WorkCenter', 'ActType', 'Duration', 'NumEmp'];
   dataSource: any;
@@ -36,12 +38,16 @@ export class OperationDetailsPage implements OnInit {
   assignee = "";
   actType = "";
   checkList = "";
+  confirmations: any[] = [];
+  noConfirmations = false;
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
-    private storage: Storage, public workcenterService: WorkCenterService,
-    private alertCtrl: AlertController,private checklistService: CheckListAssignmentService) { }
+    private storage: Storage, public workcenterService: WorkCenterService, public mockService: MockService,
+    private alertCtrl: AlertController, private checklistService: CheckListAssignmentService) { }
 
   ngOnInit() {
+    console.log("origin: ", this.origin);
+
     this.storage.get("mock").then(
       (mock) => {
         if (mock != null && mock != undefined) {
@@ -61,7 +67,7 @@ export class OperationDetailsPage implements OnInit {
       numEmployees: ['', Validators.required],
       checklist: [''],
     });
-    
+
     if (this.mode === 'create') {
       this.op = {
         Activity: "",
@@ -99,7 +105,7 @@ export class OperationDetailsPage implements OnInit {
     else {
 
       if (this.op.WorkCenterShort !== "") {
-        this.workCenter = this.op.WorkCenterShort; 
+        this.workCenter = this.op.WorkCenterShort;
         if (this.op.WorkCenterDescr !== "") {
           this.workCenter += " - " + this.op.WorkCenterDescr;
         }
@@ -153,6 +159,59 @@ export class OperationDetailsPage implements OnInit {
           this.plant += " - " + this.op.PlanPlantDescr;
         }
       })
+  }
+
+  displayConfirmations() {
+
+  }
+
+  async displayTimeSheets() {
+    if (this.mock) {
+      this.getMockTimeSheets(this.op.OrderNo,this.op.Activity,this.op.Plant);
+      console.log("confs: ",this.confirmations);
+      if(this.confirmations.length > 0){
+        this.modal = await this.modalController.create({
+          component: TimeSheetsListPage,
+          componentProps: {
+            'confs' : this.confirmations
+          },
+        });
+        this.modal.backdropDismiss = false;
+        await this.modal.present();
+    
+        const { data } = await this.modal.onDidDismiss();
+        if (data != undefined) {
+          console.log("data: ",data);
+          
+        //   this.op.StandardTextKey = data.result.StandardTextKey;
+        //   this.op.StandardTextDescr = data.result.ShortText;
+        //   if (this.op.StandardTextKey !== "") {
+        //     this.standardText = this.op.StandardTextKey;
+        //     if (this.op.StandardTextDescr !== "") {
+        //       this.standardText += " - " + this.op.StandardTextDescr;
+        //     }
+        //   }
+        }
+      }
+    }
+    else{
+
+    }
+  }
+
+  getTimeSheets(orderNo: string, operationNo: string, codePlant: string){
+    
+  }
+
+  getMockTimeSheets(orderNo: string, operationNo: string, codePlant: string) {
+    console.log("params: ",orderNo,operationNo,codePlant);
+    
+    this.confirmations = [];
+    this.noConfirmations = false;
+    this.confirmations = this.mockService.getMockOrderConfirmations(orderNo, operationNo, codePlant);
+    if (this.confirmations.length == 0) {
+      this.noConfirmations = true;
+    }
   }
 
   closeModal() {
@@ -315,13 +374,13 @@ export class OperationDetailsPage implements OnInit {
     }
   }
 
-  async displayChecklistDetails(){
-    console.log("this.op.Activity: ",this.op.Activity);
-    
+  async displayChecklistDetails() {
+    console.log("this.op.Activity: ", this.op.Activity);
+
     this.modal = await this.modalController.create({
       component: ChecklistDetailsPage,
       componentProps: {
-        'orderNo' : this.op.OrderNo,
+        'orderNo': this.op.OrderNo,
         'plant': this.op.Plant,
         'operation': this.op.Activity
       },
@@ -330,7 +389,7 @@ export class OperationDetailsPage implements OnInit {
     await this.modal.present();
 
     const { data } = await this.modal.onDidDismiss();
-    if (data != undefined){
+    if (data != undefined) {
       console.log(data);
     }
   }
@@ -411,7 +470,7 @@ export class OperationDetailsPage implements OnInit {
     await alert.present();
   }
 
-  reset(){
+  reset() {
     this.operationFormGroup.controls.operation.setValue("");
     this.operationFormGroup.controls.description.setValue("");
     this.operationFormGroup.controls.standardText.setValue("");

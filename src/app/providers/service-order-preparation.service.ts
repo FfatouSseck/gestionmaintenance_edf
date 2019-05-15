@@ -15,6 +15,7 @@ export class ServiceOrderPreparationService extends BaseService {
   ordersList: Order[] = [];
   available = false;
   currentOrder: any;
+  currentOrigin: any;
 
   constructor(public http: HttpClient) {
     super(http);
@@ -85,7 +86,15 @@ export class ServiceOrderPreparationService extends BaseService {
     this.currentOrder = ord;
   }
 
+  setCurrentOrigin(origin){
+    this.currentOrigin = origin;
+  }
+
   getCurrentOrder(){
     return this.currentOrder;
+  }
+
+  getCurrentOrigin(){
+    return this.currentOrigin;
   }
 }

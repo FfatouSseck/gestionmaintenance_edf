@@ -39,17 +39,15 @@ export class NotificationService extends BaseService {
 
   createNotif(notif) {
     if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline) {
+      console.log("offline mode");
+      
       return from(this.offlineManager.storeRequest('NotifHeaderSet', 'POST', notif));
     }
     else{
-      return this.post(notif, 'NotifHeaderSet').pipe(
-        catchError(err => {
-          this.offlineManager.storeRequest('NotifHeaderSet', 'POST', notif);
-          throw new Error(err);
-        })
-      );
-    }
-    
+      console.log("online mode");
+
+      return this.post(notif, 'NotifHeaderSet');
+    }  
   }
 
   // Save result of API requests

@@ -14,6 +14,7 @@
  
  ion-content{
   --background: #fff url('../../assets/img/background.jpg') no-repeat center center / cover;
+  //--background: #fff;
 }
 
 mat-grid-tile {
@@ -32,51 +33,60 @@ mat-card {
 }
 
 .tuileLandscape{
-  //box-shadow : 0 3px 15px rgba(0,0,0,0.11);
+  box-shadow : 0 3px 15px rgba(0,0,0,0.11);
   border-radius: 8px;
 }
 
 .tuile1{
-  background-color: #001A70; 
+  background-color: #fafafa; 
   opacity : 0.9;
+  border-bottom: 2px #001A70 solid;
 }
-
-.tuile7{
-  background-color: #C4D600;
+.tuile2{
+  background-color: #fafafa;
   opacity : 0.9;
+  border-bottom: 2px #005238 solid;
 }
 
 .tuile3{
-  background-color: #005BBB;
+  background-color: #fafafa;
   opacity : 0.9;
+  border-bottom: 2px #005BBB solid;
 }
 
 .tuile4{
-  background-color: #E53F00;
+  background-color: #fafafa;
   opacity : 0.9;
+  border-bottom: 2px #E53F00 solid;
 }
 
 .tuile5{
-  background-color: #378516;
+  background-color: #fafafa;
   opacity : 0.9;
-}
-
-.tuile2{
-  background-color: #fff;
-  opacity : 0.9;
+  border-bottom: 2px #378516 solid;
 }
 
 .tuile6{
-  background-color: #FFA02F;
+  background-color: #fafafa;
   opacity : 0.9;
+  border-bottom: 2px #FFA02F solid;
+}
+
+.tuile7{
+  background-color: #fafafa;
+  opacity : 0.9;
+  border-bottom: 2px #C4D600 solid;
 }
 
 .tuile8{
-  background-color: #484848;
+  background-color: #fafafa;
   opacity : 0.9;
+  border-bottom: 2px #484848 solid;
 }
 
 .mat-spinner-color::ng-deep circle{
   stroke: #FFFFFF !important;
   } 
+
+  
 

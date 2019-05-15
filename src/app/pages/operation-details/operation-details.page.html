@@ -80,22 +80,23 @@
   <mat-toolbar style="--background: #fff;">
     <mat-toolbar-row>
       <button *ngIf="mode === 'detail' && op.ChklstId !== '' && afficheChecklist" (click)="displayChecklistDetails()"
-        style="background-color: #005BBB;color: white;" mat-flat-button>Checklist</button>
+        class="btn-standard" mat-flat-button>Checklist</button>
+        &nbsp;&nbsp;
+      <button *ngIf="mode === 'detail' && origin !== '/time-and-material-confirmation'" class="btn-standard"
+        mat-flat-button (click)="displayConfirmations()">Confirmations</button>
 
-      <button *ngIf="mode === 'detail' && op.ChklstId !== ''" style="background-color: #005BBB;color: white;"
-        mat-flat-button class="example-icon">Confirmations</button>
+      <button *ngIf="mode === 'detail' && origin === '/time-and-material-confirmation'" class="btn-standard"
+        mat-flat-button (click)="displayTimeSheets()">Time Sheets</button>
 
       <span class="example-spacer"></span>
 
-      <button *ngIf="mode === 'create'" (click)="presentRestConfirm()"
-        style="background-color: grey;color: white;--height:40px" mat-flat-button class="example-icon">
-        Clear</button>
-      <button style="background-color: #378516;color: white" (click)="closeModal()" mat-flat-button
-        class="example-icon">
+      <button *ngIf="mode === 'create'" (click)="presentRestConfirm()" class="btn-clear" mat-flat-button>
+        Clear</button> &nbsp;&nbsp;
+      <button class="btn-save" (click)="closeModal()" mat-flat-button>
         Save
       </button>
-
-      <button style="background-color: red;color: white" (click)="closeModal()" mat-flat-button>
+      &nbsp;&nbsp;
+      <button class="btn-cancel" (click)="closeModal()" mat-flat-button>
         Cancel
       </button>
     </mat-toolbar-row>

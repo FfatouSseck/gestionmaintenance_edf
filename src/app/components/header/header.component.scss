@@ -9,7 +9,10 @@ hr {
     border-color:#005BBB;
 } 
 
-ion-toolbar{
-    --border-color: #005BBB;
-    --color: #005BBB;
+mat-toolbar{
+    // --border-color: #005BBB;
+    // --color: #005BBB;
+    background-color:#fff;
+    color: #FFF ;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2);
   }

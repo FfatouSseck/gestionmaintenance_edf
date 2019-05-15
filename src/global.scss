@@ -30,3 +30,21 @@ mat-form-field{
   .toolbar{
     border-radius: 8px;
   }
+
+  .btn-cancel{
+    background-color: red;color: white;
+  }
+  .btn-save{
+    background-color: #378516;color: white;
+  }
+  .btn-standard{
+    background-color: #005BBB;color: white;
+  }
+  .btn-clear{
+    background-color: grey;color: white;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+

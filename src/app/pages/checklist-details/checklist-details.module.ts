@@ -8,7 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { ChecklistDetailsPage } from './checklist-details.page';
 import { AngularMaterialPageModule } from '../angular-material/angular-material.module';
 import { GeneralModule } from 'src/app/components/general.module';
-import { NavHeaderComponent } from 'src/app/components/navigation/header/header.component';
 
 const routes: Routes = [
   {
@@ -26,9 +25,7 @@ const routes: Routes = [
     AngularMaterialPageModule,
     GeneralModule
   ],
-  declarations: [ChecklistDetailsPage,NavHeaderComponent],
-  exports: [
-    NavHeaderComponent
-  ]
+  declarations: [ChecklistDetailsPage],
+  exports: []
 })
 export class ChecklistDetailsPageModule {}

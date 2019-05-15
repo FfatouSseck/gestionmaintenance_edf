@@ -2,21 +2,12 @@
   <app-header pageTitle="Notifications" (close)="onClose($event)"></app-header>
 </ion-header>
 
-<ion-content padding scrollEvents="true">
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
-    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
-      refreshingText="Refreshing...">
-    </ion-refresher-content>
-  </ion-refresher>
-  <ion-toolbar style="--min-height:50px" *ngIf="noData == false">
+<ion-toolbar style="--min-height:50px" *ngIf="noData == false">
     <div [style.visibility]="!clicked ? 'hidden' : 'visible'">
       <ion-searchbar #search (ionCancel)="toggleSearch()" [(ngModel)]="searchTerm" [formControl]="searchControl"
         (ionBlur)="toggleSearch()" class="searchbar">
       </ion-searchbar>
     </div>
-    <ion-buttons slot="start">
-
-    </ion-buttons>
     <ion-buttons slot="end">
       <ion-fab-button size="small" *ngIf="!clicked && !refresh" (click)="toggleSearch()" style="--background: #007CC0;">
         <i class="material-icons" style="color: #fff;">search</i>
@@ -25,15 +16,20 @@
         <i class="material-icons" style="color: #fff;">swap_vert</i>
       </ion-fab-button>
       <mat-menu #menu="matMenu">
-        <button (click)="sortBy('floc')" mat-menu-item>Functional Location</button>
-        <button (click)="sortBy('startDate')" mat-menu-item>Malfunction Start Date</button>
-        <button (click)="sortBy('notifNo')" mat-menu-item>Notif Number</button>
-        <button (click)="sortBy('priority')" mat-menu-item>Priority</button>
+        <button (click)="sortBy('floc')" mat-menu-item>Functional Location&nbsp;<i class="material-icons" *ngIf="choosenOption === 'floc'" style="color: #007CC0;">done</i></button>
+        <button (click)="sortBy('startDate')" mat-menu-item>Malfunction Start Date&nbsp;<i class="material-icons" *ngIf="choosenOption === 'startDate'" style="color: #007CC0;">done</i></button>
+        <button (click)="sortBy('notifNo')" mat-menu-item>Notif Number&nbsp;<i class="material-icons" *ngIf="choosenOption === 'notifNo'" style="color: #007CC0;">done</i></button>
+        <button (click)="sortBy('priority')" mat-menu-item>Priority&nbsp;<i class="material-icons" *ngIf="choosenOption === 'priority'" style="color: #007CC0;">done</i></button>
       </mat-menu>
     </ion-buttons>
   </ion-toolbar>
+<ion-content padding scrollEvents="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pull-min="80">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
-  <div *ngIf="orientation === 'portrait-primary';else landscapeContent">
     <div *ngIf="notifList.length==0;else availContent">
       <mat-spinner style="margin: 0 auto"></mat-spinner>
     </div>
@@ -46,6 +42,7 @@
         <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)">
           <h3 matLine style="font-weight: bold;color: #005BBB;font-size: 15px">{{notif.NotifNo}} </h3>
           <p matLine [style.font-weight]="notif.fw" style="font-size: 15px"> {{notif.ShortText}} </p>
+          <p matLine [style.font-weight]="notif.fw" style="font-size: 15px">{{notif.FunctLoc}}</p>
           <p matLine [style.font-weight]="notif.fw" style="font-size: 15px" class="demo-2">
             {{formatDate(notif.StartDate)}} </p>
           <p style="color: blue;font-size: 15px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw" matLine>
@@ -64,43 +61,5 @@
       </mat-nav-list>
     </ng-template>
 
-  </div>
-
-  <ng-template #landscapeContent>
-    <div *ngIf="notAvailable;else availableContent">
-      <mat-spinner style="margin: 0 auto"></mat-spinner>
-    </div>
-    <ng-template #availableContent>
-      <p *ngIf="noData == true">
-        No data available
-      </p>
-      <div *ngIf="noData == false">
-        <mat-nav-list>
-          <mat-list-item *ngFor="let notif of notifList" (click)="presentDetails(notif)">
-            <h3 matLine style="font-weight: bold;color: #005BBB;font-size: 15px">{{notif.NotifNo}} </h3>
-            <p matLine [style.font-weight]="notif.fw" style="font-size: 15px"> {{notif.ShortText}} </p>
-            <p matLine [style.font-weight]="notif.fw" style="font-size: 15px" class="demo-2">
-              {{formatDate(notif.StartDate)}} </p>
-            <p style="color: blue;font-size: 15px" *ngIf="notif.Priority === '1'" [style.font-weight]="notif.fw"
-              matLine>
-              {{notif.PriorityDescr}}{{notif.color}}</p>
-            <p style="color: red;font-size: 15px" *ngIf="notif.Priority === '2'" [style.font-weight]="notif.fw" matLine>
-              {{notif.PriorityDescr}}</p>
-            <p style="color: gray;font-size: 15px" *ngIf="notif.Priority === '3'" [style.font-weight]="notif.fw"
-              matLine>
-              {{notif.PriorityDescr}}</p>
-            <p style="color: green;font-size: 15px" *ngIf="notif.Priority === '4'" [style.font-weight]="notif.fw"
-              matLine>
-              {{notif.PriorityDescr}}</p>
-            <button mat-icon-button>
-              <i class="material-icons" style="color: grey;">navigate_next</i>
-            </button>
-            <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
-          </mat-list-item>
-        </mat-nav-list>
-      </div>
-    </ng-template>
-
-  </ng-template>
 
 </ion-content>

@@ -161,12 +161,12 @@ export class HomePage implements OnInit {
     }
 
     onClose(evt) {
-        if (Array.isArray(evt.result)) {
-            this.choosenPlant = evt.result[0].Plant;
-        }
-        else {
-            this.choosenPlant = evt.result.choosenPlant;
-        }
+        // if (Array.isArray(evt.result)) {
+        //     this.choosenPlant = evt.result[0].Plant;
+        // }
+        // else {
+        //     this.choosenPlant = evt.result.choosenPlant;
+        // }
 
         this.initialisation();
     }

@@ -24,7 +24,6 @@ export class EquipmentService extends BaseService{
 
   setEquipments(equipments) {
     this.available = false;
-    console.log(equipments);
     if (equipments.length > 0) {
       this.equipmentList = equipments;
       this.available = true;

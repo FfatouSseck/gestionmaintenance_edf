@@ -22,31 +22,28 @@
     <br />
     <mat-card class="mat-elevation-z8">
       <mat-form-field class="example-form">
-        <input matInput placeholder="Order Number" readonly="true" [value]="choosenOrder.OrderNo">
+        <input matInput placeholder="Description" [readonly]="readonly" [value]="choosenOrder.TasklistDescr">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="Description" readonly="true" [value]="choosenOrder.TasklistDescr">
+        <input matInput placeholder="PM activity type" [readonly]="readonly" [value]="pmAct">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="PM activity type" readonly="true" [value]="pmAct">
+        <input matInput placeholder="Assignee" [readonly]="readonly" [value]="choosenOrder.Assignee">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="Assignee" readonly="true" [value]="choosenOrder.Assignee">
+        <input matInput placeholder="Functionnal Location" [readonly]="readonly" [value]="choosenOrder.FunctLocDescr">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="Functionnal Location" readonly="true" [value]="choosenOrder.FunctLocDescr">
+        <input matInput placeholder="Equipment Number" [readonly]="readonly" [value]="choosenOrder.Equipment">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="Equipment Number" readonly="true" [value]="choosenOrder.Equipment">
+        <input matInput placeholder="Priority" [readonly]="readonly" [value]="choosenOrder.PriorityDescr">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="Priority" readonly="true" [value]="choosenOrder.PriorityDescr">
+        <input matInput placeholder="Status" [readonly]="readonly" [value]="orderStatus">
       </mat-form-field>
       <mat-form-field class="example-form">
-        <input matInput placeholder="Status" readonly="true" [value]="orderStatus">
-      </mat-form-field>
-      <mat-form-field class="example-form">
-        <textarea matInput placeholder="Text" readonly="true" [value]="choosenOrder.LongText"></textarea>
+        <textarea matInput placeholder="Text" [readonly]="readonly" [value]="choosenOrder.LongText"></textarea>
       </mat-form-field>
     </mat-card>
 
@@ -57,7 +54,7 @@
         <h4 style="font-weight: bold;font-size: 20px; display: inline-block;color: white">Notification informations</h4>
       </ion-title>
       <ion-buttons slot="end" style="visibility: hidden">
-        <ion-fab-button size="small" style="--background: #378516; " (click)="addNewOperation()">
+        <ion-fab-button size="small" style="--background: #378516;" (click)="addNewOperation()">
           <i class="material-icons" style="color: #fff;">add</i>
         </ion-fab-button>
       </ion-buttons>
@@ -73,11 +70,11 @@
     <div *ngIf="choosenNotif.NotifNo != null && loadNotif==false">
       <mat-card class="mat-elevation-z8">
         <mat-form-field class="example-form">
-          <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo">
+          <input matInput placeholder="Notification Number" [readonly]="readonly" [value]="choosenOrder.NotifNo">
         </mat-form-field>
         <br />
         <mat-form-field class="example-form">
-          <input matInput placeholder="Notification Number" readonly="true" [value]="choosenOrder.NotifNo"
+          <input matInput placeholder="Notification Number" [readonly]="readonly" [value]="choosenOrder.NotifNo"
             style="visibility: hidden">
           <mat-checkbox disabled [checked]="choosenNotif.Breakdown" color="primary">
             Breakdown
@@ -85,16 +82,16 @@
         </mat-form-field>
         <br />
         <mat-form-field class="example-form">
-          <input matInput placeholder="Damage code" readonly="true" [value]="choosenNotif.DamageCode">
+          <input matInput placeholder="Damage code" [readonly]="readonly" [value]="choosenNotif.DamageCode">
         </mat-form-field>
         <mat-form-field class="example-form">
-          <input matInput placeholder="Cause" readonly="true" [value]="choosenNotif.CauseCode">
+          <input matInput placeholder="Cause" [readonly]="readonly" [value]="choosenNotif.CauseCode">
         </mat-form-field>
         <mat-form-field class="example-form">
-          <input matInput placeholder="Cause Description" readonly="true" [value]="choosenNotif.CauseDescr">
+          <input matInput placeholder="Cause Description" [readonly]="readonly" [value]="choosenNotif.CauseDescr">
         </mat-form-field>
         <mat-form-field class="example-form">
-          <input matInput placeholder="Object Part" readonly="true" [value]="choosenNotif.ObjectPartCodeDescr">
+          <input matInput placeholder="Object Part" [readonly]="readonly" [value]="choosenNotif.ObjectPartCodeDescr">
         </mat-form-field>
       </mat-card>
     </div>
@@ -227,6 +224,27 @@
           (click)="getComponentDetails(i)"></tr>
       </table>
     </div>
+
   </form>
   <br />
 </ion-content>
+<ion-footer *ngIf="readonly == true">
+  <mat-toolbar style="background-color: #3E4649;">
+    <mat-toolbar-row>
+      <span class="example-spacer"></span>
+      <button mat-flat-button (click)="readonly = false" class="btn-standard">Modify</button>
+      &nbsp;&nbsp;
+      <button mat-flat-button (click)="releaseSO()" class="btn-clear">Release SO</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</ion-footer>
+<ion-footer *ngIf="readonly == false">
+  <mat-toolbar style="background-color: #3E4649;">
+    <mat-toolbar-row>
+      <span class="example-spacer"></span>
+      <button mat-flat-button (click)="updateOrder(choosenOrder)" class="btn-save">Save</button>
+      &nbsp;&nbsp;
+      <button mat-flat-button class="btn-cancel" (click)="readonly = true">Cancel</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</ion-footer>

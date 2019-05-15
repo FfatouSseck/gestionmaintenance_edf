@@ -26,6 +26,8 @@ const routes: Routes = [
   { path: 'act-type-list', loadChildren: './pages/act-type-list/act-type-list.module#ActTypeListPageModule' },
   { path: 'component-details', loadChildren: './pages/component-details/component-details.module#ComponentDetailsPageModule' },
   { path: 'checklist-details', loadChildren: './pages/checklist-details/checklist-details.module#ChecklistDetailsPageModule' },
+  { path: 'order-time-and-material', loadChildren: './pages/order-time-and-material/order-time-and-material.module#OrderTimeAndMaterialPageModule' },
+  { path: 'time-sheets-list', loadChildren: './pages/time-sheets-list/time-sheets-list.module#TimeSheetsListPageModule' },
 
 
 

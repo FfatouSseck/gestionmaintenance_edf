@@ -232,5 +232,32 @@
 		"EndDate": "\/Date(1540944000000)\/",
 		"FinalConf": "",
 		"ConfDescr": ""
+	},
+	{
+		"__metadata": {
+			"id": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderConfirmationSet(ConfNo='0000473730',ConfCounter='00000001')",
+			"uri": "http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap/zpm_om_workmanager_v2_srv/OrderConfirmationSet(ConfNo='0000473730',ConfCounter='00000001')",
+			"type": "ZPM_OM_WORKMANAGER_V2_SRV.OrderConfirmation"
+		},
+		"PlanPlantDescr": "Catalina O&M",
+		"OrderNo": "5322284",
+		"Status": "20",
+		"ConfPlantDescr": "Catalina O&M",
+		"ConfNo": "0000473730",
+		"ConfCounter": "00000001",
+		"Activity": "0010",
+		"PlanPlant": "3CAT",
+		"ConfPlant": "3CAT",
+		"WorkCenter": "10000153",
+		"WorkCenterShort": "FTECH",
+		"WorkCenterDescr": "Field Technician",
+		"ActivityType": "RT",
+		"EmployeeNumber": "00000035",
+		"EmployeeFullName": "Hugo Galindo",
+		"StartDate": "\/Date(1540944000000)\/",
+		"EndDate": "\/Date(1540944000000)\/",
+		"FinalConf": "",
+		"ConfDescr": ""
 	}
+
 ]

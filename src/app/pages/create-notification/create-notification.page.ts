@@ -7,7 +7,6 @@ import { BasePage } from '../base.page';
 
 import { ActionSheetController, LoadingController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
-import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 import { File } from '@ionic-native/File/ngx';
 import { PriorityService } from 'src/app/providers/priority.service';
@@ -66,13 +65,13 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   constructor(public _formBuilder: FormBuilder, public platform: Platform, public functlocService: FunctlocService,
     public qrScanner: QRScanner, public toastController: ToastController, private storage: Storage,
     public snackBar: MatSnackBar, public alertController: AlertController, public modalController: ModalController,
-    public actionSheetController: ActionSheetController, private nativeStorage: NativeStorage,
+    public actionSheetController: ActionSheetController,
     private effectService: EffectService, private priorityService: PriorityService,
     private causeGroupService: CausegroupService, private functLocService: FunctlocService, private mockService: MockService,
-    public webview: WebView,private notificationService: NotificationService,private screenOrientation: ScreenOrientation,
+    public webview: WebView, private notificationService: NotificationService, private screenOrientation: ScreenOrientation,
     public ref: ChangeDetectorRef, public filePath: FilePath, public camera: Camera,
-    public file: File, public http: HttpClient, public loadingController: LoadingController, 
-    public offlineService: OfflineManagerService ) {
+    public file: File, public http: HttpClient, public loadingController: LoadingController,
+    public offlineService: OfflineManagerService) {
 
     super(_formBuilder, platform, functlocService, qrScanner, toastController, snackBar, alertController, modalController,
       webview, actionSheetController, ref, filePath, camera, file, http, loadingController
@@ -81,9 +80,9 @@ export class CreateNotificationPage extends BasePage implements OnInit {
     this.orientation = this.screenOrientation.type;
     // detect orientation changes
     this.screenOrientation.onChange().subscribe(
-        () => {
-            this.orientation = this.screenOrientation.type;
-        }
+      () => {
+        this.orientation = this.screenOrientation.type;
+      }
     );
   }
 
@@ -106,7 +105,7 @@ export class CreateNotificationPage extends BasePage implements OnInit {
   }
 
   save() {
-    console.log("startDate: ",this.notifFormGroup.controls.startDate.value);
+    console.log("startDate: ", this.notifFormGroup.controls.startDate.value.getTime());
     let ps = this.priorities.filter(
       priority => priority.PriorityId === this.notifFormGroup.controls.priority.value
     );
@@ -171,11 +170,11 @@ export class CreateNotificationPage extends BasePage implements OnInit {
         "ObjectPartCodeDescr": ""
       }
       this.notificationService.createNotif(notif).subscribe(
-        (elt) =>{
-          console.log("result: ",elt);
+        (elt) => {
+          console.log("result: ", elt);
         },
-        (err) =>{
-          console.log("err: ",err);
+        (err) => {
+          console.log("error: ", err);
         }
       )
     }
@@ -242,13 +241,17 @@ export class CreateNotificationPage extends BasePage implements OnInit {
 
   async selectFunctLoc() {
     this.choosenFunctLoc = await this.selectFirstLevelFLOC(this.choosenPlantcode);
-    if (this.choosenFunctLoc !== "") {
+    if (this.choosenFunctLoc !== ""  && this.choosenFunctLoc != null && this.choosenFunctLoc != undefined) {
       await this.selectEquipment(this.choosenFunctLoc);
     }
   }
 
   async selectEquipment(fl: string) {
-    this.choosenEquipment = await this.selectEq(fl);
+    fl = this.choosenFunctLoc;
+    if (fl !== '') {
+      this.choosenEquipment = await this.selectEq(fl);
+    }
+    else this.openSnackBar("Please choose a functional location first");
   }
 
   async selectCauseGroup() {

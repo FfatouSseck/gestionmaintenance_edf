@@ -39,6 +39,7 @@ export class NotificationListPage extends BasePage implements OnInit {
   @ViewChild('select') select;
   clicked = false;
   refresh = false;
+  choosenOption = "notifNo";
 
   choosenDC = ""  //choosen damage code
   choosenDG = ""  //choosen damage group
@@ -221,6 +222,7 @@ export class NotificationListPage extends BasePage implements OnInit {
   }
 
   sortBy(option) {
+    this.choosenOption = option;
     if (option === 'startDate') {
       this.notifList = this.sortByStartDate(this.notifList);
     }

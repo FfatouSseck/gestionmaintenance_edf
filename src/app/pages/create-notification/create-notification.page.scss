@@ -1,13 +1,20 @@
-.example-form {
+  .example-form {
     width: 80%;
   }
 
   .example-form2 {
-    width: 80%;
+    width: 67%;
+    margin-left: 5%;
   }
 
+  .example-form3 {
+    width: 67%;
+    //margin-left: 5%;
+  }
+
+
   .form-85 {
-    width: 70%
+    width: 70%;
   }
 
   .disp{
@@ -15,6 +22,15 @@
     margin-left: auto;
     margin-right: auto;
     color:grey;
+  }
+
+  .content:not(#excluded){
+    text-align: center;
+  }
+
+  #excluded{
+    width: 50%;
+    margin-left:10%;
   }
   
   

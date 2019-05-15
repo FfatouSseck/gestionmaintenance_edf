@@ -1,16 +1,17 @@
 .example-form {
-  min-width: 500px;
-  max-width: 600px;
-  width: 100%;
-  margin-left: 10%;
+  width: 80%;
 }
 
 .example-form2 {
-  min-width: 400px;
-  max-width: 500px;
-  width: 100%;
-  margin-left: 10%;
+  width: 67%;
+  margin-left: 5%;
 }
+
+.example-form3 {
+  width: 67%;
+  //margin-left: 5%;
+}
+
   .example-full-width {
     width: 100%;
   }
@@ -23,6 +24,16 @@
     --background-activated  : #000;
 
   }
+  
+  .content:not(#excluded){
+    text-align: center;
+  }
+
+  #excluded{
+    width: 50%;
+    margin-left:10%;
+  }
+  
   
   
 
