@@ -129,6 +129,7 @@ export class HomePage implements OnInit {
 
     //list available plants
     async presentPlantsModal() {
+        let plants = [];
         this.modal = await this.modalController.create({
             component: DetailsSettingsPage,
             componentProps: {},
@@ -139,8 +140,11 @@ export class HomePage implements OnInit {
         const { data } = await this.modal.onDidDismiss();
         if (data != undefined) {
             console.log("data", data);
+            plants.push({
+                Plant: data.result
+            })
+            this.updateData(plants);
         }
-        this.updateData(data.result);
     }
 
     doRefresh(event) {

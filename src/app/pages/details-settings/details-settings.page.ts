@@ -249,14 +249,14 @@ export class DetailsSettingsPage implements OnInit {
           this.storage.remove("syncPlantDescr").then(
             () => {
               this.modalController.dismiss({
-                'result': this.choosenPlant
+                'result': this.checkedPlants[0].Plant
               });
             }
           )
             .catch(
               () => {
                 this.modalController.dismiss({
-                  'result': this.choosenPlant
+                  'result': this.checkedPlants[0].Plant
                 });
               }
             )
