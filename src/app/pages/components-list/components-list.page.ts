@@ -17,7 +17,12 @@ export class ComponentsListPage implements OnInit {
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource(this.components);
+    if(this.components != null && this.components != undefined && this.components.length > 0){
+      for(let i=0;i<this.components.length;i++){
+        this.components[i].WithdrawnQuantity =  this.float2int(this.components[i].WithdrawnQuantity);
+      }
+      this.dataSource = new MatTableDataSource(this.components);
+    }
   }
 
   closeModal() {
@@ -35,16 +40,35 @@ export class ComponentsListPage implements OnInit {
   }
 
   removeWithdrawnQuantity(index: number) {
-    console.log(this.dataSource.data);
+    let withQu = this.dataSource.data[index].WithdrawnQuantity;
+    if (withQu>0) withQu--;
+    this.dataSource.data[index].WithdrawnQuantity = withQu;
+    if(this.checkIfExists(this.dataSource.data[index]) == false){
+      this.updatedComponents.push(this.dataSource.data[index]);
+    }
   }
 
   addWithdrawnQuantity(index: number) {
-    console.log(this.dataSource.data);
+    let withQu = this.dataSource.data[index].WithdrawnQuantity;
+    withQu++;
+    this.dataSource.data[index].WithdrawnQuantity = withQu;
+    if(this.checkIfExists(this.dataSource.data[index]) == false){
+      this.updatedComponents.push(this.dataSource.data[index]);
+    }
   }
 
   float2int(value) {
     var num = +value;
     return num | 0;
+  }
+
+  checkIfExists(elt){
+    for(let i=0;i<this.updatedComponents.length;i++){
+      if(this.updatedComponents[i].Material === elt.Material){
+        return true;
+      }
+    }
+    return false;
   }
 
 }

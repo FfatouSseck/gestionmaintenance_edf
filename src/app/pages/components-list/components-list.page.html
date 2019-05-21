@@ -14,7 +14,7 @@
 
     <ng-container matColumnDef="Materialnumber">
       <th mat-header-cell *matHeaderCellDef> Material number </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element" style="text-align: start">
         {{element.Material}}
       </td>
     </ng-container>
@@ -37,33 +37,38 @@
     <ng-container matColumnDef="Quant">
       <th mat-header-cell *matHeaderCellDef> Quantity withdrawal / Serial number </th>
       <td mat-cell *matCellDef="let element; let i=index">
-        <ion-fab-button size="small" style="--background: #005BBB;float:right " (click)="removeWithdrawnQuantity(i)">
+        <!--ion-fab-button size="small" style="--background: grey;float:left " (click)="removeWithdrawnQuantity(i)">
           <i class="material-icons" style="color: #fff;">remove</i>
         </ion-fab-button>
         {{float2int(element.WithdrawnQuantity)}}
-        <ion-fab-button size="small" style="--background: #005BBB;float:right " (click)="addWithdrawnQuantity(i)">
+        <ion-fab-button size="small" style="--background:grey;float:right " (click)="addWithdrawnQuantity(i)">
           <i class="material-icons" style="color: #fff;">add</i>
-        </ion-fab-button>
+        </ion-fab-button>-->
+        <mat-form-field style="text-align: center;">
+          <mat-icon matPrefix style="color: black" (click)="removeWithdrawnQuantity(i)">remove</mat-icon>
+          <input matInput  [(ngModel)]="element.WithdrawnQuantity">
+          <mat-icon matSuffix style="color: black" (click)="addWithdrawnQuantity(i)">add</mat-icon>
+        </mat-form-field>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="Prevwithdrawn">
       <th mat-header-cell *matHeaderCellDef> Previously withdrawn </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element" style="text-align: center">
         0
       </td>
     </ng-container>
 
     <ng-container matColumnDef="Remainingquantity">
       <th mat-header-cell *matHeaderCellDef> Remaining quantity </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element" style="text-align: center">
         1
       </td>
     </ng-container>
 
     <ng-container matColumnDef="Unit">
       <th mat-header-cell *matHeaderCellDef> Unit </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element" style="text-align: end;">
         {{element.RequirementQuantityUnit}}
       </td>
     </ng-container>
@@ -73,15 +78,15 @@
   </table>
 </ion-content>
 <ion-footer>
-    <mat-toolbar style="background-color: #3E4649;">
-      <mat-toolbar-row>
-        <button class="btn-save" mat-flat-button (click)="submitComponents()">
-          Submit
-        </button>
-        <span class="example-spacer"></span>
-        <button class="btn-cancel" mat-flat-button (click)="closeModal()">
-          Cancel
-        </button>
-      </mat-toolbar-row>
-    </mat-toolbar>
-  </ion-footer>
+  <mat-toolbar style="background-color: #3E4649;">
+    <mat-toolbar-row>
+      <button class="btn-save" mat-flat-button (click)="submitComponents()">
+        Submit
+      </button>
+      <span class="example-spacer"></span>
+      <button class="btn-cancel" mat-flat-button (click)="closeModal()">
+        Cancel
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</ion-footer>
