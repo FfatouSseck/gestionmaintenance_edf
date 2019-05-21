@@ -95,7 +95,9 @@ export class LoginPage implements OnInit {
   ionViewWillLeave() {
     this.plantService.getAllPlants().subscribe(
       (plts: any) => {
-        this.dataService.setPlants(plts.d.results);
+        console.log("plts: ",plts);
+        
+        //this.dataService.setPlants(plts.d.results);
       }
     );
   }

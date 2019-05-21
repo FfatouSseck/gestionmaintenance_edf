@@ -2,20 +2,18 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Storage } from '@ionic/storage';
-import { StandardTextService } from 'src/app/providers/standard-text.service';
 import { MockService } from 'src/app/providers/mock.service';
 import { StandardTextListPage } from '../standard-text-list/standard-text-list.page';
 import { WorkCenterService } from 'src/app/providers/work-center.service';
 import { WorkCenterListPage } from '../work-center-list/work-center-list.page';
-import { ActTypeService } from 'src/app/providers/act-type.service';
 import { EmployeeListPage } from '../employee-list/employee-list.page';
 import { ActTypeListPage } from '../act-type-list/act-type-list.page';
-import { EmployeeService } from 'src/app/providers/employee.service';
 import { ChecklistPage } from '../checklist/checklist.page';
 import { ChecklistDetailsPage } from '../checklist-details/checklist-details.page';
-import { CheckListAssignmentService } from 'src/app/providers/check-list-assignment.service';
 import { TimeSheetsListPage } from '../time-sheets-list/time-sheets-list.page';
 import { ComponentsListPage } from '../components-list/components-list.page';
+import { OperationsService } from 'src/app/providers/operations.service';
+import { ComponentsService } from 'src/app/providers/components.service';
 
 @Component({
   selector: 'app-operation-details',
@@ -46,7 +44,7 @@ export class OperationDetailsPage implements OnInit {
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, public workcenterService: WorkCenterService, public mockService: MockService,
-    private alertCtrl: AlertController, private checklistService: CheckListAssignmentService) { }
+    private alertCtrl: AlertController, private operationService: OperationsService,private componentService: ComponentsService) { }
 
   ngOnInit() {
     console.log("origin: ", this.origin);
@@ -197,7 +195,7 @@ export class OperationDetailsPage implements OnInit {
       }
     }
     else {
-
+      this.getTimeSheets(this.op.OrderNo, this.op.Activity, this.op.Plant);
     }
   }
 
@@ -231,12 +229,88 @@ export class OperationDetailsPage implements OnInit {
       }
     }
     else {
-
+      this.getComponents(this.op.OrderNo, this.op.Activity, this.op.Plant);
     }
   }
 
-  getTimeSheets(orderNo: string, operationNo: string, codePlant: string) {
+  getComponents(orderNo: string, operationNo: string, codePlant: string){
+    this.componentService.getAllComponentsByActivity(orderNo, operationNo, codePlant).subscribe(
+      async (comps)=>{
+        if(comps != null && comps != undefined){
+          this.components = comps.d.results;
+          console.log("comps: ",this.components);
 
+          if(this.components.length > 0){
+            this.modal = await this.modalController.create({
+              component: ComponentsListPage,
+              componentProps: {
+                'components': this.components
+              },
+              cssClass: 'modal2'
+            });
+            this.modal.backdropDismiss = false;
+            await this.modal.present();
+    
+            const { data } = await this.modal.onDidDismiss();
+            if (data != undefined) {
+              console.log("data: ", data)
+            }
+          }
+          else{
+            const alert = await this.alertCtrl.create({
+              header: 'Components',
+              message: 'No components available',
+              buttons: ['OK']
+            });
+            await alert.present();
+          }
+          
+        }
+        else{
+          const alert = await this.alertCtrl.create({
+            header: 'Components',
+            message: 'No components available',
+            buttons: ['OK']
+          });
+          await alert.present();
+        }
+      }
+    )
+  }
+
+  getTimeSheets(orderNo: string, operationNo: string, codePlant: string) {
+    this.operationService.getOrderConfirmations(orderNo, operationNo, codePlant).subscribe(
+      async (confirmations) => {
+        if (confirmations != null && confirmations != undefined) {
+          this.confirmations = confirmations.d.results;
+          console.log("confs: ", this.confirmations);
+
+          if (this.confirmations.length > 0) {
+            this.modal = await this.modalController.create({
+              component: TimeSheetsListPage,
+              componentProps: {
+                'confs': this.confirmations
+              },
+            });
+            this.modal.backdropDismiss = false;
+            await this.modal.present();
+
+            const { data } = await this.modal.onDidDismiss();
+            if (data != undefined) {
+              console.log("data: ", data)
+            }
+          }
+          else {
+            const alert = await this.alertCtrl.create({
+              header: 'Time Sheets',
+              message: 'No time sheets available',
+              buttons: ['OK']
+            });
+            await alert.present();
+          }
+        }
+      }
+    )
   }
 
   getMockTimeSheets(orderNo: string, operationNo: string, codePlant: string) {

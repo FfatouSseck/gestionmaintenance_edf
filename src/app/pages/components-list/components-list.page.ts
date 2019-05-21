@@ -29,12 +29,6 @@ export class ComponentsListPage implements OnInit {
     this.modalController.dismiss();
   }
 
-  addToCopy(index: number, event) {
-    console.log("event: ", event);
-
-    //this.updatedComponents.push(this.components[index]);
-  }
-
   submitComponents() {
     console.log("components to submit: ", this.updatedComponents);
   }

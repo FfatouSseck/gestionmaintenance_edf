@@ -6,15 +6,15 @@ import { ModalController } from '@ionic/angular';
   selector: 'app-time-sheets-list',
   templateUrl: './time-sheets-list.page.html',
   styleUrls: ['./time-sheets-list.page.scss'],
-}) 
+})
 export class TimeSheetsListPage implements OnInit {
   @Input() confs: any;
   dataSource: any;
   checkedSheets: any[] = [];
-  displayedColumns: string[] = ['Check','ActType','StartDate','EndDate','Duration','Modify','Delete','Copy'];
+  displayedColumns: string[] = ['Check', 'ActType', 'StartDate', 'EndDate', 'Duration', 'Modify', 'Delete', 'Copy'];
 
   constructor(private modalController: ModalController) {
-   }
+  }
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.confs);
@@ -24,14 +24,31 @@ export class TimeSheetsListPage implements OnInit {
     this.modalController.dismiss();
   }
 
-  addToCopy(index: number,event){
-    console.log("event: ",event);
-    
-    this.checkedSheets.push(this.confs[index]);
+  addToCopy(index: number, event) {
+    if (event.checked == true && !this.checkIfExists(this.confs[index])) {
+      this.checkedSheets.push(this.confs[index]);
+    }
+    else if(event.checked == false){
+      if(this.checkIfExists(this.confs[index])){
+        this.checkedSheets.splice(index,1);
+      }
+    }
   }
 
-  copyConfs(){
-    console.log("confs to copy: ",this.checkedSheets);  
+  checkIfExists(elt){
+    let exists = false;
+    for (let i=0;i<this.checkedSheets.length;i++){
+      if(elt.ConfNo === this.checkedSheets[i].ConfNo && 
+        elt.ConfCounter === this.checkedSheets[i].ConfCounter){
+         exists= true;
+         break
+        }
+    }
+    return exists;
+  }
+
+  copyConfs() {
+    console.log("confs to copy: ", this.checkedSheets);
   }
 
   formatDate(newD: string) {
