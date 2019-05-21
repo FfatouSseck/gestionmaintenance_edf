@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar style="--background: #005BBB">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">Components</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Materialnumber">
+      <th mat-header-cell *matHeaderCellDef> Material number </th>
+      <td mat-cell *matCellDef="let element">
+        {{element.Material}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Materialdescription">
+      <th mat-header-cell *matHeaderCellDef> Material description </th>
+      <td mat-cell *matCellDef="let element" style="height: 70px;"> {{element.MaterialDescr}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Valuation">
+      <th mat-header-cell *matHeaderCellDef> Valuation </th>
+      <td mat-cell *matCellDef="let element"> {{element.ValType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Plannedquantity">
+      <th mat-header-cell *matHeaderCellDef> Planned quantity </th>
+      <td mat-cell *matCellDef="let element"> {{element.RequirementQuantity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Quant">
+      <th mat-header-cell *matHeaderCellDef> Quantity withdrawal / Serial number </th>
+      <td mat-cell *matCellDef="let element; let i=index">
+        <ion-fab-button size="small" style="--background: #005BBB;float:right " (click)="removeWithdrawnQuantity(i)">
+          <i class="material-icons" style="color: #fff;">remove</i>
+        </ion-fab-button>
+        {{float2int(element.WithdrawnQuantity)}}
+        <ion-fab-button size="small" style="--background: #005BBB;float:right " (click)="addWithdrawnQuantity(i)">
+          <i class="material-icons" style="color: #fff;">add</i>
+        </ion-fab-button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Prevwithdrawn">
+      <th mat-header-cell *matHeaderCellDef> Previously withdrawn </th>
+      <td mat-cell *matCellDef="let element">
+        0
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Remainingquantity">
+      <th mat-header-cell *matHeaderCellDef> Remaining quantity </th>
+      <td mat-cell *matCellDef="let element">
+        1
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Unit">
+      <th mat-header-cell *matHeaderCellDef> Unit </th>
+      <td mat-cell *matCellDef="let element">
+        {{element.RequirementQuantityUnit}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;let i=index"></tr>
+  </table>
+</ion-content>
+<ion-footer>
+    <mat-toolbar style="background-color: #3E4649;">
+      <mat-toolbar-row>
+        <button class="btn-save" mat-flat-button (click)="submitComponents()">
+          Submit
+        </button>
+        <span class="example-spacer"></span>
+        <button class="btn-cancel" mat-flat-button (click)="closeModal()">
+          Cancel
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </ion-footer>

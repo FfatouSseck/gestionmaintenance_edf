@@ -6,7 +6,7 @@ import { ModalController } from '@ionic/angular';
   selector: 'app-time-sheets-list',
   templateUrl: './time-sheets-list.page.html',
   styleUrls: ['./time-sheets-list.page.scss'],
-})
+}) 
 export class TimeSheetsListPage implements OnInit {
   @Input() confs: any;
   dataSource: any;

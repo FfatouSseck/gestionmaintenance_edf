@@ -77,7 +77,7 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>-->
-  <mat-toolbar style="--background: #fff;">
+  <mat-toolbar style="background-color: #3E4649;">
     <mat-toolbar-row>
       <button *ngIf="mode === 'detail' && op.ChklstId !== '' && afficheChecklist" (click)="displayChecklistDetails()"
         class="btn-standard" mat-flat-button>Checklist</button>
@@ -87,6 +87,10 @@
 
       <button *ngIf="mode === 'detail' && origin === '/time-and-material-confirmation'" class="btn-standard"
         mat-flat-button (click)="displayTimeSheets()">Time Sheets</button>
+
+        &nbsp;&nbsp;
+        <button *ngIf="mode === 'detail' && origin === '/time-and-material-confirmation'" class="btn-standard"
+          mat-flat-button (click)="displayComponents()">Components</button>
 
       <span class="example-spacer"></span>
 

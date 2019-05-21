@@ -1,12 +1,12 @@
 <ion-header>
-    <ion-toolbar style="--background: #005BBB">
-        <ion-buttons slot="start">
-          <ion-button (click)="closeModal()" style="color: white ">
-            <ion-icon name="arrow-back"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title style="color: white ">Time Sheets</ion-title>
-      </ion-toolbar>
+  <ion-toolbar style="--background: #005BBB">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white ">Time Sheets</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
@@ -15,7 +15,7 @@
     <ng-container matColumnDef="Check">
       <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let element;let i = index">
-        <mat-checkbox  color="primary" (change)="addToCopy(i,$event)"></mat-checkbox>
+        <mat-checkbox color="primary" (change)="addToCopy(i,$event)"></mat-checkbox>
       </td>
     </ng-container>
 
@@ -72,13 +72,13 @@
 </ion-content>
 
 <ion-footer>
-  <mat-toolbar style="--background: #fff;">
+  <mat-toolbar style="background-color: #3E4649;">
     <mat-toolbar-row>
-      <button class="btn-standard"  mat-flat-button (click)="copyConfs()" *ngIf="checkedSheets.length>0">
+      <button class="btn-standard" mat-flat-button (click)="copyConfs()" *ngIf="checkedSheets.length>0">
         Copy Confirmation(s)
       </button>
       <span class="example-spacer"></span>
-      <button class="btn-cancel"  mat-flat-button (click)="closeModal()">
+      <button class="btn-cancel" mat-flat-button (click)="closeModal()">
         Cancel
       </button>
     </mat-toolbar-row>

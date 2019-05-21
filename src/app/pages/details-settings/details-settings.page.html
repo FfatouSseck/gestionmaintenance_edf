@@ -5,8 +5,8 @@
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Plant</ion-title>
-    <ion-searchbar *ngIf="!notAvailable" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+    <ion-searchbar *ngIf="!notAvailable" [(ngModel)]="searchTerm" [formControl]="searchControl"
+      (ionInput)="onSearchInput()"></ion-searchbar>
 
   </ion-toolbar>
 </ion-header>
@@ -17,6 +17,9 @@
   </div>
 
   <ng-template #contentAvailable>
+    <ion-toolbar>
+      <ion-title>Plant</ion-title>
+    </ion-toolbar>
     <div *ngIf="searching" class="spinner-container">
       <ion-spinner></ion-spinner>
     </div>
@@ -25,25 +28,23 @@
       <mat-list-item *ngFor="let plant of plants;let i=index">
         <ion-toggle (ionChange)="notify($event,i)" color="primary"
           [checked]="plant.state === 'checked' ? 'true':'false'"></ion-toggle>
-        <p  (click)="choose(plant)" matLine style="color: #000;">{{plant.Plant}}-{{plant.PlantDescr}}</p>
+        <p (click)="choose(plant)" matLine style="color: #000;">{{plant.Plant}}-{{plant.PlantDescr}}</p>
         <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
       </mat-list-item>
     </mat-list>
 
   </ng-template>
-
-
 </ion-content>
-
 <ion-footer>
-  <ion-toolbar style="--background: #3E4649;--min-height:50px">
-    <ion-buttons slot="end">
-        <ion-button style="background-color: #378516;color: white" (click)="closeModal()">
-            Save
-          </ion-button>
-      <ion-button style="background-color: #3E4649;color: white" (click)="cancel()">
+  <mat-toolbar style="background-color: #3E4649;">
+    <mat-toolbar-row>
+      <button class="btn-save" mat-flat-button (click)="closeModal()">
+        Save
+      </button>
+      &nbsp; &nbsp;
+      <button class="btn-cancel" mat-flat-button (click)="cancel()">
         Cancel
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
 </ion-footer>

@@ -15,6 +15,7 @@ import { ChecklistPage } from '../checklist/checklist.page';
 import { ChecklistDetailsPage } from '../checklist-details/checklist-details.page';
 import { CheckListAssignmentService } from 'src/app/providers/check-list-assignment.service';
 import { TimeSheetsListPage } from '../time-sheets-list/time-sheets-list.page';
+import { ComponentsListPage } from '../components-list/components-list.page';
 
 @Component({
   selector: 'app-operation-details',
@@ -39,7 +40,9 @@ export class OperationDetailsPage implements OnInit {
   actType = "";
   checkList = "";
   confirmations: any[] = [];
+  components: any[] = [];
   noConfirmations = false;
+  noComponents = false;
 
   constructor(public modalController: ModalController, public _formBuilder: FormBuilder,
     private storage: Storage, public workcenterService: WorkCenterService, public mockService: MockService,
@@ -167,50 +170,94 @@ export class OperationDetailsPage implements OnInit {
 
   async displayTimeSheets() {
     if (this.mock) {
-      this.getMockTimeSheets(this.op.OrderNo,this.op.Activity,this.op.Plant);
-      console.log("confs: ",this.confirmations);
-      if(this.confirmations.length > 0){
+      this.getMockTimeSheets(this.op.OrderNo, this.op.Activity, this.op.Plant);
+      console.log("confs: ", this.confirmations);
+      if (this.confirmations.length > 0) {
         this.modal = await this.modalController.create({
           component: TimeSheetsListPage,
           componentProps: {
-            'confs' : this.confirmations
+            'confs': this.confirmations
           },
         });
         this.modal.backdropDismiss = false;
         await this.modal.present();
-    
+
         const { data } = await this.modal.onDidDismiss();
         if (data != undefined) {
-          console.log("data: ",data);
-          
-        //   this.op.StandardTextKey = data.result.StandardTextKey;
-        //   this.op.StandardTextDescr = data.result.ShortText;
-        //   if (this.op.StandardTextKey !== "") {
-        //     this.standardText = this.op.StandardTextKey;
-        //     if (this.op.StandardTextDescr !== "") {
-        //       this.standardText += " - " + this.op.StandardTextDescr;
-        //     }
-        //   }
+          console.log("data: ", data)
         }
       }
+      else {
+        const alert = await this.alertCtrl.create({
+          header: 'Time Sheets',
+          message: 'No time sheets available',
+          buttons: ['OK']
+        });
+        await alert.present();
+      }
     }
-    else{
+    else {
 
     }
   }
 
-  getTimeSheets(orderNo: string, operationNo: string, codePlant: string){
-    
+  async displayComponents() {
+    if (this.mock) {
+      this.getMockComponents(this.op.OrderNo, this.op.Activity, this.op.Plant);
+      console.log("components: ", this.components);
+      if (this.components.length > 0) {
+        this.modal = await this.modalController.create({
+          component: ComponentsListPage,
+          componentProps: {
+            'components': this.components
+          },
+          cssClass: 'modal2'
+        });
+        this.modal.backdropDismiss = false;
+        await this.modal.present();
+
+        const { data } = await this.modal.onDidDismiss();
+        if (data != undefined) {
+          console.log("data: ", data)
+        }
+      }
+      else {
+        const alert = await this.alertCtrl.create({
+          header: 'Components',
+          message: 'No components available',
+          buttons: ['OK']
+        });
+        await alert.present();
+      }
+    }
+    else {
+
+    }
+  }
+
+  getTimeSheets(orderNo: string, operationNo: string, codePlant: string) {
+
   }
 
   getMockTimeSheets(orderNo: string, operationNo: string, codePlant: string) {
-    console.log("params: ",orderNo,operationNo,codePlant);
-    
+    console.log("params: ", orderNo, operationNo, codePlant);
+
     this.confirmations = [];
     this.noConfirmations = false;
     this.confirmations = this.mockService.getMockOrderConfirmations(orderNo, operationNo, codePlant);
     if (this.confirmations.length == 0) {
       this.noConfirmations = true;
+    }
+  }
+
+  getMockComponents(orderNo: string, operationNo: string, codePlant: string) {
+    console.log("params: ", orderNo, operationNo, codePlant);
+    //getMockOrderComponentsByActivity
+    this.components = [];
+    this.noComponents = false;
+    this.components = this.mockService.getMockOrderComponentsByActivity(orderNo, operationNo, codePlant);
+    if (this.components.length == 0) {
+      this.noComponents = true;
     }
   }
 
