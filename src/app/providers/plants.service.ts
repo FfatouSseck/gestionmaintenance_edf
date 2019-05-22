@@ -22,7 +22,7 @@ export class PlantsService extends BaseService {
 
   }
 
-  getAllPlants(forceRefresh: boolean = false) {
+  getAllPlantsCheckingNetwork(forceRefresh: boolean = false) {
     if (this.networkService.getCurrentNetworkStatus() == ConnectionStatus.Offline || !forceRefresh) {
       // Return the cached data from Storage
       return from(this.getStoredPlants());
@@ -38,6 +38,10 @@ export class PlantsService extends BaseService {
     }
   }
 
+  getAllPlants(){
+    return this.getAll('PlanPlantSet');
+  }
+
   getVpn() {
     return this.http.get("https://vpn.edf-re.com/EDF-Connection", { headers: this.headers, responseType: 'json' }).pipe(
       map(this.extractData)
@@ -45,7 +49,7 @@ export class PlantsService extends BaseService {
   }
 
   // Get cached API result
-  private getStoredPlants() {
+  getStoredPlants() {
     return this.storage.get("storedPlants");
   }
 }

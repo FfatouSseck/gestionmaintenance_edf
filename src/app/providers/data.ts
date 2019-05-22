@@ -29,6 +29,10 @@ export class Data {
 
     }
 
+    getPlants(){
+        return this.plants;
+    }
+
     setFromStorage(plts){
         let done = false;
         if(plts.length > 0){

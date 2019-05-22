@@ -43,11 +43,12 @@
 
 </ion-content>
 <ion-footer>
-  <ion-toolbar style="--background: #fff;--min-height:50px">
-    <ion-buttons slot="end">
-      <ion-button style="background-color: red;color: white" (click)="closeModal()">
+  <mat-toolbar style="background-color: #3E4649;">
+    <mat-toolbar-row>
+      <span class="example-spacer"></span>
+      <button class="btn-cancel" mat-flat-button (click)="closeModal()">
         Cancel
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
 </ion-footer>

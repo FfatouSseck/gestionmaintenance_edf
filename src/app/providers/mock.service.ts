@@ -24,6 +24,7 @@ import OrderOperationChecklistToolSet from '../mockServer/OrderOperationChecklis
 import OrderOperationChecklistPartSet from '../mockServer/OrderOperationChecklistPartSet.json';
 import OrderOperationChecklistCalbSet from '../mockServer/OrderOperationChecklistCalbSet.json';
 import OrderOperationChecklistTaskSet from '../mockServer/OrderOperationChecklistTaskSet.json';
+import MaterialSet from '../mockServer/MaterialSet.json';
 import { NetworkService, ConnectionStatus } from './network.service';
 import { MatSnackBar } from '@angular/material';
 import OrderConfirmationSet  from '../mockServer/OrderConfirmationSet.json';
@@ -139,6 +140,14 @@ export class MockService {
     ) 
   }
 
+  getMockMaterialFromPlant(codePlant: string){
+    return MaterialSet.filter(
+      (mat) =>{
+        return mat.Plant.toLowerCase() === codePlant.toLowerCase()
+      }
+    )
+  }
+
   getMockOrderOperationChecklistCalbSet(orderNo: string,codePlant: string,operation: string){
     let ordOpChckCalbSet = OrderOperationChecklistCalbSet;
     return ordOpChckCalbSet.filter(
@@ -165,6 +174,20 @@ export class MockService {
       (cp) =>{
         if(cp.OrderNo != null && orderNo != null){
           return cp.OrderNo.toLowerCase().indexOf(orderNo.toLowerCase()) > -1;
+        }
+      }
+    )
+  }
+
+  getMockOrderComponentsByActivity(orderNo: string,activity: string,codePlant: string){
+    let components = Ordercomponents;
+    return components.filter(
+      (cp) =>{
+        if(cp.OrderNo != null && orderNo != null){
+          return (cp.OrderNo.toLowerCase() === orderNo.toLowerCase() &&
+                  cp.Activity.toLowerCase() === activity.toLowerCase() &&
+                  cp.PlanPlant.toLowerCase() === codePlant.toLowerCase()
+          );
         }
       }
     )

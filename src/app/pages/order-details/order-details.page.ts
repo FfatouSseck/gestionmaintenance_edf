@@ -257,7 +257,7 @@ export class OrderDetailsPage implements OnInit {
     this.modal = await this.modalController.create({
       component: ComponentDetailsPage,
       componentProps: {
-        'op': component,
+        'cp': component,
         'mode': mode
       },
       cssClass: 'modal1'

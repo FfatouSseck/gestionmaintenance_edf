@@ -19,6 +19,7 @@ export class DetailsSettingsPage implements OnInit {
   searchTerm: string = '';
   searchControl: FormControl;
   plants: any[] = [];
+  allPlants: any[] = [];
   checkedPlants: IPlant[] = [];
   choosenPlant: any = "";
   syncPlant: any = "";
@@ -49,6 +50,7 @@ export class DetailsSettingsPage implements OnInit {
     if (this.plants.length > 0) {
       this.notAvailable = false;
       this.searching = false;
+      this.allPlants = this.dataService.getPlants();
     }
   }
 
@@ -61,6 +63,7 @@ export class DetailsSettingsPage implements OnInit {
           this.plants = [];
           let plts = this.dataService.filterItems(this.searchTerm);
           this.plants = plts;
+          this.allPlants = this.dataService.getPlants();
 
           let index = this.getPlantIndexFromCode(this.choosenPlant);
 
@@ -78,6 +81,7 @@ export class DetailsSettingsPage implements OnInit {
         }
         else {
           this.plants = this.dataService.filterItems(this.searchTerm);
+          this.allPlants = this.dataService.getPlants();
           if (this.plants.length > 0) {
             this.notAvailable = false;
             this.searching = false;
@@ -121,6 +125,7 @@ export class DetailsSettingsPage implements OnInit {
                     if (done) {
                       this.notAvailable = false;
                       this.searching = false;
+                      this.allPlants = this.dataService.getPlants();
                     }
                   }
                 }
@@ -219,24 +224,24 @@ export class DetailsSettingsPage implements OnInit {
       this.modalController.dismiss({
         'result': this.checkedPlants
       });
-      this.storage.get("mock").then(
-        (mock) => {
-          if (mock != null && mock != undefined && mock == true) {
-            let plants = {
-              elts: this.plants,
-              fromMock: true
-            }
-            this.storage.set("plants", plants)
-          }
-          else {
-            let plants = {
-              elts: this.plants,
-              fromMock: false
-            }
-            this.storage.set("plants", plants)
-          }
-        }
-      )
+      // this.storage.get("mock").then(
+      //   (mock) => {
+      //     if (mock != null && mock != undefined && mock == true) {
+      //       let plants = {
+      //         elts: this.plants,
+      //         fromMock: true
+      //       }
+      //       this.storage.set("plants", plants)
+      //     }
+      //     else {
+      //       let plants = {
+      //         elts: this.plants,
+      //         fromMock: false
+      //       }
+      //       this.storage.set("plants", plants)
+      //     }
+      //   }
+      // )
 
       //this.storage.set()
 

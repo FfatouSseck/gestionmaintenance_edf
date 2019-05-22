@@ -95,7 +95,7 @@ export class HomePage implements OnInit {
                         })
                 }
                 else {
-                    this.plantService.getAllPlants(false).subscribe(
+                    this.plantService.getAllPlants().subscribe(
                         (plants) => {
                             let plts = plants.d.results;
                             this.plants = plts;
@@ -140,9 +140,17 @@ export class HomePage implements OnInit {
         const { data } = await this.modal.onDidDismiss();
         if (data != undefined) {
             console.log("data", data);
-            plants.push({
-                Plant: data.result
-            })
+            if (Array.isArray(data.result)) {
+                console.log("là", data.result);
+                plants = data.result;
+            }
+            else {
+                console.log("ici", data.result);
+                plants.push({
+                    Plant: data.result
+                })
+            }
+
             this.updateData(plants);
         }
     }
@@ -184,7 +192,7 @@ export class HomePage implements OnInit {
         this.mySoCount = null;
 
         if (plants.length > 1) {
-            this.choosenPlant = plants[1].Plant;
+            this.choosenPlant = plants[0].Plant;
         }
         else if (plants.length == 1) {
             this.choosenPlant = plants[0].Plant;

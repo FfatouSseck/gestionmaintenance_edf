@@ -1,9 +1,50 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>ComponentDetails</ion-title>
+  <ion-toolbar style="--background: #005BBB">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()" style="color: white ">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white " *ngIf="mode === 'create'">Add component</ion-title>
+    <ion-title style="color: white " *ngIf="mode === 'detail'">Component details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <div *ngIf="loadingData;else contentAvailable">
+    <mat-spinner style="margin: 0 auto"></mat-spinner>
+  </div>
+  <ng-template #contentAvailable>
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
+    </ion-searchbar>
+
+    <div *ngIf="searching" class="spinner-container">
+      <ion-spinner></ion-spinner>
+    </div>
+
+    <mat-list>
+        <mat-list-item (click)="choose(cp)" *ngFor="let cp of componentList">
+          <ion-label>
+            <h4 matLine>
+              {{cp.MaterialDescr}}
+            </h4>
+            <p matLine>
+              {{cp.MaterialId}}
+            </p>
+          </ion-label>
+        </mat-list-item>
+      </mat-list>
+
+  </ng-template>
 
 </ion-content>
+<ion-footer>
+    <mat-toolbar style="background-color: #3E4649;">
+      <mat-toolbar-row>
+        <span class="example-spacer"></span>
+        <button class="btn-cancel" mat-flat-button (click)="closeModal()">
+          Cancel
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </ion-footer>

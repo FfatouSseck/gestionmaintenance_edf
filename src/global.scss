@@ -12,12 +12,24 @@
 @import '~material-design-icons/iconfont/material-icons.css';
 //@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+.spinner-container {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
 
 .modal1{
     .modal-wrapper {
         --width:90%;
         height: 90%;
     }
+}
+
+.modal2{
+  .modal-wrapper {
+      --width:88%;
+      height: 85%;
+  }
 }
 
 

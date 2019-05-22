@@ -4,8 +4,5 @@
     "cordova": {}
   },
   "type": "angular",
-  "proxies":[{
-    "path":"zpm_om_workmanager_v2_srv/",
-    "proxyUrl":"http://enx-r3sdw11.edf-re.com:8000/sap/opu/odata/sap"
-  }]
+  "id": "cbbb569d"
 }

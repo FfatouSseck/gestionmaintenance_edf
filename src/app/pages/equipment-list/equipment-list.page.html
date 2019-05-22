@@ -4,7 +4,7 @@
       <ion-button (click)="closeModal()" style="color: white ">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons> 
     <ion-title style="color: white ">Equipments</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -27,14 +27,15 @@
         <ion-spinner></ion-spinner>
       </div>
 
-      <ion-list>
-        <ion-list-header>
-          <ion-label>Choose the Equipment</ion-label>
-        </ion-list-header>
-        <ion-item (click)="choose(eq)" *ngFor="let eq of equipments">
-          {{eq.EquipmentDescr}}
-        </ion-item>
-      </ion-list>
+      <mat-list>
+          <mat-list-item (click)="choose(eq)" *ngFor="let eq of equipments">
+            <ion-label>
+              <h4 matLine>
+                  {{eq.EquipmentDescr}}
+              </h4>
+            </ion-label>
+          </mat-list-item>
+      </mat-list>
     </div>
   </ng-template>
 </ion-content>
